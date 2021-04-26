@@ -168,6 +168,9 @@ _open_files_for_editing() {
 # alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
 ################################################################################
 
+export EDITOR='nvim'
+export VISUAL='nvim'
+
 eval "$(fnm env)"
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
