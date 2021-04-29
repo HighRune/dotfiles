@@ -201,8 +201,8 @@ bindsym $mod+Right focus right
 # altenatively, use chrome bindings
 # bindsym $mod+Tab focus right
 # bindsym $mod+Shift+Tab focus left
-bindsym $mod+p focus right
-bindsym $mod+Shift+p focus left
+bindsym $mod+u focus right
+bindsym $mod+Shift+u focus left
 
 # move focused window
 bindsym $mod+Shift+j move left
