@@ -35,11 +35,11 @@ set $mod Mod4
 
 # i3 stacking layout:
 # Each window will be fullscreen and tabbed top to bottom.
-#workspace_layout stacking
+workspace_layout stacking
 
 # i3 tabbed layout:
 # Each new window will open fullscreen as a tab (left to right)
-workspace_layout tabbed
+# workspace_layout tabbed
 
 ##############################
 # extra options for windows: #
@@ -197,17 +197,19 @@ bindsym $mod+b focus up
 # bindsym $mod+o focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
  
+bindsym $mod+Escape focus down
+bindsym $mod+Shift+Escape focus up
+# bindsym $mod+Escape focus right
+# bindsym $mod+Shift+Escape focus left
+
 # altenatively, use chrome bindings
 # bindsym $mod+Tab focus right
 # bindsym $mod+Shift+Tab focus left
-
-bindsym $mod+Escape focus right
-bindsym $mod+Shift+Escape focus left
 
 # move focused window
 bindsym $mod+Shift+j move left
