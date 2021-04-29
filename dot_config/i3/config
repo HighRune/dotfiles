@@ -64,11 +64,13 @@ floating_modifier $mod
 bindsym $mod+a    workspace  $ws1
 bindsym $mod+o    workspace  $ws2
 bindsym $mod+e    workspace  $ws3
-bindsym $mod+1    workspace  $ws4
-bindsym $mod+2    workspace  $ws5
-bindsym $mod+3    workspace  $ws6
-bindsym $mod+4    workspace  $ws7
-bindsym $mod+5    workspace  $ws8
+bindsym $mod+u    workspace  $ws4
+bindsym $mod+i    workspace  $ws5
+bindsym $mod+1    workspace  $ws6
+bindsym $mod+2    workspace  $ws7
+bindsym $mod+3    workspace  $ws8
+bindsym $mod+4    workspace  $ws9
+bindsym $mod+5    workspace  $ws10
 
 # switch to workspace with numpad keys
 bindcode $mod+87 workspace 1
@@ -98,11 +100,13 @@ bindcode $mod+Mod2+90 workspace $ws10
 bindsym $mod+Shift+a    move container to workspace  $ws1
 bindsym $mod+Shift+o    move container to workspace  $ws2
 bindsym $mod+Shift+e    move container to workspace  $ws3
-bindsym $mod+Shift+1    move container to workspace  $ws4
-bindsym $mod+Shift+2    move container to workspace  $ws5
-bindsym $mod+Shift+3    move container to workspace  $ws6
-bindsym $mod+Shift+4    move container to workspace  $ws7
-bindsym $mod+Shift+5    move container to workspace  $ws8
+bindsym $mod+Shift+u    move container to workspace  $ws4
+bindsym $mod+Shift+i    move container to workspace  $ws5
+bindsym $mod+Shift+1    move container to workspace  $ws6
+bindsym $mod+Shift+2    move container to workspace  $ws7
+bindsym $mod+Shift+3    move container to workspace  $ws8
+bindsym $mod+Shift+4    move container to workspace  $ws9
+bindsym $mod+Shift+5    move container to workspace  $ws10
 
 # move focused container to workspace with numpad keys
 bindcode $mod+Shift+Mod2+87 	move container to workspace  $ws1
