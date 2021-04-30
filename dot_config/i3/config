@@ -206,11 +206,11 @@ bindsym XF86MonBrightnessDown exec xbacklight -10
 # bindsym $mod+Tab focus right
 # bindsym $mod+Shift+Tab focus left
 
-# bindsym $mod+Escape focus down
-# bindsym $mod+Shift+Escape focus up
+bindsym $mod+Escape focus down
+bindsym $mod+Shift+Escape focus up
 
-bindsym $mod+j focus down
-bindsym $mod+k focus up
+# bindsym $mod+j focus down
+# bindsym $mod+k focus up
 
 # Move focused window
 bindsym $mod+Shift+j move down
