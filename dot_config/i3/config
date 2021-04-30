@@ -215,7 +215,7 @@ bindsym $mod+k focus up
 # Move focused window
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
-#
+
 # bindsym $mod+Shift+k move down
 # bindsym $mod+Shift+b move up
 # bindsym $mod+Shift+j move left
