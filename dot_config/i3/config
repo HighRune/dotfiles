@@ -46,7 +46,7 @@ workspace_layout stacking
 ##############################
 
 #border indicator on windows: 
-new_window pixel 0
+default_border none
 
 # thin borders
 # hide_edge_borders both
@@ -190,51 +190,51 @@ bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 bindsym XF86MonBrightnessUp exec xbacklight +10
 bindsym XF86MonBrightnessDown exec xbacklight -10
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+b focus up
+# Focus window
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+b focus up
 # bindsym $mod+o focus right
 
-# alternatively, you can use the cursor keys:
+# Alternatively, use the cursor keys
 # bindsym $mod+Left focus left
 # bindsym $mod+Down focus down
 # bindsym $mod+Up focus up
 # bindsym $mod+Right focus right
  
+# Altenatively, use chrome bindings
+# bindsym $mod+Tab focus right
+# bindsym $mod+Shift+Tab focus left
+
 bindsym $mod+Escape focus down
 bindsym $mod+Shift+Escape focus up
 # bindsym $mod+Escape focus right
 # bindsym $mod+Shift+Escape focus left
 
-# altenatively, use chrome bindings
-# bindsym $mod+Tab focus right
-# bindsym $mod+Shift+Tab focus left
-
-# move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+b move up
+# Move focused window
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+b move up
+# bindsym $mod+Shift+j move left
 # bindsym $mod+Shift+o move right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
+# Alternatively, use the cursor keys
+# bindsym $mod+Shift+Down move down
+# bindsym $mod+Shift+Up move up
+# bindsym $mod+Shift+Left move left
 # bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+# bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+# bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+g layout tabbed
+# bindsym $mod+s layout stacking
+# bindsym $mod+g layout tabbed
 # bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
