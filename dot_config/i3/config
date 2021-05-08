@@ -109,28 +109,28 @@ bindsym $mod+Shift+4    move container to workspace  $ws9
 bindsym $mod+Shift+5    move container to workspace  $ws10
 
 # move focused container to workspace with numpad keys
-bindcode $mod+Shift+Mod2+87 	move container to workspace  $ws1
-bindcode $mod+Shift+Mod2+88 	move container to workspace  $ws2
-bindcode $mod+Shift+Mod2+89 	move container to workspace  $ws3
-bindcode $mod+Shift+Mod2+83 	move container to workspace  $ws4
-bindcode $mod+Shift+Mod2+84 	move container to workspace  $ws5
-bindcode $mod+Shift+Mod2+85 	move container to workspace  $ws6
-bindcode $mod+Shift+Mod2+79 	move container to workspace  $ws7
-bindcode $mod+Shift+Mod2+80 	move container to workspace  $ws8
-bindcode $mod+Shift+Mod2+81 	move container to workspace  $ws9
-bindcode $mod+Shift+Mod2+90 	move container to workspace  $ws10
+bindcode $mod+Shift+Mod2+87   move container to workspace  $ws1
+bindcode $mod+Shift+Mod2+88   move container to workspace  $ws2
+bindcode $mod+Shift+Mod2+89   move container to workspace  $ws3
+bindcode $mod+Shift+Mod2+83   move container to workspace  $ws4
+bindcode $mod+Shift+Mod2+84   move container to workspace  $ws5
+bindcode $mod+Shift+Mod2+85   move container to workspace  $ws6
+bindcode $mod+Shift+Mod2+79   move container to workspace  $ws7
+bindcode $mod+Shift+Mod2+80   move container to workspace  $ws8
+bindcode $mod+Shift+Mod2+81   move container to workspace  $ws9
+bindcode $mod+Shift+Mod2+90   move container to workspace  $ws10
 
 # move focused container to workspace with numpad keys
-bindcode $mod+Shift+87 	 move container to workspace  $ws1
-bindcode $mod+Shift+88 	 move container to workspace  $ws2
-bindcode $mod+Shift+89 	 move container to workspace  $ws3
-bindcode $mod+Shift+83 	 move container to workspace  $ws4
-bindcode $mod+Shift+84 	 move container to workspace  $ws5
-bindcode $mod+Shift+85 	 move container to workspace  $ws6
-bindcode $mod+Shift+79 	 move container to workspace  $ws7
-bindcode $mod+Shift+80 	 move container to workspace  $ws8
-bindcode $mod+Shift+81 	 move container to workspace  $ws9
-bindcode $mod+Shift+90 	 move container to workspace  $ws10
+bindcode $mod+Shift+87   move container to workspace  $ws1
+bindcode $mod+Shift+88   move container to workspace  $ws2
+bindcode $mod+Shift+89   move container to workspace  $ws3
+bindcode $mod+Shift+83   move container to workspace  $ws4
+bindcode $mod+Shift+84   move container to workspace  $ws5
+bindcode $mod+Shift+85   move container to workspace  $ws6
+bindcode $mod+Shift+79   move container to workspace  $ws7
+bindcode $mod+Shift+80   move container to workspace  $ws8
+bindcode $mod+Shift+81   move container to workspace  $ws9
+bindcode $mod+Shift+90   move container to workspace  $ws10
 
 # resize window (you can also use the mouse for that):
 #mode "resize" {
@@ -145,13 +145,13 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
 #        bindsym ntilde resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-#	bindsym Left resize shrink width 10 px or 10 ppt
+# bindsym Left resize shrink width 10 px or 10 ppt
 #        bindsym Down resize grow height 10 px or 10 ppt
 #        bindsym Up resize shrink height 10 px or 10 ppt
 #        bindsym Right resize grow width 10 px or 10 ppt
 
 # back to normal: Enter or Escape
-#	bindsym Return mode "default"
+# bindsym Return mode "default"
 #        bindsym Escape mode "default"
 #}
 
@@ -404,89 +404,48 @@ for_window [class="Pamac-manager"] floating enable
 # color settings for bar and windows #
 ######################################
  
-# Define colors variables: 
-set $darkbluetrans	#08052be6
-set $darkblue		#08052b
-set $lightblue		#5294e2
-set $urgentred		#e53935
-set $white		#ffffff
-set $black		#000000
-set $purple		#e345ff
-set $darkgrey		#383c4a
-set $grey		#b0b5bd
-set $mediumgrey		#8b8b8b
-set $yellowbrown	#e1b700
+# Colors
+set $darkbluetrans  #08052be6
+set $darkblue   #08052b
+set $lightblue    #5294e2
+set $urgentred    #e53935
+set $white    #ffffff
+set $black    #000000
+set $purple   #e345ff
+set $darkgrey   #383c4a
+set $grey   #b0b5bd
+set $mediumgrey   #8b8b8b
+set $yellowbrown  #e1b700
 
-# define colors for windows:
-#class		        	border		bground		text		indicator	child_border
-client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
-client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
-client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
-client.urgent		    $urgentred	$urgentred	$white		$purple		$yellowbrown
+# Windows color
+#                       $BORDER    $BGROUND   $TEXT  $INDICATOR $CHILD_BORDER
+CLIENT.FOCUSED          $LIGHTBLUE $DARKBLUE  $WHITE $PURPLE    $MEDIUMGREY
+CLIENT.UNFOCUSED        $DARKBLUE  $DARKBLUE  $GREY  $PURPLE    $DARKGREY
+CLIENT.FOCUSED_INACTIVE $DARKBLUE  $DARKBLUE  $GREY  $PURPLE    $BLACK
+CLIENT.URGENT           $URGENTRED $URGENTRED $WHITE $PURPLE    $YELLOWBROWN
 
 
-############################################
-# bar settings (input comes from i3blocks) #
-############################################
-
-# Start i3bar to display a workspace bar 
-# (plus the system information i3status finds out, if available)
 bar {
-		# status_command i3blocks -c ~/.config/i3/i3blocks.conf
-		status_command i3status
-	    	position bottom 
-		    tray_output primary
-		    tray_padding 0
+    # status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    status_command i3status
+        position bottom 
+        tray_output primary
+        tray_padding 0
         strip_workspace_numbers yes
         i3bar_command i3bar --transparency
 
         colors {
-          separator                  $grey
-            statusline               $white
-#                                    $border  		     $bg		           $txt		      $indicator
-            focused_workspace	       $mediumgrey	     $grey		         $darkgrey    $purple
-            active_workspace	       $lightblue        $mediumgrey	     $darkgrey    $purple
-            inactive_workspace       $darkgrey   		   $darkgrey	       $grey		    $purple
-            urgent_workspace	       $urgentred	       $urgentred	       $white		    $purple 
+            separator          $grey
+            statusline         $white
+#                              $border     $bg         $txt      $indicator
+            focused_workspace  $mediumgrey $grey       $darkgrey $purple
+            active_workspace   $lightblue  $mediumgrey $darkgrey $purple
+            inactive_workspace $darkgrey   $darkgrey   $grey     $purple
+            urgent_workspace   $urgentred  $urgentred  $white    $purple
         }
 }
 
-# you can add different bars for multidisplay setups on each display:
-# set output HDMI-0 to the display you want the bar, --transparency can be set.
-# Transparency needs rgba color codes to be used where the last two letters are the transparency factor see here:
-# https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4
-# #08052be6 --> e6=90%
-
-# bar {	
-#	font pango:Noto Sans Regular 9, FontAwesome 9
-#	status_command i3blocks -c ~/.config/i3/i3blocks-2.conf
-#	i3bar_command i3bar --transparency
-#	output HDMI-0
-#	position bottom
-#
-# When strip_workspace_numbers is set to yes, 
-# any workspace that has a name of the form 
-# “[n][:][NAME]” will display only the name.
-#strip_workspace_numbers yes
-##strip_workspace_name no
-#
-#	colors {
-#		separator          $purple
-#		background         $darkbluetrans
-#        	statusline         $white
-#					border		bg		txt		indicator
-#		focused_workspace	$lighterblue	$lighterblue	$darkblue	$purple
-#		active_workspace	$lightdblue	$lightdblue	$darkblue	$purple
-#		inactive_workspace	$darkblue	$darkblue	$lightdblue	$purple
-#		urgent_workspace	$urgentred	$urgentred	$white		$purple 
-#	}
-#}
-
-#####################################
-# Application menu handled by rofi: #
-#####################################
-
-## rofi bindings fancy application menu (two bindings F9/$mod+d)
+# rofi bindings fancy application menu (two bindings F9/$mod+d)
 
 bindsym $mod+d exec rofi -modi drun -show drun -display-drun "Apps : " -line-padding 4 \
                 -columns 2 -padding 50 -hide-scrollbar \
@@ -496,7 +455,7 @@ bindsym F9 exec rofi -modi drun -show drun -display-drun "Apps : " -line-padding
                 -columns 2 -padding 30 -hide-scrollbar \
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 14"
 
-## rofi bindings for window menu (two bindings F10/$mod+t)
+# rofi bindings for window menu (two bindings F10/$mod+t)
 
 bindsym $mod+t exec rofi -show window -display-window "Window : " -line-padding 4 \
                 -lines 10 -padding 50 -hide-scrollbar \
