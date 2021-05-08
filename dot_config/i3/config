@@ -440,16 +440,15 @@ bar {
         strip_workspace_numbers yes
         i3bar_command i3bar --transparency
 
-		    colors {
-		    separator          $grey
-		    background         $black
-		    statusline         $white
-#                          		border 		        bg		txt		indicator
-		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$purple
-		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
-		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
-		urgent_workspace	$urgentred	    	$urgentred	$white		$purple 
-	}
+        colors {
+          separator                  $grey
+            statusline               $white
+#                                    $border  		     $bg		           $txt		      $indicator
+            focused_workspace	       $mediumgrey	     $grey		         $darkgrey    $purple
+            active_workspace	       $lightblue        $mediumgrey	     $darkgrey    $purple
+            inactive_workspace       $darkgrey   		   $darkgrey	       $grey		    $purple
+            urgent_workspace	       $urgentred	       $urgentred	       $white		    $purple 
+        }
 }
 
 # you can add different bars for multidisplay setups on each display:
