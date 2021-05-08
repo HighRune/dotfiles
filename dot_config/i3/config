@@ -438,6 +438,7 @@ bar {
 		    tray_output primary
 		    tray_padding 0
         strip_workspace_numbers yes
+        i3bar_command i3bar --transparency
 
 		    colors {
 		    separator          $grey
