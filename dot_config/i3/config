@@ -381,8 +381,8 @@ bar {
 background $darkblue
 statusline $grey
 #                              $border     $bg             $txt       $indicator
-            focused_workspace  $darkblue   $darkblue       $lightblue $purple
-            active_workspace   $lightblue  $mediumgrey     $darkgrey  $purple
+            focused_workspace  $lightblue  $darkblue       $white     $purple
+            active_workspace   $darkblue   $darkblue       $grey      $purple
             inactive_workspace $darkblue   $darkblue       $grey      $purple
             urgent_workspace   $urgentred  $urgentred      $white     $purple
         }
