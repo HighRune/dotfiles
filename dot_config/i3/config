@@ -380,11 +380,11 @@ bar {
           separator            $grey
 background $darkblue
 statusline $grey
-#                              $border     $bg             $txt       $indicator
-            focused_workspace  $lightblue  $darkblue       $white     $purple
-            active_workspace   $darkblue   $darkblue       $grey      $purple
-            inactive_workspace $darkblue   $darkblue       $grey      $purple
-            urgent_workspace   $urgentred  $urgentred      $white     $purple
+#                              $border     $bg             $txt        $indicator
+            focused_workspace  $lightblue  $darkblue       $white      $purple
+            active_workspace   $darkblue   $darkblue       $white      $purple
+            inactive_workspace $darkblue   $darkblue       $grey       $purple
+            urgent_workspace   $urgentred  $urgentred      $white      $purple
         }
 }
 
