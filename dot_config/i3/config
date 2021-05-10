@@ -379,7 +379,7 @@ bar {
         colors {
           separator            $grey
 background #00000000
-statusline #FFFFFF
+statusline $white
 #                              $border     $bg         $txt      $indicator
             focused_workspace  $mediumgrey $grey       $darkgrey $purple
             active_workspace   $lightblue  $mediumgrey $darkgrey $purple
