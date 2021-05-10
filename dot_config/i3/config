@@ -357,6 +357,7 @@ set $darkgrey   #383c4a
 set $grey   #b0b5bd
 set $mediumgrey   #8b8b8b
 set $yellowbrown  #e1b700
+set $transparent  #00000000
 
 # Windows color
 #                       $BORDER    $BGROUND   $TEXT  $INDICATOR $CHILD_BORDER
@@ -376,9 +377,9 @@ bar {
         i3bar_command i3bar --transparency
 
         colors {
-            separator          $grey
-            background #000000
-statusline #FFFFFF
+          separator            $grey
+            background         $transparent
+            statusline         $white
 #                              $border     $bg         $txt      $indicator
             focused_workspace  $mediumgrey $grey       $darkgrey $purple
             active_workspace   $lightblue  $mediumgrey $darkgrey $purple
