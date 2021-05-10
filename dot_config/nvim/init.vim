@@ -65,8 +65,8 @@ autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4
 " ____ UI
 
 set termguicolors  " Enables 24-bit RGB color in the Terminal UI
-colorscheme darkspace
 hi Normal guibg=NONE ctermbg=NONE
+colorscheme darkspace
 set noshowmode     " Disable message on the last line (Insert, Replace or Visual mode)
 " set showtabline=2  " Always display the line with tab page labels
 
