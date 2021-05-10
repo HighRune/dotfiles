@@ -346,7 +346,7 @@ for_window [class="Pamac-manager"] floating enable
 ######################################
  
 # Colors
-set $darktrans      #FFFFFFB3
+set $darktrans      #000000B3
 set $darkbluetrans  #08052be6
 set $darkblue       #08052b
 set $lightblue      #5294e2
@@ -378,7 +378,7 @@ bar {
 
         colors {
           separator            $grey
-background $darktrans
+background $darkgrey
 statusline $white
 #                              $border     $bg         $txt      $indicator
             focused_workspace  $mediumgrey $grey       $darkgrey $purple
