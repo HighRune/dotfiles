@@ -68,8 +68,9 @@ set termguicolors  " Enables 24-bit RGB color in the Terminal UI
 colorscheme darkspace
 " autocmd ColorScheme * highlight Normal ctermbg=None
 " autocmd ColorScheme * highlight NonText ctermbg=None
-autocmd ColorScheme * highlight Normal guibg=None
-autocmd ColorScheme * highlight NonText guibg=None
+" autocmd ColorScheme * highlight Normal guibg=None
+" autocmd ColorScheme * highlight NonText guibg=None
+hi CursorLine guibg=#000000 ctermbg=Black cterm=none
 set noshowmode     " Disable message on the last line (Insert, Replace or Visual mode)
 " set showtabline=2  " Always display the line with tab page labels
 
