@@ -346,7 +346,7 @@ for_window [class="Pamac-manager"] floating enable
 ######################################
  
 # Colors
-set $darktrans      #08052be6
+set $darktrans      #0B3
 set $darkbluetrans  #08052be6
 set $darkblue       #08052b
 set $lightblue      #5294e2
