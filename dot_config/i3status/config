@@ -9,6 +9,7 @@
 general {
         color_good = "#427c7d"
         color_bad = "#cf449a"
+        separator_symbol “ ”
         interval = 5
 }
 
