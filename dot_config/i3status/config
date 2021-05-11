@@ -7,9 +7,9 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        color_bad = "#ff0073"
-        separator = " "
-        interval = 1
+  colors = false
+  separator = " "
+  interval = 1
 }
 
 # order += "ipv6"
