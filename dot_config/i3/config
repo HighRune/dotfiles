@@ -377,9 +377,8 @@ bar {
         i3bar_command i3bar --transparency
 
         colors {
-          separator            $grey
-background $darkblue
-statusline $grey
+          background $darkblue
+            statusline $grey
 #                              $border     $bg             $txt        $indicator
             focused_workspace  $lightblue  $darkblue       $white      $purple
             active_workspace   $darkblue   $darkblue       $white      $purple
