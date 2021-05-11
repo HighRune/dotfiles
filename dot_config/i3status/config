@@ -7,8 +7,10 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-  colors = false
-  interval = 1
+  color_good = "#b0b5bd"
+    color_degraded = "#e345ff"
+    color_bad = "#E345ff"
+    interval = 1
 }
 
 # order += "ipv6"
@@ -21,46 +23,50 @@ order += "memory"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+  format_up = "W %quality %essid %ip"
+    format_down = "W down"
+    separator = false
+    separator_block_width = 40
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+  format_up = "E %speed %ip"
+    format_down = "E down"
+    separator = false
+    separator_block_width = 40
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+  format = "%status %percentage %remaining"
+    separator = false
+    separator_block_width = 40
 }
 
 disk "/" {
-  format = "%avail"
-    align = "left"
-    min_width = 120
+  format = "D %avail"
     separator = false
+    separator_block_width = 40
 }
 
 load {
-        format = "%1min"
+  format = "%1min"
     align = "left"
-    min_width = 120
     separator = false
+    separator_block_width = 40
 }
 
 memory {
-        format = "%used | %available"
-        threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+  format = "%used / %total"
+    threshold_degraded = "1G"
+    format_degraded = "MEMORY < %available"
     align = "left"
-    min_width = 120
     separator = false
+    separator_block_width = 40
 }
 
 tztime local {
-        format = "%d-%m %H:%M"
+  format = "%d-%m %H:%M"
+    align = "left"
+    separator = false
+    separator_block_width = 40
 }
-
-# tztime local {
-#         format = "%Y-%m-%d %H:%M:%S"
-# }
