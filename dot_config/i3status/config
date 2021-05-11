@@ -20,8 +20,7 @@ order += "cpu_usage"
 order += "memory"
 order += "battery all"
 order += "volume master"
-order += "tztime date"
-order += "tztime time"
+order += "tztime local"
 
 wireless _first_ {
   format_up = "W %quality %essid %ip"
@@ -70,14 +69,8 @@ volume master {
     separator_block_width = 40
 }
 
-tztime date {
-  format = "%a %d %m"
-    separator = false
-    separator_block_width = 40
-}
-
-tztime time {
-  format = "%H : %M"
+tztime local {
+  format = "%a %d-%m   %H : %M"
     separator = false
     separator_block_width = 40
 }
