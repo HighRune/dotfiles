@@ -37,7 +37,11 @@ battery all {
 }
 
 disk "/" {
-        format = "%avail"
+  format = "%avail"
+    align = "left"
+    min_width = 100
+    separator = false
+    separator_block_width = 1
 }
 
 load {
