@@ -54,7 +54,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # keybinding list in editor
-bindsym $mod+F1 exec xed ~/.config/i3/keybindings
+bindsym $mod+F1 exec nvim ~/.config/i3/keybindings
 
 # Backlight control
 bindsym XF86MonBrightnessUp exec xbacklight +10
