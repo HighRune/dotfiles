@@ -7,8 +7,7 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        color_good = "#427c7d"
-        color_bad = "#cf449a"
+        color_bad = "#ff0073"
         separator = " "
         interval = 1
 }
@@ -39,9 +38,8 @@ battery all {
 disk "/" {
   format = "%avail"
     align = "left"
-    min_width = 400
+    min_width = 200
     separator = false
-    separator_block_width = 1
 }
 
 load {
