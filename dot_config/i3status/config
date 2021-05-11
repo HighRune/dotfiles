@@ -19,6 +19,7 @@ order += "ethernet _first_"
 order += "battery all"
 order += "disk /"
 order += "load"
+order += "cpu_usage"
 order += "memory"
 order += "tztime local"
 
@@ -49,12 +50,18 @@ disk "/" {
 }
 
 load {
-  format = "%1min"
+  format = "L %1min"
     align = "left"
     separator = false
     separator_block_width = 40
 }
 
+cpu_usage {
+  format = "CPU %usage"
+    align = "left"
+    separator = false
+    separator_block_width = 40
+}
 memory {
   format = "%used / %total"
     threshold_degraded = "1G"
@@ -65,7 +72,7 @@ memory {
 }
 
 tztime local {
-  format = "%d-%m %H:%M"
+  format = "%a %d/%m  %H : %M"
     align = "left"
     separator = false
     separator_block_width = 40
