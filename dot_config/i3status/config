@@ -43,6 +43,7 @@ disk "/" {
 
 load {
         format = "%1min"
+    align = "left"
     min_width = 120
     separator = false
 }
@@ -51,6 +52,9 @@ memory {
         format = "%used | %available"
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
+    align = "left"
+    min_width = 120
+    separator = false
 }
 
 tztime local {
