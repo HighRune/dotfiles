@@ -8,7 +8,6 @@
 
 general {
   colors = false
-  separator = " "
   interval = 1
 }
 
@@ -38,7 +37,7 @@ battery all {
 disk "/" {
   format = "%avail"
     align = "left"
-    min_width = 200
+    min_width = 150
     separator = false
 }
 
