@@ -13,15 +13,15 @@ general {
     interval = 1
 }
 
-# order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
-order += "battery all"
 order += "disk /"
-order += "load"
 order += "cpu_usage"
 order += "memory"
-order += "tztime local"
+order += "battery all"
+order += "volume master"
+order += "tztime date"
+order += "tztime time"
 
 wireless _first_ {
   format_up = "W %quality %essid %ip"
@@ -44,21 +44,13 @@ battery all {
 }
 
 disk "/" {
-  format = "D %avail"
-    separator = false
-    separator_block_width = 40
-}
-
-load {
-  format = "L %1min"
-    align = "left"
+  format = "%avail"
     separator = false
     separator_block_width = 40
 }
 
 cpu_usage {
   format = "CPU %usage"
-    align = "left"
     separator = false
     separator_block_width = 40
 }
@@ -66,14 +58,26 @@ memory {
   format = "%used / %total"
     threshold_degraded = "1G"
     format_degraded = "MEMORY < %available"
-    align = "left"
     separator = false
     separator_block_width = 40
 }
 
-tztime local {
-  format = "%a %d/%m  %H : %M"
-    align = "left"
+volume master {
+  format = "V %volume"
+    format_muted = "V %volume muted"
+    device = "pulse"
+    separator = false
+    separator_block_width = 40
+}
+
+tztime date {
+  format = "%a %d %m"
+    separator = false
+    separator_block_width = 40
+}
+
+tztime time {
+  format = "%H : %M"
     separator = false
     separator_block_width = 40
 }
