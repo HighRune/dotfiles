@@ -49,6 +49,6 @@ memory {
         format_degraded = "MEMORY < %available"
 }
 
-tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
-}
+# tztime local {
+#         format = "%Y-%m-%d %H:%M:%S"
+# }
