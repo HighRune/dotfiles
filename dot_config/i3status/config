@@ -9,7 +9,9 @@
 general {
         color_good = "#427c7d"
         color_bad = "#cf449a"
-        interval = 5
+        separator = false
+        separator_block_width = 1
+        interval = 1
 }
 
 # order += "ipv6"
