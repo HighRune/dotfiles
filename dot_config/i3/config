@@ -80,12 +80,15 @@ bindsym XF86MonBrightnessDown exec xbacklight -10
 # Focus window
 bindsym $mod+Escape focus down
 bindsym $mod+Shift+Escape focus up
+bindsym $mod+j focus left
+bindsym $mod+k focus right
+
 
 # Move focused window
-# bindsym $mod+Shift+k move down
-# bindsym $mod+Shift+b move up
-# bindsym $mod+Shift+j move left
-# bindsym $mod+Shift+o move right
+# bindsym $mod+Shift+Prior move up
+# bindsym $mod+Shift+Next  move down
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move right
 
 # Split in horizontal orientation
 bindsym $mod+h split h
@@ -232,11 +235,11 @@ set $mediumgrey     #8b8b8b
 set $yellowbrown    #e1b700
 
 # Windows color
-#                       $BORDER    $BGROUND   $TEXT  $INDICATOR $CHILD_BORDER
-CLIENT.FOCUSED          $LIGHTBLUE $DARKBLUE  $WHITE $PURPLE    $MEDIUMGREY
-CLIENT.UNFOCUSED        $DARKBLUE  $DARKBLUE  $GREY  $PURPLE    $DARKGREY
-CLIENT.FOCUSED_INACTIVE $DARKBLUE  $DARKBLUE  $GREY  $PURPLE    $BLACK
-CLIENT.URGENT           $URGENTRED $URGENTRED $WHITE $PURPLE    $YELLOWBROWN
+#                       $BORDER    $BGROUND   $TEXT  $INDICATOR
+CLIENT.FOCUSED          $LIGHTBLUE $DARKBLUE  $WHITE $PURPLE   
+CLIENT.UNFOCUSED        $DARKBLUE  $DARKBLUE  $GREY  $PURPLE   
+CLIENT.FOCUSED_INACTIVE $DARKBLUE  $DARKBLUE  $GREY  $PURPLE   
+CLIENT.URGENT           $PURPLE    $DARKBLUE  $WHITE $PURPLE   
 
 
 bar {
@@ -250,13 +253,13 @@ bar {
         i3bar_command i3bar --transparency
 
         colors {
-          background $darkblue
-            statusline $grey
-#                              $border     $bg             $txt        $indicator
-            focused_workspace  $lightblue  $darkblue       $white      $purple
-            active_workspace   $darkblue   $darkblue       $white      $purple
-            inactive_workspace $darkblue   $darkblue       $grey       $purple
-            urgent_workspace   $urgentred  $urgentred      $white      $purple
+            background         $darkblue
+            statusline         $grey
+#                              $border    $bg       $txt   $indicator
+            focused_workspace  $lightblue $darkblue $white $purple
+            active_workspace   $darkblue  $darkblue $white $purple
+            inactive_workspace $darkblue  $darkblue $grey  $purple
+            urgent_workspace   $purple    $darkblue $white $purple
         }
 }
 
