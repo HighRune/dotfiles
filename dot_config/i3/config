@@ -243,6 +243,7 @@ bar {
     # status_command i3blocks -c ~/.config/i3/i3blocks.conf
     status_command i3status
         position bottom 
+        workspace_min_width 30
         tray_output primary
         tray_padding 0
         strip_workspace_numbers yes
