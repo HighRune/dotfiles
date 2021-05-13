@@ -23,14 +23,14 @@ order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
-  format_up = "W %quality %essid %ip"
+  format_up = "W %quality %essid"
     format_down = "W down"
     separator = false
     separator_block_width = 40
 }
 
 ethernet _first_ {
-  format_up = "E %speed %ip"
+  format_up = "E %speed"
     format_down = "E down"
     separator = false
     separator_block_width = 40
