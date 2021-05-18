@@ -281,4 +281,3 @@ bindsym $mod+t exec rofi -show window -display-window "Window : " -line-padding 
 
 bindsym F10 exec rofi -show window -display-window "Window : " -line-padding 4 \
                 -lines 10 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 14"
