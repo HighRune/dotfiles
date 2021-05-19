@@ -114,7 +114,6 @@ set $ws10 "10:5"
 
 # _______________________________ KEYBINDINGS
 
-bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 # Lock
@@ -181,7 +180,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 # Start blueberry app for managing bluetooth devices from tray:
 exec --no-startup-id blueberry-tray
 
-bindsym Print exec "scrot ~/%Y-%m-%d-%T-screenshot.png"
+bindsym Print exec "scrot ~/Downloads/%Y-%m-%d-%T-screenshot.png"
 
 # Transparency 
 # exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
@@ -248,6 +247,7 @@ bar {
 
 # _______________________________ APPLICATIONS
 
+bindsym $mod+Return exec alacritty
 bindsym $mod+space exec /usr/bin/google-chrome-stable
 bindsym $mod+n exec /usr/bin/thunar
 
