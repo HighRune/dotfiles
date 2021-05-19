@@ -180,7 +180,9 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 # Start blueberry app for managing bluetooth devices from tray:
 exec --no-startup-id blueberry-tray
 
-bindsym Print exec "scrot ~/Downloads/%Y-%m-%d-%T-screenshot.png"
+# bindsym Print exec "scrot ~/Downloads/%Y-%m-%d-%T-screenshot.png"
+bindsym Print exec "flameshot gui -p ~/Downloads"
+
 
 # Transparency 
 # exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
