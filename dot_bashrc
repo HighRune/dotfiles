@@ -175,4 +175,4 @@ eval "$(fnm env)"
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 
-# alias tmux='tmux -f ~/.config/tmux/.tmux.conf'
+alias tmux='tmux -f ~/.config/tmux/.tmux.conf'
