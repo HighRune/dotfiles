@@ -305,6 +305,9 @@ map <C-h> :BufferClose<CR>
 " Switch to the next buffer then wipe the previous one
 " map <C-h> :bn<Bar>:bw!#<CR>
 
+map <ALT+j> 4j
+map <ALT+k> 4k 
+
 " ____ FZF
 
 nnoremap <Leader>f :Files<CR>
