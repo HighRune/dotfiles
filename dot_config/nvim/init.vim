@@ -303,8 +303,8 @@ let mapleader = "\<Space>"
 map <silent> <C-h> :BufferClose<CR>
 
 " Re-order to previous/next
-nnoremap <silent>    <C-k> :BufferMovePrevious<CR>
-nnoremap <silent>    <C-j> :BufferMoveNext<CR>
+nnoremap <silent>    <C-j> :BufferMovePrevious<CR>
+nnoremap <silent>    <C-k> :BufferMoveNext<CR>
 
 " Goto buffer in position...
 nnoremap <silent>    <M-a> :BufferGoto 1<CR>
