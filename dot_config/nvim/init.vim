@@ -300,15 +300,15 @@ map <C-k> :BufferNext<CR>
 map <C-j> :BufferPrevious<CR>
 map <C-h> :BufferClose<CR>
 
-nnoremap <silent>    <A-a> :BufferGoto 1<CR>
-nnoremap <silent>    <A-o> :BufferGoto 2<CR>
-nnoremap <silent>    <A-e> :BufferGoto 3<CR>
-nnoremap <silent>    <A-u> :BufferGoto 4<CR>
-nnoremap <silent>    <A-;> :BufferGoto 5<CR>
-nnoremap <silent>    <A-q> :BufferGoto 6<CR>
-nnoremap <silent>    <A-j> :BufferGoto 7<CR>
-nnoremap <silent>    <A-k> :BufferGoto 8<CR>
-nnoremap <silent>    <A-i> :BufferLast<CR>
+nnoremap <silent>    <M-a> :BufferGoto 1<CR>
+nnoremap <silent>    <M-o> :BufferGoto 2<CR>
+nnoremap <silent>    <M-e> :BufferGoto 3<CR>
+nnoremap <silent>    <M-u> :BufferGoto 4<CR>
+nnoremap <silent>    <M-;> :BufferGoto 5<CR>
+nnoremap <silent>    <M-q> :BufferGoto 6<CR>
+nnoremap <silent>    <M-j> :BufferGoto 7<CR>
+nnoremap <silent>    <M-k> :BufferGoto 8<CR>
+nnoremap <silent>    <M-i> :BufferLast<CR>
 
 " map <C-k> :bn<CR>
 " map <C-j> :bp<CR>
