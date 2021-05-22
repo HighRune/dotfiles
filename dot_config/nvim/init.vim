@@ -300,6 +300,16 @@ map <C-k> :BufferNext<CR>
 map <C-j> :BufferPrevious<CR>
 map <C-h> :BufferClose<CR>
 
+nnoremap <silent>    <A-a> :BufferGoto 1<CR>
+nnoremap <silent>    <A-o> :BufferGoto 2<CR>
+nnoremap <silent>    <A-e> :BufferGoto 3<CR>
+nnoremap <silent>    <A-u> :BufferGoto 4<CR>
+nnoremap <silent>    <A-;> :BufferGoto 5<CR>
+nnoremap <silent>    <A-q> :BufferGoto 6<CR>
+nnoremap <silent>    <A-j> :BufferGoto 7<CR>
+nnoremap <silent>    <A-k> :BufferGoto 8<CR>
+nnoremap <silent>    <A-i> :BufferLast<CR>
+
 " map <C-k> :bn<CR>
 " map <C-j> :bp<CR>
 " Switch to the next buffer then wipe the previous one
