@@ -254,8 +254,8 @@ bar {
 
 # _______________________________ APPLICATIONS
 
-bindsym $mod+ctrl exec alacritty
-bindsym $mod+space exec /usr/bin/google-chrome-stable
+bindsym $mod+t exec alacritty
+bindsym $mod+w exec /usr/bin/google-chrome-stable
 bindsym $mod+n exec /usr/bin/thunar
 
 # Rofi exit menu
@@ -267,6 +267,6 @@ bindsym $mod+d exec rofi -modi drun -show drun -display-drun "Apps : " -line-pad
                 -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 14"
 
 # Rofi open windows menu
-bindsym $mod+t exec rofi -show window -display-window "Window : " -line-padding 4 \
-                -lines 10 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 14"
+# bindsym $mod+t exec rofi -show window -display-window "Window : " -line-padding 4 \
+#                 -lines 10 -padding 50 -hide-scrollbar \
+#                 -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 14"
