@@ -12,8 +12,8 @@ floating_modifier $mod
 focus_on_window_activation focus
 
 # Focus window
-bindsym $mod+Escape focus down
-bindsym $mod+Shift+Escape focus up
+bindsym $mod+Tab focus down
+bindsym $mod+Shift+Tab focus up
 bindsym $mod+j focus left
 bindsym $mod+k focus right
 
