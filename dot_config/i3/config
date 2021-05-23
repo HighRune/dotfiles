@@ -249,7 +249,7 @@ bar {
 
 # _______________________________ APPLICATIONS
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+ctrl exec alacritty
 bindsym $mod+space exec /usr/bin/google-chrome-stable
 bindsym $mod+n exec /usr/bin/thunar
 
