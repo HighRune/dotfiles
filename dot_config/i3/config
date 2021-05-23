@@ -132,7 +132,7 @@ bindsym $mod+Shift+r restart
 # bindsym XF86AudioPlay exec playerctl play-pause
 # bindsym XF86AudioNext exec playerctl next
 # bindsym XF86AudioPrev exec playerctl previous
-bindsym $mod+space exec playerctl play-pause
+bindsym $mod+p exec playerctl play-pause
 bindsym $mod+Right exec playerctl next
 bindsym $mod+Left exec playerctl previous
 
@@ -255,7 +255,7 @@ bar {
 # _______________________________ APPLICATIONS
 
 bindsym $mod+t exec alacritty
-bindsym $mod+w exec /usr/bin/google-chrome-stable
+bindsym $mod+space /usr/bin/google-chrome-stable
 bindsym $mod+n exec /usr/bin/thunar
 
 # Rofi exit menu
