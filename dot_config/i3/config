@@ -14,8 +14,8 @@ focus_on_window_activation focus
 # Focus window
 bindsym $mod+Tab focus down
 bindsym $mod+Shift+Tab focus up
-bindsym $mod+j focus left
-bindsym $mod+k focus right
+# bindsym $mod+j focus left
+# bindsym $mod+k focus right
 
 # Move focused window
 # bindsym $mod+Shift+Prior move up
