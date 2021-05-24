@@ -307,15 +307,15 @@ nnoremap <silent>    <C-j> :BufferMovePrevious<CR>
 nnoremap <silent>    <C-k> :BufferMoveNext<CR>
 
 " Goto buffer in position...
-nnoremap <silent>    <M-a> :BufferGoto 1<CR>
-nnoremap <silent>    <M-o> :BufferGoto 2<CR>
-nnoremap <silent>    <M-e> :BufferGoto 3<CR>
-nnoremap <silent>    <M-u> :BufferGoto 4<CR>
-nnoremap <silent>    <M-;> :BufferGoto 5<CR>
-nnoremap <silent>    <M-q> :BufferGoto 6<CR>
-nnoremap <silent>    <M-j> :BufferGoto 7<CR>
-nnoremap <silent>    <M-k> :BufferGoto 8<CR>
-nnoremap <silent>    <M-i> :BufferLast<CR>
+map <silent>    <M-a> :BufferGoto 1<CR>
+map <silent>    <M-o> :BufferGoto 2<CR>
+map <silent>    <M-e> :BufferGoto 3<CR>
+map <silent>    <M-u> :BufferGoto 4<CR>
+map <silent>    <M-;> :BufferGoto 5<CR>
+map <silent>    <M-q> :BufferGoto 6<CR>
+map <silent>    <M-j> :BufferGoto 7<CR>
+map <silent>    <M-k> :BufferGoto 8<CR>
+map <silent>    <M-i> :BufferLast<CR>
 
 " map <C-k> :bn<CR>
 " map <C-j> :bp<CR>
