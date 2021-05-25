@@ -61,6 +61,7 @@ set updatetime=100                            " Having longer updatetime (defaul
 set hidden                                    " Buffer becomes hidden when it is abandoned
 autocmd BufEnter * :syntax sync fromstart     " Fix syntax color
 autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4
+set noswapfile
 
 " ____ UI
 
