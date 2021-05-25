@@ -297,14 +297,14 @@ let mapleader = "\<Space>"
 " nnoremap <C> :echom "C"<cr>
 
 " Move to previous/next
-" map <C-k> :BufferNext<CR>
-" map <C-j> :BufferPrevious<CR>
+map <C-k> :BufferNext<CR>
+map <C-j> :BufferPrevious<CR>
 
 map <silent> <C-h> :BufferClose<CR>
 
 " Re-order to previous/next
-nnoremap <silent>    <C-j> :BufferMovePrevious<CR>
-nnoremap <silent>    <C-k> :BufferMoveNext<CR>
+" nnoremap <silent>    <C-j> :BufferMovePrevious<CR>
+" nnoremap <silent>    <C-k> :BufferMoveNext<CR>
 
 " Goto buffer in position...
 " nnoremap <silent>    <M-a> :BufferGoto 1<CR>
@@ -317,8 +317,8 @@ nnoremap <silent>    <C-k> :BufferMoveNext<CR>
 " nnoremap <silent>    <M-k> :BufferGoto 8<CR>
 " nnoremap <silent>    <M-i> :BufferLast<CR>
 
-map <C-k> :bn<CR>
-map <C-j> :bp<CR>
+" map <C-k> :bn<CR>
+" map <C-j> :bp<CR>
 " Switch to the next buffer then wipe the previous one
 " map <C-h> :bn<Bar>:bw!#<CR>
 
