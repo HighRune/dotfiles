@@ -30,4 +30,4 @@ hidden                                    -- Buffer becomes hidden when it is ab
 -- ____ SEARCH
 
 -- o.ignorecase -- Ignore case in search patterns
-o.smartcase  -- Override the 'ignorecase' option if the search pattern contains upper case characters
+-- o.smartcase  -- Override the 'ignorecase' option if the search pattern contains upper case characters
