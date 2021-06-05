@@ -13,7 +13,7 @@ o.virtualedit="all"
 o.completeopt="menuone,noinsert"              -- Options for Insert mode completion
 -- o.clipboard+=unnamedplus                    -- Have the clipboard be the same as my regular clipboard
 o.updatetime=100                            -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience
-hidden                                    -- Buffer becomes hidden when it is abandoned
+o.hidden=true                                    -- Buffer becomes hidden when it is abandoned
 
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
 -- autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4
