@@ -8,7 +8,7 @@ local o = vim.o  -- to set options
 -- o.scroll=5
 o.mouse=a                                   -- Enables mouse support
 o.scrolloff=999                              -- Minimal number of screen lines to keep above and below the cursor
-o.nofoldenable                              -- All folds are open
+-- o.nofoldenable                              -- All folds are open
 o.virtualedit=all
 o.completeopt=menuone,noinsert              -- Options for Insert mode completion
 o.clipboard+=unnamedplus                    -- Have the clipboard be the same as my regular clipboard
