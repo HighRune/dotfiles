@@ -22,9 +22,9 @@ o.hidden=true                                    -- Buffer becomes hidden when i
 
 -- ____ UI
 
--- o.termguicolors  -- Enables 24-bit RGB color in the Terminal UI
+o.termguicolors=true  -- Enables 24-bit RGB color in the Terminal UI
 -- o.colorscheme darkspace
--- o.noshowmode     -- Disable message on the last line (Insert, Replace or Visual mode)
+o.noshowmode=true     -- Disable message on the last line (Insert, Replace or Visual mode)
 -- o.showtabline=2  -- Always display the line with tab page labels
 
 -- ____ SEARCH
