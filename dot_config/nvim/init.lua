@@ -8,23 +8,23 @@ local o = vim.o  -- to set options
 -- o.scroll=5
 o.mouse="a"                                   -- Enables mouse support
 o.scrolloff=999                              -- Minimal number of screen lines to keep above and below the cursor
--- o.nofoldenable = true                              -- All folds are open
+o.foldenable = false                              -- All folds are open
 o.virtualedit="all"
 o.completeopt="menuone,noinsert"              -- Options for Insert mode completion
--- o.clipboard+=unnamedplus                    -- Have the clipboard be the same as my regular clipboard
+o.clipboard = "unnamedplus"                    -- Have the clipboard be the same as my regular clipboard
 o.updatetime=100                            -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience
 o.hidden=true                                    -- Buffer becomes hidden when it is abandoned
 
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
 -- autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4
--- o.noswapfile
+o.swapfile=false
 
 
 -- ____ UI
 
 o.termguicolors=true  -- Enables 24-bit RGB color in the Terminal UI
 -- o.colorscheme darkspace
--- o.noshowmode=true     -- Disable message on the last line (Insert, Replace or Visual mode)
+o.showmode = false     -- Disable message on the last line (Insert, Replace or Visual mode)
 -- o.showtabline=2  -- Always display the line with tab page labels
 
 -- ____ SEARCH
