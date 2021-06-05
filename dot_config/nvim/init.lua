@@ -11,7 +11,7 @@ o.scrolloff=999                              -- Minimal number of screen lines t
 -- o.nofoldenable                              -- All folds are open
 o.virtualedit=all
 o.completeopt=menuone,noinsert              -- Options for Insert mode completion
-o.clipboard+=unnamedplus                    -- Have the clipboard be the same as my regular clipboard
+-- o.clipboard+=unnamedplus                    -- Have the clipboard be the same as my regular clipboard
 o.updatetime=100                            -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience
 hidden                                    -- Buffer becomes hidden when it is abandoned
 
