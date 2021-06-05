@@ -47,7 +47,11 @@ o.shiftwidth=2                -- Number of spaces to use for each step of (auto)
 
 require('plugins')
 
--- Search using Telescope
+-- Telescope
 api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope find_files<cr>', {noremap = true, silent = true})
 api.nvim_set_keymap('n', '<leader>s', '<cmd>Telescope live_grep<cr>', {noremap = true, silent = true})
 api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = true, silent = true})
+
+
+-- Treesitter
+require 'nvim-treesitter.configs'.setup {ensure_installed = 'maintained', highlight = {enable = true}}
