@@ -47,10 +47,7 @@ o.shiftwidth=2                -- Number of spaces to use for each step of (auto)
 
 require('plugins')
 
--- Find files using Telescope command-line sugar.
--- api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {noremap = true, silent = true})
+-- Search using Telescope
 api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope find_files<cr>', {noremap = true, silent = true})
--- nnoremap <leader>ff <cmd>Telescope find_files<cr>
--- nnoremap <leader>fg <cmd>Telescope live_grep<cr>
--- nnoremap <leader>fb <cmd>Telescope buffers<cr>
--- nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+api.nvim_set_keymap('n', '<leader>s', '<cmd>Telescope live_grep<cr>', {noremap = true, silent = true})
+api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = true, silent = true})
