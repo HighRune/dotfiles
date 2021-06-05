@@ -42,3 +42,5 @@ o.copyindent=true                  -- Copy the structure of the existing lines i
 o.softtabstop=2               -- Number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>
 o.tabstop=2                   -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth=2                -- Number of spaces to use for each step of (auto)indent
+
+lua require('plugins')
