@@ -1,3 +1,4 @@
+local api = vim.api
 local cmd = vim.cmd  -- to execute Vim commands e.g. cmd('pwd')
 local fn = vim.fn    -- to call Vim functions e.g. fn.bufnr()
 local g = vim.g      -- a table to access global variables
@@ -6,6 +7,7 @@ local o = vim.o  -- to set options
 -- ____ GENERAL
 
 -- o.scroll=5
+g.mapleader = " "
 o.mouse="a"                                   -- Enables mouse support
 o.scrolloff=999                              -- Minimal number of screen lines to keep above and below the cursor
 o.foldenable = false                              -- All folds are open
@@ -44,3 +46,11 @@ o.tabstop=2                   -- Number of spaces that a <Tab> in the file count
 o.shiftwidth=2                -- Number of spaces to use for each step of (auto)indent
 
 require('plugins')
+
+-- Find files using Telescope command-line sugar.
+-- api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {nnoremap = true, silent = true})
+api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope find_files<cr>', {nnoremap = true})
+-- nnoremap <leader>ff <cmd>Telescope find_files<cr>
+-- nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+-- nnoremap <leader>fb <cmd>Telescope buffers<cr>
+-- nnoremap <leader>fh <cmd>Telescope help_tags<cr>
