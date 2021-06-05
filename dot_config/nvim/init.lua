@@ -52,7 +52,7 @@ api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope find_files<cr>', {noremap 
 api.nvim_set_keymap('n', '<leader>s', '<cmd>Telescope live_grep<cr>', {noremap = true, silent = true})
 api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = true, silent = true})
 
-require('telescope').setup{
+require 'telescope'.setup{
   defaults = {
     vimgrep_arguments = {
       'rg',
