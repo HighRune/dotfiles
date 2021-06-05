@@ -49,7 +49,7 @@ require('plugins')
 
 -- Find files using Telescope command-line sugar.
 -- api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {noremap = true, silent = true})
-api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope find_files<cr>', {noremap = true})
+api.nvim_set_keymap('n', '<leader>f', '<cmd>Telescope find_files<cr>', {noremap = true, silent = true})
 -- nnoremap <leader>ff <cmd>Telescope find_files<cr>
 -- nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 -- nnoremap <leader>fb <cmd>Telescope buffers<cr>
