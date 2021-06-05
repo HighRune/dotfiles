@@ -9,6 +9,7 @@ local o = vim.o  -- to set options
 o.mouse="a"                                   -- Enables mouse support
 o.scrolloff=999                              -- Minimal number of screen lines to keep above and below the cursor
 o.foldenable = false                              -- All folds are open
+o.number=true         -- Print the line number in front of each line
 o.virtualedit="all"
 o.completeopt="menuone,noinsert"              -- Options for Insert mode completion
 o.clipboard = "unnamedplus"                    -- Have the clipboard be the same as my regular clipboard
