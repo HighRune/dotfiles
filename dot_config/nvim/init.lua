@@ -54,7 +54,8 @@ api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = t
 
 require 'telescope'.setup{
   defaults = {
-    preview_cutoff = 0
+    preview_cutoff = 0,
+    results_width = 0.5
   }
 }
 
