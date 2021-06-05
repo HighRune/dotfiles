@@ -31,3 +31,4 @@ hidden                                    -- Buffer becomes hidden when it is ab
 
 -- o.ignorecase -- Ignore case in search patterns
 -- o.smartcase  -- Override the 'ignorecase' option if the search pattern contains upper case characters
+
