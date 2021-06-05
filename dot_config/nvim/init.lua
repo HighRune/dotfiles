@@ -17,7 +17,7 @@ hidden                                    -- Buffer becomes hidden when it is ab
 
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
 -- autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4
-o.noswapfile
+-- o.noswapfile
 
 
 -- ____ UI
