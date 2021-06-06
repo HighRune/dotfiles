@@ -259,7 +259,7 @@ bar {
 # _______________________________ APPLICATIONS
 
 bindsym $mod+space exec alacritty
-bindsym $mod+t exec /usr/bin/google-chrome-stable
+bindsym $mod+w exec /usr/bin/google-chrome-stable
 bindsym $mod+n exec /usr/bin/thunar
 
 # Rofi exit menu
