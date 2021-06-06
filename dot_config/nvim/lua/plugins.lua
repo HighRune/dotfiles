@@ -6,4 +6,14 @@ return require('packer').startup(function()
 }
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use {"romgrk/barbar.nvim"}
+    use {
+  'lewis6991/gitsigns.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim'
+  },
+  config = function()
+    require('gitsigns').setup()
+  end
+}
+
 end)
