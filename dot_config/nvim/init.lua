@@ -54,3 +54,7 @@ api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = t
 
 -- Treesitter
 require 'nvim-treesitter.configs'.setup {ensure_installed = 'maintained', highlight = {enable = true}}
+
+api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
+api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', { noremap = true, silent = true })
+api.nvim_set_keymap('n', '<S-x>', ':BufferClose<CR>', { noremap = true, silent = true })
