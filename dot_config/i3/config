@@ -190,7 +190,7 @@ exec --no-startup-id blueberry-tray
 
 # bindsym Print exec "scrot ~/Downloads/%Y-%m-%d-%T-screenshot.png"
 bindsym Print exec "flameshot gui -p ~/Downloads"
-bindsym Ctrl+p exec "flameshot gui -p ~/Downloads"
+bindsym $mod+c exec "flameshot gui -p ~/Downloads"
 
 
 # Transparency 
