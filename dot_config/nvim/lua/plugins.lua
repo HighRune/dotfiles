@@ -15,5 +15,7 @@ return require('packer').startup(function()
     require('gitsigns').setup()
   end
 }
-
+use {"neovim/nvim-lspconfig"}
+    use {"glepnir/lspsaga.nvim"}
+    use {"kabouzeid/nvim-lspinstall"}
 end)
