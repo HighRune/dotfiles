@@ -15,5 +15,4 @@ return require('packer').startup(function()
     require('gitsigns').setup()
   end
 }
-use {"neovim/nvim-lspconfig"}
 end)
