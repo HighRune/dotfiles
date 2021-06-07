@@ -88,4 +88,5 @@ require'compe'.setup({
   },
 })
 
-api.nvim_exec([[ inoremap <silent><expr> <C-Space> compe#complete() ]], false)
+api.nvim_set_keymap("i", "<C-Space> ", "compe#complete()", {noremap = true, silent = true, expr = true})
+api.nvim_set_keymap("i", "<CR>", "compe#confirm('<CR>')", {noremap = true, silent = true, expr = true})
