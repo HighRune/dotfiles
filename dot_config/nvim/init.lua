@@ -76,15 +76,3 @@ require'lspinstall'.post_install_hook = function ()
   setup_servers() -- reload installed servers
   cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end
-
-
--- nvim-compe
-require'compe'.setup({
-    enabled = true,
-    source = {
-      path = true,
-      buffer = true,
-      nvim_lsp = true,
-    },
-  })
-o.completeopt = "menuone,noselect"
