@@ -88,10 +88,3 @@ require'compe'.setup({
     },
   })
 o.completeopt = "menuone,noselect"
-api.nvim_set_keymap("i", "<CR> ", "compe#complete()", {noremap = true, silent = true, expr = true})
--- api.nvim_set_keymap("i", "<CR>", "compe#confirm('<CR>')",
--- {noremap = true, silent = true, expr = true})
-
-
--- api.nvim_set_keymap('i', '<expr><CR>', 'compe#complete()', {noremap = true, silent = true})
--- api.nvim_set_keymap("i", "<CR> ", "compe#complete()", {noremap = true, silent = true, expr = true})
