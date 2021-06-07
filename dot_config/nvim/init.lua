@@ -87,3 +87,4 @@ require'compe'.setup({
       nvim_lsp = true,
     },
   })
+api.nvim_set_keymap('i', '<CR>', 'compe#complete()', {noremap = true, silent = true})
