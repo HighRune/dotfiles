@@ -87,6 +87,3 @@ require'compe'.setup({
     nvim_lsp = true,
   },
 })
-api.nvim_set_keymap("i", "<C-s>", "compe#complete()", {expr = true})
-api.nvim_set_keymap("i", "<C-y>", "compe#confirm('<C-y>')", {expr = true})
-api.nvim_set_keymap("i", "<CR>", "<C-y>", {})
