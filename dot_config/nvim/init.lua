@@ -59,3 +59,20 @@ require 'nvim-treesitter.configs'.setup {ensure_installed = 'maintained', highli
 api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', '<C-h>', ':BufferClose<CR>', { noremap = true, silent = true })
+
+-- lspinstall
+local function setup_servers()
+  require'lspinstall'.setup()
+  local servers = require'lspinstall'.installed_servers()
+  for _, server in pairs(servers) do
+    require'lspconfig'[server].setup{}
+  end
+end
+
+setup_servers()
+
+-- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
+require'lspinstall'.post_install_hook = function ()
+  setup_servers() -- reload installed servers
+  cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
+end
