@@ -4,6 +4,7 @@ local fn = vim.fn    -- to call Vim functions e.g. fn.bufnr()
 local g = vim.g      -- a table to access global variables
 local o = vim.o  -- to set options
 
+require('xshado')
 -- ____ GENERAL
 
 -- o.scroll=5
