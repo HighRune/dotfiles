@@ -88,5 +88,15 @@ require'compe'.setup({
     nvim_lsp = true,
   },
 })
+
+cmd [[
+function! kutsan#mappings#insert#handle#cr() abort
+  if complete_info()['selected'] != -1
+    return "\<C-y>"
+  else
+    return "\<C-g>u\<CR>"
+  endif
+endfunction
+]]
 -- api.nvim_set_keymap("i", "<C-y> ", "compe#complete()", {noremap = true, silent = true, expr = true})
 -- api.nvim_set_keymap("i", "<CR>", "compe#confirm('<CR>')", {noremap = true, silent = true, expr = true})
