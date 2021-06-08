@@ -79,7 +79,7 @@ require'lspinstall'.post_install_hook = function ()
 end
 
 -- nvim-compe
--- o.completeopt = "menuone,noselect"
+o.completeopt = "menuone,noselect"
 require'compe'.setup({
   enabled = true,
   source = {
