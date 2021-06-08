@@ -79,7 +79,7 @@ require'lspinstall'.post_install_hook = function ()
 end
 
 -- nvim-compe
-o.completeopt = "menuone,noselect"
+-- o.completeopt = "menuone,noselect"
 require'compe'.setup({
   enabled = true,
   source = {
@@ -88,5 +88,5 @@ require'compe'.setup({
     nvim_lsp = true,
   },
 })
-api.nvim_set_keymap("i", "<C-y> ", "compe#complete()", {noremap = true, silent = true, expr = true})
+-- api.nvim_set_keymap("i", "<C-y> ", "compe#complete()", {noremap = true, silent = true, expr = true})
 -- api.nvim_set_keymap("i", "<CR>", "compe#confirm('<CR>')", {noremap = true, silent = true, expr = true})
