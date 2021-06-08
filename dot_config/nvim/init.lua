@@ -6,7 +6,6 @@ local o = vim.o  -- to set options
 
 -- ____ GENERAL
 
-require('deus')
 -- o.scroll=5
 g.mapleader = " "
 o.mouse="a"                                   -- Enables mouse support
