@@ -54,7 +54,22 @@ api.nvim_set_keymap('n', '<leader>s', '<cmd>Telescope live_grep<cr>', {noremap =
 api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = true, silent = true})
 
 -- Treesitter
-require 'nvim-treesitter.configs'.setup {ensure_installed = 'maintained', highlight = {enable = true}}
+require 'nvim-treesitter.configs'.setup {
+  ensure_installed = 'maintained',
+  highlight = {enable = true},
+  indent = {enable = true},
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm"
+    }
+  }
+}
+o.foldmethod='expr'
+o.foldexpr='nvim_treesitter#foldexpr()'
 
 -- Barbar
 api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
