@@ -100,9 +100,9 @@ end
     formatCommand = "./node_modules/.bin/eslint --fix-to-stdout --stdin --stdin-filename=${INPUT}",
     formatStdin = true
 }
-require"lspconfig".efm.setup {
+require 'lspconfig'.efm.setup {
       cmd = {"efm-langserver"},
-    root_dir = lspconfig.util.root_pattern(".git/", ".bashrc"),
+    root_dir = require "lspconfig".util.root_pattern(".git/", ".bashrc"),
     init_options = {documentFormatting = true, codeAction = false},
     filetypes = {"lua", "python", "javascriptreact", "javascript", "typescript","typescriptreact","sh", "html", "css", "json", "yaml", "markdown", "vue"},
     settings = {
