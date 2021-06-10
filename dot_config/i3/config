@@ -143,8 +143,10 @@ bindsym $mod+l exec playerctl position 5-
 # bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
 # Backlight control
-bindsym XF86MonBrightnessUp exec xbacklight +10
-bindsym XF86MonBrightnessDown exec xbacklight -10
+# bindsym XF86MonBrightnessUp exec xbacklight +10
+# bindsym XF86MonBrightnessDown exec xbacklight -10
+bindsym $mod+= exec xbacklight +10
+bindsym $mod+- exec xbacklight -10
 
 # Volume
 # bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
