@@ -190,9 +190,7 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
 local snap = require'snap'
 
-local fzy = snap.get'consumer.fzy'
 local limit = snap.get'consumer.limit'
-local producer_file = snap.get'producer.ripgrep.file'
 local producer_vimgrep = snap.get'producer.ripgrep.vimgrep'
 local producer_buffer = snap.get'producer.vim.buffer'
 local producer_oldfile = snap.get'producer.vim.oldfile'
@@ -203,11 +201,10 @@ local preview_vimgrep = snap.get'preview.vimgrep'
 
 snap.register.map({'n'}, {'<Leader><Leader>'}, function ()
   snap.run({
-    prompt = 'Files',
-    producer = fzy(producer_file),
-    select = select_file.select,
-    multiselect = select_file.multiselect,
-    views = {preview_file}
+  producer = snap.get'consumer.fzf'(snap.get'producer.ripgrep.file'),
+  select = snap.get'select.file'.select,
+  multiselect = snap.get'select.file'.multiselect,
+  views = {snap.get'preview.file'}
   })
 end)
 
