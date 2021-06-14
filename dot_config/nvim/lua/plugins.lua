@@ -1,6 +1,6 @@
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-use { 'camspiers/snap', rocks = {'fzy'}}
+use { 'camspiers/snap'}
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use {"romgrk/barbar.nvim"}
     use {
