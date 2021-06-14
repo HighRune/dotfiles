@@ -18,4 +18,5 @@ use {"neovim/nvim-lspconfig"}
 use {"kabouzeid/nvim-lspinstall"}
 use {"glepnir/lspsaga.nvim"}
 use {"hrsh7th/nvim-compe"}
+use 'folke/tokyonight.nvim'
 end)
