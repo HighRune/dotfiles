@@ -14,6 +14,7 @@ return require('packer').startup(function()
   end
   
 }
+use {"folke/tokyonight.nvim"}
 use {"neovim/nvim-lspconfig"}
 use {"kabouzeid/nvim-lspinstall"}
 use {"glepnir/lspsaga.nvim"}
