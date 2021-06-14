@@ -205,7 +205,7 @@ exec --no-startup-id nm-applet
 
 # Set wallpaper
 # exec --no-startup-id nitrogen --restore
-exec --no-startup-id feh --bg-fill /home/charles/Pictures/-halo-infinite-wallpaper.jpg
+exec --no-startup-id feh --bg-fill /home/charles/Pictures/photo-1589979812000-4eab44f02c30.jpeg
 
 # Set powersavings for display:
 # exec --no-startup-id xset s 480 dpms 600 600 600
