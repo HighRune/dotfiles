@@ -7,6 +7,7 @@ local o = vim.o  -- to set options
 -- ____ GENERAL
 
 cmd[[colorscheme tokyonight]]
+o.tokyonight_transparent = true
 -- o.scroll=5
 g.mapleader = " "
 o.mouse="a"                                   -- Enables mouse support
