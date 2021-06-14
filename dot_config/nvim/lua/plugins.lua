@@ -1,6 +1,5 @@
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
-use { 'camspiers/snap'}
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use {"kyazdani42/nvim-web-devicons"}
     use {"romgrk/barbar.nvim"}
