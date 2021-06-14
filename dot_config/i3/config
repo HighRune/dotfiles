@@ -210,6 +210,9 @@ exec --no-startup-id feh --bg-fill /home/charles/Pictures/photo-1589979812000-4e
 # Set powersavings for display:
 # exec --no-startup-id xset s 480 dpms 600 600 600
 
+# Keyboard delay and rate
+exec --no-startup-id xset r rate 180 40
+
 # Desktop notifications
 exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
 
