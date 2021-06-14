@@ -215,7 +215,7 @@ end)
 -- Find Buffers
 snap.register.map({'n'}, {'<Leader>b'}, function ()
   snap.run({
-  producer = snap.get'consumer.fzy'(snap.get'producer.vim.buffer'),
+  producer = snap.get'consumer.fzf'(snap.get'producer.vim.buffer'),
   select = snap.get'select.file'.select,
   multiselect = snap.get'select.file'.multiselect,
   views = {snap.get'preview.file'}
@@ -225,7 +225,7 @@ end)
 -- Find Git Files
 snap.register.map({'n'}, {'<Leader>g'}, function ()
   snap.run({
-producer = snap.get'consumer.fzy'(snap.get'producer.git.file'),
+producer = snap.get'consumer.fzf'(snap.get'producer.git.file'),
   select = snap.get'select.file'.select,
   multiselect = snap.get'select.file'.multiselect,
   views = {snap.get'preview.file'}
