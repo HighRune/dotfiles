@@ -7,6 +7,7 @@ local o = vim.o  -- to set options
 -- ____ GENERAL
 
 -- cmd [[colorscheme xshado]]
+cmd [[colorscheme tokyonight]]
 -- o.scroll=5
 g.mapleader = " "
 o.mouse="a"                                   -- Enables mouse support
@@ -30,7 +31,6 @@ o.termguicolors=true  -- Enables 24-bit RGB color in the Terminal UI
 -- o.colorscheme darkspace
 o.showmode = false     -- Disable message on the last line (Insert, Replace or Visual mode)
 -- o.showtabline=2  -- Always display the line with tab page labels
-cmd "colorscheme tokyonight"
 
 -- ____ SEARCH
 
