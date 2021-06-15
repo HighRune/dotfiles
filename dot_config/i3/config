@@ -251,7 +251,7 @@ bar {
         strip_workspace_numbers yes
 
         colors {
-            background         $darkblue
+            background         $transparent
             statusline         $grey
             # Workspaces colors
             #                  $border    $bg       $txt   $indicator
