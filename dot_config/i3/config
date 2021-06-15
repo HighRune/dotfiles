@@ -242,7 +242,7 @@ CLIENT.URGENT           $LIGHTBLUE    $transparent  $WHITE $PURPLE
 
 bar {
         # status_command i3blocks -c ~/.config/i3/i3blocks.conf
-        # i3bar_command i3bar --transparency
+        i3bar_command i3bar --transparency
         status_command i3status
         position bottom 
         workspace_min_width 30
