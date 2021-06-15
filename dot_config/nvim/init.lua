@@ -47,6 +47,9 @@ o.softtabstop=2               -- Number of spaces that a <Tab> counts for while 
 o.tabstop=2                   -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth=2                -- Number of spaces to use for each step of (auto)indent
 
+api.nvim_set_keymap('n', '<C-j>', '2j', { noremap = true, silent = true })
+api.nvim_set_keymap('n', '<C-k>', '2k', { noremap = true, silent = true })
+
 require('plugins')
 
 -- Telescope
