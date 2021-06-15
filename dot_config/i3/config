@@ -7,7 +7,7 @@ set $mod Mod4
 
 # _______________________________ WINDOWS
 
-default_border pixel 0
+default_border none
 floating_modifier $mod
 focus_on_window_activation focus
 
