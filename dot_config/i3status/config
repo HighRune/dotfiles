@@ -8,8 +8,8 @@
 
 general {
   color_good = "#b0b5bd"
-    color_degraded = "#e345ff"
-    color_bad = "#E345ff"
+    color_degraded = "#5294e2"
+    color_bad = "#5294e2"
     interval = 1
 }
 
