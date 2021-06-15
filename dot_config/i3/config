@@ -234,10 +234,10 @@ set $yellowbrown    #e1b700
 
 # Windows color
 #                       $BORDER    $BGROUND   $TEXT  $INDICATOR
-CLIENT.FOCUSED          $LIGHTBLUE $DARKBLUE  $WHITE $PURPLE   
+CLIENT.FOCUSED          $WHITE $DARKBLUE  $WHITE $PURPLE   
 CLIENT.UNFOCUSED        $DARKBLUE  $DARKBLUE  $GREY  $PURPLE   
 CLIENT.FOCUSED_INACTIVE $DARKBLUE  $DARKBLUE  $GREY  $PURPLE   
-CLIENT.URGENT           $PURPLE    $DARKBLUE  $WHITE $PURPLE   
+CLIENT.URGENT           $LIGHTBLUE    $DARKBLUE  $WHITE $PURPLE   
 
 bar {
         # status_command i3blocks -c ~/.config/i3/i3blocks.conf
@@ -254,10 +254,10 @@ bar {
             statusline         $grey
             # Workspaces colors
             #                  $border    $bg       $txt   $indicator
-            focused_workspace  $lightblue $darkblue $white $purple
+            focused_workspace  $white $darkblue $white $purple
             active_workspace   $darkblue  $darkblue $white $purple
             inactive_workspace $darkblue  $darkblue $grey  $purple
-            urgent_workspace   $purple    $darkblue $white $purple
+            urgent_workspace   $lightblue    $darkblue $white $purple
         }
 }
 
