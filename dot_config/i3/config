@@ -220,7 +220,6 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
  
 # Colors
 set $darktrans      #00000096
-set $50trans        #faebd780
 set $transparent    #00000000
 set $darkbluetrans  #08052be6
 set $darkblue       #08052b
@@ -252,8 +251,8 @@ bar {
         strip_workspace_numbers yes
 
         colors {
-            background         $50trans         
-            statusline         $grey
+            background         $transparent         
+            statusline         $white
             # Workspaces colors
             #                  $border    $bg       $txt   $indicator
             focused_workspace  $darkblue $darkblue $white $purple
