@@ -220,6 +220,7 @@ exec --no-startup-id dbus-launch dunst --config ~/.config/dunst/dunstrc
  
 # Colors
 set $darktrans      #00000096
+set $transparent     #00000000
 set $darkbluetrans  #08052be6
 set $darkblue       #08052b
 set $lightblue      #5294e2
@@ -234,10 +235,10 @@ set $yellowbrown    #e1b700
 
 # Windows color
 #                       $BORDER    $BGROUND   $TEXT  $INDICATOR
-CLIENT.FOCUSED          $DARKBLUE $DARKBLUE  $WHITE $PURPLE   
-CLIENT.UNFOCUSED        $DARKBLUE  $DARKBLUE  $GREY  $PURPLE   
-CLIENT.FOCUSED_INACTIVE $DARKBLUE  $DARKBLUE  $GREY  $PURPLE   
-CLIENT.URGENT           $LIGHTBLUE    $DARKBLUE  $WHITE $PURPLE   
+CLIENT.FOCUSED          $DARKBLUE $transparent  $WHITE $PURPLE   
+CLIENT.UNFOCUSED        $DARKBLUE  $transparent  $GREY  $PURPLE   
+CLIENT.FOCUSED_INACTIVE $DARKBLUE  $transparent  $GREY  $PURPLE   
+CLIENT.URGENT           $LIGHTBLUE    $transparent  $WHITE $PURPLE   
 
 bar {
         # status_command i3blocks -c ~/.config/i3/i3blocks.conf
