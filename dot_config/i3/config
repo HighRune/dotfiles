@@ -11,7 +11,6 @@ default_border none
 floating_modifier $mod
 focus_on_window_activation focus
 
-for_window [class="^.*"] border pixel 0
 # Focus window
 bindsym $mod+Escape focus down
 bindsym $mod+Shift+Escape focus up
@@ -236,10 +235,10 @@ set $yellowbrown    #e1b700
 
 # Windows color
 #                       $BORDER    $BGROUND   $TEXT  $INDICATOR
-CLIENT.FOCUSED          $DARKBLUE $transparent  $WHITE $PURPLE   
-CLIENT.UNFOCUSED        $DARKBLUE  $transparent  $GREY  $PURPLE   
-CLIENT.FOCUSED_INACTIVE $DARKBLUE  $transparent  $GREY  $PURPLE   
-CLIENT.URGENT           $LIGHTBLUE    $transparent  $WHITE $PURPLE   
+CLIENT.FOCUSED          $transparent $transparent  $white $purple   
+CLIENT.UNFOCUSED        $transparent  $transparent  $grey  $purple   
+CLIENT.FOCUSED_INACTIVE $transparent  $transparent  $grey  $purple   
+CLIENT.URGENT           $lightblue    $transparent  $white $purple   
 
 bar {
         # status_command i3blocks -c ~/.config/i3/i3blocks.conf
