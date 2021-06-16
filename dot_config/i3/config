@@ -251,14 +251,13 @@ bar {
         strip_workspace_numbers yes
 
         colors {
-            background         $darkblue         
+            background         $darkgrey         
             statusline         $grey
             # Workspaces colors
             #                  $border    $bg       $txt   $indicator
-            focused_workspace  $darkblue $darkblue $white $purple
-            active_workspace   $white  $darkblue $white $purple
-            inactive_workspace $darkblue  $darkblue $grey  $purple
-            urgent_workspace   $lightblue    $darkblue $white $purple
+            focused_workspace  $darkgrey  $darkgrey $white $purple
+            inactive_workspace $darkgrey  $darkgrey $grey  $purple
+            urgent_workspace   $lightblue    $darkgrey $white $purple
         }
 }
 
