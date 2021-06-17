@@ -63,7 +63,7 @@ bindsym $mod+f fullscreen toggle
 
 # _______________________________ WORKSPACES
 
-workspace_layout tabbed
+workspace_layout stacking
 
 # open new empty workspace
 # bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace.sh
