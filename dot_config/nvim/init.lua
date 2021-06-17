@@ -197,7 +197,7 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 local snap = require'snap'
 
 -- Find Files
-snap.register.map({'n'}, {'<C-t>'}, function ()
+snap.register.map({'n'}, {'<leader><leader>'}, function ()
   snap.run({
   producer = snap.get'consumer.fzf'(snap.get'producer.ripgrep.file'),
   select = snap.get'select.file'.select,
