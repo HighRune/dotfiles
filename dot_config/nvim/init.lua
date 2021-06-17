@@ -78,7 +78,7 @@ o.foldexpr='nvim_treesitter#foldexpr()'
 -- Barbar
 api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', { noremap = true, silent = true })
-api.nvim_set_keymap('n', '<C-h>', ':BufferClose<CR>', { noremap = true, silent = true })
+api.nvim_set_keymap('n', '<C-w>', ':BufferClose<CR>', { noremap = true, silent = true })
 
 -- lspinstall
 -- local server_configs = {
@@ -197,7 +197,7 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 local snap = require'snap'
 
 -- Find Files
-snap.register.map({'n'}, {'<Leader><Leader>'}, function ()
+snap.register.map({'n'}, {'<C-t>'}, function ()
   snap.run({
   producer = snap.get'consumer.fzf'(snap.get'producer.ripgrep.file'),
   select = snap.get'select.file'.select,
