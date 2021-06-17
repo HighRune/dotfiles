@@ -12,8 +12,10 @@ floating_modifier $mod
 focus_on_window_activation focus
 
 # Focus window
-bindsym $mod+Escape focus down
-bindsym $mod+Shift+Escape focus up
+# bindsym $mod+Escape focus down
+# bindsym $mod+Shift+Escape focus up
+bindsym $mod+Escape focus right
+bindsym $mod+Shift+Escape focus left
 # bindsym $mod+j focus left
 # bindsym $mod+k focus right
 
@@ -63,7 +65,7 @@ bindsym $mod+f fullscreen toggle
 
 # _______________________________ WORKSPACES
 
-workspace_layout stacking
+workspace_layout tabbed
 
 # open new empty workspace
 # bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace.sh
