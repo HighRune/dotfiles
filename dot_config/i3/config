@@ -269,7 +269,7 @@ bar {
 
 bindsym $mod+t exec alacritty
 bindsym $mod+w exec /usr/bin/google-chrome-stable
-bindsym $mod+h exec /usr/bin/thunar
+bindsym $mod+z exec /usr/bin/thunar
 
 # Rofi exit menu
 # bindsym $mod+Shift+e exec ~/.config/i3/scripts/shutdown_menu -p rofi -c
