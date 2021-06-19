@@ -10,6 +10,7 @@ set $mod Mod4
 default_border none
 floating_modifier $mod
 focus_on_window_activation focus
+bindsym $mod+x [urgent=latest] focus
 
 # Focus window
 # bindsym $mod+Escape focus down
