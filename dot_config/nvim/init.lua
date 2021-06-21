@@ -7,6 +7,7 @@ local o = vim.o  -- to set options
 -- ____ GENERAL
 
 cmd[[colorscheme tokyonight]]
+g.tokyonight_style = 'night'
 g.tokyonight_transparent = true
 -- o.scroll=5
 g.mapleader = " "
