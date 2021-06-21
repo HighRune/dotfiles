@@ -82,16 +82,6 @@ api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', { noremap = true, sil
 api.nvim_set_keymap('n', '<C-w>', ':BufferClose<CR>', { noremap = true, silent = true })
 
 -- lspinstall
--- local server_configs = {
---     efm = {
---       filetypes = {"python", "typescript", "html", "json", "css", "vue", "javascript", "zsh", "sh", "bash", "go", "lua"},
---       on_attach = on_attach,
---       capabilities = capabilities,
---       root_dir = vim.loop.cwd,
---       settings = require("config.lsp.efm").settings(),
---       init_options = {documentFormatting = true}
---     }
---   }
 local function setup_servers()
   require'lspinstall'.setup()
   local servers = require'lspinstall'.installed_servers()
