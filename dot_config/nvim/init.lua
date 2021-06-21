@@ -107,35 +107,6 @@ require'lspinstall'.post_install_hook = function ()
   setup_servers() -- reload installed servers
   cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end
---                           local eslint = {
---     lintCommand = "./node_modules/.bin/eslint -f unix --stdin --stdin-filename ${INPUT}",
---     lintIgnoreExitCode = true,
---     lintStdin = true,
---     lintFormats = {"%f:%l:%c: %m"},
---     formatCommand = "./node_modules/.bin/eslint --fix-to-stdout --stdin --stdin-filename=${INPUT}",
---     formatStdin = true
--- }
--- require 'lspconfig'.efm.setup {
---       cmd = {"efm-langserver"},
---     root_dir = require "lspconfig".util.root_pattern(".git/", ".bashrc"),
---     init_options = {documentFormatting = true, codeAction = false},
---     filetypes = {"lua", "python", "javascriptreact", "javascript", "typescript","typescriptreact","sh", "html", "css", "json", "yaml", "markdown", "vue"},
---     settings = {
---         rootMarkers = {".git/"},
---         languages = {
---             -- python = python_arguments,
---             -- lua = lua_arguments,
---             -- sh = sh_arguments,
---             javascript = { eslint },tsserver_args,
--- 			      typescript = { eslint }
---             -- html = {prettier},
---             -- css = {prettier},
---             -- json = {prettier},
---             -- yaml = {prettier},
---             -- markdown = {markdownPandocFormat}
---         }
---     }
--- }
 
 -- nvim-compe
 o.completeopt = "menuone,noselect"
