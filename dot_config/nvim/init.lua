@@ -81,91 +81,22 @@ api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = 
 api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', '<C-w>', ':BufferClose<CR>', { noremap = true, silent = true })
 
--- lspconfig
-local lspconfig = require"lspconfig"
-
-local eslint = {
-  lintCommand = "eslint_d -f unix --stdin --stdin-filename ${INPUT}",
-  lintStdin = true,
-  lintFormats = {"%f:%l:%c: %m"},
-  lintIgnoreExitCode = true,
-  formatCommand = "eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}",
-  formatStdin = true
-}
-
-lspconfig.tsserver.setup {
-  on_attach = function(client)
-    if client.config.flags then
-      client.config.flags.allow_incremental_sync = true
-    end
-    client.resolved_capabilities.document_formatting = false
-    set_lsp_config(client)
-  end
-}
-
-lspconfig.efm.setup {
-  on_attach = function(client)
-    client.resolved_capabilities.document_formatting = true
-    client.resolved_capabilities.goto_definition = false
-    set_lsp_config(client)
-  end,
-  root_dir = function()
-    if not eslint_config_exists() then
-      return nil
-    end
-    return vim.fn.getcwd()
-  end,
-  settings = {
-    languages = {
-      javascript = {eslint},
-      javascriptreact = {eslint},
-      ["javascript.jsx"] = {eslint},
-      typescript = {eslint},
-      ["typescript.tsx"] = {eslint},
-      typescriptreact = {eslint}
-    }
-  },
-  filetypes = {
-    "javascript",
-    "javascriptreact",
-    "javascript.jsx",
-    "typescript",
-    "typescript.tsx",
-    "typescriptreact"
-  },
-}
-
-local function eslint_config_exists()
-  local eslintrc = vim.fn.glob(".eslintrc*", 0, 1)
-
-  if not vim.tbl_isempty(eslintrc) then
-    return true
-  end
-
-  if vim.fn.filereadable("package.json") then
-    if vim.fn.json_decode(vim.fn.readfile("package.json"))["eslintConfig"] then
-      return true
-    end
-  end
-
-  return false
-end
 -- lspinstall
--- local function setup_servers()
---   require'lspinstall'.setup()
---   local servers = require'lspinstall'.installed_servers()
---   for _, server in pairs(servers) do
---     require'lspconfig'[server].setup{}
---   end
--- end
--- 
--- setup_servers()
--- 
--- -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
--- require'lspinstall'.post_install_hook = function ()
---   setup_servers() -- reload installed servers
---   cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
--- end
+local function setup_servers()
+  require'lspinstall'.setup()
+  local servers = require'lspinstall'.installed_servers()
+  for _, server in pairs(servers) do
+    require'lspconfig'[server].setup{}
+  end
+end
+
+setup_servers()
+
+-- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
+require'lspinstall'.post_install_hook = function ()
+  setup_servers() -- reload installed servers
+  cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
+end
 
 -- nvim-compe
 o.completeopt = "menuone,noselect"
