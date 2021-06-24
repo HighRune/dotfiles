@@ -9,6 +9,7 @@ local o = vim.o  -- to set options
 -- g.tokyonight_style = 'night'
 -- g.tokyonight_transparent = true
 -- cmd[[colorscheme tokyonight]]
+vim.cmd [[color haslo]]
 -- o.scroll=5
 g.mapleader = " "
 o.mouse="a"                                   -- Enables mouse support
