@@ -197,3 +197,10 @@ producer = snap.get'consumer.fzf'(snap.get'producer.git.file'),
   views = {snap.get'preview.file'}
   })
 end)
+
+-- lualine
+require('lualine').setup {
+  options = {
+    theme = 'tokyonight'
+  }
+}
