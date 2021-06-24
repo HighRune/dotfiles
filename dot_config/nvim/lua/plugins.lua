@@ -20,8 +20,7 @@ return require('packer').startup(function()
   use {"hrsh7th/nvim-compe"}
   use 'folke/tokyonight.nvim'
   use {
-    'glepnir/galaxyline.nvim',
-    branch = 'main',
-    config = function() require'my_statusline' end
-  }
+  'hoob3rt/lualine.nvim',
+  requires = {'kyazdani42/nvim-web-devicons', opt = true}
+}
 end)
