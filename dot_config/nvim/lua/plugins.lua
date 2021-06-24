@@ -18,6 +18,5 @@ return require('packer').startup(function()
   use {"kabouzeid/nvim-lspinstall"}
   use {"glepnir/lspsaga.nvim"}
   use {"hrsh7th/nvim-compe"}
-  use 'folke/tokyonight.nvim'
 use {"glepnir/galaxyline.nvim", config = "require('config.galaxyline').post()"}
 end)
