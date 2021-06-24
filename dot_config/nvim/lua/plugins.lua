@@ -19,8 +19,5 @@ return require('packer').startup(function()
   use {"glepnir/lspsaga.nvim"}
   use {"hrsh7th/nvim-compe"}
   use 'folke/tokyonight.nvim'
-  use {
-  'hoob3rt/lualine.nvim',
-  requires = {'kyazdani42/nvim-web-devicons', opt = true}
-}
+use {"glepnir/galaxyline.nvim", config = "require('config.galaxyline').post()"}
 end)
