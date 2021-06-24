@@ -198,9 +198,4 @@ producer = snap.get'consumer.fzf'(snap.get'producer.git.file'),
   })
 end)
 
--- lualine
-require('lualine').setup {
-  options = {
-    theme = 'tokyonight'
-  }
-}
+-- galaxyline
