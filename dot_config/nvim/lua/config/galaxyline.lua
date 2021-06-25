@@ -66,7 +66,7 @@ function M.post()
 
   local mode_color = {
     n = colors.green,
-    i = colors.cyan,
+    i = colors.red,
     v = colors.violet,
     [""] = colors.cyan,
     V = colors.cyan,
