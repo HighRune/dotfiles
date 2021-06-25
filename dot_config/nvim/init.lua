@@ -9,7 +9,6 @@ local o = vim.o  -- to set options
 -- g.tokyonight_style = 'night'
 -- g.tokyonight_transparent = true
 -- cmd[[colorscheme tokyonight]]
-vim.cmd [[color haslo]]
 -- o.scroll=5
 g.mapleader = " "
 o.mouse="a"                                   -- Enables mouse support
@@ -30,6 +29,7 @@ o.swapfile=false
 -- ____ UI
 
 o.termguicolors=true  -- Enables 24-bit RGB color in the Terminal UI
+vim.cmd [[color haslo]]
 -- o.colorscheme darkspace
 o.showmode = false     -- Disable message on the last line (Insert, Replace or Visual mode)
 -- o.showtabline=2  -- Always display the line with tab page labels
