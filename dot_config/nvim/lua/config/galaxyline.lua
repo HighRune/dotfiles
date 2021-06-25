@@ -405,13 +405,13 @@ function M.post()
     }
   }
 
-  gls.short_line_left[1] = {
-    LongFileName = {
-      provider = long_filename,
-      separator = "  ",
-      highlight = {colors.normal, colors.bg, "bold"}
-    }
-  }
+  -- gls.short_line_left[1] = {
+  --   LongFileName = {
+  --     provider = long_filename,
+  --     separator = "  ",
+  --     highlight = {colors.normal, colors.bg, "bold"}
+  --   }
+  -- }
 
   gls.short_line_right[1] = {
     BufferIcon = {
