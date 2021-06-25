@@ -128,45 +128,45 @@ function M.post()
     end
     return ""
   end
-  local function long_filename()
-    local file = vim.fn.expand("%")
-    local result = file
-    if vim.fn.empty(file) == 1 then
-      return result
-    end
-    return "  " .. result .. " "
-  end
+  -- local function long_filename()
+  --   local file = vim.fn.expand("%")
+  --   local result = file
+  --   if vim.fn.empty(file) == 1 then
+  --     return result
+  --   end
+  --   return "  " .. result .. " "
+  -- end
 
-  gls.left[2] = {
-    LongFileName = {
-      provider = long_filename,
-      condition = buffer_not_empty,
-      highlight = {colors.normal, colors.bg, "bold"}
-    }
-  }
+  -- gls.left[2] = {
+  --   LongFileName = {
+  --     provider = long_filename,
+  --     condition = buffer_not_empty,
+  --     highlight = {colors.normal, colors.bg, "bold"}
+  --   }
+  -- }
 
-  gls.left[3] = {
-    FileIcon = {
-      provider = "FileIcon",
-      condition = buffer_not_empty,
-      highlight = {require("galaxyline.provider_fileinfo").get_file_icon_color, colors.bg}
-    }
-  }
+  -- gls.left[3] = {
+  --   FileIcon = {
+  --     provider = "FileIcon",
+  --     condition = buffer_not_empty,
+  --     highlight = {require("galaxyline.provider_fileinfo").get_file_icon_color, colors.bg}
+  --   }
+  -- }
 
-  gls.left[4] = {
-    FileStatus = {
-      provider = function()
-        if string.len(file_readonly()) ~= 0 then
-          return file_readonly()
-        elseif vim.bo.modifiable then
-          if vim.bo.modified then
-            return " "
-          end
-        end
-      end,
-      highlight = {colors.cyan, colors.bg}
-    }
-  }
+  -- gls.left[4] = {
+  --   FileStatus = {
+  --     provider = function()
+  --       if string.len(file_readonly()) ~= 0 then
+  --         return file_readonly()
+  --       elseif vim.bo.modifiable then
+  --         if vim.bo.modified then
+  --           return " "
+  --         end
+  --       end
+  --     end,
+  --     highlight = {colors.cyan, colors.bg}
+  --   }
+  -- }
 
   gls.left[5] = {
     FileSize = {
