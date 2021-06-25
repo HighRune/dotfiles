@@ -30,7 +30,7 @@ function M.post()
     violet = "#D484FF",
     blue = "#2f628e",
     cyan = "#00f1f5",
-    green = "#A9FF68",
+    green = "#00ff99",
     green2 = "#2f7366",
     yellow = "#FFF59D",
     orange = "#F79000",
