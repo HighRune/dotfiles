@@ -1,6 +1,7 @@
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+  use {'nvim-treesitter/playground'}
   use {"kyazdani42/nvim-web-devicons"}
   use { 'camspiers/snap'}
   use {"romgrk/barbar.nvim"}
