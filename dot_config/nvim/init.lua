@@ -81,6 +81,8 @@ o.foldexpr='nvim_treesitter#foldexpr()'
 api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', '<C-w>', ':BufferClose<CR>', { noremap = true, silent = true })
+let bufferline = get(g:, 'bufferline', {})
+let bufferline.no_name_title = v:null
 
 -- lspinstall
 local function setup_servers()
