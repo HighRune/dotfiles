@@ -9,6 +9,7 @@ local o = vim.o  -- to set options
 -- g.tokyonight_style = 'night'
 -- g.tokyonight_transparent = true
 -- cmd[[colorscheme tokyonight]]
+-- o.scroll=5
 g.mapleader = " "
 o.mouse="a"                                   -- Enables mouse support
 o.scrolloff=999                              -- Minimal number of screen lines to keep above and below the cursor
@@ -21,7 +22,7 @@ o.updatetime=100                            -- Having longer updatetime (default
 o.hidden=true                                    -- Buffer becomes hidden when it is abandoned
 
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
--- autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4
+vim.cmd[[BufEnter *.vue,*.js,*.ts,*.md :set scroll =4]]
 o.swapfile=false
 
 
@@ -218,4 +219,3 @@ require "nvim-treesitter.configs".setup {
     },
   }
 }
-o.scroll=5
