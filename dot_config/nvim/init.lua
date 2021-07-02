@@ -22,7 +22,7 @@ o.updatetime=100                            -- Having longer updatetime (default
 o.hidden=true                                    -- Buffer becomes hidden when it is abandoned
 
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
-vim.cmd[[BufEnter *.vue,*.js,*.ts,*.md :set scroll =4]]
+vim.cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4]]
 o.swapfile=false
 
 
