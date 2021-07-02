@@ -9,7 +9,7 @@ local o = vim.o  -- to set options
 -- g.tokyonight_style = 'night'
 -- g.tokyonight_transparent = true
 -- cmd[[colorscheme tokyonight]]
--- o.scroll=5
+o.scroll=5
 g.mapleader = " "
 o.mouse="a"                                   -- Enables mouse support
 o.scrolloff=999                              -- Minimal number of screen lines to keep above and below the cursor
