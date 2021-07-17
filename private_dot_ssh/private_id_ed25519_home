@@ -1,1 +1,0 @@
-{{ (index (bitwardenFields "item" "id_ed25519_home") "private key").value }}
