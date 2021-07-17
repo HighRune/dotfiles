@@ -1,2 +1,2 @@
 name = {{ (bitwarden "item" "id_ed25519_home").name }}
-pk = {{ (bitwardenFields "item" "id_ed25519_home") index . "public key" }}
+pk = {{ (bitwardenFields "item" "id_ed25519_home") 2 . "public key" }}
