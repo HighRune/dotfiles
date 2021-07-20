@@ -4,16 +4,13 @@ IdentitiesOnly yes
 Host home.gitlab.com
 Hostname gitlab.com
 PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_ed25519_home
 
 Host work.gitlab.com
 Hostname gitlab.com
 PreferredAuthentications publickey
-IdentityFile ~/.ssh/id_ed25519_work
 
 Host servdev
 Hostname {{ (bitwardenFields "item" "id_rsa_main").Hostname.value }}
 PreferredAuthentications publickey
 User {{ (bitwardenFields "item" "id_rsa_main").User.value }}
 Port {{ (bitwardenFields "item" "id_rsa_main").Port.value }}
-IdentityFile ~/.ssh/id_rsa_main
