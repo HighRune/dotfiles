@@ -1,16 +1,8 @@
 AddKeysToAgent yes
 IdentitiesOnly yes
-
-Host home.gitlab.com
-Hostname gitlab.com
-PreferredAuthentications publickey
-
-Host work.gitlab.com
-Hostname gitlab.com
 PreferredAuthentications publickey
 
 Host servdev
 Hostname {{ (bitwardenFields "item" "id_rsa_main").Hostname.value }}
-PreferredAuthentications publickey
 User {{ (bitwardenFields "item" "id_rsa_main").User.value }}
 Port {{ (bitwardenFields "item" "id_rsa_main").Port.value }}
