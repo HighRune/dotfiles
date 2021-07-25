@@ -60,8 +60,8 @@ highlight CurrLine cterm=bold,reverse ctermfg=default ctermbg=default
 highlight TopLine cterm=none ctermfg=white ctermbg=-1
 highlight TopLineSel cterm=bold ctermfg=white ctermbg=-1
 highlight StatusLine cterm=bold ctermfg=white ctermbg=-1
-highlight WildMenu cterm=underline,reverse ctermfg=default ctermbg=black
-highlight CmdLine cterm=none ctermfg=white ctermbg=red
+highlight WildMenu cterm=underline,reverse ctermfg=default ctermbg=red
+highlight CmdLine cterm=none ctermfg=white ctermbg=-1
 highlight ErrorMsg cterm=none ctermfg=red ctermbg=black
 highlight Border cterm=none ctermfg=black ctermbg=white
 highlight OtherLine ctermfg=default ctermbg=default
