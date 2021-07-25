@@ -190,3 +190,26 @@ fi
 function bwu(){
   export BW_SESSION=$(bw unlock --raw $1)
 }
+
+# tmux
+function dev () {
+  tmux new-session \
+    -A \
+    -s dev \
+    -n home \
+    -c ~ \; \
+  new-window \
+    -d \
+    -n client \
+    -c /home/charles/Documents/dev/interface/client \; \
+  send-keys \
+    -t client \
+    'nvim' Enter ':te' Enter 'i npm run dev' Enter \; \
+  new-window \
+    -d \
+    -n functions \
+    -c /home/charles/Documents/dev/interface/functions \; \
+  send-keys \
+    -t functions \
+    'nvim' Enter ':te' Enter 'i npm run dev' Enter \;
+}
