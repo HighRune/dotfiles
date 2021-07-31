@@ -1,3 +1,1 @@
-xset r rate 180 400
-export MYVAR=11100
-echo $MYVAR
+xset r rate 180 400 &
