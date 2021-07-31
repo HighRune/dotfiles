@@ -219,9 +219,6 @@ exec --no-startup-id feh --bg-fill /home/charles/Pictures/poe-oriath.jpg
 # Set powersavings for display:
 # exec --no-startup-id xset s 480 dpms 600 600 600
 
-# Keyboard delay and rate
-# exec --no-startup-id xset r rate 180 40
-
 # Load ICC profile to adjust screen colors
 # exec --no-startup-id /usr/bin/xcalib -d :0 /usr/share/color/icc/colord/Lenovo_ThinkPad_T470p_B140QAN01_5.icm
 exec --no-startup-id /usr/bin/xcalib -d :0 ~/.config/Lenovo_ThinkPad_T470p_B140QAN01_5.icm
