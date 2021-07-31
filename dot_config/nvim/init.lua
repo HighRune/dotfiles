@@ -24,6 +24,7 @@ o.hidden=true                                    -- Buffer becomes hidden when i
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
 vim.cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4]]
 vim.cmd[[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]]
+vim.cmd[[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]]
 o.swapfile=false
 
 
