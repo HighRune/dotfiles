@@ -1,1 +1,2 @@
+# Keyboard delay and rate
 xset r rate 180 40 &
