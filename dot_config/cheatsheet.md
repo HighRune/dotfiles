@@ -448,6 +448,7 @@ chmod 777 <file>                          # Donne tous les droits au fichier
 chmod 755 <file>
 unzip <file name>.zip                     # Décompresse le fichier
 unzip <file name>.zip -d <destination directory>
+tar xvzf <file name>.tar.gz -C <destination directory>
 display <image.png>                       # Open image
 xdg-open <file.pdf>                       # Open pdf
 ```
