@@ -921,3 +921,11 @@ DELETE FROM auth.auth WHERE name = <name>;
 -- Change user password
 UPDATE <schema>.<table> SET password = crypt('<password>', gen_salt('bf')) WHERE name = '<name>';
 ```
+
+## config
+
+```bash
+# /etc/lightdm/lightdm.conf
+# typematic delay and rate
+server-command=X -ardelay 250 -arinterval 20
+```
