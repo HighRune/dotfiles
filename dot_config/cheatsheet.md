@@ -466,6 +466,7 @@ enca -L none <file>
 
 # Convert file dos / unix / mac
 dos2unix <file>
+:set fileformat=unix # (dos to unix) with vim
 mac2unix <file>
 unix2dos <file>
 unix2mac <file>
@@ -486,6 +487,7 @@ ls -haltr                           # Reverse order while sorting
 sensors                             # Display temperatures
 lscpu                               # Display CPU informations
 htop                                # Display CPU & RAM usage
+xprop WM_CLASS                      # Get class of clicked window for use with picom
 ```
 
 ### search
@@ -541,6 +543,9 @@ reset                               # Réinitialise le terminal
 ctrl + alt + F2                     # Passe en mode tty
 ctrl + alt + F3                     # Passe en mode gui
 umount /media/<périphérique>        # Démonte le périphérique
+lsblk                               # List block devices
+udisksctl mount -b /dev/sda         # Mount device
+udisksctl unmount -b /dev/sda       # Unmount device
 gnome-terminal                      # Ouvre un terminal gnome
 
 passwd user                               # Change le mot de passe de l'utilisateur
@@ -562,6 +567,7 @@ man <command>               # Manuel
 base64 <file>               # Convert file content to base64
 base64 -d <file>            # Decode base64
 showkey -a                  # Show pressed key
+wget -nd -r -H -p -e robots=off -P <destination path> -A jpeg,jpg,png  <site url> # Download all images from a url
 ```
 
 ### fonts
@@ -753,6 +759,18 @@ firebase serve --only hosting  # Serve files on localhost
 firebase emulators:start --only functions # Serve functions on localhost
 
 firebase use <project_id>
+
+```
+
+## gcloud
+
+```bash
+gcloud auth login
+gcloud projects list
+gcloud config set <project name>
+gcloud config set compute/zone <zone name>
+gcloud config set compute/region <region name>
+gcloud container clusters get-credentials <cluster name>
 ```
 
 ## VUE
