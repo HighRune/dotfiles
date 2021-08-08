@@ -204,16 +204,16 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
 -- fzf-lua
 require('fzf-lua').files({ winopts = {
-    win_height       = 0.85,            -- window height
-    win_width        = 0.80,            -- window width
-    win_row          = 0.30,            -- window row position (0=top, 1=bottom)
-    win_col          = 0.50,            -- window col position (0=left, 1=right)
-    -- win_border    = false,           -- window border? or borderchars?
-    win_border       = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
-    window_on_create = function()         -- nvim window options override
-      vim.cmd("set winhl=Normal:Normal")  -- popup bg match normal windows
-    end,
-  },})
+  win_height       = 0.85,            -- window height
+  win_width        = 0.80,            -- window width
+  win_row          = 0.30,            -- window row position (0=top, 1=bottom)
+  win_col          = 0.50,            -- window col position (0=left, 1=right)
+  -- win_border    = false,           -- window border? or borderchars?
+  win_border       = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+  window_on_create = function()         -- nvim window options override
+    vim.cmd("set winhl=Normal:Normal")  -- popup bg match normal windows
+  end,
+}})
 api.nvim_set_keymap('n', '<leader><leader>', '<cmd>lua require("fzf-lua").files()<cr>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', '<leader>s', '<cmd>lua require("fzf-lua").live_grep()<cr>', { noremap = true, silent = true })
 
