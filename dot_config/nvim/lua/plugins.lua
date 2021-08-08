@@ -10,21 +10,17 @@ return require('packer').startup(function()
       'vijaymarupudi/nvim-fzf'
     }
   }
-  use {"romgrk/barbar.nvim"}
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
       'nvim-lua/plenary.nvim'
-    },
-    config = function()
-      require('gitsigns').setup()
-    end
-
+    }
   }
+  use {"romgrk/barbar.nvim"}
   use {"neovim/nvim-lspconfig"}
   use {"kabouzeid/nvim-lspinstall"}
   use {"glepnir/lspsaga.nvim"}
   use {"hrsh7th/nvim-compe"}
-use {"glepnir/galaxyline.nvim", config = "require('config.galaxyline').post()"}
+  use {"glepnir/galaxyline.nvim", config = "require('config.galaxyline').post()"}
   -- use {'abecodes/tabout.nvim', config = "require('config.tabout').post()"}
 end)
