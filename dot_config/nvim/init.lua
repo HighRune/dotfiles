@@ -157,49 +157,49 @@ vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
 
--- Snap
-
-local snap = require'snap'
-
--- Find Files
-snap.register.map({'n'}, {'<leader><leader>'}, function ()
-  snap.run({
-  producer = snap.get'consumer.fzf'(snap.get'producer.ripgrep.file'),
-  select = snap.get'select.file'.select,
-  multiselect = snap.get'select.file'.multiselect,
-  views = {snap.get'preview.file'}
-  })
-end)
-
--- Live Ripgrep
-snap.register.map({'n'}, {'<Leader>s'}, function ()
-snap.run {
-  producer = snap.get'producer.ripgrep.vimgrep',
-  select = snap.get'select.vimgrep'.select,
-  multiselect = snap.get'select.vimgrep'.multiselect,
-  views = {snap.get'preview.vimgrep'}
-}
-end)
-
--- Find Buffers
-snap.register.map({'n'}, {'<Leader>b'}, function ()
-  snap.run({
-  producer = snap.get'consumer.fzf'(snap.get'producer.vim.buffer'),
-  select = snap.get'select.file'.select,
-  multiselect = snap.get'select.file'.multiselect,
-  views = {snap.get'preview.file'}
-  })
-end)
-
--- Find Git Files
-snap.register.map({'n'}, {'<Leader>g'}, function ()
-  snap.run({
-producer = snap.get'consumer.fzf'(snap.get'producer.git.file'),
-  select = snap.get'select.file'.select,
-  multiselect = snap.get'select.file'.multiselect,
-  views = {snap.get'preview.file'}
-  })
-end)
+-- -- Snap
+-- 
+-- local snap = require'snap'
+-- 
+-- -- Find Files
+-- snap.register.map({'n'}, {'<leader><leader>'}, function ()
+--   snap.run({
+--   producer = snap.get'consumer.fzf'(snap.get'producer.ripgrep.file'),
+--   select = snap.get'select.file'.select,
+--   multiselect = snap.get'select.file'.multiselect,
+--   views = {snap.get'preview.file'}
+--   })
+-- end)
+-- 
+-- -- Live Ripgrep
+-- snap.register.map({'n'}, {'<Leader>s'}, function ()
+-- snap.run {
+--   producer = snap.get'producer.ripgrep.vimgrep',
+--   select = snap.get'select.vimgrep'.select,
+--   multiselect = snap.get'select.vimgrep'.multiselect,
+--   views = {snap.get'preview.vimgrep'}
+-- }
+-- end)
+-- 
+-- -- Find Buffers
+-- snap.register.map({'n'}, {'<Leader>b'}, function ()
+--   snap.run({
+--   producer = snap.get'consumer.fzf'(snap.get'producer.vim.buffer'),
+--   select = snap.get'select.file'.select,
+--   multiselect = snap.get'select.file'.multiselect,
+--   views = {snap.get'preview.file'}
+--   })
+-- end)
+-- 
+-- -- Find Git Files
+-- snap.register.map({'n'}, {'<Leader>g'}, function ()
+--   snap.run({
+-- producer = snap.get'consumer.fzf'(snap.get'producer.git.file'),
+--   select = snap.get'select.file'.select,
+--   multiselect = snap.get'select.file'.multiselect,
+--   views = {snap.get'preview.file'}
+--   })
+-- end)
 
 require "nvim-treesitter.configs".setup {
   playground = {
