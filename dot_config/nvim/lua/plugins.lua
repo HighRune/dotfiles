@@ -4,6 +4,11 @@ return require('packer').startup(function()
   use {'nvim-treesitter/playground'}
   use {"kyazdani42/nvim-web-devicons"}
   -- use { 'camspiers/snap'}
+  use { 'ibhagwan/fzf-lua',
+    requires = {
+      'vijaymarupudi/nvim-fzf'
+    }
+  }
   use {"romgrk/barbar.nvim"}
   use {
     'lewis6991/gitsigns.nvim',
