@@ -21,6 +21,7 @@ return require('packer').startup(function()
     end
 
   }
+  use {'abecodes/tabout.nvim', config = "require('config.tabout').post()"}
   use {"neovim/nvim-lspconfig"}
   use {"kabouzeid/nvim-lspinstall"}
   use {"glepnir/lspsaga.nvim"}
