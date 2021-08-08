@@ -202,6 +202,8 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 --   })
 -- end)
 
+require('fzf-lua').files()
+
 require "nvim-treesitter.configs".setup {
   playground = {
     enable = true,
