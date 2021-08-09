@@ -205,6 +205,8 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 -- fzf-lua
 api.nvim_set_keymap('n', '<leader><leader>', '<cmd>lua require("fzf-lua").files()<cr>', { noremap = true, silent = true })
 api.nvim_set_keymap('n', '<leader>s', '<cmd>lua require("fzf-lua").live_grep()<cr>', { noremap = true, silent = true })
+api.nvim_set_keymap('n', '<leader>b', '<cmd>lua require("fzf-lua").grep_curbuf()<cr>', { noremap = true, silent = true })
+
 
 require'fzf-lua'.setup {
   winopts = {
