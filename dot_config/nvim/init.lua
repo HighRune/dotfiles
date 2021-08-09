@@ -212,15 +212,15 @@ require'fzf-lua'.setup {
     win_width        = 1,            -- window width
     win_row          = 1,            -- window row position (0=top, 1=bottom)
     win_col          = 1,            -- window col position (0=left, 1=right)
-    win_border    = false,           -- window border? or borderchars?
+    win_border    = true,           -- window border? or borderchars?
+    win_border       = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
   },
   preview_border      = 'noborder',       -- border|noborder
-  preview_wrap        = 'nowrap',       -- wrap|nowrap
+  preview_wrap        = 'wrap',       -- wrap|nowrap
   preview_opts        = 'nohidden',     -- hidden|nohidden
   preview_vertical    = 'down:70%',     -- up|down:size
   preview_horizontal  = 'right:100%',    -- right|left:size
-  preview_layout      = 'flex',         -- horizontal|vertical|flex
-  flip_columns        = 120,            -- #cols to switch to horizontal on flex
+  preview_layout      = 'horizontal',         -- horizontal|vertical|flex
 }
 
 require('gitsigns').setup()
