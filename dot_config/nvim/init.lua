@@ -212,8 +212,9 @@ require'fzf-lua'.setup {
     win_width        = 1,            -- window width
     win_row          = 1,            -- window row position (0=top, 1=bottom)
     win_col          = 1,            -- window col position (0=left, 1=right)
-    win_border       = { '', '', '', '', ' ', ' ', ' ', '' },
+    win_border       = false
   },
+  fzf_layout          = 'reverse',      -- fzf '--layout='
   preview_border      = 'noborder',       -- border|noborder
   preview_wrap        = 'wrap',       -- wrap|nowrap
   preview_opts        = 'nohidden',     -- hidden|nohidden
