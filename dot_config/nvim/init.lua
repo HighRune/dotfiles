@@ -212,10 +212,9 @@ require'fzf-lua'.setup {
     win_width        = 1,            -- window width
     win_row          = 1,            -- window row position (0=top, 1=bottom)
     win_col          = 1,            -- window col position (0=left, 1=right)
-    win_border    = true,           -- window border? or borderchars?
-    win_border       = { '*', '*', '*', '*', '*', '*', '*', '*' }
+    win_border    = false,           -- window border? or borderchars?
   },
-  preview_border      = 'noborder',       -- border|noborder
+  preview_border      = 'border',       -- border|noborder
   preview_wrap        = 'wrap',       -- wrap|nowrap
   preview_opts        = 'nohidden',     -- hidden|nohidden
   preview_vertical    = 'down:70%',     -- up|down:size
