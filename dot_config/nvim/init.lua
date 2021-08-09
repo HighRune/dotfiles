@@ -220,7 +220,7 @@ require'fzf-lua'.setup {
   preview_opts        = 'nohidden',     -- hidden|nohidden
   preview_vertical    = 'down:70%',     -- up|down:size
   preview_horizontal  = 'right:99%',    -- right|left:size
-  preview_layout      = 'horizontal',         -- horizontal|vertical|flex
+  preview_layout      = 'flex',         -- horizontal|vertical|flex
 }
 
 require('gitsigns').setup()
