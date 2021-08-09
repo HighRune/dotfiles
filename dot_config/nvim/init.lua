@@ -208,8 +208,8 @@ api.nvim_set_keymap('n', '<leader>s', '<cmd>lua require("fzf-lua").live_grep()<c
 
 require'fzf-lua'.setup {
   winopts = {
-    win_height       = 0.5,            -- window height
-    win_width        = 0.5,            -- window width
+    win_height       = 1,            -- window height
+    win_width        = 1,            -- window width
     win_row          = 1,            -- window row position (0=top, 1=bottom)
     win_col          = 1,            -- window col position (0=left, 1=right)
     win_border    = true,           -- window border? or borderchars?
@@ -219,7 +219,7 @@ require'fzf-lua'.setup {
   preview_wrap        = 'wrap',       -- wrap|nowrap
   preview_opts        = 'nohidden',     -- hidden|nohidden
   preview_vertical    = 'down:70%',     -- up|down:size
-  preview_horizontal  = 'right:90%',    -- right|left:size
+  preview_horizontal  = 'right:99%',    -- right|left:size
   preview_layout      = 'horizontal',         -- horizontal|vertical|flex
 }
 
