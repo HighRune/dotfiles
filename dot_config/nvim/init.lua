@@ -219,7 +219,7 @@ require'fzf-lua'.setup {
   preview_wrap        = 'wrap',       -- wrap|nowrap
   preview_opts        = 'nohidden',     -- hidden|nohidden
   preview_vertical    = 'down:70%',     -- up|down:size
-  preview_horizontal  = 'right:100%',    -- right|left:size
+  preview_horizontal  = 'right:90%',    -- right|left:size
   preview_layout      = 'horizontal',         -- horizontal|vertical|flex
 }
 
