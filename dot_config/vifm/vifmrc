@@ -245,7 +245,6 @@ filextype {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
         \ shotwell,
 fileviewer {*.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm},<image/*>
          \ identify %f
-         \ img2txt %c
 
 " OpenRaster
 filextype *.ora
