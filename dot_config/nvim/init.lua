@@ -217,7 +217,7 @@ require'fzf-lua'.setup {
   preview_border      = 'noborder',       -- border|noborder
   preview_wrap        = 'nowrap',       -- wrap|nowrap
   preview_opts        = 'nohidden',     -- hidden|nohidden
-  preview_vertical    = 'down:50%',     -- up|down:size
+  preview_vertical    = 'down:70%',     -- up|down:size
   preview_horizontal  = 'right:100%',    -- right|left:size
   preview_layout      = 'flex',         -- horizontal|vertical|flex
   flip_columns        = 120,            -- #cols to switch to horizontal on flex
