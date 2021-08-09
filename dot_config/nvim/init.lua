@@ -214,7 +214,7 @@ require'fzf-lua'.setup {
     win_col          = 1,            -- window col position (0=left, 1=right)
     win_border       = false
   },
-  fzf_layout          = 'reverse',      -- fzf '--layout='
+  fzf_layout          = 'reverse-list',      -- fzf '--layout='
   preview_border      = 'noborder',       -- border|noborder
   preview_wrap        = 'wrap',       -- wrap|nowrap
   preview_opts        = 'nohidden',     -- hidden|nohidden
