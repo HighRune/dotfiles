@@ -648,14 +648,14 @@ live_config_reload: true
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
-  - { key: Paste,                                action: Paste          }
-  - { key: Copy,                                 action: Copy           }
-  - { key: L,         mods: Control,             action: ClearLogNotice }
-  - { key: L,         mods: Control, mode: ~Vi,  chars: "\x0c"          }
-  - { key: PageUp,    mods: Shift,   mode: ~Alt, action: ScrollPageUp,  }
-  - { key: PageDown,  mods: Shift,   mode: ~Alt, action: ScrollPageDown }
-  - { key: Home,      mods: Shift,   mode: ~Alt, action: ScrollToTop,   }
-  - { key: End,       mods: Shift,   mode: ~Alt, action: ScrollToBottom }
+  # - { key: Paste,                                action: Paste          }
+  # - { key: Copy,                                 action: Copy           }
+  # - { key: L,         mods: Control,             action: ClearLogNotice }
+  # - { key: L,         mods: Control, mode: ~Vi,  chars: "\x0c"          }
+  # - { key: PageUp,    mods: Shift,   mode: ~Alt, action: ScrollPageUp,  }
+  # - { key: PageDown,  mods: Shift,   mode: ~Alt, action: ScrollPageDown }
+  # - { key: Home,      mods: Shift,   mode: ~Alt, action: ScrollToTop,   }
+  # - { key: End,       mods: Shift,   mode: ~Alt, action: ScrollToBottom }
 
   # # Vi Mode
   # - { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }
@@ -709,11 +709,11 @@ key_bindings:
   # (Windows, Linux, and BSD only)
   - { key: V,              mods: Control|Shift,           action: Paste            }
   - { key: C,              mods: Control|Shift,           action: Copy             }
-  - { key: F,              mods: Control|Shift,           action: SearchForward    }
-  - { key: B,              mods: Control|Shift,           action: SearchBackward   }
-  - { key: C,              mods: Control|Shift, mode: Vi, action: ClearSelection   }
-  - { key: Insert,         mods: Shift,                   action: PasteSelection   }
-  - { key: Key0,           mods: Control,                 action: ResetFontSize    }
+  # - { key: F,              mods: Control|Shift,           action: SearchForward    }
+  # - { key: B,              mods: Control|Shift,           action: SearchBackward   }
+  # - { key: C,              mods: Control|Shift, mode: Vi, action: ClearSelection   }
+  # - { key: Insert,         mods: Shift,                   action: PasteSelection   }
+  # - { key: Key0,           mods: Control,                 action: ResetFontSize    }
   - { key: Equals,         mods: Control,                 action: IncreaseFontSize }
   - { key: Plus,           mods: Control,                 action: IncreaseFontSize }
   - { key: NumpadAdd,      mods: Control,                 action: IncreaseFontSize }
