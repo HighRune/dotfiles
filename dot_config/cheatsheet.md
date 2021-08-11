@@ -520,7 +520,8 @@ sudo vi /etc/hosts                  # Add an host
 [<machine> <user>]                  # '#' signifie connecté en tant que root
 setxkbmap fr                        # Change le clavier en azerty à partir d'un émulateur de terminal
 loadkeys fr                         # À partir d'une console
-windows + l                         # Mise en veille de la machine
+xxd -psd                            # Print key combination hex code
+super + l                           # Mise en veille de la machine
 clear                               # Efface le terminal
 reset                               # Réinitialise le terminal
 ctrl + alt + F2                     # Passe en mode tty
