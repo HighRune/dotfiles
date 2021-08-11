@@ -391,7 +391,7 @@ who    # List user sessions
 which
 command -v <the-command> # check if command exist
 whereis <file>
-date
+date # Display current date and time
 ```
 
 ### files operations
