@@ -2,13 +2,6 @@
 
 ## GIT
 
-[git stash](https://medium.freecodecamp.org/useful-tricks-you-might-not-know-about-git-stash-e8a9490f0a1a) |
-[changing a commit message](https://help.github.com/en/articles/changing-a-commit-message#commit-has-not-been-pushed-online) |
-[merge vs rebase](https://blog.ippon.fr/2015/05/19/git-merge-ou-rebase/) |
-[conventional commits specification](https://www.conventionalcommits.org/en/v1.0.0-beta.3/) |
-[git branch diverged after rebase](https://stackoverflow.com/questions/19016698/git-branch-diverged-after-rebase) |
-[change git author](https://dev.to/chrisvasqm/how-to-change-the-author-of-all-your-commits-2j7a)
-
 ```bash
 git checkout -                  # Fix detached head state
 git show                        # Display commit changes
@@ -144,9 +137,6 @@ git push --force origin master
 
 ## DOCKER
 
-[expose vs ports](https://stackoverflow.com/questions/40801772/what-is-the-difference-between-docker-compose-ports-vs-expose) |
-[clean docker](https://blog.wescale.fr/2017/03/16/les-nouveautes-de-docker-1-13/)
-
 ### base
 
 ```bash
@@ -250,13 +240,6 @@ killall -9 node           # Delete all node instances,
 ```
 
 ### npm
-
-[npm cli](https://docs.npmjs.com/cli-documentation/) |
-[npm i](https://docs.npmjs.com/cli-commands/install.html) |
-[npm i -E](https://c2fo.io/node/npm/javascript/2016/06/03/protecting-your-product-with-npm-save-exact/) |
-[semantic versioning](https://semver.org/) |
-[update all packages](https://flaviocopes.com/update-npm-dependencies/) |
-[packages & modules explained](https://docs.npmjs.com/about-packages-and-modules)
 
 ```bash
 ^<version>                              # Install latest minor version or patch from specified version
@@ -940,7 +923,7 @@ DELETE FROM auth.auth WHERE name = <name>;
 UPDATE <schema>.<table> SET password = crypt('<password>', gen_salt('bf')) WHERE name = '<name>';
 ```
 
-## config
+## CONFIG
 
 ```bash
 # /etc/lightdm/lightdm.conf
