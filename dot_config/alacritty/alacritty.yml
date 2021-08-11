@@ -653,7 +653,7 @@ key_bindings:
   # Create / Kill / Rename window
   - { key: T,      mods: Control|Shift, chars: "\x02\x63" }
   - { key: W,      mods: Control|Shift, chars: "\x02\x26" }
-  - { key: R,      mods: Control|Shift, chars: "\x02\x72" }
+  - { key: R,      mods: Control|Shift, chars: "\x02\x2c" }
   # Next / Previous window
   - { key: Escape, mods: Control, chars: "\x02\x6e" }
   - { key: Escape, mods: Control|Shift, chars: "\x02\x70" }
