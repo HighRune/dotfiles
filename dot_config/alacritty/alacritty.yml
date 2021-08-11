@@ -655,11 +655,11 @@ key_bindings:
   - { key: W,      mods: Control|Shift, chars: "\x02\x26" }
   - { key: R,      mods: Control|Shift, chars: "\x02\x72" }
   # Switch/select window by number
-  - { key: A,      mods: Control|Shift, chars: "\x02\x30" }
-  - { key: O,      mods: Control|Shift, chars: "\x02\x6f" }
-  - { key: E,      mods: Control|Shift, chars: "\x02\x65" }
-  - { key: U,      mods: Control|Shift, chars: "\x02\x75" }
-  - { key: I,      mods: Control|Shift, chars: "\x02\x69" }
+  - { key: A,      mods: Control|Shift, chars: "\x02\x31" }
+  - { key: O,      mods: Control|Shift, chars: "\x02\x32" }
+  - { key: E,      mods: Control|Shift, chars: "\x02\x33" }
+  - { key: U,      mods: Control|Shift, chars: "\x02\x34" }
+  - { key: I,      mods: Control|Shift, chars: "\x02\x35" }
   # - { key: Paste,                                action: Paste          }
   # - { key: Copy,                                 action: Copy           }
   # - { key: L,         mods: Control,             action: ClearLogNotice }
