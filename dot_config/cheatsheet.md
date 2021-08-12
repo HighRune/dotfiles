@@ -551,6 +551,7 @@ man <command>               # Manuel
 base64 <file>               # Convert file content to base64
 base64 -d <file>            # Decode base64
 showkey -a                  # Show pressed key
+xev                         # Print contents of X events
 wget -nd -r -H -p -e robots=off -P <destination path> -A jpeg,jpg,png  <site url> # Download all images from a url
 ```
 
