@@ -20,7 +20,7 @@ return require('packer').startup(function()
   use {"neovim/nvim-lspconfig"}
   use {"kabouzeid/nvim-lspinstall"}
   -- use {"glepnir/lspsaga.nvim"}
-  use {"hrsh7th/nvim-compe"}
+  -- use {"hrsh7th/nvim-compe"}
   use {"glepnir/galaxyline.nvim", config = "require('config.galaxyline').post()"}
   -- use {'abecodes/tabout.nvim', config = "require('config.tabout').post()"}
 end)
