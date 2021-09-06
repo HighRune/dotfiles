@@ -8,8 +8,7 @@ return require('packer').startup(function()
   use { 'ibhagwan/fzf-lua',
     requires = {
       'vijaymarupudi/nvim-fzf',
-      'kyazdani42/nvim-web-devicons'
-    }
+      'kyazdani42/nvim-web-devicons' }
   }
   use {
     'lewis6991/gitsigns.nvim',
