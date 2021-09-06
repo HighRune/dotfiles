@@ -163,20 +163,20 @@ api.nvim_set_keymap('n', '<leader>s', '<cmd>lua require("fzf-lua").live_grep()<c
 api.nvim_set_keymap('n', '<leader>b', '<cmd>lua require("fzf-lua").grep_curbuf()<cr>', { noremap = true, silent = true })
 
 
--- require'fzf-lua'.setup {
---   winopts = {
---     win_height       = 1,            -- window height
---     win_width        = 1,            -- window width
---     win_row          = 1,            -- window row position (0=top, 1=bottom)
---     win_col          = 1,            -- window col position (0=left, 1=right)
---     win_border       = false
---   },
---   preview_border      = 'noborder',       -- border|noborder
---   preview_wrap        = 'wrap',       -- wrap|nowrap
---   preview_opts        = 'nohidden',     -- hidden|nohidden
---   preview_vertical    = 'up:70%',     -- up|down:size
---   preview_layout      = 'vertical'         -- horizontal|vertical|flex
--- }
+require'fzf-lua'.setup {
+  winopts = {
+    win_height       = 1,            -- window height
+    win_width        = 1,            -- window width
+    win_row          = 1,            -- window row position (0=top, 1=bottom)
+    win_col          = 1,            -- window col position (0=left, 1=right)
+    win_border       = false
+  },
+  -- preview_border      = 'noborder',       -- border|noborder
+  -- preview_wrap        = 'wrap',       -- wrap|nowrap
+  -- preview_opts        = 'nohidden',     -- hidden|nohidden
+  -- preview_vertical    = 'up:70%',     -- up|down:size
+  -- preview_layout      = 'vertical'         -- horizontal|vertical|flex
+}
 
 require('gitsigns').setup()
 
