@@ -171,7 +171,6 @@ require'fzf-lua'.setup {
     win_col          = 1,            -- window col position (0=left, 1=right)
     -- win_border       = false
     win_border       = { '', '', '', '', '', '', '', '' },
-    hl_border        = 'red',   -- window border color
   },
   preview_border      = 'noborder',       -- border|noborder
   preview_wrap        = 'wrap',       -- wrap|nowrap
