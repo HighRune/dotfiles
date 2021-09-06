@@ -7,7 +7,8 @@ return require('packer').startup(function()
   use 'ggandor/lightspeed.nvim'
   use { 'ibhagwan/fzf-lua',
     requires = {
-      'vijaymarupudi/nvim-fzf'
+      'vijaymarupudi/nvim-fzf',
+      'kyazdani42/nvim-web-devicons'
     }
   }
   use {
