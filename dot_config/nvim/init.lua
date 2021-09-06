@@ -170,7 +170,7 @@ require'fzf-lua'.setup {
     win_row          = 1,            -- window row position (0=top, 1=bottom)
     win_col          = 1,            -- window col position (0=left, 1=right)
     -- win_border       = false
-    win_border       = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' },
+    win_border       = { '', '', '', '', '', '', '', '' },
     hl_border        = 'FloatBorder',   -- window border color
   },
   preview_border      = 'noborder',       -- border|noborder
