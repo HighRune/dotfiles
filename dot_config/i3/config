@@ -54,7 +54,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+# bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 # bindsym $mod+s layout stacking
@@ -195,8 +195,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Start a script to setup displays
 # Uncomment the next line, use arandr to setup displays and save the file as monitor:
 exec --no-startup-id ~/.screenlayout/monitor.sh
-# exec --no-startup-id xrandr --output eDP1 --off --output DP1 --off --output DP2 --off --output DP3 --off --output HDMI1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI2 --off --output HDMI3 --off --output VIRTUAL1 --off
-
 
 # Start blueberry app for managing bluetooth devices from tray:
 exec --no-startup-id blueberry-tray
