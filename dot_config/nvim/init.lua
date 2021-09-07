@@ -22,17 +22,17 @@ o.updatetime=100                            -- Having longer updatetime (default
 o.hidden=true                                    -- Buffer becomes hidden when it is abandoned
 
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
-vim.cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4]]
-vim.cmd[[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]]
-vim.cmd[[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]]
-vim.cmd[[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
+cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4]]
+cmd[[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]]
+cmd[[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]]
+cmd[[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
 o.swapfile=false
 
 
 -- ____ UI
 
 o.termguicolors=true  -- Enables 24-bit RGB color in the Terminal UI
-vim.cmd [[color haslo]]
+cmd [[color haslo]]
 -- o.colorscheme darkspace
 o.showmode = false     -- Disable message on the last line (Insert, Replace or Visual mode)
 -- o.showtabline=2  -- Always display the line with tab page labels
