@@ -477,6 +477,7 @@ xprop WM_CLASS                      # Get class of clicked window for use with p
 
 ```bash
 find . |  xargs  grep  'The Big Brains Company' -sl   # Recherche les fichiers qui contiennent une chaine de caractères
+ps -ef | grep xcap              # search xcap process among all processes (full format)
 -s, --no-messages               # Suppress error messages about nonexistent or unreadable files
 -l, --files-with-matches        # suppress normal output, instead print the name of each input file
                                 # from which output would normally have been printed
