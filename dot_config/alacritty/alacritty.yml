@@ -655,8 +655,8 @@ key_bindings:
   - { key: W,      mods: Control|Shift, chars: "\x02\x26" }
   - { key: R,      mods: Control|Shift, chars: "\x02\x2c" }
   # Next / Previous window
-  - { key: Escape, mods: Control, chars: "\x02\x6e" }
-  - { key: Escape, mods: Control|Shift, chars: "\x02\x70" }
+  - { key: Tab, mods: Control, chars: "\x02\x6e" }
+  - { key: Tab, mods: Control|Shift, chars: "\x02\x70" }
   # Select window by number
   - { key: A,      mods: Control|Shift, chars: "\x02\x31" }
   - { key: O,      mods: Control|Shift, chars: "\x02\x32" }
