@@ -15,8 +15,8 @@ bindsym $mod+Return [urgent=latest] focus
 # Focus window
 # bindsym $mod+Escape focus down
 # bindsym $mod+Shift+Escape focus up
-bindsym $mod+Escape focus right
-bindsym $mod+Shift+Escape focus left
+bindsym $mod+Tab focus right
+bindsym $mod+Shift+Tab focus left
 # bindsym $mod+j focus left
 # bindsym $mod+k focus right
 
