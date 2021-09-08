@@ -2,3 +2,4 @@
 # xset r rate 180 40 &
 # ICC profile to adjust screen colors
 /usr/bin/xcalib -d :0 ~/.config/Lenovo_ThinkPad_T470p_B140QAN01_5.icm &
+xcape -e 'Shift_L=Escape' -t 200 &
