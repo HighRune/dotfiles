@@ -112,7 +112,7 @@ function M.post()
         -- auto change color according the vim mode
         local vim_mode = vim.fn.mode()
         vim.api.nvim_command("hi GalaxyViMode guifg=" .. colors.bg .. " guibg=" .. mode_color[vim_mode])
-        return "  " .. mode_alias[vim_mode] .. " "
+        return "  " .. mode_alias[vim_mode] .. " "
       end,
       highlight = {colors.red, colors.bg, "bold"},
       event = "InsertEnter"
