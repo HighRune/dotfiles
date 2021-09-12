@@ -179,7 +179,7 @@ function M.post()
   gls.left[6] = {
     FileBarrier = {
       provider = function()
-        return " "
+        return " "
       end,
       highlight = {colors.bg, "none"}
     }
@@ -296,7 +296,7 @@ function M.post()
     {
       RightBarrier = {
         provider = function()
-          return ""
+          return " "
         end,
         highlight = {colors.bg, "none"}
       }
