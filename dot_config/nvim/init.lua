@@ -215,7 +215,7 @@ require'fzf-lua'.setup {
   preview_layout      = 'vertical'         -- horizontal|vertical|flex
 }
 
-require('gitsigns').setup()
+-- require('gitsigns').setup()
 
 require "nvim-treesitter.configs".setup {
   playground = {
