@@ -200,18 +200,26 @@ function dev () {
     -c ~ \; \
   new-window \
     -d \
+    -n nvim \
+    -c /home/charles/Documents/dev/interface/client \; \
+  send-keys \
+    -t nvim \
+    'nvim' Enter \; \
+  new-window \
+    -d \
     -n client \
     -c /home/charles/Documents/dev/interface/client \; \
   send-keys \
     -t client \
-    'nvim' Enter ':te' Enter 'i npm run dev' Enter \; \
+    'npm run dev' Enter \; \
   new-window \
     -d \
     -n functions \
     -c /home/charles/Documents/dev/interface/functions \; \
   send-keys \
     -t functions \
-    'nvim' Enter ':te' Enter 'i npm run dev' Enter \;
+    'npm run dev' Enter \; \
+    # 'nvim' Enter ':te' Enter 'i npm run dev' Enter \;
 }
 
 # The next line updates PATH for the Google Cloud SDK.
