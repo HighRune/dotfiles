@@ -10,12 +10,12 @@ return require('packer').startup(function()
       'vijaymarupudi/nvim-fzf',
       'kyazdani42/nvim-web-devicons' }
   }
-  -- use {
-  --   'lewis6991/gitsigns.nvim',
-  --   requires = {
-  --     'nvim-lua/plenary.nvim'
-  --   }
-  -- }
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
   use {"romgrk/barbar.nvim"}
   use {"neovim/nvim-lspconfig"}
   use {"kabouzeid/nvim-lspinstall"}
