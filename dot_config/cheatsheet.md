@@ -137,6 +137,20 @@ git push --force origin master
 
 ## DOCKER
 
+### install
+```bash
+# Start docker after install
+sudo systemctl start docker                   
+
+# Start docker on boot
+sudo systemctl enable docker.service          
+sudo systemctl enable containerd.service
+
+# Disable docker start on boot
+sudo systemctl disable docker.service
+sudo systemctl disable containerd.service
+```
+
 ### base
 
 ```bash
