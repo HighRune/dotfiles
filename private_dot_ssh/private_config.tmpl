@@ -2,11 +2,13 @@ AddKeysToAgent yes
 IdentitiesOnly yes
 
 Host home.gitlab.com
+UpdateHostKeys no
 Hostname gitlab.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_ed25519_home
 
 Host work.gitlab.com
+UpdateHostKeys no
 Hostname gitlab.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_ed25519_work
