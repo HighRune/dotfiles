@@ -9,7 +9,7 @@ local Grey3 = ConstructColour("#8B8B8B")
 local Grey4 = ConstructColour("#bdbdbd")
 local Grey5 = ConstructColour("#F8F8F8")
 
-local Violet = ConstructColour("#D484FF")
+local Violet = ConstructColour("#611B9B")
 local Blue = ConstructColour("#2f628e")
 local Cyan = ConstructColour("#29D3BD")
 local Green = ConstructColour("#A9FF68")
