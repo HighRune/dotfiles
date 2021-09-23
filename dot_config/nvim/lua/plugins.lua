@@ -21,8 +21,7 @@ return require('packer').startup(function()
   use {"kabouzeid/nvim-lspinstall"}
   -- use {"glepnir/lspsaga.nvim"}
   -- use {"hrsh7th/nvim-compe"}
-  -- use {"glepnir/galaxyline.nvim", config = "require('config.galaxyline').post()"}
-  use 'famiu/feline.nvim'
+  use {"glepnir/galaxyline.nvim", config = "require('config.galaxyline').post()"}
   -- use {'abecodes/tabout.nvim', config = "require('config.tabout').post()"}
   use { 'ms-jpq/coq_nvim', branch = 'coq'}
   use { 'ms-jpq/coq.artifacts', branch= 'artifacts'}
