@@ -214,7 +214,6 @@ require'fzf-lua'.setup {
   preview_vertical    = 'up:70%',     -- up|down:size
   preview_layout      = 'vertical'         -- horizontal|vertical|flex
 }
-require('feline').setup()
 require('gitsigns').setup()
 
 require "nvim-treesitter.configs".setup {
