@@ -55,7 +55,7 @@ local Key = Cyan
 local Val = Violet
 local Parameter = Green
 local String = Yellow
-local Operator = Cyan
+local Operator = GreenAcid
 local Success = Green
 local Warning = Yellow
 local Info = Cyan
@@ -77,7 +77,7 @@ loadHighlights(
     Key = {Cyan},
     Val = {Violet},
     String = {Yellow},
-    Operator = {GreenAcid},
+    Operator = {Operator},
     Success = {Green},
     Warning = {Yellow},
     Info = {Cyan},
