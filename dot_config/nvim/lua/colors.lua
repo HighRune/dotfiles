@@ -77,7 +77,7 @@ loadHighlights(
     Key = {Cyan},
     Val = {Violet},
     String = {Yellow},
-    Operator = {Orange},
+    Operator = {GreenAcid},
     Success = {Green},
     Warning = {Yellow},
     Info = {Cyan},
