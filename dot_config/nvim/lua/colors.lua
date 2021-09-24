@@ -16,7 +16,7 @@ local Green = ConstructColour("#1A92BF")
 local Green2 = ConstructColour("#1A92BF")
 local Yellow = ConstructColour("#1A92BF")
 local Orange = ConstructColour("#8B00FF")
-local Red = ConstructColour("#E03C6E")
+local Red = ConstructColour("#AA2253")
 local FloatBackground = ConstructColour("#132434")
 local Background = ConstructColour("NONE")
 
@@ -53,7 +53,7 @@ local Key = Cyan
 local Val = Violet
 local Parameter = Green
 local String = Yellow
-local Operator = Orange
+local Operator = Red
 local Success = Green
 local Warning = Yellow
 local Info = Cyan
