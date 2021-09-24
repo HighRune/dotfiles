@@ -16,7 +16,7 @@ local Green = ConstructColour("#1A92BF")
 local Green2 = ConstructColour("#1A92BF")
 local Yellow = ConstructColour("#1A92BF")
 local Orange = ConstructColour("#8B00FF")
-local Red = ConstructColour("#AA2253")
+local Red = ConstructColour("#AF006A")
 local FloatBackground = ConstructColour("#132434")
 local Background = ConstructColour("NONE")
 
