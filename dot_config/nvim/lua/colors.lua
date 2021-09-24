@@ -46,7 +46,7 @@ end
 
 local Normal = Grey5
 local Border = Grey3
-local Decoration = Orange
+local Decoration = Violet
 local Hidden = Grey3
 local BuiltIn = Blue2
 local VarName = Grey5
@@ -276,9 +276,9 @@ loadHighlights(
     -- TreeSitter
     TSError = {Error},
     TSComment = {Hidden},
-    TSPunctDelimiter = {Decoration},
-    TSPunctBracket = {Decoration},
-    TSPunctSpecial = {Decoration},
+    TSPunctDelimiter = {Orange},
+    TSPunctBracket = {Violet},
+    TSPunctSpecial = {Violet},
     TSConstant = {VarName},
     TSConstBuiltin = {BuiltIn},
     TSConstMacro = {BuiltIn},
