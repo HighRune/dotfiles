@@ -22,6 +22,7 @@ local Yellow = ConstructColour("#1A92BF")
 local Orange = ConstructColour("#A49F2B")
 local Orange2 = ConstructColour("#FA6450")
 local TType = ConstructColour("#AF006A")
+local TDelimiter = ConstructColour("#AF006A")
 -- local Orange = ConstructColour("#8B00FF")
 local Red = ConstructColour("#D37474")
 local FloatBackground = ConstructColour("#132434")
@@ -280,7 +281,7 @@ loadHighlights(
     -- TreeSitter
     TSError = {Error},
     TSComment = {Hidden},
-    TSPunctDelimiter = {Orange},
+    TSPunctDelimiter = {TDelimiter},
     TSPunctBracket = {Violet},
     TSPunctSpecial = {Orange2},
     TSConstant = {VarName},
