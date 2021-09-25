@@ -305,6 +305,7 @@ loadHighlights(
     TSLabel = {Key},
     TSOperator = {Operator},
     TSKeyword = {BuiltIn},
+    TSKeywordReturn = {Orange},
     TSKeywordFunction = {BuiltIn},
     TSException = {Error},
     TSType = {TypeName},
