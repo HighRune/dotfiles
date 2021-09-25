@@ -22,6 +22,7 @@ local Yellow = ConstructColour("#1A92BF")
 local Orange = ConstructColour("#274C04")
 local Orange2 = ConstructColour("#FA6450")
 local TType = ConstructColour("#AF006A")
+local TTConditional = ConstructColour("#B04627")
 local TDelimiter = ConstructColour("#AF006A")
 -- local Orange = ConstructColour("#8B00FF")
 local Red = ConstructColour("#D37474")
@@ -304,7 +305,7 @@ loadHighlights(
     TSProperty = {Parameter},
     TSTag = {FuncName},
     TSConstructor = {TypeName},
-    TSConditional = {BuiltIn},
+    TSConditional = {TTConditional},
     TSRepeat = {BuiltIn},
     TSLabel = {Key},
     TSOperator = {Operator},
