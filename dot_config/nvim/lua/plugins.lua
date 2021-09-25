@@ -25,4 +25,5 @@ return require('packer').startup(function()
   -- use {'abecodes/tabout.nvim', config = "require('config.tabout').post()"}
   use { 'ms-jpq/coq_nvim', branch = 'coq'}
   use { 'ms-jpq/coq.artifacts', branch= 'artifacts'}
+  use {'norcalli/nvim-colorizer.lua'}
 end)
