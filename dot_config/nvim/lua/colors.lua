@@ -21,7 +21,7 @@ local GreenAcid = ConstructColour("#359912")
 local Yellow = ConstructColour("#1A92BF")
 local Orange = ConstructColour("#AF006A")
 local Orange2 = ConstructColour("#FA6450")
-local rougeOrange = ConstructColour("#07AE39")
+local TType = ConstructColour("#389965")
 -- local Orange = ConstructColour("#8B00FF")
 local Red = ConstructColour("#D37474")
 local FloatBackground = ConstructColour("#132434")
@@ -311,7 +311,7 @@ loadHighlights(
     TSKeywordReturn = {Orange},
     TSKeywordFunction = {BuiltIn},
     TSException = {Error},
-    TSType = {rougeOrange},
+    TSType = {TType},
     TSTypeBuiltin = {TypeName},
     TSStructure = {Error},
     TSInclude = {BuiltIn},
