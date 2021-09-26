@@ -24,10 +24,12 @@ local Orange2 = ConstructColour("#FA6450")
 local TType = ConstructColour("#AF006A")
 local TConditional = ConstructColour("#274C04")
 local TFunction = ConstructColour("#29D3BD")
+local TParameter = ConstructColour("#8B00FF")
 -- local TTConditional = ConstructColour("#8F0078")
 local TDelimiter = ConstructColour("#AF006A")
 -- local Orange = ConstructColour("#8B00FF")
 local Red = ConstructColour("#D37474")
+-- #0C7A58
 local FloatBackground = ConstructColour("#132434")
 local Background = ConstructColour("NONE")
 
@@ -300,8 +302,8 @@ loadHighlights(
     TSFunction = {TFunction},
     TSFuncBuiltin = {TFunction},
     TSFuncMacro = {BuiltIn},
-    TSParameter = {Green},
-    TSParameterReference = {Green},
+    TSParameter = {TParameter},
+    TSParameterReference = {TParameter},
     TSMethod = {FuncName},
     TSField = {FuncName},
     TSProperty = {Parameter},
