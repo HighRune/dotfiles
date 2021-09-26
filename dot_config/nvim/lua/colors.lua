@@ -26,6 +26,7 @@ local TNumber = ConstructColour("#473899")
 local TString = ConstructColour("#473899")
 local TConditional = ConstructColour("#FFFFFF")
 local TBoolean = ConstructColour("#FFFFFF")
+local TKeyworld = ConstructColour("#FFFFFF")
 local TVariable = ConstructColour("#29D3BD")
 local TReturn = ConstructColour("#274C04")
 local TFunction = ConstructColour("#5CD977")
@@ -318,7 +319,7 @@ loadHighlights(
     TSRepeat = {BuiltIn},
     TSLabel = {Key},
     TSOperator = {Operator},
-    TSKeyword = {BuiltIn},
+    TSKeyword = {TKeyworld},
     TSKeywordReturn = {TReturn},
     TSKeywordFunction = {TFunction},
     TSException = {Error},
