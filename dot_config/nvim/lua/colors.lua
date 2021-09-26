@@ -25,6 +25,7 @@ local TType = ConstructColour("#5C0071")
 local TNumber = ConstructColour("#473899")
 local TString = ConstructColour("#473899")
 local TConditional = ConstructColour("#FFFFFF")
+local TBoolean = ConstructColour("#FFFFFF")
 local TVariable = ConstructColour("#29D3BD")
 local TReturn = ConstructColour("#274C04")
 local TFunction = ConstructColour("#5CD977")
@@ -301,7 +302,7 @@ loadHighlights(
     TSStringEscape = {Operator},
     TSCharacter = {Val},
     TSNumber = {TNumber},
-    TSBoolean = {Val},
+    TSBoolean = {TBoolean},
     TSFloat = {Val},
     TSFunction = {TFunction},
     TSFuncBuiltin = {TFunction},
