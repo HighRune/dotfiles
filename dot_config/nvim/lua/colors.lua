@@ -321,7 +321,7 @@ loadHighlights(
     TSOperator = {Operator},
     TSKeyword = {TKeyworld},
     TSKeywordReturn = {TReturn},
-    TSKeywordFunction = {TFunction},
+    TSKeywordFunction = {TKeyworld},
     TSException = {Error},
     TSType = {TType},
     TSTypeBuiltin = {TType},
