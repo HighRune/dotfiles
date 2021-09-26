@@ -318,7 +318,7 @@ loadHighlights(
     TSOperator = {Operator},
     TSKeyword = {BuiltIn},
     TSKeywordReturn = {TReturn},
-    TSKeywordFunction = {Cyan},
+    TSKeywordFunction = {TFunction},
     TSException = {Error},
     TSType = {TType},
     TSTypeBuiltin = {TType},
