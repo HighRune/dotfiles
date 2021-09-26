@@ -306,7 +306,7 @@ loadHighlights(
     TSFuncMacro = {BuiltIn},
     TSParameter = {TParameter},
     TSParameterReference = {TParameter},
-    TSMethod = {FuncName},
+    TSMethod = {TFunction},
     TSField = {FuncName},
     TSProperty = {Parameter},
     TSTag = {FuncName},
