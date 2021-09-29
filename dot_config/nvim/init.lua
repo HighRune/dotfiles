@@ -32,7 +32,7 @@ o.swapfile=false
 -- ____ UI
 
 o.termguicolors=true  -- Enables 24-bit RGB color in the Terminal UI
-cmd [[color haslo]]
+-- cmd [[color haslo]]
 -- o.colorscheme darkspace
 o.showmode = false     -- Disable message on the last line (Insert, Replace or Visual mode)
 -- o.showtabline=2  -- Always display the line with tab page labels
