@@ -217,9 +217,9 @@ require'fzf-lua'.setup {
 require('gitsigns').setup()
 require'colorizer'.setup()
 
-o.list = true
-o.listchars:append("space:⋅")
-o.listchars:append("eol:↴")
+-- o.list = true
+-- o.listchars:append("space:⋅")
+-- o.listchars:append("eol:↴")
 
 require("indent_blankline").setup {
     space_char_blankline = " ",
