@@ -17,6 +17,7 @@ return require('packer').startup(function()
     }
   }
   use {"romgrk/barbar.nvim"}
+  use "lukas-reineke/indent-blankline.nvim"
   use 'folke/tokyonight.nvim'
   use {"neovim/nvim-lspconfig"}
   use {"kabouzeid/nvim-lspinstall"}
