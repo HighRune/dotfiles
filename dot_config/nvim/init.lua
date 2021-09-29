@@ -217,14 +217,6 @@ require'fzf-lua'.setup {
 require('gitsigns').setup()
 require'colorizer'.setup()
 
-vim.opt.list = true
-vim.opt.listchars:append("eol:↴")
-
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
-}
-
 require "nvim-treesitter.configs".setup {
   playground = {
     enable = true,
@@ -245,3 +237,12 @@ require "nvim-treesitter.configs".setup {
     },
   }
 }
+
+-- Indent Blankline
+vim.opt.list = true
+vim.opt.listchars:append("eol:↴")
+
+require("indent_blankline").setup {
+    show_current_context = true,
+}
+
