@@ -217,6 +217,15 @@ require'fzf-lua'.setup {
 require('gitsigns').setup()
 require'colorizer'.setup()
 
+o.list = true
+o.listchars:append("space:⋅")
+o.listchars:append("eol:↴")
+
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    show_current_context = true,
+}
+
 require "nvim-treesitter.configs".setup {
   playground = {
     enable = true,
