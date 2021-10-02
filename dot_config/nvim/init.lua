@@ -63,7 +63,7 @@ require('plugins')
 require('telescope').setup({
   defaults = {
     layout_config = {
-      horizontal = { width = 1 }
+      horizontal = { width = 0.999 }
       -- other layout configuration here
     },
     -- other defaults configuration here
