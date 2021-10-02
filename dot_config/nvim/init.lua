@@ -66,7 +66,7 @@ require('telescope').setup({
     layout_config = {
       center = {
         height = 0.9,
-        preview_cutoff = 40,
+        -- preview_cutoff = 40,
         width = 0.9
       },
     },
