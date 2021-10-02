@@ -12,7 +12,7 @@ cmd[[colorscheme tokyonight]]
 -- o.scroll=5
 g.mapleader = " "
 o.mouse="a"                         -- Enables mouse support
-o.cursorline=true
+o.ruler=true
 o.scrolloff=999                     -- Minimal number of screen lines to keep above and below the cursor
 o.foldenable = false                -- All folds are open
 o.number=true                       -- Print the line number in front of each line
