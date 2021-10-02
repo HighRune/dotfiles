@@ -257,6 +257,8 @@ require "nvim-treesitter.configs".setup {
   }
 }
 
+require('wlsample.evil_line')
+
 -- Indent Blankline
 vim.opt.list = true
 vim.opt.listchars:append("eol:↴")
