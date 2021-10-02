@@ -60,16 +60,7 @@ api.nvim_set_keymap('n', '<leader>f', ':Neoformat eslint_d<CR>', { noremap = tru
 require('plugins')
 
 -- Telescope
-require('telescope').setup({
-  defaults = {
-    layout_config = {
-      vertical = { width = 0.999, height = 0.999 }
-      -- other layout configuration here
-    },
-    -- other defaults configuration here
-  },
-  -- other configuration values here
-})
+require('telescope').setup().defaults.layout_strategies.horizontal()
 
 api.nvim_set_keymap('n', '<leader><leader>', "<cmd>Telescope find_files<cr>", {noremap = true, silent = true})
 api.nvim_set_keymap('n', '<leader>s', '<cmd>Telescope live_grep<cr>', {noremap = true, silent = true})
