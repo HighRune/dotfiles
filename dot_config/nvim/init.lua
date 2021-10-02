@@ -71,7 +71,7 @@ require('telescope').setup({
   -- other configuration values here
 })
 
-api.nvim_set_keymap('n', '<leader><leader>', "<cmd>Telescope find_files theme=dropdown<cr>", {noremap = true, silent = true})
+api.nvim_set_keymap('n', '<leader><leader>', "<cmd>Telescope find_files<cr>", {noremap = true, silent = true})
 api.nvim_set_keymap('n', '<leader>s', '<cmd>Telescope live_grep<cr>', {noremap = true, silent = true})
 api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = true, silent = true})
 
