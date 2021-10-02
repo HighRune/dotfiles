@@ -13,6 +13,7 @@ return require('packer').startup(function()
   use 'kabouzeid/nvim-lspinstall'
   use 'glepnir/lspsaga.nvim'
   use 'sbdchd/neoformat'
+  use 'tommcdo/vim-lion'
   use {'glepnir/galaxyline.nvim', config = "require('config.galaxyline').post()"}
   use { 'ms-jpq/coq_nvim', branch = 'coq'}
   use { 'ms-jpq/coq.artifacts', branch= 'artifacts'}
