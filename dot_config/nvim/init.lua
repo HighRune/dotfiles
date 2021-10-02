@@ -62,11 +62,10 @@ require('plugins')
 -- Telescope
 require('telescope').setup({
   defaults = {
-    layout_strategy = 'center',
+    layout_strategy = 'vertical',
     layout_config = {
-      center = {
+      vertical = {
         height = 0.9,
-        -- preview_cutoff = 40,
         width = 0.9
       },
     },
