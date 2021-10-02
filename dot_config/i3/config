@@ -278,15 +278,18 @@ bindsym $mod+j exec alacritty
 bindsym $mod+k exec /usr/bin/google-chrome-stable
 bindsym $mod+semicolon exec /usr/bin/thunar
 
-# Rofi exit menu
-# bindsym $mod+Shift+e exec ~/.config/i3/scripts/shutdown_menu -p rofi -c
+# rofi bindings fancy application menu (two bindings F9/$mod+d)
 
-# Rofi open applications menu
-bindsym $mod+d exec rofi -modi drun -show drun -display-drun "Apps : " -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 14"
+bindsym $mod+d exec rofi -modi drun -show drun \
+		-config ~/.config/rofi/rofidmenu.rasi
+                
+bindsym F9 exec rofi -modi drun -show drun \
+		-config ~/.config/rofi/rofidmenu.rasi
+		
+# rofi bindings for window menu (two bindings F10/$mod+t)
 
-# Rofi open windows menu
-# bindsym $mod+t exec rofi -show window -display-window "Window : " -line-padding 4 \
-#                 -lines 10 -padding 50 -hide-scrollbar \
-#                 -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 14"
+bindsym $mod+t exec rofi -show window \
+		-config ~/.config/rofi/rofidmenu.rasi 
+
+bindsym F10 exec rofi -show window \
+		-config ~/.config/rofi/rofidmenu.rasi 
