@@ -60,10 +60,15 @@ api.nvim_set_keymap('n', '<leader>f', ':Neoformat eslint_d<CR>', { noremap = tru
 require('plugins')
 
 -- Telescope
--- api.nvim_set_keymap('n', '<leader>h', '<cmd>Telescope find_files<cr>', {noremap = true, silent = true})
--- api.nvim_set_keymap('n', '<leader>s', '<cmd>Telescope live_grep<cr>', {noremap = true, silent = true})
--- api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = true, silent = true})
+api.nvim_set_keymap('n', '<leader><leader>', '<cmd>Telescope find_files<cr>', {noremap = true, silent = true})
+api.nvim_set_keymap('n', '<leader>s', '<cmd>Telescope live_grep<cr>', {noremap = true, silent = true})
+api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = true, silent = true})
 
+" Using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 -- Treesitter
 require 'nvim-treesitter.configs'.setup {
   ensure_installed = 'maintained',
