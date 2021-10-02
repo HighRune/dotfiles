@@ -62,10 +62,11 @@ require('plugins')
 -- Telescope
 require('telescope').setup({
   defaults = {
-    layout_config = {
-      horizontal = { width = 0.999, height = 0.999 }
-      -- other layout configuration here
-    },
+    -- layout_config = {
+    --   horizontal = { width = 0.999, height = 0.999 }
+    --   -- other layout configuration here
+    -- },
+    layout_strategy = "flex"
     -- other defaults configuration here
   },
   -- other configuration values here
