@@ -64,9 +64,15 @@ require('telescope').setup({
   defaults = {
     layout_strategy = 'vertical',
     layout_config = {
-      height = 0.9,
-      width = 0.9
+      preview_cutoff = 0,
+      height = 0.999,
+      width = 0.999
     },
+    mappings = {
+      i = {
+        ["<esc>"] = require('telescope.actions').close,
+      },
+    }
   },
 })
 
