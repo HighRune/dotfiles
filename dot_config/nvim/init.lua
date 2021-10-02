@@ -27,7 +27,6 @@ cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4]]
 cmd[[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]]
 cmd[[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]]
 cmd[[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
-cmd[[let g:lightline = {'colorscheme': 'tokyonight'}]]
 -- cmd[[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]]
 
 -- ____ UI
