@@ -4,7 +4,7 @@ return require('packer').startup(function()
   use {'nvim-treesitter/nvim-treesitter', branch = '0.5-compat', run = ':TSUpdate'}
   use 'nvim-treesitter/playground'
   use 'kyazdani42/nvim-web-devicons'
-  use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
+  -- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
   use 'lewis6991/gitsigns.nvim'
   use 'romgrk/barbar.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
