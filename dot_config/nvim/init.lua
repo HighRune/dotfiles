@@ -283,7 +283,7 @@ local lsp_comps = require('windline.components.lsp')
 local git_comps = require('windline.components.git')
 
 local hl_list = {
-    Black = { 'white', 'black' },
+    Black = { 'white', 'transparent' },
     White = { 'black', 'white' },
     Inactive = { 'InactiveFg', 'InactiveBg' },
     Active = { 'ActiveFg', 'ActiveBg' },
