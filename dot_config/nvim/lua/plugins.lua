@@ -13,6 +13,8 @@ return require('packer').startup(function()
   use 'kabouzeid/nvim-lspinstall'
   use 'glepnir/lspsaga.nvim'
   use 'sbdchd/neoformat'
+  use 'tpope/vim-commentary'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'tommcdo/vim-lion'
   -- use {'glepnir/galaxyline.nvim', config = "require('config.galaxyline').post()"}
   use 'windwp/windline.nvim'
