@@ -261,6 +261,7 @@ bar {
         tray_output primary
         tray_padding 0
         strip_workspace_numbers yes
+        font Hack 20
 
         colors {
             background         $transparent         
