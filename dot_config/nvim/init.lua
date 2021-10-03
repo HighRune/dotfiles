@@ -269,6 +269,7 @@ vim.opt.listchars:append("eol:↴")
 require("indent_blankline").setup {
     show_current_context = true,
 }
+require('nvim_comment').setup()
 
 -- local saga = require 'lspsaga'
 -- saga.init_lsp_saga()
