@@ -1,7 +1,7 @@
 # _______________________________ BASE
 
 # font pango:Noto Sans Regular 14
-font Hack 20
+font pango:Hack 20
 
 # Set the mod key to the winkey
 set $mod Mod4
@@ -261,7 +261,6 @@ bar {
         tray_output primary
         tray_padding 0
         strip_workspace_numbers yes
-        font Hack 20
 
         colors {
             background         $transparent         
