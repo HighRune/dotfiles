@@ -85,6 +85,7 @@ api.nvim_set_keymap('n', '<leader>b', '<cmd>Telescope buffers<cr>', {noremap = t
 
 -- Treesitter
 require 'nvim-treesitter.configs'.setup {
+  context_commentstring = { enable = true }, -- nvim-ts-context-commentstring
   ensure_installed = 'maintained',
   highlight = {enable = true},
   indent = {enable = true},
