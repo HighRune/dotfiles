@@ -1,7 +1,7 @@
 # _______________________________ BASE
 
 # font pango:Noto Sans Regular 14
-font pango:Hack 20
+font pango:Hack 15
 
 # Set the mod key to the winkey
 set $mod Mod4
