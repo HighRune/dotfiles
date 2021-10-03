@@ -14,8 +14,8 @@ return require('packer').startup(function()
   use 'glepnir/lspsaga.nvim'
   use 'sbdchd/neoformat'
   use 'tommcdo/vim-lion'
-  use 'tpope/vim-commentary'
   -- use {'glepnir/galaxyline.nvim', config = "require('config.galaxyline').post()"}
+  use 'terrortylor/nvim-comment'
   use 'windwp/windline.nvim'
   use { 'ms-jpq/coq_nvim', branch = 'coq'}
   use { 'ms-jpq/coq.artifacts', branch= 'artifacts'}
