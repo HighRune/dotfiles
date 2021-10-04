@@ -25,7 +25,7 @@ o.clipboard = "unnamedplus"         -- Have the clipboard be the same as my regu
 o.updatetime=100                    -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience
 o.hidden=true                       -- Buffer becomes hidden when it is abandoned
 o.swapfile=false
-api.nvim_set_keymap('n', '<C-l>', ':noh', {noremap = true, silent = true})
+api.nvim_set_keymap('n', '<C-l>', ':noh<cr>', {noremap = true, silent = true})
 
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
 cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4]]
