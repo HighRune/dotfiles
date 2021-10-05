@@ -310,12 +310,12 @@ basic.vi_mode = {
         return { { '  ', state.mode[2] } }
     end,
 }
-basic.square_mode = {
-    hl_colors = colors_mode,
-    text = function()
-        return { { '▊', state.mode[2] } }
-    end,
-}
+-- basic.square_mode = {
+--     hl_colors = colors_mode,
+--     text = function()
+--         return { { '▊', state.mode[2] } }
+--     end,
+-- }
 
 basic.lsp_diagnos = {
     name = 'diagnostic',
@@ -439,15 +439,14 @@ local explorer = {
 local default = {
     filetypes = { 'default' },
     active = {
-        basic.square_mode,
-        basic.git,
+        -- basic.square_mode,
         basic.vi_mode,
-        basic.file,
+        basic.git,
         basic.lsp_diagnos,
         basic.divider,
         { lsp_comps.lsp_name(), { 'magenta', 'black' }, breakpoint_width },
         { ' ', hl_list.Black },
-        basic.square_mode,
+        -- basic.square_mode,
     },
     inactive = {
         { b_components.full_file_name, hl_list.Inactive },
