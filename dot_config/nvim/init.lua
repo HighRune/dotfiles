@@ -284,7 +284,7 @@ local lsp_comps = require('windline.components.lsp')
 local git_comps = require('windline.components.git')
 
 local hl_list = {
-    Black = { 'white', 'black' },
+    Black = { 'white', '#FFFFFF' },
     White = { 'black', 'white' },
     Inactive = { 'InactiveFg', 'InactiveBg' },
     Active = { 'ActiveFg', 'ActiveBg' },
@@ -445,7 +445,7 @@ local default = {
         basic.lsp_diagnos,
         basic.divider,
         { lsp_comps.lsp_name(), { 'magenta', 'black' }, breakpoint_width },
-        -- { ' ', hl_list.Black },
+        { ' ', hl_list.Black },
         -- basic.square_mode,
     },
     inactive = {
