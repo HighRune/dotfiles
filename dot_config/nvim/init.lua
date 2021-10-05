@@ -295,20 +295,17 @@ local breakpoint_width = 90
 basic.divider = { b_components.divider, '' }
 basic.bg = { ' ', 'StatusLine' }
 
-local colors_mode = {
-    Normal = { 'red', 'black' },
-    Insert = { 'green', 'black' },
-    Visual = { 'yellow', 'black' },
-    Replace = { 'blue_light', 'black' },
-    Command = { 'magenta', 'black' },
-}
-
-basic.vi_mode = {
+basic.vi_mode= {
     name = 'vi_mode',
-    hl_colors = colors_mode,
-    text = function()
-        return { { '  ', state.mode[2] } }
-    end,
+    hl_colors = {
+            Normal  = {'white', 'black'  },
+            Insert  = {'black', 'red'    },
+            Visual  = {'black', 'green'  },
+            Replace = {'black', 'cyan'   },
+            Command = {'black', 'yellow' },
+        } ,
+    text = function() return ' ' .. state.mode[1] .. ' ' end,
+    hl = function (hl_data) return hl_data[state.mode[2]] end,
 }
 -- basic.square_mode = {
 --     hl_colors = colors_mode,
