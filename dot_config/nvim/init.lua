@@ -445,7 +445,7 @@ local default = {
         basic.lsp_diagnos,
         basic.divider,
         { lsp_comps.lsp_name(), { 'magenta', 'black' }, breakpoint_width },
-        { ' ', hl_list.Black },
+        -- { ' ', hl_list.Black },
         -- basic.square_mode,
     },
     inactive = {
