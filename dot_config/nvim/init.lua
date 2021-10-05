@@ -393,9 +393,9 @@ basic.git = {
         if git_comps.is_git(bufnr) then
             return {
                 { ' ', '                   ' },
-                { git_comps.diff_added({ format = '', show_zero = true }), 'green' },
-                { git_comps.diff_removed({ format = '', show_zero = true }), 'red' },
-                { git_comps.diff_changed({ format = '', show_zero = true }), 'blue' },
+                { git_comps.diff_added({ format = '%s', show_zero = true }), 'green' },
+                { git_comps.diff_removed({ format = '%s', show_zero = true }), 'red' },
+                { git_comps.diff_changed({ format = '%s', show_zero = true }), 'blue' },
             }
         end
         return ''
