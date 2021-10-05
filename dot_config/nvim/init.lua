@@ -307,12 +307,6 @@ basic.vi_mode= {
     text = function() return ' ' .. state.mode[1] .. ' ' end,
     hl = function (hl_data) return hl_data[state.mode[2]] end,
 }
--- basic.square_mode = {
---     hl_colors = colors_mode,
---     text = function()
---         return { { '▊', state.mode[2] } }
---     end,
--- }
 
 basic.lsp_diagnos = {
     name = 'diagnostic',
@@ -390,9 +384,9 @@ basic.git = {
         if git_comps.is_git(bufnr) then
             return {
                 { ' ', ' ' },
-                { git_comps.diff_added({ format = ' %s', show_zero = true }), 'green' },
-                { git_comps.diff_changed({ format = ' 柳%s', show_zero = true }), 'blue' },
-                { git_comps.diff_removed({ format = '  %s', show_zero = true }), 'red' },
+                { git_comps.diff_added({ format = '+%s', show_zero = true }), 'green' },
+                { git_comps.diff_changed({ format = ' ~%s', show_zero = true }), 'blue' },
+                { git_comps.diff_removed({ format = ' -%s', show_zero = true }), 'red' },
             }
         end
         return ''
@@ -436,14 +430,12 @@ local explorer = {
 local default = {
     filetypes = { 'default' },
     active = {
-        -- basic.square_mode,
         basic.vi_mode,
         basic.lsp_diagnos,
         basic.divider,
         -- { lsp_comps.lsp_name(), { 'magenta', 'black' }, breakpoint_width },
         basic.git,
         { ' ', hl_list.Black },
-        -- basic.square_mode,
     },
     inactive = {
         { b_components.full_file_name, hl_list.Inactive },
