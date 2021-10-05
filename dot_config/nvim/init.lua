@@ -312,11 +312,11 @@ basic.vi_mode= {
 basic.vi_mode_sep =  {
     name = 'vi_mode_sep',
     hl_colors = {
-            Normal  = {'black', 'FilenameBg'},
-            Insert  = {'red', 'FilenameBg'},
-            Visual  = {'green', 'FilenameBg'},
-            Replace = {'cyan', 'FilenameBg'},
-            Command = {'yellow', 'FilenameBg'},
+            Normal  = {'white', 'black'  },
+            Insert  = {'black', 'red'    },
+            Visual  = {'black', 'green'  },
+            Replace = {'black', 'cyan'   },
+            Command = {'black', 'yellow' },
         }
     ,
     text = function() return sep.right_rounded end,
