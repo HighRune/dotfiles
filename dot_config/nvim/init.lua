@@ -434,14 +434,14 @@ local explorer = {
     show_last_status = true,
 }
 local default = {
-    filetypes = { 'default' },
+    -- filetypes = { 'default' },
     active = {
         -- basic.square_mode,
         basic.vi_mode,
-        basic.git,
         basic.lsp_diagnos,
         basic.divider,
         { lsp_comps.lsp_name(), { 'magenta', 'black' }, breakpoint_width },
+        basic.git,
         { ' ', hl_list.Black },
         -- basic.square_mode,
     },
