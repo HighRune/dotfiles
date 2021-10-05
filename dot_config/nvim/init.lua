@@ -434,7 +434,7 @@ local explorer = {
     show_last_status = true,
 }
 local default = {
-    -- filetypes = { 'default' },
+    filetypes = { 'default' },
     active = {
         -- basic.square_mode,
         basic.vi_mode,
