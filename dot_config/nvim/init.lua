@@ -309,20 +309,6 @@ basic.vi_mode= {
     hl = function (hl_data) return hl_data[state.mode[2]] end,
 }
 
-basic.vi_mode_sep =  {
-    name = 'vi_mode_sep',
-    hl_colors = {
-            Normal  = {'white', 'black'  },
-            Insert  = {'black', 'red'    },
-            Visual  = {'black', 'green'  },
-            Replace = {'black', 'cyan'   },
-            Command = {'black', 'yellow' },
-        }
-    ,
-    text = function() return sep.right_rounded end,
-    hl = function (data) return data[state.mode[2]] end,
-}
-
 basic.lsp_diagnos = {
     name = 'diagnostic',
     hl_colors = {
@@ -334,7 +320,7 @@ basic.lsp_diagnos = {
     text = function(bufnr)
         if lsp_comps.check_lsp(bufnr) then
             return {
-                { lsp_comps.lsp_error({ format = ' %s', show_zero = true }), 'red' },
+                { lsp_comps.lsp_error({ format = '  %s', show_zero = true }), 'red' },
                 { lsp_comps.lsp_warning({ format = '  %s', show_zero = true }), 'yellow' },
                 { lsp_comps.lsp_hint({ format = '  %s', show_zero = true }), 'blue' },
             }
@@ -342,12 +328,7 @@ basic.lsp_diagnos = {
         return ''
     end,
 }
-basic.square_mode = {
-    hl_colors = colors_mode,
-    text = function()
-        return { { '▊', state.mode[2] } }
-    end,
-}
+
 basic.git = {
     name = 'git',
     hl_colors = {
@@ -368,45 +349,10 @@ basic.git = {
     end,
 }
 
-local quickfix = {
-    filetypes = { 'qf', 'Trouble' },
-    active = {
-        { '🚦 Quickfix ', { 'white', 'black' } },
-        { helper.separators.slant_right, { 'black', 'black_light' } },
-        {
-            function()
-                return vim.fn.getqflist({ title = 0 }).title
-            end,
-            { 'cyan', 'black_light' },
-        },
-        { ' Total : %L ', { 'cyan', 'black_light' } },
-        { helper.separators.slant_right, { 'black_light', 'InactiveBg' } },
-        { ' ', { 'InactiveFg', 'InactiveBg' } },
-        basic.divider,
-        { helper.separators.slant_right, { 'InactiveBg', 'black' } },
-        { '🧛 ', { 'white', 'black' } },
-    },
-
-    always_active = true,
-    show_last_status = true,
-}
-
-local explorer = {
-    filetypes = { 'fern', 'NvimTree', 'lir' },
-    active = {
-        { '  ', { 'black', 'red' } },
-        { helper.separators.slant_right, { 'red', 'NormalBg' } },
-        { b_components.divider, '' },
-        { b_components.file_name(''), { 'white', 'NormalBg' } },
-    },
-    always_active = true,
-    show_last_status = true,
-}
 local default = {
     filetypes = { 'default' },
     active = {
         basic.vi_mode,
-        basic.vi_mode_sep,
         basic.lsp_diagnos,
         basic.divider,
         -- { lsp_comps.lsp_name(), { 'magenta', 'black' }, breakpoint_width },
@@ -430,8 +376,6 @@ windline.setup({
         return colors
     end,
     statuslines = {
-        default,
-        quickfix,
-        explorer,
+        default
     },
 })
