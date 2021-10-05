@@ -277,6 +277,7 @@ require("indent_blankline").setup {
 -- require('wlsample.evil_line')
 local windline = require('windline')
 local helper = require('windline.helpers')
+local sep = helper.separators
 local b_components = require('windline.components.basic')
 local state = _G.WindLine.state
 
@@ -308,6 +309,20 @@ basic.vi_mode= {
     hl = function (hl_data) return hl_data[state.mode[2]] end,
 }
 
+basic.vi_mode_sep =  {
+    name = 'vi_mode_sep',
+    hl_colors = {
+            Normal  = {'black', 'FilenameBg'},
+            Insert  = {'red', 'FilenameBg'},
+            Visual  = {'green', 'FilenameBg'},
+            Replace = {'cyan', 'FilenameBg'},
+            Command = {'yellow', 'FilenameBg'},
+        }
+    ,
+    text = function() return sep.right_rounded end,
+    hl = function (data) return data[state.mode[2]] end,
+}
+
 basic.lsp_diagnos = {
     name = 'diagnostic',
     hl_colors = {
@@ -331,50 +346,6 @@ basic.square_mode = {
     hl_colors = colors_mode,
     text = function()
         return { { '▊', state.mode[2] } }
-    end,
-}
-basic.file = {
-    name = 'file',
-    hl_colors = {
-        default = hl_list.Black,
-        white = { 'white', 'black' },
-        magenta = { 'magenta', 'black' },
-    },
-    text = function(_, _, width)
-        if width > breakpoint_width then
-            return {
-                { b_components.cache_file_size(), 'default' },
-                { ' ', '' },
-                { b_components.cache_file_name('[No Name]', 'unique'), 'magenta' },
-                { b_components.line_col_lua, 'white' },
-                { b_components.progress_lua, '' },
-                { ' ', '' },
-                { b_components.file_modified(' '), 'magenta' },
-            }
-        else
-            return {
-                { b_components.cache_file_size(), 'default' },
-                { ' ', '' },
-                { b_components.cache_file_name('[No Name]', 'unique'), 'magenta' },
-                { ' ', '' },
-                { b_components.file_modified(' '), 'magenta' },
-            }
-        end
-    end,
-}
-basic.file_right = {
-    hl_colors = {
-        default = hl_list.Black,
-        white = { 'white', 'black' },
-        magenta = { 'magenta', 'black' },
-    },
-    text = function(_, _, width)
-        if width < breakpoint_width then
-            return {
-                { b_components.line_col_lua, 'white' },
-                { b_components.progress_lua, '' },
-            }
-        end
     end,
 }
 basic.git = {
@@ -435,6 +406,7 @@ local default = {
     filetypes = { 'default' },
     active = {
         basic.vi_mode,
+        basic.vi_mode_sep,
         basic.lsp_diagnos,
         basic.divider,
         -- { lsp_comps.lsp_name(), { 'magenta', 'black' }, breakpoint_width },
