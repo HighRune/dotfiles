@@ -319,13 +319,18 @@ basic.lsp_diagnos = {
     text = function(bufnr)
         if lsp_comps.check_lsp(bufnr) then
             return {
-                { ' ', 'red' },
-                { lsp_comps.lsp_error({ format = ' %s', show_zero = true }), 'red' },
-                { lsp_comps.lsp_warning({ format = '  %s', show_zero = true }), 'yellow' },
-                { lsp_comps.lsp_hint({ format = '  %s', show_zero = true }), 'blue' },
+                { lsp_comps.lsp_error({ format = ' %s', show_zero = true }), 'red' },
+                { lsp_comps.lsp_warning({ format = '  %s', show_zero = true }), 'yellow' },
+                { lsp_comps.lsp_hint({ format = '  %s', show_zero = true }), 'blue' },
             }
         end
         return ''
+    end,
+}
+basic.square_mode = {
+    hl_colors = colors_mode,
+    text = function()
+        return { { '▊', state.mode[2] } }
     end,
 }
 basic.file = {
