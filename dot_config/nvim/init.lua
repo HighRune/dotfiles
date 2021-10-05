@@ -440,11 +440,11 @@ local default = {
     filetypes = { 'default' },
     active = {
         basic.square_mode,
+        basic.git,
         basic.vi_mode,
         basic.file,
         basic.lsp_diagnos,
         basic.divider,
-        basic.git,
         { lsp_comps.lsp_name(), { 'magenta', 'black' }, breakpoint_width },
         { ' ', hl_list.Black },
         basic.square_mode,
