@@ -28,7 +28,7 @@ o.swapfile=false
 api.nvim_set_keymap('n', '<C-l>', ':noh<cr>', {noremap = true, silent = true})
 
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
-cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4]]
+-- cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =4]]
 cmd[[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]]
 cmd[[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]]
 cmd[[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
