@@ -7,19 +7,18 @@ return require('packer').startup(function()
   -- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
   use 'lewis6991/gitsigns.nvim'
   use 'romgrk/barbar.nvim'
-  use 'lukas-reineke/indent-blankline.nvim'
+  -- use 'lukas-reineke/indent-blankline.nvim'
   use 'folke/tokyonight.nvim'
   use 'neovim/nvim-lspconfig'
   use 'kabouzeid/nvim-lspinstall'
-  use 'glepnir/lspsaga.nvim'
-  use 'sbdchd/neoformat'
-  use 'tpope/vim-commentary'
-  use 'JoosepAlviste/nvim-ts-context-commentstring'
-  use 'tommcdo/vim-lion'
-  use 'dstein64/nvim-scrollview'
+  -- use 'sbdchd/neoformat'
+  -- use 'tpope/vim-commentary'
+  -- use 'JoosepAlviste/nvim-ts-context-commentstring'
+  -- use 'tommcdo/vim-lion'
+  -- use 'dstein64/nvim-scrollview'
   use 'nacro90/numb.nvim'
   -- use {'glepnir/galaxyline.nvim', config = "require('config.galaxyline').post()"}
-  use 'windwp/windline.nvim'
+  -- use 'windwp/windline.nvim'
   use { 'ms-jpq/coq_nvim', branch = 'coq'}
   use { 'ms-jpq/coq.artifacts', branch= 'artifacts'}
   use 'norcalli/nvim-colorizer.lua'
