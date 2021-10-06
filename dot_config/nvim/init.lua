@@ -263,10 +263,12 @@ require "nvim-treesitter.configs".setup {
   }
 }
 
--- Indent Blankline
+-- nacro90/numb.nvim
+require('numb').setup()
+
+-- lukas-reineke/indent-blankline.nvim
 vim.opt.list = true
 vim.opt.listchars:append("eol:↴")
-
 require("indent_blankline").setup {
     show_end_of_line = true,
 }
