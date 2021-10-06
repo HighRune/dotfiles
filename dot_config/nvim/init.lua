@@ -277,106 +277,107 @@ require("indent_blankline").setup {
 -- saga.init_lsp_saga()
 
 -- require('wlsample.evil_line')
-local windline = require('windline')
-local helper = require('windline.helpers')
-local sep = helper.separators
-local b_components = require('windline.components.basic')
-local state = _G.WindLine.state
 
-local lsp_comps = require('windline.components.lsp')
-local git_comps = require('windline.components.git')
-
-local hl_list = {
-    Black = { 'white', 'black' },
-    White = { 'black', 'white' },
-    Inactive = { 'InactiveFg', 'InactiveBg' },
-    Active = { 'ActiveFg', 'ActiveBg' },
-}
-local basic = {}
-
-local breakpoint_width = 90
-basic.divider = { b_components.divider, '' }
-basic.bg = { ' ', 'StatusLine' }
-
-basic.vi_mode= {
-    name = 'vi_mode',
-    hl_colors = {
-            Normal  = {'white', 'black'  },
-            Insert  = {'black', 'red'    },
-            Visual  = {'black', 'green'  },
-            Replace = {'black', 'cyan'   },
-            Command = {'black', 'yellow' },
-        } ,
-    text = function() return ' ' .. state.mode[1] .. ' ' end,
-    hl = function (hl_data) return hl_data[state.mode[2]] end,
-}
-
-basic.lsp_diagnos = {
-    name = 'diagnostic',
-    hl_colors = {
-        red = { 'red', 'black' },
-        yellow = { 'yellow', 'black' },
-        blue = { 'blue', 'black' },
-    },
-    width = breakpoint_width,
-    text = function(bufnr)
-        if lsp_comps.check_lsp(bufnr) then
-            return {
-                { lsp_comps.lsp_error({ format = '  %s', show_zero = true }), 'red' },
-                { lsp_comps.lsp_warning({ format = '  %s', show_zero = true }), 'yellow' },
-                { lsp_comps.lsp_hint({ format = '  %s', show_zero = true }), 'blue' },
-            }
-        end
-        return ''
-    end,
-}
-
-basic.git = {
-    name = 'git',
-    hl_colors = {
-        green = { 'green', 'black' },
-        red = { 'red', 'black' },
-        blue = { 'blue', 'black' },
-    },
-    width = breakpoint_width,
-    text = function(bufnr)
-        if git_comps.is_git(bufnr) then
-            return {
-                { git_comps.diff_added({ format = ' +%s', show_zero = true }), 'green' },
-                { git_comps.diff_changed({ format = ' ~%s', show_zero = true }), 'blue' },
-                { git_comps.diff_removed({ format = ' -%s ', show_zero = true }), 'red' },
-            }
-        end
-        return ''
-    end,
-}
-
-local default = {
-    filetypes = { 'default' },
-    active = {
-        basic.vi_mode,
-        basic.lsp_diagnos,
-        { git_comps.git_branch(), { 'magenta', 'black' }, breakpoint_width },
-        basic.divider,
-        basic.git,
-    },
-    inactive = {
-        { b_components.full_file_name, hl_list.Inactive },
-        basic.file_name_inactive,
-        basic.divider,
-        basic.divider,
-        { b_components.line_col, hl_list.Inactive },
-        { b_components.progress, hl_list.Inactive },
-    },
-}
-
-windline.setup({
-    colors_name = function(colors)
-        -- print(vim.inspect(colors))
-        -- ADD MORE COLOR HERE ----
-        return colors
-    end,
-    statuslines = {
-        default
-    },
-})
+-- local windline = require('windline')
+-- local helper = require('windline.helpers')
+-- local sep = helper.separators
+-- local b_components = require('windline.components.basic')
+-- local state = _G.WindLine.state
+-- 
+-- local lsp_comps = require('windline.components.lsp')
+-- local git_comps = require('windline.components.git')
+-- 
+-- local hl_list = {
+--     Black = { 'white', 'black' },
+--     White = { 'black', 'white' },
+--     Inactive = { 'InactiveFg', 'InactiveBg' },
+--     Active = { 'ActiveFg', 'ActiveBg' },
+-- }
+-- local basic = {}
+-- 
+-- local breakpoint_width = 90
+-- basic.divider = { b_components.divider, '' }
+-- basic.bg = { ' ', 'StatusLine' }
+-- 
+-- basic.vi_mode= {
+--     name = 'vi_mode',
+--     hl_colors = {
+--             Normal  = {'white', 'black'  },
+--             Insert  = {'black', 'red'    },
+--             Visual  = {'black', 'green'  },
+--             Replace = {'black', 'cyan'   },
+--             Command = {'black', 'yellow' },
+--         } ,
+--     text = function() return ' ' .. state.mode[1] .. ' ' end,
+--     hl = function (hl_data) return hl_data[state.mode[2]] end,
+-- }
+-- 
+-- basic.lsp_diagnos = {
+--     name = 'diagnostic',
+--     hl_colors = {
+--         red = { 'red', 'black' },
+--         yellow = { 'yellow', 'black' },
+--         blue = { 'blue', 'black' },
+--     },
+--     width = breakpoint_width,
+--     text = function(bufnr)
+--         if lsp_comps.check_lsp(bufnr) then
+--             return {
+--                 { lsp_comps.lsp_error({ format = '  %s', show_zero = true }), 'red' },
+--                 { lsp_comps.lsp_warning({ format = '  %s', show_zero = true }), 'yellow' },
+--                 { lsp_comps.lsp_hint({ format = '  %s', show_zero = true }), 'blue' },
+--             }
+--         end
+--         return ''
+--     end,
+-- }
+-- 
+-- basic.git = {
+--     name = 'git',
+--     hl_colors = {
+--         green = { 'green', 'black' },
+--         red = { 'red', 'black' },
+--         blue = { 'blue', 'black' },
+--     },
+--     width = breakpoint_width,
+--     text = function(bufnr)
+--         if git_comps.is_git(bufnr) then
+--             return {
+--                 { git_comps.diff_added({ format = ' +%s', show_zero = true }), 'green' },
+--                 { git_comps.diff_changed({ format = ' ~%s', show_zero = true }), 'blue' },
+--                 { git_comps.diff_removed({ format = ' -%s ', show_zero = true }), 'red' },
+--             }
+--         end
+--         return ''
+--     end,
+-- }
+-- 
+-- local default = {
+--     filetypes = { 'default' },
+--     active = {
+--         basic.vi_mode,
+--         basic.lsp_diagnos,
+--         { git_comps.git_branch(), { 'magenta', 'black' }, breakpoint_width },
+--         basic.divider,
+--         basic.git,
+--     },
+--     inactive = {
+--         { b_components.full_file_name, hl_list.Inactive },
+--         basic.file_name_inactive,
+--         basic.divider,
+--         basic.divider,
+--         { b_components.line_col, hl_list.Inactive },
+--         { b_components.progress, hl_list.Inactive },
+--     },
+-- }
+-- 
+-- windline.setup({
+--     colors_name = function(colors)
+--         -- print(vim.inspect(colors))
+--         -- ADD MORE COLOR HERE ----
+--         return colors
+--     end,
+--     statuslines = {
+--         default
+--     },
+-- })
