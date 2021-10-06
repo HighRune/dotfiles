@@ -270,8 +270,8 @@ require "nvim-treesitter.configs".setup {
 -- nacro90/numb.nvim
 require('numb').setup()
 
-api.nvim_set_keymap('n', '<S-up>', '2k', { noremap = true, silent = true })
-api.nvim_set_keymap('n', '<S-down>', '2j', { noremap = true, silent = true })
+api.nvim_set_keymap('n', '<PageUp>', '2k', { noremap = true, silent = true })
+api.nvim_set_keymap('n', '<PageDown>', '2j', { noremap = true, silent = true })
 
 -- lukas-reineke/indent-blankline.nvim
 vim.opt.list = true
