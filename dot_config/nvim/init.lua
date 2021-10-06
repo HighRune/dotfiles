@@ -279,6 +279,9 @@ require("indent_blankline").setup {
     show_end_of_line = true,
 }
 
+-- karb94/neoscroll.nvim
+require('neoscroll').setup()
+
 -- local saga = require 'lspsaga'
 -- saga.init_lsp_saga()
 
