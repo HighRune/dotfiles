@@ -356,8 +356,8 @@ local default = {
     active = {
         basic.vi_mode,
         basic.lsp_diagnos,
-        basic.divider,
         { git_comps.git_branch(), { 'magenta', 'black' }, breakpoint_width },
+        basic.divider,
         basic.git,
     },
     inactive = {
