@@ -15,8 +15,8 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'tommcdo/vim-lion'
-  -- use 'dstein64/nvim-scrollview'
   use 'nacro90/numb.nvim'
+  use 'Xuyuanp/scrollbar.nvim'
   -- use {'glepnir/galaxyline.nvim', config = "require('config.galaxyline').post()"}
   use 'windwp/windline.nvim'
   use { 'ms-jpq/coq_nvim', branch = 'coq'}
