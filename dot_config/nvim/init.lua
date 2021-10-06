@@ -32,12 +32,12 @@ api.nvim_set_keymap('n', '<C-l>', ':noh<cr>', {noremap = true, silent = true})
 cmd[[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]]
 cmd[[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]]
 cmd[[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
-cmd[[augroup ScrollbarInit
-  autocmd!
-  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
-  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
-  autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
-augroup end]]
+-- cmd[[augroup ScrollbarInit
+--   autocmd!
+--   autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
+--   autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+--   autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
+-- augroup end]]
 -- cmd[[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]]
 
 -- ____ UI
