@@ -264,14 +264,14 @@ require "nvim-treesitter.configs".setup {
 }
 
 -- nacro90/numb.nvim
-require('numb').setup()
+-- require('numb').setup()
 
 -- lukas-reineke/indent-blankline.nvim
-vim.opt.list = true
-vim.opt.listchars:append("eol:↴")
-require("indent_blankline").setup {
-    show_end_of_line = true,
-}
+-- vim.opt.list = true
+-- vim.opt.listchars:append("eol:↴")
+-- require("indent_blankline").setup {
+--     show_end_of_line = true,
+-- }
 
 -- local saga = require 'lspsaga'
 -- saga.init_lsp_saga()
