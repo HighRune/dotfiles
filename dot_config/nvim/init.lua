@@ -32,7 +32,6 @@ cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]]
 cmd[[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]]
 cmd[[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]]
 cmd[[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
-cmd[[autocmd ColorScheme * highlight NormalFloat guibg=NONE]]
 
 -- cmd[[augroup ScrollbarInit
 --   autocmd!
@@ -175,15 +174,15 @@ end
 g.coq_settings = { auto_start = 'shut-up' }
 
 -- ray-x/lsp_signature.nvim
--- require "lsp_signature".setup({
---   bind = true, -- This is mandatory, otherwise border config won't get registered.
---   handler_opts = {
---     border = 'single'
---   },
---   hint_prefix = '',
---   tranpancy = 100,
---   floating_window = true
--- })
+require "lsp_signature".setup({
+  bind = true, -- This is mandatory, otherwise border config won't get registered.
+  handler_opts = {
+    border = 'single'
+  },
+  hint_prefix = '',
+  tranpancy = 100,
+  floating_window = true
+})
 
 -- -- nvim-compe
 -- o.completeopt = "menuone,noselect"
