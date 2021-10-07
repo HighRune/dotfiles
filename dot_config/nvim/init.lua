@@ -133,7 +133,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  -- buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', '<C-s>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
@@ -173,11 +173,15 @@ end
 g.coq_settings = { auto_start = 'shut-up' }
 
 -- ray-x/lsp_signature.nvim
-require "lsp_signature".setup({
-  bind = true, -- This is mandatory, otherwise border config won't get registered.
-  hint_prefix = '',
-  transpancy = 100
-})
+-- require "lsp_signature".setup({
+--   bind = true, -- This is mandatory, otherwise border config won't get registered.
+--   handler_opts = {
+--     border = 'single'
+--   },
+--   hint_prefix = '',
+--   tranpancy = 100,
+--   floating_window = true
+-- })
 
 -- -- nvim-compe
 -- o.completeopt = "menuone,noselect"
