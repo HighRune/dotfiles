@@ -124,21 +124,13 @@ function M.post()
     return "  " .. result .. " "
   end
 
-  -- gls.left[2] = {
-  -- 	LongFileName = {
-  -- 		provider = long_filename,
-  -- 		condition = buffer_not_empty,
-  -- 		highlight = { colors.normal, colors.bg, "bold" },
-  -- 	},
-  -- }
-
-  -- gls.left[3] = {
-  -- 	FileIcon = {
-  -- 		provider = "FileIcon",
-  -- 		condition = buffer_not_empty,
-  -- 		highlight = { require("galaxyline.provider_fileinfo").get_file_icon_color, colors.bg },
-  -- 	},
-  -- }
+  local checkwidth = function()
+    local squeeze_width = vim.fn.winwidth(0) / 2
+    if squeeze_width > 60 then
+      return true
+    end
+    return false
+  end
 
   gls.left = {
     {
@@ -154,91 +146,54 @@ function M.post()
       }
     },
     {
+      CustomGitBranch = {
+        provider = function()
+          local branch = vcs.get_git_branch()
+          if branch == nil then
+            return ""
+          end
+          return "   " .. branch .. ' '
+        end,
+        -- condition = checkwidth,
+        highlight = { colors.normal, "none" },
+      }
+    },
+    {
       DiagnosticError = {
         provider = "DiagnosticError",
         icon = "   ",
-        highlight = { colors.red, colors.bg },
+        highlight = { colors.red, 'none' },
       },
     },
     {
       DiagnosticWarn = {
         provider = "DiagnosticWarn",
         icon = "   ",
-        highlight = { colors.yellow, colors.bg },
+        highlight = { colors.yellow, 'none' },
       },
     },
     {
       DiagnosticInfo = {
         provider = "DiagnosticInfo",
         icon = "   ",
-        highlight = { colors.green, colors.bg },
+        highlight = { colors.green, 'none' },
       },
     },
     {
       DiagnosticHint = {
         provider = "DiagnosticHint",
         icon = "   ",
-        highlight = { colors.cyan, colors.bg },
+        highlight = { colors.cyan, 'none' },
       },
     },
-  }
-
-
-
-  -- gls.left[6] = {
-  -- 	FileBarrier = {
-  -- 		provider = function()
-  -- 			return " "
-  -- 		end,
-  -- 		highlight = { colors.bg, "yellow" },
-  -- 	},
-  -- }
-
-  local checkwidth = function()
-    local squeeze_width = vim.fn.winwidth(0) / 2
-    if squeeze_width > 60 then
-      return true
-    end
-    return false
-  end
-
-  gls.left[7] = {
-    CustomGitBranch = {
-      provider = function()
-        local branch = vcs.get_git_branch()
-        if branch == nil then
-          return ""
-        end
-        return "   " .. branch .. ' '
-      end,
-      -- condition = checkwidth,
-      highlight = { colors.normal, "none" },
-    },
-  }
-
-  gls.left[8] = {
-    DiffAdd = {
-      provider = "DiffAdd",
-      -- condition = checkwidth,
-      icon = " ",
-      highlight = { colors.green, "none", "bold" },
-    },
-  }
-  gls.left[9] = {
-    DiffModified = {
-      provider = "DiffModified",
-      -- condition = checkwidth,
-      icon = " ",
-      highlight = { colors.yellow, "none", "bold" },
-    },
-  }
-  gls.left[10] = {
-    DiffRemove = {
-      provider = "DiffRemove",
-      -- condition = checkwidth,
-      icon = " ",
-      highlight = { colors.red, "none", "bold" },
-    },
+    -- {
+    --   FileBarrier = {
+    --     provider = function()
+    --       return " "
+    --     end,
+    --     highlight = { colors.bg, "yellow" },
+    --   }
+    -- },
   }
 
   gls.right = {
@@ -251,6 +206,30 @@ function M.post()
     -- 	},
     -- },
     {
+      DiffAdd = {
+        provider = "DiffAdd",
+        -- condition = checkwidth,
+        icon = " ",
+        highlight = { colors.green, colors.bg, "bold" },
+      },
+    },
+    {
+      DiffModified = {
+        provider = "DiffModified",
+        -- condition = checkwidth,
+        icon = " ",
+        highlight = { colors.yellow, colors.bg, "bold" },
+      },
+    },
+    {
+      DiffRemove = {
+        provider = "DiffRemove",
+        -- condition = checkwidth,
+        icon = " ",
+        highlight = { colors.red, colors.bg, "bold" },
+      }
+    },
+    {
       FileStatus = {
         provider = function()
           if string.len(file_readonly()) ~= 0 then
@@ -261,6 +240,7 @@ function M.post()
             end
           end
         end,
+        separator_highlight = { colors.fg, colors.bg, "bold" },
         highlight = { colors.cyan, colors.bg },
       },
     },
@@ -281,15 +261,6 @@ function M.post()
         highlight = { colors.fg, colors.bg, "bold" },
       },
     },
-    -- {
-    --   LineInfo = {
-    --     provider = "LineColumn",
-    --     separator = " ",
-    --     separator_highlight = { colors.fg, colors.bg, "bold" },
-    --     -- separator_highlight = { colors.blue, colors.bg },
-    --     highlight = { colors.fg, colors.bg },
-    --   },
-    -- },
     {
       PerCent = {
         provider = "LinePercent",
@@ -299,6 +270,15 @@ function M.post()
       },
     },
   }
+  -- {
+  --   LineInfo = {
+  --     provider = "LineColumn",
+  --     separator = " ",
+  --     separator_highlight = { colors.fg, colors.bg, "bold" },
+  --     -- separator_highlight = { colors.blue, colors.bg },
+  --     highlight = { colors.fg, colors.bg },
+  --   },
+  -- },
 
   -- gls.short_line_left[1] = {
   --   LongFileName = {
