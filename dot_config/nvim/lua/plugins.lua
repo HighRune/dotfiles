@@ -5,6 +5,7 @@ return require('packer').startup(function()
   use 'nvim-treesitter/playground'
   use 'kyazdani42/nvim-web-devicons'
   -- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
+  use 'yamatsum/nvim-cursorline'
   use 'lewis6991/gitsigns.nvim'
   use 'romgrk/barbar.nvim'
   use 'lukas-reineke/indent-blankline.nvim'
