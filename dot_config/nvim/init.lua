@@ -173,7 +173,11 @@ end
 g.coq_settings = { auto_start = 'shut-up' }
 
 -- ray-x/lsp_signature.nvim
-require "lsp_signature".setup()
+require "lsp_signature".setup({
+  bind = true, -- This is mandatory, otherwise border config won't get registered.
+  hint_prefix = '',
+  transpancy = 100
+})
 
 -- -- nvim-compe
 -- o.completeopt = "menuone,noselect"
