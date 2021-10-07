@@ -6,6 +6,8 @@ local o = vim.o      -- to set options
 
 -- ____ GENERAL
 
+cmd[[autocmd ColorScheme * highlight NormalFloat guibg=none]]
+cmd[[autocmd ColorScheme * highlight FloatBorder guibg=none]]
 g.tokyonight_style = 'night'
 g.tokyonight_transparent = true
 g.tokyonight_transparent_sidebar = true
@@ -15,7 +17,7 @@ g.mapleader = " "
 o.mouse="a"                         -- Enables mouse support
 -- o.cursorline=true
 o.cursorcolumn=true
-o.cursorline=true
+-- o.cursorline=true
 o.scrolloff=999                     -- Minimal number of screen lines to keep above and below the cursor
 o.foldenable = false                -- All folds are open
 o.number=true                       -- Print the line number in front of each line
@@ -33,6 +35,7 @@ cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]]
 cmd[[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]]
 cmd[[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]]
 cmd[[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
+
 
 -- cmd[[augroup ScrollbarInit
 --   autocmd!
@@ -180,9 +183,14 @@ require "lsp_signature".setup({
   handler_opts = {
     border = 'single'
   },
+  doc_lines = 0,
   hint_prefix = '',
   tranpancy = 100,
-  floating_window = false
+  floating_window = true,
+  max_width = 80,
+  always_trigger = true,
+  max_height = 15,
+  hint_enable = false
 })
 
 -- -- nvim-compe
