@@ -15,6 +15,7 @@ g.mapleader = " "
 o.mouse="a"                         -- Enables mouse support
 -- o.cursorline=true
 o.cursorcolumn=true
+o.cursorLine=true
 o.scrolloff=999                     -- Minimal number of screen lines to keep above and below the cursor
 o.foldenable = false                -- All folds are open
 o.number=true                       -- Print the line number in front of each line
@@ -181,7 +182,7 @@ require "lsp_signature".setup({
   },
   hint_prefix = '',
   tranpancy = 100,
-  floating_window = true
+  floating_window = false
 })
 
 -- -- nvim-compe
