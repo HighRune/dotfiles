@@ -21,7 +21,7 @@ return require('packer').startup(function()
   use 'ray-x/lsp_signature.nvim'
   -- use 'Xuyuanp/scrollbar.nvim'
   -- use 'karb94/neoscroll.nvim'
-  -- use {'glepnir/galaxyline.nvim', config = "require('config.galaxyline').post()"}
+  use {'glepnir/galaxyline.nvim', config = "require('config.galaxyline').post()"}
   use { 'ms-jpq/coq_nvim', branch = 'coq'}
   use { 'ms-jpq/coq.artifacts', branch= 'artifacts'}
   use 'norcalli/nvim-colorizer.lua'
