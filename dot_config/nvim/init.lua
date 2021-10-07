@@ -8,6 +8,10 @@ local o = vim.o      -- to set options
 
 cmd[[autocmd ColorScheme * highlight NormalFloat guibg=none]]
 cmd[[autocmd ColorScheme * highlight FloatBorder guibg=none]]
+g.tokyonight_style = 'night'
+g.tokyonight_transparent = true
+g.tokyonight_transparent_sidebar = true
+cmd[[colorscheme tokyonight]]
 -- o.scroll=5
 g.mapleader = " "
 o.mouse="a"                         -- Enables mouse support
@@ -413,7 +417,3 @@ require("indent_blankline").setup {
          default
      },
  })
-g.tokyonight_style = 'night'
-g.tokyonight_transparent = true
-g.tokyonight_transparent_sidebar = true
-cmd[[colorscheme tokyonight]]
