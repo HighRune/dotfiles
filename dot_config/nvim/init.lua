@@ -172,6 +172,9 @@ end
 
 g.coq_settings = { auto_start = 'shut-up' }
 
+-- ray-x/lsp_signature.nvim
+require "lsp_signature".setup()
+
 -- -- nvim-compe
 -- o.completeopt = "menuone,noselect"
 
