@@ -112,11 +112,11 @@ function M.post()
 				-- auto change color according the vim mode
 				local vim_mode = vim.fn.mode()
 				vim.api.nvim_command("hi GalaxyViMode guifg=" .. colors.bg .. " guibg=" .. mode_color[vim_mode])
-				return "  " .. mode_alias[vim_mode] .. " "
+				return '  ' .. mode_alias[vim_mode] .. ' '
 			end,
 			highlight = { colors.red, colors.bg, "bold" },
 			event = "InsertEnter",
-		},
+		}
 	}
 
 	local function file_readonly()
@@ -137,23 +137,23 @@ function M.post()
 		return "  " .. result .. " "
 	end
 
+	-- gls.left[2] = {
+	-- 	LongFileName = {
+	-- 		provider = long_filename,
+	-- 		condition = buffer_not_empty,
+	-- 		highlight = { colors.normal, colors.bg, "bold" },
+	-- 	},
+	-- }
+
+	-- gls.left[3] = {
+	-- 	FileIcon = {
+	-- 		provider = "FileIcon",
+	-- 		condition = buffer_not_empty,
+	-- 		highlight = { require("galaxyline.provider_fileinfo").get_file_icon_color, colors.bg },
+	-- 	},
+	-- }
+
 	gls.left[2] = {
-		LongFileName = {
-			provider = long_filename,
-			condition = buffer_not_empty,
-			highlight = { colors.normal, colors.bg, "bold" },
-		},
-	}
-
-	gls.left[3] = {
-		FileIcon = {
-			provider = "FileIcon",
-			condition = buffer_not_empty,
-			highlight = { require("galaxyline.provider_fileinfo").get_file_icon_color, colors.bg },
-		},
-	}
-
-	gls.left[4] = {
 		FileStatus = {
 			provider = function()
 				if string.len(file_readonly()) ~= 0 then
@@ -176,14 +176,14 @@ function M.post()
 		},
 	}
 
-	gls.left[6] = {
-		FileBarrier = {
-			provider = function()
-				return " "
-			end,
-			highlight = { colors.bg, "none" },
-		},
-	}
+	-- gls.left[6] = {
+	-- 	FileBarrier = {
+	-- 		provider = function()
+	-- 			return " "
+	-- 		end,
+	-- 		highlight = { colors.bg, "yellow" },
+	-- 	},
+	-- }
 
 	local checkwidth = function()
 		local squeeze_width = vim.fn.winwidth(0) / 2
@@ -200,17 +200,17 @@ function M.post()
 				if branch == nil then
 					return ""
 				end
-				return "  " .. branch
+				return "   " .. branch .. ' '
 			end,
-			condition = checkwidth,
-			highlight = { colors.normal, "none", "bold" },
+			-- condition = checkwidth,
+			highlight = { colors.normal, "none" },
 		},
 	}
 
 	gls.left[8] = {
 		DiffAdd = {
 			provider = "DiffAdd",
-			condition = checkwidth,
+			-- condition = checkwidth,
 			icon = " ",
 			highlight = { colors.green, "none", "bold" },
 		},
@@ -218,7 +218,7 @@ function M.post()
 	gls.left[9] = {
 		DiffModified = {
 			provider = "DiffModified",
-			condition = checkwidth,
+			-- condition = checkwidth,
 			icon = " ",
 			highlight = { colors.yellow, "none", "bold" },
 		},
@@ -226,7 +226,7 @@ function M.post()
 	gls.left[10] = {
 		DiffRemove = {
 			provider = "DiffRemove",
-			condition = checkwidth,
+			-- condition = checkwidth,
 			icon = " ",
 			highlight = { colors.red, "none", "bold" },
 		},
@@ -299,14 +299,14 @@ function M.post()
 		-- 		highlight = { colors.cyan, "none" },
 		-- 	},
 		-- },
-		{
-			RightBarrier = {
-				provider = function()
-					return ""
-				end,
-				highlight = { colors.bg, "none" },
-			},
-		},
+		-- {
+		-- 	RightBarrier = {
+		-- 		provider = function()
+		-- 			return ""
+		-- 		end,
+		-- 		highlight = { colors.bg, "none" },
+		-- 	},
+		-- },
 		{
 			DiagnosticError = {
 				provider = "DiagnosticError",
