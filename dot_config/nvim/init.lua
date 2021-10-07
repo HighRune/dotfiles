@@ -32,6 +32,7 @@ cmd[[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]]
 cmd[[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]]
 cmd[[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]]
 cmd[[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]]
+cmd[[autocmd ColorScheme * highlight NormalFloat guibg=NONE]]
 
 -- cmd[[augroup ScrollbarInit
 --   autocmd!
