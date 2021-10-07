@@ -146,6 +146,34 @@ function M.post()
       }
     },
     {
+      DiagnosticError = {
+        provider = "DiagnosticError",
+        icon = "   ",
+        highlight = { colors.red, colors.bg },
+      },
+    },
+    {
+      DiagnosticWarn = {
+        provider = "DiagnosticWarn",
+        icon = "   ",
+        highlight = { colors.yellow, colors.bg },
+      },
+    },
+    {
+      DiagnosticInfo = {
+        provider = "DiagnosticInfo",
+        icon = "   ",
+        highlight = { colors.green, colors.bg },
+      },
+    },
+    {
+      DiagnosticHint = {
+        provider = "DiagnosticHint",
+        icon = "   ",
+        highlight = { colors.cyan, colors.bg },
+      },
+    },
+    {
       CustomGitBranch = {
         provider = function()
           local branch = vcs.get_git_branch()
@@ -157,34 +185,6 @@ function M.post()
         -- condition = checkwidth,
         highlight = { colors.normal, "none" },
       }
-    },
-    {
-      DiagnosticError = {
-        provider = "DiagnosticError",
-        icon = "   ",
-        highlight = { colors.red, 'none' },
-      },
-    },
-    {
-      DiagnosticWarn = {
-        provider = "DiagnosticWarn",
-        icon = "   ",
-        highlight = { colors.yellow, 'none' },
-      },
-    },
-    {
-      DiagnosticInfo = {
-        provider = "DiagnosticInfo",
-        icon = "   ",
-        highlight = { colors.green, 'none' },
-      },
-    },
-    {
-      DiagnosticHint = {
-        provider = "DiagnosticHint",
-        icon = "   ",
-        highlight = { colors.cyan, 'none' },
-      },
     },
     -- {
     --   FileBarrier = {
@@ -207,6 +207,8 @@ function M.post()
     -- },
     {
       DiffAdd = {
+        separator = " ",
+        separator_highlight = { colors.fg, colors.bg, "bold" },
         provider = "DiffAdd",
         -- condition = checkwidth,
         icon = " ",
@@ -240,6 +242,7 @@ function M.post()
             end
           end
         end,
+        separator = " ",
         separator_highlight = { colors.fg, colors.bg, "bold" },
         highlight = { colors.cyan, colors.bg },
       },
