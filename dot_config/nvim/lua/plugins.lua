@@ -17,7 +17,7 @@ return require('packer').startup(function()
   use 'tommcdo/vim-lion'
   use 'nacro90/numb.nvim'
   use 'p00f/nvim-ts-rainbow'
-  use 'ray-x/lsp_signature.nvim'
+  -- use 'ray-x/lsp_signature.nvim'
   -- use 'Xuyuanp/scrollbar.nvim'
   -- use 'karb94/neoscroll.nvim'
   -- use {'glepnir/galaxyline.nvim', config = "require('config.galaxyline').post()"}
