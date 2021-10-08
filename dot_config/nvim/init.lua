@@ -39,6 +39,8 @@ cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-pat
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
 cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
 cmd("let g:neoformat_enabled_lua = ['stylua']")
+cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
+cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
 
 -- cmd[[augroup ScrollbarInit
 --   autocmd!
