@@ -224,6 +224,14 @@ function M.post()
       }
     },
     {
+    	RightBarrier = {
+    		provider = function()
+    			return ' '
+    		end,
+    		highlight = { colors.bg, "none" },
+    	},
+    },
+    {
       FileStatus = {
         provider = function()
           if string.len(file_readonly()) ~= 0 then
@@ -236,23 +244,15 @@ function M.post()
         end,
         -- separator = " ",
         -- separator_highlight = { colors.fg, colors.bg, "bold" },
-        highlight = { colors.cyan, 'none' },
+        highlight = { colors.cyan, colors.bg },
       },
-    },
-    {
-    	RightBarrier = {
-    		provider = function()
-    			return ' '
-    		end,
-    		highlight = { colors.bg, "none" },
-    	},
     },
     {
       FileSize = {
         provider = "FileSize",
         condition = buffer_not_empty,
-        -- separator = " ",
-        -- separator_highlight = { colors.fg, colors.bg, "bold" },
+        separator = " ",
+        separator_highlight = { colors.fg, colors.bg, "bold" },
         highlight = { colors.fg, colors.bg, "bold" },
       },
     },
