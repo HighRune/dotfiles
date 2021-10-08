@@ -139,7 +139,7 @@ function M.post()
           -- auto change color according the vim mode
           local vim_mode = vim.fn.mode()
           vim.api.nvim_command("hi GalaxyViMode guifg=" .. colors.bg .. " guibg=" .. mode_color[vim_mode])
-          return '  ' .. mode_alias[vim_mode] .. ' '
+          return '  ' .. mode_alias[vim_mode] .. ' ' -- .. " "
         end,
         highlight = { colors.red, colors.bg, "bold" },
         event = "InsertEnter",
@@ -223,14 +223,14 @@ function M.post()
         highlight = { colors.red, 'none', "bold" },
       }
     },
-    {
-    	RightBarrier = {
-    		provider = function()
-    			return ' '
-    		end,
-    		highlight = { colors.bg, "none" },
-    	},
-    },
+    -- {
+    -- 	RightBarrier = {
+    -- 		provider = function()
+    -- 			return ' '
+    -- 		end,
+    -- 		highlight = { colors.bg, "none" },
+    -- 	},
+    -- },
     {
       FileStatus = {
         provider = function()
