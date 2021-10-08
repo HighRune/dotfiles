@@ -149,28 +149,28 @@ function M.post()
       DiagnosticError = {
         provider = "DiagnosticError",
         icon = "   ",
-        highlight = { colors.red, colors.bg },
+        highlight = { colors.red, 'none' },
       },
     },
     {
       DiagnosticWarn = {
         provider = "DiagnosticWarn",
         icon = "   ",
-        highlight = { colors.yellow, colors.bg },
+        highlight = { colors.yellow, 'none' },
       },
     },
     {
       DiagnosticInfo = {
         provider = "DiagnosticInfo",
         icon = "   ",
-        highlight = { colors.green, colors.bg },
+        highlight = { colors.green, 'none' },
       },
     },
     {
       DiagnosticHint = {
         provider = "DiagnosticHint",
         icon = "   ",
-        highlight = { colors.cyan, colors.bg },
+        highlight = { colors.cyan, 'none' },
       },
     },
     {
@@ -197,22 +197,14 @@ function M.post()
   }
 
   gls.right = {
-    -- {
-    -- 	RightBarrier = {
-    -- 		provider = function()
-    -- 			return ""
-    -- 		end,
-    -- 		highlight = { colors.bg, "none" },
-    -- 	},
-    -- },
     {
       DiffAdd = {
         separator = " ",
-        separator_highlight = { colors.fg, colors.bg, "bold" },
+        separator_highlight = { colors.fg, 'none', "bold" },
         provider = "DiffAdd",
         -- condition = checkwidth,
         icon = " ",
-        highlight = { colors.green, colors.bg, "bold" },
+        highlight = { colors.green, 'none', "bold" },
       },
     },
     {
@@ -220,7 +212,7 @@ function M.post()
         provider = "DiffModified",
         -- condition = checkwidth,
         icon = " ",
-        highlight = { colors.yellow, colors.bg, "bold" },
+        highlight = { colors.yellow, 'none', "bold" },
       },
     },
     {
@@ -228,7 +220,7 @@ function M.post()
         provider = "DiffRemove",
         -- condition = checkwidth,
         icon = " ",
-        highlight = { colors.red, colors.bg, "bold" },
+        highlight = { colors.red, 'none', "bold" },
       }
     },
     {
@@ -242,17 +234,25 @@ function M.post()
             end
           end
         end,
-        separator = " ",
-        separator_highlight = { colors.fg, colors.bg, "bold" },
-        highlight = { colors.cyan, colors.bg },
+        -- separator = " ",
+        -- separator_highlight = { colors.fg, colors.bg, "bold" },
+        highlight = { colors.cyan, 'none' },
       },
+    },
+    {
+    	RightBarrier = {
+    		provider = function()
+    			return ' '
+    		end,
+    		highlight = { colors.bg, "none" },
+    	},
     },
     {
       FileSize = {
         provider = "FileSize",
         condition = buffer_not_empty,
-        separator = " ",
-        separator_highlight = { colors.fg, colors.bg, "bold" },
+        -- separator = " ",
+        -- separator_highlight = { colors.fg, colors.bg, "bold" },
         highlight = { colors.fg, colors.bg, "bold" },
       },
     },
