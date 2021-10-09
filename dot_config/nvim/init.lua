@@ -47,8 +47,6 @@ o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
 cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
 
--------------------- Mappings
-
 api.nvim_set_keymap("n", "S-k", ":set paste<CR>m`o<Esc>``:set nopaste<cr>", {
 	noremap = true,
 	silent = true,
@@ -58,12 +56,21 @@ api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", {
 	silent = true,
 })
 
+-------------------- Plugins
+
+require("plugins")
+
 -------------------- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
 
 -------------------- wbthomason/packer.nvim
-cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
+-- cmd([[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+--   augroup end
+-- ]])
 
 -------------------- sbdchd/neoformat
 cmd("let g:neoformat_enabled_lua = ['stylua']")
@@ -80,9 +87,7 @@ api.nvim_set_keymap("n", "<leader>f", ":Neoformat eslint_d<CR>", {
 	silent = true,
 })
 
-require("plugins")
-
--- Telescope
+-------------------- nvim-telescope/telescope.nvim
 require("telescope").setup({
 	defaults = {
 		layout_strategy = "vertical",
@@ -112,11 +117,11 @@ api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", {
 	silent = true,
 })
 
--- Treesitter
+-- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({
-	context_commentstring = {
+	context_commentstring = { -- JoosepAlviste/nvim-ts-context-commentstring
 		enable = true,
-	}, -- JoosepAlviste/nvim-ts-context-commentstring
+	},
 	rainbow = { -- p00f/nvim-ts-rainbow
 		enable = true,
 		extended_mode = true,
@@ -142,7 +147,7 @@ require("nvim-treesitter.configs").setup({
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 
--- Barbar
+-------------------- romgrk/barbar.nvim
 api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", {
 	noremap = true,
 	silent = true,
@@ -156,8 +161,7 @@ api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", {
 	silent = true,
 })
 
--- lspinstall
-
+-------------------- kabouzeid/nvim-lspinstall
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -166,10 +170,7 @@ local on_attach = function(client, bufnr)
 	end
 
 	-- Mappings.
-	local opts = {
-		noremap = true,
-		silent = true,
-	}
+	local opts = { noremap = true, silent = true }
 
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
