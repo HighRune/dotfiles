@@ -4,14 +4,17 @@ local fn = vim.fn -- to call Vim functions e.g. fn.bufnr()
 local g = vim.g -- a table to access global variables
 local o = vim.o -- to set options
 
--- ____ GENERAL
+-- ____ STYLE
 
-cmd([[autocmd ColorScheme * highlight NormalFloat guibg=none]])
-cmd([[autocmd ColorScheme * highlight FloatBorder guibg=none]])
+cmd("autocmd ColorScheme * highlight NormalFloat guibg=none")
+cmd("autocmd ColorScheme * highlight FloatBorder guibg=none")
 g.tokyonight_style = "night"
 g.tokyonight_transparent = true
 g.tokyonight_transparent_sidebar = true
-cmd([[colorscheme tokyonight]])
+cmd("colorscheme tokyonight")
+
+-- ____ GENERAL
+
 -- o.scroll=5
 g.mapleader = " "
 o.mouse = "a" -- Enables mouse support
@@ -23,6 +26,7 @@ o.foldenable = false -- All folds are open
 o.number = true -- Print the line number in front of each line
 o.relativenumber = true -- Show relative line numbers
 o.virtualedit = "all"
+--
 o.completeopt = "menuone,noinsert" -- Options for Insert mode completion
 o.clipboard = "unnamedplus" -- Have the clipboard be the same as my regular clipboard
 o.updatetime = 100 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience
@@ -38,15 +42,6 @@ cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
 cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
-cmd([[
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
-]])
-cmd("let g:neoformat_enabled_lua = ['stylua']")
-cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
-cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
 
 -- cmd[[augroup ScrollbarInit
 --   autocmd!
@@ -79,6 +74,15 @@ o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 
 -- sbdchd/neoformat
+cmd("let g:neoformat_enabled_lua = ['stylua']")
+cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
+cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
+cmd([[
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+]])
 api.nvim_set_keymap("n", "<leader>f", ":Neoformat eslint_d<CR>", {
 	noremap = true,
 	silent = true,
