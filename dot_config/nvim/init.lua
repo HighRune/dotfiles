@@ -45,7 +45,6 @@ o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing e
 o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 
-api.nvim_set_keymap("n", "S-k", ":set paste<CR>m`o<Esc>``:set nopaste<cr>", opts)
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
 api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
@@ -131,7 +130,7 @@ local on_attach = function(client, bufnr)
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	-- buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	buf_set_keymap("n", "", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	buf_set_keymap("n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
@@ -237,9 +236,15 @@ api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 
 -------------------- AckslD/nvim-revJ.lua
 require("revj").setup({
+	brackets = { first = "([{<", last = ")]}>" }, -- brackets to consider surrounding arguments
+	new_line_before_last_bracket = true, -- add new line between last argument and last bracket (only if no last seperator)
+	add_seperator_for_last_parameter = true, -- if a seperator should be added if not present after last parameter
+	enable_default_keymaps = false, -- enables default keymaps without having to set them below
 	keymaps = {
-		operator = "K", -- for operator (+motion)
-		line = "K", -- for formatting current line
-		visual = "K", -- for formatting visual selection
+		operator = "S-k", -- for operator (+motion)
+		line = "S-k", -- for formatting current line
+		visual = "S-k", -- for formatting visual selection
 	},
+	parameter_mapping = ",", -- specifies what text object selects an arguments (ie a, and i, by default)
+	-- if you're using `vim-textobj-parameter` you can also set this to `vim.g.vim_textobj_parameter_mapping`
 })
