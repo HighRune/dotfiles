@@ -3,7 +3,7 @@ return require("packer").startup(function(use)
 	use("nvim-lua/plenary.nvim")
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		branch = "0.5-compat",
+		-- branch = "0.5-compat",
 		run = ":TSUpdate",
 	})
 	use({
