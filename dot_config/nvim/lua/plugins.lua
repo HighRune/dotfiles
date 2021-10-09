@@ -6,13 +6,6 @@ return require("packer").startup(function(use)
 		-- branch = "0.5-compat",
 		run = ":TSUpdate",
 	})
-	use({
-		"AckslD/nvim-revJ.lua",
-		requires = {
-			"kana/vim-textobj-user",
-			"sgur/vim-textobj-parameter",
-		},
-	})
 	use("nvim-treesitter/playground")
 	use("kyazdani42/nvim-web-devicons")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
