@@ -44,6 +44,9 @@ o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing e
 o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 
+-- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
+cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
+
 -------------------- Mappings
 
 api.nvim_set_keymap("n", "S-k", ":set paste<CR>m`o<Esc>``:set nopaste<cr>", {
@@ -54,9 +57,6 @@ api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", {
 	noremap = true,
 	silent = true,
 })
-
--- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
-cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
 
 -------------------- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
