@@ -3,6 +3,7 @@ local cmd = vim.cmd -- to execute Vim commands e.g. cmd('pwd')
 local fn = vim.fn -- to call Vim functions e.g. fn.bufnr()
 local g = vim.g -- a table to access global variables
 local o = vim.o -- to set options
+local opt = vim.opt
 local opts = { noremap = true, silent = true }
 
 -------------------- STYLE
@@ -54,8 +55,6 @@ cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
 -------------------- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
-cmd([[nnoremap <s-h> :SidewaysLeft<cr>]])
-cmd([[nnoremap <s-l> :SidewaysRight<cr>]])
 
 -------------------- PLUGINS
 
@@ -205,8 +204,8 @@ augroup END
 api.nvim_set_keymap("n", "<leader>f", ":Neoformat eslint_d<CR>", opts)
 
 -------------------- lukas-reineke/indent-blankline.nvim
-vim.opt.list = true
-vim.opt.listchars:append("eol:↴")
+opt.list = true
+opt.listchars:append("eol:↴")
 require("indent_blankline").setup({
 	show_end_of_line = true,
 })
@@ -235,3 +234,7 @@ api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
 api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
 api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
+
+-------------------- AndrewRadev/sideways.vim
+api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
+api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
