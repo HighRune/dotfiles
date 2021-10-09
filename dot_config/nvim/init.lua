@@ -4,7 +4,7 @@ local fn = vim.fn -- to call Vim functions e.g. fn.bufnr()
 local g = vim.g -- a table to access global variables
 local o = vim.o -- to set options
 
--- ____ STYLE
+-------------------- Style
 
 cmd("autocmd ColorScheme * highlight NormalFloat guibg=none")
 cmd("autocmd ColorScheme * highlight FloatBorder guibg=none")
@@ -12,7 +12,10 @@ g.tokyonight_style = "night"
 g.tokyonight_transparent = true
 g.tokyonight_transparent_sidebar = true
 cmd("colorscheme tokyonight")
--- ____ GENERAL
+-- cmd [[color haslo]]
+-- o.colorscheme darkspace
+
+-------------------- General
 
 -- o.scroll=5
 g.mapleader = " "
@@ -24,46 +27,16 @@ o.foldenable = false -- All folds are open
 o.number = true -- Print the line number in front of each line
 o.relativenumber = true -- Show relative line numbers
 o.virtualedit = "all"
---
 o.completeopt = "menuone,noinsert" -- Options for Insert mode completion
 o.clipboard = "unnamedplus" -- Have the clipboard be the same as my regular clipboard
 o.updatetime = 100 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience
 o.hidden = true -- Buffer becomes hidden when it is abandoned
 o.swapfile = false
-api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", {
-	noremap = true,
-	silent = true,
-})
-
--- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
-cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
-cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
-cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
-cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
-
--- cmd[[augroup ScrollbarInit
---   autocmd!
---   autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
---   autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
---   autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
--- augroup end]]
--- cmd[[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]]
-
--- ____ UI
-
 o.termguicolors = true -- Enables 24-bit RGB color in the Terminal UI
--- cmd [[color haslo]]
--- o.colorscheme darkspace
 o.showmode = false -- Disable message on the last line (Insert, Replace or Visual mode)
 -- o.showtabline=2  -- Always display the line with tab page labels
-
--- ____ SEARCH
-
 o.ignorecase = true -- Ignore case in search patterns
 o.smartcase = true -- Override the 'ignorecase' option if the search pattern contains upper case characters
-
--- ____ INDENTATION
-
 o.expandtab = true -- Use the appropriate number of spaces to insert a <Tab>
 o.smartindent = true -- Do smart autoindenting when starting a new line
 o.copyindent = true -- Copy the structure of the existing lines indent when autoindenting a new line
@@ -71,7 +44,28 @@ o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing e
 o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 
--- sbdchd/neoformat
+-------------------- Mappings
+
+api.nvim_set_keymap("n", "S-k", ":set paste<CR>m`o<Esc>``:set nopaste<cr>", {
+	noremap = true,
+	silent = true,
+})
+api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", {
+	noremap = true,
+	silent = true,
+})
+
+-- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
+cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
+
+-------------------- twpayne/chezmoi
+cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
+cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
+
+-------------------- wbthomason/packer.nvim
+cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
+
+-------------------- sbdchd/neoformat
 cmd("let g:neoformat_enabled_lua = ['stylua']")
 cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
 cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
