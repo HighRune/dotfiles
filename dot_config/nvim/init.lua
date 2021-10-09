@@ -57,182 +57,182 @@ cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatshee
 
 -------------------- PLUGINS
 
--- require("plugins")
+require("plugins")
 
--- require("gitsigns").setup() -- lewis6991/gitsigns.nvim
--- require("colorizer").setup() -- norcalli/nvim-colorizer.lua
--- require("numb").setup() -- nacro90/numb.nvim
+require("gitsigns").setup() -- lewis6991/gitsigns.nvim
+require("colorizer").setup() -- norcalli/nvim-colorizer.lua
+require("numb").setup() -- nacro90/numb.nvim
 
--- -------------------- wbthomason/packer.nvim
--- cmd([[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
---   augroup end
--- ]])
+-------------------- wbthomason/packer.nvim
+cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
 
--- -------------------- nvim-treesitter/nvim-treesitter
--- require("nvim-treesitter.configs").setup({
--- 	context_commentstring = { -- JoosepAlviste/nvim-ts-context-commentstring
--- 		enable = true,
--- 	},
--- 	rainbow = { -- p00f/nvim-ts-rainbow
--- 		enable = true,
--- 		extended_mode = true,
--- 		max_file_lines = nil,
--- 	},
--- 	ensure_installed = "maintained",
--- 	highlight = {
--- 		enable = true,
--- 	},
--- 	indent = {
--- 		enable = true,
--- 	},
--- 	incremental_selection = {
--- 		enable = true,
--- 		keymaps = {
--- 			init_selection = "gnn",
--- 			node_incremental = "grn",
--- 			scope_incremental = "grc",
--- 			node_decremental = "grm",
--- 		},
--- 	},
--- 	playground = { -- nvim-treesitter/playground
--- 		enable = true,
--- 		disable = {},
--- 		updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
--- 		persist_queries = false, -- Whether the query persists across vim sessions
--- 		keybindings = {
--- 			toggle_query_editor = "o",
--- 			toggle_hl_groups = "i",
--- 			toggle_injected_languages = "t",
--- 			toggle_anonymous_nodes = "a",
--- 			toggle_language_display = "I",
--- 			focus_language = "f",
--- 			unfocus_language = "F",
--- 			update = "R",
--- 			goto_node = "<cr>",
--- 			show_help = "?",
--- 		},
--- 	},
--- })
--- o.foldmethod = "expr"
--- o.foldexpr = "nvim_treesitter#foldexpr()"
+-------------------- nvim-treesitter/nvim-treesitter
+require("nvim-treesitter.configs").setup({
+	context_commentstring = { -- JoosepAlviste/nvim-ts-context-commentstring
+		enable = true,
+	},
+	rainbow = { -- p00f/nvim-ts-rainbow
+		enable = true,
+		extended_mode = true,
+		max_file_lines = nil,
+	},
+	ensure_installed = "maintained",
+	highlight = {
+		enable = true,
+	},
+	indent = {
+		enable = true,
+	},
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "gnn",
+			node_incremental = "grn",
+			scope_incremental = "grc",
+			node_decremental = "grm",
+		},
+	},
+	playground = { -- nvim-treesitter/playground
+		enable = true,
+		disable = {},
+		updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+		persist_queries = false, -- Whether the query persists across vim sessions
+		keybindings = {
+			toggle_query_editor = "o",
+			toggle_hl_groups = "i",
+			toggle_injected_languages = "t",
+			toggle_anonymous_nodes = "a",
+			toggle_language_display = "I",
+			focus_language = "f",
+			unfocus_language = "F",
+			update = "R",
+			goto_node = "<cr>",
+			show_help = "?",
+		},
+	},
+})
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
 
--- -------------------- neovim/nvim-lspconfig
--- -- Use an on_attach function to only map the following keys
--- -- after the language server attaches to the current buffer
--- local on_attach = function(client, bufnr)
--- 	local function buf_set_keymap(...)
--- 		vim.api.nvim_buf_set_keymap(bufnr, ...)
--- 	end
+-------------------- neovim/nvim-lspconfig
+-- Use an on_attach function to only map the following keys
+-- after the language server attaches to the current buffer
+local on_attach = function(client, bufnr)
+	local function buf_set_keymap(...)
+		vim.api.nvim_buf_set_keymap(bufnr, ...)
+	end
 
--- 	-- See `:help vim.lsp.*` for documentation on any of the below functions
--- 	buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
--- 	buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
--- 	-- buf_set_keymap("n", "k", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
--- 	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
--- 	buf_set_keymap("n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
--- 	buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
--- 	buf_set_keymap("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
--- 	buf_set_keymap("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
--- 	buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
--- 	buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
--- 	buf_set_keymap("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
--- 	buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
--- 	buf_set_keymap("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
--- 	buf_set_keymap("n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
--- 	buf_set_keymap("n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
--- 	buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
--- 	buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
--- end
+	-- See `:help vim.lsp.*` for documentation on any of the below functions
+	buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+	buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+	-- buf_set_keymap("n", "k", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+	buf_set_keymap("n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+	buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
+	buf_set_keymap("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
+	buf_set_keymap("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
+	buf_set_keymap("n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
+	buf_set_keymap("n", "<space>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+	buf_set_keymap("n", "<space>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+	buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+	buf_set_keymap("n", "<space>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
+	buf_set_keymap("n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
+	buf_set_keymap("n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
+	buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
+	buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+end
 
--- -------------------- kabouzeid/nvim-lspinstall
--- local function setup_servers()
--- 	require("lspinstall").setup()
--- 	local servers = require("lspinstall").installed_servers()
--- 	for _, server in pairs(servers) do
--- 		require("lspconfig")[server].setup({
--- 			on_attach = on_attach,
--- 			flags = {
--- 				debounce_text_changes = 150,
--- 			},
--- 		})
--- 	end
--- end
+-------------------- kabouzeid/nvim-lspinstall
+local function setup_servers()
+	require("lspinstall").setup()
+	local servers = require("lspinstall").installed_servers()
+	for _, server in pairs(servers) do
+		require("lspconfig")[server].setup({
+			on_attach = on_attach,
+			flags = {
+				debounce_text_changes = 150,
+			},
+		})
+	end
+end
 
--- setup_servers()
+setup_servers()
 
--- -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
--- require("lspinstall").post_install_hook = function()
--- 	setup_servers() -- reload installed servers
--- 	cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
--- end
+-- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
+require("lspinstall").post_install_hook = function()
+	setup_servers() -- reload installed servers
+	cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
+end
 
--- -------------------- ray-x/lsp_signature.nvim
--- require("lsp_signature").setup({
--- 	bind = true, -- This is mandatory, otherwise border config won't get registered.
--- 	handler_opts = {
--- 		border = "single",
--- 	},
--- 	doc_lines = 0,
--- 	hint_prefix = "",
--- 	tranpancy = 100,
--- 	floating_window = true,
--- 	max_width = 80,
--- 	always_trigger = true,
--- 	max_height = 15,
--- 	hint_enable = false,
--- })
+-------------------- ray-x/lsp_signature.nvim
+require("lsp_signature").setup({
+	bind = true, -- This is mandatory, otherwise border config won't get registered.
+	handler_opts = {
+		border = "single",
+	},
+	doc_lines = 0,
+	hint_prefix = "",
+	tranpancy = 100,
+	floating_window = true,
+	max_width = 80,
+	always_trigger = true,
+	max_height = 15,
+	hint_enable = false,
+})
 
--- -------------------- ms-jpq/coq_nvim
--- g.coq_settings = {
--- 	auto_start = "shut-up",
--- }
+-------------------- ms-jpq/coq_nvim
+g.coq_settings = {
+	auto_start = "shut-up",
+}
 
--- -------------------- sbdchd/neoformat
--- cmd("let g:neoformat_enabled_lua = ['stylua']")
--- cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
--- cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
--- cmd([[
--- augroup fmt
---   autocmd!
---   autocmd BufWritePre * undojoin | Neoformat
--- augroup END
--- ]])
--- api.nvim_set_keymap("n", "<leader>f", ":Neoformat eslint_d<CR>", opts)
+-------------------- sbdchd/neoformat
+cmd("let g:neoformat_enabled_lua = ['stylua']")
+cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
+cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
+cmd([[
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+]])
+api.nvim_set_keymap("n", "<leader>f", ":Neoformat eslint_d<CR>", opts)
 
--- -------------------- lukas-reineke/indent-blankline.nvim
--- vim.opt.list = true
--- vim.opt.listchars:append("eol:↴")
--- require("indent_blankline").setup({
--- 	show_end_of_line = true,
--- })
+-------------------- lukas-reineke/indent-blankline.nvim
+vim.opt.list = true
+vim.opt.listchars:append("eol:↴")
+require("indent_blankline").setup({
+	show_end_of_line = true,
+})
 
--- -------------------- nvim-telescope/telescope.nvim
--- require("telescope").setup({
--- 	defaults = {
--- 		layout_strategy = "vertical",
--- 		layout_config = {
--- 			preview_cutoff = 0,
--- 			height = 0.999,
--- 			width = 0.999,
--- 		},
--- 		mappings = {
--- 			i = {
--- 				["<esc>"] = require("telescope.actions").close,
--- 			},
--- 		},
--- 	},
--- })
--- api.nvim_set_keymap("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
--- api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
--- api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+-------------------- nvim-telescope/telescope.nvim
+require("telescope").setup({
+	defaults = {
+		layout_strategy = "vertical",
+		layout_config = {
+			preview_cutoff = 0,
+			height = 0.999,
+			width = 0.999,
+		},
+		mappings = {
+			i = {
+				["<esc>"] = require("telescope.actions").close,
+			},
+		},
+	},
+})
+api.nvim_set_keymap("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
+api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
+api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
--- -------------------- romgrk/barbar.nvim
--- api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
--- api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
--- api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
+-------------------- romgrk/barbar.nvim
+api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
+api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
+api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 
 -------------------- AckslD/nvim-revJ.lua
 require("revj").setup({
