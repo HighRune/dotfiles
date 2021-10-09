@@ -3,8 +3,9 @@ local cmd = vim.cmd -- to execute Vim commands e.g. cmd('pwd')
 local fn = vim.fn -- to call Vim functions e.g. fn.bufnr()
 local g = vim.g -- a table to access global variables
 local o = vim.o -- to set options
+local opts = { noremap = true, silent = true }
 
--------------------- Style
+-------------------- STYLE
 
 cmd("autocmd ColorScheme * highlight NormalFloat guibg=none")
 cmd("autocmd ColorScheme * highlight FloatBorder guibg=none")
@@ -15,7 +16,7 @@ cmd("colorscheme tokyonight")
 -- cmd [[color haslo]]
 -- o.colorscheme darkspace
 
--------------------- General
+-------------------- GENERAL
 
 -- o.scroll=5
 g.mapleader = " "
@@ -44,25 +45,24 @@ o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing e
 o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 
+api.nvim_set_keymap("n", "S-k", ":set paste<CR>m`o<Esc>``:set nopaste<cr>", opts)
+api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
+api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
+api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
+
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
 cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
-
-api.nvim_set_keymap("n", "S-k", ":set paste<CR>m`o<Esc>``:set nopaste<cr>", {
-	noremap = true,
-	silent = true,
-})
-api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", {
-	noremap = true,
-	silent = true,
-})
-
--------------------- Plugins
-
-require("plugins")
-
 -------------------- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
+
+-------------------- PLUGINS
+
+require("plugins")
+
+require("gitsigns").setup() -- lewis6991/gitsigns.nvim
+require("colorizer").setup() -- norcalli/nvim-colorizer.lua
+require("numb").setup() -- nacro90/numb.nvim
 
 -------------------- wbthomason/packer.nvim
 -- cmd([[
@@ -72,52 +72,7 @@ cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatshee
 --   augroup end
 -- ]])
 
--------------------- sbdchd/neoformat
-cmd("let g:neoformat_enabled_lua = ['stylua']")
-cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
-cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
-cmd([[
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
-]])
-api.nvim_set_keymap("n", "<leader>f", ":Neoformat eslint_d<CR>", {
-	noremap = true,
-	silent = true,
-})
-
--------------------- nvim-telescope/telescope.nvim
-require("telescope").setup({
-	defaults = {
-		layout_strategy = "vertical",
-		layout_config = {
-			preview_cutoff = 0,
-			height = 0.999,
-			width = 0.999,
-		},
-		mappings = {
-			i = {
-				["<esc>"] = require("telescope.actions").close,
-			},
-		},
-	},
-})
-
-api.nvim_set_keymap("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", {
-	noremap = true,
-	silent = true,
-})
-api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", {
-	noremap = true,
-	silent = true,
-})
-api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", {
-	noremap = true,
-	silent = true,
-})
-
--- nvim-treesitter/nvim-treesitter
+-------------------- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({
 	context_commentstring = { -- JoosepAlviste/nvim-ts-context-commentstring
 		enable = true,
@@ -143,34 +98,35 @@ require("nvim-treesitter.configs").setup({
 			node_decremental = "grm",
 		},
 	},
+	playground = { -- nvim-treesitter/playground
+		enable = true,
+		disable = {},
+		updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+		persist_queries = false, -- Whether the query persists across vim sessions
+		keybindings = {
+			toggle_query_editor = "o",
+			toggle_hl_groups = "i",
+			toggle_injected_languages = "t",
+			toggle_anonymous_nodes = "a",
+			toggle_language_display = "I",
+			focus_language = "f",
+			unfocus_language = "F",
+			update = "R",
+			goto_node = "<cr>",
+			show_help = "?",
+		},
+	},
 })
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 
--------------------- romgrk/barbar.nvim
-api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", {
-	noremap = true,
-	silent = true,
-})
-api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", {
-	noremap = true,
-	silent = true,
-})
-api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", {
-	noremap = true,
-	silent = true,
-})
-
--------------------- kabouzeid/nvim-lspinstall
+-------------------- neovim/nvim-lspconfig
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
 	local function buf_set_keymap(...)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
 	end
-
-	-- Mappings.
-	local opts = { noremap = true, silent = true }
 
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
@@ -192,6 +148,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
+-------------------- kabouzeid/nvim-lspinstall
 local function setup_servers()
 	require("lspinstall").setup()
 	local servers = require("lspinstall").installed_servers()
@@ -213,11 +170,7 @@ require("lspinstall").post_install_hook = function()
 	cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end
 
-g.coq_settings = {
-	auto_start = "shut-up",
-}
-
--- ray-x/lsp_signature.nvim
+-------------------- ray-x/lsp_signature.nvim
 require("lsp_signature").setup({
 	bind = true, -- This is mandatory, otherwise border config won't get registered.
 	handler_opts = {
@@ -233,51 +186,51 @@ require("lsp_signature").setup({
 	hint_enable = false,
 })
 
-require("gitsigns").setup()
-require("colorizer").setup()
+-------------------- ms-jpq/coq_nvim
+g.coq_settings = {
+	auto_start = "shut-up",
+}
 
-require("nvim-treesitter.configs").setup({
-	playground = {
-		enable = true,
-		disable = {},
-		updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-		persist_queries = false, -- Whether the query persists across vim sessions
-		keybindings = {
-			toggle_query_editor = "o",
-			toggle_hl_groups = "i",
-			toggle_injected_languages = "t",
-			toggle_anonymous_nodes = "a",
-			toggle_language_display = "I",
-			focus_language = "f",
-			unfocus_language = "F",
-			update = "R",
-			goto_node = "<cr>",
-			show_help = "?",
-		},
-	},
-})
+-------------------- sbdchd/neoformat
+cmd("let g:neoformat_enabled_lua = ['stylua']")
+cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
+cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
+cmd([[
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+]])
+api.nvim_set_keymap("n", "<leader>f", ":Neoformat eslint_d<CR>", opts)
 
--- nacro90/numb.nvim
-require("numb").setup()
-
-api.nvim_set_keymap("n", "<PageUp>", "6k", {
-	noremap = true,
-	silent = true,
-})
-api.nvim_set_keymap("n", "<PageDown>", "6j", {
-	noremap = true,
-	silent = true,
-})
-
--- lukas-reineke/indent-blankline.nvim
+-------------------- lukas-reineke/indent-blankline.nvim
 vim.opt.list = true
 vim.opt.listchars:append("eol:↴")
 require("indent_blankline").setup({
 	show_end_of_line = true,
 })
 
--- karb94/neoscroll.nvim
--- require('neoscroll').setup()
+-------------------- nvim-telescope/telescope.nvim
+require("telescope").setup({
+	defaults = {
+		layout_strategy = "vertical",
+		layout_config = {
+			preview_cutoff = 0,
+			height = 0.999,
+			width = 0.999,
+		},
+		mappings = {
+			i = {
+				["<esc>"] = require("telescope.actions").close,
+			},
+		},
+	},
+})
+api.nvim_set_keymap("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
+api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
+api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
--- local saga = require 'lspsaga'
--- saga.init_lsp_saga()
+-------------------- romgrk/barbar.nvim
+api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
+api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
+api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
