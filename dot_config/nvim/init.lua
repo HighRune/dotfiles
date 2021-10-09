@@ -234,3 +234,13 @@ api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
 api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
 api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
+
+-------------------- AckslD/nvim-revJ.lua
+require("revj").setup({})
+require("revj").setup({
+	keymaps = {
+		operator = "K", -- for operator (+motion)
+		line = "K", -- for formatting current line
+		visual = "K", -- for formatting visual selection
+	},
+})
