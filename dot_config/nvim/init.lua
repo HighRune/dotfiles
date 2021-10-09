@@ -130,7 +130,7 @@ local on_attach = function(client, bufnr)
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	-- buf_set_keymap("n", "k", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	buf_set_keymap("n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	buf_set_keymap("n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
@@ -241,9 +241,9 @@ require("revj").setup({
 	add_seperator_for_last_parameter = true, -- if a seperator should be added if not present after last parameter
 	enable_default_keymaps = false, -- enables default keymaps without having to set them below
 	keymaps = {
-		operator = "S-k", -- for operator (+motion)
-		line = "S-k", -- for formatting current line
-		visual = "S-k", -- for formatting visual selection
+		operator = "<leader>-j", -- for operator (+motion)
+		line = "<leader>-j", -- for formatting current line
+		visual = "<leader>-j", -- for formatting visual selection
 	},
 	parameter_mapping = ",", -- specifies what text object selects an arguments (ie a, and i, by default)
 	-- if you're using `vim-textobj-parameter` you can also set this to `vim.g.vim_textobj_parameter_mapping`
