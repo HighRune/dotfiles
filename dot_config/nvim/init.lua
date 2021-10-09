@@ -65,12 +65,12 @@ require("colorizer").setup() -- norcalli/nvim-colorizer.lua
 require("numb").setup() -- nacro90/numb.nvim
 
 -------------------- wbthomason/packer.nvim
--- cmd([[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
---   augroup end
--- ]])
+cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])
 
 -------------------- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({
