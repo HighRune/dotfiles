@@ -230,6 +230,6 @@ api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -------------------- romgrk/barbar.nvim
--- api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
--- api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
+api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
+api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
 api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
