@@ -238,3 +238,7 @@ api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 -------------------- AndrewRadev/sideways.vim
 api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
+
+-------------------- AndrewRadev/splitjoin.vim
+-- api.nvim_set_keymap("n", "<s-j>", ":SplitjoinJoin<cr>", opts)
+-- api.nvim_set_keymap("n", "<s-k>", ":SplitjoinSplit<cr>", opts)
