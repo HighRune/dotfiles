@@ -15,6 +15,10 @@ cmd("colorscheme tokyonight")
 
 -- ____ GENERAL
 
+api.nvim_set_keymap("n", "<S-k>", "O<CR>", {
+	noremap = true,
+	silent = true,
+})
 -- o.scroll=5
 g.mapleader = " "
 o.mouse = "a" -- Enables mouse support
