@@ -11,20 +11,15 @@ cmd("autocmd ColorScheme * highlight FloatBorder guibg=none")
 g.tokyonight_style = "night"
 g.tokyonight_transparent = true
 g.tokyonight_transparent_sidebar = true
-cmd("colorscheme tokyonight")
-
+cmd("colorscheme tokyonight")(
 -- ____ GENERAL
 
-api.nvim_set_keymap("n", "<S-k>", "O<CR>", {
-	noremap = true,
-	silent = true,
-})
+cmd([[nnoremap <C-J> ciW<CR><Esc>:if match( @", "^\\s*$") < 0<Bar>exec "norm P-$diw+"<Bar>endif<CR>]])
 -- o.scroll=5
 g.mapleader = " "
 o.mouse = "a" -- Enables mouse support
 -- o.cursorline=true
-o.cursorcolumn = true
--- o.cursorline=true
+o.cursorcolumn = true -- o.cursorline=true
 o.scrolloff = 999 -- Minimal number of screen lines to keep above and below the cursor
 o.foldenable = false -- All folds are open
 o.number = true -- Print the line number in front of each line
@@ -186,7 +181,7 @@ local on_attach = function(client, bufnr)
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	-- buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	buf_set_keymap("n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
