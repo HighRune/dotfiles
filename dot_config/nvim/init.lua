@@ -14,7 +14,6 @@ g.tokyonight_transparent_sidebar = true
 cmd("colorscheme tokyonight")(
 -- ____ GENERAL
 
-cmd([[nnoremap <C-J> ciW<CR><Esc>:if match( @", "^\\s*$") < 0<Bar>exec "norm P-$diw+"<Bar>endif<CR>]])
 -- o.scroll=5
 g.mapleader = " "
 o.mouse = "a" -- Enables mouse support
