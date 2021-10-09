@@ -54,6 +54,8 @@ cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
 -------------------- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
+cmd([[nnoremap <s-h> :SidewaysLeft<cr>]])
+cmd([[nnoremap <s-l> :SidewaysRight<cr>]])
 
 -------------------- PLUGINS
 
