@@ -77,6 +77,9 @@ require("nvim-treesitter.configs").setup({
 	context_commentstring = { -- JoosepAlviste/nvim-ts-context-commentstring
 		enable = true,
 	},
+	autotag = {
+		enable = true,
+	},
 	rainbow = { -- p00f/nvim-ts-rainbow
 		enable = true,
 		extended_mode = true,
