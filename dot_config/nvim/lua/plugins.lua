@@ -7,6 +7,7 @@ return require("packer").startup(function(use)
 		run = ":TSUpdate",
 	})
 	use("nvim-treesitter/playground")
+	use("windwp/nvim-ts-autotag")
 	use("kyazdani42/nvim-web-devicons")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
 	use("itchyny/vim-cursorword")
