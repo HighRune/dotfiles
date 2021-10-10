@@ -243,6 +243,7 @@ api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 -- api.nvim_set_keymap("n", "<s-j>", ":SplitjoinJoin<cr>", opts)
 -- api.nvim_set_keymap("n", "<s-k>", ":SplitjoinSplit<cr>", opts)
 
+-------------------- bkad/CamelCaseMotion
 -- Map to |w|, |b| and |e| mappings: >
 cmd([[
     map <silent> w <Plug>CamelCaseMotion_w
