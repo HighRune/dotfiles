@@ -47,6 +47,7 @@ o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
+api.nvim_set_keymap("n", "<A-j>", ":aaaaaaaaa", { noremap = true, silent = false })
 api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
 api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
 
