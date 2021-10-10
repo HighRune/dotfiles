@@ -120,12 +120,15 @@ require("nvim-treesitter.configs").setup({
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 
+-------------------- lewis6991/spellsitter.nvim
+require('spellsitter').setup()
+
 -------------------- neovim/nvim-lspconfig
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
 	local function buf_set_keymap(...)
-		vim.api.nvim_buf_set_keymap(bufnr, ...)
+		api.nvim_buf_set_keymap(bufnr, ...)
 	end
 
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
