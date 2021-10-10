@@ -33,10 +33,4 @@ return require("packer").startup(function(use)
 	use("AndrewRadev/sideways.vim")
 	use("AndrewRadev/splitjoin.vim")
 	use("matze/vim-move")
-	use({
-		"lewis6991/spellsitter.nvim",
-		config = function()
-			require("spellsitter").setup()
-		end,
-	})
 end)
