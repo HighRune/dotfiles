@@ -135,7 +135,7 @@ local on_attach = function(client, bufnr)
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
 	buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 	buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	buf_set_keymap("n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	-- buf_set_keymap("n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	buf_set_keymap("n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	buf_set_keymap("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
@@ -244,8 +244,8 @@ api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- AndrewRadev/splitjoin.vim
--- api.nvim_set_keymap("n", "<s-j>", ":SplitjoinJoin<cr>", opts)
--- api.nvim_set_keymap("n", "<s-k>", ":SplitjoinSplit<cr>", opts)
+api.nvim_set_keymap("n", "<s-j>", ":SplitjoinJoin<cr>", opts)
+api.nvim_set_keymap("n", "<s-k>", ":SplitjoinSplit<cr>", opts)
 
 -------------------- bkad/CamelCaseMotion
 -- Map to |w|, |b| and |e| mappings: >
