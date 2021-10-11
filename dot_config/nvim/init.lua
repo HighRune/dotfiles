@@ -268,3 +268,22 @@ cmd([[
     omap <silent> ie <Plug>CamelCaseMotion_ie
     xmap <silent> ie <Plug>CamelCaseMotion_ie
 ]])
+
+-- terryma/vim-expand-region
+
+cmd([[
+map <s-right> <Plug>(expand_region_expand)
+map <s-left>(expand_region_shrink)
+let g:expand_region_text_objects = {
+      \ 'iw'  :0,
+      \ 'iW'  :0,
+      \ 'i"'  :0,
+      \ 'i''' :0,
+      \ 'i]'  :1,
+      \ 'ib'  :1,
+      \ 'iB'  :1,
+      \ 'il'  :0,
+      \ 'ip'  :0,
+      \ 'ie'  :0,
+      \ }
+]])
