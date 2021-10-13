@@ -49,9 +49,10 @@ o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
 api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
+api.nvim_set_keymap("n", "<c-u>", "5k", opts)
+api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
-cmd([[autocmd BufEnter * :set scroll =5]])
 -------------------- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
