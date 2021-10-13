@@ -52,9 +52,9 @@
 
 -- -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -- -- cmd([[autocmd BufEnter * :set scroll =5]])
--- -------------------- twpayne/chezmoi
--- cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
--- cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
+-------------------- twpayne/chezmoi
+cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
+cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
 
 -------------------- PLUGINS
 
