@@ -19,7 +19,7 @@ cmd("colorscheme tokyonight")
 
 -------------------- GENERAL
 
-o.scroll = 5
+-- o.scroll = 5
 g.mapleader = " "
 o.mouse = "a" -- Enables mouse support
 -- o.cursorline=true
