@@ -272,5 +272,5 @@ cmd([[
 cmd([[
 map <s-right> <Plug>(expand_region_expand)
 map <s-left> <Plug>(expand_region_shrink)
-let g:expand_region_text_objects = { 'i"':1, 'i''':1, 'i`': 1, 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'is':1, 'ip':1, 'a"':1, 'a''':1, 'a`': 1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'as':1, 'ap':1 }
+let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'is':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'as':1, 'ap':1 }
 ]])
