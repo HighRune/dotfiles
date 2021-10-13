@@ -1,10 +1,10 @@
--- local api = vim.api
--- local cmd = vim.cmd -- to execute Vim commands e.g. cmd('pwd')
--- local fn = vim.fn -- to call Vim functions e.g. fn.bufnr()
--- local g = vim.g -- a table to access global variables
--- local o = vim.o -- to set options
--- local opt = vim.opt
--- local opts = { noremap = true, silent = true }
+local api = vim.api
+local cmd = vim.cmd -- to execute Vim commands e.g. cmd('pwd')
+local fn = vim.fn -- to call Vim functions e.g. fn.bufnr()
+local g = vim.g -- a table to access global variables
+local o = vim.o -- to set options
+local opt = vim.opt
+local opts = { noremap = true, silent = true }
 -- o.scroll = 5
 
 -- -------------------- STYLE
