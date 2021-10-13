@@ -19,7 +19,7 @@ cmd("colorscheme tokyonight")
 
 -------------------- GENERAL
 
--- o.scroll=5
+o.scroll = 5
 g.mapleader = " "
 o.mouse = "a" -- Enables mouse support
 -- o.cursorline=true
@@ -51,7 +51,7 @@ api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
 api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
 
 -- autocmd BufEnter * :syntax sync fromstart     -- Fix syntax color
-cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
+-- cmd([[autocmd BufEnter *.vue,*.js,*.ts,*.md :set scroll =5]])
 -------------------- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
