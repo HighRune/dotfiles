@@ -51,7 +51,7 @@ api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
 api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
--- cmd([[autocmd BufEnter * :set scroll =5]])
+cmd([[autocmd BufEnter * :set scroll =5]])
 -------------------- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
@@ -272,5 +272,5 @@ cmd([[
 cmd([[
 map <s-right> <Plug>(expand_region_expand)
 map <s-left> <Plug>(expand_region_shrink)
-let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'is':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'as':1, 'ap':1 }
+let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'ap':1 }
 ]])
