@@ -44,7 +44,7 @@ o.copyindent = true -- Copy the structure of the existing lines indent when auto
 o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>
 o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
--- o.hidden = true -- Buffer becomes hidden when it is abandoned
+o.hidden = true -- Buffer becomes hidden when it is abandoned
 cmd([[au FocusGained,BufEnter * :silent! !]]) -- Reload when entering the buffer or gaining focus
 cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or losing focus
 
@@ -246,8 +246,8 @@ api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- AndrewRadev/splitjoin.vim
-api.nvim_set_keymap("n", "<s-j>", ":SplitjoinJoin<cr>", opts)
-api.nvim_set_keymap("n", "<s-k>", ":SplitjoinSplit<cr>", opts)
+api.nvim_set_keymap("n", "<c-j>", ":SplitjoinJoin<cr>", opts)
+api.nvim_set_keymap("n", "<c-k>", ":SplitjoinSplit<cr>", opts)
 
 -------------------- bkad/CamelCaseMotion
 -- Map to |w|, |b| and |e| mappings: >
