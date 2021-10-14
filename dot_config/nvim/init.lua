@@ -45,6 +45,10 @@ o.copyindent = true -- Copy the structure of the existing lines indent when auto
 o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>
 o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
+-- reload when entering the buffer or gaining focus
+cmd([[au FocusGained,BufEnter * :silent! !]])
+-- save when exiting the buffer or losing focus
+cmd([[au FocusLost,WinLeave * :silent! w]])
 
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
