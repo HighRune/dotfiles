@@ -53,6 +53,7 @@ api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
 api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
 api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 api.nvim_set_keymap("n", "<c-d>", "5j", opts)
+api.nvim_set_keymap("n", "gj", "<s-j>", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
@@ -273,7 +274,7 @@ cmd([[
 
 -------------------- terryma/vim-expand-region
 cmd([[
-map <s-right> <Plug>(expand_region_expand)
-map <s-left> <Plug>(expand_region_shrink)
+map <s-k> <Plug>(expand_region_expand)
+map <s-j> <Plug>(expand_region_shrink)
 let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'ap':1 }
 ]])
