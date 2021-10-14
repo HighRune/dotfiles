@@ -56,8 +56,8 @@ api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
-cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %]])
-cmd([[autocmd BufLeave ~/.config/cheatsheet.md ! chezmoi add ~/.config/cheatsheet.md]])
+cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent ! ! chezmoi apply --source-path %]])
+cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent ! ! chezmoi add ~/.config/cheatsheet.md]])
 
 -------------------- PLUGINS
 
@@ -185,11 +185,11 @@ require("lsp_signature").setup({
 	doc_lines = 0,
 	hint_prefix = "",
 	tranpancy = 100,
-	floating_window = true,
+	floating_window = false,
 	max_width = 80,
 	always_trigger = true,
 	max_height = 15,
-	hint_enable = false,
+	hint_enable = true,
 })
 
 -------------------- ms-jpq/coq_nvim
