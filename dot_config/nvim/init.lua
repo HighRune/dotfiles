@@ -51,10 +51,8 @@ cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or l
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
 api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
-api.nvim_set_keymap("n", "<s-k>", "5k", opts)
-api.nvim_set_keymap("n", "<s-j>", "5j", opts)
--- api.nvim_set_keymap("n", "<c-u>", "5k", opts)
--- api.nvim_set_keymap("n", "<c-d>", "5j", opts)
+api.nvim_set_keymap("n", "<c-u>", "5k", opts)
+api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("n", "gj", "<s-j>", opts)
 api.nvim_set_keymap("", "Q", "<Nop>", opts)
 
@@ -251,8 +249,8 @@ api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- AndrewRadev/splitjoin.vim
--- api.nvim_set_keymap("n", "<c-j>", ":SplitjoinJoin<cr>", opts)
--- api.nvim_set_keymap("n", "<c-k>", ":SplitjoinSplit<cr>", opts)
+api.nvim_set_keymap("n", "<c-j>", ":SplitjoinJoin<cr>", opts)
+api.nvim_set_keymap("n", "<c-k>", ":SplitjoinSplit<cr>", opts)
 
 -------------------- bkad/CamelCaseMotion
 -- Map to |w|, |b| and |e| mappings: >
@@ -278,7 +276,7 @@ cmd([[
 
 -------------------- terryma/vim-expand-region
 cmd([[
-map <c-k> <Plug>(expand_region_expand)
-map <c-j> <Plug>(expand_region_shrink)
+map <s-k> <Plug>(expand_region_expand)
+map <s-j> <Plug>(expand_region_shrink)
 let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'ap':1 }
 ]])
