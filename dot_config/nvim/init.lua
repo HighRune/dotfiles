@@ -185,6 +185,7 @@ require("lsp_signature").setup({
 	},
 	doc_lines = 0,
 	hint_prefix = "",
+	hint_scheme = "Comment",
 	tranpancy = 100,
 	floating_window = false,
 	max_width = 80,
