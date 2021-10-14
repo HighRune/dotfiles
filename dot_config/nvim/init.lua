@@ -201,12 +201,12 @@ g.coq_settings = {
 cmd("let g:neoformat_enabled_lua = ['stylua']")
 cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
 cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
-cmd([[
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
-]])
+-- cmd([[
+-- augroup fmt
+--   autocmd!
+--   autocmd BufWritePre * undojoin | Neoformat
+-- augroup END
+-- ]])
 api.nvim_set_keymap("n", "<leader>f", ":Neoformat eslint_d<CR>", opts)
 
 -------------------- lukas-reineke/indent-blankline.nvim
