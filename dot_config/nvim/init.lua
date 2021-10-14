@@ -32,7 +32,6 @@ o.virtualedit = "all"
 o.completeopt = "menuone,noinsert" -- Options for Insert mode completion
 o.clipboard = "unnamedplus" -- Have the clipboard be the same as my regular clipboard
 o.updatetime = 100 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience
-o.hidden = true -- Buffer becomes hidden when it is abandoned
 o.swapfile = false
 o.termguicolors = true -- Enables 24-bit RGB color in the Terminal UI
 o.showmode = false -- Disable message on the last line (Insert, Replace or Visual mode)
@@ -45,10 +44,9 @@ o.copyindent = true -- Copy the structure of the existing lines indent when auto
 o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>
 o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
--- reload when entering the buffer or gaining focus
-cmd([[au FocusGained,BufEnter * :silent! !]])
--- save when exiting the buffer or losing focus
-cmd([[au FocusLost,WinLeave * :silent! w]])
+-- o.hidden = true -- Buffer becomes hidden when it is abandoned
+cmd([[au FocusGained,BufEnter * :silent! !]]) -- Reload when entering the buffer or gaining focus
+cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or losing focus
 
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
