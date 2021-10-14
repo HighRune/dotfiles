@@ -54,6 +54,7 @@ api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
 api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("n", "gj", "<s-j>", opts)
+api.nvim_set_keymap("", "Q", "<Nop>", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
