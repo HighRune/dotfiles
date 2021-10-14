@@ -130,12 +130,6 @@ require("nvim-treesitter.configs").setup({
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 
-require("nvim_context_vt").setup({
-	custom_text_handler = function(node)
-		return node
-	end,
-})
-
 -------------------- neovim/nvim-lspconfig
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
