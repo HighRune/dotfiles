@@ -51,8 +51,10 @@ cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or l
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
 api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
-api.nvim_set_keymap("n", "<c-u>", "5k", opts)
-api.nvim_set_keymap("n", "<c-d>", "5j", opts)
+api.nvim_set_keymap("n", "<s-k>", "5k", opts)
+api.nvim_set_keymap("n", "<s-j>", "5j", opts)
+-- api.nvim_set_keymap("n", "<c-u>", "5k", opts)
+-- api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("n", "gj", "<s-j>", opts)
 api.nvim_set_keymap("", "Q", "<Nop>", opts)
 
@@ -128,11 +130,11 @@ require("nvim-treesitter.configs").setup({
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 
-require('nvim_context_vt').setup {
-  custom_text_handler = function(node)
-    return 'my custom virtual text'
-  end,
-}
+require("nvim_context_vt").setup({
+	custom_text_handler = function(node)
+		return node
+	end,
+})
 
 -------------------- neovim/nvim-lspconfig
 -- Use an on_attach function to only map the following keys
@@ -210,13 +212,13 @@ g.coq_settings = {
 cmd("let g:neoformat_enabled_lua = ['stylua']")
 cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
 cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
-cmd([[
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
-]])
-api.nvim_set_keymap("n", "<leader>f", ":Neoformat eslint_d<CR>", opts)
+-- cmd([[
+-- augroup fmt
+--   autocmd!
+--   autocmd BufWritePre * undojoin | Neoformat
+-- augroup END
+-- ]])
+api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", opts)
 
 -------------------- lukas-reineke/indent-blankline.nvim
 opt.list = true
@@ -255,8 +257,8 @@ api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- AndrewRadev/splitjoin.vim
-api.nvim_set_keymap("n", "<c-j>", ":SplitjoinJoin<cr>", opts)
-api.nvim_set_keymap("n", "<c-k>", ":SplitjoinSplit<cr>", opts)
+-- api.nvim_set_keymap("n", "<c-j>", ":SplitjoinJoin<cr>", opts)
+-- api.nvim_set_keymap("n", "<c-k>", ":SplitjoinSplit<cr>", opts)
 
 -------------------- bkad/CamelCaseMotion
 -- Map to |w|, |b| and |e| mappings: >
@@ -282,7 +284,7 @@ cmd([[
 
 -------------------- terryma/vim-expand-region
 cmd([[
-map <s-k> <Plug>(expand_region_expand)
-map <s-j> <Plug>(expand_region_shrink)
+map <c-k> <Plug>(expand_region_expand)
+map <c-j> <Plug>(expand_region_shrink)
 let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'ap':1 }
 ]])
