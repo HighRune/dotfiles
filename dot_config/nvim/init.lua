@@ -141,17 +141,8 @@ cmp.setup({
 	completion = {
 		completeopt = "menu,menuone,noinsert",
 	},
-	mapping = {
-		["<TAB>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-		["<S-TAB>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-		["<TAB>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
-		["<S-TAB>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-		["<escape>"] = cmp.mapping.close(),
-		["<CR>"] = cmp.mapping.confirm({
-			behavior = cmp.ConfirmBehavior.Replace,
-			select = true,
-		}),
-	},
+	-- mapping = {
+	-- },
 	sources = {
 		{ name = "nvim_lsp" },
 		-- For vsnip user.
