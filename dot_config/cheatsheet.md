@@ -727,6 +727,11 @@ cr-       # dash-case
 cr.       # dot.case
 cr<space> # space case
 crt       # Title Case
+
+cs"'
+cs'<q>
+cst"
+ds"
 ```
 
 ### logs
