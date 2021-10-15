@@ -716,6 +716,18 @@ Ctrl + Z                    # Will suspend the process and get back to your shel
 fg                          # Déplace le curseur sur la dernière lettre du mot ( mot = lettres, nombres & underscores)
 ```
 
+### plugins
+
+```
+crs       # snake_case
+crm       # MixedCase
+crc       # camelCase
+cru       # UPPER_CASE
+cr-       # dash-case
+cr.       # dot.case
+cr<space> # space case
+crt       # Title Case
+```
 
 ### logs
 
