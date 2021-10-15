@@ -183,6 +183,16 @@ end
 -------------------- ms-jpq/coq_nvim
 g.coq_settings = {
 	auto_start = "shut-up",
+	-- display = {
+	-- 	preview = {
+	-- 		positions = {
+	-- 			north = 1,
+	-- 			south = 2,
+	-- 			west = 3,
+	-- 			east = 4,
+	-- 		},
+	-- 	},
+	-- },
 }
 
 -------------------- ray-x/lsp_signature.nvim
