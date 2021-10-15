@@ -128,29 +128,6 @@ require("nvim-treesitter.configs").setup({
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 
--- -------------------- hrsh7th/nvim-cmp
--- local cmp = require("cmp")
-
--- cmp.setup({
--- 	snippet = {
--- 		expand = function(args)
--- 			-- For `vsnip` user.
--- 			vim.fn["vsnip#anonymous"](args.body)
--- 		end,
--- 	},
--- 	completion = {
--- 		completeopt = "menu,menuone,noinsert",
--- 	},
--- 	-- mapping = {
--- 	-- },
--- 	sources = {
--- 		{ name = "nvim_lsp" },
--- 		-- For vsnip user.
--- 		{ name = "vsnip" },
--- 		{ name = "buffer" },
--- 	},
--- })
-
 -------------------- neovim/nvim-lspconfig
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -180,17 +157,18 @@ local on_attach = function(client, bufnr)
 end
 
 -------------------- kabouzeid/nvim-lspinstall
+local coq = require("coq") -- ms-jpq/coq_nvim
+
 local function setup_servers()
 	require("lspinstall").setup()
 	local servers = require("lspinstall").installed_servers()
 	for _, server in pairs(servers) do
-		require("lspconfig")[server].setup({
+		require("lspconfig")[server].setup(coq.lsp_ensure_capabilities({ -- ms-jpq/coq_nvim
 			on_attach = on_attach,
-			-- capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()), -- hrsh7th/nvim-cmp
 			flags = {
 				debounce_text_changes = 150,
 			},
-		})
+		}))
 	end
 end
 
@@ -201,6 +179,11 @@ require("lspinstall").post_install_hook = function()
 	setup_servers() -- reload installed servers
 	cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end
+
+-------------------- ms-jpq/coq_nvim
+g.coq_settings = {
+	auto_start = "shut-up",
+}
 
 -------------------- ray-x/lsp_signature.nvim
 require("lsp_signature").setup({
@@ -218,11 +201,6 @@ require("lsp_signature").setup({
 	max_height = 15,
 	hint_enable = true,
 })
-
--------------------- ms-jpq/coq_nvim
-g.coq_settings = {
-	auto_start = "shut-up",
-}
 
 -------------------- sbdchd/neoformat
 cmd("let g:neoformat_enabled_lua = ['stylua']")
