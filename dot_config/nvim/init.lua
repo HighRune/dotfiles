@@ -157,22 +157,17 @@ local on_attach = function(client, bufnr)
 end
 
 -------------------- kabouzeid/nvim-lspinstall
-local coq = require("coq") -- ms-jpq/coq_nvim
 
 local function setup_servers()
 	require("lspinstall").setup()
 	local servers = require("lspinstall").installed_servers()
 	for _, server in pairs(servers) do
-		require("lspconfig")[server].setup(
-			coq.lsp_ensure_capabilities( -- ms-jpq/coq_nvim
-			{
-				on_attach = on_attach,
-				flags = {
-					debounce_text_changes = 150,
-				},
-			}
-        )
-		)
+		require("lspconfig")[server].setup({
+			on_attach = on_attach,
+			flags = {
+				debounce_text_changes = 150,
+			},
+		})
 	end
 end
 
