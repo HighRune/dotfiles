@@ -157,7 +157,7 @@ local on_attach = function(client, bufnr)
 end
 
 -------------------- kabouzeid/nvim-lspinstall
-local coq = require("coq") -- ms-jpq/coq_nvim
+-- local coq = require("coq") -- ms-jpq/coq_nvim
 
 local function setup_servers()
 	require("lspinstall").setup()
