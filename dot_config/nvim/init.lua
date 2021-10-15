@@ -189,10 +189,10 @@ g.coq_settings = {
 	display = {
 		preview = {
 			positions = {
-				north = 1,
-				south = 2,
-				west = 3,
-				east = 4,
+				east = 1,
+				north = 2,
+				south = 3,
+				west = 4,
 			},
 		},
 	},
@@ -225,7 +225,7 @@ cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
 --   autocmd BufWritePre * undojoin | Neoformat
 -- augroup END
 -- ]])
-api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", opts)
+api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true, silent = true })
 
 -------------------- lukas-reineke/indent-blankline.nvim
 opt.list = true
