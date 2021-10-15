@@ -79,9 +79,9 @@ cmd([[
 
 -------------------- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter.configs").setup({
-	context_commentstring = { -- JoosepAlviste/nvim-ts-context-commentstring
-		enable = true,
-	},
+	-- context_commentstring = { -- JoosepAlviste/nvim-ts-context-commentstring
+	-- 	enable = true,
+	-- },
 	autotag = {
 		enable = true,
 	},
