@@ -129,34 +129,36 @@ o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- -------------------- hrsh7th/nvim-cmp
-  local cmp = require'cmp'
+local cmp = require("cmp")
 
-  cmp.setup({
-    snippet = {
-      expand = function(args)
-        -- For `vsnip` user.
-        vim.fn["vsnip#anonymous"](args.body)
-      end,
-    },
-    mapping = {
-  ['<TAB>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
-  ['<S-TAB>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-  ['<TAB>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
-  ['<S-TAB>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
-  ['<escape>'] = cmp.mapping.close(),
-  ['<CR>'] = cmp.mapping.confirm({
-    behavior = cmp.ConfirmBehavior.Replace,
-    select = true,
-  })
-    },
-sources = {
-      { name = 'nvim_lsp' },
-      -- For vsnip user.
-      { name = 'vsnip' },
-      { name = 'buffer' },
-    }
-  })
-
+cmp.setup({
+	snippet = {
+		expand = function(args)
+			-- For `vsnip` user.
+			vim.fn["vsnip#anonymous"](args.body)
+		end,
+	},
+	completion = {
+		completeopt = "menu,menuone,noinsert",
+	},
+	mapping = {
+		["<TAB>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+		["<S-TAB>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+		["<TAB>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+		["<S-TAB>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+		["<escape>"] = cmp.mapping.close(),
+		["<CR>"] = cmp.mapping.confirm({
+			behavior = cmp.ConfirmBehavior.Replace,
+			select = true,
+		}),
+	},
+	sources = {
+		{ name = "nvim_lsp" },
+		-- For vsnip user.
+		{ name = "vsnip" },
+		{ name = "buffer" },
+	},
+})
 
 -------------------- neovim/nvim-lspconfig
 -- Use an on_attach function to only map the following keys
@@ -193,7 +195,7 @@ local function setup_servers()
 	for _, server in pairs(servers) do
 		require("lspconfig")[server].setup({
 			on_attach = on_attach,
-			capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()), -- hrsh7th/nvim-cmp
+			capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities()), -- hrsh7th/nvim-cmp
 			flags = {
 				debounce_text_changes = 150,
 			},
