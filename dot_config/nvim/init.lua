@@ -133,17 +133,23 @@ o.foldexpr = "nvim_treesitter#foldexpr()"
 
   cmp.setup({
     mapping = {
-      ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-      ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-Space>'] = cmp.mapping.complete(),
-      ['<C-e>'] = cmp.mapping.close(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+      ['<tab>'] = cmp.mapping.complete(),
+  ['<tab>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+  ['<s-tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+  ['<Down>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+  ['<Up>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+  ['<escape>'] = cmp.mapping.close(),
+  ['<CR>'] = cmp.mapping.confirm({
+    behavior = cmp.ConfirmBehavior.Replace,
+    select = true,
+  })
     },
     sources = {
       { name = 'nvim_lsp' },
       { name = 'buffer' },
     }
   })
+
 
 -------------------- neovim/nvim-lspconfig
 -- Use an on_attach function to only map the following keys
