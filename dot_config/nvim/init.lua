@@ -132,6 +132,12 @@ o.foldexpr = "nvim_treesitter#foldexpr()"
   local cmp = require'cmp'
 
   cmp.setup({
+    snippet = {
+      expand = function(args)
+        -- For `vsnip` user.
+        vim.fn["vsnip#anonymous"](args.body)
+      end,
+    },
     mapping = {
   ['<TAB>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
   ['<S-TAB>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
@@ -143,8 +149,10 @@ o.foldexpr = "nvim_treesitter#foldexpr()"
     select = true,
   })
     },
-    sources = {
+sources = {
       { name = 'nvim_lsp' },
+      -- For vsnip user.
+      { name = 'vsnip' },
       { name = 'buffer' },
     }
   })
