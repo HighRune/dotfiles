@@ -220,9 +220,9 @@ require("lsp_signature").setup({
 })
 
 -------------------- ms-jpq/coq_nvim
--- g.coq_settings = {
--- 	auto_start = "shut-up",
--- }
+g.coq_settings = {
+	auto_start = "shut-up",
+}
 
 -------------------- sbdchd/neoformat
 cmd("let g:neoformat_enabled_lua = ['stylua']")
