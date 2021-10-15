@@ -225,7 +225,7 @@ cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
 --   autocmd BufWritePre * undojoin | Neoformat
 -- augroup END
 -- ]])
-api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true, silent = true })
+api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
 
 -------------------- lukas-reineke/indent-blankline.nvim
 opt.list = true
