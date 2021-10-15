@@ -128,6 +128,23 @@ require("nvim-treesitter.configs").setup({
 o.foldmethod = "expr"
 o.foldexpr = "nvim_treesitter#foldexpr()"
 
+-------------------- hrsh7th/nvim-cmp
+  local cmp = require'cmp'
+
+  cmp.setup({
+    mapping = {
+      ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.close(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = {
+      { name = 'nvim_lsp' },
+      { name = 'buffer' },
+    }
+  })
+
 -------------------- neovim/nvim-lspconfig
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -162,6 +179,7 @@ local function setup_servers()
 	local servers = require("lspinstall").installed_servers()
 	for _, server in pairs(servers) do
 		require("lspconfig")[server].setup({
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 			on_attach = on_attach,
 			flags = {
 				debounce_text_changes = 150,
