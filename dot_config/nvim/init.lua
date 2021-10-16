@@ -129,19 +129,19 @@ require("lspinstall").post_install_hook = function()
 end
 
 -------------------- ms-jpq/coq_nvim
--- g.coq_settings = {
--- 	auto_start = "shut-up",
--- 	display = {
--- 		preview = {
--- 			positions = {
--- 				east = 1,
--- 				north = 2,
--- 				south = 3,
--- 				west = 4,
--- 			},
--- 		},
--- 	},
--- }
+g.coq_settings = {
+	auto_start = "shut-up",
+	display = {
+		preview = {
+			positions = {
+				east = 1,
+				north = 2,
+				south = 3,
+				west = 4,
+			},
+		},
+	},
+}
 
 -------------------- ray-x/lsp_signature.nvim
 require("lsp_signature").setup({
@@ -243,3 +243,4 @@ let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip
 
 -------------------- inside/vim-search-pulse
 cmd([[let g:vim_search_pulse_mode = 'pattern']])
+cmd([[let g:vim_search_pulse_duration = 100]])
