@@ -41,8 +41,9 @@ return require("packer").startup(function(use)
 	use("tpope/vim-surround")
 	use("terryma/vim-expand-region")
 	use("inside/vim-search-pulse")
-	use({
-		"abecodes/tabout.nvim",
+	use({ "abecodes/tabout.nvim" })
+	-- use({
+	-- 	"abecodes/tabout.nvim",
 		-- config = function()
 		-- 	require("tabout").setup({
 		-- 		tabkey = "<Tab>", -- key to trigger tabout, set to an empty string to disable
@@ -65,5 +66,5 @@ return require("packer").startup(function(use)
 		-- end,
 		-- wants = { "nvim-treesitter" }, -- or require if not used so far
 		-- after = {'coq_nvim'} -- if a completion plugin is using tabs load it before
-	})
+	-- })
 end)
