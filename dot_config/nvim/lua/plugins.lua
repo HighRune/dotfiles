@@ -9,7 +9,7 @@ return require("packer").startup(function(use)
 		run = ":TSUpdate",
 		-- branch = "0.5-compat",
 	})
-
+  use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("nvim-treesitter/playground")
 	use("windwp/nvim-ts-autotag")
 	use("kyazdani42/nvim-web-devicons")
