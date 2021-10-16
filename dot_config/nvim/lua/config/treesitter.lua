@@ -48,8 +48,8 @@ function M.post()
 			},
 		},
 	})
-	o.foldmethod = "expr"
-	o.foldexpr = "nvim_treesitter#foldexpr()"
+	vim.o.foldmethod = "expr"
+	vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 end
 
 return M
