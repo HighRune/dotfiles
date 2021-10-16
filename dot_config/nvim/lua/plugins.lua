@@ -59,7 +59,7 @@ use {
     exclude = {} -- tabout will ignore these filetypes
 }
   end,
-	wants = {'nvim-treesitter'}, -- or require if not used so far
-	after = {'coq_nvim'} -- if a completion plugin is using tabs load it before
+	-- wants = {'nvim-treesitter'}, -- or require if not used so far
+	-- after = {'coq_nvim'} -- if a completion plugin is using tabs load it before
 }
 end)
