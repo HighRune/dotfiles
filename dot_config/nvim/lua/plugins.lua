@@ -40,7 +40,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-abolish")
 	use("tpope/vim-surround")
 	use("terryma/vim-expand-region")
-	-- Lua
+	use("inside/vim-search-pulse")
 	use({
 		"abecodes/tabout.nvim",
 		config = function()
