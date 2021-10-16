@@ -1,31 +1,39 @@
 require("nvim-treesitter.configs").setup({
-	context_commentstring = { -- JoosepAlviste/nvim-ts-context-commentstring
-		enable = true,
-	},
-	autotag = {
-		enable = true,
-	},
-	rainbow = { -- p00f/nvim-ts-rainbow
-		enable = true,
-		extended_mode = true,
-		max_file_lines = nil,
-	},
-	ensure_installed = "maintained",
 	highlight = {
 		enable = true,
 	},
 	indent = {
 		enable = true,
 	},
-	incremental_selection = {
+	-- JoosepAlviste/nvim-ts-context-commentstring
+	context_commentstring = {
 		enable = true,
-		keymaps = {
-			init_selection = "gnn",
-			node_incremental = "grn",
-			scope_incremental = "grc",
-			node_decremental = "grm",
-		},
 	},
+	-- windwp/nvim-ts-autotag
+	autotag = {
+		enable = true,
+	},
+	-- p00f/nvim-ts-rainbow
+	rainbow = {
+		enable = true,
+		extended_mode = true,
+		max_file_lines = nil,
+	},
+	-- nvim-treesitter/nvim-treesitter-textobjects
+	textobjects = {
+    select = {
+      enable = true,
+      -- Automatically jump forward to textobj, similar to targets.vim
+      lookahead = true,
+      keymaps = {
+        -- You can use the capture groups defined in textobjects.scm
+        ["af"] = "@function.outer",
+        ["if"] = "@function.inner",
+        ["ac"] = "@class.outer",
+        ["ic"] = "@class.inner",
+      },
+    },
+  },
 	playground = { -- nvim-treesitter/playground
 		enable = true,
 		disable = {},
@@ -44,6 +52,16 @@ require("nvim-treesitter.configs").setup({
 			show_help = "?",
 		},
 	},
+	-- incremental_selection = {
+	-- 	enable = true,
+	-- 	keymaps = {
+	-- 		init_selection = "gnn",
+	-- 		node_incremental = "grn",
+	-- 		scope_incremental = "grc",
+	-- 		node_decremental = "grm",
+	-- 	},
+	-- },
+	ensure_installed = "maintained",
 })
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
