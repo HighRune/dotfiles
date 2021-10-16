@@ -4,8 +4,10 @@ return require("packer").startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		-- branch = "0.5-compat",
+		-- config = "require('config.treesitter').post()",
 		run = ":TSUpdate",
 	})
+
 	use("nvim-treesitter/playground")
 	use("windwp/nvim-ts-autotag")
 	use("kyazdani42/nvim-web-devicons")
