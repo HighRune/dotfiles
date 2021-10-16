@@ -4,7 +4,7 @@ return require("packer").startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		-- branch = "0.5-compat",
-		-- config = "require('config.treesitter').post()",
+		config = "require('config.treesitter').post()",
 		run = ":TSUpdate",
 	})
 
