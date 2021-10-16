@@ -64,6 +64,6 @@ return require("packer").startup(function(use)
 			})
 		end,
 		wants = { "nvim-treesitter" }, -- or require if not used so far
-		-- after = {'coq_nvim'} -- if a completion plugin is using tabs load it before
+		after = {'coq_nvim'} -- if a completion plugin is using tabs load it before
 	})
 end)
