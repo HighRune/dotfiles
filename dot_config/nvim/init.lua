@@ -243,4 +243,4 @@ let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip
 
 -------------------- inside/vim-search-pulse
 cmd([[let g:vim_search_pulse_mode = 'pattern']])
-cmd([[let g:vim_search_pulse_duration = 150]])
+cmd([[let g:vim_search_pulse_duration = 200]])
