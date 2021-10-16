@@ -200,8 +200,8 @@ api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -------------------- romgrk/barbar.nvim
--- api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
--- api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
+api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
+api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
 api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 
 -- -------------------- AndrewRadev/sideways.vim
@@ -236,8 +236,8 @@ cmd([[
 
 -------------------- terryma/vim-expand-region
 cmd([[
-map <s-k> <Plug>(expand_region_expand)
-map <s-j> <Plug>(expand_region_shrink)
+map <cr> <Plug>(expand_region_expand)
+map <s-cr> <Plug>(expand_region_shrink)
 let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'ap':1 }
 ]])
 
