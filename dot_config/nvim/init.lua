@@ -247,25 +247,15 @@ cmd([[let g:vim_search_pulse_duration = 200]])
 
 -------------------- is0n/fm-nvim
 require("fm-nvim").setup({
-	-- Border around floating window
-	border = "none", -- opts: 'rounded'; 'double'; 'single'; 'solid'; 'shawdow'
-
-	-- Percentage (0.8 = 80%)
-	height = 0.8,
-	width = 0.8,
-
-	-- Command used to open files
-	edit_cmd = "edit", -- opts: 'tabedit'; 'split'; 'pedit'; etc...
-
+	border = "none",
+	height = 1,
+	width = 1,
+	-- Command used to open files: 'tabedit'; 'split'; 'pedit'; ...
+	edit_cmd = "edit",
 	-- Terminal commands used w/ file manager
 	cmds = {
-		lf_cmd = "lf", -- eg: lf_cmd = "lf -command 'set hidden'"
-		nnn_cmd = "nnn",
-		xplr_cmd = "xplr",
 		vifm_cmd = "vifm",
-		ranger_cmd = "ranger",
 	},
-
 	-- Mappings used inside the floating window
 	mappings = {
 		vert_split = "<C-v>",
