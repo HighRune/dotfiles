@@ -34,6 +34,13 @@ require("nvim-treesitter.configs").setup({
       },
     },
   },
+  textsubjects = {
+        enable = true,
+        keymaps = {
+            ['.'] = 'textsubjects-smart',
+            [';'] = 'textsubjects-container-outer',
+        }
+    },
 	playground = { -- nvim-treesitter/playground
 		enable = true,
 		disable = {},
