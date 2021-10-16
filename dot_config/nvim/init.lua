@@ -129,19 +129,19 @@ require("lspinstall").post_install_hook = function()
 end
 
 -------------------- ms-jpq/coq_nvim
-g.coq_settings = {
-	auto_start = "shut-up",
-	display = {
-		preview = {
-			positions = {
-				east = 1,
-				north = 2,
-				south = 3,
-				west = 4,
-			},
-		},
-	},
-}
+-- g.coq_settings = {
+-- 	auto_start = "shut-up",
+-- 	display = {
+-- 		preview = {
+-- 			positions = {
+-- 				east = 1,
+-- 				north = 2,
+-- 				south = 3,
+-- 				west = 4,
+-- 			},
+-- 		},
+-- 	},
+-- }
 
 -------------------- ray-x/lsp_signature.nvim
 require("lsp_signature").setup({
