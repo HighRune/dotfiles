@@ -37,15 +37,15 @@ require("nvim-treesitter.configs").setup({
 	textsubjects = {
 		enable = true,
 		keymaps = {
-      ["."] = "textsubjects-smart",
-      ["<cr>"] = "textsubjects-container-outer",
-    },
-  },
-  playground = { -- nvim-treesitter/playground
-    enable = true,
-    disable = {},
-    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-    persist_queries = false, -- Whether the query persists across vim sessions
+			["."] = "textsubjects-smart",
+			["<cr>"] = "textsubjects-container-outer",
+		},
+	},
+	playground = { -- nvim-treesitter/playground
+		enable = true,
+		disable = {},
+		updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+		persist_queries = false, -- Whether the query persists across vim sessions
 		keybindings = {
 			toggle_query_editor = "o",
 			toggle_hl_groups = "i",
