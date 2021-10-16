@@ -1,4 +1,5 @@
 require("nvim-treesitter.configs").setup({
+	ensure_installed = "maintained",
 	highlight = {
 		enable = true,
 	},
@@ -49,14 +50,8 @@ require("nvim-treesitter.configs").setup({
 			},
 		},
 	},
-	textsubjects = {
-		enable = true,
-		keymaps = {
-			["."] = "textsubjects-smart",
-			["<cr>"] = "textsubjects-container-outer",
-		},
-	},
-	playground = { -- nvim-treesitter/playground
+  -- nvim-treesitter/playground
+	playground = {
 		enable = true,
 		disable = {},
 		updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
@@ -74,16 +69,7 @@ require("nvim-treesitter.configs").setup({
 			show_help = "?",
 		},
 	},
-	-- incremental_selection = {
-	-- 	enable = true,
-	-- 	keymaps = {
-	-- 		init_selection = "gnn",
-	-- 		node_incremental = "grn",
-	-- 		scope_incremental = "grc",
-	-- 		node_decremental = "grm",
-	-- 	},
-	-- },
-	ensure_installed = "maintained",
 })
+
 vim.o.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
