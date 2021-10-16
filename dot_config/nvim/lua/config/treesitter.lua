@@ -21,6 +21,15 @@ require("nvim-treesitter.configs").setup({
 	},
 	-- nvim-treesitter/nvim-treesitter-textobjects
 	textobjects = {
+	  swap = {
+      enable = true,
+      swap_next = {
+        ["<s-h>"] = "@parameter.inner",
+      },
+      swap_previous = {
+        ["<s-l>"] = "@parameter.inner",
+      },
+    },
 		select = {
 			enable = true,
 			-- Automatically jump forward to textobj, similar to targets.vim
@@ -29,8 +38,14 @@ require("nvim-treesitter.configs").setup({
 				-- You can use the capture groups defined in textobjects.scm
 				["af"] = "@function.outer",
 				["if"] = "@function.inner",
-				["ac"] = "@class.outer",
-				["ic"] = "@class.inner",
+        ["ac"] = "@call.inner",
+        ["ic"] = "@call.outer",
+				["ap"] = "@parameter.outer",
+				["ip"] = "@parameter.inner",
+				["ai"] = "@conditional.outer",
+				["ii"] = "@conditional.inner",
+				["al"] = "@loop.outer",
+				["il"] = "@loop.inner",
 			},
 		},
 	},
