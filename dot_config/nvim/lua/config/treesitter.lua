@@ -21,31 +21,31 @@ require("nvim-treesitter.configs").setup({
 	},
 	-- nvim-treesitter/nvim-treesitter-textobjects
 	textobjects = {
-    select = {
-      enable = true,
-      -- Automatically jump forward to textobj, similar to targets.vim
-      lookahead = true,
-      keymaps = {
-        -- You can use the capture groups defined in textobjects.scm
-        ["af"] = "@function.outer",
-        ["if"] = "@function.inner",
-        ["ac"] = "@class.outer",
-        ["ic"] = "@class.inner",
-      },
+		select = {
+			enable = true,
+			-- Automatically jump forward to textobj, similar to targets.vim
+			lookahead = true,
+			keymaps = {
+				-- You can use the capture groups defined in textobjects.scm
+				["af"] = "@function.outer",
+				["if"] = "@function.inner",
+				["ac"] = "@class.outer",
+				["ic"] = "@class.inner",
+			},
+		},
+	},
+	textsubjects = {
+		enable = true,
+		keymaps = {
+      ["."] = "textsubjects-smart",
+      ["<cr>"] = "textsubjects-container-outer",
     },
   },
-  textsubjects = {
-        enable = true,
-        keymaps = {
-            ['.'] = 'textsubjects-smart',
-            [';'] = 'textsubjects-container-outer',
-        }
-    },
-	playground = { -- nvim-treesitter/playground
-		enable = true,
-		disable = {},
-		updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-		persist_queries = false, -- Whether the query persists across vim sessions
+  playground = { -- nvim-treesitter/playground
+    enable = true,
+    disable = {},
+    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+    persist_queries = false, -- Whether the query persists across vim sessions
 		keybindings = {
 			toggle_query_editor = "o",
 			toggle_hl_groups = "i",
