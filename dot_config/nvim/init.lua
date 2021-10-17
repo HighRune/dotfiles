@@ -57,16 +57,6 @@ api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("n", "gj", "<s-j>", opts)
 api.nvim_set_keymap("", "Q", "<Nop>", opts)
-api.nvim_set_keymap("n", "1", "<1k>", opts)
-api.nvim_set_keymap("n", "2", "<2k>", opts)
-api.nvim_set_keymap("n", "3", "<3k>", opts)
-api.nvim_set_keymap("n", "4", "<4k>", opts)
-api.nvim_set_keymap("n", "5", "<5k>", opts)
-api.nvim_set_keymap("n", "6", "<1j>", opts)
-api.nvim_set_keymap("n", "7", "<2j>", opts)
-api.nvim_set_keymap("n", "8", "<3j>", opts)
-api.nvim_set_keymap("n", "9", "<4j>", opts)
-api.nvim_set_keymap("n", "10", "<5j>", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
