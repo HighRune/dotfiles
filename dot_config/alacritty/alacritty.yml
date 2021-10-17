@@ -110,7 +110,7 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: Hack Nerd Font
-    family: mononoki Nerd Font
+    family: Hurmit Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -122,7 +122,7 @@ font:
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
     # family: Hack Nerd Font
-    family: mononoki Nerd Font
+    family: Hurmit Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -134,7 +134,7 @@ font:
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
     # family: Hack Nerd Font
-    family: mononoki Nerd Font
+    family: Hurmit Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -149,7 +149,7 @@ font:
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
-    family: mononoki Nerd Font
+    family: Hurmit Nerd Font
 
   # Point size
   size: 13.0
