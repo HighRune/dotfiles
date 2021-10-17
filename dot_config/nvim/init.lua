@@ -38,7 +38,6 @@ o.showmode = false -- Disable message on the last line (Insert, Replace or Visua
 -- o.showtabline=2  -- Always display the line with tab page labels
 o.ignorecase = true -- Ignore case in search patterns
 o.smartcase = true -- Override the 'ignorecase' option if the search pattern contains upper case characters
-o.windblend = 10
 o.cmdheight = 1
 o.signcolumn = 'yes'
 o.expandtab = true -- Use the appropriate number of spaces to insert a <Tab>
