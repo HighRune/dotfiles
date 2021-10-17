@@ -236,11 +236,11 @@ cmd([[
 ]])
 
 -------------------- terryma/vim-expand-region
-cmd([[
-map <cr> <Plug>(expand_region_expand)
-map <s-cr> <Plug>(expand_region_shrink)
-let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'ap':1 }
-]])
+-- cmd([[
+-- map <cr> <Plug>(expand_region_expand)
+-- map <s-cr> <Plug>(expand_region_shrink)
+-- let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'ap':1 }
+-- ]])
 
 -------------------- inside/vim-search-pulse
 cmd([[let g:vim_search_pulse_mode = 'pattern']])
