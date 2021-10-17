@@ -48,6 +48,7 @@ o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 o.hidden = true -- Allow switching buffers with unsaved changes
 cmd([[au FocusGained,BufEnter * :silent! !]]) -- Reload when entering the buffer or gaining focus
 cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or losing focus
+cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150}]]) -- highlight a selection on yank
 
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
