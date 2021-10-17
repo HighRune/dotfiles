@@ -38,13 +38,16 @@ o.showmode = false -- Disable message on the last line (Insert, Replace or Visua
 -- o.showtabline=2  -- Always display the line with tab page labels
 o.ignorecase = true -- Ignore case in search patterns
 o.smartcase = true -- Override the 'ignorecase' option if the search pattern contains upper case characters
+o.windblend = 10
+o.cmdheight = 1
+o.signcolumn = 'yes'
 o.expandtab = true -- Use the appropriate number of spaces to insert a <Tab>
 o.smartindent = true -- Do smart autoindenting when starting a new line
 o.copyindent = true -- Copy the structure of the existing lines indent when autoindenting a new line
 o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>
 o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
-o.hidden = true -- Buffer becomes hidden when it is abandoned
+o.hidden = true -- Allow switching buffers with unsaved changes
 cmd([[au FocusGained,BufEnter * :silent! !]]) -- Reload when entering the buffer or gaining focus
 cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or losing focus
 
