@@ -67,7 +67,7 @@ cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent ! ! chezmoi add ~/.config
 require("plugins")
 
 require("gitsigns").setup() -- lewis6991/gitsigns.nvim
-require("colorizer").setup() -- norcalli/nvim-colorizer.lua
+-- require("colorizer").setup() -- norcalli/nvim-colorizer.lua
 require("numb").setup() -- nacro90/numb.nvim
 
 -------------------- wbthomason/packer.nvim
