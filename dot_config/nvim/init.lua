@@ -48,7 +48,7 @@ o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 o.hidden = true -- Allow switching buffers with unsaved changes
 cmd([[au FocusGained,BufEnter * :silent! !]]) -- Reload when entering the buffer or gaining focus
 cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or losing focus
-cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=150}]]) -- highlight a selection on yank
+cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=100}]]) -- highlight a selection on yank
 
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
@@ -57,6 +57,16 @@ api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("n", "gj", "<s-j>", opts)
 api.nvim_set_keymap("", "Q", "<Nop>", opts)
+api.nvim_set_keymap("n", "1", "<1k>", opts)
+api.nvim_set_keymap("n", "2", "<2k>", opts)
+api.nvim_set_keymap("n", "3", "<3k>", opts)
+api.nvim_set_keymap("n", "4", "<4k>", opts)
+api.nvim_set_keymap("n", "5", "<5k>", opts)
+api.nvim_set_keymap("n", "6", "<1j>", opts)
+api.nvim_set_keymap("n", "7", "<2j>", opts)
+api.nvim_set_keymap("n", "8", "<3j>", opts)
+api.nvim_set_keymap("n", "9", "<4j>", opts)
+api.nvim_set_keymap("n", "10", "<5j>", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
