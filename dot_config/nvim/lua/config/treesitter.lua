@@ -6,6 +6,15 @@ require("nvim-treesitter.configs").setup({
 	indent = {
 		enable = true,
 	},
+	incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<cr>",
+      node_incremental = "<cr>",
+      -- scope_incremental = "<cr>",
+      node_decremental = "<s-cr>",
+    },
+  },
 	-- JoosepAlviste/nvim-ts-context-commentstring
 	context_commentstring = {
 		enable = true,
