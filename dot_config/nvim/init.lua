@@ -265,3 +265,4 @@ require("fm-nvim").setup({
 		edit = "<C-e>",
 	},
 })
+api.nvim_set_keymap("n", "<c-s>", ":lua require('tsht').nodes()<CR>", opts)
