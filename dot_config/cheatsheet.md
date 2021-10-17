@@ -572,12 +572,16 @@ wget -nd -r -H -p -e robots=off -P <destination path> -A jpeg,jpg,png  <site url
 
 ### fonts
 ```bash
-fc-list                             # Affiche la liste des polices installées sur le système
+fc-list # Affiche la liste des polices installées sur le système
+# Download font in /usr/share/fonts
+# Then update the fontconfig cache
+fc-cache
+
+# gnome
 vim /etc/default/console-setup      # Modifie les paramètres des TTY virtual consoles tels que la police
 # Pour changer la police des terminaux gnome se connecter en tant qu'utilisateur puis
 gsettings get org.gnome.desktop.interface monospace-font-name                # Affiche la police actuellement installée dans les terminaux gnome
 gsettings set org.gnome.desktop.interface monospace-font-name 'Monospace 20' # Change la police des terminaux gnome
-
 ```
 ### create a shell script
 
