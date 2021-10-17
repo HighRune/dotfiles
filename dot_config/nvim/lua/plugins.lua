@@ -12,7 +12,7 @@ return require("packer").startup(function(use)
 	use("nvim-treesitter/nvim-treesitter-textobjects")
   use("RRethy/nvim-treesitter-textsubjects")
 	use("nvim-treesitter/playground")
-	use("mfussenegger/nvim-ts-hint-textobject")
+	-- use("mfussenegger/nvim-ts-hint-textobject")
 	use("windwp/nvim-ts-autotag")
 	use("kyazdani42/nvim-web-devicons")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
