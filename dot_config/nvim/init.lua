@@ -107,28 +107,46 @@ local on_attach = function(client, bufnr)
 	-- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
--------------------- kabouzeid/nvim-lspinstall
-
-local function setup_servers()
-	require("lspinstall").setup()
-	local servers = require("lspinstall").installed_servers()
-	for _, server in pairs(servers) do
-		require("lspconfig")[server].setup({
+require("nvim-lsp-installer").on_server_ready(function(server)
+    local opts = {
 			on_attach = on_attach,
 			flags = {
 				debounce_text_changes = 150,
 			},
-		})
-	end
-end
+  }
 
-setup_servers()
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --     opts.root_dir = function() ... end
+    -- end
 
--- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-require("lspinstall").post_install_hook = function()
-	setup_servers() -- reload installed servers
-	cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
-end
+    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+    server:setup(opts)
+    vim.cmd [[ do User LspAttachBuffers ]]
+end)
+
+-- -------------------- kabouzeid/nvim-lspinstall
+
+-- local function setup_servers()
+-- 	require("lspinstall").setup()
+-- 	local servers = require("lspinstall").installed_servers()
+-- 	for _, server in pairs(servers) do
+-- 		require("lspconfig")[server].setup({
+-- 			on_attach = on_attach,
+-- 			flags = {
+-- 				debounce_text_changes = 150,
+-- 			},
+-- 		})
+-- 	end
+-- end
+
+-- setup_servers()
+
+-- -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
+-- require("lspinstall").post_install_hook = function()
+-- 	setup_servers() -- reload installed servers
+-- 	cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
+-- end
 
 -------------------- ms-jpq/coq_nvim
 g.coq_settings = {
