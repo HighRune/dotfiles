@@ -139,7 +139,7 @@ require("nvim-lsp-installer").on_server_ready(function(server)
 end)
 
 -- Format on save
-vim.api.nvim_command[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]])
 
 -- -------------------- kabouzeid/nvim-lspinstall
 
@@ -213,6 +213,7 @@ opt.list = true
 opt.listchars:append("eol:↴")
 require("indent_blankline").setup({
 	show_end_of_line = true,
+	buftype_exclude = { "terminal", "nofile" },
 })
 
 -------------------- nvim-telescope/telescope.nvim
