@@ -104,7 +104,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
 	buf_set_keymap("n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
 	buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
-	buf_set_keymap("n", "<space>s", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+	buf_set_keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
 require("nvim-lsp-installer").on_server_ready(function(server)
@@ -202,7 +202,7 @@ cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
 --   autocmd BufWritePre * undojoin | Neoformat
 -- augroup END
 -- ]])
-api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
+-- api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
 
 -------------------- lukas-reineke/indent-blankline.nvim
 opt.list = true
