@@ -302,5 +302,7 @@ require("fm-nvim").setup({
 	},
 })
 
+api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
+
 -- -------------------- mfussenegger/nvim-ts-hint-textobject
 -- api.nvim_set_keymap("n", "<leader>u", ":lua require('tsht').nodes()<cr>", opts)
