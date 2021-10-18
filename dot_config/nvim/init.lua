@@ -137,6 +137,9 @@ require("nvim-lsp-installer").on_server_ready(function(server)
 	vim.cmd([[ do User LspAttachBuffers ]])
 end)
 
+-- Format on save
+vim.api.nvim_command[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+
 -- -------------------- kabouzeid/nvim-lspinstall
 
 -- local function setup_servers()
@@ -194,8 +197,8 @@ require("lsp_signature").setup({
 
 -------------------- sbdchd/neoformat
 cmd("let g:neoformat_enabled_lua = ['stylua']")
-cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
-cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
+-- cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
+-- cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
 -- cmd([[
 -- augroup fmt
 --   autocmd!
