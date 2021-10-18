@@ -107,6 +107,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
+-------------------- williamboman/nvim-lsp-installer
 require("nvim-lsp-installer").on_server_ready(function(server)
 	local opts = {
 		on_attach = on_attach,
@@ -199,12 +200,12 @@ require("lsp_signature").setup({
 cmd("let g:neoformat_enabled_lua = ['stylua']")
 -- cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
 -- cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
--- cmd([[
--- augroup fmt
---   autocmd!
---   autocmd BufWritePre * undojoin | Neoformat
--- augroup END
--- ]])
+cmd([[
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+]])
 -- api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
 
 -------------------- lukas-reineke/indent-blankline.nvim
