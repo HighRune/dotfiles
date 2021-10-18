@@ -9,7 +9,8 @@ git log                         # List commits
 git log --all                   # List commits of all branches
 git status                      # Display state of the working tree
 git diff                        # Display details of changes
-git diff branch_1..branch_2     # Diff between branches
+git diff branch_1 branch_2      # Diff between branches
+git diff k73ud dj374            # Diff between oldCommit and newCommit
 git add -A                      # Stages all changes
 git add .                       # Stages edited and new files, without deleted ones
 git add -u                      # Stages edited and deleted files, without new ones
