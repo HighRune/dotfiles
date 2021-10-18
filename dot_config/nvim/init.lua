@@ -38,7 +38,7 @@ o.showmode = false -- Disable message on the last line (Insert, Replace or Visua
 -- o.showtabline=2  -- Always display the line with tab page labels
 o.ignorecase = true -- Ignore case in search patterns
 o.smartcase = true -- Override the 'ignorecase' option if the search pattern contains upper case characters
-o.signcolumn = 'yes'
+o.signcolumn = "yes"
 o.expandtab = true -- Use the appropriate number of spaces to insert a <Tab>
 o.smartindent = true -- Do smart autoindenting when starting a new line
 o.copyindent = true -- Copy the structure of the existing lines indent when autoindenting a new line
@@ -104,25 +104,37 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
 	buf_set_keymap("n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
 	buf_set_keymap("n", "<space>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
-	-- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+	buf_set_keymap("n", "<space>s", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
 require("nvim-lsp-installer").on_server_ready(function(server)
-    local opts = {
-			on_attach = on_attach,
-			flags = {
-				debounce_text_changes = 150,
-			},
-  }
+	local opts = {
+		on_attach = on_attach,
+		flags = {
+			debounce_text_changes = 150,
+		},
+	}
 
-    -- (optional) Customize the options passed to the server
-    -- if server.name == "tsserver" then
-    --     opts.root_dir = function() ... end
-    -- end
+	-- (optional) Customize the options passed to the server
+	-- if server.name == "tsserver" then
+	--     opts.root_dir = function() ... end
+	-- end
 
-    -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
-    server:setup(opts)
-    vim.cmd [[ do User LspAttachBuffers ]]
+	if server.name == "eslint" then
+		opts.on_attach = function(client, bufnr)
+			-- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
+			-- the resolved capabilities of the eslint server ourselves!
+			client.resolved_capabilities.document_formatting = true
+			common_on_attach(client, bufnr)
+		end
+		opts.settings = {
+			format = { enable = true }, -- this will enable formatting
+		}
+	end
+
+	-- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+	server:setup(opts)
+	vim.cmd([[ do User LspAttachBuffers ]])
 end)
 
 -- -------------------- kabouzeid/nvim-lspinstall
