@@ -203,12 +203,12 @@ require("lsp_signature").setup({
 cmd("let g:neoformat_enabled_lua = ['stylua']")
 -- cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
 -- cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
--- cmd([[
--- augroup fmt
---   autocmd!
---   autocmd BufWritePre * undojoin | Neoformat
--- augroup END
--- ]])
+cmd([[
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
+]])
 
 -- vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]])
 -- api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
