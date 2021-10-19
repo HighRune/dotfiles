@@ -206,7 +206,7 @@ cmd("let g:neoformat_enabled_lua = ['stylua']")
 cmd([[
 augroup fmt
   autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
+  autocmd BufWritePre * silent undojoin | Neoformat
 augroup END
 ]])
 
