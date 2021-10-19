@@ -36,6 +36,7 @@ o.swapfile = false
 o.termguicolors = true -- Enables 24-bit RGB color in the Terminal UI
 o.showmode = false -- Disable message on the last line (Insert, Replace or Visual mode)
 o.formatoptions = "cro"
+vim.cmd([[filetype plugin indent on]])
 -- o.showtabline=2  -- Always display the line with tab page labels
 o.ignorecase = true -- Ignore case in search patterns
 o.smartcase = true -- Override the 'ignorecase' option if the search pattern contains upper case characters
