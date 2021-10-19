@@ -142,7 +142,7 @@ require("nvim-lsp-installer").on_server_ready(function(server)
 end)
 
 -- Format on save
-vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]])
+vim.api.nvim_command([[autocmd BufWritePre * lua vim.lsp.buf.formatting_seq_sync()]])
 
 -- -------------------- kabouzeid/nvim-lspinstall
 
