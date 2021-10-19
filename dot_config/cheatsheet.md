@@ -17,7 +17,7 @@ git add -u                      # Stages edited and deleted files, without new o
 git add -p <path>               # Interactive stage, stage parts of a file
 git diff --cached               # Display cache/index changes
 git commit -m "message"         # Commit changes and add a message
-git commit -m "message" -n      # Bypasses the pre-commit and commit-msg hooks
+git commit -nm "message"        # Bypasses the pre-commit and commit-msg hooks
 
 git commit --amend              # Change message of the last commit
 git push -f                     # Update message of the last commit on the remote
