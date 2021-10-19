@@ -737,6 +737,7 @@ cs"'
 cs'<q>
 cst"
 ds"
+ciwspan<esc>  # <div></div> => <span></span>
 ```
 
 ### logs
