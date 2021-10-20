@@ -30,6 +30,7 @@ o.number = true -- Print the line number in front of each line
 o.relativenumber = true -- Show relative line numbers
 o.virtualedit = "all"
 o.completeopt = "menuone,noinsert" -- Options for Insert mode completion
+-- o.pumblend = 100
 o.clipboard = "unnamedplus" -- Have the clipboard be the same as my regular clipboard
 o.updatetime = 100 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience
 o.swapfile = false
