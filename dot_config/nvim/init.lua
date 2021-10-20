@@ -297,8 +297,8 @@ api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 -- api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- AndrewRadev/splitjoin.vim
-api.nvim_set_keymap("n", "<c-j>", ":SplitjoinJoin<cr>", opts)
-api.nvim_set_keymap("n", "<c-k>", ":SplitjoinSplit<cr>", opts)
+api.nvim_set_keymap("n", "<s-j>", ":SplitjoinJoin<cr>", opts)
+api.nvim_set_keymap("n", "<s-k>", ":SplitjoinSplit<cr>", opts)
 
 -------------------- bkad/CamelCaseMotion
 -- Map to |w|, |b| and |e| mappings: >
