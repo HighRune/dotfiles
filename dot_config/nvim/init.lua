@@ -64,6 +64,8 @@ api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
 api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("n", "gj", "<s-j>", opts)
+api.nvim_set_keymap("n", "<s-l>", "$", opts)
+api.nvim_set_keymap("n", "<s-h>", "^", opts)
 api.nvim_set_keymap("", "Q", "<Nop>", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
@@ -291,8 +293,8 @@ api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
 api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 
 -- -------------------- AndrewRadev/sideways.vim
-api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
-api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
+-- api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
+-- api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- AndrewRadev/splitjoin.vim
 api.nvim_set_keymap("n", "<c-j>", ":SplitjoinJoin<cr>", opts)
