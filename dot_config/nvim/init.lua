@@ -355,3 +355,8 @@ api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
 
 -- -------------------- mfussenegger/nvim-ts-hint-textobject
 -- api.nvim_set_keymap("n", "<leader>u", ":lua require('tsht').nodes()<cr>", opts)
+
+-- cmd([[
+-- nmap j <Plug>(accelerated_jk_gj)
+-- nmap k <Plug>(accelerated_jk_gk)
+-- ]])
