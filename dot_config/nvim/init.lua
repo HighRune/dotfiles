@@ -302,27 +302,18 @@ api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 api.nvim_set_keymap("n", "<s-j>", ":SplitjoinJoin<cr>", opts)
 api.nvim_set_keymap("n", "<s-k>", ":SplitjoinSplit<cr>", opts)
 
--------------------- bkad/CamelCaseMotion
--- Map to |w|, |b| and |e| mappings: >
-cmd([[
-    map <silent> w <Plug>CamelCaseMotion_w
-    map <silent> b <Plug>CamelCaseMotion_b
-    map <silent> e <Plug>CamelCaseMotion_e
-    map <silent> ge <Plug>CamelCaseMotion_ge
-    sunmap w
-    sunmap b
-    sunmap e
-    sunmap ge
-]])
--- Map |iw|, |ib| and |ie| motions: >
-cmd([[
-    omap <silent> iw <Plug>CamelCaseMotion_iw
-    xmap <silent> iw <Plug>CamelCaseMotion_iw
-    omap <silent> ib <Plug>CamelCaseMotion_ib
-    xmap <silent> ib <Plug>CamelCaseMotion_ib
-    omap <silent> ie <Plug>CamelCaseMotion_ie
-    xmap <silent> ie <Plug>CamelCaseMotion_ie
-]])
+-- -------------------- bkad/CamelCaseMotion
+-- -- Map to |w|, |b| and |e| mappings: >
+-- cmd([[
+--     map <silent> w <Plug>CamelCaseMotion_w
+--     map <silent> b <Plug>CamelCaseMotion_b
+--     map <silent> e <Plug>CamelCaseMotion_e
+--     map <silent> ge <Plug>CamelCaseMotion_ge
+--     sunmap w
+--     sunmap b
+--     sunmap e
+--     sunmap ge
+-- ]])
 
 -------------------- terryma/vim-expand-region
 -- cmd([[
@@ -356,11 +347,3 @@ require("fm-nvim").setup({
 })
 
 api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
-
--- -------------------- mfussenegger/nvim-ts-hint-textobject
--- api.nvim_set_keymap("n", "<leader>u", ":lua require('tsht').nodes()<cr>", opts)
-
--- cmd([[
--- nmap j <Plug>(accelerated_jk_gj)
--- nmap k <Plug>(accelerated_jk_gk)
--- ]])
