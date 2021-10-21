@@ -7,14 +7,14 @@ require("nvim-treesitter.configs").setup({
 		enable = true,
 	},
 	incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = "<cr>",
-      node_incremental = "<cr>",
-      -- scope_incremental = "<cr>",
-      node_decremental = "<s-cr>",
-    },
-  },
+		enable = true,
+		keymaps = {
+			init_selection = "<cr>",
+			node_incremental = "<cr>",
+			-- scope_incremental = "<cr>",
+			node_decremental = "<s-cr>",
+		},
+	},
 	-- JoosepAlviste/nvim-ts-context-commentstring
 	context_commentstring = {
 		enable = true,
@@ -48,8 +48,8 @@ require("nvim-treesitter.configs").setup({
 				-- You can use the capture groups defined in textobjects.scm
 				["af"] = "@function.outer",
 				["if"] = "@function.inner",
-				["ac"] = "@call.inner",
-				["ic"] = "@call.outer",
+				["ac"] = "@call.outer",
+				["ic"] = "@call.inner",
 				["ap"] = "@parameter.outer",
 				["ip"] = "@parameter.inner",
 				["ai"] = "@conditional.outer",
