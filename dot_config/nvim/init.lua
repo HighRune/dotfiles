@@ -215,7 +215,7 @@ cmd("let g:neoformat_enabled_lua = ['stylua']")
 cmd([[
 augroup fmt
   autocmd!
-  au BufWritePre * try | undojoin | Neoformat stylua | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
+  au BufWritePre *.lua try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
 augroup END
 ]])
 
