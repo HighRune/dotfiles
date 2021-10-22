@@ -335,4 +335,5 @@ require("fm-nvim").setup({
 
 api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
 
-cmd("let g:wordmotion_uppercase_spaces = ['-', '_', ',', '.', ';']")
+-------------------- chaoren/vim-wordmotion
+cmd("let g:wordmotion_uppercase_spaces = [':', ',', '.', ';']")
