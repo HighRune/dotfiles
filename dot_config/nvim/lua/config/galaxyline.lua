@@ -1,4 +1,4 @@
-local function post()
+return function()
 	local gl = require("galaxyline")
 	local gls = gl.section
 	local vcs = require("galaxyline.provider_vcs")
@@ -298,7 +298,3 @@ local function post()
 	--   },
 	-- }
 end
-
-return {
-	post = post,
-}
