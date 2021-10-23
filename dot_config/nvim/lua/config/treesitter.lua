@@ -48,8 +48,8 @@ require("nvim-treesitter.configs").setup({
 				-- You can use the capture groups defined in textobjects.scm
 				["af"] = "@function.outer",
 				["if"] = "@function.inner",
-				["ac"] = "@call.outer",
-				["ic"] = "@call.inner",
+				-- ["ac"] = "@call.outer",
+				-- ["ic"] = "@call.inner",
 				["ap"] = "@parameter.outer",
 				["ip"] = "@parameter.inner",
 				["ai"] = "@conditional.outer",
