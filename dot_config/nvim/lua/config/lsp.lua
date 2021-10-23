@@ -24,6 +24,8 @@ local function setup()
 		}
 
 		local opts = { noremap = true, silent = true }
+		print("keymaps")
+		print(keymaps)
 
 		-- for _, keymap in ipairs(keymaps) do
 		-- 	print(keymap)
