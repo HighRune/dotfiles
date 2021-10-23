@@ -1,11 +1,13 @@
+-------------------- neovim/nvim-lspconfig
 local function setup()
-	-------------------- neovim/nvim-lspconfig
 	-- Use an on_attach function to only map the following keys
 	-- after the language server attaches to the current buffer
-	local on_attach = function(client, bufnr)
+	local function on_attach(client, bufnr)
 		local function buf_set_keymap(...)
 			vim.api.nvim_buf_set_keymap(bufnr, ...)
 		end
+
+		local opts = { noremap = true, silent = true }
 
 		-- See `:help vim.lsp.*` for documentation on any of the below functions
 		buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
