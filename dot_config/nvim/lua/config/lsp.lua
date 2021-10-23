@@ -1,32 +1,33 @@
--------------------- neovim/nvim-lspconfig
 local function setup()
+	-------------------- neovim/nvim-lspconfig
 	-- Use an on_attach function to only map the following keys
 	-- after the language server attaches to the current buffer
-	local function on_attach(client, bufnr)
-		local function buf_set_keymap(...)
-			vim.api.nvim_buf_set_keymap(bufnr, ...)
-		end
+	local function on_attach(client, buffer)
+		local keymaps = {
+			{ "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>" },
+			{ "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>" },
+			{ "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>" },
+			{ "n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>" },
+			{ "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>" },
+			{ "n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>" },
+			{ "n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>" },
+			{ "n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>" },
+			{ "n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>" },
+			{ "n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>" },
+			{ "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>" },
+			{ "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>" },
+			{ "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>" },
+			{ "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>" },
+			{ "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
+			{ "n", "<leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>" },
+			{ "n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>" },
+		}
 
 		local opts = { noremap = true, silent = true }
 
-		-- See `:help vim.lsp.*` for documentation on any of the below functions
-		buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-		buf_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-		buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-		buf_set_keymap("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-		buf_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-		buf_set_keymap("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-		buf_set_keymap("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-		buf_set_keymap("n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
-		buf_set_keymap("n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-		buf_set_keymap("n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
-		buf_set_keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>", opts)
-		buf_set_keymap("n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
-		buf_set_keymap("n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
-		-- buf_set_keymap("n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-		-- buf_set_keymap("n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-		-- buf_set_keymap("n", "<leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>", opts)
-		-- buf_set_keymap("n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>", opts)
+		for _, keymap in ipairs(keymaps) do
+			vim.api.nvim_buf_set_keymap(buffer, unpack(keymap), opts)
+		end
 	end
 
 	-------------------- williamboman/nvim-lsp-installer
@@ -44,11 +45,11 @@ local function setup()
 		-- end
 
 		if server.name == "eslint" then
-			opts.on_attach = function(client, bufnr)
+			opts.on_attach = function(client, buffer)
 				-- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
 				-- the resolved capabilities of the eslint server ourselves!
 				client.resolved_capabilities.document_formatting = true
-				on_attach(client, bufnr)
+				on_attach(client, buffer)
 			end
 			opts.settings = {
 				format = { enable = true }, -- this will enable formatting
