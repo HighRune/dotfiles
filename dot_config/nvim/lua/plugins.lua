@@ -23,8 +23,8 @@ return require("packer").startup(function(use)
 	use("folke/tokyonight.nvim")
 	use({
 		"neovim/nvim-lspconfig",
+		"williamboman/nvim-lsp-installer",
 		config = "require('config.lsp').setup()",
-		requires = { "williamboman/nvim-lsp-installer" },
 	})
 	use({ "ms-jpq/coq_nvim", branch = "coq" })
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
