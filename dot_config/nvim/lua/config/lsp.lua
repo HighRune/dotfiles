@@ -22,6 +22,7 @@ local function setup()
 			{ "n", "<leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>" },
 			{ "n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>" },
 		}
+		print(keymaps)
 
 		local opts = { noremap = true, silent = true }
 
