@@ -15,6 +15,9 @@ require("nvim-treesitter.configs").setup({
 			node_decremental = "<s-cr>",
 		},
 	},
+	matchup = {
+		enable = true,
+	},
 	-- JoosepAlviste/nvim-ts-context-commentstring
 	context_commentstring = {
 		enable = true,
