@@ -339,4 +339,4 @@ api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
 cmd("let g:wordmotion_uppercase_spaces = [':', ',', '.', ';']")
 
 -------------------- kana/vim-arpeggio
-cmd("Arpeggio inoremap jk  <Esc>")
+cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")
