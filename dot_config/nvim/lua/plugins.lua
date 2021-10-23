@@ -17,7 +17,24 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
 	use("itchyny/vim-cursorword")
-	use("lewis6991/gitsigns.nvim")
+	use({
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
+	})
+	use({
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	})
+	use({
+		"nacro90/numb.nvim",
+		config = function()
+			require("numb").setup()
+		end,
+	})
 	use("romgrk/barbar.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("folke/tokyonight.nvim")
@@ -33,10 +50,8 @@ return require("packer").startup(function(use)
 	use("tpope/vim-commentary")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("tommcdo/vim-lion")
-	use("nacro90/numb.nvim")
 	use("p00f/nvim-ts-rainbow")
 	use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
-	use("norcalli/nvim-colorizer.lua")
 	-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
 	use("nvim-telescope/telescope.nvim")
 	use("AndrewRadev/sideways.vim")
