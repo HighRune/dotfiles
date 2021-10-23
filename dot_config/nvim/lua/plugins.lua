@@ -21,8 +21,11 @@ return require("packer").startup(function(use)
 	use("romgrk/barbar.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("folke/tokyonight.nvim")
-	use("williamboman/nvim-lsp-installer")
-	use({ "neovim/nvim-lspconfig", config = "require('config.lsp').setup()" })
+	use({
+		"neovim/nvim-lspconfig",
+		config = "require('config.lsp').setup()",
+		requires = { "williamboman/nvim-lsp-installer" },
+	})
 	use({ "ms-jpq/coq_nvim", branch = "coq" })
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use("ray-x/lsp_signature.nvim")
