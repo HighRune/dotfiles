@@ -1,4 +1,4 @@
-local M = function()
+local function setup()
 	local gl = require("galaxyline")
 	local gls = gl.section
 	local vcs = require("galaxyline.provider_vcs")
@@ -299,4 +299,4 @@ local M = function()
 	-- }
 end
 
-return M
+return setup
