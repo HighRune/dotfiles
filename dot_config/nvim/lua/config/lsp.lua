@@ -4,7 +4,7 @@ local function setup()
 	-- after the language server attaches to the current buffer
 	local on_attach = function(client, bufnr)
 		local function buf_set_keymap(...)
-			api.nvim_buf_set_keymap(bufnr, ...)
+			vim.api.nvim_buf_set_keymap(bufnr, ...)
 		end
 
 		-- See `:help vim.lsp.*` for documentation on any of the below functions
