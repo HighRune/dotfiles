@@ -26,7 +26,6 @@ local function setup()
 		local opts = { noremap = true, silent = true }
 
 		print("keymaps")
-		print(require("inspect")(keymaps))
 
 		-- for _, keymap in ipairs(keymaps) do
 		-- 	print(keymap)
