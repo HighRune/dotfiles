@@ -34,12 +34,9 @@ local function setup()
 
 	-------------------- williamboman/nvim-lsp-installer
 	require("nvim-lsp-installer").on_server_ready(function(server)
-		local opts = {
-			on_attach = on_attach,
-			flags = {
-				debounce_text_changes = 0,
-			},
-		}
+		local opts = {}
+		opts.on_attach = on_attach
+		opts.flags = { debounce_text_changes = 0 }
 
 		-- (optional) Customize the options passed to the server
 		-- if server.name == "tsserver" then
@@ -53,9 +50,7 @@ local function setup()
 				client.resolved_capabilities.document_formatting = true
 				on_attach(client, buffer)
 			end
-			opts.settings = {
-				format = { enable = true }, -- this will enable formatting
-			}
+			opts.settings = { format = { enable = true } }
 		end
 
 		-- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
