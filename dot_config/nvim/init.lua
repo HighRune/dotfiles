@@ -79,10 +79,6 @@ cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent ! ! chezmoi add ~/.config
 
 require("plugins")
 
-require("gitsigns").setup() -- lewis6991/gitsigns.nvim
-require("colorizer").setup() -- norcalli/nvim-colorizer.lua
-require("numb").setup() -- nacro90/numb.nvim
-
 -------------------- wbthomason/packer.nvim
 cmd([[
   augroup packer_user_config
@@ -93,29 +89,6 @@ cmd([[
 
 -- Format on save
 -- vim.api.nvim_command([[autocmd BufWritePre * lua vim.lsp.buf.formatting_seq_sync()]])
-
--- -------------------- kabouzeid/nvim-lspinstall
-
--- local function setup_servers()
--- 	require("lspinstall").setup()
--- 	local servers = require("lspinstall").installed_servers()
--- 	for _, server in pairs(servers) do
--- 		require("lspconfig")[server].setup({
--- 			on_attach = on_attach,
--- 			flags = {
--- 				debounce_text_changes = 150,
--- 			},
--- 		})
--- 	end
--- end
-
--- setup_servers()
-
--- -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
--- require("lspinstall").post_install_hook = function()
--- 	setup_servers() -- reload installed servers
--- 	cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
--- end
 
 -------------------- ms-jpq/coq_nvim
 g.coq_settings = {
