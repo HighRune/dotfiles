@@ -27,10 +27,10 @@ local function setup()
 
 		print("keymaps")
 
-		-- for _, keymap in ipairs(keymaps) do
-		-- 	print(keymap)
-		-- 	vim.api.nvim_buf_set_keymap(buffer, unpack(keymap), opts)
-		-- end
+		for _, keymap in ipairs(keymaps) do
+			print(keymap)
+			-- vim.api.nvim_buf_set_keymap(buffer, unpack(keymap), opts)
+		end
 	end
 
 	-------------------- williamboman/nvim-lsp-installer
