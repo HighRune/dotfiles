@@ -1,4 +1,4 @@
-return function()
+local M = function()
 	local gl = require("galaxyline")
 	local gls = gl.section
 	local vcs = require("galaxyline.provider_vcs")
@@ -298,3 +298,5 @@ return function()
 	--   },
 	-- }
 end
+
+return M
