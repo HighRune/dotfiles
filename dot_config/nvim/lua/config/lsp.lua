@@ -26,7 +26,9 @@ local function setup()
 		local opts = { noremap = true, silent = true }
 
 		for _, keymap in ipairs(keymaps) do
-			vim.api.nvim_buf_set_keymap(buffer, keymap[1], keymap[2], keymap[3], opts)
+			table.insert(keymap, 1, buffer)
+			table.insert(keymap, opts)
+			vim.api.nvim_buf_set_keymap(unpack(keymap))
 		end
 	end
 
