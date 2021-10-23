@@ -32,6 +32,13 @@ local function setup()
 		end
 	end
 
+	local function on_attach_eslint(client, buffer)
+		-- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
+		-- the resolved capabilities of the eslint server ourselves!
+		client.resolved_capabilities.document_formatting = true
+		on_attach(client, buffer)
+	end
+
 	-------------------- williamboman/nvim-lsp-installer
 	require("nvim-lsp-installer").on_server_ready(function(server)
 		local opts = {}
@@ -44,12 +51,7 @@ local function setup()
 		-- end
 
 		if server.name == "eslint" then
-			opts.on_attach = function(client, buffer)
-				-- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
-				-- the resolved capabilities of the eslint server ourselves!
-				client.resolved_capabilities.document_formatting = true
-				on_attach(client, buffer)
-			end
+			opts.on_attach = on_attach_eslint
 			opts.settings = { format = { enable = true } }
 		end
 
