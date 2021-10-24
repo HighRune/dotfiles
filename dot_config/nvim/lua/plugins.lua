@@ -60,9 +60,7 @@ return require("packer").startup(function(use)
 	use({
 		"ms-jpq/coq_nvim",
 		branch = "coq",
-		config = function()
-			require("config.coq")
-		end,
+		config = require("config.coq").setup(),
 	})
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use("sbdchd/neoformat")
