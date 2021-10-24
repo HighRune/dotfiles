@@ -234,7 +234,3 @@ cmd("let g:wordmotion_uppercase_spaces = [':', ',', '.', ';']")
 
 -------------------- kana/vim-arpeggio
 cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")
-
-vim.api.nvim_set_keymap("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
-vim.api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
-vim.api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
