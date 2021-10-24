@@ -1,10 +1,21 @@
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
+	use("kyazdani42/nvim-web-devicons")
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		config = require("config.treesitter").setup(),
 		run = ":TSUpdate",
+	})
+	use({
+		"neovim/nvim-lspconfig",
+		"williamboman/nvim-lsp-installer",
+		config = "require('config.lsp').setup()",
+	})
+	use({
+		"ms-jpq/coq_nvim",
+		branch = "coq",
+		config = require("config.coq").setup(),
 	})
 	use({
 		"nvim-telescope/telescope.nvim",
@@ -22,7 +33,6 @@ return require("packer").startup(function(use)
 	use("RRethy/nvim-treesitter-textsubjects")
 	use("nvim-treesitter/playground")
 	use("windwp/nvim-ts-autotag")
-	use("kyazdani42/nvim-web-devicons")
 	-- use("windwp/nvim-autopairs")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
 	use("itchyny/vim-cursorword")
@@ -50,16 +60,6 @@ return require("packer").startup(function(use)
 	})
 	use("romgrk/barbar.nvim")
 	use("folke/tokyonight.nvim")
-	use({
-		"neovim/nvim-lspconfig",
-		"williamboman/nvim-lsp-installer",
-		config = "require('config.lsp').setup()",
-	})
-	use({
-		"ms-jpq/coq_nvim",
-		branch = "coq",
-		config = require("config.coq").setup(),
-	})
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use("sbdchd/neoformat")
 	use("tpope/vim-commentary")
