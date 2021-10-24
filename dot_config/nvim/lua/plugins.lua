@@ -7,13 +7,13 @@ return require("packer").startup(function(use)
 			require("config.treesitter")
 		end,
 		run = ":TSUpdate",
-		-- branch = "0.5-compat",
 	})
 	use({
 		"nvim-telescope/telescope.nvim",
-		config = function() require("config.telescope") end,
+		config = function()
+			require("config.telescope")
+		end,
 	})
-
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("RRethy/nvim-treesitter-textsubjects")
 	use("nvim-treesitter/playground")
