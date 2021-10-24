@@ -60,7 +60,13 @@ return require("packer").startup(function(use)
 		"williamboman/nvim-lsp-installer",
 		config = "require('config.lsp').setup()",
 	})
-	use({ "ms-jpq/coq_nvim", branch = "coq" })
+	use({
+		"ms-jpq/coq_nvim",
+		branch = "coq",
+		config = function()
+			require("config.coq")
+		end,
+	})
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use("sbdchd/neoformat")
 	use("tpope/vim-commentary")
