@@ -32,15 +32,15 @@ local function setup()
 		},
 		-- nvim-treesitter/nvim-treesitter-textobjects
 		textobjects = {
-			swap = {
-				enable = true,
-				swap_next = {
-					["<c-k>"] = "@parameter.inner",
-				},
-				swap_previous = {
-					["<c-j>"] = "@parameter.inner",
-				},
-			},
+			-- swap = {
+			-- 	enable = true,
+			-- 	swap_next = {
+			-- 		["<c-k>"] = "@parameter.inner",
+			-- 	},
+			-- 	swap_previous = {
+			-- 		["<c-j>"] = "@parameter.inner",
+			-- 	},
+			-- },
 			select = {
 				enable = true,
 				-- Automatically jump forward to textobj, similar to targets.vim
