@@ -21,10 +21,10 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		config = require("config.telescope").setup(),
 	})
-	use({
-		"ray-x/lsp_signature.nvim",
-		config = require("config.lsp_signature").setup(),
-	})
+	-- use({
+	-- 	"ray-x/lsp_signature.nvim",
+	-- 	config = require("config.lsp_signature").setup(),
+	-- })
 	use({
 		"is0n/fm-nvim",
 		config = require("config.fm-nvim").setup(),
@@ -69,11 +69,12 @@ return require("packer").startup(function(use)
 	use("AndrewRadev/splitjoin.vim")
 	use("matze/vim-move")
 	use("inside/vim-search-pulse")
-	use("kana/vim-textobj-user")
-	use("rhysd/vim-textobj-anyblock")
-	use("chaoren/vim-wordmotion")
-	use("kana/vim-arpeggio")
+	-- use("kana/vim-textobj-user")
+	-- use("rhysd/vim-textobj-anyblock")
+	-- use("chaoren/vim-wordmotion")
+	-- use("kana/vim-arpeggio")
 	-- use("andymass/vim-matchup")
+
 	-- use("windwp/nvim-autopairs")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
 	-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
