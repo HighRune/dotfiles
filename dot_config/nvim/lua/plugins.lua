@@ -10,12 +10,12 @@ return require("packer").startup(function(use)
 	use({
 		"neovim/nvim-lspconfig",
 		"williamboman/nvim-lsp-installer",
-		-- config = "require('config.lsp').setup()",
+		config = "require('config.lsp').setup()",
 	})
 	use({
 		"ms-jpq/coq_nvim",
 		branch = "coq",
-		-- config = require("config.coq").setup(),
+		config = require("config.coq").setup(),
 	})
 	use({
 		"nvim-telescope/telescope.nvim",
