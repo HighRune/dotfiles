@@ -72,7 +72,7 @@ return require("packer").startup(function(use)
 	-- use("kana/vim-textobj-user")
 	-- use("rhysd/vim-textobj-anyblock")
 	-- use("chaoren/vim-wordmotion")
-	-- use("kana/vim-arpeggio")
+	use("kana/vim-arpeggio")
 	-- use("andymass/vim-matchup")
 
 	-- use("windwp/nvim-autopairs")
