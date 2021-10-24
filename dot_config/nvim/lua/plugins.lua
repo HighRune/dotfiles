@@ -29,11 +29,6 @@ return require("packer").startup(function(use)
 		"is0n/fm-nvim",
 		config = require("config.fm-nvim").setup(),
 	})
-	-- use("nvim-treesitter/nvim-treesitter-textobjects")
-	-- use("RRethy/nvim-treesitter-textsubjects")
-	-- use("nvim-treesitter/playground")
-	-- use("windwp/nvim-ts-autotag")
-	-- use("itchyny/vim-cursorword")
 	use({
 		"lewis6991/gitsigns.nvim",
 		config = function()
@@ -56,6 +51,10 @@ return require("packer").startup(function(use)
 		"lukas-reineke/indent-blankline.nvim",
 		config = require("config.indent-blankline").setup(),
 	})
+	use("nvim-treesitter/nvim-treesitter-textobjects")
+	use("nvim-treesitter/playground")
+	use("windwp/nvim-ts-autotag")
+	use("itchyny/vim-cursorword")
 	use("romgrk/barbar.nvim")
 	use("folke/tokyonight.nvim")
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
@@ -73,6 +72,7 @@ return require("packer").startup(function(use)
 	use("chaoren/vim-wordmotion")
 	use("kana/vim-arpeggio")
 
+	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use("AndrewRadev/sideways.vim")
 	-- use("windwp/nvim-autopairs")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
