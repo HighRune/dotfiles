@@ -17,10 +17,10 @@ return require("packer").startup(function(use)
 	-- 	branch = "coq",
 	-- 	config = require("config.coq").setup(),
 	-- })
-	-- use({
-	-- 	"nvim-telescope/telescope.nvim",
-	-- 	config = require("config.telescope").setup(),
-	-- })
+	use({
+		"nvim-telescope/telescope.nvim",
+		-- config = require("config.telescope").setup(),
+	})
 	-- use({
 	-- 	"ray-x/lsp_signature.nvim",
 	-- 	config = require("config.lsp_signature").setup(),
