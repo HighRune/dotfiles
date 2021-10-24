@@ -10,9 +10,7 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"nvim-telescope/telescope.nvim",
-		config = function()
-			require("config.telescope")
-		end,
+		config = require("config.telescope").setup(),
 	})
 	use({
 		"ray-x/lsp_signature.nvim",
