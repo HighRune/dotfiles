@@ -1,4 +1,3 @@
-local function setup()
 require("telescope").setup({
 	defaults = {
 		layout_strategy = "vertical",
@@ -14,6 +13,3 @@ require("telescope").setup({
 		},
 	},
 })
-end
-
-return { setup = setup }
