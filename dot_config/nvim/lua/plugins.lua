@@ -71,9 +71,9 @@ return require("packer").startup(function(use)
 	use("rhysd/vim-textobj-anyblock")
 	use("chaoren/vim-wordmotion")
 	use("kana/vim-arpeggio")
+	use("AndrewRadev/sideways.vim")
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
-	-- use("AndrewRadev/sideways.vim")
 	-- use("windwp/nvim-autopairs")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
 	-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
