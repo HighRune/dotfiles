@@ -17,10 +17,10 @@ return require("packer").startup(function(use)
 	-- 	branch = "coq",
 	-- 	config = require("config.coq").setup(),
 	-- })
-	-- use({
-	-- 	"nvim-telescope/telescope.nvim",
-	-- 	config = require("config.telescope").setup(),
-	-- })
+	use({
+		"nvim-telescope/telescope.nvim",
+		config = require("config.telescope").setup(),
+	})
 	-- use({
 	-- 	"ray-x/lsp_signature.nvim",
 	-- 	config = require("config.lsp_signature").setup(),
@@ -63,7 +63,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-commentary")
 	-- use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("tommcdo/vim-lion")
-	use("p00f/nvim-ts-rainbow")
+	-- use("p00f/nvim-ts-rainbow")
 	use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
 	use("AndrewRadev/sideways.vim")
 	use("AndrewRadev/splitjoin.vim")
