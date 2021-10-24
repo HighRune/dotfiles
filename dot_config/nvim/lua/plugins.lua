@@ -4,7 +4,7 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		-- config = require("config.treesitter").setup(),
+		config = require("config.treesitter").setup(),
 		run = ":TSUpdate",
 	})
 	-- use({
