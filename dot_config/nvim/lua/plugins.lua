@@ -9,6 +9,13 @@ return require("packer").startup(function(use)
 		run = ":TSUpdate",
 		-- branch = "0.5-compat",
 	})
+  use({
+    "nvim-telescope/telescope.nvim",
+    config = function()
+      require("config.telescope")
+    end,
+  })
+
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("RRethy/nvim-treesitter-textsubjects")
 	use("nvim-treesitter/playground")
@@ -52,11 +59,6 @@ return require("packer").startup(function(use)
 	use("tommcdo/vim-lion")
 	use("p00f/nvim-ts-rainbow")
 	use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
-	use({ "nvim-telescope/telescope.nvim", config = 
-		config = function()
-			require("config.telescope")
-		end,
- })
 	-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
 	use("AndrewRadev/sideways.vim")
 	use("AndrewRadev/splitjoin.vim")
