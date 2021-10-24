@@ -52,28 +52,28 @@ return require("packer").startup(function(use)
 			require("numb").setup()
 		end,
 	})
-	-- use({
-	-- 	"lukas-reineke/indent-blankline.nvim",
-	-- 	config = require("config.indent-blankline").setup(),
-	-- })
+	use({
+		"lukas-reineke/indent-blankline.nvim",
+		config = require("config.indent-blankline").setup(),
+	})
 	use("romgrk/barbar.nvim")
 	use("folke/tokyonight.nvim")
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use("sbdchd/neoformat")
 	use("tpope/vim-commentary")
-	-- use("JoosepAlviste/nvim-ts-context-commentstring")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("tommcdo/vim-lion")
-	-- use("p00f/nvim-ts-rainbow")
+	use("p00f/nvim-ts-rainbow")
 	use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
 	use("AndrewRadev/sideways.vim")
 	use("AndrewRadev/splitjoin.vim")
 	use("matze/vim-move")
 	use("inside/vim-search-pulse")
-	-- use("kana/vim-textobj-user")
-	-- use("rhysd/vim-textobj-anyblock")
-	-- use("chaoren/vim-wordmotion")
-	-- use("kana/vim-arpeggio")
-	-- use("andymass/vim-matchup")
+	use("kana/vim-textobj-user")
+	use("rhysd/vim-textobj-anyblock")
+	use("chaoren/vim-wordmotion")
+	use("kana/vim-arpeggio")
+	use("andymass/vim-matchup")
 
 	-- use("windwp/nvim-autopairs")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
