@@ -52,9 +52,7 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			require("config.indent-blankline")
-		end,
+		config = require("config.indent-blankline").setup(),
 	})
 	use("romgrk/barbar.nvim")
 	use("folke/tokyonight.nvim")
