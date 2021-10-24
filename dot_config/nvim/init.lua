@@ -140,4 +140,5 @@ api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -------------------- andymass/vim-matchup
-cmd("let g:matchup_where_enabled = 0")
+-- cmd("let g:matchup_where_enabled = 0")
+cmd("let g:matchup_where_separator = ''")
