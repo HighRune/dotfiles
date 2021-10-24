@@ -52,8 +52,13 @@ return require("packer").startup(function(use)
 			require("numb").setup()
 		end,
 	})
+	-- use({
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	config = function()
+	-- 		require("indent-blankline")
+	-- 	end,
+	-- })
 	use("romgrk/barbar.nvim")
-	use("lukas-reineke/indent-blankline.nvim")
 	use("folke/tokyonight.nvim")
 	use({
 		"neovim/nvim-lspconfig",
