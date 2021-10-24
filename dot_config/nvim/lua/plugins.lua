@@ -20,6 +20,12 @@ return require("packer").startup(function(use)
 			require("config.lsp_signature")
 		end,
 	})
+	use({
+		"is0n/fm-nvim",
+		config = function()
+			require("config.fm-nvim")
+		end,
+	})
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("RRethy/nvim-treesitter-textsubjects")
 	use("nvim-treesitter/playground")
@@ -70,7 +76,6 @@ return require("packer").startup(function(use)
 	-- use("tpope/vim-surround")
 	-- use("terryma/vim-expand-region")
 	use("inside/vim-search-pulse")
-	use("is0n/fm-nvim")
 	use("kana/vim-textobj-user")
 	use("rhysd/vim-textobj-anyblock")
 	use("chaoren/vim-wordmotion")
