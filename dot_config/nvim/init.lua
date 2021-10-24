@@ -183,26 +183,6 @@ require("indent_blankline").setup({
 	buftype_exclude = { "terminal", "nofile" },
 })
 
--------------------- nvim-telescope/telescope.nvim
-require("telescope").setup({
-	defaults = {
-		layout_strategy = "vertical",
-		layout_config = {
-			preview_cutoff = 0,
-			height = 0.999,
-			width = 0.999,
-		},
-		mappings = {
-			i = {
-				["<esc>"] = require("telescope.actions").close,
-			},
-		},
-	},
-})
-api.nvim_set_keymap("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
-api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
-api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
-
 -------------------- romgrk/barbar.nvim
 api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
 api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
