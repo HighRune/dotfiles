@@ -36,25 +36,25 @@ return require("packer").startup(function(use)
 	-- use("itchyny/vim-cursorword")
 	use({
 		"lewis6991/gitsigns.nvim",
-		-- config = function()
-		-- 	require("gitsigns").setup()
-		-- end,
+		config = function()
+			require("gitsigns").setup()
+		end,
 	})
 	use({
 		"norcalli/nvim-colorizer.lua",
-		-- config = function()
-		-- 	require("colorizer").setup()
-		-- end,
+		config = function()
+			require("colorizer").setup()
+		end,
 	})
 	use({
 		"nacro90/numb.nvim",
-		-- config = function()
-		-- 	require("numb").setup()
-		-- end,
+		config = function()
+			require("numb").setup()
+		end,
 	})
 	use({
 		"lukas-reineke/indent-blankline.nvim",
-		-- config = require("config.indent-blankline").setup(),
+		config = require("config.indent-blankline").setup(),
 	})
 	use("romgrk/barbar.nvim")
 	use("folke/tokyonight.nvim")
