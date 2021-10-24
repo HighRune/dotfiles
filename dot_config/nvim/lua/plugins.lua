@@ -14,6 +14,12 @@ return require("packer").startup(function(use)
 			require("config.telescope")
 		end,
 	})
+	use({
+		"ray-x/lsp_signature.nvim",
+		config = function()
+			require("config.lsp_signature")
+		end,
+	})
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("RRethy/nvim-treesitter-textsubjects")
 	use("nvim-treesitter/playground")
@@ -50,7 +56,6 @@ return require("packer").startup(function(use)
 	})
 	use({ "ms-jpq/coq_nvim", branch = "coq" })
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
-	use("ray-x/lsp_signature.nvim")
 	use("sbdchd/neoformat")
 	use("tpope/vim-commentary")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
