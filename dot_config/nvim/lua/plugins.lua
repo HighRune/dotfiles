@@ -34,28 +34,28 @@ return require("packer").startup(function(use)
 	-- use("nvim-treesitter/playground")
 	-- use("windwp/nvim-ts-autotag")
 	-- use("itchyny/vim-cursorword")
-	-- use({
-	-- 	"lewis6991/gitsigns.nvim",
-	-- 	config = function()
-	-- 		require("gitsigns").setup()
-	-- 	end,
-	-- })
-	-- use({
-	-- 	"norcalli/nvim-colorizer.lua",
-	-- 	config = function()
-	-- 		require("colorizer").setup()
-	-- 	end,
-	-- })
-	-- use({
-	-- 	"nacro90/numb.nvim",
-	-- 	config = function()
-	-- 		require("numb").setup()
-	-- 	end,
-	-- })
-	-- use({
-	-- 	"lukas-reineke/indent-blankline.nvim",
-	-- 	config = require("config.indent-blankline").setup(),
-	-- })
+	use({
+		"lewis6991/gitsigns.nvim",
+		-- config = function()
+		-- 	require("gitsigns").setup()
+		-- end,
+	})
+	use({
+		"norcalli/nvim-colorizer.lua",
+		-- config = function()
+		-- 	require("colorizer").setup()
+		-- end,
+	})
+	use({
+		"nacro90/numb.nvim",
+		-- config = function()
+		-- 	require("numb").setup()
+		-- end,
+	})
+	use({
+		"lukas-reineke/indent-blankline.nvim",
+		-- config = require("config.indent-blankline").setup(),
+	})
 	use("romgrk/barbar.nvim")
 	use("folke/tokyonight.nvim")
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
@@ -69,9 +69,9 @@ return require("packer").startup(function(use)
 	use("AndrewRadev/splitjoin.vim")
 	use("matze/vim-move")
 	use("inside/vim-search-pulse")
-	-- use("kana/vim-textobj-user")
-	-- use("rhysd/vim-textobj-anyblock")
-	-- use("chaoren/vim-wordmotion")
+	use("kana/vim-textobj-user")
+	use("rhysd/vim-textobj-anyblock")
+	use("chaoren/vim-wordmotion")
 	use("kana/vim-arpeggio")
 	-- use("andymass/vim-matchup")
 
