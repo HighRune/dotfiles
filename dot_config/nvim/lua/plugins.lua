@@ -52,10 +52,10 @@ return require("packer").startup(function(use)
 			require("numb").setup()
 		end,
 	})
-	use({
-		"lukas-reineke/indent-blankline.nvim",
-		config = require("config.indent-blankline").setup(),
-	})
+	-- use({
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	config = require("config.indent-blankline").setup(),
+	-- })
 	use("romgrk/barbar.nvim")
 	use("folke/tokyonight.nvim")
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
