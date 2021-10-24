@@ -4,7 +4,7 @@ return require("packer").startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		config = require("config.treesitter").setup(),
+		-- config = require("config.treesitter").setup(),
 		run = ":TSUpdate",
 	})
 	-- use({
@@ -19,7 +19,7 @@ return require("packer").startup(function(use)
 	-- })
 	use({
 		"nvim-telescope/telescope.nvim",
-		-- config = require("config.telescope").setup(),
+		config = require("config.telescope").setup(),
 	})
 	-- use({
 	-- 	"ray-x/lsp_signature.nvim",
