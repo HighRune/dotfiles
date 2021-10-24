@@ -29,9 +29,9 @@ return require("packer").startup(function(use)
 		"is0n/fm-nvim",
 		config = require("config.fm-nvim").setup(),
 	})
-	use("nvim-treesitter/nvim-treesitter-textobjects")
-	use("RRethy/nvim-treesitter-textsubjects")
-	use("nvim-treesitter/playground")
+	-- use("nvim-treesitter/nvim-treesitter-textobjects")
+	-- use("RRethy/nvim-treesitter-textsubjects")
+	-- use("nvim-treesitter/playground")
 	use("windwp/nvim-ts-autotag")
 	use("itchyny/vim-cursorword")
 	use({
