@@ -11,7 +11,7 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"nvim-telescope/telescope.nvim",
-		config = require("config.telescope").setup(),
+		config = function() require("config.telescope") end,,
 	})
 
 	use("nvim-treesitter/nvim-treesitter-textobjects")
