@@ -14,9 +14,7 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"ray-x/lsp_signature.nvim",
-		config = function()
-			require("config.lsp_signature")
-		end,
+		config = require("config.lsp_signature").setup(),
 	})
 	use({
 		"is0n/fm-nvim",
