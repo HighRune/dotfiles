@@ -38,7 +38,7 @@ local function setup()
 					["<c-k>"] = "@parameter.inner",
 				},
 				swap_previous = {
-					["<s-j>"] = "@parameter.inner",
+					["<c-j>"] = "@parameter.inner",
 				},
 			},
 			select = {
