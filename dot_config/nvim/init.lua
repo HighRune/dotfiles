@@ -58,7 +58,7 @@ cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent ! ! chezmoi add ~/.config
 -- Disable automatic comment insertion
 cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]])
 
-api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
+-- api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
 api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
 api.nvim_set_keymap("n", "<c-u>", "5k", opts)
