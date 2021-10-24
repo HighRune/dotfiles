@@ -23,11 +23,11 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"ray-x/lsp_signature.nvim",
-		-- config = require("config.lsp_signature").setup(),
+		config = require("config.lsp_signature").setup(),
 	})
 	use({
 		"is0n/fm-nvim",
-		-- config = require("config.fm-nvim").setup(),
+		config = require("config.fm-nvim").setup(),
 	})
 	-- use("nvim-treesitter/nvim-treesitter-textobjects")
 	-- use("RRethy/nvim-treesitter-textsubjects")
