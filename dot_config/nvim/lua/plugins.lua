@@ -73,7 +73,6 @@ return require("packer").startup(function(use)
 	use("rhysd/vim-textobj-anyblock")
 	use("chaoren/vim-wordmotion")
 	use("kana/vim-arpeggio")
-	use("andymass/vim-matchup")
 
 	-- use("windwp/nvim-autopairs")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
