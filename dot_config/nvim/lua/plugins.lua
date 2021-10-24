@@ -18,9 +18,7 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"is0n/fm-nvim",
-		config = function()
-			require("config.fm-nvim")
-		end,
+		config = require("config.fm-nvim").setup(),
 	})
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("RRethy/nvim-treesitter-textsubjects")
