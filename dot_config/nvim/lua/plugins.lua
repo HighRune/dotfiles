@@ -9,12 +9,10 @@ return require("packer").startup(function(use)
 		run = ":TSUpdate",
 		-- branch = "0.5-compat",
 	})
-  use({
-    "nvim-telescope/telescope.nvim",
-    config = function()
-      require("config.telescope")
-    end,
-  })
+	use({
+		"nvim-telescope/telescope.nvim",
+		config = require("config.telescope").setup(),
+	})
 
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("RRethy/nvim-treesitter-textsubjects")
