@@ -90,21 +90,6 @@ cmd([[
 -- Format on save
 -- vim.api.nvim_command([[autocmd BufWritePre * lua vim.lsp.buf.formatting_seq_sync()]])
 
--------------------- ms-jpq/coq_nvim
-g.coq_settings = {
-	auto_start = "shut-up",
-	display = {
-		preview = {
-			positions = {
-				east = 1,
-				north = 2,
-				south = 3,
-				west = 4,
-			},
-		},
-	},
-}
-
 -------------------- sbdchd/neoformat
 cmd("let g:neoformat_enabled_lua = ['stylua']")
 -- cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
