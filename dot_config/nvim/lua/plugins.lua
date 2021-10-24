@@ -52,13 +52,8 @@ return require("packer").startup(function(use)
 	use("tommcdo/vim-lion")
 	use("p00f/nvim-ts-rainbow")
 	use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
+	use({ "nvim-telescope/telescope.nvim", config = "require('config.telescope').setup()" })
 	-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
-	use({
-		"nvim-telescope/telescope.nvim",
-		config = function()
-			require("config.telescope")
-		end,
-	})
 	use("AndrewRadev/sideways.vim")
 	use("AndrewRadev/splitjoin.vim")
 	use("matze/vim-move")
