@@ -7,11 +7,11 @@ return require("packer").startup(function(use)
 		config = require("config.treesitter").setup(),
 		run = ":TSUpdate",
 	})
-	-- use({
-	-- 	"neovim/nvim-lspconfig",
-	-- 	"williamboman/nvim-lsp-installer",
-	-- 	config = "require('config.lsp').setup()",
-	-- })
+	use({
+		"neovim/nvim-lspconfig",
+		"williamboman/nvim-lsp-installer",
+		-- config = "require('config.lsp').setup()",
+	})
 	-- use({
 	-- 	"ms-jpq/coq_nvim",
 	-- 	branch = "coq",
