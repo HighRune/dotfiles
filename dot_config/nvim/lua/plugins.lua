@@ -2,11 +2,11 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
-	-- use({
-	-- 	"nvim-treesitter/nvim-treesitter",
-	-- 	config = require("config.treesitter").setup(),
-	-- 	run = ":TSUpdate",
-	-- })
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		config = require("config.treesitter").setup(),
+		run = ":TSUpdate",
+	})
 	-- use({
 	-- 	"neovim/nvim-lspconfig",
 	-- 	"williamboman/nvim-lsp-installer",
