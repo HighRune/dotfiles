@@ -2,25 +2,25 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
-	use({
-		"nvim-treesitter/nvim-treesitter",
-		config = require("config.treesitter").setup(),
-		run = ":TSUpdate",
-	})
-	use({
-		"neovim/nvim-lspconfig",
-		"williamboman/nvim-lsp-installer",
-		config = "require('config.lsp').setup()",
-	})
-	use({
-		"ms-jpq/coq_nvim",
-		branch = "coq",
-		config = require("config.coq").setup(),
-	})
-	use({
-		"nvim-telescope/telescope.nvim",
-		config = require("config.telescope").setup(),
-	})
+	-- use({
+	-- 	"nvim-treesitter/nvim-treesitter",
+	-- 	config = require("config.treesitter").setup(),
+	-- 	run = ":TSUpdate",
+	-- })
+	-- use({
+	-- 	"neovim/nvim-lspconfig",
+	-- 	"williamboman/nvim-lsp-installer",
+	-- 	config = "require('config.lsp').setup()",
+	-- })
+	-- use({
+	-- 	"ms-jpq/coq_nvim",
+	-- 	branch = "coq",
+	-- 	config = require("config.coq").setup(),
+	-- })
+	-- use({
+	-- 	"nvim-telescope/telescope.nvim",
+	-- 	config = require("config.telescope").setup(),
+	-- })
 	-- use({
 	-- 	"ray-x/lsp_signature.nvim",
 	-- 	config = require("config.lsp_signature").setup(),
