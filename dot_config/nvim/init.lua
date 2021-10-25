@@ -104,10 +104,6 @@ api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
 api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
 api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 
--- -------------------- AndrewRadev/sideways.vim
--- api.nvim_set_keymap("n", "<c-h>", ":SidewaysLeft<cr>", opts)
-api.nvim_set_keymap("n", "<c-l>", ":SidewaysRight<cr>", opts)
-
 -------------------- AndrewRadev/splitjoin.vim
 api.nvim_set_keymap("n", "gj", ":SplitjoinJoin<cr>", opts)
 api.nvim_set_keymap("n", "gk", ":SplitjoinSplit<cr>", opts)
@@ -138,3 +134,7 @@ api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -------------------- matze/vim-move
 cmd("let g:move_key_modifier = 'S'")
+
+-- -------------------- AndrewRadev/sideways.vim
+api.nvim_set_keymap("n", "<c-h>", ":SidewaysLeft<cr>", opts)
+api.nvim_set_keymap("n", "<c-l>", ":SidewaysRight<cr>", opts)
