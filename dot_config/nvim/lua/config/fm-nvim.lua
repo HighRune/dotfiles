@@ -12,8 +12,8 @@ local function setup()
 		-- Mappings used inside the floating window
 		mappings = {
 			vert_split = "<C-v>",
-			horz_split = "<C-h>",
-			tabedit = "<C-h>",
+			-- horz_split = "<C-h>",
+			-- tabedit = "<C-h>",
 			edit = "<C-e>",
 		},
 	})
