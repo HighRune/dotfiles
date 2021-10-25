@@ -7,15 +7,39 @@ local function setup()
 		indent = {
 			enable = true,
 		},
-		incremental_selection = {
-			enable = true,
-			keymaps = {
-				init_selection = "<cr>",
-				node_incremental = "<cr>",
-				-- scope_incremental = "<cr>",
-				node_decremental = "<s-cr>",
-			},
-		},
+		require'nvim-treesitter.configs'.setup {
+  textobjects = {
+    move = {
+      enable = true,
+      set_jumps = true, -- whether to set jumps in the jumplist
+      goto_next_start = {
+        ["<cr>"] = "@function.outer",
+        ["<cr>"] = "@class.outer",
+      },
+      goto_next_end = {
+        ["<cr>"] = "@function.outer",
+        ["<cr>"] = "@class.outer",
+      },
+      goto_previous_start = {
+        ["<s-cr>"] = "@function.outer",
+        ["<s-cr>"] = "@class.outer",
+      },
+      goto_previous_end = {
+        ["<s-cr>"] = "@function.outer",
+        ["<s-cr>"] = "@class.outer",
+      },
+    },
+  },
+}
+		-- incremental_selection = {
+		-- 	enable = true,
+		-- 	keymaps = {
+		-- 		init_selection = "<cr>",
+		-- 		node_incremental = "<cr>",
+		-- 		-- scope_incremental = "<cr>",
+		-- 		node_decremental = "<s-cr>",
+		-- 	},
+		-- },
 		-- JoosepAlviste/nvim-ts-context-commentstring
 		context_commentstring = {
 			enable = true,
