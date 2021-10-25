@@ -7,15 +7,6 @@ local function setup()
 		indent = {
 			enable = true,
 		},
-		-- incremental_selection = {
-		-- 	enable = true,
-		-- 	keymaps = {
-		-- 		init_selection = "<cr>",
-		-- 		node_incremental = "<cr>",
-		-- 		-- scope_incremental = "<cr>",
-		-- 		node_decremental = "<s-cr>",
-		-- 	},
-		-- },
 		-- JoosepAlviste/nvim-ts-context-commentstring
 		context_commentstring = {
 			enable = true,
@@ -30,37 +21,17 @@ local function setup()
 			extended_mode = true,
 			max_file_lines = nil,
 		},
+		-- incremental_selection = {
+		-- 	enable = true,
+		-- 	keymaps = {
+		-- 		init_selection = "<cr>",
+		-- 		node_incremental = "<cr>",
+		-- 		-- scope_incremental = "<cr>",
+		-- 		node_decremental = "<s-cr>",
+		-- 	},
+		-- },
 		-- nvim-treesitter/nvim-treesitter-textobjects
 		textobjects = {
-			-- swap = {
-			-- 	enable = true,
-			-- 	swap_next = {
-			-- 		["<c-k>"] = "@parameter.inner",
-			-- 	},
-			-- 	swap_previous = {
-			-- 		["<c-j>"] = "@parameter.inner",
-			-- 	},
-			-- },
-			move = {
-				enable = true,
-				set_jumps = true, -- whether to set jumps in the jumplist
-				goto_next_start = {
-					["<cr>"] = "@function.outer",
-					["<cr>"] = "@class.outer",
-				},
-				goto_next_end = {
-					["<cr>"] = "@function.outer",
-					["<cr>"] = "@class.outer",
-				},
-				goto_previous_start = {
-					["<s-cr>"] = "@function.outer",
-					["<s-cr>"] = "@class.outer",
-				},
-				goto_previous_end = {
-					["<s-cr>"] = "@function.outer",
-					["<s-cr>"] = "@class.outer",
-				},
-			},
 			select = {
 				enable = true,
 				-- Automatically jump forward to textobj, similar to targets.vim
@@ -79,6 +50,25 @@ local function setup()
 					["il"] = "@loop.inner",
 				},
 			},
+			-- swap = {
+			-- 	enable = true,
+			-- 	swap_next = {
+			-- 		["<c-k>"] = "@parameter.inner",
+			-- 	},
+			-- 	swap_previous = {
+			-- 		["<c-j>"] = "@parameter.inner",
+			-- 	},
+			-- },
+			-- move = {
+			-- 	enable = true,
+			-- 	set_jumps = true, -- whether to set jumps in the jumplist
+			-- 	goto_next_start = {
+			-- 		["<cr>"] = "@function.outer",
+			-- 	},
+			-- 	goto_previous_start = {
+			-- 		["<s-cr>"] = "@function.outer",
+			-- 	},
+			-- },
 		},
 		-- nvim-treesitter/playground
 		playground = {
