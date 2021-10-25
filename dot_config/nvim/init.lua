@@ -135,6 +135,17 @@ api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 -------------------- matze/vim-move
 cmd("let g:move_key_modifier = 'S'")
 
--- -------------------- AndrewRadev/sideways.vim
+-------------------- AndrewRadev/sideways.vim
 api.nvim_set_keymap("n", "<c-h>", ":SidewaysLeft<cr>", opts)
 api.nvim_set_keymap("n", "<c-l>", ":SidewaysRight<cr>", opts)
+
+-------------------- ms-jpq/coq_nvim
+vim.cmd([[
+let g:coq_settings = { "keymap.recommended": v:false }
+ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>" : "\<Esc>"
+ino <silent><expr> <C-c>   pumvisible() ? "\<C-e><C-c>" : "\<C-c>"
+ino <silent><expr> <BS>    pumvisible() ? "\<C-e><BS>"  : "\<BS>"
+ino <silent><expr> <CR>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "\<CR>"
+ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
+]])
