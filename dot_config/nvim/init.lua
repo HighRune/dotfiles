@@ -51,8 +51,8 @@ o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing e
 o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 o.hidden = true -- Allow switching buffers with unsaved changes
-cmd([[au FocusGained,BufEnter * :silent! !]]) -- Reload when entering the buffer or gaining focus
-cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or losing focus
+-- cmd([[au FocusGained,BufEnter * :silent! !]]) -- Reload when entering the buffer or gaining focus
+-- cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or losing focus
 cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=100}]]) -- highlight a selection on yank
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent ! ! chezmoi add ~/.config/cheatsheet.md]])
 -- Disable automatic comment insertion
