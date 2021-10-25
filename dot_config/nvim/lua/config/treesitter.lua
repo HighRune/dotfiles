@@ -50,6 +50,16 @@ local function setup()
 					["il"] = "@loop.inner",
 				},
 			},
+			move = {
+				enable = true,
+				set_jumps = true, -- whether to set jumps in the jumplist
+				goto_next_start = {
+					["<cr>"] = "@function.outer",
+				},
+				goto_previous_start = {
+					["<s-cr>"] = "@function.outer",
+				},
+			},
 			-- swap = {
 			-- 	enable = true,
 			-- 	swap_next = {
@@ -57,16 +67,6 @@ local function setup()
 			-- 	},
 			-- 	swap_previous = {
 			-- 		["<c-j>"] = "@parameter.inner",
-			-- 	},
-			-- },
-			-- move = {
-			-- 	enable = true,
-			-- 	set_jumps = true, -- whether to set jumps in the jumplist
-			-- 	goto_next_start = {
-			-- 		["<cr>"] = "@function.outer",
-			-- 	},
-			-- 	goto_previous_start = {
-			-- 		["<s-cr>"] = "@function.outer",
 			-- 	},
 			-- },
 		},
