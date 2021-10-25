@@ -67,8 +67,8 @@ api.nvim_set_keymap("", "Q", "<Nop>", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
-cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent \! \! chezmoi apply --source-path %]])
-cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent \! \! chezmoi add ~/.config/cheatsheet.md]])
+cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent! !chezmoi apply --source-path %]])
+cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent! !chezmoi add ~/.config/cheatsheet.md]])
 
 -------------------- PLUGINS
 
