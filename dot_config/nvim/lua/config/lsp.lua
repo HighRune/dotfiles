@@ -17,10 +17,10 @@ local function setup()
 			{ "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>" },
 			{ "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>" },
 			{ "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>" },
-			{ "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>" },
-			{ "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
-			{ "n", "<leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>" },
-			{ "n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>" },
+			-- { "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>" },
+			-- { "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
+			-- { "n", "<leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>" },
+			-- { "n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>" },
 		}
 
 		local opts = { noremap = true, silent = true }
