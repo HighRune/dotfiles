@@ -140,4 +140,4 @@ api.nvim_set_keymap("n", "<c-h>", ":SidewaysLeft<cr>", opts)
 api.nvim_set_keymap("n", "<c-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- ms-jpq/coq_nvim
-cmd([[let g:coq_settings = { 'keymap.jump_to_mark' : '<leader>m' }]])
+g.coq_settings.keymap.jump_to_mark = "<leader>m"
