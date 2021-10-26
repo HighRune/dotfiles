@@ -136,5 +136,5 @@ api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 cmd("let g:move_key_modifier = 'S'")
 
 -------------------- AndrewRadev/sideways.vim
-api.nvim_set_keymap("n", "<c-h>", ":SidewaysLeft<cr>", opts)
-api.nvim_set_keymap("n", "<c-l>", ":SidewaysRight<cr>", opts)
+-- api.nvim_set_keymap("n", "<c-h>", ":SidewaysLeft<cr>", opts)
+-- api.nvim_set_keymap("n", "<c-l>", ":SidewaysRight<cr>", opts)
