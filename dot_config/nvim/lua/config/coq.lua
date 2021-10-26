@@ -11,6 +11,9 @@ local function setup()
 				},
 			},
 		},
+		keymap = {
+			jump_to_mark = "<leader>m",
+		},
 	}
 end
 
