@@ -11,9 +11,9 @@ local function setup()
 				},
 			},
 		},
-		-- keymap = {
-		-- jump_to_mark = "<leader>m",
-		-- },
+		keymap = {
+			jump_to_mark = "gm",
+		},
 	}
 end
 
