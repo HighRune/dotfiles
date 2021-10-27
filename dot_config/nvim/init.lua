@@ -133,7 +133,7 @@ api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -------------------- matze/vim-move
-cmd("let g:move_key_modifier = 'S'")
+-- cmd("let g:move_key_modifier = 'S'")
 
 -------------------- AndrewRadev/sideways.vim
 api.nvim_set_keymap("n", "<c-h>", ":SidewaysLeft<cr>", opts)
