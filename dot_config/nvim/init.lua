@@ -105,8 +105,8 @@ api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
 api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 
 -------------------- AndrewRadev/splitjoin.vim
--- api.nvim_set_keymap("n", "gj", ":SplitjoinJoin<cr>", opts)
--- api.nvim_set_keymap("n", "gk", ":SplitjoinSplit<cr>", opts)
+api.nvim_set_keymap("n", "gj", ":SplitjoinJoin<cr>", opts)
+api.nvim_set_keymap("n", "gk", ":SplitjoinSplit<cr>", opts)
 
 -------------------- terryma/vim-expand-region
 -- cmd([[
