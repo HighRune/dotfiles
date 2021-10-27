@@ -72,6 +72,7 @@ return require("packer").startup(function(use)
 	use("chaoren/vim-wordmotion")
 	use("kana/vim-arpeggio")
 	use("AndrewRadev/sideways.vim")
+	use("svermeulen/vim-yoink")
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use("windwp/nvim-autopairs")
