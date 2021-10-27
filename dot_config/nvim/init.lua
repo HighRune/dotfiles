@@ -142,8 +142,8 @@ api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- svermeulen/vim-yoink
 cmd([[
-nmap <cr> <plug>(YoinkPostPasteSwapBack)
-nmap <s-cr> <plug>(YoinkPostPasteSwapForward)
+nmap <s-cr> <plug>(YoinkPostPasteSwapBack)
+nmap <cr> <plug>(YoinkPostPasteSwapForward)
 
 nmap p <plug>(YoinkPaste_p)
 nmap P <plug>(YoinkPaste_P)
