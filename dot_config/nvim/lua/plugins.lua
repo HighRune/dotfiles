@@ -9,6 +9,8 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"neovim/nvim-lspconfig",
+	})
+	use({
 		"williamboman/nvim-lsp-installer",
 		config = "require('config.lsp').setup()",
 	})
