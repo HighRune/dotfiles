@@ -12,7 +12,7 @@ local function setup()
 			},
 		},
 		keymap = {
-			jump_to_mark = "gm",
+			jump_to_mark = "<c-m>",
 		},
 	}
 end
