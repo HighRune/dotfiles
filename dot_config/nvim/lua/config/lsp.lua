@@ -3,7 +3,6 @@ local function setup()
 	-- Use an on_attach function to only map the following keys
 	-- after the language server attaches to the current buffer
 	local function on_attach(client, buffer)
-		print("Hello world")
 		local keymaps = {
 			{ "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>" },
 			{ "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>" },
@@ -18,7 +17,8 @@ local function setup()
 			{
 				"n",
 				"<leader>f",
-				"<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, nil, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' })<CR>",
+				"<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>",
+				-- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, nil, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' })<CR>",
 			},
 			{ "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>" },
 			{ "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>" },
