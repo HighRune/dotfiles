@@ -6,8 +6,8 @@ local opts = { noremap = true, silent = true }
 
 -------------------- STYLE
 
-cmd("autocmd ColorScheme * highlight NormalFloat guibg=none")
-cmd("autocmd ColorScheme * highlight FloatBorder guibg=none")
+cmd([[autocmd ColorScheme * highlight NormalFloat guibg=none]])
+cmd([[autocmd ColorScheme * highlight FloatBorder guifg=blue guibg=none]])
 
 g.tokyonight_style = "night"
 g.tokyonight_transparent = true
