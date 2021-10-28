@@ -33,6 +33,13 @@ local function setup()
 		for _, keymap in ipairs(keymaps) do
 			vim.api.nvim_buf_set_keymap(buffer, keymap[1], keymap[2], keymap[3], opts)
 		end
+
+		-- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+		-- 	update_in_insert = true,
+		-- 	virtual_text = {
+		-- 		source = "always",
+		-- 	},
+		-- })
 	end
 
 	local function on_attach_eslint(client, buffer)
