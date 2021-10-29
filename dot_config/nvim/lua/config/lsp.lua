@@ -38,16 +38,16 @@ local function setup()
 			update_in_insert = true,
 			virtual_text = {
 				source = "always",
-				-- prefix = "●",
+				prefix = "",
 			},
 		})
 
-		-- local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+		local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
 
-		-- for type, icon in pairs(signs) do
-		-- 	local hl = "LspDiagnosticsSign" .. type
-		-- 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-		-- end
+		for type, icon in pairs(signs) do
+			local hl = "LspDiagnosticsSign" .. type
+			vim.fn.sign_define(hl, { text = icon, texthl = hl })
+		end
 	end
 
 	local function on_attach_eslint(client, buffer)
