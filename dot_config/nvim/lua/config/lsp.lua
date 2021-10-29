@@ -22,8 +22,8 @@ local function setup()
 			},
 			{ "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>" },
 			{ "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>" },
-			-- { "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>" },
-			-- { "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
+			{ "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>" },
+			{ "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>" },
 			-- { "n", "<leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>" },
 			-- { "n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>" },
 		}
