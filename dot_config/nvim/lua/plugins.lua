@@ -73,7 +73,6 @@ return require("packer").startup(function(use)
 	use("kana/vim-arpeggio")
 	use("AndrewRadev/sideways.vim")
 	use("svermeulen/vim-yoink")
-	use("github/copilot.vim ")
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use("windwp/nvim-autopairs")
