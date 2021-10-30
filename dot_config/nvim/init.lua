@@ -141,10 +141,15 @@ api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- svermeulen/vim-yoink
-cmd([[
-nmap <cr> <plug>(YoinkPostPasteSwapBack)
-nmap <s-cr> <plug>(YoinkPostPasteSwapForward)
+-- api.nvim_set_keymap("n", "<TAB>", "", opts)
+-- api.nvim_set_keymap("n", "<S-TAB>", "", opts)
+-- nmap <tab> (<plug>(YoinkPostPasteSwapBack)) | :BufferNext<CR>
+-- nmap <s-tab> (<plug>(YoinkPostPasteSwapForward)) | :BufferPrevious<CR>
+-- nmap <tab> :execute "normal \<plug>(YoinkPostPasteSwapBack)"<cr> | "normal BufferPrevious"<cr>
+-- nmap <s-tab> :execute "normal \<plug>(YoinkPostPasteSwapForward)"<cr> | "normal BufferPrevious"<cr>
+vim.api.nvim_set_keymap("n", "<tab>", 'lua function() print("hello world, from lua") end', opts)
 
+cmd([[
 nmap p <plug>(YoinkPaste_p)
 nmap P <plug>(YoinkPaste_P)
 
