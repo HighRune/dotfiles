@@ -100,8 +100,8 @@ augroup END
 -- api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
 
 -------------------- romgrk/barbar.nvim
--- api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
--- api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
+api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
+api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
 api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
 
 -------------------- AndrewRadev/splitjoin.vim
@@ -146,8 +146,8 @@ api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 -- vim.api.nvim_set_keymap("n", "<tab>", 'lua function() print("hello world, from lua") end', opts)
 
 cmd([[
-nmap <tab> <plug>(YoinkPostPasteSwapBack)
-nmap <s-tab> <plug>(YoinkPostPasteSwapForward)
+nmap <c-n> <plug>(YoinkPostPasteSwapBack)
+nmap <c-p> <plug>(YoinkPostPasteSwapForward)
 
 " Also replace the default gp with yoink paste so we can toggle paste in this case too
 nmap gp <plug>(YoinkPaste_gp)
