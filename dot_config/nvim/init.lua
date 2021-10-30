@@ -141,17 +141,13 @@ api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- svermeulen/vim-yoink
--- api.nvim_set_keymap("n", "<TAB>", "", opts)
--- api.nvim_set_keymap("n", "<S-TAB>", "", opts)
--- nmap <tab> (<plug>(YoinkPostPasteSwapBack)) | :BufferNext<CR>
--- nmap <s-tab> (<plug>(YoinkPostPasteSwapForward)) | :BufferPrevious<CR>
--- nmap <tab> :execute "normal \<plug>(YoinkPostPasteSwapBack)"<cr> | "normal BufferPrevious"<cr>
--- nmap <s-tab> :execute "normal \<plug>(YoinkPostPasteSwapForward)"<cr> | "normal BufferPrevious"<cr>
-vim.api.nvim_set_keymap("n", "<tab>", 'lua function() print("hello world, from lua") end', opts)
+-- nmap <tab> :execute "normal \<plug>(YoinkPostPasteSwapBack)"<cr>
+-- nmap <s-tab> :execute "normal \<plug>(YoinkPostPasteSwapForward)"<cr>
+-- vim.api.nvim_set_keymap("n", "<tab>", 'lua function() print("hello world, from lua") end', opts)
 
 cmd([[
-nmap p <plug>(YoinkPaste_p)
-nmap P <plug>(YoinkPaste_P)
+nmap <tab> <plug>(YoinkPostPasteSwapBack)
+nmap <s-tab> <plug>(YoinkPostPasteSwapForward)
 
 " Also replace the default gp with yoink paste so we can toggle paste in this case too
 nmap gp <plug>(YoinkPaste_gp)
