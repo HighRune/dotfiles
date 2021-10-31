@@ -60,14 +60,11 @@ cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal formatoptions-=c formato
 
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("", "Q", "<Nop>", opts)
--- Scroll
 api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 api.nvim_set_keymap("n", "<c-d>", "5j", opts)
--- Move to the first or the last non-blank character of the line
 api.nvim_set_keymap("n", "<s-h>", "_", opts)
 api.nvim_set_keymap("n", "<s-l>", "g_", opts)
 api.nvim_set_keymap("n", "$", "g_", opts)
--- Terminal like keybindings
 api.nvim_set_keymap("i", "<c-a>", "<esc>I", opts)
 api.nvim_set_keymap("i", "<c-e>", "<end>", opts)
 
