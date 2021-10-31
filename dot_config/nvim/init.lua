@@ -103,9 +103,9 @@ augroup END
 -- api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
 
 -------------------- romgrk/barbar.nvim
-api.nvim_set_keymap("n", "<TAB>", ":BufferNext<CR>", opts)
-api.nvim_set_keymap("n", "<S-TAB>", ":BufferPrevious<CR>", opts)
-api.nvim_set_keymap("n", "<C-w>", ":BufferClose<CR>", opts)
+api.nvim_set_keymap("n", "<tab>", ":BufferNext<CR>", opts)
+api.nvim_set_keymap("n", "<s-tab>", ":BufferPrevious<CR>", opts)
+api.nvim_set_keymap("n", "<c-w>", ":BufferClose<CR>", opts)
 
 -------------------- AndrewRadev/splitjoin.vim
 api.nvim_set_keymap("n", "gj", ":SplitjoinJoin<cr>", opts)
