@@ -59,14 +59,15 @@ cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent ! ! chezmoi add ~/.config
 cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]])
 
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
--- api.nvim_set_keymap("n", "<PageUp>", "5k", opts)
--- api.nvim_set_keymap("n", "<PageDown>", "5j", opts)
+api.nvim_set_keymap("", "Q", "<Nop>", opts)
+-- Scroll
 api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 api.nvim_set_keymap("n", "<c-d>", "5j", opts)
-api.nvim_set_keymap("", "Q", "<Nop>", opts)
-api.nvim_set_keymap("n", "<s-h>", "^", opts)
+-- Move to the first or the last non-blank character of the line
+api.nvim_set_keymap("n", "<s-h>", "_", opts)
 api.nvim_set_keymap("n", "<s-l>", "g_", opts)
 api.nvim_set_keymap("n", "$", "g_", opts)
+-- Terminal like keybindings
 api.nvim_set_keymap("i", "<c-a>", "<home><c-right>", opts)
 api.nvim_set_keymap("i", "<c-e>", "<end>", opts)
 
