@@ -68,7 +68,7 @@ api.nvim_set_keymap("n", "<s-h>", "_", opts)
 api.nvim_set_keymap("n", "<s-l>", "g_", opts)
 api.nvim_set_keymap("n", "$", "g_", opts)
 -- Terminal like keybindings
-api.nvim_set_keymap("i", "<c-a>", "<home><c-right>", opts)
+api.nvim_set_keymap("i", "<c-a>", "<esc>I", opts)
 api.nvim_set_keymap("i", "<c-e>", "<end>", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
