@@ -64,6 +64,8 @@ api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
 -- api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 -- api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("", "Q", "<Nop>", opts)
+api.nvim_set_keymap("n", "<s-h>", "^", opts)
+api.nvim_set_keymap("n", "<s-l>", "$", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
@@ -137,8 +139,8 @@ api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 -- cmd("let g:move_key_modifier = 'S'")
 
 -------------------- AndrewRadev/sideways.vim
-api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
-api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
+-- api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
+-- api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- svermeulen/vim-yoink
 cmd([[
