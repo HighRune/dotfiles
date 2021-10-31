@@ -74,7 +74,7 @@ return require("packer").startup(function(use)
 	use("kana/vim-arpeggio")
 	use("AndrewRadev/sideways.vim")
 	use("svermeulen/vim-yoink")
-	use("terryma/vim-smooth-scroll")
+	use("karb94/neoscroll.nvim")
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use("windwp/nvim-autopairs")
