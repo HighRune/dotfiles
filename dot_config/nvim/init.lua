@@ -59,10 +59,10 @@ cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent ! ! chezmoi add ~/.config
 cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]])
 
 api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
-api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
-api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
-api.nvim_set_keymap("n", "<c-u>", "5k", opts)
-api.nvim_set_keymap("n", "<c-d>", "5j", opts)
+-- api.nvim_set_keymap("n", "<PageUp>", "6k", opts)
+-- api.nvim_set_keymap("n", "<PageDown>", "6j", opts)
+-- api.nvim_set_keymap("n", "<c-u>", "5k", opts)
+-- api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("", "Q", "<Nop>", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
