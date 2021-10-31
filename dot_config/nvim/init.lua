@@ -141,16 +141,6 @@ api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
 -------------------- svermeulen/vim-yoink
--- nmap <tab> :execute "normal \<plug>(YoinkPostPasteSwapBack)"<cr>
--- nmap <s-tab> :execute "normal \<plug>(YoinkPostPasteSwapForward)"<cr>
--- vim.api.nvim_set_keymap("n", "<tab>", 'lua function() print("hello world, from lua") end', opts)
-
-local vimp = require("vimp")
-vimp.nnoremap("<leader>hw", function()
-	print("hello")
-	print("world")
-end)
-
 cmd([[
 nmap <c-n> <plug>(YoinkPostPasteSwapBack)
 nmap <c-p> <plug>(YoinkPostPasteSwapForward)
