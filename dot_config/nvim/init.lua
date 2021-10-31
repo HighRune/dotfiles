@@ -65,7 +65,10 @@ api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("", "Q", "<Nop>", opts)
 api.nvim_set_keymap("n", "<s-h>", "^", opts)
-api.nvim_set_keymap("n", "<s-l>", "$", opts)
+api.nvim_set_keymap("n", "<s-l>", "g_", opts)
+api.nvim_set_keymap("n", "$", "g_", opts)
+api.nvim_set_keymap("i", "<c-a>", "<home><c-right>", opts)
+api.nvim_set_keymap("i", "<c-e>", "<end>", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
@@ -128,7 +131,7 @@ api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
 cmd("let g:wordmotion_uppercase_spaces = [':', ',', ';', '\"', \"'\", '[', '(', '{']")
 
 -------------------- kana/vim-arpeggio
-cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")
+-- cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")
 
 -------------------- nvim-telescope/telescope.nvim
 api.nvim_set_keymap("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
