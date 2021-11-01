@@ -58,8 +58,8 @@ cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent ! ! chezmoi add ~/.config
 -- Disable automatic comment insertion
 cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]])
 
-api.nvim_set_keymap("n", "<C-l>", ":noh<cr>", opts)
-api.nvim_set_keymap("", "Q", "<Nop>", opts)
+api.nvim_set_keymap("n", "<c-l>", ":noh<cr>", opts)
+api.nvim_set_keymap("", "Q", "<nop>", opts)
 api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("i", "<c-a>", "<esc>I", opts)
@@ -67,7 +67,7 @@ api.nvim_set_keymap("i", "<c-e>", "<end>", opts)
 api.nvim_set_keymap("n", "k", "gk", opts)
 api.nvim_set_keymap("n", "j", "gj", opts)
 api.nvim_set_keymap("n", "0", "g0", opts)
-api.nvim_set_keymap("n", "$", "g$:set ve= ve=all<CR>", opts)
+api.nvim_set_keymap("n", "$", "g$:set ve= ve=all<cr>", opts)
 api.nvim_set_keymap("n", "^", "g^", opts)
 api.nvim_set_keymap("n", "<s-h>", "^", { silent = true })
 api.nvim_set_keymap("n", "<s-l>", "$", { silent = true })
@@ -203,22 +203,3 @@ MUtils.BS = function()
 	end
 end
 remap("i", "<bs>", "v:lua.MUtils.BS()", { expr = true, noremap = true })
-
-require("tabout").setup({
-	tabkey = "<cr>", -- key to trigger tabout, set to an empty string to disable
-	backwards_tabkey = "<s-cr>", -- key to trigger backwards tabout, set to an empty string to disable
-	act_as_tab = true, -- shift content if tab out is not possible
-	act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
-	enable_backwards = true, -- well ...
-	completion = true, -- if the tabkey is used in a completion pum
-	tabouts = {
-		{ open = "'", close = "'" },
-		{ open = '"', close = '"' },
-		{ open = "`", close = "`" },
-		{ open = "(", close = ")" },
-		{ open = "[", close = "]" },
-		{ open = "{", close = "}" },
-	},
-	ignore_beginning = true, --[[ if the cursor is at the beginning of a filled element it will rather tab out than shift the content ]]
-	exclude = {}, -- tabout will ignore these filetypes
-})
