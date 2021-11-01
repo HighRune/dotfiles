@@ -74,7 +74,7 @@ local function setup()
 		end
 
 		-- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
-		server:setup(opts)
+		server:setup(require("coq").lsp_ensure_capabilities(opts))
 		vim.cmd([[ do User LspAttachBuffers ]])
 	end)
 end
