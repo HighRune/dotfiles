@@ -76,12 +76,16 @@ return require("packer").startup(function(use)
 	use("svermeulen/vim-yoink")
 	use("svermeulen/vim-cutlass")
 	use("windwp/nvim-autopairs")
-	-- use({
-	-- 	"abecodes/tabout.nvim",
-	-- 	config = function()
-	-- 	end,
-	-- 	wants = { "nvim-treesitter" }, -- or require if not used so far
-	-- })
+	use({
+		"abecodes/tabout.nvim",
+		config = function()
+			require("tabout").setup({
+				tabkey = "",
+				backwards_tabkey = "",
+			})
+		end,
+		wants = { "nvim-treesitter" }, -- or require if not used so far
+	})
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
