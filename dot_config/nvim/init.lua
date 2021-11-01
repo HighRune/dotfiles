@@ -204,11 +204,6 @@ MUtils.BS = function()
 end
 remap("i", "<bs>", "v:lua.MUtils.BS()", { expr = true, noremap = true })
 
-require("tabout").setup({
-	tabkey = "",
-	backwards_tabkey = "",
-})
-
 local function replace_keycodes(str)
 	return vim.api.nvim_replace_termcodes(str, true, true, true)
 end
