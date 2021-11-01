@@ -227,3 +227,6 @@ function _G.s_tab_binding()
 		return replace_keycodes("<Plug>(TaboutBack)")
 	end
 end
+
+vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_binding()", { expr = true })
+vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_binding()", { expr = true })
