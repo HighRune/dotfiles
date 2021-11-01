@@ -76,7 +76,11 @@ return require("packer").startup(function(use)
 	use("svermeulen/vim-yoink")
 	use("svermeulen/vim-cutlass")
 	use("windwp/nvim-autopairs")
-	use("abecodes/tabout.nvim")
+	use({
+		"abecodes/tabout.nvim",
+		wants = { "nvim-treesitter" }, -- or require if not used so far
+		after = { "completion-nvim" }, -- if a completion plugin is using tabs load it before
+	})
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
