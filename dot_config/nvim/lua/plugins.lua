@@ -75,7 +75,10 @@ return require("packer").startup(function(use)
 	use("AndrewRadev/sideways.vim")
 	use("svermeulen/vim-yoink")
 	use("svermeulen/vim-cutlass")
-	use("windwp/nvim-autopairs")
+	use({
+		"windwp/nvim-autopairs",
+		config = require("config.nvim-autopairs").setup(),
+	})
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
