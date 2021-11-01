@@ -81,9 +81,9 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"blackCauldron7/surround.nvim",
-		-- config = function()
-		-- 	require("surround").setup({ mappings_style = "sandwich" })
-		-- end,
+		config = function()
+			require("surround").setup({ mappings_style = "sandwich" })
+		end,
 	})
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
