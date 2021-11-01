@@ -76,7 +76,6 @@ return require("packer").startup(function(use)
 	use("svermeulen/vim-yoink")
 	use("svermeulen/vim-cutlass")
 	use("windwp/nvim-autopairs")
-	use("Jason-M-Chan/ts-textobjects")
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
