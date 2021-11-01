@@ -79,6 +79,12 @@ return require("packer").startup(function(use)
 		"windwp/nvim-autopairs",
 		config = require("config.nvim-autopairs").setup(),
 	})
+	use({
+		"blackCauldron7/surround.nvim",
+		-- config = function()
+		-- 	require("surround").setup({ mappings_style = "sandwich" })
+		-- end,
+	})
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
