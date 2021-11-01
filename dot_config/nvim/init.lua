@@ -67,6 +67,11 @@ api.nvim_set_keymap("n", "<s-l>", "g_", opts)
 api.nvim_set_keymap("n", "$", "g_", opts)
 api.nvim_set_keymap("i", "<c-a>", "<esc>I", opts)
 api.nvim_set_keymap("i", "<c-e>", "<end>", opts)
+api.nvim_set_keymap("n", "k", "gk", opts)
+api.nvim_set_keymap("n", "j", "gj", opts)
+api.nvim_set_keymap("n", "0", "g0", opts)
+api.nvim_set_keymap("n", "$", "g$", opts)
+api.nvim_set_keymap("n", "^", "g^", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
