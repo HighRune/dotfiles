@@ -21,14 +21,6 @@ local function setup()
 			extended_mode = true,
 			max_file_lines = nil,
 		},
-		element_textobject = {
-			enable = true,
-			set_jumps = false,
-			keymaps = {
-				["<cr>"] = "an_element",
-				["<s-cr>"] = "goto_prev_element",
-			},
-		},
 		-- incremental_selection = {
 		-- 	enable = true,
 		-- 	keymaps = {
