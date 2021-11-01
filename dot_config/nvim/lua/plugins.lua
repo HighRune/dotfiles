@@ -80,8 +80,8 @@ return require("packer").startup(function(use)
 		"abecodes/tabout.nvim",
 		config = function()
 			require("tabout").setup({
-				tabkey = "<Tab>", -- key to trigger tabout, set to an empty string to disable
-				backwards_tabkey = "<S-Tab>", -- key to trigger backwards tabout, set to an empty string to disable
+				tabkey = "<tab>", -- key to trigger tabout, set to an empty string to disable
+				backwards_tabkey = "<s-tab>", -- key to trigger backwards tabout, set to an empty string to disable
 				act_as_tab = true, -- shift content if tab out is not possible
 				act_as_shift_tab = false, -- reverse shift content if tab out is not possible (if your keyboard/terminal supports <S-Tab>)
 				enable_backwards = true, -- well ...
@@ -99,7 +99,6 @@ return require("packer").startup(function(use)
 			})
 		end,
 		wants = { "nvim-treesitter" }, -- or require if not used so far
-		after = { "completion-nvim" }, -- if a completion plugin is using tabs load it before
 	})
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
