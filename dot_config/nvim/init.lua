@@ -167,9 +167,9 @@ let g:yoinkIncludeDeleteOperations = 1
 ]])
 
 -------------------- svermeulen/vim-cutlass
-cmd([[
-nnoremap x d
-xnoremap x d
-nnoremap xx dd
-nnoremap X D
-]])
+-- cmd([[
+-- nnoremap x d
+-- xnoremap x d
+-- nnoremap xx dd
+-- nnoremap X D
+-- ]])
