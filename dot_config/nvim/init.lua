@@ -163,7 +163,7 @@ let g:yoinkMaxItems = 5
 let g:yoinkAutoFormatPaste = 1
 let g:yoinkSwapClampAtEnds = 0
 let g:yoinkSyncSystemClipboardOnFocus = 0
-let g:yoinkIncludeDeleteOperations = 1
+" let g:yoinkIncludeDeleteOperations = 1
 ]])
 
 -------------------- svermeulen/vim-cutlass
