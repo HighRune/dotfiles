@@ -85,10 +85,20 @@ return require("packer").startup(function(use)
 			require("surround").setup({
 				load_keymaps = false, -- These are loaded above manually
 				brackets = { "(", "{", "[", "<" },
-				quotes = { "'", '"', "`" },
+				quotes = { "'", '"' },
 			})
-			vim.api.nvim_set_keymap("n", "<c-b>", "<cmd>lua require('surround').toggle_brackets(0)<cr>", opts)
-			vim.api.nvim_set_keymap("n", "<c-q>", "<cmd>lua require('surround').toggle_quotes()<cr>", opts)
+			vim.api.nvim_set_keymap(
+				"n",
+				"<c-b>",
+				"<cmd>lua require('surround').toggle_brackets(0)<cr>",
+				{ noremap = true, silent = true }
+			)
+			vim.api.nvim_set_keymap(
+				"n",
+				"<c-q>",
+				"<cmd>lua require('surround').toggle_quotes()<cr>",
+				{ noremap = true, silent = true }
+			)
 		end,
 	})
 
