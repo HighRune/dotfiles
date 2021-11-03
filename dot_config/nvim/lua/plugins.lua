@@ -87,6 +87,8 @@ return require("packer").startup(function(use)
 				brackets = { "(", "{", "[", "<" },
 				quotes = { "'", '"', "`" },
 			})
+			vim.api.nvim_set_keymap("n", "<c-b>", "<cmd>lua require('surround').toggle_brackets(0)<cr>", opts)
+			vim.api.nvim_set_keymap("n", "<c-q>", "<cmd>lua require('surround').toggle_quotes()<cr>", opts)
 		end,
 	})
 
