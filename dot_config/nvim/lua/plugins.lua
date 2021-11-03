@@ -81,9 +81,18 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"blackCauldron7/surround.nvim",
-		-- config = function()
-		-- 	require("surround").setup({ mappings_style = "sandwich" })
-		-- end,
+		config = function()
+			require("surround").setup({
+				mappings_style = "sandwich",
+				load_keymaps = false,
+			})
+			vim.api.nvim_set_keymap(
+				"n",
+				"<s-q>",
+				"<Cmd>lua require('surround').toggle_brackets(0)<CR>",
+				{ noremap = true }
+			)
+		end,
 	})
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
