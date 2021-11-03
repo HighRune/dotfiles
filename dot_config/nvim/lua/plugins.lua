@@ -82,23 +82,7 @@ return require("packer").startup(function(use)
 	use({
 		"blackCauldron7/surround.nvim",
 		config = function()
-			require("surround").setup({
-				load_keymaps = false, -- These are loaded above manually
-				brackets = { "(", "{", "[", "<" },
-				quotes = { "'", '"' },
-			})
-			vim.api.nvim_set_keymap(
-				"n",
-				"<c-b>",
-				"<cmd>lua require('surround').toggle_brackets(0)<cr>",
-				{ noremap = true, silent = true }
-			)
-			vim.api.nvim_set_keymap(
-				"n",
-				"<c-q>",
-				"<cmd>lua require('surround').toggle_quotes()<cr>",
-				{ noremap = true, silent = true }
-			)
+			require("surround").setup({ mappings_style = "sandwitch" })
 		end,
 	})
 
