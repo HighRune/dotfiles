@@ -82,7 +82,11 @@ return require("packer").startup(function(use)
 	use({
 		"blackCauldron7/surround.nvim",
 		config = function()
-			require("surround").setup({ mappings_style = "sandwich" })
+			require("surround").setup({
+				load_keymaps = false, -- These are loaded above manually
+				brackets = { "(", "{", "[", "<" },
+				quotes = { "'", '"', "`" },
+			})
 		end,
 	})
 
