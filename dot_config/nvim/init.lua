@@ -130,7 +130,7 @@ api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
 
 -------------------- chaoren/vim-wordmotion
 -- stylua: ignore
-cmd("let g:wordmotion_uppercase_spaces = [':', ',', ';', '\"', \"'\", '[', ']', '(', ')', '{', '}', '=']")
+cmd("let g:wordmotion_uppercase_spaces = ['/', '\"', \"'\", '[', ']', '(', ')', '{', '}', '<', '>']")
 
 -------------------- kana/vim-arpeggio
 -- cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")
