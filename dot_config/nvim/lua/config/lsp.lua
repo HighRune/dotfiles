@@ -17,7 +17,7 @@ local function setup()
 			{
 				"n",
 				"<leader>f",
-				"<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, nil, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' })<CR>",
+				"<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' })<CR>",
 				-- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>",
 			},
 			{ "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>" },
