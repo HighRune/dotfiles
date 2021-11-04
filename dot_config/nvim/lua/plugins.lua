@@ -97,6 +97,15 @@ return require("packer").startup(function(use)
 			vim.api.nvim_set_keymap("n", "<c-q>", "<Cmd>lua require('surround').toggle_quotes()<CR>", {
 				noremap = true,
 			})
+			vim.api.nvim_set_keymap("n", "ys", "<Cmd>set operatorfunc=SurroundAddOperatorMode<CR>g@", {
+				noremap = true,
+			})
+			vim.api.nvim_set_keymap("n", "cs", "<Cmd>lua require('surround').surround_replace()<CR>", {
+				noremap = true,
+			})
+			vim.api.nvim_set_keymap("n", "ds", "<Cmd>lua require('surround').surround_delete()<CR>", {
+				noremap = true,
+			})
 		end,
 	})
 
