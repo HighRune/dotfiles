@@ -71,6 +71,10 @@ api.nvim_set_keymap("n", "$", "g$:set ve= ve=all<cr>", opts)
 api.nvim_set_keymap("n", "^", "g^", opts)
 api.nvim_set_keymap("n", "<s-h>", "^", { silent = true })
 api.nvim_set_keymap("n", "<s-l>", "$", { silent = true })
+api.nvim_set_keymap("n", "cw", "ciw", { silent = true })
+api.nvim_set_keymap("n", "cW", "ciW", { silent = true })
+api.nvim_set_keymap("n", "vw", "viw", { silent = true })
+api.nvim_set_keymap("n", "vW", "viW", { silent = true })
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
@@ -165,11 +169,6 @@ let g:yoinkSwapClampAtEnds = 0
 let g:yoinkSyncSystemClipboardOnFocus = 0
 " let g:yoinkIncludeDeleteOperations = 1
 ]])
-
-api.nvim_set_keymap("n", "cw", "ciw", { noremap = false, silent = true })
-api.nvim_set_keymap("n", "cW", "ciW", { noremap = false, silent = true })
-api.nvim_set_keymap("n", "vw", "viw", { noremap = false, silent = true })
-api.nvim_set_keymap("n", "vW", "viW", { noremap = false, silent = true })
 -------------------- svermeulen/vim-cutlass
 -- cmd([[
 -- nnoremap x d
