@@ -90,8 +90,6 @@ local function setup()
 			},
 		},
 	})
-	vim.o.foldmethod = "expr"
-	vim.o.foldexpr = "nvim_treesitter#foldexpr()"
 end
 
 return { setup = setup }
