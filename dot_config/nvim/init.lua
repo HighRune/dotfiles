@@ -176,10 +176,10 @@ let g:yoinkSwapClampAtEnds = 0
 let g:yoinkSyncSystemClipboardOnFocus = 0
 " let g:yoinkIncludeDeleteOperations = 1
 ]])
--------------------- svermeulen/vim-cutlass
--- cmd([[
--- nnoremap x d
--- xnoremap x d
--- nnoremap xx dd
--- nnoremap X D
--- ]])
+
+-------------------- blackCauldron7/surround.nvim
+api.nvim_set_keymap("n", "<c-b>", "<Cmd>lua require('surround').toggle_brackets(0)<CR>", { noremap = true })
+api.nvim_set_keymap("n", "<c-q>", "<Cmd>lua require('surround').toggle_quotes()<CR>", { noremap = true })
+api.nvim_set_keymap("n", "ys", "<Cmd>set operatorfunc=SurroundAddOperatorMode<CR>g@", { noremap = true })
+api.nvim_set_keymap("n", "cs", "<Cmd>lua require('surround').surround_replace()<CR>", { noremap = true })
+api.nvim_set_keymap("n", "ds", "<Cmd>lua require('surround').surround_delete()<CR>", { noremap = true })
