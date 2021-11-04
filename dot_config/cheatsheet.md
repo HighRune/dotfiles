@@ -644,6 +644,9 @@ mkfs.vfat -F32 /dev/mmcblk0p1 -l CRISTAL  # Formate le disque en FAT32 (version 
 ### keys
 
 ```
+<c-z>
+fg
+bg
 q                           # Start/stop recording
 ctrl j                      # Navigue entre les erreur ale
 ctrl k
