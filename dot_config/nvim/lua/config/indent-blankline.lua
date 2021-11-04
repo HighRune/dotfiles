@@ -1,11 +1,9 @@
 local function setup()
-	vim.opt.list = true
-	vim.opt.listchars:append("eol:↴")
 	require("indent_blankline").setup({
+		indent_blankline_enabled = true,
+		indent_blankline_show_first_indent_level = false,
 		show_end_of_line = true,
-		filetype_exclude = {
-			"help",
-		},
+		filetype_exclude = { "help" },
 		buftype_exclude = { "terminal", "nofile" },
 	})
 end
