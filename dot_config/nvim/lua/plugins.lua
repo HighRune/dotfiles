@@ -81,13 +81,7 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"blackCauldron7/surround.nvim",
-		config = function()
-			require("surround").setup({
-				load_keymaps = false,
-				quotes = { "'", '"', "`" },
-				context_offset = 50,
-			})
-		end,
+		-- config = require("surround.nvim").setup(),
 	})
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
