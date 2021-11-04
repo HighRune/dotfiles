@@ -880,6 +880,16 @@ Array(5).fill(2) // Create an array and fill it with one value
                  // => [2, 2, 2, 2, 2]
 const objectToSet = array1.find(object => object.id === <condition>)
 objectToSet.propertyToSet = valueToSet
+
+// JavaScript object with max length
+
+// Do not work on huge arrays
+const objects = [{ a:1, b:2 }, { a:5 }]
+const objectWithMaxLength = objects[objectsLength.indexOf(Math.max(...objectsLength))]
+// Work on huge arrays
+const objectsLength = objects.map(object => Object.keys(object).length)
+const maxLength = objectsLength.reduce((a, b) => Math.max(a, b))
+const objectWithMaxLength = objects[objectsLength.indexOf(maxLength)]
 ```
 
 ### objects
