@@ -26,8 +26,8 @@ o.cursorline = true
 o.cursorcolumn = true -- o.cursorline=true
 o.scrolloff = 999 -- Minimal number of screen lines to keep above and below the cursor
 o.foldenable = false -- All folds are open
-o.foldmethod = "expr"
-o.foldexpr = "nvim_treesitter#foldexpr()"
+o.foldmethod = "expr" -- nvim-treesitter/nvim-treesitter
+o.foldexpr = "nvim_treesitter#foldexpr()" -- nvim-treesitter/nvim-treesitter
 o.number = true -- Print the line number in front of each line
 -- o.relativenumber = true -- Show relative line numbers
 o.virtualedit = "all"
@@ -38,6 +38,8 @@ o.updatetime = 100 -- Having longer updatetime (default is 4000 ms = 4 s) leads 
 o.swapfile = false
 o.termguicolors = true -- Enables 24-bit RGB color in the Terminal UI
 o.showmode = false -- Disable message on the last line (Insert, Replace or Visual mode)
+o.list = true -- lukas-reineke/indent-blankline.nvim
+o.listchars:append("eol:↴") -- lukas-reineke/indent-blankline.nvim
 o.linebreak = true -- Do not break words on line wrap
 o.breakindent = true -- Start wrapped lines indented
 -- o.formatoptions = "cro"
