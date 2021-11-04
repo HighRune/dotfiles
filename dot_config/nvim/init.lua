@@ -26,6 +26,8 @@ o.cursorline = true
 o.cursorcolumn = true -- o.cursorline=true
 o.scrolloff = 999 -- Minimal number of screen lines to keep above and below the cursor
 o.foldenable = false -- All folds are open
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
 o.number = true -- Print the line number in front of each line
 -- o.relativenumber = true -- Show relative line numbers
 o.virtualedit = "all"
