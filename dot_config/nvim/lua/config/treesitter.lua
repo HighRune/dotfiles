@@ -45,7 +45,7 @@ local function setup()
 					["ap"] = "@parameter.outer",
 					["p"] = "@parameter.inner",
 					["ai"] = "@conditional.outer",
-					["i"] = "@conditional.inner",
+					["ii"] = "@conditional.inner",
 					["al"] = "@loop.outer",
 					["l"] = "@loop.inner",
 				},
