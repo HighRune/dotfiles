@@ -190,3 +190,7 @@ api.nvim_set_keymap("n", "<c-q>", "<Cmd>lua require('surround').toggle_quotes()<
 api.nvim_set_keymap("n", "ys", "<Cmd>set operatorfunc=SurroundAddOperatorMode<CR>g@", { noremap = true })
 api.nvim_set_keymap("n", "cs", "<Cmd>lua require('surround').surround_replace()<CR>", { noremap = true })
 api.nvim_set_keymap("n", "ds", "<Cmd>lua require('surround').surround_delete()<CR>", { noremap = true })
+
+-------------------- lukas-reineke/indent-blankline.nvim
+g.indent_blankline_enabled = true
+g.indent_blankline_show_first_indent_level = false
