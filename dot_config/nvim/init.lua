@@ -71,6 +71,7 @@ api.nvim_set_keymap("n", "$", "g$:set ve= ve=all<cr>", opts)
 api.nvim_set_keymap("n", "^", "g^", opts)
 api.nvim_set_keymap("n", "<s-h>", "^", { silent = true })
 api.nvim_set_keymap("n", "<s-l>", "$", { silent = true })
+api.nvim_set_keymap("n", "cb", "cib", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
