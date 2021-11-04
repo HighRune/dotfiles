@@ -81,7 +81,7 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"blackCauldron7/surround.nvim",
-		-- config = require("surround.nvim").setup(),
+		-- config = require("config.surround-nvim").setup(),
 	})
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
