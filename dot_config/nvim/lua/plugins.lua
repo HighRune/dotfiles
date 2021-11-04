@@ -79,35 +79,35 @@ return require("packer").startup(function(use)
 		"windwp/nvim-autopairs",
 		config = require("config.nvim-autopairs").setup(),
 	})
-	use({
-		"blackCauldron7/surround.nvim",
-		-- config = function()
-		-- 	require("surround").setup({
-		-- 		-- mappings_style = "sandwich",
-		-- 		load_keymaps = false,
-		-- 		quotes = { "'", '"', "`" },
-		-- 		context_offset = 50,
-		-- 	})
-		-- vim.api.nvim_set_keymap(
-		-- 	"n",
-		-- 	"<c-b>",
-		-- 	"<Cmd>lua require('surround').toggle_brackets(0)<CR>",
-		-- 	{ noremap = true }
-		-- )
-		-- vim.api.nvim_set_keymap("n", "<c-q>", "<Cmd>lua require('surround').toggle_quotes()<CR>", {
-		-- 	noremap = true,
-		-- })
-		-- vim.api.nvim_set_keymap("n", "ys", "<Cmd>set operatorfunc=SurroundAddOperatorMode<CR>g@", {
-		-- 	noremap = true,
-		-- })
-		-- vim.api.nvim_set_keymap("n", "cs", "<Cmd>lua require('surround').surround_replace()<CR>", {
-		-- 	noremap = true,
-		-- })
-		-- vim.api.nvim_set_keymap("n", "ds", "<Cmd>lua require('surround').surround_delete()<CR>", {
-		-- 	noremap = true,
-		-- })
-		-- end,
-	})
+	-- use({
+	-- "blackCauldron7/surround.nvim",
+	-- config = function()
+	-- 	require("surround").setup({
+	-- 		-- mappings_style = "sandwich",
+	-- 		load_keymaps = false,
+	-- 		quotes = { "'", '"', "`" },
+	-- 		context_offset = 50,
+	-- 	})
+	-- vim.api.nvim_set_keymap(
+	-- 	"n",
+	-- 	"<c-b>",
+	-- 	"<Cmd>lua require('surround').toggle_brackets(0)<CR>",
+	-- 	{ noremap = true }
+	-- )
+	-- vim.api.nvim_set_keymap("n", "<c-q>", "<Cmd>lua require('surround').toggle_quotes()<CR>", {
+	-- 	noremap = true,
+	-- })
+	-- vim.api.nvim_set_keymap("n", "ys", "<Cmd>set operatorfunc=SurroundAddOperatorMode<CR>g@", {
+	-- 	noremap = true,
+	-- })
+	-- vim.api.nvim_set_keymap("n", "cs", "<Cmd>lua require('surround').surround_replace()<CR>", {
+	-- 	noremap = true,
+	-- })
+	-- vim.api.nvim_set_keymap("n", "ds", "<Cmd>lua require('surround').surround_delete()<CR>", {
+	-- 	noremap = true,
+	-- })
+	-- end,
+	-- })
 
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
