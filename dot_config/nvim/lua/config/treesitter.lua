@@ -39,15 +39,15 @@ local function setup()
 				keymaps = {
 					-- You can use the capture groups defined in textobjects.scm
 					["af"] = "@function.outer",
-					["f"] = "@function.inner",
+					["if"] = "@function.inner",
 					["ac"] = "@call.outer",
-					["c"] = "@call.inner",
+					["ic"] = "@call.inner",
 					["ap"] = "@parameter.outer",
-					["p"] = "@parameter.inner",
+					["ip"] = "@parameter.inner",
 					["ai"] = "@conditional.outer",
 					["ii"] = "@conditional.inner",
 					["al"] = "@loop.outer",
-					["l"] = "@loop.inner",
+					["il"] = "@loop.inner",
 				},
 			},
 			-- move = {
