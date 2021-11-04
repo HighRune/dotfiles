@@ -2,6 +2,7 @@ local api = vim.api
 local cmd = vim.cmd -- to execute Vim commands e.g. cmd('pwd')
 local g = vim.g -- a table to access global variables
 local o = vim.o -- to set options
+local opt = vim.opt -- to set options
 local opts = { noremap = true, silent = true }
 
 -------------------- STYLE
@@ -26,8 +27,6 @@ o.cursorline = true
 o.cursorcolumn = true -- o.cursorline=true
 o.scrolloff = 999 -- Minimal number of screen lines to keep above and below the cursor
 o.foldenable = false -- All folds are open
-o.foldmethod = "expr" -- nvim-treesitter/nvim-treesitter
-o.foldexpr = "nvim_treesitter#foldexpr()" -- nvim-treesitter/nvim-treesitter
 o.number = true -- Print the line number in front of each line
 -- o.relativenumber = true -- Show relative line numbers
 o.virtualedit = "all"
@@ -53,6 +52,15 @@ o.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing e
 o.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 o.hidden = true -- Allow switching buffers with unsaved changes
+
+-- lukas-reineke/indent-blankline.nvim
+opt.list = true
+opt.listchars:append("eol:↴")
+
+-- nvim-treesitter/nvim-treesitter
+o.foldmethod = "expr"
+o.foldexpr = "nvim_treesitter#foldexpr()"
+
 -- cmd([[au FocusGained,BufEnter * :silent! !]]) -- Reload when entering the buffer or gaining focus
 -- cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or losing focus
 cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=100}]]) -- highlight a selection on yank
@@ -133,8 +141,8 @@ api.nvim_set_keymap("n", "gk", ":SplitjoinSplit<cr>", opts)
 -- ]])
 
 -------------------- inside/vim-search-pulse
-cmd([[let g:vim_search_pulse_mode = 'pattern']])
-cmd([[let g:vim_search_pulse_duration = 200]])
+g.vim_search_pulse_mode = "pattern"
+g.vim_search_pulse_duration = 200
 
 api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
 
@@ -174,7 +182,6 @@ let g:yoinkMaxItems = 5
 let g:yoinkAutoFormatPaste = 1
 let g:yoinkSwapClampAtEnds = 0
 let g:yoinkSyncSystemClipboardOnFocus = 0
-" let g:yoinkIncludeDeleteOperations = 1
 ]])
 
 -------------------- blackCauldron7/surround.nvim
