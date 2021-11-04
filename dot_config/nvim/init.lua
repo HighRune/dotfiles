@@ -38,8 +38,6 @@ o.updatetime = 100 -- Having longer updatetime (default is 4000 ms = 4 s) leads 
 o.swapfile = false
 o.termguicolors = true -- Enables 24-bit RGB color in the Terminal UI
 o.showmode = false -- Disable message on the last line (Insert, Replace or Visual mode)
-o.list = true -- lukas-reineke/indent-blankline.nvim
-o.listchars:append("eol:↴") -- lukas-reineke/indent-blankline.nvim
 o.linebreak = true -- Do not break words on line wrap
 o.breakindent = true -- Start wrapped lines indented
 -- o.formatoptions = "cro"
