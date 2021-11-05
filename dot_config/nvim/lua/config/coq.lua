@@ -13,6 +13,7 @@ local function setup()
 		},
 		keymap = {
 			jump_to_mark = "",
+			pre_select = true,
 		},
 	}
 end
