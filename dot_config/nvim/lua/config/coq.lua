@@ -14,6 +14,7 @@ local function setup()
 		keymap = {
 			jump_to_mark = "",
 			bigger_preview = "",
+			-- jump_to_mark = "<c-i>",
 		},
 	}
 end
