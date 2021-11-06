@@ -16,10 +16,15 @@ local function setup()
 					south = 3,
 					west = 4,
 				},
+				x_max_len = 40,
+			},
+			pum = {
+				kind_context = { "「", "」" },
+				source_context = { "「", "」" },
 			},
 			ghost_text = {
 				context = { " ", "" },
-				highlight_group = "Comment",
+				highlight_group = "none",
 			},
 			icons = {
 				mode = "none",
