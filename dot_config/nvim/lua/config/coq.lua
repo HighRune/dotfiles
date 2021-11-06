@@ -17,6 +17,7 @@ local function setup()
 					west = 4,
 				},
 				x_max_len = 40,
+				border = "solid",
 			},
 			pum = {
 				kind_context = { "「", "」" },
