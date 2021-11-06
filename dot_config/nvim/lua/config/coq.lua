@@ -12,9 +12,8 @@ local function setup()
 			},
 		},
 		keymap = {
-			jump_to_mark = "",
+			jump_to_mark = "<c-n>",
 			bigger_preview = "",
-			-- jump_to_mark = "<c-i>",
 		},
 	}
 end
