@@ -23,8 +23,10 @@ local function setup()
 				source_context = { "「", "」" },
 			},
 			ghost_text = {
-				context = { " ", "" },
-				highlight_group = "none",
+				enabled = false,
+				-- context = { " ", "" },
+				-- highlight_group = "none",
+				-- highlight_group = "Pmenu",
 			},
 			icons = {
 				mode = "none",
@@ -33,7 +35,7 @@ local function setup()
 		keymap = {
 			jump_to_mark = "<c-cr>",
 			bigger_preview = "",
-			["repeat"] = "<leader>.",
+			["repeat"] = "<c-.>",
 		},
 	}
 end
