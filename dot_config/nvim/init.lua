@@ -191,7 +191,9 @@ api.nvim_set_keymap("n", "ds", "<Cmd>lua require('surround').surround_delete()<C
 g.indent_blankline_enabled = true
 g.indent_blankline_show_first_indent_level = false
 
-cmd([[
-map p <Plug>(miniyank-autoput)
-map P <Plug>(miniyank-autoPut)
-]])
+-------------------- bfredl/nvim-miniyank
+api.nvim_set_keymap("", "p", "<Plug>(miniyank-autoput)", { silent = true })
+api.nvim_set_keymap("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
+api.nvim_set_keymap("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
+api.nvim_set_keymap("", "<c-p>", "<Plug>(miniyank-cycleback)", { silent = true })
+g.miniyank_maxitems = 5
