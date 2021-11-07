@@ -70,6 +70,7 @@ cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal formatoptions-=c formato
 
 api.nvim_set_keymap("n", "<c-l>", ":noh<cr>", opts)
 api.nvim_set_keymap("", "Q", "<nop>", opts)
+api.nvim_set_keymap("", "q", "<nop>", opts)
 api.nvim_set_keymap("n", "<c-u>", "5k", opts)
 api.nvim_set_keymap("n", "<c-d>", "5j", opts)
 api.nvim_set_keymap("i", "<c-a>", "<esc>I", opts)
@@ -189,3 +190,8 @@ api.nvim_set_keymap("n", "ds", "<Cmd>lua require('surround').surround_delete()<C
 -------------------- lukas-reineke/indent-blankline.nvim
 g.indent_blankline_enabled = true
 g.indent_blankline_show_first_indent_level = false
+
+cmd([[
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+]])
