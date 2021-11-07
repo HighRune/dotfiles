@@ -21,10 +21,6 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		config = require("config.telescope").setup(),
 	})
-	-- use({
-	-- "ray-x/lsp_signature.nvim",
-	-- config = require("config.lsp_signature").setup(),
-	-- })
 	use({
 		"is0n/fm-nvim",
 		config = "require('config.fm-nvim').setup()",
@@ -91,4 +87,8 @@ return require("packer").startup(function(use)
 	-- use("tpope/vim-abolish")
 	-- use("tpope/vim-surround")
 	-- use("terryma/vim-expand-region")
+	-- use({
+	-- "ray-x/lsp_signature.nvim",
+	-- config = require("config.lsp_signature").setup(),
+	-- })
 end)
