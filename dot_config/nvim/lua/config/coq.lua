@@ -20,9 +20,9 @@ local function setup()
 				border = "solid",
 			},
 			pum = {
-				kind_context = { "", "" },
+				kind_context = { " ", "" },
 				source_context = { "", "" },
-				x_truncate_len = 9999,
+				-- x_truncate_len = 9999,
 			},
 			ghost_text = {
 				enabled = false,
@@ -30,9 +30,9 @@ local function setup()
 				-- highlight_group = "none",
 				-- highlight_group = "Pmenu",
 			},
-			icons = {
-				mode = "none",
-			},
+			-- icons = {
+			-- 	mode = "none",
+			-- },
 		},
 		keymap = {
 			jump_to_mark = "<c-cr>",
