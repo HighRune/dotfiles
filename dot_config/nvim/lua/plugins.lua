@@ -71,6 +71,7 @@ return require("packer").startup(function(use)
 	use("rhysd/vim-textobj-anyblock")
 	use("AndrewRadev/sideways.vim")
 	-- use("svermeulen/vim-yoink")
+	use("bfredl/nvim-miniyank")
 	use({
 		"windwp/nvim-autopairs",
 		config = require("config.nvim-autopairs").setup(),
