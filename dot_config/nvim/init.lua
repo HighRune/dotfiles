@@ -161,23 +161,23 @@ api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 -- api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 -- api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
 
--------------------- svermeulen/vim-yoink
-cmd([[
-nmap <c-n> <plug>(YoinkPostPasteSwapBack)
-nmap <c-p> <plug>(YoinkPostPasteSwapForward)
+-- -------------------- svermeulen/vim-yoink
+-- cmd([[
+-- nmap <c-n> <plug>(YoinkPostPasteSwapBack)
+-- nmap <c-p> <plug>(YoinkPostPasteSwapForward)
 
-nmap p <plug>(YoinkPaste_p)
-nmap P <plug>(YoinkPaste_P)
+-- nmap p <plug>(YoinkPaste_p)
+-- nmap P <plug>(YoinkPaste_P)
 
-" Also replace the default gp with yoink paste so we can toggle paste in this case too
-nmap gp <plug>(YoinkPaste_gp)
-nmap gP <plug>(YoinkPaste_gP)
+-- " Also replace the default gp with yoink paste so we can toggle paste in this case too
+-- nmap gp <plug>(YoinkPaste_gp)
+-- nmap gP <plug>(YoinkPaste_gP)
 
-let g:yoinkMaxItems = 5
-let g:yoinkAutoFormatPaste = 1
-let g:yoinkSwapClampAtEnds = 0
-let g:yoinkSyncSystemClipboardOnFocus = 0
-]])
+-- let g:yoinkMaxItems = 5
+-- let g:yoinkAutoFormatPaste = 1
+-- let g:yoinkSwapClampAtEnds = 0
+-- let g:yoinkSyncSystemClipboardOnFocus = 0
+-- ]])
 
 -------------------- blackCauldron7/surround.nvim
 api.nvim_set_keymap("n", "<c-b>", "<Cmd>lua require('surround').toggle_brackets(0)<CR>", { noremap = true })
