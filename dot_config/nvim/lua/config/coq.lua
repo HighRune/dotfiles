@@ -11,8 +11,8 @@ local function setup()
 		display = {
 			preview = {
 				positions = {
-					north = 1,
-					east = 2,
+					east = 1,
+					north = 2,
 					south = 3,
 					west = 4,
 				},
