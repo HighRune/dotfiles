@@ -70,7 +70,6 @@ return require("packer").startup(function(use)
 	use("kana/vim-textobj-user")
 	use("rhysd/vim-textobj-anyblock")
 	use("AndrewRadev/sideways.vim")
-	-- use("svermeulen/vim-yoink")
 	use("bfredl/nvim-miniyank")
 	use({
 		"windwp/nvim-autopairs",
@@ -81,6 +80,7 @@ return require("packer").startup(function(use)
 		config = require("config.surround-nvim").setup(),
 	})
 
+	-- use("svermeulen/vim-yoink")
 	-- use("kana/vim-arpeggio")
 	-- use("matze/vim-move")
 	-- use("chaoren/vim-wordmotion")
