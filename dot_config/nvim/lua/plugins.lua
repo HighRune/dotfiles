@@ -66,15 +66,11 @@ return require("packer").startup(function(use)
 	use("p00f/nvim-ts-rainbow")
 	use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
 	use("AndrewRadev/splitjoin.vim")
-	-- use("matze/vim-move")
 	use("inside/vim-search-pulse")
 	use("kana/vim-textobj-user")
 	use("rhysd/vim-textobj-anyblock")
-	-- use("chaoren/vim-wordmotion")
-	use("kana/vim-arpeggio")
 	use("AndrewRadev/sideways.vim")
 	use("svermeulen/vim-yoink")
-	-- use("svermeulen/vim-cutlass")
 	use({
 		"windwp/nvim-autopairs",
 		config = require("config.nvim-autopairs").setup(),
@@ -84,6 +80,10 @@ return require("packer").startup(function(use)
 		config = require("config.surround-nvim").setup(),
 	})
 
+	-- use("kana/vim-arpeggio")
+	-- use("matze/vim-move")
+	-- use("chaoren/vim-wordmotion")
+	-- use("svermeulen/vim-cutlass")
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
 	-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
