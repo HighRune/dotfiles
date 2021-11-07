@@ -1,7 +1,6 @@
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
-	use("svermeulen/vimpeccable")
 	use("kyazdani42/nvim-web-devicons")
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -80,6 +79,7 @@ return require("packer").startup(function(use)
 		config = require("config.surround-nvim").setup(),
 	})
 
+	-- use("svermeulen/vimpeccable")
 	-- use("svermeulen/vim-yoink")
 	-- use("kana/vim-arpeggio")
 	-- use("matze/vim-move")
