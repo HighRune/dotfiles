@@ -639,6 +639,7 @@ mkfs.vfat -F32 /dev/mmcblk0p1 -l CRISTAL  # Formate le disque en FAT32 (version 
 :CocInstall coc-highlight   # Uninstall coc plugin
 :CocUninstall coc-highlight # Uninstall coc plugin
 :delm!                      # Delete all marks
+:sort                       # Sort alphabetically visual selection
 ```
 
 ### keys
