@@ -37,7 +37,7 @@ local function setup()
 		keymap = {
 			jump_to_mark = "<c-cr>",
 			bigger_preview = "",
-			["repeat"] = "<c-.>",
+			["repeat"] = "<leader>.",
 		},
 	}
 end
