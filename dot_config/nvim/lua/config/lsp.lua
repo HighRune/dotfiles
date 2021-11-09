@@ -52,9 +52,12 @@ local function setup()
 	end
 
 	local function on_attach_eslint(client, buffer)
-		-- neovim's LSP client does not currently support dynamic capabilities registration, so we need to set
-		-- the resolved capabilities of the eslint server ourselves!
 		client.resolved_capabilities.document_formatting = true
+		on_attach(client, buffer)
+	end
+
+	local function on_attach_tsserver(client, buffer)
+		client.resolved_capabilities.document_formatting = false
 		on_attach(client, buffer)
 	end
 
@@ -62,7 +65,7 @@ local function setup()
 	require("nvim-lsp-installer").on_server_ready(function(server)
 		local opts = {}
 		opts.on_attach = on_attach
-		opts.flags = { debounce_text_changes = 0 }
+		opts.flags = { debounce_text_changes = 100 }
 
 		-- (optional) Customize the options passed to the server
 		-- if server.name == "tsserver" then
@@ -72,6 +75,11 @@ local function setup()
 		if server.name == "eslint" then
 			opts.on_attach = on_attach_eslint
 			opts.settings = { format = { enable = true } }
+		end
+
+		if server.name == "tsserver" then
+			opts.on_attach = on_attach_tsserver
+			opts.settings = { format = { enable = false } }
 		end
 
 		-- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
