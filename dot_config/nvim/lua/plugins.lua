@@ -55,28 +55,28 @@ return require("packer").startup(function(use)
 	use("itchyny/vim-cursorword")
 	use("romgrk/barbar.nvim")
 	use("folke/tokyonight.nvim")
-	-- use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
+	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use("sbdchd/neoformat")
-	-- use("tpope/vim-commentary")
-	-- use("JoosepAlviste/nvim-ts-context-commentstring")
-	-- use("tommcdo/vim-lion")
-	-- use("p00f/nvim-ts-rainbow")
-	-- use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
-	-- use("AndrewRadev/splitjoin.vim")
-	-- use("inside/vim-search-pulse")
-	-- use("kana/vim-textobj-user")
-	-- use("rhysd/vim-textobj-anyblock")
-	-- use("AndrewRadev/sideways.vim")
-	-- use("bfredl/nvim-miniyank")
-	-- use({
-	-- 	"windwp/nvim-autopairs",
-	-- 	config = require("config.nvim-autopairs").setup(),
-	-- })
-	-- use({
-	-- 	"blackCauldron7/surround.nvim",
-	-- 	config = require("config.surround-nvim").setup(),
-	-- })
-	-- use("chaoren/vim-wordmotion")
+	use("tpope/vim-commentary")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
+	use("tommcdo/vim-lion")
+	use("p00f/nvim-ts-rainbow")
+	use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
+	use("AndrewRadev/splitjoin.vim")
+	use("inside/vim-search-pulse")
+	use("kana/vim-textobj-user")
+	use("rhysd/vim-textobj-anyblock")
+	use("AndrewRadev/sideways.vim")
+	use("bfredl/nvim-miniyank")
+	use({
+		"windwp/nvim-autopairs",
+		-- config = require("config.nvim-autopairs").setup(),
+	})
+	use({
+		"blackCauldron7/surround.nvim",
+		-- config = require("config.surround-nvim").setup(),
+	})
+	use("chaoren/vim-wordmotion")
 
 	-- use("svermeulen/vimpeccable")
 	-- use("svermeulen/vim-yoink")
