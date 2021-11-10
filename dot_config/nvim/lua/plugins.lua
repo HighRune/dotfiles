@@ -70,11 +70,11 @@ return require("packer").startup(function(use)
 	use("bfredl/nvim-miniyank")
 	use({
 		"windwp/nvim-autopairs",
-		-- config = require("config.nvim-autopairs").setup(),
+		config = require("config.nvim-autopairs").setup(),
 	})
 	use({
 		"blackCauldron7/surround.nvim",
-		-- config = require("config.surround-nvim").setup(),
+		config = require("config.surround-nvim").setup(),
 	})
 	use("chaoren/vim-wordmotion")
 
