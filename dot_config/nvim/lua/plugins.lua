@@ -74,12 +74,12 @@ return require("packer").startup(function(use)
 		"blackCauldron7/surround.nvim",
 		config = require("config.surround-nvim").setup(),
 	})
+	use("chaoren/vim-wordmotion")
 
 	-- use("svermeulen/vimpeccable")
 	-- use("svermeulen/vim-yoink")
 	-- use("kana/vim-arpeggio")
 	-- use("matze/vim-move")
-	-- use("chaoren/vim-wordmotion")
 	-- use("svermeulen/vim-cutlass")
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
