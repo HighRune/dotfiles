@@ -36,9 +36,9 @@ local function setup()
 		end
 
 		vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-			-- update_in_insert = true,
+			update_in_insert = true,
 			virtual_text = {
-				source = "always",
+				source = "if_many",
 				prefix = "",
 			},
 		})
