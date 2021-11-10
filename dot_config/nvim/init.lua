@@ -92,6 +92,8 @@ api.nvim_set_keymap("n", "yw", "yiw", { silent = true })
 api.nvim_set_keymap("n", "yW", "yiW", { silent = true })
 api.nvim_set_keymap("n", "vw", "viw", { silent = true })
 api.nvim_set_keymap("n", "vW", "viW", { silent = true })
+-- api.nvim_set_keymap("n", "gw", "", opts)
+-- api.nvim_set_keymap("n", "gb", "", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
