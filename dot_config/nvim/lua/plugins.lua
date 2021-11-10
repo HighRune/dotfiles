@@ -24,29 +24,29 @@ return require("packer").startup(function(use)
 	--
 	use({
 		"is0n/fm-nvim",
-		-- config = "require('config.fm-nvim').setup()",
+		config = "require('config.fm-nvim').setup()",
 	})
 	use({
 		"lewis6991/gitsigns.nvim",
-		-- config = function()
-		-- require("gitsigns").setup()
-		-- end,
+		config = function()
+			require("gitsigns").setup()
+		end,
 	})
 	use({
 		"norcalli/nvim-colorizer.lua",
-		-- config = function()
-		-- require("colorizer").setup()
-		-- end,
+		config = function()
+			require("colorizer").setup()
+		end,
 	})
 	use({
 		"nacro90/numb.nvim",
-		-- config = function()
-		-- require("numb").setup()
-		-- end,
+		config = function()
+			require("numb").setup()
+		end,
 	})
 	use({
 		"lukas-reineke/indent-blankline.nvim",
-		-- config = require("config.indent-blankline").setup(),
+		config = require("config.indent-blankline").setup(),
 	})
 	--
 	use("nvim-treesitter/nvim-treesitter-textobjects")
