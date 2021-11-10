@@ -120,10 +120,10 @@ cmd("let g:neoformat_enabled_lua = ['stylua']")
 -- cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
 -- cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
 cmd([[
-"augroup fmt
- " autocmd!
-  "au BufWritePre *.lua try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
-"augroup END
+augroup fmt
+  autocmd!
+  au BufWritePre *.lua try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
+augroup END
 ]])
 
 -- vim.api.nvim_command([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]])
