@@ -56,7 +56,10 @@ return require("packer").startup(function(use)
 	use("romgrk/barbar.nvim")
 	use("folke/tokyonight.nvim")
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
-	use("sbdchd/neoformat")
+	use({
+		"sbdchd/neoformat",
+		 -- config = require("config.neoformat").setup(),
+	})
 	use("tpope/vim-commentary")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("tommcdo/vim-lion")
