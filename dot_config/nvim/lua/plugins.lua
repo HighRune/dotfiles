@@ -12,11 +12,11 @@ return require("packer").startup(function(use)
 		"williamboman/nvim-lsp-installer",
 		config = "require('config.lsp').setup()",
 	})
-	-- use({
-	-- 	"ms-jpq/coq_nvim",
-	-- 	branch = "coq",
-	-- 	config = "require('config.coq').setup()",
-	-- })
+	use({
+		"ms-jpq/coq_nvim",
+		branch = "coq",
+		config = "require('config.coq').setup()",
+	})
 	use({
 		"nvim-telescope/telescope.nvim",
 		config = require("config.telescope").setup(),
