@@ -92,8 +92,6 @@ api.nvim_set_keymap("n", "yw", "yiw", { silent = true })
 api.nvim_set_keymap("n", "yW", "yiW", { silent = true })
 api.nvim_set_keymap("n", "vw", "viw", { silent = true })
 api.nvim_set_keymap("n", "vW", "viW", { silent = true })
--- api.nvim_set_keymap("n", "gw", "", opts)
--- api.nvim_set_keymap("n", "gb", "", opts)
 
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
@@ -184,3 +182,8 @@ api.nvim_set_keymap("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
 api.nvim_set_keymap("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
 api.nvim_set_keymap("", "<c-p>", "<Plug>(miniyank-cycleback)", { silent = true })
 g.miniyank_maxitems = 5
+
+-------------------- chaoren/vim-wordmotion
+cmd("let g:wordmotion_nomap = 1")
+api.nvim_set_keymap("n", "gw", "<Plug>WordMotion_w", { noremap = false })
+api.nvim_set_keymap("n", "gb", "<Plug>WordMotion_b", { noremap = false })
