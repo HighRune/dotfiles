@@ -3,7 +3,7 @@ local function setup()
 vim.cmd("let g:neoformat_enabled_lua = ['stylua']")
 
 -- Format on write
-cmd([[
+vim.cmd([[
 augroup fmt
   autocmd!
   au BufWritePre *.lua try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
