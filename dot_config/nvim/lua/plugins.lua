@@ -21,7 +21,6 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		config = require("config.telescope").setup(),
 	})
-	--
 	use({
 		"is0n/fm-nvim",
 		config = "require('config.fm-nvim').setup()",
@@ -48,7 +47,6 @@ return require("packer").startup(function(use)
 		"lukas-reineke/indent-blankline.nvim",
 		config = require("config.indent-blankline").setup(),
 	})
-	--
 	use("nvim-treesitter/nvim-treesitter-textobjects")
 	use("nvim-treesitter/playground")
 	use("windwp/nvim-ts-autotag")
@@ -62,15 +60,15 @@ return require("packer").startup(function(use)
 	})
 	use("tpope/vim-commentary")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
-	use("tommcdo/vim-lion")
-	use("p00f/nvim-ts-rainbow")
-	use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
-	use("AndrewRadev/splitjoin.vim")
-	use("inside/vim-search-pulse")
-	use("kana/vim-textobj-user")
-	use("rhysd/vim-textobj-anyblock")
-	use("AndrewRadev/sideways.vim")
-	use("bfredl/nvim-miniyank")
+	-- use("tommcdo/vim-lion")
+	-- use("p00f/nvim-ts-rainbow")
+	-- use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
+	-- use("AndrewRadev/splitjoin.vim")
+	-- use("inside/vim-search-pulse")
+	-- use("kana/vim-textobj-user")
+	-- use("rhysd/vim-textobj-anyblock")
+	-- use("AndrewRadev/sideways.vim")
+	-- use("bfredl/nvim-miniyank")
 	use({
 		"windwp/nvim-autopairs",
 		config = require("config.nvim-autopairs").setup(),
