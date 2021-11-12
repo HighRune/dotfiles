@@ -10,10 +10,10 @@ local opts = { noremap = true, silent = true }
 -- cmd([[autocmd ColorScheme * highlight NormalFloat guibg=none]])
 -- cmd([[autocmd ColorScheme * highlight FloatBorder guifg=blue guibg=none]])
 
--- g.tokyonight_style = "night"
--- g.tokyonight_transparent = true
--- g.tokyonight_transparent_sidebar = true
--- cmd("colorscheme tokyonight")
+g.tokyonight_style = "night"
+g.tokyonight_transparent = true
+g.tokyonight_transparent_sidebar = true
+cmd("colorscheme tokyonight")
 
 -- cmd([[color haslo]])
 -- o.colorscheme darkspace
