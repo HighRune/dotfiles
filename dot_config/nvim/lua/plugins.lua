@@ -21,37 +21,37 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		config = require("config.telescope").setup(),
 	})
-	use({
-		"is0n/fm-nvim",
-		config = "require('config.fm-nvim').setup()",
-	})
-	use({
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup()
-		end,
-	})
-	use({
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
-	})
-	use({
-		"nacro90/numb.nvim",
-		config = function()
-			require("numb").setup()
-		end,
-	})
-	use({
-		"lukas-reineke/indent-blankline.nvim",
-		config = require("config.indent-blankline").setup(),
-	})
-	use("nvim-treesitter/nvim-treesitter-textobjects")
-	use("nvim-treesitter/playground")
-	use("windwp/nvim-ts-autotag")
-	use("itchyny/vim-cursorword")
-	use("romgrk/barbar.nvim")
+	-- use({
+	-- 	"is0n/fm-nvim",
+	-- 	config = "require('config.fm-nvim').setup()",
+	-- })
+	-- use({
+	-- 	"lewis6991/gitsigns.nvim",
+	-- 	config = function()
+	-- 		require("gitsigns").setup()
+	-- 	end,
+	-- })
+	-- use({
+	-- 	"norcalli/nvim-colorizer.lua",
+	-- 	config = function()
+	-- 		require("colorizer").setup()
+	-- 	end,
+	-- })
+	-- use({
+	-- 	"nacro90/numb.nvim",
+	-- 	config = function()
+	-- 		require("numb").setup()
+	-- 	end,
+	-- })
+	-- use({
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	-- config = require("config.indent-blankline").setup(),
+	-- })
+	-- use("nvim-treesitter/nvim-treesitter-textobjects")
+	-- use("nvim-treesitter/playground")
+	-- use("windwp/nvim-ts-autotag")
+	-- use("itchyny/vim-cursorword")
+	-- use("romgrk/barbar.nvim")
 	use("folke/tokyonight.nvim")
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use({
@@ -69,15 +69,15 @@ return require("packer").startup(function(use)
 	-- use("rhysd/vim-textobj-anyblock")
 	-- use("AndrewRadev/sideways.vim")
 	-- use("bfredl/nvim-miniyank")
-	use({
-		"windwp/nvim-autopairs",
-		config = require("config.nvim-autopairs").setup(),
-	})
-	use({
-		"blackCauldron7/surround.nvim",
-		config = require("config.surround-nvim").setup(),
-	})
-	use("chaoren/vim-wordmotion")
+	-- use({
+	-- 	"windwp/nvim-autopairs",
+	-- 	-- config = require("config.nvim-autopairs").setup(),
+	-- })
+	-- use({
+	-- 	"blackCauldron7/surround.nvim",
+	-- 	-- config = require("config.surround-nvim").setup(),
+	-- })
+	-- use("chaoren/vim-wordmotion")
 
 	-- use("svermeulen/vimpeccable")
 	-- use("svermeulen/vim-yoink")
