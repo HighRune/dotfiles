@@ -85,10 +85,10 @@ return require("packer").startup(function(use)
 	-- use("AndrewRadev/sideways.vim")
 	use({
 		"bfredl/nvim-miniyank",
-		config = {
-			setups.miniyank(),
-			mappings.miniyank(),
-		},
+		config = function()
+			setups.miniyank()
+			mappings.miniyank()
+		end,
 	})
 	-- use({
 	-- 	"windwp/nvim-autopairs",
