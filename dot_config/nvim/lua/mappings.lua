@@ -34,10 +34,16 @@ local function splitjoin()
 	map("n", "gk", ":SplitjoinSplit<cr>", opts)
 end
 
+-------------------- is0n/fm-nvim
+local function fm()
+	map("n", "<leader>n", ":Vifm<cr>", opts)
+end
+
 return {
 	telescope = telescope,
 	miniyank = miniyank,
 	surround = surround,
 	barbar = barbar,
 	splitjoin = splitjoin,
+	fm = fm,
 }
