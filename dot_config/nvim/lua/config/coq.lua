@@ -22,6 +22,7 @@ local function setup()
 			pum = {
 				kind_context = { " ", "" },
 				source_context = { "", "" },
+				fast_close = true,
 				-- x_truncate_len = 9999,
 			},
 			ghost_text = {
