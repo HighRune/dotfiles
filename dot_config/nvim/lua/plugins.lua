@@ -2,6 +2,7 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
+	use({ "folke/tokyonight.nvim", config = require("config.tokyonight").setup() })
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		config = require("config.treesitter").setup(),
@@ -52,7 +53,6 @@ return require("packer").startup(function(use)
 	-- use("windwp/nvim-ts-autotag")
 	-- use("itchyny/vim-cursorword")
 	-- use("romgrk/barbar.nvim")
-	use({ "folke/tokyonight.nvim", config = require("config.tokyonight").setup() })
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use({
 		"sbdchd/neoformat",
