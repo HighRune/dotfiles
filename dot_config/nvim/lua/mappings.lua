@@ -34,7 +34,7 @@ local function telescope()
 	map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
 -------------------- bfredl/nvim-miniyank
-local function miniyank()
+function miniyank()
 	map("", "p", "<Plug>(miniyank-autoput)", { silent = true })
 	map("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
 	map("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
