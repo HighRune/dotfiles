@@ -52,7 +52,10 @@ return require("packer").startup(function(use)
 	-- use("nvim-treesitter/playground")
 	-- use("windwp/nvim-ts-autotag")
 	-- use("itchyny/vim-cursorword")
-	-- use("romgrk/barbar.nvim")
+	use({
+		"romgrk/barbar.nvim",
+		config = require("mappings").barbar(),
+	})
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use({
 		"sbdchd/neoformat",
