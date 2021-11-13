@@ -15,7 +15,7 @@ local function searchPulse()
 	g.vim_search_pulse_mode = "pattern"
 	g.vim_search_pulse_duration = 200
 end
--------------------- inside/vim-search-pulse
+-------------------- bfredl/nvim-miniyank
 local function miniyank()
 	g.miniyank_maxitems = 5
 end
