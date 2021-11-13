@@ -22,9 +22,16 @@ local function surround()
 	map("n", "cs", "<Cmd>lua require('surround').surround_replace()<CR>", { noremap = true })
 	map("n", "ds", "<Cmd>lua require('surround').surround_delete()<CR>", { noremap = true })
 end
+-------------------- romgrk/barbar.nvim
+local function barbar()
+	map("n", "<tab>", ":BufferNext<CR>", opts)
+	map("n", "<s-tab>", ":BufferPrevious<CR>", opts)
+	map("n", "<c-w>", ":BufferClose<CR>", opts)
+end
 
 return {
 	telescope = telescope,
 	miniyank = miniyank,
 	surround = surround,
+	barbar = barbar,
 }
