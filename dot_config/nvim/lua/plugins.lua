@@ -83,7 +83,10 @@ return require("packer").startup(function(use)
 	-- use("kana/vim-textobj-user")
 	-- use("rhysd/vim-textobj-anyblock")
 	-- use("AndrewRadev/sideways.vim")
-	-- use("bfredl/nvim-miniyank")
+	use({
+		"bfredl/nvim-miniyank",
+		config = setups.miniyank(),
+	})
 	-- use({
 	-- 	"windwp/nvim-autopairs",
 	-- 	-- config = require("config.nvim-autopairs").setup(),
