@@ -73,7 +73,10 @@ return require("packer").startup(function(use)
 		"AndrewRadev/splitjoin.vim",
 		config = mappings.splitjoin(),
 	})
-	-- use("inside/vim-search-pulse")
+	use({
+		"inside/vim-search-pulse",
+		config = setups.searchPulse(),
+	})
 	-- use("kana/vim-textobj-user")
 	-- use("rhysd/vim-textobj-anyblock")
 	-- use("AndrewRadev/sideways.vim")
