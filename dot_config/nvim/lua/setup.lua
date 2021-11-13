@@ -27,8 +27,16 @@ local function surround()
 		context_offset = 50,
 	})
 end
+-------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	cmd("let g:wordmotion_nomap = 1")
+end
+-------------------- folke/tokyonight.nvim
+local function tokyonight()
+	g.tokyonight_style = "night"
+	g.tokyonight_transparent = true
+	g.tokyonight_transparent_sidebar = true
+	cmd("colorscheme tokyonight")
 end
 
 return {
@@ -37,4 +45,5 @@ return {
 	miniyank = miniyank,
 	surround = surround,
 	wordmotion = wordmotion,
+	tokyonight = tokyonight,
 }
