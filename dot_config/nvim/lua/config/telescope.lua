@@ -14,6 +14,7 @@ local function setup()
 			},
 		},
 	})
+	require("mappings").telescope()
 end
 
 return { setup = setup }
