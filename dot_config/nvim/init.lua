@@ -81,10 +81,6 @@ cmd([[
   augroup end
 ]])
 
--------------------- inside/vim-search-pulse
-g.vim_search_pulse_mode = "pattern"
-g.vim_search_pulse_duration = 200
-
 -------------------- terryma/vim-expand-region
 -- cmd([[
 -- map <cr> <Plug>(expand_region_expand)
