@@ -27,10 +27,14 @@ local function surround()
 		context_offset = 50,
 	})
 end
+local function wordmotion()
+	cmd("let g:wordmotion_nomap = 1")
+end
 
 return {
 	packer = packer,
 	searchPulse = searchPulse,
 	miniyank = miniyank,
 	surround = surround,
+	wordmotion = wordmotion,
 }
