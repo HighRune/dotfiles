@@ -1,8 +1,8 @@
 local function setup()
-	g.tokyonight_style = "night"
-	g.tokyonight_transparent = true
-	g.tokyonight_transparent_sidebar = true
-	cmd("colorscheme tokyonight")
+	vim.g.tokyonight_style = "night"
+	vim.g.tokyonight_transparent = true
+	vim.g.tokyonight_transparent_sidebar = true
+	vim.cmd("colorscheme tokyonight")
 end
 
 return { setup = setup }
