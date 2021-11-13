@@ -1,3 +1,4 @@
+local mappings = require("mappings")
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	use("nvim-lua/plenary.nvim")
@@ -54,7 +55,7 @@ return require("packer").startup(function(use)
 	-- use("itchyny/vim-cursorword")
 	use({
 		"romgrk/barbar.nvim",
-		config = require("mappings").barbar(),
+		config = mappings.barbar(),
 	})
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use({
@@ -68,7 +69,7 @@ return require("packer").startup(function(use)
 	-- use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
 	use({
 		"AndrewRadev/splitjoin.vim",
-		config = require("mappings").splitjoin(),
+		config = mappings.splitjoin(),
 	})
 	-- use("inside/vim-search-pulse")
 	-- use("kana/vim-textobj-user")
