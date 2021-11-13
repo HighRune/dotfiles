@@ -3,7 +3,6 @@ local cmd = vim.cmd -- to execute Vim commands e.g. cmd('pwd')
 local g = vim.g -- a table to access global variables
 local o = vim.o -- to set options
 local opt = vim.opt -- to set options
-local opts = { noremap = true, silent = true }
 
 -------------------- STYLE
 
@@ -58,19 +57,21 @@ o.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- cmd([[au FocusGained,BufEnter * :silent! !]]) -- Reload when entering the buffer or gaining focus
 -- cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or losing focus
-cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=100}]]) -- highlight a selection on yank
-cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent ! ! chezmoi add ~/.config/cheatsheet.md]])
+-- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
+
+-- Highlight a selection on yank
+cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=100}]])
 -- Disable automatic comment insertion
 cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]])
 
--- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
--------------------- twpayne/chezmoi
+-- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent! !chezmoi apply --source-path %]])
 cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent! !chezmoi add ~/.config/cheatsheet.md]])
 
 -------------------- PLUGINS
 
 require("mappings").vanilla()
+
 require("plugins")
 
 -------------------- wbthomason/packer.nvim
