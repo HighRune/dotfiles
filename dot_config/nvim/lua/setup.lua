@@ -19,9 +19,18 @@ end
 local function miniyank()
 	g.miniyank_maxitems = 5
 end
+-------------------- blackCauldron7/surround.nvim
+local function surround()
+	require("surround").setup({
+		load_keymaps = false,
+		quotes = { "'", '"', "`" },
+		context_offset = 50,
+	})
+end
 
 return {
 	packer = packer,
 	searchPulse = searchPulse,
 	miniyank = miniyank,
+	surround = surround,
 }
