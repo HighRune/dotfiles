@@ -2,7 +2,10 @@ local mappings = require("mappings")
 local setups = require("setups")
 
 return require("packer").startup(function(use)
-	use("wbthomason/packer.nvim")
+	use({
+		"wbthomason/packer.nvim",
+		config = setups.packer(),
+	})
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use({ "folke/tokyonight.nvim", config = require("config.tokyonight").setup() })
