@@ -86,10 +86,10 @@ return require("packer").startup(function(use)
 	use({
 		"bfredl/nvim-miniyank",
 		-- config = require("config.nvim-miniyank").setup(),
-		-- config = function()
-		-- require("setups").miniyank()
-		-- config = require("mappings").miniyank(),
-		-- end,
+		config = function()
+			require("setups").miniyank()
+			require("mappings").miniyank()
+		end,
 	})
 	-- use({
 	-- 	"windwp/nvim-autopairs",
