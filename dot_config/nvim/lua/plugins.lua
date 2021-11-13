@@ -8,7 +8,10 @@ return require("packer").startup(function(use)
 	})
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
-	use({ "folke/tokyonight.nvim", config = require("config.tokyonight").setup() })
+	use({
+		"folke/tokyonight.nvim",
+		config = setup.tokyonight(),
+	})
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		config = require("config.treesitter").setup(),
