@@ -131,9 +131,9 @@ api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
 -- cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")
 
 -------------------- nvim-telescope/telescope.nvim
-api.nvim_set_keymap("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
-api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
-api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+-- api.nvim_set_keymap("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
+-- api.nvim_set_keymap("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
+-- api.nvim_set_keymap("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 
 -------------------- matze/vim-move
 -- cmd("let g:move_key_modifier = 'S'")
