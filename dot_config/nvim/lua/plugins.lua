@@ -71,7 +71,7 @@ return require("packer").startup(function(use)
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use({
 		"sbdchd/neoformat",
-		config = require("config.neoformat").setup(),
+		config = setup.neoformat(),
 	})
 	use("tpope/vim-commentary")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
