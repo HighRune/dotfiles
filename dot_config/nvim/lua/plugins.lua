@@ -97,10 +97,13 @@ return require("packer").startup(function(use)
 	-- 	"windwp/nvim-autopairs",
 	-- 	-- config = require("config.nvim-autopairs").setup(),
 	-- })
-	-- use({
-	-- 	"blackCauldron7/surround.nvim",
-	-- 	-- config = require("config.surround-nvim").setup(),
-	-- })
+	use({
+		"blackCauldron7/surround.nvim",
+		config = function()
+			require("setup").surround()
+			require("mappings").surround()
+		end,
+	})
 	use({
 		"chaoren/vim-wordmotion",
 		config = require("config.vim-wordmotion").setup(),
