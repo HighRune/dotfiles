@@ -155,8 +155,6 @@ api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
 -- let g:yoinkSyncSystemClipboardOnFocus = 0
 -- ]])
 
--------------------- blackCauldron7/surround.nvim
-
 -------------------- chaoren/vim-wordmotion
 cmd("let g:wordmotion_nomap = 1")
 api.nvim_set_keymap("n", "gw", "<Plug>WordMotion_w", { noremap = false })
