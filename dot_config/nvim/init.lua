@@ -74,14 +74,6 @@ require("mappings").vanilla()
 
 require("plugins")
 
--- -------------------- wbthomason/packer.nvim
--- cmd([[
---   augroup packer_user_config
---     autocmd!
---     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
---   augroup end
--- ]])
-
 -------------------- terryma/vim-expand-region
 -- cmd([[
 -- map <cr> <Plug>(expand_region_expand)
