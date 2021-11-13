@@ -110,7 +110,6 @@ g.vim_search_pulse_mode = "pattern"
 g.vim_search_pulse_duration = 200
 
 -------------------- chaoren/vim-wordmotion
-cmd("let g:wordmotion_nomap = 1")
 api.nvim_set_keymap("n", "gw", "<Plug>WordMotion_w", { noremap = false })
 api.nvim_set_keymap("n", "gb", "<Plug>WordMotion_b", { noremap = false })
 
