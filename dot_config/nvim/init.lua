@@ -105,10 +105,6 @@ cmd([[
   augroup end
 ]])
 
--------------------- AndrewRadev/splitjoin.vim
-api.nvim_set_keymap("n", "gj", ":SplitjoinJoin<cr>", opts)
-api.nvim_set_keymap("n", "gk", ":SplitjoinSplit<cr>", opts)
-
 -------------------- inside/vim-search-pulse
 g.vim_search_pulse_mode = "pattern"
 g.vim_search_pulse_duration = 200

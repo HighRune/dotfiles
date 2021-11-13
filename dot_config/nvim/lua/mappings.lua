@@ -28,10 +28,16 @@ local function barbar()
 	map("n", "<s-tab>", ":BufferPrevious<CR>", opts)
 	map("n", "<c-w>", ":BufferClose<CR>", opts)
 end
+-------------------- AndrewRadev/splitjoin.vim
+local function splitjoin()
+	map("n", "gj", ":SplitjoinJoin<cr>", opts)
+	map("n", "gk", ":SplitjoinSplit<cr>", opts)
+end
 
 return {
 	telescope = telescope,
 	miniyank = miniyank,
 	surround = surround,
 	barbar = barbar,
+	splitjoin = splitjoin,
 }
