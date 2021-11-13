@@ -1,10 +1,10 @@
 local mappings = require("mappings")
-local setups = require("setups")
+local setup = require("setup")
 
 return require("packer").startup(function(use)
 	use({
 		"wbthomason/packer.nvim",
-		config = setups.packer(),
+		config = setup.packer(),
 	})
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
@@ -78,7 +78,7 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"inside/vim-search-pulse",
-		config = setups.searchPulse(),
+		config = setup.searchPulse(),
 	})
 	-- use("kana/vim-textobj-user")
 	-- use("rhysd/vim-textobj-anyblock")
@@ -86,7 +86,7 @@ return require("packer").startup(function(use)
 	use({
 		"bfredl/nvim-miniyank",
 		config = function()
-			require("setups").miniyank()
+			require("setup").miniyank()
 			require("mappings").miniyank()
 		end,
 	})
