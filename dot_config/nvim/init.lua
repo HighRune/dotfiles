@@ -74,8 +74,6 @@ require("mappings").vanilla()
 
 require("plugins")
 
-require("mappings").miniyank()
-
 -------------------- terryma/vim-expand-region
 -- cmd([[
 -- map <cr> <Plug>(expand_region_expand)
