@@ -53,6 +53,27 @@ augroup END
 	-- vim.api.nvim_command([[autocmd BufWritePre * lua vim.lsp.buf.formatting_seq_sync()]])
 	-- vim.api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
 end
+-------------------- is0n/fm-nvim
+local function fm()
+	require("fm-nvim").setup({
+		border = "none",
+		height = 1,
+		width = 1,
+		-- Command used to open files: 'tabedit'; 'split'; 'pedit'; ...
+		edit_cmd = "edit",
+		-- Terminal commands used w/ file manager
+		cmds = {
+			vifm_cmd = "vifm",
+		},
+		-- Mappings used inside the floating window
+		mappings = {
+			vert_split = "<C-v>",
+			-- horz_split = "<C-h>",
+			-- tabedit = "<C-h>",
+			edit = "<C-e>",
+		},
+	})
+end
 
 return {
 	packer = packer,
@@ -62,4 +83,5 @@ return {
 	wordmotion = wordmotion,
 	tokyonight = tokyonight,
 	neoformat = neoformat,
+	fm = fm,
 }
