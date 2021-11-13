@@ -162,15 +162,6 @@ api.nvim_set_keymap("n", "ys", "<Cmd>set operatorfunc=SurroundAddOperatorMode<CR
 api.nvim_set_keymap("n", "cs", "<Cmd>lua require('surround').surround_replace()<CR>", { noremap = true })
 api.nvim_set_keymap("n", "ds", "<Cmd>lua require('surround').surround_delete()<CR>", { noremap = true })
 
--------------------- lukas-reineke/indent-blankline.nvim
-g.indent_blankline_enabled = true
-g.indent_blankline_show_first_indent_level = false
-
-api.nvim_set_keymap("", "p", "<Plug>(miniyank-autoput)", { silent = true })
-api.nvim_set_keymap("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
-api.nvim_set_keymap("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
-api.nvim_set_keymap("", "<c-p>", "<Plug>(miniyank-cycleback)", { silent = true })
-
 -------------------- chaoren/vim-wordmotion
 cmd("let g:wordmotion_nomap = 1")
 api.nvim_set_keymap("n", "gw", "<Plug>WordMotion_w", { noremap = false })

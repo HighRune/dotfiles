@@ -4,6 +4,8 @@ local function setup()
 		filetype_exclude = { "help" },
 		buftype_exclude = { "terminal", "nofile" },
 	})
+	vim.g.indent_blankline_enabled = true
+	vim.g.indent_blankline_show_first_indent_level = false
 end
 
 return { setup = setup }
