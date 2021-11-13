@@ -85,7 +85,7 @@ return require("packer").startup(function(use)
 	-- })
 	use({
 		"chaoren/vim-wordmotion",
-		-- config = require("config.vim-wordmotion").setup(),
+		config = require("config.vim-wordmotion").setup(),
 	})
 
 	-- use("svermeulen/vimpeccable")
