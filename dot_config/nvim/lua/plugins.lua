@@ -30,7 +30,10 @@ return require("packer").startup(function(use)
 	})
 	use({
 		"is0n/fm-nvim",
-		config = "require('config.fm-nvim').setup()",
+		config = function()
+			require("config.fm-nvim").setup()
+			require("mappings").fm()
+		end,
 	})
 	-- use({
 	-- 	"lewis6991/gitsigns.nvim",
