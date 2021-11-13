@@ -22,10 +22,10 @@ return require("packer").startup(function(use)
 		"nvim-telescope/telescope.nvim",
 		config = require("config.telescope").setup(),
 	})
-	-- use({
-	-- 	"is0n/fm-nvim",
-	-- 	config = "require('config.fm-nvim').setup()",
-	-- })
+	use({
+		"is0n/fm-nvim",
+		config = "require('config.fm-nvim').setup()",
+	})
 	-- use({
 	-- 	"lewis6991/gitsigns.nvim",
 	-- 	config = function()
