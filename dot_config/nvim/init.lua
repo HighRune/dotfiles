@@ -114,18 +114,24 @@ api.nvim_set_keymap("n", "<c-w>", ":BufferClose<CR>", opts)
 api.nvim_set_keymap("n", "gj", ":SplitjoinJoin<cr>", opts)
 api.nvim_set_keymap("n", "gk", ":SplitjoinSplit<cr>", opts)
 
+-------------------- inside/vim-search-pulse
+g.vim_search_pulse_mode = "pattern"
+g.vim_search_pulse_duration = 200
+
+-------------------- is0n/fm-nvim
+api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
+
+-------------------- chaoren/vim-wordmotion
+cmd("let g:wordmotion_nomap = 1")
+api.nvim_set_keymap("n", "gw", "<Plug>WordMotion_w", { noremap = false })
+api.nvim_set_keymap("n", "gb", "<Plug>WordMotion_b", { noremap = false })
+
 -------------------- terryma/vim-expand-region
 -- cmd([[
 -- map <cr> <Plug>(expand_region_expand)
 -- map <s-cr> <Plug>(expand_region_shrink)
 -- let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'ap':1 }
 -- ]])
-
--------------------- inside/vim-search-pulse
-g.vim_search_pulse_mode = "pattern"
-g.vim_search_pulse_duration = 200
-
-api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
 
 -------------------- kana/vim-arpeggio
 -- cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")
@@ -154,8 +160,3 @@ api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
 -- let g:yoinkSwapClampAtEnds = 0
 -- let g:yoinkSyncSystemClipboardOnFocus = 0
 -- ]])
-
--------------------- chaoren/vim-wordmotion
-cmd("let g:wordmotion_nomap = 1")
-api.nvim_set_keymap("n", "gw", "<Plug>WordMotion_w", { noremap = false })
-api.nvim_set_keymap("n", "gb", "<Plug>WordMotion_b", { noremap = false })
