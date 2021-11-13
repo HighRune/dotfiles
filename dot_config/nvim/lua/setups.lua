@@ -1,3 +1,5 @@
+local g = vim.g
+
 -------------------- inside/vim-search-pulse
 local function searchPulse()
 	g.vim_search_pulse_mode = "pattern"
