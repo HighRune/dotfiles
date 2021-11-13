@@ -66,7 +66,10 @@ return require("packer").startup(function(use)
 	-- use("tommcdo/vim-lion")
 	-- use("p00f/nvim-ts-rainbow")
 	-- use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
-	-- use("AndrewRadev/splitjoin.vim")
+	use({
+		"AndrewRadev/splitjoin.vim",
+		-- config = require("mappings").splitjoin()
+	})
 	-- use("inside/vim-search-pulse")
 	-- use("kana/vim-textobj-user")
 	-- use("rhysd/vim-textobj-anyblock")
