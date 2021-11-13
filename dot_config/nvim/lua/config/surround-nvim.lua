@@ -4,6 +4,7 @@ local function setup()
 		quotes = { "'", '"', "`" },
 		context_offset = 50,
 	})
+	require("mappings").surround()
 end
 
 return { setup = setup }
