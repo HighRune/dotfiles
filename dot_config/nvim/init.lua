@@ -63,31 +63,6 @@ cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent ! ! chezmoi add ~/.config
 -- Disable automatic comment insertion
 cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]])
 
-api.nvim_set_keymap("n", "<c-l>", ":noh<cr>", opts)
-api.nvim_set_keymap("", "Q", "<nop>", opts)
-api.nvim_set_keymap("", "q", "<nop>", opts)
-api.nvim_set_keymap("n", "<c-u>", "5k", opts)
-api.nvim_set_keymap("n", "<c-d>", "5j", opts)
-api.nvim_set_keymap("i", "<c-a>", "<esc>I", opts)
-api.nvim_set_keymap("i", "<c-e>", "<end>", opts)
-api.nvim_set_keymap("n", "k", "gk", opts)
-api.nvim_set_keymap("n", "j", "gj", opts)
-api.nvim_set_keymap("n", "0", "g0", opts)
-api.nvim_set_keymap("n", "$", "g$:set ve= ve=all<cr>", opts)
-api.nvim_set_keymap("n", "^", "g^", opts)
-api.nvim_set_keymap("n", "<s-h>", "^", { silent = true })
-api.nvim_set_keymap("n", "<s-l>", "$", { silent = true })
-api.nvim_set_keymap("v", "<s-h>", "^", { silent = true })
-api.nvim_set_keymap("v", "<s-l>", "$", { silent = true })
-api.nvim_set_keymap("n", "cw", "ciw", { silent = true })
-api.nvim_set_keymap("n", "cW", "ciW", { silent = true })
-api.nvim_set_keymap("n", "dw", "diw", { silent = true })
-api.nvim_set_keymap("n", "dW", "diW", { silent = true })
-api.nvim_set_keymap("n", "yw", "yiw", { silent = true })
-api.nvim_set_keymap("n", "yW", "yiW", { silent = true })
-api.nvim_set_keymap("n", "vw", "viw", { silent = true })
-api.nvim_set_keymap("n", "vW", "viW", { silent = true })
-
 -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
 -------------------- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent! !chezmoi apply --source-path %]])
@@ -95,6 +70,7 @@ cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent! !chezmoi add ~/.config/c
 
 -------------------- PLUGINS
 
+require("mappings").vanilla()
 require("plugins")
 
 -------------------- wbthomason/packer.nvim
