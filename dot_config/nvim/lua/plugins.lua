@@ -83,14 +83,14 @@ return require("packer").startup(function(use)
 	-- use("kana/vim-textobj-user")
 	-- use("rhysd/vim-textobj-anyblock")
 	-- use("AndrewRadev/sideways.vim")
-	use({
-		"bfredl/nvim-miniyank",
-		config = require("config.nvim-miniyank").setup(),
-		-- config = function()
-		-- require("setups").miniyank()
-		-- config = require("mappings").miniyank(),
-		-- end,
-	})
+	-- use({
+	-- 	"bfredl/nvim-miniyank",
+	-- 	config = require("config.nvim-miniyank").setup(),
+	-- 	-- config = function()
+	-- 	-- require("setups").miniyank()
+	-- 	-- config = require("mappings").miniyank(),
+	-- 	-- end,
+	-- })
 	-- use({
 	-- 	"windwp/nvim-autopairs",
 	-- 	-- config = require("config.nvim-autopairs").setup(),
