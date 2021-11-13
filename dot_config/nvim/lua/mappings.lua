@@ -1,6 +1,32 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+local function vanilla()
+	map("n", "<c-l>", ":noh<cr>", opts)
+	map("", "Q", "<nop>", opts)
+	map("", "q", "<nop>", opts)
+	map("n", "<c-u>", "5k", opts)
+	map("n", "<c-d>", "5j", opts)
+	map("i", "<c-a>", "<esc>I", opts)
+	map("i", "<c-e>", "<end>", opts)
+	map("n", "k", "gk", opts)
+	map("n", "j", "gj", opts)
+	map("n", "0", "g0", opts)
+	map("n", "$", "g$:set ve= ve=all<cr>", opts)
+	map("n", "^", "g^", opts)
+	map("n", "<s-h>", "^", { silent = true })
+	map("n", "<s-l>", "$", { silent = true })
+	map("v", "<s-h>", "^", { silent = true })
+	map("v", "<s-l>", "$", { silent = true })
+	map("n", "cw", "ciw", { silent = true })
+	map("n", "cW", "ciW", { silent = true })
+	map("n", "dw", "diw", { silent = true })
+	map("n", "dW", "diW", { silent = true })
+	map("n", "yw", "yiw", { silent = true })
+	map("n", "yW", "yiW", { silent = true })
+	map("n", "vw", "viw", { silent = true })
+	map("n", "vW", "viW", { silent = true })
+end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
 	map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
@@ -44,6 +70,7 @@ local function wordmotion()
 end
 
 return {
+	vanilla = vanilla,
 	telescope = telescope,
 	miniyank = miniyank,
 	surround = surround,
