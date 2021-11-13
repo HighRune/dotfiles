@@ -33,13 +33,13 @@ local function telescope()
 	map("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 	map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
--- -------------------- bfredl/nvim-miniyank
--- local function miniyank()
--- 	map("", "p", "<Plug>(miniyank-autoput)", { silent = true })
--- 	map("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
--- 	map("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
--- 	map("", "<c-p>", "<Plug>(miniyank-cycleback)", { silent = true })
--- end
+-------------------- bfredl/nvim-miniyank
+local function miniyank()
+	map("", "p", "<Plug>(miniyank-autoput)", { silent = true })
+	map("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
+	map("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
+	map("", "<c-p>", "<Plug>(miniyank-cycleback)", { silent = true })
+end
 -------------------- blackCauldron7/surround.nvim
 local function surround()
 	map("n", "<c-b>", "<Cmd>lua require('surround').toggle_brackets(0)<CR>", { noremap = true })
@@ -72,7 +72,7 @@ end
 return {
 	vanilla = vanilla,
 	telescope = telescope,
-	-- miniyank = miniyank,
+	miniyank = miniyank,
 	surround = surround,
 	barbar = barbar,
 	splitjoin = splitjoin,
