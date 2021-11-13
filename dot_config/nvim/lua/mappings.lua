@@ -33,10 +33,14 @@ local function splitjoin()
 	map("n", "gj", ":SplitjoinJoin<cr>", opts)
 	map("n", "gk", ":SplitjoinSplit<cr>", opts)
 end
-
 -------------------- is0n/fm-nvim
 local function fm()
 	map("n", "<leader>n", ":Vifm<cr>", opts)
+end
+-------------------- chaoren/vim-wordmotion
+local function wordmotion()
+	map("n", "gw", "<Plug>WordMotion_w", { noremap = false })
+	map("n", "gb", "<Plug>WordMotion_b", { noremap = false })
 end
 
 return {
@@ -46,4 +50,5 @@ return {
 	barbar = barbar,
 	splitjoin = splitjoin,
 	fm = fm,
+	wordmotion = wordmotion,
 }
