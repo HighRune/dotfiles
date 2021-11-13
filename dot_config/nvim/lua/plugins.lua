@@ -86,7 +86,7 @@ return require("packer").startup(function(use)
 	use({
 		"bfredl/nvim-miniyank",
 		config = function()
-			setups.miniyank()
+			-- setups.miniyank()
 			mappings.miniyank()
 		end,
 	})
