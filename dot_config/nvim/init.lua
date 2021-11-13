@@ -109,9 +109,6 @@ cmd([[
 g.vim_search_pulse_mode = "pattern"
 g.vim_search_pulse_duration = 200
 
--------------------- is0n/fm-nvim
-api.nvim_set_keymap("n", "<leader>n", ":Vifm<cr>", opts)
-
 -------------------- chaoren/vim-wordmotion
 cmd("let g:wordmotion_nomap = 1")
 api.nvim_set_keymap("n", "gw", "<Plug>WordMotion_w", { noremap = false })
