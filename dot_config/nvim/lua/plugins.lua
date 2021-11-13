@@ -83,7 +83,10 @@ return require("packer").startup(function(use)
 	-- 	"blackCauldron7/surround.nvim",
 	-- 	-- config = require("config.surround-nvim").setup(),
 	-- })
-	-- use("chaoren/vim-wordmotion")
+	use({
+		"chaoren/vim-wordmotion",
+		-- config = require("config.vim-wordmotion").setup(),
+	})
 
 	-- use("svermeulen/vimpeccable")
 	-- use("svermeulen/vim-yoink")
