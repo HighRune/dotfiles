@@ -41,32 +41,32 @@ return require("packer").startup(function(use)
 			require("mappings").fm()
 		end,
 	})
-	-- use({
-	-- 	"lewis6991/gitsigns.nvim",
-	-- 	config = function()
-	-- 		require("gitsigns").setup()
-	-- 	end,
-	-- })
-	-- use({
-	-- 	"norcalli/nvim-colorizer.lua",
-	-- 	config = function()
-	-- 		require("colorizer").setup()
-	-- 	end,
-	-- })
-	-- use({
-	-- 	"nacro90/numb.nvim",
-	-- 	config = function()
-	-- 		require("numb").setup()
-	-- 	end,
-	-- })
+	use({
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
+	})
+	use({
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	})
+	use({
+		"nacro90/numb.nvim",
+		config = function()
+			require("numb").setup()
+		end,
+	})
 	use({
 		"lukas-reineke/indent-blankline.nvim",
 		config = require("setup").indentBlankline(),
 	})
-	-- use("nvim-treesitter/nvim-treesitter-textobjects")
-	-- use("nvim-treesitter/playground")
-	-- use("windwp/nvim-ts-autotag")
-	-- use("itchyny/vim-cursorword")
+	use("nvim-treesitter/nvim-treesitter-textobjects")
+	use("nvim-treesitter/playground")
+	use("windwp/nvim-ts-autotag")
+	use("itchyny/vim-cursorword")
 	use({
 		"romgrk/barbar.nvim",
 		config = mappings.barbar(),
@@ -78,9 +78,9 @@ return require("packer").startup(function(use)
 	})
 	use("tpope/vim-commentary")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
-	-- use("tommcdo/vim-lion")
-	-- use("p00f/nvim-ts-rainbow")
-	-- use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
+	use("tommcdo/vim-lion")
+	use("p00f/nvim-ts-rainbow")
+	use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
 	use({
 		"AndrewRadev/splitjoin.vim",
 		config = mappings.splitjoin(),
@@ -89,9 +89,9 @@ return require("packer").startup(function(use)
 		"inside/vim-search-pulse",
 		config = setup.searchPulse(),
 	})
-	-- use("kana/vim-textobj-user")
-	-- use("rhysd/vim-textobj-anyblock")
-	-- use("AndrewRadev/sideways.vim")
+	use("kana/vim-textobj-user")
+	use("rhysd/vim-textobj-anyblock")
+	use("AndrewRadev/sideways.vim")
 	use({
 		"bfredl/nvim-miniyank",
 		config = function()
@@ -99,10 +99,10 @@ return require("packer").startup(function(use)
 			require("mappings").miniyank()
 		end,
 	})
-	-- use({
-	-- 	"windwp/nvim-autopairs",
-	-- 	-- config = require("config.nvim-autopairs").setup(),
-	-- })
+	use({
+		"windwp/nvim-autopairs",
+		config = require("config.nvim-autopairs").setup(),
+	})
 	use({
 		"blackCauldron7/surround.nvim",
 		config = function()
