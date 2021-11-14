@@ -68,27 +68,27 @@ local function wordmotion()
 	map("n", "gw", "<Plug>WordMotion_w", { noremap = false })
 	map("n", "gb", "<Plug>WordMotion_b", { noremap = false })
 end
---------------------
+-------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
-	map(buffer, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts )
-	map(buffer, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts )
-	map(buffer, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts )
-	map(buffer, "n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts )
-	map(buffer, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts )
-	map(buffer, "n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts )
-	map(buffer, "n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts )
-	map(buffer, "n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts )
-	map(buffer, "n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts )
-	map(buffer, "n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts )
-	map(buffer, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts )
-	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
-	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
-	map(buffer, "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts )
-	map(buffer, "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts )
-	map(buffer, "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts )
-	map(buffer, "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts )
+	map(buffer, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+	map(buffer, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+	map(buffer, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+	map(buffer, "n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
+	map(buffer, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+	map(buffer, "n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+	map(buffer, "n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+	map(buffer, "n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
+	map(buffer, "n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
+	map(buffer, "n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
+	map(buffer, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+	map(buffer, "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
+	map(buffer, "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
+	map(buffer, "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	map(buffer, "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	-- { "n", "<leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>" }
 	-- { "n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>" }
+	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
+	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
 end
 
 return {
@@ -100,4 +100,5 @@ return {
 	splitjoin = splitjoin,
 	fm = fm,
 	wordmotion = wordmotion,
+	lspconfig = lspconfig,
 }
