@@ -81,8 +81,8 @@ local function lspconfig(buffer)
 	map(buffer, "n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts )
 	map(buffer, "n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts )
 	map(buffer, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts )
-	map(buffer, 	-- ", opts<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
-	map(buffer, 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>", opts
+	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
+	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
 	map(buffer, "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts )
 	map(buffer, "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts )
 	map(buffer, "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts )
