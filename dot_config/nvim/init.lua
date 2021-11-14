@@ -1,5 +1,4 @@
 require("options")
-
 require("mappings").vanilla()
 
 require("plugins")
