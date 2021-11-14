@@ -3,6 +3,12 @@ local g = vim.g
 local opt = vim.opt
 local cmd = vim.cmd
 
+-- cmd([[autocmd ColorScheme * highlight NormalFloat guibg=none]])
+-- cmd([[autocmd ColorScheme * highlight FloatBorder guifg=blue guibg=none]])
+
+-- cmd([[color haslo]])
+-- o.colorscheme darkspace
+
 -- o.scroll = 5
 g.mapleader = " "
 o.mouse = "a" -- Enables mouse support

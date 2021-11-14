@@ -1,16 +1,4 @@
-local cmd = vim.cmd -- to execute Vim commands e.g. cmd('pwd')
-
--------------------- STYLE
-
--- cmd([[autocmd ColorScheme * highlight NormalFloat guibg=none]])
--- cmd([[autocmd ColorScheme * highlight FloatBorder guifg=blue guibg=none]])
-
--- cmd([[color haslo]])
--- o.colorscheme darkspace
-
 require("options")
-
--------------------- PLUGINS
 
 require("mappings").vanilla()
 
