@@ -1,4 +1,5 @@
 local map = vim.api.nvim_set_keymap
+local mapb = vim.api.nvim_buf_set_keymap
 local opts = { noremap = true, silent = true }
 
 local function vanilla()
@@ -70,21 +71,21 @@ local function wordmotion()
 end
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
-	map(buffer, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	map(buffer, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	map(buffer, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	map(buffer, "n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-	map(buffer, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	map(buffer, "n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	map(buffer, "n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	map(buffer, "n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
-	map(buffer, "n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-	map(buffer, "n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
-	map(buffer, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-	map(buffer, "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
-	map(buffer, "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
-	map(buffer, "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	map(buffer, "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+	mapb(buffer, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
+	mapb(buffer, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+	mapb(buffer, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
+	mapb(buffer, "n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
+	mapb(buffer, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+	mapb(buffer, "n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
+	mapb(buffer, "n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+	mapb(buffer, "n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
+	mapb(buffer, "n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
+	mapb(buffer, "n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
+	mapb(buffer, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+	mapb(buffer, "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
+	mapb(buffer, "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
+	mapb(buffer, "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+	mapb(buffer, "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	-- { "n", "<leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>" }
 	-- { "n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>" }
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
