@@ -169,3 +169,21 @@ end)
 -- let g:yoinkSwapClampAtEnds = 0
 -- let g:yoinkSyncSystemClipboardOnFocus = 0
 -- ]])
+
+-------------------- ray-x/lsp_signature.nvim
+-- require("lsp_signature").setup({
+-- 	bind = true, -- This is mandatory, otherwise border config won't get registered.
+-- 	hint_prefix = " ",
+-- 	hint_scheme = "function",
+-- 	always_trigger = true,
+-- 	timer_interval = 0,
+-- 	hint_enable = true,
+-- 	floating_window = false,
+-- 	-- handler_opts = {
+-- 	-- border = "single",
+-- 	-- },
+-- 	-- doc_lines = 0,
+-- 	-- padding = " ",
+-- 	-- max_width = 70,
+-- 	-- max_height = 1,
+-- })
