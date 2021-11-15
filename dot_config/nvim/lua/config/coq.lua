@@ -42,6 +42,5 @@ local function setup()
 		},
 	}
 end
-return { setup = setup }
 
 return { setup = setup }
