@@ -56,6 +56,7 @@ local function setup()
 		server:setup(require("coq").lsp_ensure_capabilities(opts))
 		vim.cmd([[ do User LspAttachBuffers ]])
 	end)
+	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_position_diagnostics({focusable=false})]])
 end
 
 return { setup = setup }
