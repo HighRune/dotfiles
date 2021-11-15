@@ -35,7 +35,7 @@ local function setup()
 	require("nvim-lsp-installer").on_server_ready(function(server)
 		local opts = {}
 		opts.on_attach = on_attach
-		opts.flags = { debounce_text_changes = 100 }
+		opts.flags = { debounce_text_changes = 0 }
 
 		-- (optional) Customize the options passed to the server
 		-- if server.name == "tsserver" then
