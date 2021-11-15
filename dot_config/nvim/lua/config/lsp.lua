@@ -5,13 +5,13 @@ local function setup()
 	local function on_attach(client, buffer)
 		require("mappings").lspconfig(buffer)
 
-		-- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-		-- 	update_in_insert = true,
-		-- 	virtual_text = {
-		-- 		source = "if_many",
-		-- 		prefix = "",
-		-- 	},
-		-- })
+		vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+			virtual_text = {
+				source = "always",
+				prefix = "",
+			},
+			-- 	update_in_insert = true,
+		})
 
 		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
