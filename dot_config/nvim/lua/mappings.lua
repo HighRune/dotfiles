@@ -65,14 +65,14 @@ local function fm()
 	map("n", "<leader>n", ":Vifm<cr>", opts)
 end
 -------------------- chaoren/vim-wordmotion
-local function wordmotion()
-	-- map("n", "W", "<Plug>WordMotion_w", {})
-	-- map("n", "B", "<Plug>WordMotion_b", {})
-	-- map("n", "E", "<Plug>WordMotion_e", {})
-	-- map("n", "gE", "<Plug>WordMotion_ge", {})
-	-- map("o", "aW", "<Plug>WordMotion_aw", {})
-	-- map("o", "iW", "<Plug>WordMotion_ai", {})
-end
+-- local function wordmotion()
+-- 	map("n", "W", "<Plug>WordMotion_w", {})
+-- 	map("n", "B", "<Plug>WordMotion_b", {})
+-- 	map("n", "E", "<Plug>WordMotion_e", {})
+-- 	map("n", "gE", "<Plug>WordMotion_ge", {})
+-- 	map("o", "aW", "<Plug>WordMotion_aw", {})
+-- 	map("o", "iW", "<Plug>WordMotion_ai", {})
+-- end
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
 	mapb(buffer, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
@@ -104,6 +104,6 @@ return {
 	barbar = barbar,
 	splitjoin = splitjoin,
 	fm = fm,
-	wordmotion = wordmotion,
+	-- wordmotion = wordmotion,
 	lspconfig = lspconfig,
 }
