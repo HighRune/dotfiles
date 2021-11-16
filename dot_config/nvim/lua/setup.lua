@@ -33,9 +33,9 @@ local function surround()
 end
 
 -------------------- chaoren/vim-wordmotion
-local function wordmotion()
-	cmd("let g:wordmotion_nomap = 1")
-end
+-- local function wordmotion()
+-- 	cmd("let g:wordmotion_nomap = 1")
+-- end
 
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
