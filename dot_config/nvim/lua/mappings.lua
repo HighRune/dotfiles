@@ -17,8 +17,8 @@ local function vanilla()
 	map("n", "^", "g^", opts)
 	map("n", "<s-h>", "^", {})
 	map("n", "<s-l>", "$", {})
-	map("v", "<s-h>", "^", {})
-	map("v", "<s-l>", "$", {})
+	map("x", "<s-h>", "^", {})
+	map("x", "<s-l>", "$", {})
 	map("n", "cw", "ciw", {})
 	map("n", "cW", "ciW", {})
 	map("n", "dw", "diw", {})
@@ -80,15 +80,11 @@ map <silent> W <Plug>CamelCaseMotion_w
 map <silent> B <Plug>CamelCaseMotion_b
 map <silent> E <Plug>CamelCaseMotion_e
 map <silent> gE <Plug>CamelCaseMotion_ge
-sunmap W
-sunmap B
-sunmap E
-sunmap gE
 omap <silent> iW <Plug>CamelCaseMotion_iw
-xmap <silent> iW <Plug>CamelCaseMotion_iw
 omap <silent> iB <Plug>CamelCaseMotion_ib
-xmap <silent> iB <Plug>CamelCaseMotion_ib
 omap <silent> iE <Plug>CamelCaseMotion_ie
+xmap <silent> iW <Plug>CamelCaseMotion_iw
+xmap <silent> iB <Plug>CamelCaseMotion_ib
 xmap <silent> iE <Plug>CamelCaseMotion_ie
   ]])
 end
