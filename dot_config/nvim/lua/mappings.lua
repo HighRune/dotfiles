@@ -66,8 +66,13 @@ local function fm()
 end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-	map("n", "gw", "<Plug>WordMotion_w", { noremap = false })
-	map("n", "gb", "<Plug>WordMotion_b", { noremap = false })
+	vim.cmd("let g:wordmotion_nomap = 1")
+	map("n", "W", "<Plug>WordMotion_w", {})
+	map("n", "B", "<Plug>WordMotion_b", {})
+	map("n", "E", "<Plug>WordMotion_e", {})
+	map("n", "gE", "<Plug>WordMotion_ge", {})
+	map("o", "aW", "<Plug>WordMotion_aw", {})
+	map("o", "iW", "<Plug>WordMotion_ai", {})
 end
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
