@@ -99,7 +99,7 @@ return {
 	searchPulse = searchPulse,
 	miniyank = miniyank,
 	surround = surround,
-	wordmotion = wordmotion,
+	-- wordmotion = wordmotion,
 	tokyonight = tokyonight,
 	neoformat = neoformat,
 	fm = fm,
