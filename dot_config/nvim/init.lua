@@ -1,19 +1,16 @@
 require("options")
 require("mappings").vanilla()
 
-local mappings = require("mappings")
-local setup = require("setup")
-
 return require("packer").startup(function(use)
 	use({
 		"wbthomason/packer.nvim",
-		config = setup.packer(),
+		config = require("setup").packer(),
 	})
 	use("nvim-lua/plenary.nvim")
 	use("kyazdani42/nvim-web-devicons")
 	use({
 		"folke/tokyonight.nvim",
-		config = setup.tokyonight(),
+		config = require("setup").tokyonight(),
 	})
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -69,12 +66,12 @@ return require("packer").startup(function(use)
 	use("itchyny/vim-cursorword")
 	use({
 		"romgrk/barbar.nvim",
-		config = mappings.barbar(),
+		config = require("mappings").barbar(),
 	})
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 	use({
 		"sbdchd/neoformat",
-		config = setup.neoformat(),
+		config = require("setup").neoformat(),
 	})
 	use("tpope/vim-commentary")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
@@ -83,11 +80,11 @@ return require("packer").startup(function(use)
 	use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
 	use({
 		"AndrewRadev/splitjoin.vim",
-		config = mappings.splitjoin(),
+		config = require("mappings").splitjoin(),
 	})
 	use({
 		"inside/vim-search-pulse",
-		config = setup.searchPulse(),
+		config = require("setup").searchPulse(),
 	})
 	use("kana/vim-textobj-user")
 	use("rhysd/vim-textobj-anyblock")
