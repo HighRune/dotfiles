@@ -135,8 +135,6 @@ return require("packer").startup(function(use)
 	-- })
 end)
 
-vim.cmd([[autocmd ColorScheme * highlight LspDiagnosticsVirtualTextError guifg=white guibg=none]])
-
 -------------------- terryma/vim-expand-region
 -- cmd([[
 -- map <cr> <Plug>(expand_region_expand)
