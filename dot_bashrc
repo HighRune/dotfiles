@@ -229,3 +229,5 @@ if [ -f '/home/charles/google-cloud-sdk/path.bash.inc' ]; then . '/home/charles/
 if [ -f '/home/charles/google-cloud-sdk/completion.bash.inc' ]; then . '/home/charles/google-cloud-sdk/completion.bash.inc'; fi
 
 export PATH=$PATH:/home/charles/.cargo/bin
+
+export MANPAGER="nvim -c 'set filetype=man' -"
