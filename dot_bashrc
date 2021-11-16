@@ -231,3 +231,4 @@ if [ -f '/home/charles/google-cloud-sdk/completion.bash.inc' ]; then . '/home/ch
 export PATH=$PATH:/home/charles/.cargo/bin
 
 export MANPAGER='nvim +Man!'
+export MANWIDTH=999
