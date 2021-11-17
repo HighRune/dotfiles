@@ -82,20 +82,20 @@ omap iW         <Plug>WordMotion_iw
 	-- 	map("o", "iW", "<Plug>WordMotion_iw", {})
 end
 -------------------- bkad/CamelCaseMotion
-local function camelCaseMotion()
-	-- vim.cmd([[
-	-- map <silent> W <Plug>CamelCaseMotion_w
-	-- map <silent> B <Plug>CamelCaseMotion_b
-	-- map <silent> E <Plug>CamelCaseMotion_e
-	-- map <silent> gE <Plug>CamelCaseMotion_ge
-	-- omap <silent> iW <Plug>CamelCaseMotion_iw
-	-- omap <silent> iB <Plug>CamelCaseMotion_ib
-	-- omap <silent> iE <Plug>CamelCaseMotion_ie
-	-- xmap <silent> iW <Plug>CamelCaseMotion_iw
-	-- xmap <silent> iB <Plug>CamelCaseMotion_ib
-	-- xmap <silent> iE <Plug>CamelCaseMotion_ie
-	-- ]])
-end
+-- local function camelCaseMotion()
+-- vim.cmd([[
+-- map <silent> W <Plug>CamelCaseMotion_w
+-- map <silent> B <Plug>CamelCaseMotion_b
+-- map <silent> E <Plug>CamelCaseMotion_e
+-- map <silent> gE <Plug>CamelCaseMotion_ge
+-- omap <silent> iW <Plug>CamelCaseMotion_iw
+-- omap <silent> iB <Plug>CamelCaseMotion_ib
+-- omap <silent> iE <Plug>CamelCaseMotion_ie
+-- xmap <silent> iW <Plug>CamelCaseMotion_iw
+-- xmap <silent> iB <Plug>CamelCaseMotion_ib
+-- xmap <silent> iE <Plug>CamelCaseMotion_ie
+-- ]])
+-- end
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
 	mapb(buffer, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
