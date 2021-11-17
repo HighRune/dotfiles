@@ -107,20 +107,20 @@ return require("packer").startup(function(use)
 			require("mappings").surround()
 		end,
 	})
+	-- use({
+	-- 	"bkad/CamelCaseMotion",
+	-- 	-- config = function()
+	-- 	-- 	require("mappings").camelCaseMotion()
+	-- 	-- end,
+	-- })
+
 	use({
-		"bkad/CamelCaseMotion",
+		"chaoren/vim-wordmotion",
 		config = function()
-			require("mappings").camelCaseMotion()
+			require("setup").wordmotion()
+			require("mappings").wordmotion()
 		end,
 	})
-
-	-- use({
-	-- 	"chaoren/vim-wordmotion",
-	-- 	config = function()
-	-- 		require("setup").wordmotion()
-	-- 		require("mappings").wordmotion()
-	-- 	end,
-	-- })
 	-- use("svermeulen/vimpeccable")
 	-- use("svermeulen/vim-yoink")
 	-- use("kana/vim-arpeggio")
