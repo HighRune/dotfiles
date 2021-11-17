@@ -107,13 +107,6 @@ return require("packer").startup(function(use)
 			require("mappings").surround()
 		end,
 	})
-	-- use({
-	-- 	"bkad/CamelCaseMotion",
-	-- 	-- config = function()
-	-- 	-- 	require("mappings").camelCaseMotion()
-	-- 	-- end,
-	-- })
-
 	use({
 		"chaoren/vim-wordmotion",
 		config = function()
@@ -135,6 +128,12 @@ return require("packer").startup(function(use)
 	-- use({
 	-- "ray-x/lsp_signature.nvim",
 	-- config = require("config.lsp_signature").setup(),
+	-- })
+	-- use({
+	-- "bkad/CamelCaseMotion",
+	-- config = function()
+	-- require("mappings").camelCaseMotion()
+	-- end,
 	-- })
 end)
 
