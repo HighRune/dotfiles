@@ -65,28 +65,36 @@ local function fm()
 	map("n", "<leader>n", ":Vifm<cr>", opts)
 end
 -------------------- chaoren/vim-wordmotion
--- local function wordmotion()
--- 	map("n", "W", "<Plug>WordMotion_w", {})
--- 	map("n", "B", "<Plug>WordMotion_b", {})
--- 	map("n", "E", "<Plug>WordMotion_e", {})
--- 	map("n", "gE", "<Plug>WordMotion_ge", {})
--- 	map("o", "aW", "<Plug>WordMotion_aw", {})
--- 	map("o", "iW", "<Plug>WordMotion_ai", {})
--- end
+local function wordmotion()
+	vim.cmd([[
+nmap W          <Plug>WordMotion_w
+nmap B          <Plug>WordMotion_b
+nmap E          <Plug>WordMotion_e
+nmap gE         <Plug>WordMotion_ge
+omap aW         <Plug>WordMotion_aw
+omap iW         <Plug>WordMotion_iw
+]])
+	-- 	map("n", "W", "<Plug>WordMotion_w", {})
+	-- 	map("n", "B", "<Plug>WordMotion_b", {})
+	-- 	map("n", "E", "<Plug>WordMotion_e", {})
+	-- 	map("n", "gE", "<Plug>WordMotion_ge", {})
+	-- 	map("o", "aW", "<Plug>WordMotion_aw", {})
+	-- 	map("o", "iW", "<Plug>WordMotion_iw", {})
+end
 -------------------- bkad/CamelCaseMotion
 local function camelCaseMotion()
-	vim.cmd([[
-map <silent> W <Plug>CamelCaseMotion_w
-map <silent> B <Plug>CamelCaseMotion_b
-map <silent> E <Plug>CamelCaseMotion_e
-map <silent> gE <Plug>CamelCaseMotion_ge
-omap <silent> iW <Plug>CamelCaseMotion_iw
-omap <silent> iB <Plug>CamelCaseMotion_ib
-omap <silent> iE <Plug>CamelCaseMotion_ie
-xmap <silent> iW <Plug>CamelCaseMotion_iw
-xmap <silent> iB <Plug>CamelCaseMotion_ib
-xmap <silent> iE <Plug>CamelCaseMotion_ie
-  ]])
+	-- vim.cmd([[
+	-- map <silent> W <Plug>CamelCaseMotion_w
+	-- map <silent> B <Plug>CamelCaseMotion_b
+	-- map <silent> E <Plug>CamelCaseMotion_e
+	-- map <silent> gE <Plug>CamelCaseMotion_ge
+	-- omap <silent> iW <Plug>CamelCaseMotion_iw
+	-- omap <silent> iB <Plug>CamelCaseMotion_ib
+	-- omap <silent> iE <Plug>CamelCaseMotion_ie
+	-- xmap <silent> iW <Plug>CamelCaseMotion_iw
+	-- xmap <silent> iB <Plug>CamelCaseMotion_ib
+	-- xmap <silent> iE <Plug>CamelCaseMotion_ie
+	-- ]])
 end
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
@@ -119,7 +127,7 @@ return {
 	barbar = barbar,
 	splitjoin = splitjoin,
 	fm = fm,
-	camelCaseMotion = camelCaseMotion,
-	-- wordmotion = wordmotion,
+	-- camelCaseMotion = camelCaseMotion,
+	wordmotion = wordmotion,
 	lspconfig = lspconfig,
 }
