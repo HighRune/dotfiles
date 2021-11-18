@@ -45,6 +45,7 @@ local function surround()
 	map("n", "ys", "<Cmd>set operatorfunc=SurroundAddOperatorMode<CR>g@", { noremap = true })
 	map("n", "cs", "<Cmd>lua require('surround').surround_replace()<CR>", { noremap = true })
 	map("n", "ds", "<Cmd>lua require('surround').surround_delete()<CR>", { noremap = true })
+	map("v", "s", "<esc>gv<cmd>lua require'surround'.surround_add()<cr>", { noremap = true })
 end
 -------------------- romgrk/barbar.nvim
 local function barbar()
