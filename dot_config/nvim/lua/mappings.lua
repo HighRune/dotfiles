@@ -69,7 +69,7 @@ local function fm()
 end
 -------------------- kana/vim-arpeggio
 local function arpeggio()
-	cmd([[Arpeggioinoremap jk <esc>\n]])
+	vim.call("arpeggio#map", "i", "s", 0, "hl", "<Esc>")
 end
 
 -------------------- chaoren/vim-wordmotion
