@@ -88,17 +88,6 @@ return require("packer").startup(function(use)
 	})
 	use("kana/vim-textobj-user")
 	use("rhysd/vim-textobj-anyblock")
-	-- use({
-	-- 	"AndrewRadev/sideways.vim",
-	-- 	config = require("mappings").sideways(),
-	-- })
-	use({
-		"bfredl/nvim-miniyank",
-		config = function()
-			require("setup").miniyank()
-			require("mappings").miniyank()
-		end,
-	})
 	use({
 		"windwp/nvim-autopairs",
 		config = require("config.nvim-autopairs").setup(),
@@ -117,7 +106,26 @@ return require("packer").startup(function(use)
 			require("mappings").wordmotion()
 		end,
 	})
-	use("svermeulen/vim-cutlass")
+	use({
+		"svermeulen/vim-cutlass",
+		config = function()
+			require("mappings").cutlass()
+		end,
+	})
+	-- use({
+	-- 	"bfredl/nvim-miniyank",
+	-- 	config = function()
+	-- 		require("setup").miniyank()
+	-- 		require("mappings").miniyank()
+	-- 	end,
+	-- })
+	-- use({
+	-- 	"bfredl/nvim-miniyank",
+	-- 	config = function()
+	-- 		require("setup").miniyank()
+	-- 		require("mappings").miniyank()
+	-- 	end,
+	-- })
 	-- use("svermeulen/vimpeccable")
 	-- use("svermeulen/vim-yoink")
 	-- use("kana/vim-arpeggio")
