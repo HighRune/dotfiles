@@ -88,10 +88,10 @@ return require("packer").startup(function(use)
 	})
 	use("kana/vim-textobj-user")
 	use("rhysd/vim-textobj-anyblock")
-	use({
-		"AndrewRadev/sideways.vim",
-		config = require("mappings").sideways(),
-	})
+	-- use({
+	-- 	"AndrewRadev/sideways.vim",
+	-- 	config = require("mappings").sideways(),
+	-- })
 	use({
 		"bfredl/nvim-miniyank",
 		config = function()
