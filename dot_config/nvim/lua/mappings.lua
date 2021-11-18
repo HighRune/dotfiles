@@ -1,6 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local mapb = vim.api.nvim_buf_set_keymap
 local cmd = vim.cmd
+local cmd = vim.call
 local opts = { noremap = true, silent = true }
 
 local function vanilla()
@@ -28,8 +29,8 @@ local function vanilla()
 	map("n", "yW", "yiW", {})
 	map("n", "vw", "viw", {})
 	map("n", "vW", "viW", {})
-	map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true, noremap = true })
-	map("x", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true, noremap = true })
+	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true, noremap = true })
+	-- map("x", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true, noremap = true })
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
@@ -69,8 +70,7 @@ local function fm()
 end
 -------------------- kana/vim-arpeggio
 local function arpeggio()
-	-- vim.call("arpeggio#map", "i", "s", 0, "hl", "<Esc>")
-	-- cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")
+	call("arpeggio#map", "n", "e", 0, "hl", "(virtcol('$') / 2) . '<Bar>'")
 end
 
 -------------------- chaoren/vim-wordmotion
