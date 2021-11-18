@@ -28,6 +28,8 @@ local function vanilla()
 	map("n", "yW", "yiW", {})
 	map("n", "vw", "viw", {})
 	map("n", "vW", "viW", {})
+	map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true, noremap = true })
+	map("x", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true, noremap = true })
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
