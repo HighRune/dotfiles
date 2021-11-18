@@ -1,5 +1,6 @@
 local map = vim.api.nvim_set_keymap
 local mapb = vim.api.nvim_buf_set_keymap
+local cmd = vim.cmd
 local opts = { noremap = true, silent = true }
 
 local function vanilla()
@@ -64,9 +65,13 @@ end
 local function fm()
 	map("n", "<leader>n", ":Vifm<cr>", opts)
 end
+-------------------- AndrewRadev/sideways.vim
+local function sideways()
+	-- map("n", "<leader>n", ":Vifm<cr>", opts)
+end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-	vim.cmd([[
+	cmd([[
 nmap W          <Plug>WordMotion_w
 nmap B          <Plug>WordMotion_b
 nmap E          <Plug>WordMotion_e
@@ -83,7 +88,7 @@ omap iW         <Plug>WordMotion_iw
 end
 -------------------- bkad/CamelCaseMotion
 -- local function camelCaseMotion()
--- vim.cmd([[
+-- cmd([[
 -- map <silent> W <Plug>CamelCaseMotion_w
 -- map <silent> B <Plug>CamelCaseMotion_b
 -- map <silent> E <Plug>CamelCaseMotion_e
@@ -127,6 +132,7 @@ return {
 	barbar = barbar,
 	splitjoin = splitjoin,
 	fm = fm,
+	sideways = sideways,
 	-- camelCaseMotion = camelCaseMotion,
 	wordmotion = wordmotion,
 	lspconfig = lspconfig,
