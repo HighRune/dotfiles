@@ -37,13 +37,6 @@ local function telescope()
 	map("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 	map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
--------------------- bfredl/nvim-miniyank
--- local function miniyank()
--- map("", "p", "<Plug>(miniyank-autoput)", { silent = true })
--- map("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
--- map("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
--- map("", "<c-p>", "<Plug>(miniyank-cycleback)", { silent = true })
--- end
 -------------------- blackCauldron7/surround.nvim
 local function surround()
 	map("n", "<c-b>", "<Cmd>lua require('surround').toggle_brackets(0)<CR>", { noremap = true })
@@ -66,19 +59,19 @@ end
 -------------------- svermeulen/vim-cutlass
 local function cutlass()
 	map("n", "cy", "c", opts)
-	map("x", "cy", "c", opts)
+	-- map("x", "cy", "c", opts)
 	map("n", "dy", "d", opts)
-	map("x", "dy", "d", opts)
+	-- map("x", "dy", "d", opts)
 end
 -------------------- is0n/fm-nvim
 local function fm()
 	map("n", "<leader>n", ":Vifm<cr>", opts)
 end
--------------------- AndrewRadev/sideways.vim
--- local function sideways()
--- map("n", "<c-j>", ":SidewaysLeft<cr>", opts)
--- map("n", "<c-k>", ":SidewaysRight<cr>", opts)
--- end
+-------------------- kana/vim-arpeggio
+local function arpeggio()
+	cmd([[Arpeggioinoremap jk <esc>\n]])
+end
+
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	cmd([[
@@ -96,21 +89,6 @@ omap iW         <Plug>WordMotion_iw
 	-- 	map("o", "aW", "<Plug>WordMotion_aw", {})
 	-- 	map("o", "iW", "<Plug>WordMotion_iw", {})
 end
--------------------- bkad/CamelCaseMotion
--- local function camelCaseMotion()
--- cmd([[
--- map <silent> W <Plug>CamelCaseMotion_w
--- map <silent> B <Plug>CamelCaseMotion_b
--- map <silent> E <Plug>CamelCaseMotion_e
--- map <silent> gE <Plug>CamelCaseMotion_ge
--- omap <silent> iW <Plug>CamelCaseMotion_iw
--- omap <silent> iB <Plug>CamelCaseMotion_ib
--- omap <silent> iE <Plug>CamelCaseMotion_ie
--- xmap <silent> iW <Plug>CamelCaseMotion_iw
--- xmap <silent> iB <Plug>CamelCaseMotion_ib
--- xmap <silent> iE <Plug>CamelCaseMotion_ie
--- ]])
--- end
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
 	mapb(buffer, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
@@ -134,6 +112,34 @@ local function lspconfig(buffer)
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
 end
 
+-------------------- AndrewRadev/sideways.vim
+-- local function sideways()
+-- map("n", "<c-j>", ":SidewaysLeft<cr>", opts)
+-- map("n", "<c-k>", ":SidewaysRight<cr>", opts)
+-- end
+-------------------- bkad/CamelCaseMotion
+-- local function camelCaseMotion()
+-- cmd([[
+-- map <silent> W <Plug>CamelCaseMotion_w
+-- map <silent> B <Plug>CamelCaseMotion_b
+-- map <silent> E <Plug>CamelCaseMotion_e
+-- map <silent> gE <Plug>CamelCaseMotion_ge
+-- omap <silent> iW <Plug>CamelCaseMotion_iw
+-- omap <silent> iB <Plug>CamelCaseMotion_ib
+-- omap <silent> iE <Plug>CamelCaseMotion_ie
+-- xmap <silent> iW <Plug>CamelCaseMotion_iw
+-- xmap <silent> iB <Plug>CamelCaseMotion_ib
+-- xmap <silent> iE <Plug>CamelCaseMotion_ie
+-- ]])
+-- end
+-------------------- bfredl/nvim-miniyank
+-- local function miniyank()
+-- map("", "p", "<Plug>(miniyank-autoput)", { silent = true })
+-- map("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
+-- map("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
+-- map("", "<c-p>", "<Plug>(miniyank-cycleback)", { silent = true })
+-- end
+
 return {
 	vanilla = vanilla,
 	telescope = telescope,
@@ -142,6 +148,7 @@ return {
 	cutlass = cutlass,
 	barbar = barbar,
 	splitjoin = splitjoin,
+	arpeggio = arpeggio,
 	fm = fm,
 	-- sideways = sideways,
 	-- camelCaseMotion = camelCaseMotion,
