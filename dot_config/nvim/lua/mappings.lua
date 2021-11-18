@@ -5,7 +5,7 @@ local opts = { noremap = true, silent = true }
 
 local function vanilla()
 	map("n", "<c-l>", ":noh<cr>", opts)
-	map("", "Q", "<nop>", opts)
+	map("", "<s-q>", "<nop>", opts)
 	map("", "q", "<nop>", opts)
 	map("n", "<c-u>", "5k", opts)
 	map("n", "<c-d>", "5j", opts)
