@@ -67,7 +67,8 @@ local function fm()
 end
 -------------------- AndrewRadev/sideways.vim
 local function sideways()
-	-- map("n", "<leader>n", ":Vifm<cr>", opts)
+	map("n", "<c-j>", ":SidewaysLeft<cr>", opts)
+	map("n", "<c-k>", ":SidewaysRight<cr>", opts)
 end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
