@@ -38,12 +38,12 @@ local function telescope()
 	map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
 -------------------- bfredl/nvim-miniyank
-local function miniyank()
-	map("", "p", "<Plug>(miniyank-autoput)", { silent = true })
-	map("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
-	map("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
-	map("", "<c-p>", "<Plug>(miniyank-cycleback)", { silent = true })
-end
+-- local function miniyank()
+-- map("", "p", "<Plug>(miniyank-autoput)", { silent = true })
+-- map("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
+-- map("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
+-- map("", "<c-p>", "<Plug>(miniyank-cycleback)", { silent = true })
+-- end
 -------------------- blackCauldron7/surround.nvim
 local function surround()
 	map("n", "<c-b>", "<Cmd>lua require('surround').toggle_brackets(0)<CR>", { noremap = true })
@@ -62,6 +62,13 @@ end
 local function splitjoin()
 	map("n", "gj", ":SplitjoinJoin<cr>", opts)
 	map("n", "gk", ":SplitjoinSplit<cr>", opts)
+end
+-------------------- svermeulen/vim-cutlass
+local function cutlass()
+	map("n", "cy", "c", opts)
+	map("x", "cy", "c", opts)
+	map("n", "dy", "d", opts)
+	map("x", "dy", "d", opts)
 end
 -------------------- is0n/fm-nvim
 local function fm()
@@ -130,8 +137,9 @@ end
 return {
 	vanilla = vanilla,
 	telescope = telescope,
-	miniyank = miniyank,
+	-- miniyank = miniyank,
 	surround = surround,
+	cutlass = cutlass,
 	barbar = barbar,
 	splitjoin = splitjoin,
 	fm = fm,
