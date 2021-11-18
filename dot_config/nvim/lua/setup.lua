@@ -18,9 +18,9 @@ local function searchPulse()
 end
 
 -------------------- bfredl/nvim-miniyank
-local function miniyank()
-	g.miniyank_maxitems = 5
-end
+-- local function miniyank()
+-- 	g.miniyank_maxitems = 5
+-- end
 
 -------------------- blackCauldron7/surround.nvim
 
@@ -97,7 +97,7 @@ end
 return {
 	packer = packer,
 	searchPulse = searchPulse,
-	miniyank = miniyank,
+	-- miniyank = miniyank,
 	surround = surround,
 	wordmotion = wordmotion,
 	tokyonight = tokyonight,
