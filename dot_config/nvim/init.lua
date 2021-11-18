@@ -117,11 +117,11 @@ return require("packer").startup(function(use)
 			require("mappings").wordmotion()
 		end,
 	})
+	use("svermeulen/vim-cutlass")
 	-- use("svermeulen/vimpeccable")
 	-- use("svermeulen/vim-yoink")
 	-- use("kana/vim-arpeggio")
 	-- use("matze/vim-move")
-	-- use("svermeulen/vim-cutlass")
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
 	-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
