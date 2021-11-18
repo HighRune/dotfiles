@@ -112,6 +112,10 @@ return require("packer").startup(function(use)
 			require("mappings").cutlass()
 		end,
 	})
+	use({
+		"kana/vim-arpeggio",
+		require("mappings").arpeggio(),
+	})
 	-- use({
 	-- 	"bfredl/nvim-miniyank",
 	-- 	config = function()
@@ -128,7 +132,6 @@ return require("packer").startup(function(use)
 	-- })
 	-- use("svermeulen/vimpeccable")
 	-- use("svermeulen/vim-yoink")
-	-- use("kana/vim-arpeggio")
 	-- use("matze/vim-move")
 	-- use("RRethy/nvim-treesitter-textsubjects")
 	-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
