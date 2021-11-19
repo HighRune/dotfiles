@@ -29,8 +29,6 @@ local function vanilla()
 	map("n", "yW", "yiW", {})
 	map("n", "vw", "viw", {})
 	map("n", "vW", "viW", {})
-	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true, noremap = true })
-	-- map("x", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true, noremap = true })
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
@@ -61,9 +59,7 @@ end
 -------------------- svermeulen/vim-cutlass
 local function cutlass()
 	map("n", "cy", "c", opts)
-	-- map("x", "cy", "c", opts)
 	map("n", "dy", "d", opts)
-	-- map("x", "dy", "d", opts)
 end
 -------------------- is0n/fm-nvim
 local function fm()
@@ -145,15 +141,15 @@ end
 return {
 	vanilla = vanilla,
 	telescope = telescope,
-	-- miniyank = miniyank,
 	surround = surround,
 	cutlass = cutlass,
 	barbar = barbar,
 	splitjoin = splitjoin,
 	arpeggio = arpeggio,
 	fm = fm,
-	-- sideways = sideways,
-	-- camelCaseMotion = camelCaseMotion,
 	wordmotion = wordmotion,
 	lspconfig = lspconfig,
+	-- miniyank = miniyank,
+	-- sideways = sideways,
+	-- camelCaseMotion = camelCaseMotion,
 }
