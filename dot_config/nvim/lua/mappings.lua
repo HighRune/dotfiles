@@ -45,14 +45,14 @@ local function surround()
 	map("n", "ys", "<cmd>set operatorfunc=SurroundAddOperatorMode<cr>g@", { noremap = true })
 	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>", { noremap = true })
 	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>", { noremap = true })
-	map("v", "s", "<esc>gv<cmd>lua require'surround'.surround_add()<cr>", { noremap = true })
+	-- map("v", "s", "<esc>gv<cmd>lua require'surround'.surround_add()<cr>", { noremap = true })
 end
 -------------------- phaazon/hop.nvim
 local function hop()
-	map("n", "f", "<cmd>lua require('hop').hint_words()<cr>", {})
-	-- map("n", "l", "<cmd>lua require'hop'.hint_lines()<cr>")
-	-- map("v", "s", "<cmd>lua require'hop'.hint_words()<cr>")
-	-- map("v", "l", "<cmd>lua require'hop'.hint_lines()<cr>")
+	map("n", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
+	-- map("n", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
+	-- map("v", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
+	-- map("v", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 end
 -------------------- romgrk/barbar.nvim
 local function barbar()
