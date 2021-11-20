@@ -119,6 +119,9 @@ return require("packer").startup({
 		})
 		use({
 			"phaazon/hop.nvim",
+			config = function()
+				require("setup").hop()
+			end,
 		})
 		-- use({
 		-- 	"bfredl/nvim-miniyank",
