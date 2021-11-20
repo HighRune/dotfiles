@@ -43,6 +43,9 @@ local function hop()
 		keys = "aoeuhtns",
 		-- jump_on_sole_occurrence = false,
 	})
+	cmd("hi HopNextKey  guifg=#ff007c gui=bold ctermfg=198 cterm=bold")
+	cmd("hi HopNextKey1 guifg=#00dfff gui=bold ctermfg=45 cterm=bold")
+	cmd("hi HopNextKey2 guifg=#2b8db3 gui=bold ctermfg=33 cterm=bold")
 end
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
