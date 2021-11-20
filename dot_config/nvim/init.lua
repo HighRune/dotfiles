@@ -116,6 +116,9 @@ return require("packer").startup(function(use)
 		"kana/vim-arpeggio",
 		require("mappings").arpeggio(),
 	})
+	use({
+		"ggandor/lightspeed.nvim",
+	})
 	-- use({
 	-- 	"bfredl/nvim-miniyank",
 	-- 	config = function()
