@@ -118,7 +118,7 @@ return require("packer").startup({
 			require("mappings").arpeggio(),
 		})
 		use({
-			"ggandor/lightspeed.nvim",
+			"phaazon/hop.nvim",
 		})
 		-- use({
 		-- 	"bfredl/nvim-miniyank",
