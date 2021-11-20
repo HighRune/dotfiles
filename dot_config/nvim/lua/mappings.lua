@@ -40,18 +40,18 @@ local function telescope()
 end
 -------------------- blackCauldron7/surround.nvim
 local function surround()
-	map("n", "<c-b>", "<Cmd>lua require('surround').toggle_brackets(0)<CR>", { noremap = true })
-	map("n", "<c-q>", "<Cmd>lua require('surround').toggle_quotes()<CR>", { noremap = true })
-	map("n", "ys", "<Cmd>set operatorfunc=SurroundAddOperatorMode<CR>g@", { noremap = true })
-	map("n", "cs", "<Cmd>lua require('surround').surround_replace()<CR>", { noremap = true })
-	map("n", "ds", "<Cmd>lua require('surround').surround_delete()<CR>", { noremap = true })
+	map("n", "<c-b>", "<cmd>lua require('surround').toggle_brackets(0)<cr>", { noremap = true })
+	map("n", "<c-q>", "<cmd>lua require('surround').toggle_quotes()<cr>", { noremap = true })
+	map("n", "ys", "<cmd>set operatorfunc=SurroundAddOperatorMode<cr>g@", { noremap = true })
+	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>", { noremap = true })
+	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>", { noremap = true })
 	map("v", "s", "<esc>gv<cmd>lua require'surround'.surround_add()<cr>", { noremap = true })
 end
 -------------------- phaazon/hop.nvim
 local function hop()
-	map("n", "s", "<cmd>lua require'hop'.hint_words()<cr>")
+	map("n", "f", "<cmd>lua require('hop').hint_words()<cr>", {})
 	-- map("n", "l", "<cmd>lua require'hop'.hint_lines()<cr>")
-	map("v", "s", "<cmd>lua require'hop'.hint_words()<cr>")
+	-- map("v", "s", "<cmd>lua require'hop'.hint_words()<cr>")
 	-- map("v", "l", "<cmd>lua require'hop'.hint_lines()<cr>")
 end
 -------------------- romgrk/barbar.nvim
