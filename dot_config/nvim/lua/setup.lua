@@ -46,8 +46,8 @@ local function hop()
 	cmd("hi HopNextKey  guifg=#ff007c gui=bold ctermfg=198 cterm=bold")
 	cmd("hi HopNextKey1 guifg=#00dfff gui=bold ctermfg=45 cterm=bold")
 	cmd("hi HopNextKey2 guifg=#00dfff ctermfg=33")
-	cmd("highlight default HopUnmatched guifg=#666666 guibg=bg guisp=#666666 ctermfg=242")
-	cmd("highlight default link HopCursor Cursor")
+	-- cmd("highlight default HopUnmatched guifg=#666666 guibg=bg guisp=#666666 ctermfg=242")
+	-- cmd("highlight default link HopCursor Cursor")
 end
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
