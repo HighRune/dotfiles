@@ -47,6 +47,13 @@ local function surround()
 	map("n", "ds", "<Cmd>lua require('surround').surround_delete()<CR>", { noremap = true })
 	map("v", "s", "<esc>gv<cmd>lua require'surround'.surround_add()<cr>", { noremap = true })
 end
+-------------------- phaazon/hop.nvim
+local function hop()
+	map("n", "s", "<cmd>lua require'hop'.hint_words()<cr>")
+	-- map("n", "l", "<cmd>lua require'hop'.hint_lines()<cr>")
+	map("v", "s", "<cmd>lua require'hop'.hint_words()<cr>")
+	-- map("v", "l", "<cmd>lua require'hop'.hint_lines()<cr>")
+end
 -------------------- romgrk/barbar.nvim
 local function barbar()
 	map("n", "<tab>", ":BufferNext<CR>", opts)
@@ -151,6 +158,7 @@ return {
 	fm = fm,
 	wordmotion = wordmotion,
 	lspconfig = lspconfig,
+	hop = hop,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
 	-- camelCaseMotion = camelCaseMotion,
