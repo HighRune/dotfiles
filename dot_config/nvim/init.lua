@@ -121,6 +121,7 @@ return require("packer").startup({
 			"phaazon/hop.nvim",
 			config = function()
 				require("setup").hop()
+				require("mappings").hop()
 			end,
 		})
 		-- use({
