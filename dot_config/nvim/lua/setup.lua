@@ -37,6 +37,13 @@ local function wordmotion()
 	cmd("let g:wordmotion_nomap = 1")
 end
 
+-------------------- phaazon/hop.nvim
+local function hop()
+	require("hop").setup({
+		keys = "aoeuhtns",
+		-- jump_on_sole_occurrence = false,
+	})
+end
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
 	g.tokyonight_style = "night"
@@ -97,11 +104,12 @@ end
 return {
 	packer = packer,
 	searchPulse = searchPulse,
-	-- miniyank = miniyank,
 	surround = surround,
 	wordmotion = wordmotion,
 	tokyonight = tokyonight,
 	neoformat = neoformat,
 	fm = fm,
 	indentBlankline = indentBlankline,
+	hop = hop,
+	-- miniyank = miniyank,
 }
