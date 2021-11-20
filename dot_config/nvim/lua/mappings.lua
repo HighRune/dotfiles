@@ -5,6 +5,7 @@ local call = vim.call
 local opts = { noremap = true, silent = true }
 
 local function vanilla()
+	cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
 	map("n", "<c-l>", ":noh<cr>", opts)
 	map("", "<s-q>", "<nop>", opts)
 	map("", "q", "<nop>", opts)
