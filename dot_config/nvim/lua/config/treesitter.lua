@@ -46,8 +46,8 @@ local function setup()
 					["ip"] = "@parameter.inner",
 					["ai"] = "@conditional.outer",
 					["ii"] = "@conditional.inner",
-					["al"] = "@loop.outer",
-					["il"] = "@loop.inner",
+					-- ["al"] = "@loop.outer",
+					-- ["il"] = "@loop.inner",
 				},
 			},
 			-- move = {
