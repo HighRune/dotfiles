@@ -124,6 +124,7 @@ return require("packer").startup({
 				require("mappings").hop()
 			end,
 		})
+		use("kana/vim-textobj-line")
 		-- use({
 		-- 	"bfredl/nvim-miniyank",
 		-- 	config = function()
