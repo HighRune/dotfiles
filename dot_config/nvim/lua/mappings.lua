@@ -31,6 +31,9 @@ local function vanilla()
 	map("n", "yW", "yiW", {})
 	map("n", "vw", "viw", {})
 	map("n", "vW", "viW", {})
+	map("n", "dl", "dal", {})
+	map("n", "cl", "cal", {})
+	map("n", "yl", "yal", {})
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
