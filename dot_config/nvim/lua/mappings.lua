@@ -46,8 +46,8 @@ end
 -------------------- phaazon/hop.nvim
 local function hop()
 	map("n", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
+	map("v", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
 	-- map("n", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
-	-- map("v", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
 	-- map("v", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 end
 -------------------- romgrk/barbar.nvim
