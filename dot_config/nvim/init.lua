@@ -89,6 +89,7 @@ return require("packer").startup({
 		})
 		use("kana/vim-textobj-user")
 		use("rhysd/vim-textobj-anyblock")
+		use("kana/vim-textobj-line")
 		use({
 			"windwp/nvim-autopairs",
 			config = require("config.nvim-autopairs").setup(),
@@ -124,7 +125,6 @@ return require("packer").startup({
 				require("mappings").hop()
 			end,
 		})
-		use("kana/vim-textobj-line")
 		-- use({
 		-- 	"bfredl/nvim-miniyank",
 		-- 	config = function()
