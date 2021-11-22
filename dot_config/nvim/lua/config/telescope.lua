@@ -2,7 +2,7 @@ local function setup()
 	require("telescope").setup({
 		defaults = {
 			border = false,
-			layout_strategy = "center",
+			layout_strategy = "vertical",
 			layout_config = {
 				preview_cutoff = 0,
 				height = 999,
