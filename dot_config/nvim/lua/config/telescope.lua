@@ -4,8 +4,8 @@ local function setup()
 			layout_strategy = "vertical",
 			layout_config = {
 				preview_cutoff = 0,
-				height = 0.999,
-				width = 0.999,
+				height = 999,
+				width = 999,
 			},
 			mappings = {
 				i = {
