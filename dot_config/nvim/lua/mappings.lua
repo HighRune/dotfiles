@@ -107,8 +107,8 @@ local function lspconfig(buffer)
 	mapb(buffer, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 	mapb(buffer, "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
 	mapb(buffer, "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
-	mapb(buffer, "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	mapb(buffer, "n", "<C-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
+	-- mapb(buffer, "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 	-- { "n", "<leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>" }
 	-- { "n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>" }
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
