@@ -126,12 +126,12 @@ return require("packer").startup({
 				require("mappings").hop()
 			end,
 		})
-		use({
-			"ahmedkhalf/project.nvim",
-			config = function()
-				require("project_nvim").setup()
-			end,
-		})
+		-- use({
+		-- 	"ahmedkhalf/project.nvim",
+		-- 	config = function()
+		-- 		require("project_nvim").setup()
+		-- 	end,
+		-- })
 		-- use({
 		-- 	"bfredl/nvim-miniyank",
 		-- 	config = function()
