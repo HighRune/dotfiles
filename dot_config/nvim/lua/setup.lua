@@ -77,8 +77,8 @@ end
 local function fm()
 	require("fm-nvim").setup({
 		border = "none",
-		height = 1,
-		width = 1,
+		height = 999,
+		width = 999,
 		-- Command used to open files: 'tabedit'; 'split'; 'pedit'; ...
 		edit_cmd = "edit",
 		-- Terminal commands used w/ file manager
@@ -87,10 +87,11 @@ local function fm()
 		},
 		-- Mappings used inside the floating window
 		mappings = {
-			vert_split = "<C-v>",
+			-- vert_split = "<C-v>",
 			-- horz_split = "<C-h>",
-			-- tabedit = "<C-h>",
-			edit = "<C-e>",
+			-- tabedit = "<C-t>",
+			-- edit = "<C-e>",
+			ESC = "<ESC>",
 		},
 	})
 end
