@@ -40,7 +40,7 @@ end
 -------------------- phaazon/hop.nvim
 local function hop()
 	require("hop").setup({
-		keys = "aoeuhtn;qjkmwvz",
+		keys = "aoeuhtn;qjkmwvzpgcr",
 		quit_key = "s",
 	})
 	cmd("hi HopNextKey  guifg=#ff007c gui=bold ctermfg=198 cterm=bold")
