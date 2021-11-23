@@ -91,7 +91,7 @@ local function fm()
 			-- horz_split = "<C-h>",
 			-- tabedit = "<C-t>",
 			-- edit = "<C-e>",
-			ESC = "<ESC>",
+			-- ESC = "<ESC>",
 		},
 	})
 end
