@@ -3,6 +3,7 @@ require("mappings").vanilla()
 
 return require("packer").startup({
 	function(use)
+		use("lewis6991/impatient.nvim")
 		use({
 			"wbthomason/packer.nvim",
 			config = require("setup").packer(),
@@ -176,6 +177,7 @@ return require("packer").startup({
 				})
 			end,
 		},
+		compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua",
 		profile = {
 			enable = true,
 		},
