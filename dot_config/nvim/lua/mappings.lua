@@ -30,14 +30,6 @@ local function vanilla()
 	map("o", "l", "al", {})
 	map("x", "d", "ygvd", opts)
 	map("x", "c", "ygvc", opts)
-	-- cmd([[nnoremap K r<cr>k$]])
-	-- cmd([[
-	-- function! BreakHere()
-	-- s/^\(\s*\)\(.\{-}\)\(\s*\)\(\%#\)\(\s*\)\(.*\)/\1\2\r\1\4\6
-	-- call histdel("/", -1)
-	-- endfunction
-	-- nnoremap K :<C-u>call BreakHere()<CR>k$
-	-- ]])
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
