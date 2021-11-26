@@ -58,7 +58,7 @@ o.foldexpr = "nvim_treesitter#foldexpr()"
 -- Highlight a selection on yank
 cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=100}]])
 -- Disable automatic comment insertion
-cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]])
+cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal fo-=c fo-=r fo-=o fo+=t]])
 
 -- twpayne/chezmoi
 cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent! !chezmoi apply --source-path %]])
