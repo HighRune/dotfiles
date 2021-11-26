@@ -44,7 +44,6 @@ o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 o.hidden = true -- Allow switching buffers with unsaved changes
 opt.lazyredraw = true -- When running macros and regexes on a large file, lazy redraw tells neovim/vim not to draw the screen, which greatly speeds it up, upto 6-7x faster
 -- lukas-reineke/indent-blankline.nvim
-opt.textwidth = 1
 opt.list = true
 opt.listchars:append("eol:↴")
 
