@@ -62,7 +62,7 @@ end
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
 	map("n", "gj", ":SplitjoinJoin<cr>", opts)
-	map("n", "gk", ":SplitjoinSplit<cr>", opts)
+	map("n", "gk", ":SplitjoinSplit<cr><leader>f", opts)
 end
 -------------------- svermeulen/vim-cutlass
 local function cutlass()
