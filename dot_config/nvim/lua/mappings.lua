@@ -30,7 +30,6 @@ local function vanilla()
 	map("o", "l", "al", {})
 	map("x", "d", "ygvd", opts)
 	map("x", "c", "ygvc", opts)
-	map("n", "<s-k>", "gqq", opts)
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
