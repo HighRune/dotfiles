@@ -59,8 +59,8 @@ local function barbar()
 	map("n", "<tab>", ":BufferNext<CR>", opts)
 	map("n", "<s-tab>", ":BufferPrevious<CR>", opts)
 	map("n", "<c-w>", ":BufferClose<CR>", opts)
-	map("n", "<s-PageUp>", ":BufferMovePrevious<CR>", opts)
-	map("n", "<s-PageDown>", ":BufferMoveNext<CR>", opts)
+	map("n", "<pageup>", ":BufferMovePrevious<CR>", opts)
+	map("n", "<pagedown>", ":BufferMoveNext<CR>", opts)
 end
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
