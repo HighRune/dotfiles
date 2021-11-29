@@ -1,3 +1,5 @@
+local fn = vim.fn
+
 require("options")
 require("mappings").vanilla()
 
@@ -170,7 +172,7 @@ return require("packer").startup({
 				})
 			end,
 		},
-		compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua",
+		compile_path = fn.stdpath("config") .. "/lua/packer_compiled.lua",
 		profile = {
 			enable = true,
 		},
