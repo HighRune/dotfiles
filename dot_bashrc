@@ -178,6 +178,9 @@ eval "$(fnm env)"
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 
+# custom bindings
+bind '"\C-n":"nvim \C-m"'
+
 # ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 2h > "$XDG_RUNTIME_DIR/ssh-agent.env"
