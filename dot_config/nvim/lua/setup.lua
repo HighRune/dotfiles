@@ -60,6 +60,12 @@ end
 -------------------- ishan9299/nvim-solarized-lua
 local function solarized()
 	cmd("colorscheme solarized")
+	-- To enable transparency
+	if vim.fn.has("gui_running") == 0 then
+		vim.g.solarized_termtrans = 0
+	else
+		vim.g.solarized_termtrans = 1
+	end
 end
 -------------------- sbdchd/neoformat
 local function neoformat()
