@@ -176,6 +176,7 @@ return require("packer").startup({
 				})
 			end,
 		},
+		-- lewis6991/impatient.nvim
 		-- compile_path = fn.stdpath("config") .. "/lua/packer_compiled.lua",
 		-- profile = {
 		-- 	enable = true,
