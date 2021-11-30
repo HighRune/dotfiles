@@ -176,10 +176,10 @@ return require("packer").startup({
 				})
 			end,
 		},
-		compile_path = fn.stdpath("config") .. "/lua/packer_compiled.lua",
-		profile = {
-			enable = true,
-		},
+		-- compile_path = fn.stdpath("config") .. "/lua/packer_compiled.lua",
+		-- profile = {
+		-- 	enable = true,
+		-- },
 	},
 })
 
