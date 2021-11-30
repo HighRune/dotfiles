@@ -12,10 +12,11 @@ return require("packer").startup({
 		})
 		use("nvim-lua/plenary.nvim")
 		use("kyazdani42/nvim-web-devicons")
-		use({
-			"folke/tokyonight.nvim",
-			config = require("setup").tokyonight(),
-		})
+		-- use({
+		-- 	"folke/tokyonight.nvim",
+		-- 	-- config = require("setup").tokyonight(),
+		-- })
+		use({ "ishan9299/nvim-solarized-lua" })
 		use({
 			"nvim-treesitter/nvim-treesitter",
 			config = require("config.treesitter").setup(),
