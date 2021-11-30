@@ -57,6 +57,10 @@ local function tokyonight()
 	cmd("colorscheme tokyonight")
 end
 
+-------------------- ishan9299/nvim-solarized-lua
+local function solarized()
+	cmd("colorscheme solarized")
+end
 -------------------- sbdchd/neoformat
 local function neoformat()
 	cmd("let g:neoformat_enabled_lua = ['stylua']") -- Enable lua formater
@@ -113,6 +117,7 @@ return {
 	surround = surround,
 	wordmotion = wordmotion,
 	tokyonight = tokyonight,
+	solarized = solarized,
 	neoformat = neoformat,
 	fm = fm,
 	indentBlankline = indentBlankline,
