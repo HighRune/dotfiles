@@ -59,8 +59,8 @@ end
 
 -------------------- ishan9299/nvim-solarized-lua
 local function solarized()
-	cmd("colorscheme solarized")
 	g.solarized_termtrans = 0
+	cmd("colorscheme solarized")
 end
 -------------------- sbdchd/neoformat
 local function neoformat()
