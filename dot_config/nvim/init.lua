@@ -16,7 +16,10 @@ return require("packer").startup({
 		-- 	"folke/tokyonight.nvim",
 		-- 	-- config = require("setup").tokyonight(),
 		-- })
-		use({ "ishan9299/nvim-solarized-lua" })
+		use({
+			"ishan9299/nvim-solarized-lua",
+			-- 	config = require("setup").solarized(),
+		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
 			config = require("config.treesitter").setup(),
