@@ -14,7 +14,7 @@ return require("packer").startup({
 		use("kyazdani42/nvim-web-devicons")
 		use({
 			"folke/tokyonight.nvim",
-			-- config = require("setup").tokyonight(),
+			config = require("setup").tokyonight(),
 		})
 		-- use({
 		-- 	"ishan9299/nvim-solarized-lua",
