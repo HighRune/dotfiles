@@ -9,7 +9,7 @@ cmd([[autocmd ColorScheme * highlight FloatBorder guifg=white guibg=none]])
 
 -- cmd([[color haslo]])
 -- o.colorscheme darkspace
-vim.cmd("colorscheme solarized")
+-- vim.cmd("colorscheme solarized")
 
 -- o.scroll = 5
 g.mapleader = " "
