@@ -137,7 +137,7 @@ return require("packer").startup({
 		})
 		use({
 			"famiu/feline.nvim",
-			config = "require('config.feline').setup()",
+			-- config = "require('config.feline').setup()",
 		})
 		-- use({
 		-- 	"bfredl/nvim-miniyank",
