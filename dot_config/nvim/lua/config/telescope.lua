@@ -2,6 +2,11 @@ local function setup()
 	require("telescope").setup({
 		defaults = {
 			border = true,
+			borderchars = {
+				results = { "_", " ", " ", " ", " ", " ", " ", " " },
+				prompt = { "_", " ", " ", " ", " ", " ", " ", " " },
+				preview = { "_", " ", " ", " ", " ", " ", " ", " " },
+			},
 			layout_strategy = "vertical",
 			layout_config = {
 				preview_cutoff = 0,
