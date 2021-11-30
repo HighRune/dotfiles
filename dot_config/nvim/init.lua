@@ -18,7 +18,7 @@ return require("packer").startup({
 		-- })
 		use({
 			"ishan9299/nvim-solarized-lua",
-			-- 	config = require("setup").solarized(),
+			config = require("setup").solarized(),
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
