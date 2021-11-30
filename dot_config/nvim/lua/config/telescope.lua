@@ -3,9 +3,9 @@ local function setup()
 		defaults = {
 			border = true,
 			borderchars = {
-				results = { "_", " ", " ", " ", " ", " ", " ", " " },
-				prompt = { "_", " ", " ", " ", " ", " ", " ", " " },
-				preview = { "_", " ", " ", " ", " ", " ", " ", " " },
+				results = { "-", " ", " ", " ", " ", " ", " ", " " },
+				prompt = { "-", " ", " ", " ", " ", " ", " ", " " },
+				preview = { "-", " ", " ", " ", " ", " ", " ", " " },
 			},
 			layout_strategy = "vertical",
 			layout_config = {
