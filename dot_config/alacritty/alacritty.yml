@@ -377,8 +377,12 @@ cursor:
   #   - | Beam
   # style: Beam
   style:
+    shape: Block
     blinking: Always
   blink_interval: 500
+  # Thickness of the cursor relative to the cell width as floating point number
+  # from `0.0` to `1.0`.
+  thickness: 0.15
   # Vi mode cursor style
   #
   # If the vi mode cursor style is `None` or not specified, it will fall back to
