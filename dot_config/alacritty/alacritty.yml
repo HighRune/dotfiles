@@ -375,8 +375,10 @@ cursor:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  style: Beam
-
+  # style: Beam
+  style:
+    blinking: Always
+  blink_interval: 500
   # Vi mode cursor style
   #
   # If the vi mode cursor style is `None` or not specified, it will fall back to
