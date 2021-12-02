@@ -85,7 +85,7 @@ return require("packer").startup({
 		use("JoosepAlviste/nvim-ts-context-commentstring")
 		use("tommcdo/vim-lion")
 		use("p00f/nvim-ts-rainbow")
-		use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
+		-- use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
 		use({
 			"AndrewRadev/splitjoin.vim",
 			config = require("mappings").splitjoin(),
