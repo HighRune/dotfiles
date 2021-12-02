@@ -139,6 +139,10 @@ return require("packer").startup({
 				require("project_nvim").setup()
 			end,
 		})
+		use({
+			"nvim-lualine/lualine.nvim",
+			requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		})
 		-- use({
 		-- 	"famiu/feline.nvim",
 		-- 	config = "require('feline').setup()",
