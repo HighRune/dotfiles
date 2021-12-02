@@ -139,10 +139,10 @@ return require("packer").startup({
 				require("project_nvim").setup()
 			end,
 		})
-		-- use({
-		-- 	"famiu/feline.nvim",
-		-- 	-- config = "require('config.feline').setup()",
-		-- })
+		use({
+			"famiu/feline.nvim",
+			-- config = "require('feline').setup()",
+		})
 		-- use({
 		-- 	"bfredl/nvim-miniyank",
 		-- 	config = function()
