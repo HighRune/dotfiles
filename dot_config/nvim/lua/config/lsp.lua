@@ -1,5 +1,6 @@
 local function setup()
 	-------------------- https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
+
 	vim.diagnostic.config({
 		virtual_text = {
 			prefix = "",
@@ -8,39 +9,38 @@ local function setup()
 			source = "always",
 		},
 	})
+
 	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
+
+	local border = {
+		{ "┌", "FloatBorder" },
+		{ "─", "FloatBorder" },
+		{ "┐", "FloatBorder" },
+		{ "│", "FloatBorder" },
+		{ "┘", "FloatBorder" },
+		{ "─", "FloatBorder" },
+		{ "└", "FloatBorder" },
+		{ "│", "FloatBorder" },
+	}
+
+	local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+	function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+		opts = opts or {}
+		opts.border = opts.border or border
+		return orig_util_open_floating_preview(contents, syntax, opts, ...)
+	end
+
+	local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+	for type, icon in pairs(signs) do
+		local hl = "DiagnosticSign" .. type
+		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+	end
 
 	-------------------- neovim/nvim-lspconfig
 	-- Use an on_attach function to only map the following keys
 	-- after the language server attaches to the current buffer
 	local function on_attach(client, buffer)
 		require("mappings").lspconfig(buffer)
-
-		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-
-		for type, icon in pairs(signs) do
-			local hl = "DiagnosticSign" .. type
-			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-		end
-
-		local border = {
-			{ "┌", "FloatBorder" },
-			{ "─", "FloatBorder" },
-			{ "┐", "FloatBorder" },
-			{ "│", "FloatBorder" },
-			{ "┘", "FloatBorder" },
-			{ "─", "FloatBorder" },
-			{ "└", "FloatBorder" },
-			{ "│", "FloatBorder" },
-		}
-
-		local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-
-		function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-			opts = opts or {}
-			opts.border = opts.border or border
-			return orig_util_open_floating_preview(contents, syntax, opts, ...)
-		end
 	end
 
 	local function on_attach_eslint(client, buffer)
