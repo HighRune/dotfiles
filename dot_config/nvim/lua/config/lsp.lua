@@ -16,7 +16,7 @@ local function setup()
 		update_in_insert = true,
 	})
 
-	cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
+	cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]])
 
 	local border = {
 		{ "┌", "FloatBorder" },
