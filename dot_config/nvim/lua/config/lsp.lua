@@ -1,17 +1,20 @@
 local function setup()
+	-------------------- https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
+	vim.diagnostic.config({
+		virtual_text = {
+			prefix = "",
+		},
+		float = {
+			source = "always",
+		},
+	})
+	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
+
 	-------------------- neovim/nvim-lspconfig
 	-- Use an on_attach function to only map the following keys
 	-- after the language server attaches to the current buffer
 	local function on_attach(client, buffer)
 		require("mappings").lspconfig(buffer)
-
-		-- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-		-- 	virtual_text = {
-		-- 		source = "always",
-		-- 		prefix = "",
-		-- 	},
-		-- 	-- 	update_in_insert = true,
-		-- })
 
 		local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
@@ -75,7 +78,6 @@ local function setup()
 		server:setup(require("coq").lsp_ensure_capabilities(opts))
 		vim.cmd([[ do User LspAttachBuffers ]])
 	end)
-	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 end
 
 return { setup = setup }
