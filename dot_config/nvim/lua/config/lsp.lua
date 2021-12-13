@@ -1,7 +1,12 @@
+local cmd = vim.cmd
+local lsp = vim.lsp
+local fn = vim.fn
+local diagnostic = vim.diagnostic
+
 local function setup()
 	-------------------- https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
 
-	vim.diagnostic.config({
+	diagnostic.config({
 		virtual_text = {
 			prefix = "",
 		},
@@ -10,7 +15,7 @@ local function setup()
 		},
 	})
 
-	vim.cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
+	cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 	local border = {
 		{ "┌", "FloatBorder" },
@@ -23,8 +28,8 @@ local function setup()
 		{ "│", "FloatBorder" },
 	}
 
-	local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-	function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+	local orig_util_open_floating_preview = lsp.util.open_floating_preview
+	function lsp.util.open_floating_preview(contents, syntax, opts, ...)
 		opts = opts or {}
 		opts.border = opts.border or border
 		return orig_util_open_floating_preview(contents, syntax, opts, ...)
@@ -33,7 +38,7 @@ local function setup()
 	local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 	for type, icon in pairs(signs) do
 		local hl = "DiagnosticSign" .. type
-		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+		fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 	end
 
 	-------------------- neovim/nvim-lspconfig
@@ -76,7 +81,7 @@ local function setup()
 
 		-- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
 		server:setup(require("coq").lsp_ensure_capabilities(opts))
-		vim.cmd([[ do User LspAttachBuffers ]])
+		cmd([[ do User LspAttachBuffers ]])
 	end)
 end
 
