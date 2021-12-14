@@ -13,7 +13,7 @@ local function setup()
 		float = {
 			source = "always",
 		},
-		update_in_insert = true,
+		-- update_in_insert = true,
 	})
 
 	cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]])
