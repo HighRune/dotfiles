@@ -7,7 +7,7 @@ local function setup()
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-  bg       = '#202328',
+  bg       = 'none',
   fg       = '#bbc2cf',
   yellow   = '#ECBE7B',
   cyan     = '#008080',
@@ -139,7 +139,7 @@ local colors = {
 	ins_left({
 		"diagnostics",
 		sources = { "nvim_lsp" },
-		symbols = { error = " ", warn = " ", info = " " },
+		symbols = { error = " ", warn = " ", info = " " },
 		diagnostics_color = {
 			color_error = { fg = colors.red },
 			color_warn = { fg = colors.yellow },
@@ -165,7 +165,7 @@ local colors = {
 	ins_right({
 		"diff",
 		-- Is it me or the symbol for modified us really weird
-		symbols = { added = " ", modified = "柳 ", removed = " " },
+		symbols = { added = " ", modified = " ", removed = " " },
 		diff_color = {
 			added = { fg = colors.green },
 			modified = { fg = colors.orange },
@@ -175,17 +175,17 @@ local colors = {
 	})
 
 	ins_right({
-		"o:encoding", -- option component same as &encoding in viml
-		fmt = string.upper, -- I'm not sure why it's upper case either ;)
+		"o:encoding",
+		fmt = string.upper,
 		cond = conditions.hide_in_width,
-		color = { fg = colors.green, gui = "bold" },
+		color = { fg = colors.fg },
 	})
 
 	ins_right({
 		"fileformat",
 		fmt = string.upper,
-		icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-		color = { fg = colors.green, gui = "bold" },
+		icons_enabled = false,
+		color = { fg = colors.fg },
 	})
 
 	-- Now don't forget to initialize lualine
