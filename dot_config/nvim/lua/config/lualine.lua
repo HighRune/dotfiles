@@ -79,13 +79,13 @@ local colors = {
 		table.insert(config.sections.lualine_x, component)
 	end
 
-	ins_left({
-		function()
-			return "▊"
-		end,
-		color = { fg = colors.blue }, -- Sets highlighting of component
-		padding = { left = 0, right = 1 }, -- We don't need space before this
-	})
+	-- ins_left({
+	-- 	function()
+	-- 		return "▊"
+	-- 	end,
+	-- 	color = { fg = colors.blue }, -- Sets highlighting of component
+	-- 	padding = { left = 0, right = 1 }, -- We don't need space before this
+	-- })
 
 	ins_left({
 		-- mode component
@@ -114,27 +114,27 @@ local colors = {
 				t = colors.red,
 			}
 			vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
-			return ""
+			return ""
 		end,
 		color = "LualineMode",
-		padding = { right = 1 },
+		padding = { right = 1, left = 1 },
 	})
 
-	ins_left({
-		-- filesize component
-		"filesize",
-		cond = conditions.buffer_not_empty,
-	})
+	-- ins_left({
+	-- 	-- filesize component
+	-- 	"filesize",
+	-- 	cond = conditions.buffer_not_empty,
+	-- })
 
-	ins_left({
-		"filename",
-		cond = conditions.buffer_not_empty,
-		color = { fg = colors.magenta, gui = "bold" },
-	})
+	-- ins_left({
+	-- 	"filename",
+	-- 	cond = conditions.buffer_not_empty,
+	-- 	color = { fg = colors.magenta, gui = "bold" },
+	-- })
 
-	ins_left({ "location" })
+	-- ins_left({ "location" })
 
-	ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
+	-- ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
 
 	ins_left({
 		"diagnostics",
