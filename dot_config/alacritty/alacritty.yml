@@ -690,6 +690,8 @@ key_bindings:
   # Tmux
   # Detach from Session
   - { key: D,      mods: Control|Shift, chars: "\x02\x64" }
+  - { key: P,      mods: Control|Shift, chars: "\x02\x28" }
+  - { key: N,      mods: Control|Shift, chars: "\x02\x29" }
   # Enter vi mode
   - { key: Escape, mods: Control, chars: "\x02\x5b" }
   # Create / Kill / Rename window
