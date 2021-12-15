@@ -8,7 +8,7 @@ local function setup()
 -- stylua: ignore
 local colors = {
   bg       = 'none',
-  fg       = '#bbc2cf',
+  fg       = '#ffffff',
   yellow   = '#ECBE7B',
   cyan     = '#008080',
   darkblue = '#081633',
