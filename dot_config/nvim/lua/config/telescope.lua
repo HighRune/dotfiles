@@ -1,5 +1,10 @@
 local function setup()
 	require("telescope").setup({
+		pickers = {
+			find_files = {
+				hidden = true,
+			},
+		},
 		defaults = {
 			border = true,
 			borderchars = {
