@@ -74,8 +74,10 @@ local function splitjoin()
 end
 -------------------- svermeulen/vim-cutlass
 local function cutlass()
-	map("n", "cy", "c", opts)
-	map("n", "dy", "d", opts)
+	-- map("n", "cy", "c", opts)
+	-- map("n", "dy", "d", opts)
+	map("n", "yc", "c", opts)
+	map("n", "yd", "d", opts)
 end
 -------------------- is0n/fm-nvim
 local function fm()
