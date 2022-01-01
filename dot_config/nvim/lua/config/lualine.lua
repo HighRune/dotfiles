@@ -111,7 +111,7 @@ local colors = {
 			return ""
 		end,
 		color = "LualineMode",
-		padding = { right = 1, left = 1 },
+		padding = { right = 1, left = 0 },
 	})
 
 	-- ins_left({ "location" })
@@ -166,14 +166,14 @@ local colors = {
 
 	ins_right({
 		"o:encoding",
-		fmt = string.upper,
+		-- fmt = string.upper,
 		cond = conditions.hide_in_width,
 		padding = { right = 0, left = 1 },
 	})
 
 	ins_right({
 		"fileformat",
-		fmt = string.upper,
+		-- fmt = string.upper,
 		icons_enabled = false,
 		padding = { right = 0, left = 1 },
 	})
