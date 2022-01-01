@@ -21,6 +21,7 @@ local function setup()
 			mappings = {
 				i = {
 					["<esc>"] = require("telescope.actions").close,
+					["<c-q>"] = require("telescope.actions").close,
 				},
 			},
 		},
