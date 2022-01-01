@@ -39,7 +39,7 @@ local function vanilla()
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
-	map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
+	map("n", "<c-t>", "<cmd>Telescope find_files<cr>", opts)
 	map("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 	map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
@@ -81,7 +81,7 @@ local function cutlass()
 end
 -------------------- is0n/fm-nvim
 local function fm()
-	map("n", "<leader>n", ":Vifm<cr>", opts)
+	map("n", "<leader><leader>", ":Vifm<cr>", opts)
 end
 -------------------- kana/vim-arpeggio
 local function arpeggio()
