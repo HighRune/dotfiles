@@ -14,6 +14,7 @@ end
 local function bufferline()
 	require("bufferline").setup({
 		options = {
+			indicator_icon = " ",
 			separator_style = { "", "" },
 			tab_size = 0,
 		},
