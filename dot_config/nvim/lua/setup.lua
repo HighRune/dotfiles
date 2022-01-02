@@ -11,6 +11,18 @@ local function packer()
 ]])
 end
 
+local function bufferline()
+	require("bufferline").setup({
+		options = {
+			indicator_icon = " ",
+			buffer_close_icon = "",
+			modified_icon = "●",
+			close_icon = "",
+			left_trunc_marker = "",
+			right_trunc_marker = "",
+		},
+	})
+end
 -------------------- inside/vim-search-pulse
 local function searchPulse()
 	g.vim_search_pulse_mode = "pattern"
@@ -156,5 +168,6 @@ return {
 	fm = fm,
 	indentBlankline = indentBlankline,
 	hop = hop,
+	bufferline = bufferline,
 	-- miniyank = miniyank,
 }
