@@ -17,6 +17,7 @@ local function bufferline()
 			indicator_icon = " ",
 			separator_style = { "", "" },
 			tab_size = 0,
+			close_icon = "",
 		},
 		highlights = {
 			buffer_selected = {
