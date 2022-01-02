@@ -249,10 +249,10 @@ set $yellowbrown    #e1b700
 
 # Windows color
 #                       $BORDER    $BGROUND   $TEXT  $INDICATOR
-CLIENT.FOCUSED          $transparent $transparent  $white $purple   
-CLIENT.UNFOCUSED        $transparent  $transparent  $grey  $purple   
-CLIENT.FOCUSED_INACTIVE $transparent  $transparent  $grey  $purple   
-CLIENT.URGENT           $lightblue    $transparent  $white $purple   
+CLIENT.FOCUSED          $transparent $transparent  $white $purple
+CLIENT.UNFOCUSED        $transparent  $transparent  $grey  $purple
+CLIENT.FOCUSED_INACTIVE $transparent  $transparent  $grey  $purple
+CLIENT.URGENT           $lightblue    $transparent  $white $purple
 
 bar {
         # status_command i3blocks -c ~/.config/i3/i3blocks.conf
@@ -265,7 +265,7 @@ bar {
         strip_workspace_numbers yes
 
         colors {
-            background         $transparent         
+            background         $transparent
             statusline         $grey
             # Workspaces colors
             #                  $border    $bg       $txt   $indicator
