@@ -249,8 +249,6 @@ set $yellowbrown    #e1b700
 
 # Windows color
 #                       $BORDER    $BGROUND   $TEXT  $INDICATOR
-
-client.background          $transparent
 client.focused             $transparent  $transparent  $white $purple
 client.unfocused           $transparent  $transparent  $grey  $purple
 client.focused_inactive    $transparent  $transparent  $grey  $purple
