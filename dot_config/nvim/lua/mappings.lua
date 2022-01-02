@@ -60,13 +60,20 @@ local function hop()
 	-- map("v", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 end
 -------------------- romgrk/barbar.nvim
-local function barbar()
-	map("n", "<tab>", ":BufferNext<CR>", opts)
-	map("n", "<s-tab>", ":BufferPrevious<CR>", opts)
-	map("n", "<c-w>", ":BufferClose<CR>", opts)
-	map("n", "<pageup>", ":BufferMovePrevious<CR>", opts)
-	map("n", "<pagedown>", ":BufferMoveNext<CR>", opts)
-end
+-- local function barbar()
+-- 	map("n", "<tab>", ":BufferNext<CR>", opts)
+-- 	map("n", "<s-tab>", ":BufferPrevious<CR>", opts)
+-- 	map("n", "<c-w>", ":BufferClose<CR>", opts)
+-- 	map("n", "<pageup>", ":BufferMovePrevious<CR>", opts)
+-- 	map("n", "<pagedown>", ":BufferMoveNext<CR>", opts)
+-- end
+-------------------- akinsho/bufferline.nvim
+map("n", "<tab>", ":BufferLineCycleNext<CR>", opts)
+map("n", "<s-tab>", ":BufferLineCyclePrev<CR>", opts)
+map("n", "<c-w>", "BufferLinePickClose", opts)
+map("n", "<pageup>", ":BufferLineMovePrev<CR>", opts)
+map("n", "<pagedown>", ":BufferLineMoveNext<CR>", opts)
+
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
 	map("n", "gj", ":SplitjoinJoin<cr>", opts)
