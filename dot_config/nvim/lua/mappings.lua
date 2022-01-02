@@ -68,11 +68,11 @@ end
 -- 	map("n", "<pagedown>", ":BufferMoveNext<CR>", opts)
 -- end
 -------------------- akinsho/bufferline.nvim
-map("n", "<tab>", ":BufferLineCycleNext<CR>", opts)
-map("n", "<s-tab>", ":BufferLineCyclePrev<CR>", opts)
-map("n", "<c-w>", ":bdelete! %d<CR>", opts)
-map("n", "<pageup>", ":BufferLineMovePrev<CR>", opts)
-map("n", "<pagedown>", ":BufferLineMoveNext<CR>", opts)
+map("n", "<tab>", ":BufferLineCycleNext<cr>", opts)
+map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", opts)
+map("n", "<c-w>", ":BufferLinePickClose<cr>", opts)
+map("n", "<pageup>", ":BufferLineMovePrev<cr>", opts)
+map("n", "<pagedown>", ":BufferLineMoveNext<cr>", opts)
 
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
