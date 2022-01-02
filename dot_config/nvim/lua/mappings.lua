@@ -70,7 +70,7 @@ end
 -------------------- akinsho/bufferline.nvim
 map("n", "<tab>", ":BufferLineCycleNext<CR>", opts)
 map("n", "<s-tab>", ":BufferLineCyclePrev<CR>", opts)
-map("n", "<c-w>", "BufferLinePickClose", opts)
+map("n", "<c-w>", ":bdelete! %d", opts)
 map("n", "<pageup>", ":BufferLineMovePrev<CR>", opts)
 map("n", "<pagedown>", ":BufferLineMoveNext<CR>", opts)
 
