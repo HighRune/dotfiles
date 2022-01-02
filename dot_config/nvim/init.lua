@@ -80,6 +80,7 @@ return require("packer").startup({
 			"akinsho/bufferline.nvim",
 			config = function()
 				-- require("setup").bufferline()
+				require("bufferline").setup()
 				require("mappings").bufferline()
 			end,
 		})
