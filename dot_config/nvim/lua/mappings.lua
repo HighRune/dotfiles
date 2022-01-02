@@ -68,11 +68,13 @@ end
 -- 	map("n", "<pagedown>", ":BufferMoveNext<CR>", opts)
 -- end
 -------------------- akinsho/bufferline.nvim
-map("n", "<tab>", ":BufferLineCycleNext<cr>", opts)
-map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", opts)
-map("n", "<c-w>", ":bw<cr>", opts)
-map("n", "<pageup>", ":BufferLineMovePrev<cr>", opts)
-map("n", "<pagedown>", ":BufferLineMoveNext<cr>", opts)
+local function bufferline()
+	map("n", "<tab>", ":BufferLineCycleNext<cr>", opts)
+	map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", opts)
+	map("n", "<c-w>", ":bw<cr>", opts)
+	map("n", "<pageup>", ":BufferLineMovePrev<cr>", opts)
+	map("n", "<pagedown>", ":BufferLineMoveNext<cr>", opts)
+end
 
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
@@ -168,13 +170,14 @@ return {
 	telescope = telescope,
 	surround = surround,
 	cutlass = cutlass,
-	barbar = barbar,
 	splitjoin = splitjoin,
 	arpeggio = arpeggio,
 	fm = fm,
 	wordmotion = wordmotion,
 	lspconfig = lspconfig,
 	hop = hop,
+	bufferline = bufferline,
+	-- barbar = barbar,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
 	-- camelCaseMotion = camelCaseMotion,
