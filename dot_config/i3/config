@@ -249,10 +249,12 @@ set $yellowbrown    #e1b700
 
 # Windows color
 #                       $BORDER    $BGROUND   $TEXT  $INDICATOR
-CLIENT.FOCUSED          $transparent $transparent  $white $purple
-CLIENT.UNFOCUSED        $transparent  $transparent  $grey  $purple
-CLIENT.FOCUSED_INACTIVE $transparent  $transparent  $grey  $purple
-CLIENT.URGENT           $lightblue    $transparent  $white $purple
+
+client.background          $transparent
+client.focused             $transparent  $transparent  $white $purple
+client.unfocused           $transparent  $transparent  $grey  $purple
+client.focused_inactive    $transparent  $transparent  $grey  $purple
+client.urgent              $lightblue    $transparent  $white $purple
 
 bar {
         # status_command i3blocks -c ~/.config/i3/i3blocks.conf
