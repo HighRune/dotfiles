@@ -14,12 +14,13 @@ end
 local function bufferline()
 	require("bufferline").setup({
 		options = {
-			indicator_icon = "",
-			buffer_close_icon = "",
-			modified_icon = "●",
-			close_icon = "",
-			left_trunc_marker = "",
-			right_trunc_marker = "",
+			separator_style = { "", "" },
+			tab_size = 0,
+		},
+		highlights = {
+			buffer_selected = {
+				gui = "bold",
+			},
 		},
 	})
 end
