@@ -74,7 +74,7 @@ return require("packer").startup({
 		use("itchyny/vim-cursorword")
 		use({
 			"romgrk/barbar.nvim",
-			config = require("mappings").barbar(),
+			-- config = require("mappings").barbar(),
 		})
 		use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 		use({
