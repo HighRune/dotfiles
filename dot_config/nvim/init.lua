@@ -76,7 +76,10 @@ return require("packer").startup({
 		-- 	"romgrk/barbar.nvim",
 		-- config = require("mappings").barbar(),
 		-- })
-		use({ "akinsho/bufferline.nvim" })
+		use({
+			"akinsho/bufferline.nvim",
+			config = require("bufferline").setup(),
+		})
 		use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 		use({
 			"sbdchd/neoformat",
