@@ -78,7 +78,10 @@ return require("packer").startup({
 		-- })
 		use({
 			"akinsho/bufferline.nvim",
-			config = require("bufferline").setup(),
+			config = function()
+				-- require("setup").bufferline()
+				require("mappings").bufferline()
+			end,
 		})
 		use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 		use({
