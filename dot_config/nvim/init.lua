@@ -79,8 +79,7 @@ return require("packer").startup({
 		use({
 			"akinsho/bufferline.nvim",
 			config = function()
-				-- require("setup").bufferline()
-				require("bufferline").setup()
+				require("setup").bufferline()
 				require("mappings").bufferline()
 			end,
 		})
