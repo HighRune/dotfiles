@@ -11,13 +11,13 @@ local colors = {
   fg       = '#ffffff',
   yellow   = '#ECBE7B',
   cyan     = '#008080',
-  darkblue = '#081633',
+  darkblue = '#24304d',
   green    = '#98be65',
   orange   = '#FF8800',
   violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
+  magenta  = '#7733ff',
+  blue     = '#45ddff',
+  red      = '#ff2696',
 }
 
 	local conditions = {
@@ -83,32 +83,39 @@ local colors = {
 
 	ins_left({
 		-- mode component
+		"mode",
+		padding = { left = 0, right = 1 },
+	})
+
+	ins_left({
+		-- mode component
 		function()
 			-- auto change color according to neovims mode
 			local mode_color = {
-				n = colors.fg,
-				i = colors.green,
-				v = colors.blue,
-				[""] = colors.blue,
-				V = colors.blue,
-				c = colors.magenta,
-				no = colors.fg,
-				s = colors.orange,
-				S = colors.orange,
-				[""] = colors.orange,
-				ic = colors.yellow,
-				R = colors.violet,
-				Rv = colors.violet,
-				cv = colors.fg,
-				ce = colors.fg,
-				r = colors.cyan,
-				rm = colors.cyan,
-				["r?"] = colors.cyan,
-				["!"] = colors.fg,
-				t = colors.fg,
+				n = colors.darkblue,
+				i = colors.blue,
+				R = colors.red,
+				V = colors.magenta,
+				c = colors.cyan,
+				v = colors.darkblue,
+				[""] = colors.darkblue,
+				no = colors.darkblue,
+				s = colors.darkblue,
+				S = colors.darkblue,
+				[""] = colors.darkblue,
+				ic = colors.darkblue,
+				Rv = colors.darkblue,
+				cv = colors.darkblue,
+				ce = colors.darkblue,
+				r = colors.darkblue,
+				rm = colors.darkblue,
+				["r?"] = colors.darkblue,
+				["!"] = colors.darkblue,
+				t = colors.darkblue,
 			}
 			api.nvim_command("hi! LualineMode guifg=" .. mode_color[fn.mode()] .. " guibg=" .. colors.bg)
-			return ""
+			return ""
+			-- return ""
 		end,
 		color = "LualineMode",
 		padding = { right = 1, left = 0 },
