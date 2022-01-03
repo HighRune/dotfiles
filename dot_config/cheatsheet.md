@@ -77,6 +77,7 @@ git branch --sort=-committerdate           # List of branches ordered by less re
 git push --all                             # Push all branches
 git push --tags                            # Push all tags
 git log --all --graph --decorate --oneline # Display graph
+git worktree add ../<new-directory> <branch-to-checkout> # Clone the current repository to a new directory and checkout the specified branch
 ```
 
 ### remote
