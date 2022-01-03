@@ -104,7 +104,7 @@ local colors = {
 				t = colors.darkblue,
 			}
 			api.nvim_command("hi! LualineMode guifg=" .. mode_color[fn.mode()] .. " guibg=" .. colors.bg)
-			return ""
+			return ""
 		end,
 		color = "LualineMode",
 		padding = { right = 1, left = 0 },
