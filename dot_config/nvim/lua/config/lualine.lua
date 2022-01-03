@@ -9,14 +9,10 @@ local function setup()
 local colors = {
   bg       = 'none',
   fg       = '#ffffff',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
+  cyan     = '#004d6b',
   darkblue = '#24304d',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
   magenta  = '#7733ff',
-  blue     = '#45ddff',
+  blue     = '#94e8ff',
   red      = '#ff2696',
 }
 
@@ -109,7 +105,6 @@ local colors = {
 			}
 			api.nvim_command("hi! LualineMode guifg=" .. mode_color[fn.mode()] .. " guibg=" .. colors.bg)
 			return ""
-			-- return ""
 		end,
 		color = "LualineMode",
 		padding = { right = 1, left = 0 },
