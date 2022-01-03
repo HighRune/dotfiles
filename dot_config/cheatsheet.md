@@ -261,8 +261,10 @@ killall -9 node           # Delete all node instances,
 ~<version>                              # Install latest patch from specified version
 npm install -g npm@latest               # Upgrade the latest version of npm
 npm -r -g <package>                     # Uninstall global package
+npm uninstall -g <package>              # Uninstall global package
 npm i <package>@<version>
 npm i <package>@<tag>
+npm i https://github.com/xjamundx/eslint-plugin-promise.git --save # Install specific branch
 npm i -g npm@latest                     # Install latest npm version
 npm i <package>                         # Package will appear in your dependencies
 npm i -D <package>                      # Package will appear in your devDependencies
