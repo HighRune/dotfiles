@@ -83,12 +83,6 @@ local colors = {
 
 	ins_left({
 		-- mode component
-		"mode",
-		padding = { left = 0, right = 1 },
-	})
-
-	ins_left({
-		-- mode component
 		function()
 			-- auto change color according to neovims mode
 			local mode_color = {
@@ -121,6 +115,12 @@ local colors = {
 		padding = { right = 1, left = 0 },
 	})
 
+	ins_left({
+		-- mode component
+		"mode",
+		padding = { left = 0, right = 1 },
+	})
+
 	-- ins_left({ "location" })
 	-- ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
 
@@ -128,12 +128,12 @@ local colors = {
 		"diagnostics",
 		sources = { "nvim_diagnostic" },
 		symbols = { error = " ", warn = " ", hint = " ", info = " " },
-		diagnostics_color = {
-			color_error = { fg = colors.red },
-			color_warn = { fg = colors.yellow },
-			color_info = { fg = colors.cyan },
-			color_hint = { fg = colors.cyan },
-		},
+		-- diagnostics_color = {
+		-- 	error = { fg = colors.red },
+		-- 	warn = { fg = colors.yellow },
+		-- 	info = { fg = colors.cyan },
+		-- 	hint = { fg = colors.cyan },
+		-- },
 	})
 
 	--------------------------- Insert mid section
@@ -149,11 +149,11 @@ local colors = {
 		"diff",
 		-- Is it me or the symbol for modified us really weird
 		symbols = { added = " ", modified = " ", removed = " " },
-		diff_color = {
-			added = { fg = colors.green },
-			modified = { fg = colors.orange },
-			removed = { fg = colors.red },
-		},
+		-- diff_color = {
+		-- 	added = { fg = colors.green },
+		-- 	modified = { fg = colors.orange },
+		-- 	removed = { fg = colors.red },
+		-- },
 		cond = conditions.hide_in_width,
 	})
 
