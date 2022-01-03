@@ -12,7 +12,7 @@ local colors = {
   cyan     = '#004d6b',
   darkblue = '#24304d',
   magenta  = '#7733ff',
-  blue     = '#94e8ff',
+  green    = '#2bffa3',
   red      = '#ff2696',
 }
 
@@ -83,7 +83,7 @@ local colors = {
 			-- auto change color according to neovims mode
 			local mode_color = {
 				n = colors.darkblue,
-				i = colors.blue,
+				i = colors.green,
 				R = colors.red,
 				V = colors.magenta,
 				c = colors.cyan,
