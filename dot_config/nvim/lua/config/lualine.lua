@@ -10,7 +10,8 @@ local colors = {
   bg       = 'none',
   fg       = '#ffffff',
   cyan     = '#004d6b',
-  darkblue = '#11154d',
+  darkblue = '#24304d',
+  blue     = '#3a486b',
   magenta  = '#7733ff',
   green    = '#2bffa3',
   red      = '#ff2696',
@@ -86,7 +87,7 @@ local colors = {
 				i = colors.green,
 				R = colors.red,
 				V = colors.magenta,
-				c = colors.darkblue,
+				c = colors.fg,
 				v = colors.darkblue,
 				[""] = colors.darkblue,
 				no = colors.darkblue,
@@ -104,7 +105,7 @@ local colors = {
 				t = colors.darkblue,
 			}
 			api.nvim_command("hi! LualineMode guifg=" .. mode_color[fn.mode()] .. " guibg=" .. colors.bg)
-			return fn.mode() ~= "n" and "" or "  "
+			return fn.mode() == "n" and "  " or fn.mode() == "c" and " " or ""
 		end,
 		color = "LualineMode",
 		padding = { right = 1, left = 0 },
