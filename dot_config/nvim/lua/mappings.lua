@@ -22,7 +22,20 @@ local function vanilla()
 	map("i", "<c-u>", "<esc>ld^i", opts)
 	map("n", "k", "gk", opts)
 	map("n", "j", "gj", opts)
-	map("n", "J", "gJ", opts)
+	cmd([[
+  " Like gJ, but always remove spaces
+  fun! s:join_spaceless()
+  execute 'normal! gJ'
+
+  " Remove character under the cursor if it's whitespace.
+  if matchstr(getline('.'), '\%' . col('.') . 'c.') =~ '\s'
+  execute 'normal! dw'
+  endif
+  endfun
+
+  " Map it to a key
+  nnoremap J :call <SID>join_spaceless()<CR>
+  ]])
 	map("n", "0", "g0", opts)
 	map("n", "$", "g$:set ve= ve=all<cr>", opts)
 	map("n", "^", "g^", opts)
