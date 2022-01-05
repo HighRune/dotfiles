@@ -5,23 +5,29 @@ local call = vim.call
 local opts = { noremap = true, silent = true }
 
 local function vanilla()
+	-- Help
 	cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
 	cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
-	map("n", "<c-l>", ":noh<cr><c-l>", opts)
+	-- Save Quit
 	map("", "<s-q>", "<nop>", opts)
+	map("", "q", "<nop>", opts)
+	map("", "q", "<nop>", opts)
 	map("n", "<c-q>", ":q<cr>", opts)
 	map("i", "<c-q>", "<esc>:q<cr>", opts)
 	map("n", "<c-s>", ":w<cr>", opts)
 	map("i", "<c-s>", "<esc>:w<cr>", opts)
-	map("", "q", "<nop>", opts)
+	-- Scroll
 	map("n", "<c-u>", "5k", opts)
 	map("n", "<c-d>", "5j", opts)
-	-- map("i", "<c-a>", "<esc>I", opts)
-	-- map("i", "<c-e>", "<end>", opts)
-	-- map("i", "<c-k>", "<esc>ld$i", opts)
-	-- map("i", "<c-u>", "<esc>ld^i", opts)
+	-- Readline
+	map("i", "<c-a>", "<esc>I", opts)
+	map("i", "<c-e>", "<end>", opts)
+	map("i", "<c-k>", "<esc>ld$i", opts)
+	map("i", "<c-u>", "<esc>ld^i", opts)
+	-- Movements
 	map("n", "k", "gk", opts)
 	map("n", "j", "gj", opts)
+	-- Join
 	cmd([[
   " Like gJ, but always remove spaces
   fun! s:join_spaceless()
@@ -36,6 +42,7 @@ local function vanilla()
   " Map it to a key
   nnoremap J :call <SID>join_spaceless()<CR>
   ]])
+	-- Line
 	map("n", "0", "g0", opts)
 	map("n", "$", "g$:set ve= ve=all<cr>", opts)
 	map("n", "^", "g^", opts)
@@ -43,13 +50,16 @@ local function vanilla()
 	map("n", "<s-l>", "$", {})
 	map("x", "<s-h>", "^", {})
 	map("x", "<s-l>", "$", {})
+	map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
+	-- Esc
 	map("n", "<esc>", "<esc>^", opts)
 	map("x", "<esc>", "<esc>^", opts)
-	map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
+	-- Operators
 	map("o", "w", "iw", {})
 	map("o", "W", "iW", {})
 	map("o", "b", "ib", {})
 	map("o", "l", "al", {})
+	-- Cut
 	map("x", "d", "ygvd", opts)
 	map("x", "c", "ygvc", opts)
 end
