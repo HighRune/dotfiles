@@ -54,6 +54,12 @@ local function vanilla()
 	-- Esc
 	map("n", "<esc>", "<esc>^", opts)
 	map("x", "<esc>", "<esc>^", opts)
+	cmd([[
+  let CursorColumnI = 0 "the cursor column position in INSERT
+  autocmd InsertEnter * let CursorColumnI = col('.')
+  autocmd CursorMovedI * let CursorColumnI = col('.')
+  autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
+  ]])
 	-- Operators
 	map("o", "w", "iw", {})
 	map("o", "W", "iW", {})
