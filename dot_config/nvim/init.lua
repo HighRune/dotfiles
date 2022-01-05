@@ -151,7 +151,6 @@ return require("packer").startup({
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
 			config = "require('config.lualine').setup()",
 		})
-		use("tpope/vim-rsi")
 		-- use({
 		-- 	"famiu/feline.nvim",
 		-- 	config = "require('feline').setup()",
