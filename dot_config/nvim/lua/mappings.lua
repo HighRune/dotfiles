@@ -50,8 +50,10 @@ local function vanilla()
 	map("n", "^", "g^", opts)
 	map("n", "<s-h>", "^", {})
 	map("n", "<s-l>", "$", {})
+	map("n", "<s-s>", "$", {})
 	map("x", "<s-h>", "^", {})
 	map("x", "<s-l>", "$", {})
+	map("x", "<s-s>", "$", {})
 	map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Esc
 	map("n", "<esc>", "<esc>^", opts)
@@ -89,8 +91,9 @@ local function surround()
 end
 -------------------- phaazon/hop.nvim
 local function hop()
-	map("n", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
-	map("v", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
+	-- map("n", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
+	-- map("v", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
+
 	-- map("n", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 	-- map("v", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 end
