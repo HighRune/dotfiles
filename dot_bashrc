@@ -179,7 +179,8 @@ source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 
 # custom bindings
-bind '"\C-n":"nvim \C-m"'
+# bind '"\C-n":"nvim \C-m"'
+bind -x '"\C-n":"nvim"'
 
 # ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
