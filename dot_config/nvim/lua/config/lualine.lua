@@ -31,6 +31,24 @@ local colors = {
 		end,
 	}
 
+	local sectionRight = {
+		{
+			"filesize",
+			cond = conditions.buffer_not_empty,
+			padding = { right = 0, left = 1 },
+		},
+		{
+			"o:encoding",
+			cond = conditions.hide_in_width,
+			padding = { right = 0, left = 1 },
+		},
+		{
+			"fileformat",
+			icons_enabled = false,
+			padding = { right = 2, left = 1 },
+		},
+	}
+
 	-- Config
 	local config = {
 		options = {
@@ -53,7 +71,7 @@ local colors = {
 			lualine_z = {},
 			-- These will be filled later
 			lualine_c = {},
-			lualine_x = {},
+			lualine_x = sectionRight,
 		},
 		inactive_sections = {
 			-- these are to remove the defaults
@@ -69,11 +87,6 @@ local colors = {
 	-- Inserts a component in lualine_c at left section
 	local function ins_left(component)
 		table.insert(config.sections.lualine_c, component)
-	end
-
-	-- Inserts a component in lualine_x ot right section
-	local function ins_right(component)
-		table.insert(config.sections.lualine_x, component)
 	end
 
 	--------------------------- Add components to left sections
@@ -117,9 +130,6 @@ local colors = {
 		padding = { left = 0, right = 1 },
 	})
 
-	-- ins_left({ "location" })
-	-- ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
-
 	ins_left({
 		"diagnostics",
 		sources = { "nvim_diagnostic" },
@@ -159,27 +169,6 @@ local colors = {
 	})
 
 	--------------------------- Add components to right sections
-
-	ins_right({
-		-- filesize component
-		"filesize",
-		cond = conditions.buffer_not_empty,
-		padding = { right = 0, left = 1 },
-	})
-
-	ins_right({
-		"o:encoding",
-		-- fmt = string.upper,
-		cond = conditions.hide_in_width,
-		padding = { right = 0, left = 1 },
-	})
-
-	ins_right({
-		"fileformat",
-		-- fmt = string.upper,
-		icons_enabled = false,
-		padding = { right = 0, left = 1 },
-	})
 
 	-- Now don't forget to initialize lualine
 	lualine.setup(config)
