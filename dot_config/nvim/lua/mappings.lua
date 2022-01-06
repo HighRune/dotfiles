@@ -6,7 +6,8 @@ local opts = { noremap = true, silent = true }
 
 local function vanilla()
 	-- map("n", "l", "s", opts)
-	map("n", "s", "l", opts)
+	-- map("n", "s", "l", opts)
+	map("n", "<Plug>(arpeggio-default:s)", "l", opts)
 	-- Help
 	cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
 	cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
@@ -132,7 +133,7 @@ local function fm()
 end
 -------------------- kana/vim-arpeggio
 local function arpeggio()
-	call("arpeggio#map", "n", "e", 0, "hl", "(virtcol('$') / 2) . '<Bar>'")
+	call("arpeggio#map", "n", "e", 0, "hs", "(virtcol('$') / 2) . '<Bar>'")
 end
 
 -------------------- chaoren/vim-wordmotion
