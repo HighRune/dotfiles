@@ -4,7 +4,6 @@ local api = vim.api
 local function setup()
 	local lualine = require("lualine")
 
--- Color table for highlights
 -- stylua: ignore
 local colors = {
   bg       = 'none',
@@ -16,6 +15,29 @@ local colors = {
   green    = '#2bffa3',
   red      = '#ff2696',
 }
+
+	local mode_colors = {
+		n = colors.darkblue,
+		i = colors.green,
+		R = colors.red,
+		V = colors.magenta,
+		c = colors.fg,
+		v = colors.darkblue,
+		[""] = colors.darkblue,
+		no = colors.darkblue,
+		s = colors.darkblue,
+		S = colors.darkblue,
+		[""] = colors.darkblue,
+		ic = colors.darkblue,
+		Rv = colors.darkblue,
+		cv = colors.darkblue,
+		ce = colors.darkblue,
+		r = colors.darkblue,
+		rm = colors.darkblue,
+		["r?"] = colors.darkblue,
+		["!"] = colors.darkblue,
+		t = colors.darkblue,
+	}
 
 	local conditions = {
 		buffer_not_empty = function()
@@ -29,6 +51,60 @@ local colors = {
 			local gitdir = fn.finddir(".git", filepath .. ";")
 			return gitdir and #gitdir > 0 and #gitdir < #filepath
 		end,
+	}
+
+	local sectionLeft = {
+		{
+			function()
+				api.nvim_command("hi! LualineMode guifg=" .. mode_colors[fn.mode()] .. " guibg=" .. colors.bg)
+
+				if fn.mode() == "n" then
+					return "  "
+				elseif fn.mode() == "c" then
+					return " "
+				else
+					return ""
+				end
+			end,
+			color = "LualineMode",
+			padding = { right = 1, left = 0 },
+		},
+		{
+			"mode",
+			padding = { left = 0, right = 1 },
+		},
+		{
+			"diagnostics",
+			sources = { "nvim_diagnostic" },
+			symbols = { error = " ", warn = " ", hint = " ", info = " " },
+			-- diagnostics_color = {
+			-- 	error = { fg = colors.red },
+			-- 	warn = { fg = colors.yellow },
+			-- 	info = { fg = colors.cyan },
+			-- 	hint = { fg = colors.cyan },
+			-- },
+		},
+		--------------------------- Mid section
+		{
+			function()
+				return "%="
+			end,
+		},
+		{
+			"diff",
+			-- Is it me or the symbol for modified us really weird
+			symbols = { added = " ", modified = " ", removed = " " },
+			-- diff_color = {
+			-- 	added = { fg = colors.green },
+			-- 	modified = { fg = colors.orange },
+			-- 	removed = { fg = colors.red },
+			-- },
+			cond = conditions.hide_in_width,
+		},
+		{
+			"branch",
+			icon = "",
+		},
 	}
 
 	local sectionRight = {
@@ -49,7 +125,6 @@ local colors = {
 		},
 	}
 
-	-- Config
 	local config = {
 		options = {
 			-- Disable sections and component separators
@@ -70,7 +145,7 @@ local colors = {
 			lualine_y = {},
 			lualine_z = {},
 			-- These will be filled later
-			lualine_c = {},
+			lualine_c = sectionLeft,
 			lualine_x = sectionRight,
 		},
 		inactive_sections = {
@@ -84,89 +159,7 @@ local colors = {
 		},
 	}
 
-	-- Inserts a component in lualine_c at left section
-	local function ins_left(component)
-		table.insert(config.sections.lualine_c, component)
-	end
-
 	--------------------------- Add components to left sections
-
-	ins_left({
-		-- mode component
-		function()
-			-- auto change color according to neovims mode
-			local mode_color = {
-				n = colors.darkblue,
-				i = colors.green,
-				R = colors.red,
-				V = colors.magenta,
-				c = colors.fg,
-				v = colors.darkblue,
-				[""] = colors.darkblue,
-				no = colors.darkblue,
-				s = colors.darkblue,
-				S = colors.darkblue,
-				[""] = colors.darkblue,
-				ic = colors.darkblue,
-				Rv = colors.darkblue,
-				cv = colors.darkblue,
-				ce = colors.darkblue,
-				r = colors.darkblue,
-				rm = colors.darkblue,
-				["r?"] = colors.darkblue,
-				["!"] = colors.darkblue,
-				t = colors.darkblue,
-			}
-			api.nvim_command("hi! LualineMode guifg=" .. mode_color[fn.mode()] .. " guibg=" .. colors.bg)
-			return fn.mode() == "n" and "  " or fn.mode() == "c" and " " or ""
-		end,
-		color = "LualineMode",
-		padding = { right = 1, left = 0 },
-	})
-
-	ins_left({
-		-- mode component
-		"mode",
-		padding = { left = 0, right = 1 },
-	})
-
-	ins_left({
-		"diagnostics",
-		sources = { "nvim_diagnostic" },
-		symbols = { error = " ", warn = " ", hint = " ", info = " " },
-		-- diagnostics_color = {
-		-- 	error = { fg = colors.red },
-		-- 	warn = { fg = colors.yellow },
-		-- 	info = { fg = colors.cyan },
-		-- 	hint = { fg = colors.cyan },
-		-- },
-	})
-
-	--------------------------- Insert mid section
-	-- You can make any number of sections in neovim
-	-- for lualine it's any number greater then 2
-	ins_left({
-		function()
-			return "%="
-		end,
-	})
-
-	ins_left({
-		"diff",
-		-- Is it me or the symbol for modified us really weird
-		symbols = { added = " ", modified = " ", removed = " " },
-		-- diff_color = {
-		-- 	added = { fg = colors.green },
-		-- 	modified = { fg = colors.orange },
-		-- 	removed = { fg = colors.red },
-		-- },
-		cond = conditions.hide_in_width,
-	})
-
-	ins_left({
-		"branch",
-		icon = "",
-	})
 
 	--------------------------- Add components to right sections
 
