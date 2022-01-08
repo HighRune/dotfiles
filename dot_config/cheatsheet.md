@@ -135,6 +135,13 @@ GIT_COMMITTER_NAME='yourname'; \
 GIT_COMMITTER_EMAIL='youremail@example.com';" \
 HEAD; && \
 git push --force origin master
+
+# After deleting .git/ re-enable sync between local repository and remote without delete local files or clone remote
+git init .
+git remote add origin <remote url>
+git fetch origin
+git branch -f master origin/master
+git reset . # Delete local changes
 ```
 
 ## DOCKER
