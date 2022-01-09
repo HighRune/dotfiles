@@ -5,9 +5,7 @@ local call = vim.call
 local opts = { noremap = true, silent = true }
 
 local function vanilla()
-	-- map("n", "l", "s", opts)
-	-- map("n", "s", "l", opts)
-	map("n", "<Plug>(arpeggio-default:s)", "l", opts)
+	-- map("n", "<Plug>(arpeggio-default:s)", "l", opts)
 	-- Help
 	cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
 	cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
@@ -59,13 +57,6 @@ local function vanilla()
 	-- Esc
 	map("n", "<esc>", "<esc>^", opts)
 	map("x", "<esc>", "<esc>^", opts)
-	-- cmd([[
-	-- let CursorColumnI = 0 "the cursor column position in INSERT
-	-- autocmd InsertEnter * let CursorColumnI = col('.')
-	-- autocmd CursorMovedI * let CursorColumnI = col('.')
-	-- autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif
-	-- ]])
-	-- Operators
 	map("o", "w", "iw", {})
 	map("o", "W", "iW", {})
 	map("o", "b", "ib", {})
@@ -133,7 +124,7 @@ local function fm()
 end
 -------------------- kana/vim-arpeggio
 local function arpeggio()
-	call("arpeggio#map", "n", "e", 0, "hs", "(virtcol('$') / 2) . '<Bar>'")
+	call("arpeggio#map", "n", "e", 0, "hl", "(virtcol('$') / 2) . '<Bar>'")
 end
 
 -------------------- chaoren/vim-wordmotion
