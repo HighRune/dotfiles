@@ -758,7 +758,8 @@ ciwspan<esc>  # <div></div> => <span></span>
 
 ```
 nvim -V10nvim.log           # nvim logs
-:verb set fo                # debug init.vim
+:verbose set fo             # debug init.vim
+:verbose inoremap <esc>     # debug init.vim
 :messages                   # error messages
 ```
 
