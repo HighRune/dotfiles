@@ -158,12 +158,8 @@ local function lspconfig(buffer)
 	mapb(buffer, "n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
 	mapb(buffer, "n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
 	mapb(buffer, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-	mapb(buffer, "n", "<C-up>", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", opts)
-	mapb(buffer, "n", "<C-down>", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", opts)
-	-- mapb(buffer, "n", "<s-s>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-	-- mapb(buffer, "n", "<s-k>", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	-- { "n", "<leader>e", "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>" }
-	-- { "n", "<leader>q", "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>" }
+	mapb(buffer, "n", "<C-up>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+	mapb(buffer, "n", "<C-down>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
 end
