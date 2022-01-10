@@ -61,7 +61,6 @@ local function vanilla()
 	map("o", "W", "iW", {})
 	map("o", "b", "ib", {})
 	map("o", "l", "al", {})
-	cmd([[inoremap <Esc> <Esc>`^]])
 	-- Cut
 	map("x", "d", "ygvd", opts)
 	map("x", "c", "ygvc", opts)
