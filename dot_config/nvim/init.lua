@@ -33,7 +33,10 @@ return require("packer").startup({
 		use({
 			"ms-jpq/coq_nvim",
 			branch = "coq",
-			config = "require('config.coq').setup()",
+			config = function()
+				require("config.coq").setup()
+				require("mappings").coq()
+			end,
 		})
 		use({
 			"nvim-telescope/telescope.nvim",
