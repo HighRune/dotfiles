@@ -58,7 +58,6 @@ local function vanilla()
 	map("o", "w", "iw", {})
 	map("o", "W", "iW", {})
 	map("o", "b", "ib", {})
-	map("o", "l", "al", {})
 	-- Cut
 	map("x", "d", "ygvd", opts)
 	map("x", "c", "ygvc", opts)
