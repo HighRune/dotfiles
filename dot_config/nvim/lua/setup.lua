@@ -94,7 +94,7 @@ augroup END
 end
 
 -------------------- lewis6991/gitsigns.nvim
-local function gitsign()
+local function gitsigns()
 	require("gitsigns").setup({
 		signs = {
 			add = {
@@ -209,6 +209,6 @@ return {
 	indentBlankline = indentBlankline,
 	hop = hop,
 	bufferline = bufferline,
-	gitsign = gitsign,
+	gitsigns = gitsigns,
 	-- miniyank = miniyank,
 }
