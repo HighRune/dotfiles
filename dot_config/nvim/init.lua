@@ -156,7 +156,7 @@ return require("packer").startup({
 		})
 		use({
 			"petertriho/nvim-scrollbar",
-			-- config = require("scrollbar").setup(),
+			config = require("scrollbar").setup(),
 		})
 		-- use({
 		-- 	"famiu/feline.nvim",
