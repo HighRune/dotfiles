@@ -708,8 +708,8 @@ key_bindings:
   - { key: E,      mods: Control|Shift, chars: "\x02\x33" }
   - { key: U,      mods: Control|Shift, chars: "\x02\x34" }
   - { key: I,      mods: Control|Shift, chars: "\x02\x35" }
-  - { key: PageUp, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t", "-1"] }}
-  - { key: PageDown, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t", "+1"] }}
+  - { key: PageUp, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t", "-1", ";", "select-window", "-t", "-1"] }}
+  - { key: PageDown, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t", "+1", ";", "select-window", "-t", "+1"] }}
   # - { key: Paste,                                action: Paste          }
   # - { key: Copy,                                 action: Copy           }
   # - { key: L,         mods: Control,             action: ClearLogNotice }
