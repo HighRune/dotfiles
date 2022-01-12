@@ -59,9 +59,9 @@ local function vanilla()
 	map("o", "W", "iW", {})
 	map("o", "b", "ib", {})
 	-- Cut
-	map("x", "d", "ygvd", opts)
-	map("x", "c", "ygvc", opts)
-	map("x", "x", "ygvx", opts)
+	-- map("x", "d", "ygvd", opts)
+	-- map("x", "c", "ygvc", opts)
+	-- map("x", "x", "ygvx", opts)
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
