@@ -110,6 +110,29 @@ local function scrollbar()
 		},
 	})
 end
+
+-------------------- lewis6991/gitsigns.nvim
+local function gitsign()
+	require("gitsigns").setup({
+		signs = {
+			add = { hl = "GitSignsAdd", text = "│", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
+			change = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
+			delete = { hl = "GitSignsDelete", text = "_", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+			topdelete = {
+				hl = "GitSignsDelete",
+				text = "‾",
+				numhl = "GitSignsDeleteNr",
+				linehl = "GitSignsDeleteLn",
+			},
+			changedelete = {
+				hl = "GitSignsChange",
+				text = "~",
+				numhl = "GitSignsChangeNr",
+				linehl = "GitSignsChangeLn",
+			},
+		},
+	})
+end
 -------------------- is0n/fm-nvim
 local function fm()
 	require("fm-nvim").setup({
@@ -190,5 +213,6 @@ return {
 	hop = hop,
 	bufferline = bufferline,
 	scrollbar = scrollbar,
+	gitsign = gitsign,
 	-- miniyank = miniyank,
 }
