@@ -93,31 +93,28 @@ augroup END
 	-- vim.api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
 end
 
-local function scrollbar()
-	local colors = require("tokyonight.colors").setup()
-
-	require("scrollbar").setup({
-		handle = {
-			color = colors.bg_highlight,
-		},
-		marks = {
-			Search = { text = { ".", "." }, color = colors.orange },
-			Error = { text = { ".", "." }, color = colors.error },
-			Warn = { text = { ".", "." }, color = colors.warning },
-			Info = { text = { ".", "." }, color = colors.info },
-			Hint = { text = { ".", "." }, color = colors.hint },
-			Misc = { text = { ".", "." }, color = colors.purple },
-		},
-	})
-end
-
 -------------------- lewis6991/gitsigns.nvim
 local function gitsign()
 	require("gitsigns").setup({
 		signs = {
-			add = { hl = "GitSignsAdd", text = "│", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
-			change = { hl = "GitSignsChange", text = "│", numhl = "GitSignsChangeNr", linehl = "GitSignsChangeLn" },
-			delete = { hl = "GitSignsDelete", text = "_", numhl = "GitSignsDeleteNr", linehl = "GitSignsDeleteLn" },
+			add = {
+				hl = "GitSignsAdd",
+				text = "+",
+				numhl = "GitSignsAddNr",
+				linehl = "GitSignsAddLn",
+			},
+			change = {
+				hl = "GitSignsChange",
+				text = "~",
+				numhl = "GitSignsChangeNr",
+				linehl = "GitSignsChangeLn",
+			},
+			delete = {
+				hl = "GitSignsDelete",
+				text = "_",
+				numhl = "GitSignsDeleteNr",
+				linehl = "GitSignsDeleteLn",
+			},
 			topdelete = {
 				hl = "GitSignsDelete",
 				text = "‾",
@@ -212,7 +209,6 @@ return {
 	indentBlankline = indentBlankline,
 	hop = hop,
 	bufferline = bufferline,
-	scrollbar = scrollbar,
 	gitsign = gitsign,
 	-- miniyank = miniyank,
 }
