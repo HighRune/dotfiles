@@ -71,9 +71,7 @@ local function telescope()
 end
 -------------------- blackCauldron7/surround.nvim
 local function surround()
-	map("n", "<c-b>", "<cmd>lua require('surround').toggle_brackets(0)<cr>", { noremap = true })
-	map("n", "<c-'>", "<cmd>lua require('surround').toggle_quotes()<cr>", { noremap = true })
-	map("n", "ys", "<cmd>lua require'surround'.surround_add(true)<cr>", { noremap = true })
+	map("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>", { noremap = true })
 	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>", { noremap = true })
 	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>", { noremap = true })
 end
