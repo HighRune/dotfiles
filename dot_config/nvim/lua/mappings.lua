@@ -112,10 +112,6 @@ local function cutlass()
 	map("x", "m", "d", opts)
 	map("n", "mm", "dd", opts)
 	map("n", "M", "D", opts)
-	-- map("n", "cy", "c", opts)
-	-- map("n", "dy", "d", opts)
-	-- map("n", "yc", "c", opts)
-	-- map("n", "yd", "d", opts)
 end
 -------------------- is0n/fm-nvim
 local function fm()
