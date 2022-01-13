@@ -104,10 +104,9 @@ return require("packer").startup({
 			"inside/vim-search-pulse",
 			config = require("setup").searchPulse(),
 		})
-		use("kana/vim-textobj-user")
-		use("rhysd/vim-textobj-anyblock")
-		-- use("kana/vim-textobj-line")
-		use("kana/vim-textobj-indent")
+		-- use("kana/vim-textobj-user")
+		-- use("rhysd/vim-textobj-anyblock")
+		-- use("kana/vim-textobj-indent")
 		use({
 			"windwp/nvim-autopairs",
 			config = require("config.nvim-autopairs").setup(),
