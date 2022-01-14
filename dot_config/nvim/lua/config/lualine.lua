@@ -8,20 +8,18 @@ local function setup()
 local colors = {
   bg       = 'none',
   fg       = '#ffffff',
-  cyan     = '#004d6b',
   darkblue = '#24304d',
-  blue     = '#3a486b',
-  magenta  = '#7733ff',
-  green    = '#2bffa3',
+  blue     = '#6f00ff',
+  green    = '#00ffc8',
   red      = '#ff2696',
 }
 
 	local mode_colors = {
-		n = colors.darkblue,
-		i = colors.green,
-		R = colors.red,
-		V = colors.magenta,
-		c = colors.fg,
+		n = colors.blue,
+		i = colors.red,
+		V = colors.green,
+		c = colors.darkblue,
+		R = colors.darkblue,
 		v = colors.darkblue,
 		[""] = colors.darkblue,
 		no = colors.darkblue,
@@ -57,14 +55,12 @@ local colors = {
 		{
 			function()
 				api.nvim_command("hi! LualineMode guifg=" .. mode_colors[fn.mode()] .. " guibg=" .. colors.bg)
-
-				if fn.mode() == "n" then
-					return "  "
-				elseif fn.mode() == "c" then
-					return " "
-				else
-					return ""
-				end
+				-- if fn.mode() == "c" then
+				-- 	return " "
+				-- else
+				-- 	return ""
+				-- end
+				return ""
 			end,
 			color = "LualineMode",
 			padding = { right = 1, left = 0 },
@@ -84,6 +80,7 @@ local colors = {
 			-- 	hint = { fg = colors.cyan },
 			-- },
 		},
+
 		--------------------------- Mid section
 		{
 			function()
@@ -92,7 +89,6 @@ local colors = {
 		},
 		{
 			"diff",
-			-- Is it me or the symbol for modified us really weird
 			symbols = { added = " ", modified = " ", removed = " " },
 			-- diff_color = {
 			-- 	added = { fg = colors.green },
@@ -121,7 +117,7 @@ local colors = {
 		{
 			"fileformat",
 			icons_enabled = false,
-			padding = { right = 2, left = 1 },
+			padding = { right = 1, left = 1 },
 		},
 	}
 
@@ -139,7 +135,7 @@ local colors = {
 			},
 		},
 		sections = {
-			-- these are to remove the defaults
+			-- These are to remove the defaults
 			lualine_a = {},
 			lualine_b = {},
 			lualine_y = {},
@@ -149,7 +145,7 @@ local colors = {
 			lualine_x = sectionRight,
 		},
 		inactive_sections = {
-			-- these are to remove the defaults
+			-- These are to remove the defaults
 			lualine_a = {},
 			lualine_v = {},
 			lualine_y = {},
@@ -158,10 +154,6 @@ local colors = {
 			lualine_x = {},
 		},
 	}
-
-	--------------------------- Add components to left sections
-
-	--------------------------- Add components to right sections
 
 	-- Now don't forget to initialize lualine
 	lualine.setup(config)
