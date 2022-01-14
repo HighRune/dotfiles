@@ -10,7 +10,7 @@ local colors = {
   fg       = '#ffffff',
   darkblue = '#24304d',
   blue     = '#6f00ff',
-  green    = '#00ffc8',
+  green    = '#00ff6a',
   red      = '#ff2696',
 }
 
