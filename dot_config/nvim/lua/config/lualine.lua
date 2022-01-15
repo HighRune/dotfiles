@@ -55,7 +55,7 @@ local colors = {
 		{
 			function()
 				api.nvim_command("hi! LualineMode guifg=" .. mode_colors[fn.mode()] .. " guibg=" .. colors.bg)
-				if fn.mode() == "c" or fn.mode() == "i" or fn.mode() == "V" then
+				if fn.mode() == "n" or fn.mode() == "i" or fn.mode() == "V" then
 					return ""
 				else
 					return "  "
