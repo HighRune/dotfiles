@@ -5,16 +5,17 @@ local call = vim.call
 local opts = { noremap = true, silent = true }
 
 local function vanilla()
-	-- map("n", "<Plug>(arpeggio-default:s)", "l", opts)
-	-- Help
-	cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
-	cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
-	-- Save Quit
+	-- Disable keys
 	map("", "<s-q>", "<nop>", opts)
 	map("", "q", "<nop>", opts)
 	map("", "q", "<nop>", opts)
+	-- Help
+	cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
+	cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
+	-- Quit
 	map("n", "<c-q>", ":q<cr>", opts)
 	map("i", "<c-q>", "<esc>:q<cr>", opts)
+	-- Save
 	map("n", "<c-s>", ":w<cr>", opts)
 	map("i", "<c-s>", "<esc>:w<cr>", opts)
 	-- Scroll
@@ -28,6 +29,39 @@ local function vanilla()
 	-- Movements
 	map("n", "k", "gk", opts)
 	map("n", "j", "gj", opts)
+	-- Line
+	map("n", "0", "g0", opts)
+	map("n", "$", "g$:set ve= ve=all<cr>", opts)
+	map("n", "^", "g^", opts)
+	map("n", "<s-h>", "^", {})
+	map("n", "<s-l>", "$", {})
+	map("x", "<s-h>", "^", {})
+	map("x", "<s-l>", "$", {})
+	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
+	-- Esc
+	map("n", "<esc>", "<esc>^", opts)
+	map("i", "<esc>", "<esc>`^", opts)
+	-- Operators
+	map("o", "w", "iw", {})
+	map("x", "w", "iw", {})
+	map("o", "W", "iW", {})
+	map("x", "W", "iW", {})
+	map("o", "b", "ib", {})
+	map("x", "b", "ib", {})
+	map("o", "q", "iq", {})
+	map("x", "q", "iq", {})
+	map("o", "nb", "inb", {})
+	map("x", "nb", "inb", {})
+	map("o", "nq", "inq", {})
+	map("x", "nq", "inq", {})
+	map("o", "lb", "ilb", {})
+	map("x", "lb", "ilb", {})
+	map("o", "lq", "ilq", {})
+	map("x", "lq", "ilq", {})
+	-- Cut
+	-- map("x", "d", "ygvd", opts)
+	-- map("x", "c", "ygvc", opts)
+	-- map("x", "x", "ygvx", opts)
 	-- Join
 	cmd([[
   " Like gJ, but always remove spaces
@@ -43,40 +77,6 @@ local function vanilla()
   " Map it to a key
   nnoremap J :call <SID>join_spaceless()<CR>
   ]])
-	-- Line
-	map("n", "0", "g0", opts)
-	map("n", "$", "g$:set ve= ve=all<cr>", opts)
-	map("n", "^", "g^", opts)
-	map("n", "<s-h>", "^", {})
-	map("n", "<s-l>", "$", {})
-	map("x", "<s-h>", "^", {})
-	map("x", "<s-l>", "$", {})
-	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
-	-- Esc
-	map("n", "<esc>", "<esc>^", opts)
-	map("i", "<esc>", "<esc>`^", opts)
-	map("o", "w", "iw", {})
-	map("x", "w", "iw", {})
-	map("o", "W", "iW", {})
-	map("x", "W", "iW", {})
-	map("o", "b", "ib", {})
-	map("x", "b", "ib", {})
-	map("o", "q", "iq", {})
-	map("x", "q", "iq", {})
-	map("o", "nb", "inb", {})
-	map("x", "nb", "inb", {})
-	map("o", "nq", "inq", {})
-	map("x", "nq", "inq", {})
-	-- map("o", "na", "ina", {})
-	map("o", "lb", "ilb", {})
-	map("x", "lb", "ilb", {})
-	map("o", "lq", "ilq", {})
-	map("x", "lq", "ilq", {})
-	-- map("o", "la", "ila", {})
-	-- Cut
-	-- map("x", "d", "ygvd", opts)
-	-- map("x", "c", "ygvc", opts)
-	-- map("x", "x", "ygvx", opts)
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
@@ -98,14 +98,6 @@ local function hop()
 	-- map("n", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 	-- map("v", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 end
--------------------- romgrk/barbar.nvim
--- local function barbar()
--- 	map("n", "<tab>", ":BufferNext<CR>", opts)
--- 	map("n", "<s-tab>", ":BufferPrevious<CR>", opts)
--- 	map("n", "<c-w>", ":BufferClose<CR>", opts)
--- 	map("n", "<pageup>", ":BufferMovePrevious<CR>", opts)
--- 	map("n", "<pagedown>", ":BufferMoveNext<CR>", opts)
--- end
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
 	map("n", "<tab>", ":BufferLineCycleNext<cr>", opts)
@@ -134,7 +126,8 @@ local function fm()
 end
 -------------------- kana/vim-arpeggio
 local function arpeggio()
-	call("arpeggio#map", "n", "e", 0, "hl", "(virtcol('$') / 2) . '<Bar>'")
+	-- call("arpeggio#map", "n", "e", 0, "hl", "(virtcol('$') / 2) . '<Bar>'")
+	-- map("n", "<Plug>(arpeggio-default:s)", "l", opts)
 end
 
 -------------------- chaoren/vim-wordmotion
@@ -224,7 +217,6 @@ return {
 	hop = hop,
 	bufferline = bufferline,
 	coq = coq,
-	-- barbar = barbar,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
 	-- camelCaseMotion = camelCaseMotion,
