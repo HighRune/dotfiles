@@ -11,30 +11,30 @@ local colors = {
   darkblue = '#24304d',
   blue     = '#6f00ff',
   green    = '#00ff6a',
-  red      = '#ff2696',
+  red      = '#ff0055',
 }
 
 	local mode_colors = {
 		n = colors.blue,
 		i = colors.red,
 		V = colors.green,
-		c = colors.darkblue,
-		R = colors.darkblue,
-		v = colors.darkblue,
-		[""] = colors.darkblue,
-		no = colors.darkblue,
-		s = colors.darkblue,
-		S = colors.darkblue,
-		[""] = colors.darkblue,
-		ic = colors.darkblue,
-		Rv = colors.darkblue,
-		cv = colors.darkblue,
-		ce = colors.darkblue,
-		r = colors.darkblue,
-		rm = colors.darkblue,
-		["r?"] = colors.darkblue,
-		["!"] = colors.darkblue,
-		t = colors.darkblue,
+		c = colors.bg,
+		R = colors.bg,
+		v = colors.bg,
+		[""] = colors.bg,
+		no = colors.bg,
+		s = colors.bg,
+		S = colors.bg,
+		[""] = colors.bg,
+		ic = colors.bg,
+		Rv = colors.bg,
+		cv = colors.bg,
+		ce = colors.bg,
+		r = colors.bg,
+		rm = colors.bg,
+		["r?"] = colors.bg,
+		["!"] = colors.bg,
+		t = colors.bg,
 	}
 
 	local conditions = {
@@ -55,12 +55,11 @@ local colors = {
 		{
 			function()
 				api.nvim_command("hi! LualineMode guifg=" .. mode_colors[fn.mode()] .. " guibg=" .. colors.bg)
-				-- if fn.mode() == "c" then
-				-- 	return " "
-				-- else
-				-- 	return ""
-				-- end
-				return ""
+				if fn.mode() == "c" or fn.mode() == "i" or fn.mode() == "V" then
+					return ""
+				else
+					return "  "
+				end
 			end,
 			color = "LualineMode",
 			padding = { right = 1, left = 0 },
