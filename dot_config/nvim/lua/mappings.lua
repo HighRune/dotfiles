@@ -6,7 +6,7 @@ local opts = { noremap = true, silent = true }
 
 local function vanilla()
 	-- Disable keys
-	map("", "<s-q>", "<nop>", opts)
+	map("", "Q", "<nop>", opts)
 	map("", "q", "<nop>", opts)
 	map("", "q", "<nop>", opts)
 	-- Help
@@ -35,10 +35,10 @@ local function vanilla()
 	map("n", "0", "g0", opts)
 	map("n", "$", "g$:set ve= ve=all<cr>", opts)
 	map("n", "^", "g^", opts)
-	map("n", "<s-h>", "^", {})
-	map("n", "<s-l>", "$", {})
-	map("x", "<s-h>", "^", {})
-	map("x", "<s-l>", "$", {})
+	map("n", "H", "^", {})
+	map("n", "L", "$", {})
+	map("x", "H", "^", {})
+	map("x", "L", "$", {})
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Operators
 	map("o", "w", "iw", {})
