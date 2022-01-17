@@ -39,7 +39,7 @@ local function vanilla()
 	map("x", "<s-l>", "$", {})
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Esc
-	map("n", "<esc>", "<esc>^", opts)
+	-- map("n", "<esc>", "<esc>^", opts)
 	-- Operators
 	map("o", "w", "iw", {})
 	map("x", "w", "iw", {})
@@ -167,7 +167,7 @@ end
 
 local function coq()
 	cmd([[
-ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>" : "\<Esc>`^"
+ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>`^" : "\<Esc>`^"
 ino <silent><expr> <C-c>   pumvisible() ? "\<C-e><C-c>" : "\<C-c>"
 ino <silent><expr> <BS>    pumvisible() ? "\<C-e><BS>"  : "\<BS>"
 ino <silent><expr> <CR>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "\<CR>"
