@@ -18,6 +18,8 @@ local function vanilla()
 	-- Save
 	map("n", "<c-s>", ":w<cr>", opts)
 	map("i", "<c-s>", "<esc>:w<cr>", opts)
+	-- Esc
+	map("n", "<esc>", "<esc>^", opts)
 	-- Scroll
 	map("n", "<c-u>", "5k", opts)
 	map("n", "<c-d>", "5j", opts)
@@ -38,8 +40,6 @@ local function vanilla()
 	map("x", "<s-h>", "^", {})
 	map("x", "<s-l>", "$", {})
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
-	-- Esc
-	-- map("n", "<esc>", "<esc>^", opts)
 	-- Operators
 	map("o", "w", "iw", {})
 	map("x", "w", "iw", {})
