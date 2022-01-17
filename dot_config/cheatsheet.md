@@ -554,6 +554,7 @@ ctrl + alt + F2                     # Passe en mode tty
 ctrl + alt + F3                     # Passe en mode gui
 umount /media/<périphérique>        # Démonte le périphérique
 lsblk                               # List block devices
+lsblk -o NAME,FSTYPE,LABEL,MOUNTPOINT,SIZE,MODEL # More info
 udisksctl mount -b /dev/sda         # Mount device
 udisksctl unmount -b /dev/sda       # Unmount device
 gnome-terminal                      # Ouvre un terminal gnome
