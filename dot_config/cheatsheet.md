@@ -754,7 +754,7 @@ ds"
 ciwspan<esc>  # <div></div> => <span></span>
 ```
 
-### logs
+### debug
 
 ```
 nvim -V10nvim.log           # nvim logs
