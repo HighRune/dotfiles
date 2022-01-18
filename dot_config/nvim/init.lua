@@ -71,10 +71,6 @@ return require("packer").startup({
 		use("nvim-treesitter/playground")
 		use("windwp/nvim-ts-autotag")
 		use("itchyny/vim-cursorword")
-		-- use({
-		-- 	"romgrk/barbar.nvim",
-		-- config = require("mappings").barbar(),
-		-- })
 		use({
 			"akinsho/bufferline.nvim",
 			config = function()
@@ -91,7 +87,6 @@ return require("packer").startup({
 		use("JoosepAlviste/nvim-ts-context-commentstring")
 		use("tommcdo/vim-lion")
 		use("p00f/nvim-ts-rainbow")
-		-- use({ "glepnir/galaxyline.nvim", config = "require('config.galaxyline').setup()" })
 		use({
 			"AndrewRadev/splitjoin.vim",
 			config = require("mappings").splitjoin(),
@@ -151,12 +146,6 @@ return require("packer").startup({
 			config = "require('config.lualine').setup()",
 		})
 		-- use({
-		-- "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		-- config = function()
-		-- require("lsp_lines").register_lsp_virtual_lines()
-		-- end,
-		-- })
-		-- use({
 		-- 	"bfredl/nvim-miniyank",
 		-- 	config = function()
 		-- 		require("setup").miniyank()
@@ -195,13 +184,6 @@ return require("packer").startup({
 	},
 })
 
--------------------- terryma/vim-expand-region
--- cmd([[
--- map <cr> <Plug>(expand_region_expand)
--- map <s-cr> <Plug>(expand_region_shrink)
--- let g:expand_region_text_objects = { 'i]':1, 'i)':1, 'i}':1, 'it':1, 'ii':1, 'ip':1, 'a]':1, 'a)':1, 'a}':1, 'at':1, 'ai':1, 'ap':1 }
--- ]])
-
 -------------------- kana/vim-arpeggio
 -- cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")
 
@@ -229,21 +211,3 @@ return require("packer").startup({
 -- let g:yoinkSwapClampAtEnds = 0
 -- let g:yoinkSyncSystemClipboardOnFocus = 0
 -- ]])
-
--------------------- ray-x/lsp_signature.nvim
--- require("lsp_signature").setup({
--- 	bind = true, -- This is mandatory, otherwise border config won't get registered.
--- 	hint_prefix = " ",
--- 	hint_scheme = "function",
--- 	always_trigger = true,
--- 	timer_interval = 0,
--- 	hint_enable = true,
--- 	floating_window = false,
--- 	-- handler_opts = {
--- 	-- border = "single",
--- 	-- },
--- 	-- doc_lines = 0,
--- 	-- padding = " ",
--- 	-- max_width = 70,
--- 	-- max_height = 1,
--- })
