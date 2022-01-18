@@ -13,33 +13,14 @@ local function setup()
 		float = {
 			source = "always",
 		},
-		-- update_in_insert = true,
 	})
 
 	cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]])
 
-	local border = {
-		{ "┌", "FloatBorder" },
-		{ "─", "FloatBorder" },
-		{ "┐", "FloatBorder" },
-		{ "│", "FloatBorder" },
-		{ "┘", "FloatBorder" },
-		{ "─", "FloatBorder" },
-		{ "└", "FloatBorder" },
-		{ "│", "FloatBorder" },
-	}
-
-	local orig_util_open_floating_preview = lsp.util.open_floating_preview
-	function lsp.util.open_floating_preview(contents, syntax, opts, ...)
-		opts = opts or {}
-		opts.border = opts.border or border
-		return orig_util_open_floating_preview(contents, syntax, opts, ...)
-	end
-
-	local signs = { Error = "x", Warn = "!", Hint = "h", Info = "i" }
-	for type, icon in pairs(signs) do
+	local signs = { Error = "e", Warn = "w", Hint = "h", Info = "i" }
+	for type, sign in pairs(signs) do
 		local hl = "DiagnosticSign" .. type
-		fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+		fn.sign_define(hl, { text = sign, texthl = hl })
 	end
 
 	-------------------- neovim/nvim-lspconfig
