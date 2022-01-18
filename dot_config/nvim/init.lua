@@ -48,7 +48,7 @@ return require("packer").startup({
 		use({
 			"lewis6991/gitsigns.nvim",
 			config = function()
-				require("setup").gitsigns()
+				-- require("setup").gitsigns()
 			end,
 		})
 		use({
