@@ -158,17 +158,12 @@ return require("packer").startup({
 			end,
 		})
 		-- use({
-		-- 	"famiu/feline.nvim",
-		-- 	config = "require('feline').setup()",
-		-- })
-		-- use({
 		-- 	"bfredl/nvim-miniyank",
 		-- 	config = function()
 		-- 		require("setup").miniyank()
 		-- 		require("mappings").miniyank()
 		-- 	end,
 		-- })
-		-- use("svermeulen/vimpeccable")
 		-- use("svermeulen/vim-yoink")
 		-- use("matze/vim-move")
 		-- use("RRethy/nvim-treesitter-textsubjects")
@@ -176,11 +171,6 @@ return require("packer").startup({
 		-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
 		-- use("tpope/vim-abolish")
 		-- use("tpope/vim-surround")
-		-- use("terryma/vim-expand-region")
-		-- use({
-		-- "ray-x/lsp_signature.nvim",
-		-- config = require("config.lsp_signature").setup(),
-		-- })
 		-- use({
 		-- "bkad/CamelCaseMotion",
 		-- config = function()
