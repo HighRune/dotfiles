@@ -17,7 +17,7 @@ local function vanilla()
 	map("i", "<c-q>", "<esc>:q<cr>", opts)
 	-- Save
 	map("n", "<c-s>", ":w<cr>", opts)
-	map("i", "<c-s>", "<esc>:w<cr>", opts)
+	map("i", "<c-s>", "<esc>`^:w<cr>", opts)
 	-- Esc
 	map("n", "<esc>", "<esc>^", opts)
 	-- Scroll
