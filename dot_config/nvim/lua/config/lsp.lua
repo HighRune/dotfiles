@@ -11,18 +11,18 @@ local function setup()
 		-- 	prefix = "",
 		-- },
 		virtual_text = false,
+		signs = false,
+		underline = true,
 		float = {
 			source = "always",
 		},
 	})
 
-	-- cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]])
-
-	local signs = { Error = "e", Warn = "w", Hint = "h", Info = "i" }
-	for type, sign in pairs(signs) do
-		local hl = "DiagnosticSign" .. type
-		fn.sign_define(hl, { text = sign, texthl = hl })
-	end
+	-- local signs = { Error = "e", Warn = "w", Hint = "h", Info = "i" }
+	-- for type, sign in pairs(signs) do
+	-- 	local hl = "DiagnosticSign" .. type
+	-- 	fn.sign_define(hl, { text = sign, texthl = hl })
+	-- end
 
 	-------------------- neovim/nvim-lspconfig
 	-- Use an on_attach function to only map the following keys
