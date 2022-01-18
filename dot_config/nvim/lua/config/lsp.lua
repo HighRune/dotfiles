@@ -36,7 +36,7 @@ local function setup()
 		return orig_util_open_floating_preview(contents, syntax, opts, ...)
 	end
 
-	local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+	local signs = { Error = "x", Warn = "!", Hint = "h", Info = "i" }
 	for type, icon in pairs(signs) do
 		local hl = "DiagnosticSign" .. type
 		fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
