@@ -7,15 +7,16 @@ local function setup()
 	-------------------- https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
 
 	diagnostic.config({
-		virtual_text = {
-			prefix = "",
-		},
+		-- virtual_text = {
+		-- 	prefix = "",
+		-- },
+		virtual_text = false,
 		float = {
 			source = "always",
 		},
 	})
 
-	cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]])
+	-- cmd([[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]])
 
 	local signs = { Error = "e", Warn = "w", Hint = "h", Info = "i" }
 	for type, sign in pairs(signs) do
