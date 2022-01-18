@@ -151,6 +151,12 @@ return require("packer").startup({
 			config = "require('config.lualine').setup()",
 		})
 		use({ "mfussenegger/nvim-dap" })
+		use({
+			"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+			config = function()
+				require("lsp_lines").register_lsp_virtual_lines()
+			end,
+		})
 		-- use({
 		-- 	"famiu/feline.nvim",
 		-- 	config = "require('feline').setup()",
