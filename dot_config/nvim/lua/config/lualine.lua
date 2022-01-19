@@ -71,7 +71,8 @@ local colors = {
 		{
 			"diagnostics",
 			sources = { "nvim_diagnostic" },
-			symbols = { error = " ", warn = " ", hint = " ", info = " " },
+			-- symbols = { error = " ", warn = " ", hint = " ", info = " " },
+			symbols = { error = "e ", warn = "w ", hint = "h ", info = "i " },
 			-- diagnostics_color = {
 			-- 	error = { fg = colors.red },
 			-- 	warn = { fg = colors.yellow },
@@ -88,7 +89,8 @@ local colors = {
 		},
 		{
 			"diff",
-			symbols = { added = " ", modified = " ", removed = " " },
+			-- symbols = { added = " ", modified = " ", removed = " " },
+			symbols = { added = "+", modified = "~", removed = "-" },
 			-- diff_color = {
 			-- 	added = { fg = colors.green },
 			-- 	modified = { fg = colors.orange },
