@@ -44,7 +44,6 @@ ocal function setup()
 					["ic"] = "@call.inner",
 					["ap"] = "@parameter.outer",
 					["ip"] = "@parameter.inner",
-					-- ["as"] = "@statement.outer",
 					-- ["ai"] = "@conditional.outer",
 					-- ["ii"] = "@conditional.inner",
 					-- ["al"] = "@loop.outer",
