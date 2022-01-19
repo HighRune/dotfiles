@@ -72,7 +72,7 @@ local colors = {
 			"diagnostics",
 			sources = { "nvim_diagnostic" },
 			-- symbols = { error = " ", warn = " ", hint = " ", info = " " },
-			symbols = { error = "e ", warn = "w ", hint = "h ", info = "i " },
+			symbols = { error = "E", warn = "W", hint = "H", info = "I" },
 			-- diagnostics_color = {
 			-- 	error = { fg = colors.red },
 			-- 	warn = { fg = colors.yellow },
