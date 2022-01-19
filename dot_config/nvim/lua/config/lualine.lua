@@ -69,21 +69,21 @@ local colors = {
 	}
 
 	local sectionLeft = {
-		{
-			function()
-				api.nvim_command("hi! LualineMode guifg=" .. mode_colors[fn.mode()] .. " guibg=" .. colors.bg)
-				if fn.mode() == "n" or fn.mode() == "i" or fn.mode() == "V" then
-					return ""
-				else
-					return "  "
-				end
-			end,
-			color = "LualineMode",
-			padding = { right = 1, left = 0 },
-		},
+		-- {
+		-- 	function()
+		-- 		api.nvim_command("hi! LualineMode guifg=" .. mode_colors[fn.mode()] .. " guibg=" .. colors.bg)
+		-- 		if fn.mode() == "n" or fn.mode() == "i" or fn.mode() == "V" then
+		-- 			return ""
+		-- 		else
+		-- 			return "  "
+		-- 		end
+		-- 	end,
+		-- 	color = "LualineMode",
+		-- 	padding = { right = 1, left = 0 },
+		-- },
 		{
 			"mode",
-			padding = { left = 0, right = 1 },
+			padding = { left = 0, right = 0 },
 		},
 		{
 			"diagnostics",
@@ -118,6 +118,7 @@ local colors = {
 		{
 			"branch",
 			icon = "",
+			fmt = trunc(120, 60, 60, true),
 		},
 	}
 
@@ -135,7 +136,7 @@ local colors = {
 		{
 			"fileformat",
 			icons_enabled = false,
-			padding = { right = 1, left = 1 },
+			padding = { right = 0, left = 1 },
 		},
 	}
 
