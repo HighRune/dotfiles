@@ -84,6 +84,7 @@ local colors = {
 		{
 			"mode",
 			padding = { left = 0, right = 0 },
+			fmt = string.lower,
 		},
 		{
 			"diagnostics",
