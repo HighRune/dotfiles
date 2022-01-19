@@ -1,4 +1,4 @@
-local function setup()
+ocal function setup()
 	require("nvim-treesitter.configs").setup({
 		ensure_installed = "maintained",
 		highlight = {
@@ -44,6 +44,7 @@ local function setup()
 					["ic"] = "@call.inner",
 					["ap"] = "@parameter.outer",
 					["ip"] = "@parameter.inner",
+					["as"] = "@statement.outer",
 					-- ["ai"] = "@conditional.outer",
 					-- ["ii"] = "@conditional.inner",
 					-- ["al"] = "@loop.outer",
