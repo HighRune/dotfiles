@@ -148,11 +148,11 @@ local colors = {
 		inactive_sections = {
 			-- These are to remove the defaults
 			lualine_a = {},
-			lualine_v = {},
-			lualine_y = {},
-			lualine_z = {},
+			lualine_b = {},
 			lualine_c = {},
 			lualine_x = {},
+			lualine_y = {},
+			lualine_z = {},
 		},
 	}
 
