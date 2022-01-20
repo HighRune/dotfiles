@@ -96,8 +96,8 @@ return require("packer").startup({
 			config = require("setup").searchPulse(),
 		})
 		use("kana/vim-textobj-user")
-		-- use("rhysd/vim-textobj-anyblock")
-		-- use("kana/vim-textobj-indent")
+		use("kana/vim-textobj-indent")
+		use("vimtaku/vim-textobj-keyvalue")
 		use("wellle/targets.vim")
 		use({
 			"windwp/nvim-autopairs",
