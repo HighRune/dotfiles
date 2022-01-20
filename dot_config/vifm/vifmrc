@@ -410,6 +410,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Sample mappings
 
+" Quit vifm
+nnoremap <c-q> :q<cr>
+
 " Start shell in current directory
 nnoremap s :shell<cr>
 
