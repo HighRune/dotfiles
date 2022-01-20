@@ -161,6 +161,7 @@ local function lspconfig(buffer)
 	mapb(buffer, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 	mapb(buffer, "n", "<left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 	mapb(buffer, "n", "<right>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+	mapb(buffer, "n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
 end
