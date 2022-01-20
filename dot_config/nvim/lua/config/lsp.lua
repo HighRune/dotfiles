@@ -7,8 +7,11 @@ local function setup()
 	-------------------- https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
 
 	diagnostic.config({
-		virtual_text = false,
-		virtual_lines = { prefix = "" },
+		-- virtual_text = false,
+		-- virtual_lines = { prefix = "" },
+		virtual_text = {
+			prefix = "",
+		},
 		signs = false,
 		underline = true,
 		float = {
