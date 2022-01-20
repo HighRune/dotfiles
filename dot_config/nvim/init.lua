@@ -68,7 +68,7 @@ return require("packer").startup({
 			config = require("setup").indentBlankline(),
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
-		use("nvim-treesitter/playground")
+		-- use("nvim-treesitter/playground")
 		use("windwp/nvim-ts-autotag")
 		use("itchyny/vim-cursorword")
 		use({
@@ -95,10 +95,10 @@ return require("packer").startup({
 			"inside/vim-search-pulse",
 			config = require("setup").searchPulse(),
 		})
+		use("wellle/targets.vim")
 		use("kana/vim-textobj-user")
 		use("kana/vim-textobj-indent")
 		use("vimtaku/vim-textobj-keyvalue")
-		use("wellle/targets.vim")
 		use({
 			"windwp/nvim-autopairs",
 			config = require("config.nvim-autopairs").setup(),
