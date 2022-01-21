@@ -197,6 +197,16 @@ local function indentBlankline()
 	g.indent_blankline_show_first_indent_level = false
 end
 
+-------------------- rlane/pounce.nvim
+local function pounce()
+	require("pounce").setup({
+		accept_keys = "AOEUHTNSID:QJKMWVZ",
+		accept_best_key = "<space>",
+		multi_window = true,
+		debug = false,
+	})
+end
+
 return {
 	packer = packer,
 	searchPulse = searchPulse,
@@ -210,5 +220,6 @@ return {
 	hop = hop,
 	bufferline = bufferline,
 	gitsigns = gitsigns,
+	pounce = pounce,
 	-- miniyank = miniyank,
 }
