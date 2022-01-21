@@ -176,6 +176,11 @@ ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
   ]])
 end
+
+local function pounce()
+	map("n", "s", "<cmd>Pounce<CR>", opts)
+	map("x", "s", "<cmd>Pounce<CR>", opts)
+end
 -------------------- AndrewRadev/sideways.vim
 -- local function sideways()
 -- map("n", "<c-j>", ":SidewaysLeft<cr>", opts)
@@ -217,6 +222,7 @@ return {
 	hop = hop,
 	bufferline = bufferline,
 	coq = coq,
+	pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
 	-- camelCaseMotion = camelCaseMotion,
