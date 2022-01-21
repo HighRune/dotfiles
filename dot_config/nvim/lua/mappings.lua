@@ -178,8 +178,10 @@ ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
 end
 
 local function pounce()
-	map("n", "s", "<cmd>Pounce<CR>", opts)
-	map("x", "s", "<cmd>Pounce<CR>", opts)
+	cmd([[
+	nmap s <cmd>Pounce<CR>
+	xmap s <cmd>Pounce<CR>
+	]])
 end
 -------------------- AndrewRadev/sideways.vim
 -- local function sideways()
