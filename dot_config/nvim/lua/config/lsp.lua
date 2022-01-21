@@ -11,13 +11,38 @@ local function setup()
 		-- virtual_lines = { prefix = "" },
 		virtual_text = {
 			prefix = "",
+			spacing = 2,
 		},
 		signs = false,
-		underline = true,
 		float = {
-			source = "always",
+			header = "",
+			prefix = "",
+			format = function(diagnostic)
+				return string.format(
+					" %s %s\n%s",
+					diagnostic.source,
+					diagnostic.user_data.lsp.code,
+					diagnostic.message
+				)
+				-- return dump(diagnostic)
+			end,
 		},
 	})
+
+	-- function dump(o)
+	-- 	if type(o) == "table" then
+	-- 		local s = "{ "
+	-- 		for k, v in pairs(o) do
+	-- 			if type(k) ~= "number" then
+	-- 				k = '"' .. k .. '"'
+	-- 			end
+	-- 			s = s .. "[" .. k .. "] = " .. dump(v) .. ","
+	-- 		end
+	-- 		return s .. "} "
+	-- 	else
+	-- 		return tostring(o)
+	-- 	end
+	-- end
 
 	-- local signs = { Error = "e", Warn = "w", Hint = "h", Info = "i" }
 	-- for type, sign in pairs(signs) do
