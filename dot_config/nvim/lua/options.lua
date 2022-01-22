@@ -9,7 +9,7 @@ cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
 cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
 
 cmd([[color haslo]])
-o.colorscheme darkspace
+-- o.colorscheme darkspace
 
 -- cmd([[
 -- if exists("&termguicolors") && exists("&winblend")
