@@ -8,7 +8,7 @@ cmd([[autocmd ColorScheme * highlight NormalFloat guibg=none]])
 cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
 cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
 
--- cmd([[color haslo]])
+cmd([[color haslo]])
 -- o.colorscheme darkspace
 
 -- cmd([[
