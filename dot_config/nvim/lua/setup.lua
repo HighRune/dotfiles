@@ -66,10 +66,10 @@ local function hop()
 end
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
--- 	g.tokyonight_style = "night"
--- 	g.tokyonight_transparent = true
--- 	g.tokyonight_transparent_sidebar = true
--- 	cmd("colorscheme tokyonight")
+	g.tokyonight_style = "night"
+	g.tokyonight_transparent = true
+	g.tokyonight_transparent_sidebar = true
+	cmd("colorscheme tokyonight")
 end
 
 -------------------- ishan9299/nvim-solarized-lua
