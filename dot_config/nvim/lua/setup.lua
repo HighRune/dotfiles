@@ -65,12 +65,12 @@ local function hop()
 	-- cmd("highlight default link HopCursor Cursor")
 end
 -------------------- folke/tokyonight.nvim
--- local function tokyonight()
+local function tokyonight()
 -- 	g.tokyonight_style = "night"
 -- 	g.tokyonight_transparent = true
 -- 	g.tokyonight_transparent_sidebar = true
 -- 	cmd("colorscheme tokyonight")
--- end
+end
 
 -------------------- ishan9299/nvim-solarized-lua
 local function solarized()
