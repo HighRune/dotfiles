@@ -10,6 +10,20 @@ cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
 
 -- cmd([[color haslo]])
 -- o.colorscheme darkspace
+cmd([[
+if exists("&termguicolors") && exists("&winblend")
+  syntax enable
+  set termguicolors
+  set winblend=0
+  set wildoptions=pum
+  set pumblend=5
+  set background=dark
+  " Use NeoSolarized
+  let g:neosolarized_termtrans=1
+  runtime ./NeoSolarized.vim
+  colorscheme NeoSolarized
+endif
+]])
 
 -- o.scroll = 5
 g.mapleader = " "
