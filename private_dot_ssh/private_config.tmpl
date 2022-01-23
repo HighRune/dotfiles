@@ -19,6 +19,12 @@ Hostname gist.github.com
 PreferredAuthentications publickey
 IdentityFile ~/.ssh/id_ed25519_home
 
+Host github.com
+UpdateHostKeys no
+Hostname github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/id_ed25519_home
+
 Host servdev
 Hostname {{ (bitwardenFields "item" "id_rsa_main").Hostname.value }}
 User {{ (bitwardenFields "item" "id_rsa_main").User.value }}
