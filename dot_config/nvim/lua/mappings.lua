@@ -1,7 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local mapb = vim.api.nvim_buf_set_keymap
 local cmd = vim.cmd
-local call = vim.call
+-- local call = vim.call
 local opts = { noremap = true, silent = true }
 
 local function vanilla()
