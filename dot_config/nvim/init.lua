@@ -124,6 +124,16 @@ return require("packer").startup({
 		-- 	end,
 		-- })
 		use({
+			"gbprod/cutlass.nvim",
+			-- config = function()
+			-- 	require("setup").cutlass()
+			-- 	-- require("cutlass").setup({
+			-- 	-- 	cut_key = "m",
+			-- 	-- 	override_del = true,
+			-- 	-- })
+			-- end,
+		})
+		use({
 			"kana/vim-arpeggio",
 			require("mappings").arpeggio(),
 		})
