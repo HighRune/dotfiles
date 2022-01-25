@@ -207,6 +207,14 @@ local function pounce()
 	})
 end
 
+-------------------- gbprod/cutlass.nvim
+local function cutlass()
+	require("cutlass").setup({
+		cut_key = "m",
+		override_del = true,
+	})
+end
+
 return {
 	packer = packer,
 	searchPulse = searchPulse,
@@ -221,5 +229,6 @@ return {
 	bufferline = bufferline,
 	gitsigns = gitsigns,
 	pounce = pounce,
+	cutlass = cutlass,
 	-- miniyank = miniyank,
 }
