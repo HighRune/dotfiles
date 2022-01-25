@@ -7,6 +7,9 @@ local function setup()
 		indent = {
 			enable = true,
 		},
+		autopairs = {
+			enable = true,
+		},
 		-- JoosepAlviste/nvim-ts-context-commentstring
 		context_commentstring = {
 			enable = true,
