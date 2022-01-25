@@ -6,6 +6,17 @@ local function setup()
 		map_bs = false,
 		map_cr = false,
 		check_ts = true,
+		fast_wrap = {
+			map = "<M-e>",
+			chars = { "{", "[", "(", '"', "'" },
+			pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
+			offset = 0,
+			end_key = "$",
+			keys = "qwertyuiopzxcvbnmasdfghjkl",
+			check_comma = true,
+			highlight = "Search",
+			highlight_grey = "Comment",
+		},
 	})
 
 	-- skip it, if you use another global object
