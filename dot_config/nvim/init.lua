@@ -120,7 +120,7 @@ return require("packer").startup({
 		use({
 			"svermeulen/vim-cutlass",
 			config = function()
-				require("mappings").cutlass()
+				-- require("mappings").cutlass()
 			end,
 		})
 		use({
