@@ -763,6 +763,7 @@ nvim -V10nvim.log           # nvim logs
 :verbose set fo             # debug init.vim
 :verbose inoremap <esc>     # debug init.vim
 :messages                   # error messages
+:echo &ft                   # display file type
 ```
 
 
