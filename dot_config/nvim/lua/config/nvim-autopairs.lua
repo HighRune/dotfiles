@@ -7,11 +7,11 @@ local function setup()
 		map_cr = false,
 		check_ts = true,
 		fast_wrap = {
-			map = "<C-cr>",
+			map = "\\e",
 			chars = { "{", "[", "(", '"', "'" },
 			pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
 			offset = 0,
-			end_key = "<cr>",
+			end_key = "s",
 			keys = "aoeuhtns",
 			check_comma = true,
 			highlight = "Search",
