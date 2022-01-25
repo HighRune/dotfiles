@@ -112,13 +112,13 @@ local function splitjoin()
 	map("n", "gk", ":SplitjoinSplit<cr><leader>f", opts)
 end
 -------------------- svermeulen/vim-cutlass
-local function cutlass()
-	map("n", "gm", "m", opts)
-	map("n", "m", "d", opts)
-	map("x", "m", "d", opts)
-	map("n", "mm", "dd", opts)
-	map("n", "M", "D", opts)
-end
+-- local function cutlass()
+-- map("n", "gm", "m", opts)
+-- map("n", "m", "d", opts)
+-- map("x", "m", "d", opts)
+-- map("n", "mm", "dd", opts)
+-- map("n", "M", "D", opts)
+-- end
 -------------------- is0n/fm-nvim
 local function fm()
 	map("n", "<c-t>", ":Vifm<cr>", opts)
@@ -220,7 +220,7 @@ return {
 	vanilla = vanilla,
 	telescope = telescope,
 	surround = surround,
-	cutlass = cutlass,
+	-- cutlass = cutlass,
 	splitjoin = splitjoin,
 	arpeggio = arpeggio,
 	fm = fm,
