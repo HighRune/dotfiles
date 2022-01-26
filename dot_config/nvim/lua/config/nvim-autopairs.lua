@@ -7,7 +7,7 @@ local function setup()
 		map_cr = false,
 		check_ts = true,
 		fast_wrap = {
-			map = "<c-(>",
+			map = "<C-CR>",
 			chars = { "{", "[", "(", '"', "'" },
 			pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
 			offset = 0,
