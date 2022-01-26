@@ -6,17 +6,17 @@ local function setup()
 		map_bs = false,
 		map_cr = false,
 		check_ts = true,
-		fast_wrap = {
-			map = "<C-CR>",
-			chars = { "{", "[", "(", '"', "'" },
-			pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
-			offset = 0,
-			end_key = "s",
-			keys = "aoeuhtns",
-			check_comma = true,
-			highlight = "Search",
-			highlight_grey = "Comment",
-		},
+		-- fast_wrap = {
+		-- map = "<C-CR>",
+		-- chars = { "{", "[", "(", '"', "'" },
+		-- pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
+		-- offset = 0,
+		-- end_key = "s",
+		-- keys = "aoeuhtns",
+		-- check_comma = true,
+		-- highlight = "Search",
+		-- highlight_grey = "Comment",
+		-- },
 	})
 
 	-- skip it, if you use another global object
