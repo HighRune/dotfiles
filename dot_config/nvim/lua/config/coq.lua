@@ -37,7 +37,8 @@ local function setup()
 		},
 		keymap = {
 			recommended = false,
-			jump_to_mark = "<c-cr>",
+			-- jump_to_mark = "<c-cr>",
+			jump_to_mark = "",
 			bigger_preview = "",
 			["repeat"] = "<leader>.",
 		},
