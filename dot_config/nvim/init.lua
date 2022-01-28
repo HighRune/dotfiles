@@ -153,11 +153,12 @@ return require("packer").startup({
 		})
 		use({
 			"rlane/pounce.nvim",
-			config = function()
-				require("setup").pounce()
-				require("mappings").pounce()
-			end,
+			-- config = function()
+			-- 	require("setup").pounce()
+			-- 	require("mappings").pounce()
+			-- end,
 		})
+		use({ "vim-sneak" })
 		-- use("bfredl/nvim-incnormal")
 		-- use({
 		-- 	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
