@@ -21,8 +21,8 @@ local function vanilla()
 	-- Esc
 	map("n", "<esc>", "<esc>^", opts)
 	-- Scroll
-	map("n", "<c-u>", "5k", opts)
-	map("n", "<c-d>", "5j", opts)
+	map("n", "<c-j>", "5k", opts)
+	map("n", "<c-k>", "5j", opts)
 	-- Readline
 	map("i", "<c-a>", "<esc>I", opts)
 	map("i", "<c-e>", "<end>", opts)
