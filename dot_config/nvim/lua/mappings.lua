@@ -182,12 +182,12 @@ local function coq()
 	-- ]])
 end
 
-local function pounce()
-	-- cmd([[
-	-- nmap s <cmd>Pounce<CR>
-	-- xmap s <cmd>Pounce<CR>
-	-- ]])
-end
+-- local function pounce()
+-- cmd([[
+-- nmap s <cmd>Pounce<CR>
+-- xmap s <cmd>Pounce<CR>
+-- ]])
+-- end
 -------------------- AndrewRadev/sideways.vim
 -- local function sideways()
 -- map("n", "<c-j>", ":SidewaysLeft<cr>", opts)
@@ -229,7 +229,7 @@ return {
 	hop = hop,
 	bufferline = bufferline,
 	coq = coq,
-	pounce = pounce,
+	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
 	-- camelCaseMotion = camelCaseMotion,
