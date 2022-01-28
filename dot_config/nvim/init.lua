@@ -151,14 +151,14 @@ return require("packer").startup({
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
 			config = "require('config.lualine').setup()",
 		})
-		use({
-			"rlane/pounce.nvim",
-			-- config = function()
-			-- 	require("setup").pounce()
-			-- 	require("mappings").pounce()
-			-- end,
-		})
-		use({ "vim-sneak" })
+		-- use({
+		-- 	"rlane/pounce.nvim",
+		-- 	-- config = function()
+		-- 	-- 	require("setup").pounce()
+		-- 	-- 	require("mappings").pounce()
+		-- 	-- end,
+		-- })
+		use({ "justinmk/vim-sneak" })
 		-- use("bfredl/nvim-incnormal")
 		-- use({
 		-- 	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
