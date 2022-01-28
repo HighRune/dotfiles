@@ -183,10 +183,10 @@ local function coq()
 end
 
 local function pounce()
-	cmd([[
-	nmap s <cmd>Pounce<CR>
-	xmap s <cmd>Pounce<CR>
-	]])
+	-- cmd([[
+	-- nmap s <cmd>Pounce<CR>
+	-- xmap s <cmd>Pounce<CR>
+	-- ]])
 end
 -------------------- AndrewRadev/sideways.vim
 -- local function sideways()
