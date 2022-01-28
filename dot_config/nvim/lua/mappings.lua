@@ -21,8 +21,8 @@ local function vanilla()
 	-- Esc
 	map("n", "<esc>", "<esc>^", opts)
 	-- Scroll
-	map("n", "<c-k>", "5k", opts)
-	map("n", "<c-j>", "5j", opts)
+	map("n", "<K>", "5k", opts)
+	map("n", "<J>", "5j", opts)
 	-- Readline
 	map("i", "<c-a>", "<esc>I", opts)
 	map("i", "<c-e>", "<end>", opts)
@@ -62,20 +62,20 @@ local function vanilla()
 	-- map("x", "c", "ygvc", opts)
 	-- map("x", "x", "ygvx", opts)
 	-- Join
-	cmd([[
-  " Like gJ, but always remove spaces
-  fun! s:join_spaceless()
-  execute 'normal! gJ'
+	-- cmd([[
+	-- " Like gJ, but always remove spaces
+	-- fun! s:join_spaceless()
+	-- execute 'normal! gJ'
 
-  " Remove character under the cursor if it's whitespace.
-  if matchstr(getline('.'), '\%' . col('.') . 'c.') =~ '\s'
-  execute 'normal! dw'
-  endif
-  endfun
+	-- " Remove character under the cursor if it's whitespace.
+	-- if matchstr(getline('.'), '\%' . col('.') . 'c.') =~ '\s'
+	-- execute 'normal! dw'
+	-- endif
+	-- endfun
 
-  " Map it to a key
-  nnoremap J :call <SID>join_spaceless()<CR>
-  ]])
+	-- " Map it to a key
+	-- nnoremap J :call <SID>join_spaceless()<CR>
+	-- ]])
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
