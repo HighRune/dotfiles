@@ -26,7 +26,7 @@ local function vanilla()
 	-- Readline
 	map("i", "<c-a>", "<esc>I", opts)
 	map("i", "<c-e>", "<end>", opts)
-	-- map("i", "<c-k>", "<esc>ld$i", opts)
+	map("i", "<c-k>", "<esc>ld$i", opts)
 	-- map("i", "<c-u>", "<esc>ld^i", opts)
 	-- Movements
 	map("n", "k", "gk", opts)
