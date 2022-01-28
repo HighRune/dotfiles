@@ -158,7 +158,7 @@ return require("packer").startup({
 				require("mappings").pounce()
 			end,
 		})
-		use("bfredl/nvim-incnormal")
+		-- use("bfredl/nvim-incnormal")
 		-- use({
 		-- 	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
 		-- 	config = function()
