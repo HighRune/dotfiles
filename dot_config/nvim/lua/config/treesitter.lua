@@ -63,15 +63,15 @@ local function setup()
 			-- 		["<s-cr>"] = "@function.outer",
 			-- 	},
 			-- },
-			swap = {
-				enable = true,
-				swap_next = {
-					["<c-k>"] = "@parameter.inner",
-				},
-				swap_previous = {
-					["<c-j>"] = "@parameter.inner",
-				},
-			},
+			-- swap = {
+			-- 	enable = true,
+			-- 	swap_next = {
+			-- 		["<c-k>"] = "@parameter.inner",
+			-- 	},
+			-- 	swap_previous = {
+			-- 		["<c-j>"] = "@parameter.inner",
+			-- 	},
+			-- },
 		},
 		-- nvim-treesitter/playground
 		playground = {
