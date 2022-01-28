@@ -21,8 +21,8 @@ local function vanilla()
 	-- Esc
 	map("n", "<esc>", "<esc>^", opts)
 	-- Scroll
-	map("n", "K", "5k", opts)
-	map("n", "J", "5j", opts)
+	map("n", "<c-k>", "5k", opts)
+	map("n", "<c-j>", "5j", opts)
 	-- Readline
 	map("i", "<c-a>", "<esc>I", opts)
 	map("i", "<c-e>", "<end>", opts)
@@ -109,7 +109,7 @@ end
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
 	map("n", "gj", ":SplitjoinJoin<cr>", opts)
-	map("n", "gk", ":SplitjoinSplit<cr><leader>f", opts)
+	map("n", "gk", ":SplitjoinSplit<cr>", opts)
 end
 -------------------- svermeulen/vim-cutlass
 -- local function cutlass()
