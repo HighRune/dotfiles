@@ -158,7 +158,12 @@ return require("packer").startup({
 		-- 	-- 	require("mappings").pounce()
 		-- 	-- end,
 		-- })
-		use({ "justinmk/vim-sneak" })
+		use({
+			"justinmk/vim-sneak",
+			config = function()
+				require("setup").sneak()
+			end,
+		})
 		-- use("bfredl/nvim-incnormal")
 		-- use({
 		-- 	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
