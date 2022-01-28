@@ -215,6 +215,12 @@ local function cutlass()
 	})
 end
 
+local function sneak()
+	cmd([[
+let g:sneak#label = 1
+  ]])
+end
+
 return {
 	packer = packer,
 	searchPulse = searchPulse,
@@ -230,5 +236,6 @@ return {
 	gitsigns = gitsigns,
 	pounce = pounce,
 	cutlass = cutlass,
+	sneak = sneak,
 	-- miniyank = miniyank,
 }
