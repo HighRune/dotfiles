@@ -2,6 +2,8 @@ window:
   dynamic_padding: true
   decorations: none
   startup_mode: Maximized
+  opacity: 0.70
+
 font:
   normal:
     family: Hack Nerd Font
@@ -16,6 +18,7 @@ font:
     family: Hack Nerd Font
     style: Bold Italic
   size: 13.0
+
 colors:
   # TokyoNight Alacritty Colors
   primary:
@@ -42,16 +45,20 @@ colors:
   indexed_colors:
     - { index: 16, color: '0xff9e64' }
     - { index: 17, color: '0xdb4b4b' }
+
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
   save_to_clipboard: false
+
 cursor:
   style:
     shape: Beam
     blinking: Always
   blink_interval: 500
   thickness: 0.2
+
 live_config_reload: true
+
 key_bindings:
   - { key: Return, mods: Shift,   chars: "\x1b[13;2u" }
   - { key: Return, mods: Control, chars: "\x1b[13;5u" }
