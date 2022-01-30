@@ -34,10 +34,6 @@ return require("packer").startup({
 				require("mappings").coq()
 			end,
 		})
-		-- use({
-		-- 	"nvim-telescope/telescope.nvim",
-		-- 	-- config = require("config.telescope").setup(),
-		-- })
 		use({
 			"is0n/fm-nvim",
 			config = function()
@@ -121,13 +117,6 @@ return require("packer").startup({
 			"kana/vim-arpeggio",
 			require("mappings").arpeggio(),
 		})
-		-- use({
-		-- 	"phaazon/hop.nvim",
-		-- 	-- config = function()
-		-- 	-- 	require("setup").hop()
-		-- 	-- 	require("mappings").hop()
-		-- 	-- end,
-		-- })
 		use({
 			"ahmedkhalf/project.nvim",
 			config = function()
@@ -139,13 +128,6 @@ return require("packer").startup({
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
 			config = "require('config.lualine').setup()",
 		})
-		-- use({
-		-- 	"rlane/pounce.nvim",
-		-- 	-- config = function()
-		-- 	-- 	require("setup").pounce()
-		-- 	-- 	require("mappings").pounce()
-		-- 	-- end,
-		-- })
 		use({
 			"justinmk/vim-sneak",
 			config = function()
@@ -162,8 +144,27 @@ return require("packer").startup({
 			"ibhagwan/fzf-lua",
 			config = function()
 				require("setup").fzf()
+				-- require("mappings").fzf()
 			end,
 		})
+		-- use({
+		-- 	"rlane/pounce.nvim",
+		-- 	-- config = function()
+		-- 	-- 	require("setup").pounce()
+		-- 	-- 	require("mappings").pounce()
+		-- 	-- end,
+		-- })
+		-- use({
+		-- 	"phaazon/hop.nvim",
+		-- 	-- config = function()
+		-- 	-- 	require("setup").hop()
+		-- 	-- 	require("mappings").hop()
+		-- 	-- end,
+		-- })
+		-- use({
+		-- 	"nvim-telescope/telescope.nvim",
+		-- 	-- config = require("config.telescope").setup(),
+		-- })
 		-- use({
 		-- 	"svermeulen/vim-cutlass",
 		-- 	config = function()
