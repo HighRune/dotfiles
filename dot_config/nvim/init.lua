@@ -158,12 +158,12 @@ return require("packer").startup({
 				require("setup").sneak()
 			end,
 		})
-		use({
-			"svermeulen/vim-cutlass",
-			-- config = function()
-			-- 	require("mappings").cutlass()
-			-- end,
-		})
+		-- use({
+		-- 	"svermeulen/vim-cutlass",
+		-- 	config = function()
+		-- 		require("mappings").cutlass()
+		-- 	end,
+		-- })
 		-- use("bfredl/nvim-incnormal")
 		-- use({
 		-- 	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
