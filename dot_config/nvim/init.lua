@@ -118,12 +118,6 @@ return require("packer").startup({
 			end,
 		})
 		use({
-			"gbprod/cutlass.nvim",
-			config = function()
-				require("setup").cutlass()
-			end,
-		})
-		use({
 			"kana/vim-arpeggio",
 			require("mappings").arpeggio(),
 		})
@@ -156,6 +150,12 @@ return require("packer").startup({
 			"justinmk/vim-sneak",
 			config = function()
 				require("setup").sneak()
+			end,
+		})
+		use({
+			"gbprod/cutlass.nvim",
+			config = function()
+				require("setup").cutlass()
 			end,
 		})
 		-- use({
