@@ -119,9 +119,9 @@ return require("packer").startup({
 		})
 		use({
 			"svermeulen/vim-cutlass",
-			-- config = function()
-			-- require("mappings").cutlass()
-			-- end,
+			config = function()
+				require("mappings").cutlass()
+			end,
 		})
 		-- use({
 		-- 	"gbprod/cutlass.nvim",
