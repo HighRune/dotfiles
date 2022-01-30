@@ -232,11 +232,13 @@ local function fzf()
 			fullscreen = true,
 			border = "none",
 			preview = {
-				horizontal = "up:70%",
 				layout = "horizontal",
-				scrollchars = { "▎", "" },
+				horizontal = "up:70%",
+				title = false,
 				delay = 0,
+				scrollchars = { "▎", "" },
 			},
+			keymap = {},
 		},
 	})
 end
