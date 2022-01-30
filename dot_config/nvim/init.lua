@@ -127,13 +127,13 @@ return require("packer").startup({
 			"kana/vim-arpeggio",
 			require("mappings").arpeggio(),
 		})
-		use({
-			"phaazon/hop.nvim",
-			-- config = function()
-			-- 	require("setup").hop()
-			-- 	require("mappings").hop()
-			-- end,
-		})
+		-- use({
+		-- 	"phaazon/hop.nvim",
+		-- 	-- config = function()
+		-- 	-- 	require("setup").hop()
+		-- 	-- 	require("mappings").hop()
+		-- 	-- end,
+		-- })
 		use({
 			"ahmedkhalf/project.nvim",
 			config = function()
