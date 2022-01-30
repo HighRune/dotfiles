@@ -220,8 +220,6 @@ end
 local function sneak()
 	cmd([[
 	let g:sneak#s_next = 1
-	noremap s <Plug>Sneak_s
-  noremap S <Plug>Sneak_S
 	]])
 end
 
