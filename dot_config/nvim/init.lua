@@ -154,9 +154,9 @@ return require("packer").startup({
 		-- })
 		use({
 			"justinmk/vim-sneak",
-			-- config = function()
-			-- 	require("setup").sneak()
-			-- end,
+			config = function()
+				require("setup").sneak()
+			end,
 		})
 		-- use({
 		-- 	"svermeulen/vim-cutlass",
