@@ -218,8 +218,8 @@ end
 local function sneak()
 	cmd([[
 	let g:sneak#s_next = 1
-	nmap s <Plug>Sneak_s
-  nmap S <Plug>Sneak_S
+	nmap f <Plug>Sneak_s
+  nmap F <Plug>Sneak_S
 	]])
 end
 
