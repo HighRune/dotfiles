@@ -133,20 +133,12 @@ local function arpeggio()
 end
 -------------------- monaqa/dial.nvim
 local function dial()
-	-- map("n", "<C-a>", "<Plug>(dial-increment)", opts)
-	-- map("n", "<C-x>", "<Plug>(dial-decrement)", opts)
-	-- map("v", "<C-a>", "<Plug>(dial-increment)", opts)
-	-- map("v", "<C-x>", "<Plug>(dial-decrement)", opts)
-	-- map("v", "g<C-a>", "<Plug>(dial-increment-additional)", opts)
-	-- map("v", "g<C-x>", "<Plug>(dial-decrement-additional)", opts)
-	cmd([[
-nmap <C-a> <Plug>(dial-increment)
-nmap <C-x> <Plug>(dial-decrement)
-vmap <C-a> <Plug>(dial-increment)
-vmap <C-x> <Plug>(dial-decrement)
-vmap g<C-a> <Plug>(dial-increment-additional)
-vmap g<C-x> <Plug>(dial-decrement-additional)
-  ]])
+	map("n", "<C-a>", "<Plug>(dial-increment)", {})
+	map("n", "<C-x>", "<Plug>(dial-decrement)", {})
+	map("v", "<C-a>", "<Plug>(dial-increment)", {})
+	map("v", "<C-x>", "<Plug>(dial-decrement)", {})
+	map("v", "g<C-a>", "<Plug>(dial-increment-additional)", {})
+	map("v", "g<C-x>", "<Plug>(dial-decrement-additional)", {})
 end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
