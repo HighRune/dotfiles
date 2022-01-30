@@ -129,10 +129,10 @@ return require("packer").startup({
 		})
 		use({
 			"phaazon/hop.nvim",
-			config = function()
-				require("setup").hop()
-				require("mappings").hop()
-			end,
+			-- config = function()
+			-- 	require("setup").hop()
+			-- 	require("mappings").hop()
+			-- end,
 		})
 		use({
 			"ahmedkhalf/project.nvim",
