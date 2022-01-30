@@ -81,11 +81,16 @@ local function telescope()
 	-- map("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 	-- map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
+-------------------- junegunn/fzf
+local function fzf()
+	map("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>", opts)
+	map("n", "<leader>s", "<cmd>lua require('fzf-lua').grep()<CR>", opts)
+end
 -------------------- blackCauldron7/surround.nvim
 local function surround()
-	map("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>", { noremap = true })
-	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>", { noremap = true })
-	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>", { noremap = true })
+	map("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>", opts)
+	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>", opts)
+	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>", opts)
 end
 -------------------- phaazon/hop.nvim
 local function hop()
@@ -227,6 +232,7 @@ return {
 	hop = hop,
 	bufferline = bufferline,
 	coq = coq,
+	fzf = fzf,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
