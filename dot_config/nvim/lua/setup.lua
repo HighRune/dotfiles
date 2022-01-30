@@ -227,7 +227,8 @@ end
 
 -------------------- monaqa/dial.nvim
 local function dial()
-	require("dial").augends["custom#boolean"] = dial.common.enum_cyclic({
+	local dial = require("dial")
+	dial.augends["custom#boolean"] = dial.common.enum_cyclic({
 		name = "boolean",
 		strlist = { "true", "false" },
 	})
