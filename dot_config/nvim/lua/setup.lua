@@ -238,7 +238,16 @@ local function fzf()
 				delay = 0,
 				scrollchars = { "▎", "" },
 			},
-			keymap = {},
+		},
+		keymap = {
+			builtin = {
+				["<C-e>"] = "preview-page-down",
+				["<C-u>"] = "preview-page-up",
+			},
+			fzf = {
+				["ctrl-e"] = "preview-page-down",
+				["ctrl-u"] = "preview-page-up",
+			},
 		},
 	})
 end
