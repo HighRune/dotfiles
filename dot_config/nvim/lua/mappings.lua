@@ -77,9 +77,9 @@ local function vanilla()
 end
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
-	map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
-	map("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
-	map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
+	-- map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
+	-- map("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
+	-- map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
 -------------------- blackCauldron7/surround.nvim
 local function surround()
