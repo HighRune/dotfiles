@@ -4,4 +4,5 @@
 /usr/bin/xcalib -d :0 ~/.config/Lenovo_ThinkPad_T470p_B140QAN01_5.icm &
 xcape -e 'Shift_L=Escape' -t 130 &
 xcape -e 'Shift_R=Return' -t 130 &
+xcape -e 'Control_L=space' -t 130 &
 # xcape -e 'Control_L=Escape' -t 130 &
