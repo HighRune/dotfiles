@@ -209,18 +209,17 @@ end
 
 -------------------- gbprod/cutlass.nvim
 local function cutlass()
-	-- require("cutlass").setup({
-	-- 	cut_key = "m",
-	-- 	override_del = true,
-	-- })
+	require("cutlass").setup({
+		cut_key = "m",
+		override_del = true,
+	})
 end
 
-local function sneak()
-	cmd([[
-	let g:sneak#s_next = 1
-	let g:sneak#label = 1
-	]])
-end
+-- local function sneak()
+-- 	cmd([[
+-- 	let g:sneak#s_next = 1
+-- 	]])
+-- end
 
 return {
 	packer = packer,
