@@ -218,6 +218,7 @@ end
 local function sneak()
 	cmd([[
 	let g:sneak#s_next = 1
+	let g:sneak#label = 1
 	]])
 end
 
