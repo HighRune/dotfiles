@@ -125,9 +125,9 @@ return require("packer").startup({
 		-- })
 		use({
 			"gbprod/cutlass.nvim",
-			config = function()
-				require("setup").cutlass()
-			end,
+			-- config = function()
+			-- require("setup").cutlass()
+			-- end,
 		})
 		use({
 			"kana/vim-arpeggio",
