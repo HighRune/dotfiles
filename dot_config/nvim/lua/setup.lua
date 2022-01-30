@@ -231,6 +231,12 @@ local function fzf()
 		winopts = {
 			fullscreen = true,
 			border = "none",
+			preview = {
+				horizontal = "up:70%",
+				layout = "horizontal",
+				scrollchars = { "▎", "" },
+				delay = 0,
+			},
 		},
 	})
 end
