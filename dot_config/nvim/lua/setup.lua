@@ -230,7 +230,7 @@ local function fzf()
 	require("fzf-lua").setup({
 		winopts = {
 			fullscreen = true,
-			border = false,
+			border = "none",
 		},
 	})
 end
