@@ -215,11 +215,11 @@ local function cutlass()
 	})
 end
 
--- local function sneak()
--- 	cmd([[
--- 	let g:sneak#s_next = 1
--- 	]])
--- end
+local function sneak()
+	cmd([[
+	let g:sneak#s_next = 1
+	]])
+end
 
 return {
 	packer = packer,
