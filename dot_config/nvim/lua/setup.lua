@@ -210,10 +210,10 @@ end
 
 -------------------- gbprod/cutlass.nvim
 local function cutlass()
-	require("cutlass").setup({
-		cut_key = "m",
-		override_del = true,
-	})
+	-- require("cutlass").setup({
+	-- 	cut_key = "m",
+	-- 	override_del = true,
+	-- })
 end
 
 -------------------- justinmk/vim-sneak
