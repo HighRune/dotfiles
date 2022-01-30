@@ -152,12 +152,12 @@ return require("packer").startup({
 		-- 	-- 	require("mappings").pounce()
 		-- 	-- end,
 		-- })
-		-- use({
-		-- 	"justinmk/vim-sneak",
-		-- 	config = function()
-		-- 		require("setup").sneak()
-		-- 	end,
-		-- })
+		use({
+			"justinmk/vim-sneak",
+			-- config = function()
+			-- 	require("setup").sneak()
+			-- end,
+		})
 		-- use({
 		-- 	"svermeulen/vim-cutlass",
 		-- 	config = function()
