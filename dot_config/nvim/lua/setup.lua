@@ -11,6 +11,7 @@ local function packer()
 ]])
 end
 
+-------------------- akinsho/bufferline.nvim
 local function bufferline()
 	require("bufferline").setup({
 		options = {
@@ -215,11 +216,12 @@ local function cutlass()
 	})
 end
 
+-------------------- justinmk/vim-sneak
 local function sneak()
 	cmd([[
 	let g:sneak#s_next = 1
-	nmap f <Plug>Sneak_s
-  nmap F <Plug>Sneak_S
+	noremap s <Plug>Sneak_s
+  noremap S <Plug>Sneak_S
 	]])
 end
 
