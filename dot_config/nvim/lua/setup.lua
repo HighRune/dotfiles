@@ -228,7 +228,9 @@ end
 -------------------- ibhagwan/fzf-lua
 local function fzf()
 	require("fzf-lua").setup({
-		fullscreen = true,
+		winopts = {
+			fullscreen = true,
+		},
 	})
 end
 
