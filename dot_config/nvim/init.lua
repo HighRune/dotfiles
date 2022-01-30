@@ -106,8 +106,8 @@ return require("packer").startup({
 		use({
 			"blackCauldron7/surround.nvim",
 			config = function()
-				require("setup").surround()
-				require("mappings").surround()
+				-- require("setup").surround()
+				-- require("mappings").surround()
 			end,
 		})
 		use({
