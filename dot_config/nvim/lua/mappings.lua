@@ -131,7 +131,15 @@ local function arpeggio()
 	-- call("arpeggio#map", "n", "e", 0, "hl", "(virtcol('$') / 2) . '<Bar>'")
 	-- map("n", "<Plug>(arpeggio-default:s)", "l", opts)
 end
-
+-------------------- monaqa/dial.nvim
+local function dial()
+	map("n", "<C-a>", "<Plug>(dial-increment)", opts)
+	map("n", "<C-x>", "<Plug>(dial-decrement)", opts)
+	map("v", "<C-a>", "<Plug>(dial-increment)", opts)
+	map("v", "<C-x>", "<Plug>(dial-decrement)", opts)
+	map("v", "g<C-a>", "<Plug>(dial-increment-additional)", opts)
+	map("v", "g<C-x>", "<Plug>(dial-decrement-additional)", opts)
+end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	cmd([[
@@ -233,6 +241,7 @@ return {
 	bufferline = bufferline,
 	coq = coq,
 	fzf = fzf,
+	dial = dial,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
