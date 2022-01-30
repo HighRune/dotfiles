@@ -225,6 +225,13 @@ local function sneak()
 	]])
 end
 
+-------------------- ibhagwan/fzf-lua
+local function fzf()
+	require("fzf-lua").setup({
+		fullscreen = true,
+	})
+end
+
 return {
 	packer = packer,
 	searchPulse = searchPulse,
@@ -241,5 +248,6 @@ return {
 	pounce = pounce,
 	cutlass = cutlass,
 	sneak = sneak,
+	fzf = fzf,
 	-- miniyank = miniyank,
 }
