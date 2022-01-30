@@ -142,20 +142,20 @@ local function dial()
 end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-	cmd([[
-nmap W          <Plug>WordMotion_w
-nmap B          <Plug>WordMotion_b
-nmap E          <Plug>WordMotion_e
-nmap gE         <Plug>WordMotion_ge
-omap aW         <Plug>WordMotion_aw
-omap iW         <Plug>WordMotion_iw
-]])
-	-- 	map("n", "W", "<Plug>WordMotion_w", {})
-	-- 	map("n", "B", "<Plug>WordMotion_b", {})
-	-- 	map("n", "E", "<Plug>WordMotion_e", {})
-	-- 	map("n", "gE", "<Plug>WordMotion_ge", {})
-	-- 	map("o", "aW", "<Plug>WordMotion_aw", {})
-	-- 	map("o", "iW", "<Plug>WordMotion_iw", {})
+	-- cmd([[
+	-- nmap W          <Plug>WordMotion_w
+	-- nmap B          <Plug>WordMotion_b
+	-- nmap E          <Plug>WordMotion_e
+	-- nmap gE         <Plug>WordMotion_ge
+	-- omap aW         <Plug>WordMotion_aw
+	-- omap iW         <Plug>WordMotion_iw
+	-- ]])
+	map("n", "W", "<Plug>WordMotion_w", {})
+	map("n", "B", "<Plug>WordMotion_b", {})
+	map("n", "E", "<Plug>WordMotion_e", {})
+	map("n", "gE", "<Plug>WordMotion_ge", {})
+	map("o", "aW", "<Plug>WordMotion_aw", {})
+	map("o", "iW", "<Plug>WordMotion_iw", {})
 end
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
