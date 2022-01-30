@@ -152,12 +152,12 @@ return require("packer").startup({
 				require("setup").sneak()
 			end,
 		})
-		use({
-			"gbprod/cutlass.nvim",
-			config = function()
-				require("setup").cutlass()
-			end,
-		})
+		-- use({
+		-- 	"gbprod/cutlass.nvim",
+		-- 	config = function()
+		-- 		require("setup").cutlass()
+		-- 	end,
+		-- })
 		-- use({
 		-- 	"svermeulen/vim-cutlass",
 		-- 	config = function()
