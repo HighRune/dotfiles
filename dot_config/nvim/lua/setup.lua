@@ -227,12 +227,12 @@ end
 
 -------------------- monaqa/dial.nvim
 local function dial()
-	local dial = require("dial")
-	dial.augends["custom#boolean"] = dial.common.enum_cyclic({
+	local d = require("dial")
+	d.augends["custom#boolean"] = d.common.enum_cyclic({
 		name = "boolean",
 		strlist = { "true", "false" },
 	})
-	table.insert(dial.config.searchlist.normal, "custom#boolean")
+	table.insert(d.config.searchlist.normal, "custom#boolean")
 end
 
 -------------------- ibhagwan/fzf-lua
