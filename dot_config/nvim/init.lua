@@ -36,7 +36,7 @@ return require("packer").startup({
 		})
 		use({
 			"nvim-telescope/telescope.nvim",
-			config = require("config.telescope").setup(),
+			-- config = require("config.telescope").setup(),
 		})
 		use({
 			"is0n/fm-nvim",
