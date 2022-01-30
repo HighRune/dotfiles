@@ -117,12 +117,12 @@ return require("packer").startup({
 				require("mappings").wordmotion()
 			end,
 		})
-		-- use({
-		-- 	"svermeulen/vim-cutlass",
-		-- 	config = function()
-		-- 		-- require("mappings").cutlass()
-		-- 	end,
-		-- })
+		use({
+			"svermeulen/vim-cutlass",
+			-- config = function()
+			-- require("mappings").cutlass()
+			-- end,
+		})
 		-- use({
 		-- 	"gbprod/cutlass.nvim",
 		-- 	-- config = function()
