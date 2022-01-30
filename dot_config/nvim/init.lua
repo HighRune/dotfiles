@@ -123,12 +123,12 @@ return require("packer").startup({
 		-- 		-- require("mappings").cutlass()
 		-- 	end,
 		-- })
-		use({
-			"gbprod/cutlass.nvim",
-			-- config = function()
-			-- require("setup").cutlass()
-			-- end,
-		})
+		-- use({
+		-- 	"gbprod/cutlass.nvim",
+		-- 	-- config = function()
+		-- 	-- require("setup").cutlass()
+		-- 	-- end,
+		-- })
 		use({
 			"kana/vim-arpeggio",
 			require("mappings").arpeggio(),
