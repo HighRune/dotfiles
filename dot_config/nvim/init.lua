@@ -117,12 +117,6 @@ return require("packer").startup({
 				require("mappings").wordmotion()
 			end,
 		})
-		use({
-			"svermeulen/vim-cutlass",
-			config = function()
-				require("mappings").cutlass()
-			end,
-		})
 		-- use({
 		-- 	"gbprod/cutlass.nvim",
 		-- 	-- config = function()
@@ -162,6 +156,12 @@ return require("packer").startup({
 			"justinmk/vim-sneak",
 			config = function()
 				require("setup").sneak()
+			end,
+		})
+		use({
+			"svermeulen/vim-cutlass",
+			config = function()
+				require("mappings").cutlass()
 			end,
 		})
 		-- use("bfredl/nvim-incnormal")
