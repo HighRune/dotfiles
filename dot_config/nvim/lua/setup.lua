@@ -225,6 +225,15 @@ local function sneak()
 	]])
 end
 
+-------------------- monaqa/dial.nvim
+local function dial()
+	require("dial").augends["custom#boolean"] = dial.common.enum_cyclic({
+		name = "boolean",
+		strlist = { "true", "false" },
+	})
+	table.insert(dial.config.searchlist.normal, "custom#boolean")
+end
+
 -------------------- ibhagwan/fzf-lua
 local function fzf()
 	require("fzf-lua").setup({
@@ -269,5 +278,6 @@ return {
 	cutlass = cutlass,
 	sneak = sneak,
 	fzf = fzf,
+	dial = dial,
 	-- miniyank = miniyank,
 }
