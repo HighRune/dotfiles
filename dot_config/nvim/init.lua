@@ -117,12 +117,12 @@ return require("packer").startup({
 				require("mappings").wordmotion()
 			end,
 		})
-		-- use({
-		-- 	"gbprod/cutlass.nvim",
-		-- 	-- config = function()
-		-- 	-- require("setup").cutlass()
-		-- 	-- end,
-		-- })
+		use({
+			"gbprod/cutlass.nvim",
+			config = function()
+				require("setup").cutlass()
+			end,
+		})
 		use({
 			"kana/vim-arpeggio",
 			require("mappings").arpeggio(),
@@ -152,12 +152,12 @@ return require("packer").startup({
 		-- 	-- 	require("mappings").pounce()
 		-- 	-- end,
 		-- })
-		use({
-			"justinmk/vim-sneak",
-			config = function()
-				require("setup").sneak()
-			end,
-		})
+		-- use({
+		-- 	"justinmk/vim-sneak",
+		-- 	config = function()
+		-- 		require("setup").sneak()
+		-- 	end,
+		-- })
 		-- use({
 		-- 	"svermeulen/vim-cutlass",
 		-- 	config = function()
