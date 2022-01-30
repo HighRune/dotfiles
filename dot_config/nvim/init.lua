@@ -34,10 +34,10 @@ return require("packer").startup({
 				require("mappings").coq()
 			end,
 		})
-		use({
-			"nvim-telescope/telescope.nvim",
-			-- config = require("config.telescope").setup(),
-		})
+		-- use({
+		-- 	"nvim-telescope/telescope.nvim",
+		-- 	-- config = require("config.telescope").setup(),
+		-- })
 		use({
 			"is0n/fm-nvim",
 			config = function()
