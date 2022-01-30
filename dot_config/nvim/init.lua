@@ -158,6 +158,7 @@ return require("packer").startup({
 				require("setup").cutlass()
 			end,
 		})
+		use({ "ibhagwan/fzf-lua" })
 		-- use({
 		-- 	"svermeulen/vim-cutlass",
 		-- 	config = function()
@@ -181,7 +182,7 @@ return require("packer").startup({
 		-- use("svermeulen/vim-yoink")
 		-- use("matze/vim-move")
 		-- use("RRethy/nvim-treesitter-textsubjects")
-		-- use { 'ibhagwan/fzf-lua', requires = { 'vijaymarupudi/nvim-fzf' } }
+		-- use({ "ibhagwan/fzf-lua", requires = { "vijaymarupudi/nvim-fzf" } })
 		-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
 		-- use("tpope/vim-abolish")
 		-- use("tpope/vim-surround")
