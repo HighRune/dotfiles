@@ -4,7 +4,7 @@ local opt = vim.opt
 local cmd = vim.cmd
 
 cmd([[autocmd ColorScheme * highlight NormalFloat guibg=none]])
--- cmd([[autocmd ColorScheme * highlight FloatBorder guifg=white guibg=none]])
+cmd([[autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none]])
 cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
 cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
 
@@ -19,7 +19,7 @@ o.scrolloff = 999 -- Minimal number of screen lines to keep above and below the 
 o.foldenable = false -- All folds are open
 o.number = true -- Print the line number in front of each line
 -- o.relativenumber = true -- Show relative line numbers
-o.virtualedit = "all"
+o.virtualedit = "onemore"
 o.completeopt = "menuone,noinsert" -- Options for Insert mode completion
 -- o.pumblend = 100
 o.clipboard = "unnamedplus" -- Have the clipboard be the same as my regular clipboard
