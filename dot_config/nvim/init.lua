@@ -158,7 +158,12 @@ return require("packer").startup({
 				require("setup").cutlass()
 			end,
 		})
-		use({ "ibhagwan/fzf-lua" })
+		use({
+			"ibhagwan/fzf-lua",
+			config = function()
+				require("setup").fzf()
+			end,
+		})
 		-- use({
 		-- 	"svermeulen/vim-cutlass",
 		-- 	config = function()
