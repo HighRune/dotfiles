@@ -103,13 +103,13 @@ return require("packer").startup({
 			"windwp/nvim-autopairs",
 			config = require("config.nvim-autopairs").setup(),
 		})
-		-- use({
-		-- 	"blackCauldron7/surround.nvim",
-		-- 	config = function()
-		-- 		-- require("setup").surround()
-		-- 		-- require("mappings").surround()
-		-- 	end,
-		-- })
+		use({
+			"blackCauldron7/surround.nvim",
+			-- config = function()
+			-- 	-- require("setup").surround()
+			-- 	-- require("mappings").surround()
+			-- end,
+		})
 		use({
 			"chaoren/vim-wordmotion",
 			config = function()
