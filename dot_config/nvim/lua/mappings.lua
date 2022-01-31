@@ -101,10 +101,8 @@ local function hop()
 	-- map("v", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 end
 
---------------------
+-------------------- justinmk/vim-sneak
 local function sneak()
-	-- map s <Plug>Sneak_s
-	-- map S <Plug>Sneak_S
 	map("n", "s", "<Plug>Sneak_s", {})
 	map("n", "S", "<Plug>Sneak_S", {})
 end
