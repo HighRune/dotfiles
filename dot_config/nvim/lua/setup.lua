@@ -220,8 +220,6 @@ end
 local function sneak()
 	cmd([[
 	let g:sneak#s_next = 1
-	map s <Plug>Sneak_s
-  map S <Plug>Sneak_S
 	]])
 end
 
