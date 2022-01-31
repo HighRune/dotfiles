@@ -119,11 +119,6 @@ local function splitjoin()
 	map("n", "gk", ":SplitjoinSplit<cr>", opts)
 end
 
--------------------- michaeljsmith/vim-indent-object
-local function indentObject()
-	map("o", "ai", "aI", {})
-	map("x", "ai", "aI", {})
-end
 -------------------- svermeulen/vim-cutlass
 local function cutlass()
 	-- 	map("n", "gm", "m", opts)
@@ -253,7 +248,6 @@ return {
 	fzf = fzf,
 	dial = dial,
 	sneak = sneak,
-	indentObject = indentObject,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
