@@ -91,10 +91,7 @@ return require("packer").startup({
 			"inside/vim-search-pulse",
 			config = require("setup").searchPulse(),
 		})
-		use({
-			"michaeljsmith/vim-indent-object",
-			config = require("mappings").indentObject(),
-		})
+		use("michaeljsmith/vim-indent-object")
 		use("wellle/targets.vim")
 		use("kana/vim-textobj-user")
 		use("vimtaku/vim-textobj-keyvalue")
