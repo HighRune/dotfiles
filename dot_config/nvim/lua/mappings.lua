@@ -8,7 +8,6 @@ local function vanilla()
 	-- Disable keys
 	map("", "Q", "<nop>", opts)
 	map("", "q", "<nop>", opts)
-	map("", "s", "<nop>", opts)
 	-- Help
 	cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
 	cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
