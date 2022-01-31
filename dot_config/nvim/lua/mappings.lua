@@ -100,6 +100,14 @@ local function hop()
 	-- map("n", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 	-- map("v", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 end
+
+--------------------
+local function sneak()
+	-- map s <Plug>Sneak_s
+	-- map S <Plug>Sneak_S
+	map("n", "s", "<Plug>Sneak_s", {})
+	map("n", "S", "<Plug>Sneak_S", {})
+end
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
 	map("n", "<tab>", ":BufferLineCycleNext<cr>", opts)
@@ -242,6 +250,7 @@ return {
 	coq = coq,
 	fzf = fzf,
 	dial = dial,
+	sneak = sneak,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
