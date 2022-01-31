@@ -93,7 +93,6 @@ return require("packer").startup({
 		})
 		use("wellle/targets.vim")
 		use("kana/vim-textobj-user")
-		use("kana/vim-textobj-indent")
 		use("vimtaku/vim-textobj-keyvalue")
 		use({
 			"windwp/nvim-autopairs",
