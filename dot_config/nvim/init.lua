@@ -95,6 +95,7 @@ return require("packer").startup({
 		use("wellle/targets.vim")
 		use("kana/vim-textobj-user")
 		use("vimtaku/vim-textobj-keyvalue")
+		use("PeterRincker/vim-argumentative")
 		use({
 			"windwp/nvim-autopairs",
 			config = require("config.nvim-autopairs").setup(),
