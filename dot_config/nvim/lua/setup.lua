@@ -28,7 +28,7 @@ local function bufferline()
 	})
 end
 -------------------- inside/vim-search-pulse
-local function searchPulse()
+local function pulse()
 	g.vim_search_pulse_mode = "pattern"
 	g.vim_search_pulse_duration = 200
 end
@@ -262,7 +262,7 @@ end
 
 return {
 	packer = packer,
-	searchPulse = searchPulse,
+	pulse = pulse,
 	surround = surround,
 	wordmotion = wordmotion,
 	tokyonight = tokyonight,
