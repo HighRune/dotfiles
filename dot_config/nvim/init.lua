@@ -133,15 +133,15 @@ return require("packer").startup({
 			config = "require('config.lualine').setup()",
 		})
 		use({
-			"justinmk/vim-sneak",
-			config = function()
-				require("mappings").sneak()
-			end,
-		})
-		use({
 			"gbprod/cutlass.nvim",
 			config = function()
 				require("setup").cutlass()
+			end,
+		})
+		use({
+			"justinmk/vim-sneak",
+			config = function()
+				require("mappings").sneak()
 			end,
 		})
 		use({
