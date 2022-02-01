@@ -120,9 +120,8 @@ local function sneak()
 	map("n", "F", "<Plug>Sneak_F", {})
 	map("n", "t", "<Plug>Sneak_t", {})
 	map("n", "T", "<Plug>Sneak_T", {})
-	cmd([[
-	nmap <expr> n sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n'
-	]])
+	map("n", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], { expr = true })
+	map("n", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], { expr = true })
 end
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
