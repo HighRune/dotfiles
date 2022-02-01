@@ -87,13 +87,13 @@ return require("packer").startup({
 			"AndrewRadev/splitjoin.vim",
 			config = require("mappings").splitjoin(),
 		})
-		-- use({
-		-- 	"inside/vim-search-pulse",
-		-- 	config = function()
-		-- 		require("setup").pulse()
-		-- 		require("mappings").pulse()
-		-- 	end,
-		-- })
+		use({
+			"inside/vim-search-pulse",
+			config = function()
+				require("setup").pulse()
+				require("mappings").pulse()
+			end,
+		})
 		use("michaeljsmith/vim-indent-object")
 		use("wellle/targets.vim")
 		use("kana/vim-textobj-user")
