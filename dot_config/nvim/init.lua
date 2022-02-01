@@ -89,7 +89,10 @@ return require("packer").startup({
 		})
 		use({
 			"inside/vim-search-pulse",
-			config = require("setup").searchPulse(),
+			config = function()
+				require("setup").pulse()
+				require("mappings").pulse()
+			end,
 		})
 		use("michaeljsmith/vim-indent-object")
 		use("wellle/targets.vim")
