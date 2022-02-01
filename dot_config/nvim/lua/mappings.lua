@@ -101,14 +101,14 @@ end
 
 -------------------- justinmk/vim-sneak
 local function sneak()
-	-- map("n", "s", "<Plug>Sneak_s", {})
-	-- map("n", "S", "<Plug>Sneak_S", {})
+	map("n", "s", "<Plug>Sneak_s", {})
+	map("n", "S", "<Plug>Sneak_S", {})
 	map("n", "f", "<Plug>Sneak_f", {})
 	map("n", "F", "<Plug>Sneak_F", {})
 	map("n", "t", "<Plug>Sneak_t", {})
 	map("n", "T", "<Plug>Sneak_T", {})
 	cmd([[
-	nmap <expr> n sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n'
+	nmap <expr> <Tab> sneak#is_sneaking() ? '<Plug>Sneak_;' : '<Tab>'
 	]])
 end
 -------------------- akinsho/bufferline.nvim
