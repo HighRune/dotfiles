@@ -116,12 +116,27 @@ end
 local function sneak()
 	map("n", "s", "<Plug>Sneak_s", {})
 	map("n", "S", "<Plug>Sneak_S", {})
+	map("x", "s", "<Plug>Sneak_s", {})
+	map("x", "S", "<Plug>Sneak_S", {})
+	map("o", "s", "<Plug>Sneak_s", {})
+	map("o", "S", "<Plug>Sneak_S", {})
+
 	map("n", "f", "<Plug>Sneak_f", {})
 	map("n", "F", "<Plug>Sneak_F", {})
+	map("x", "f", "<Plug>Sneak_f", {})
+	map("x", "F", "<Plug>Sneak_F", {})
+	map("o", "f", "<Plug>Sneak_f", {})
+	map("o", "F", "<Plug>Sneak_F", {})
+
 	map("n", "t", "<Plug>Sneak_t", {})
 	map("n", "T", "<Plug>Sneak_T", {})
-	map("n", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], { expr = true })
-	map("n", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], { expr = true })
+	map("x", "t", "<Plug>Sneak_t", {})
+	map("x", "T", "<Plug>Sneak_T", {})
+	map("o", "t", "<Plug>Sneak_t", {})
+	map("o", "T", "<Plug>Sneak_T", {})
+
+	map("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], { expr = true })
+	map("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], { expr = true })
 end
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
