@@ -112,6 +112,14 @@ local function pulse()
 	-- ]])
 end
 
+-------------------- jeetsukumaran/vim-indentwise
+local function indentwise()
+	-- cmd([["
+	-- map - <Plug>(IndentWisePreviousLesserIndent)
+	-- map = <Plug>(IndentWiseNextGreaterIndent)
+	-- "]])
+end
+
 -------------------- justinmk/vim-sneak
 local function sneak()
 	map("n", "s", "<Plug>Sneak_s", {})
@@ -283,6 +291,7 @@ return {
 	dial = dial,
 	sneak = sneak,
 	pulse = pulse,
+	indentwise = indentwise,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
