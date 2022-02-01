@@ -218,9 +218,9 @@ end
 
 -------------------- justinmk/vim-sneak
 local function sneak()
-	cmd([[
-	let g:sneak#s_next = 1
-	]])
+	-- cmd([[
+	-- let g:sneak#s_next = 1
+	-- ]])
 end
 
 -------------------- monaqa/dial.nvim
