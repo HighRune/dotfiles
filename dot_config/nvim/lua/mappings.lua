@@ -101,15 +101,15 @@ end
 
 -------------------- inside/vim-search-pulse
 local function pulse()
-	cmd([[
-  nmap n n<Plug>Pulse
-    nmap N N<Plug>Pulse
-    nmap * *<Plug>Pulse
-    nmap # #<Plug>Pulse
-    " Pulses cursor line on first match
-    " when doing search with / or ?
-    cmap <silent> <expr> <enter> search_pulse#PulseFirst()
-  ]])
+	-- cmd([[
+	-- nmap n n<Plug>Pulse
+	-- nmap N N<Plug>Pulse
+	-- nmap * *<Plug>Pulse
+	-- nmap # #<Plug>Pulse
+	-- " Pulses cursor line on first match
+	-- " when doing search with / or ?
+	-- cmap <silent> <expr> <enter> search_pulse#PulseFirst()
+	-- ]])
 end
 
 -------------------- justinmk/vim-sneak
