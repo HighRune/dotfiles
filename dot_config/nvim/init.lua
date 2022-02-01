@@ -145,6 +145,12 @@ return require("packer").startup({
 			end,
 		})
 		use({
+			"jeetsukumaran/vim-indentwise",
+			config = function()
+				require("mappings").indentwise()
+			end,
+		})
+		use({
 			"ibhagwan/fzf-lua",
 			config = function()
 				require("setup").fzf()
