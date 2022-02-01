@@ -108,7 +108,7 @@ local function sneak()
 	map("n", "t", "<Plug>Sneak_t", {})
 	map("n", "T", "<Plug>Sneak_T", {})
 	cmd([[
-	nmap <expr> <Tab> sneak#is_sneaking() ? '<Plug>Sneak_;' : '<Tab>'
+	nmap <expr> n sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n'
 	]])
 end
 -------------------- akinsho/bufferline.nvim
