@@ -29,8 +29,8 @@ local function bufferline()
 end
 -------------------- inside/vim-search-pulse
 local function pulse()
-	g.vim_search_pulse_mode = "pattern"
-	g.vim_search_pulse_duration = 200
+	-- g.vim_search_pulse_mode = "pattern"
+	-- g.vim_search_pulse_duration = 200
 end
 
 -------------------- bfredl/nvim-miniyank
