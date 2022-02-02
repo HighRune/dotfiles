@@ -26,9 +26,9 @@ local function setup()
 			max_file_lines = nil,
 		},
 		-- andymass/vim-matchup
-		matchup = {
-			enable = true,
-		},
+		-- matchup = {
+		-- 	enable = true,
+		-- },
 		-- nvim-treesitter/nvim-treesitter-textobjects
 		textobjects = {
 			select = {
