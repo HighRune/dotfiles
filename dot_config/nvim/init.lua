@@ -67,6 +67,7 @@ return require("packer").startup({
 		-- use("nvim-treesitter/playground")
 		use("windwp/nvim-ts-autotag")
 		use("itchyny/vim-cursorword")
+		use("Matt-A-Bennett/vim-surround-funk")
 		use({
 			"akinsho/bufferline.nvim",
 			config = function()
