@@ -171,7 +171,7 @@ local function cutlass()
 end
 -------------------- is0n/fm-nvim
 local function fm()
-	map("n", "<c-t>", ":Vifm<cr>", opts)
+	map("n", "<leader>n", ":Vifm<cr>", opts)
 end
 -------------------- kana/vim-arpeggio
 local function arpeggio()
