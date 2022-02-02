@@ -164,6 +164,9 @@ return require("packer").startup({
 				require("mappings").dial()
 			end,
 		})
+		use({
+			"andymass/vim-matchup",
+		})
 		-- use({
 		-- 	"rlane/pounce.nvim",
 		-- 	-- config = function()
