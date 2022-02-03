@@ -72,14 +72,14 @@ local function telescope()
 end
 -------------------- junegunn/fzf
 local function fzf()
-	map("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>", opts)
-	map("n", "<leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>", opts)
+	mapset("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>")
+	mapset("n", "<leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
 end
 -------------------- blackCauldron7/surround.nvim
 local function surround()
-	map("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>", opts)
-	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>", opts)
-	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>", opts)
+	mapset("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>")
+	mapset("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>")
+	mapset("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>")
 end
 -------------------- phaazon/hop.nvim
 local function hop()
