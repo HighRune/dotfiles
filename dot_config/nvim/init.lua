@@ -99,7 +99,7 @@ return require("packer").startup({
 		use("wellle/targets.vim")
 		use("kana/vim-textobj-user")
 		use("vimtaku/vim-textobj-keyvalue")
-		use({ "PeterRincker/vim-argumentative", after = "vim-sneak" })
+		use("PeterRincker/vim-argumentative")
 		use({
 			"windwp/nvim-autopairs",
 			config = require("config.nvim-autopairs").setup(),
@@ -133,12 +133,12 @@ return require("packer").startup({
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
 			config = "require('config.lualine').setup()",
 		})
-		use({
-			"gbprod/cutlass.nvim",
-			config = function()
-				require("setup").cutlass()
-			end,
-		})
+		-- use({
+		-- 	"gbprod/cutlass.nvim",
+		-- 	config = function()
+		-- 		require("setup").cutlass()
+		-- 	end,
+		-- })
 		use({
 			"justinmk/vim-sneak",
 			config = function()
