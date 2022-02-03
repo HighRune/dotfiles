@@ -72,8 +72,7 @@ local function telescope()
 end
 -------------------- junegunn/fzf
 local function fzf()
-	-- map("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>", opts)
-	mapset("n", "<leader><leader>", require("fzf-lua").files())
+	map("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>", opts)
 	map("n", "<leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>", opts)
 end
 -------------------- blackCauldron7/surround.nvim
