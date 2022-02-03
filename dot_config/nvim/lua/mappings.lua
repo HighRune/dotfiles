@@ -133,8 +133,8 @@ end
 
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
-	map("n", "gj", ":SplitjoinJoin<cr>", opts)
-	map("n", "gk", ":SplitjoinSplit<cr>", opts)
+	mapset("n", "gj", ":SplitjoinJoin<cr>")
+	mapset("n", "gk", ":SplitjoinSplit<cr>")
 end
 
 -------------------- svermeulen/vim-cutlass
@@ -156,12 +156,10 @@ local function arpeggio()
 end
 -------------------- monaqa/dial.nvim
 local function dial()
-	map("n", "<C-a>", "<Plug>(dial-increment)", {})
-	map("n", "<C-x>", "<Plug>(dial-decrement)", {})
-	map("v", "<C-a>", "<Plug>(dial-increment)", {})
-	map("v", "<C-x>", "<Plug>(dial-decrement)", {})
-	map("v", "g<C-a>", "<Plug>(dial-increment-additional)", {})
-	map("v", "g<C-x>", "<Plug>(dial-decrement-additional)", {})
+	mapset({ "n", "v" }, "<C-a>", "<Plug>(dial-increment)")
+	mapset({ "n", "v" }, "<C-x>", "<Plug>(dial-decrement)")
+	mapset("v", "g<C-a>", "<Plug>(dial-increment-additional)")
+	mapset("v", "g<C-x>", "<Plug>(dial-decrement-additional)")
 end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
