@@ -119,8 +119,8 @@ local function sneak()
 	mapset("n", "F", "<Plug>Sneak_F")
 	mapset("n", "t", "<Plug>Sneak_t")
 	mapset("n", "T", "<Plug>Sneak_T")
-	vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], { expr = true })
-	vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], { expr = true })
+	map("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], { expr = true })
+	map("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], { expr = true })
 end
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
@@ -147,7 +147,7 @@ local function cutlass()
 end
 -------------------- is0n/fm-nvim
 local function fm()
-	map("n", "<leader>n", ":Vifm<cr>", opts)
+	mapset("n", "<leader>n", ":Vifm<cr>")
 end
 -------------------- kana/vim-arpeggio
 local function arpeggio()
@@ -163,20 +163,12 @@ local function dial()
 end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-	-- cmd([[
-	-- nmap W          <Plug>WordMotion_w
-	-- nmap B          <Plug>WordMotion_b
-	-- nmap E          <Plug>WordMotion_e
-	-- nmap gE         <Plug>WordMotion_ge
-	-- omap aW         <Plug>WordMotion_aw
-	-- omap iW         <Plug>WordMotion_iw
-	-- ]])
-	map("n", "W", "<Plug>WordMotion_w", {})
-	map("n", "B", "<Plug>WordMotion_b", {})
-	map("n", "E", "<Plug>WordMotion_e", {})
-	map("n", "gE", "<Plug>WordMotion_ge", {})
-	map("o", "aW", "<Plug>WordMotion_aw", {})
-	map("o", "iW", "<Plug>WordMotion_iw", {})
+	mapset("n", "W", "<Plug>WordMotion_w")
+	mapset("n", "B", "<Plug>WordMotion_b")
+	mapset("n", "E", "<Plug>WordMotion_e")
+	mapset("n", "gE", "<Plug>WordMotion_ge")
+	mapset("o", "aW", "<Plug>WordMotion_aw")
+	mapset("o", "iW", "<Plug>WordMotion_iw")
 end
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
