@@ -1,58 +1,50 @@
 local map = vim.api.nvim_set_keymap
 local mapb = vim.api.nvim_buf_set_keymap
 local cmd = vim.cmd
+local mapset = vim.keymap.set
 -- local call = vim.call
 local opts = { noremap = true, silent = true }
 
 local function vanilla()
-	-- Disable keys
-	map("", "Q", "<nop>", opts)
-	map("", "q", "<nop>", opts)
 	-- Help
 	cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
 	cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
+	-- Disable keys
+	mapset("", "Q", "<nop>")
+	mapset("", "q", "<nop>")
 	-- Quit
-	map("n", "<c-q>", ":q<cr>", opts)
-	map("i", "<c-q>", "<esc>:q<cr>", opts)
+	mapset("n", "<c-q>", ":q<cr>")
+	mapset("i", "<c-q>", "<esc>:q<cr>")
 	-- Save
-	map("n", "<c-s>", ":w<cr>", opts)
-	map("i", "<c-s>", "<esc>`^:w<cr>", opts)
+	mapset("n", "<C-s>", ":w<cr>")
+	mapset("i", "<C-s>", "<esc>`^:w<cr>")
 	-- Esc
-	map("n", "<esc>", "<esc>^", opts)
+	mapset("n", "<esc>", "<esc>^")
 	-- Scroll
-	map("n", "<c-u>", "5k", opts)
-	map("n", "<c-e>", "5j", opts)
-	map("x", "<c-u>", "5k", opts)
-	map("x", "<c-e>", "5j", opts)
+	mapset({ "n", "x" }, "<C-u>", "5k")
+	mapset({ "n", "x" }, "<C-e>", "5j")
 	-- Readline
-	map("i", "<c-a>", "<esc>I", opts)
-	map("i", "<c-e>", "<end>", opts)
-	map("i", "<c-k>", "<esc>ld$i", opts)
-	-- map("i", "<c-u>", "<esc>ld^i", opts)
+	mapset("i", "<C-a>", "<esc>I")
+	mapset("i", "<C-e>", "<end>")
+	mapset("i", "<C-k>", "<esc>ld$i")
+	-- mapset("i", "<c-u>", "<esc>ld^i")
 	-- Movements
-	map("n", "k", "gk", opts)
-	map("n", "j", "gj", opts)
+	mapset("n", "k", "gk")
+	mapset("n", "j", "gj")
 	-- Line
-	map("n", "0", "g0", opts)
-	map("n", "$", "g$:set ve= ve=all<cr>", opts)
-	map("n", "^", "g^", opts)
+	mapset("n", "0", "g0")
+	mapset("n", "$", "g$:set ve= ve=all<cr>")
+	mapset("n", "^", "g^")
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Operators
-	map("o", "w", "iw", {})
-	map("x", "w", "iw", {})
-	map("o", "W", "iW", {})
-	map("x", "W", "iW", {})
-	map("o", "b", "ib", {})
-	map("o", "q", "iq", {})
-	map("x", "q", "iq", {})
-	map("o", "nb", "inb", {})
-	map("x", "nb", "inb", {})
-	map("o", "nq", "inq", {})
-	map("x", "nq", "inq", {})
-	map("o", "lb", "ilb", {})
-	map("x", "lb", "ilb", {})
-	map("o", "lq", "ilq", {})
-	map("x", "lq", "ilq", {})
+	mapset({ "o", "x" }, "w", "iw", {})
+	mapset({ "o", "x" }, "W", "iW", {})
+	mapset("o", "b", "ib", {})
+	mapset({ "o", "x" }, "q", "iq", {})
+	mapset({ "o", "x" }, "nb", "inb", {})
+	mapset({ "o", "x" }, "nq", "inq", {})
+	mapset({ "o", "x" }, "lb", "ilb", {})
+	mapset({ "o", "x" }, "lq", "ilq", {})
 	-- Cut
 	-- map("x", "d", "ygvd", opts)
 	-- map("x", "c", "ygvc", opts)
