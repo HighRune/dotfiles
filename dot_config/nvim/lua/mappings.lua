@@ -119,16 +119,16 @@ local function sneak()
 	mapset("n", "F", "<Plug>Sneak_F")
 	mapset("n", "t", "<Plug>Sneak_t")
 	mapset("n", "T", "<Plug>Sneak_T")
-	map("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], { expr = true })
-	map("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], { expr = true })
+	vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], { expr = true })
+	vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], { expr = true })
 end
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
-	map("n", "<tab>", ":BufferLineCycleNext<cr>", opts)
-	map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", opts)
-	map("n", "<c-w>", ":bw<cr>", opts)
-	map("n", "<pageup>", ":BufferLineMovePrev<cr>", opts)
-	map("n", "<pagedown>", ":BufferLineMoveNext<cr>", opts)
+	mapset("n", "<tab>", ":BufferLineCycleNext<cr>")
+	mapset("n", "<s-tab>", ":BufferLineCyclePrev<cr>")
+	mapset("n", "<c-w>", ":bw<cr>")
+	mapset("n", "<pageup>", ":BufferLineMovePrev<cr>")
+	mapset("n", "<pagedown>", ":BufferLineMoveNext<cr>")
 end
 
 -------------------- AndrewRadev/splitjoin.vim
