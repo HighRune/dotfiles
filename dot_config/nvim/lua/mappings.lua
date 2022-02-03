@@ -1,49 +1,45 @@
-local map = vim.api.nvim_set_keymap
-local mapb = vim.api.nvim_buf_set_keymap
 local cmd = vim.cmd
-local mapset = vim.keymap.set
--- local call = vim.call
-local opts = { noremap = true, silent = true }
+local map = vim.keymap.set
 
 local function vanilla()
 	-- Help
 	cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
 	cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
 	-- Disable keys
-	mapset("", "Q", "<nop>")
-	mapset("", "q", "<nop>")
+	map("", "Q", "<nop>")
+	map("", "q", "<nop>")
 	-- Quit
-	mapset("n", "<c-q>", ":q<cr>")
-	mapset("i", "<c-q>", "<esc>:q<cr>")
+	map("n", "<c-q>", ":q<cr>")
+	map("i", "<c-q>", "<esc>:q<cr>")
 	-- Save
-	mapset("n", "<C-s>", ":w<cr>")
-	mapset("i", "<C-s>", "<esc>`^:w<cr>")
+	map("n", "<C-s>", ":w<cr>")
+	map("i", "<C-s>", "<esc>`^:w<cr>")
 	-- Esc
-	mapset("n", "<esc>", "<esc>^")
+	map("n", "<esc>", "<esc>^")
 	-- Scroll
-	mapset({ "n", "x" }, "<C-u>", "5k")
-	mapset({ "n", "x" }, "<C-e>", "5j")
+	map({ "n", "x" }, "<C-u>", "5k")
+	map({ "n", "x" }, "<C-e>", "5j")
 	-- Readline
-	mapset("i", "<C-a>", "<esc>I")
-	mapset("i", "<C-e>", "<end>")
-	mapset("i", "<C-k>", "<esc>ld$i")
+	map("i", "<C-a>", "<esc>I")
+	map("i", "<C-e>", "<end>")
+	map("i", "<C-k>", "<esc>ld$i")
 	-- Movements
-	mapset("n", "k", "gk")
-	mapset("n", "j", "gj")
+	map("n", "k", "gk")
+	map("n", "j", "gj")
 	-- Line
-	mapset("n", "0", "g0")
-	mapset("n", "$", "g$:set ve= ve=all<cr>")
-	mapset("n", "^", "g^")
-	-- mapset("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
+	map("n", "0", "g0")
+	map("n", "$", "g$:set ve= ve=all<cr>")
+	map("n", "^", "g^")
+	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Operators
-	mapset("o", "b", "ib")
-	mapset("o", "w", "iw")
-	mapset("o", "W", "iW")
-	mapset({ "o", "x" }, "q", "iq")
-	mapset({ "o", "x" }, "nb", "inb")
-	mapset({ "o", "x" }, "nq", "inq")
-	mapset({ "o", "x" }, "lb", "ilb")
-	mapset({ "o", "x" }, "lq", "ilq")
+	map("o", "b", "ib")
+	map("o", "w", "iw")
+	map("o", "W", "iW")
+	map({ "o", "x" }, "q", "iq")
+	map({ "o", "x" }, "nb", "inb")
+	map({ "o", "x" }, "nq", "inq")
+	map({ "o", "x" }, "lb", "ilb")
+	map({ "o", "x" }, "lq", "ilq")
 	-- Cut
 	-- map("x", "d", "ygvd", opts)
 	-- map("x", "c", "ygvc", opts)
@@ -72,14 +68,14 @@ local function telescope()
 end
 -------------------- junegunn/fzf
 local function fzf()
-	mapset("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>")
-	mapset("n", "<leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
+	map("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>")
+	map("n", "<leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
 end
 -------------------- blackCauldron7/surround.nvim
 local function surround()
-	mapset("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>")
-	mapset("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>")
-	mapset("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>")
+	map("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>")
+	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>")
+	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>")
 end
 -------------------- phaazon/hop.nvim
 local function hop()
@@ -113,28 +109,28 @@ end
 
 -------------------- justinmk/vim-sneak
 local function sneak()
-	mapset("n", "s", "<Plug>Sneak_s")
-	mapset("n", "S", "<Plug>Sneak_S")
-	mapset("n", "f", "<Plug>Sneak_f")
-	mapset("n", "F", "<Plug>Sneak_F")
-	mapset("n", "t", "<Plug>Sneak_t")
-	mapset("n", "T", "<Plug>Sneak_T")
-	map("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], { expr = true })
-	map("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], { expr = true })
+	map("n", "s", "<Plug>Sneak_s")
+	map("n", "S", "<Plug>Sneak_S")
+	map("n", "f", "<Plug>Sneak_f")
+	map("n", "F", "<Plug>Sneak_F")
+	map("n", "t", "<Plug>Sneak_t")
+	map("n", "T", "<Plug>Sneak_T")
+	vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], { expr = true })
+	vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], { expr = true })
 end
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
-	mapset("n", "<tab>", ":BufferLineCycleNext<cr>")
-	mapset("n", "<s-tab>", ":BufferLineCyclePrev<cr>")
-	mapset("n", "<c-w>", ":bw<cr>")
-	mapset("n", "<pageup>", ":BufferLineMovePrev<cr>")
-	mapset("n", "<pagedown>", ":BufferLineMoveNext<cr>")
+	map("n", "<tab>", ":BufferLineCycleNext<cr>")
+	map("n", "<s-tab>", ":BufferLineCyclePrev<cr>")
+	map("n", "<c-w>", ":bw<cr>")
+	map("n", "<pageup>", ":BufferLineMovePrev<cr>")
+	map("n", "<pagedown>", ":BufferLineMoveNext<cr>")
 end
 
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
-	mapset("n", "gj", ":SplitjoinJoin<cr>")
-	mapset("n", "gk", ":SplitjoinSplit<cr>")
+	map("n", "gj", ":SplitjoinJoin<cr>")
+	map("n", "gk", ":SplitjoinSplit<cr>")
 end
 
 -------------------- svermeulen/vim-cutlass
@@ -147,7 +143,7 @@ local function cutlass()
 end
 -------------------- is0n/fm-nvim
 local function fm()
-	mapset("n", "<leader>n", ":Vifm<cr>")
+	map("n", "<leader>n", ":Vifm<cr>")
 end
 -------------------- kana/vim-arpeggio
 local function arpeggio()
@@ -156,45 +152,47 @@ local function arpeggio()
 end
 -------------------- monaqa/dial.nvim
 local function dial()
-	mapset({ "n", "v" }, "<C-a>", "<Plug>(dial-increment)")
-	mapset({ "n", "v" }, "<C-x>", "<Plug>(dial-decrement)")
-	mapset("v", "g<C-a>", "<Plug>(dial-increment-additional)")
-	mapset("v", "g<C-x>", "<Plug>(dial-decrement-additional)")
+	map({ "n", "v" }, "<C-a>", "<Plug>(dial-increment)")
+	map({ "n", "v" }, "<C-x>", "<Plug>(dial-decrement)")
+	map("v", "g<C-a>", "<Plug>(dial-increment-additional)")
+	map("v", "g<C-x>", "<Plug>(dial-decrement-additional)")
 end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-	mapset("n", "W", "<Plug>WordMotion_w")
-	mapset("n", "B", "<Plug>WordMotion_b")
-	mapset("n", "E", "<Plug>WordMotion_e")
-	mapset("n", "gE", "<Plug>WordMotion_ge")
-	mapset("o", "aW", "<Plug>WordMotion_aw")
-	mapset("o", "iW", "<Plug>WordMotion_iw")
+	map("n", "W", "<Plug>WordMotion_w")
+	map("n", "B", "<Plug>WordMotion_b")
+	map("n", "E", "<Plug>WordMotion_e")
+	map("n", "gE", "<Plug>WordMotion_ge")
+	map("o", "aW", "<Plug>WordMotion_aw")
+	map("o", "iW", "<Plug>WordMotion_iw")
 end
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
-	mapb(buffer, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	mapb(buffer, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	mapb(buffer, "n", "<leader>i", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	mapb(buffer, "n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-	mapb(buffer, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	mapb(buffer, "n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	mapb(buffer, "n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	mapb(buffer, "n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
-	mapb(buffer, "n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-	mapb(buffer, "n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
-	mapb(buffer, "n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-	mapb(buffer, "n", "<left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-	mapb(buffer, "n", "<right>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-	mapb(buffer, "n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+	map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { buffer = buffer })
+	map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { buffer = buffer })
+	map("n", "<leader>i", "<cmd>lua vim.lsp.buf.implementation()<CR>", { buffer = buffer })
+	map("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", { buffer = buffer })
+	map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { buffer = buffer })
+	map("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", { buffer = buffer })
+	map("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", { buffer = buffer })
+	map("n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", { buffer = buffer })
+	map("n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", { buffer = buffer })
+	map("n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", {
+		buffer = buffer,
+	})
+	map("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", { buffer = buffer })
+	map("n", "<left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
+	map("n", "<right>", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
+	map("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", { buffer = buffer })
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
 end
 
 local function coq()
-	map("i", "<Esc>", [[pumvisible() ? "<C-e><Esc>`^" : "<Esc>`^"]], { expr = true, noremap = true })
-	map("i", "<C-c>", [[pumvisible() ? "<C-e><C-c>" : "<C-c>"]], { expr = true, noremap = true })
-	map("i", "<Tab>", [[pumvisible() ? "<C-n>" : "<Tab>"]], { expr = true, noremap = true })
-	map("i", "<S-Tab>", [[pumvisible() ? "<C-p>" : "<BS>"]], { expr = true, noremap = true })
+	map("i", "<Esc>", [[pumvisible() ? "<C-e><Esc>`^" : "<Esc>`^"]], { expr = true })
+	map("i", "<C-c>", [[pumvisible() ? "<C-e><C-c>" : "<C-c>"]], { expr = true })
+	map("i", "<Tab>", [[pumvisible() ? "<C-n>" : "<Tab>"]], { expr = true })
+	map("i", "<S-Tab>", [[pumvisible() ? "<C-p>" : "<BS>"]], { expr = true })
 
 	-- cmd([[
 	-- ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>`^" : "\<Esc>`^"
