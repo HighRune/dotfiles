@@ -156,6 +156,14 @@ local function dial()
 	map("v", "g<C-a>", "<Plug>(dial-increment-additional)")
 	map("v", "g<C-x>", "<Plug>(dial-decrement-additional)")
 end
+
+-------------------- Matt-A-Bennett/vim-surround-funk
+local function funk()
+	-- map({ "n", "v" }, "<C-a>", "<Plug>(dial-increment)")
+	-- map({ "n", "v" }, "<C-x>", "<Plug>(dial-decrement)")
+	-- map("v", "g<C-a>", "<Plug>(dial-increment-additional)")
+	-- map("v", "g<C-x>", "<Plug>(dial-decrement-additional)")
+end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	map("n", "W", "<Plug>WordMotion_w")
@@ -255,6 +263,7 @@ return {
 	sneak = sneak,
 	pulse = pulse,
 	indentwise = indentwise,
+	funk = funk,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
