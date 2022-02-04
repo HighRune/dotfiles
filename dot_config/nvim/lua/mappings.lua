@@ -1,5 +1,6 @@
 local cmd = vim.cmd
 local map = vim.keymap.set
+local silent = { silent = true }
 
 local function vanilla()
 	-- Help
@@ -101,10 +102,10 @@ end
 
 -------------------- jeetsukumaran/vim-indentwise
 local function indentwise()
-	-- cmd([["
-	-- map - <Plug>(IndentWisePreviousLesserIndent)
-	-- map = <Plug>(IndentWiseNextGreaterIndent)
-	-- "]])
+	cmd([["
+	map <S-CR> <Plug>(IndentWiseBlockScopeBoundaryBegin)
+	map <CR> <Plug>(IndentWiseBlockScopeBoundaryEnd)
+	"]])
 end
 
 -------------------- justinmk/vim-sneak
@@ -120,11 +121,11 @@ local function sneak()
 end
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
-	map("n", "<tab>", ":BufferLineCycleNext<cr>")
-	map("n", "<s-tab>", ":BufferLineCyclePrev<cr>")
-	map("n", "<c-w>", ":bw<cr>")
-	map("n", "<pageup>", ":BufferLineMovePrev<cr>")
-	map("n", "<pagedown>", ":BufferLineMoveNext<cr>")
+	map("n", "<tab>", ":BufferLineCycleNext<cr>", silent)
+	map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", silent)
+	map("n", "<c-w>", ":bw<cr>", silent)
+	map("n", "<pageup>", ":BufferLineMovePrev<cr>", silent)
+	map("n", "<pagedown>", ":BufferLineMoveNext<cr>", silent)
 end
 
 -------------------- AndrewRadev/splitjoin.vim
