@@ -159,10 +159,10 @@ end
 
 -------------------- Matt-A-Bennett/vim-surround-funk
 local function funk()
-	-- map({ "n", "v" }, "<C-a>", "<Plug>(dial-increment)")
-	-- map({ "n", "v" }, "<C-x>", "<Plug>(dial-decrement)")
-	-- map("v", "g<C-a>", "<Plug>(dial-increment-additional)")
-	-- map("v", "g<C-x>", "<Plug>(dial-decrement-additional)")
+	map({ "o", "x" }, "iF", "<Plug>(SelectWholeFunction)")
+	map({ "o", "x" }, "aF", "<Plug>(SelectWholeFUNCTION)")
+	map({ "o", "x" }, "if", "<Plug>(SelectFunctionName)")
+	map({ "o", "x" }, "af", "<Plug>(SelectFunctionNAME)")
 end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
