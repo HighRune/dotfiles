@@ -102,8 +102,8 @@ end
 
 -------------------- jeetsukumaran/vim-indentwise
 local function indentwise()
-	map("", "<S-CR>", "<Plug>(IndentWiseBlockScopeBoundaryBegin)")
-	map("", "<CR>", "<Plug>(IndentWiseBlockScopeBoundaryEnd)")
+	map("n", "<S-CR>", "<Plug>(IndentWiseBlockScopeBoundaryBegin)")
+	map("n", "<CR>", "<Plug>(IndentWiseBlockScopeBoundaryEnd)")
 end
 
 -------------------- justinmk/vim-sneak
