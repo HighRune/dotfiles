@@ -27,6 +27,7 @@ local function bufferline()
 		},
 	})
 end
+
 -------------------- inside/vim-search-pulse
 local function pulse()
 	-- g.vim_search_pulse_disable_auto_mappings = 1
@@ -66,6 +67,7 @@ local function hop()
 	-- cmd("highlight default HopUnmatched guifg=#666666 guibg=bg guisp=#666666 ctermfg=242")
 	-- cmd("highlight default link HopCursor Cursor")
 end
+
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
 	g.tokyonight_style = "night"
@@ -79,6 +81,7 @@ local function solarized()
 	g.solarized_termtrans = 1
 	cmd("colorscheme solarized-low")
 end
+
 -------------------- sbdchd/neoformat
 local function neoformat()
 	cmd("let g:neoformat_enabled_lua = ['stylua']") -- Enable lua formater
@@ -132,6 +135,7 @@ local function gitsigns()
 		},
 	})
 end
+
 -------------------- is0n/fm-nvim
 local function fm()
 	require("fm-nvim").setup({
@@ -230,6 +234,10 @@ local function dial()
 	table.insert(d.config.searchlist.normal, "custom#boolean")
 end
 
+local function funk()
+	cmd("let g:surround_funk_create_mappings = 0")
+end
+
 -------------------- ibhagwan/fzf-lua
 local function fzf()
 	require("fzf-lua").setup({
@@ -275,5 +283,6 @@ return {
 	sneak = sneak,
 	fzf = fzf,
 	dial = dial,
+	funk = funk,
 	-- miniyank = miniyank,
 }
