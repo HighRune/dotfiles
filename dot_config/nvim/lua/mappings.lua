@@ -1,6 +1,7 @@
 local cmd = vim.cmd
 local map = vim.keymap.set
 local silent = { silent = true }
+local expr = { expr = true }
 
 local function vanilla()
 	-- Help
@@ -61,24 +62,29 @@ local function vanilla()
 	-- nnoremap J :call <SID>join_spaceless()<CR>
 	-- ]])
 end
+
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
 	-- map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
 	-- map("n", "<leader>s", "<cmd>Telescope live_grep<cr>", opts)
 	-- map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
+
 -------------------- junegunn/fzf
 local function fzf()
 	map("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>")
 	map("n", "<leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
 end
+
 -------------------- blackCauldron7/surround.nvim
 local function surround()
+	map("v", "s", "<esc>gv<cmd>lua require('surround').surround_add(false)<cr>")
 	map("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>")
 	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>")
 	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>")
 	map("n", "q", "<cmd>lua require('surround').toggle_quotes()<cr>")
 end
+
 -------------------- phaazon/hop.nvim
 local function hop()
 	-- map("n", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
@@ -115,9 +121,10 @@ local function sneak()
 	map("n", "F", "<Plug>Sneak_F")
 	map("n", "t", "<Plug>Sneak_t")
 	map("n", "T", "<Plug>Sneak_T")
-	vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], { expr = true })
-	vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], { expr = true })
+	vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], expr)
+	vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], expr)
 end
+
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
 	map("n", "<tab>", ":BufferLineCycleNext<cr>", silent)
@@ -133,22 +140,15 @@ local function splitjoin()
 	map("n", "gk", ":SplitjoinSplit<cr>")
 end
 
--------------------- svermeulen/vim-cutlass
-local function cutlass()
-	-- 	map("n", "gm", "m", opts)
-	-- 	map("n", "m", "d", opts)
-	-- 	map("x", "m", "d", opts)
-	-- 	map("n", "mm", "dd", opts)
-	-- 	map("n", "M", "D", opts)
-end
 -------------------- is0n/fm-nvim
 local function fm()
 	map("n", "<leader>n", ":Vifm<cr>")
 end
+
 -------------------- kana/vim-arpeggio
 local function arpeggio()
 	-- call("arpeggio#map", "n", "e", 0, "hl", "(virtcol('$') / 2) . '<Bar>'")
-	-- map("n", "<Plug>(arpeggio-default:s)", "l", opts)
+	-- map("n", "<Plug>(arpeggio-default:s)", "l")
 end
 -------------------- monaqa/dial.nvim
 local function dial()
@@ -165,6 +165,7 @@ local function funk()
 	map({ "o", "x" }, "if", "<Plug>(SelectFunctionName)")
 	map({ "o", "x" }, "af", "<Plug>(SelectFunctionNAME)")
 end
+
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	map("n", "W", "<Plug>WordMotion_w")
@@ -174,6 +175,7 @@ local function wordmotion()
 	map("o", "aW", "<Plug>WordMotion_aw")
 	map("o", "iW", "<Plug>WordMotion_iw")
 end
+
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
 	map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { buffer = buffer })
@@ -197,27 +199,12 @@ local function lspconfig(buffer)
 end
 
 local function coq()
-	map("i", "<Esc>", [[pumvisible() ? "<C-e><Esc>`^" : "<Esc>`^"]], { expr = true })
-	map("i", "<C-c>", [[pumvisible() ? "<C-e><C-c>" : "<C-c>"]], { expr = true })
-	map("i", "<Tab>", [[pumvisible() ? "<C-n>" : "<Tab>"]], { expr = true })
-	map("i", "<S-Tab>", [[pumvisible() ? "<C-p>" : "<BS>"]], { expr = true })
-
-	-- cmd([[
-	-- ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>`^" : "\<Esc>`^"
-	-- ino <silent><expr> <C-c>   pumvisible() ? "\<C-e><C-c>" : "\<C-c>"
-	-- ino <silent><expr> <BS>    pumvisible() ? "\<C-e><BS>"  : "\<BS>"
-	-- ino <silent><expr> <CR>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "\<CR>"
-	-- ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-	-- ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
-	-- ]])
+	map("i", "<Esc>", [[pumvisible() ? "<C-e><Esc>`^" : "<Esc>`^"]], expr)
+	map("i", "<C-c>", [[pumvisible() ? "<C-e><C-c>" : "<C-c>"]], expr)
+	map("i", "<Tab>", [[pumvisible() ? "<C-n>" : "<Tab>"]], expr)
+	map("i", "<S-Tab>", [[pumvisible() ? "<C-p>" : "<BS>"]], expr)
 end
 
--- local function pounce()
--- cmd([[
--- nmap s <cmd>Pounce<CR>
--- xmap s <cmd>Pounce<CR>
--- ]])
--- end
 -------------------- AndrewRadev/sideways.vim
 -- local function sideways()
 -- map("n", "<c-j>", ":SidewaysLeft<cr>", opts)
