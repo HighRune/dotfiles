@@ -26,7 +26,7 @@ local function vanilla()
 	map("i", "<C-a>", "<esc>I")
 	map("i", "<C-e>", "<end>")
 	map("i", "<C-k>", "<esc>ld$i")
-	-- Movements
+	-- Motions
 	map("n", "k", "gk")
 	map("n", "j", "gj")
 	-- Line
@@ -34,7 +34,7 @@ local function vanilla()
 	map("n", "$", "g$:set ve= ve=all<cr>")
 	map("n", "^", "g^")
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
-	-- Operators
+	-- Text objects
 	map("o", "w", "iw")
 	map("o", "W", "iW")
 	map("o", "b", "ib")
@@ -43,6 +43,11 @@ local function vanilla()
 	map("o", "nq", "inq", remap)
 	map("o", "lb", "ilb", remap)
 	map("o", "lq", "ilq", remap)
+	-- Text objects motions
+	map("n", "zq", "z[iq", remap)
+	map("n", "Zq", "z]iq", remap)
+	map("n", "zb", "z[ib", remap)
+	map("n", "Zb", "z]ib", remap)
 	-- Cut
 	-- map("x", "d", "ygvd", opts)
 	-- map("x", "c", "ygvc", opts)
