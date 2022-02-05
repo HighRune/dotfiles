@@ -77,6 +77,8 @@ local function surround()
 	map("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>")
 	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>")
 	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>")
+	map("n", "Q", "<cmd>lua require('surround').toggle_quotes()<cr>")
+	-- map("n", "q", "<cmd>lua require('surround').toggle_brackets()<cr>")
 end
 -------------------- phaazon/hop.nvim
 local function hop()
