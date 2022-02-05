@@ -160,10 +160,16 @@ end
 
 -------------------- Matt-A-Bennett/vim-surround-funk
 local function funk()
-	map({ "o", "x" }, "iF", "<Plug>(SelectWholeFunction)")
+	map({ "o", "x" }, "af", "<Plug>(SelectWholeFunction)")
 	map({ "o", "x" }, "aF", "<Plug>(SelectWholeFUNCTION)")
 	map({ "o", "x" }, "if", "<Plug>(SelectFunctionName)")
-	map({ "o", "x" }, "af", "<Plug>(SelectFunctionNAME)")
+	map({ "o", "x" }, "iF", "<Plug>(SelectFunctionNAME)")
+	map("n", "dsf", "<Plug>(DeleteSurroundingFunction)")
+	map("n", "dsF", "<Plug>(DeleteSurroundingFUNCTION)")
+	map("n", "csf", "<Plug>(ChangeSurroundingFunction)")
+	map("n", "csF", "<Plug>(ChangeSurroundingFUNCTION)")
+	map("n", "ysf", "<Plug>(YankSurroundingFunction)")
+	map("n", "ysF", "<Plug>(YankSurroundingFUNCTION)")
 end
 
 -------------------- chaoren/vim-wordmotion
