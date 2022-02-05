@@ -2,6 +2,7 @@ local cmd = vim.cmd
 local map = vim.keymap.set
 local silent = { silent = true }
 local expr = { expr = true }
+local remap = { remap = true }
 
 local function vanilla()
 	-- Help
@@ -37,11 +38,11 @@ local function vanilla()
 	map("o", "w", "iw")
 	map("o", "W", "iW")
 	map("o", "b", "ib")
-	map({ "o", "x" }, "q", "iq", { remap = true })
-	-- map({ "o", "x" }, "nb", "inb")
-	-- map({ "o", "x" }, "nq", "inq")
-	-- map({ "o", "x" }, "lb", "ilb")
-	-- map({ "o", "x" }, "lq", "ilq")
+	map("o", "q", "iq", remap)
+	map("o", "nb", "inb", remap)
+	map("o", "nq", "inq", remap)
+	map("o", "lb", "ilb", remap)
+	map("o", "lq", "ilq", remap)
 	-- Cut
 	-- map("x", "d", "ygvd", opts)
 	-- map("x", "c", "ygvc", opts)
