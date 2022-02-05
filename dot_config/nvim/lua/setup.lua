@@ -222,7 +222,9 @@ local function cutlass()
 end
 
 -------------------- justinmk/vim-sneak
-local function sneak() end
+local function sneak()
+	cmd("g:sneak#use_ic_scs = 1")
+end
 
 -------------------- monaqa/dial.nvim
 local function dial()
