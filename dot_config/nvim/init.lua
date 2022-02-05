@@ -74,6 +74,7 @@ return require("packer").startup({
 				require("mappings").funk()
 			end,
 		})
+		use({ "tommcdo/vim-ninja-feet" })
 		use({
 			"akinsho/bufferline.nvim",
 			config = function()
