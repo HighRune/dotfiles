@@ -45,7 +45,7 @@ end
 local function surround()
 	require("surround").setup({
 		load_keymaps = false,
-		quotes = { "'", '"', "`" },
+		quotes = { "'", '"' },
 		context_offset = 50,
 	})
 end
