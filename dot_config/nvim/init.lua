@@ -107,6 +107,7 @@ return require("packer").startup({
 			"wellle/targets.vim",
 			config = function()
 				require("setup").targets()
+				require("mappings").targets()
 			end,
 		})
 		use("kana/vim-textobj-user")
