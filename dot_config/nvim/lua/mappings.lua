@@ -34,16 +34,10 @@ local function vanilla()
 	map("n", "$", "g$:set ve= ve=all<cr>")
 	map("n", "^", "g^")
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
-	-- Text objects
+	-- Words
 	map("o", "w", "iw")
 	map("o", "W", "iW")
-	map("o", "b", "ib")
-	map("o", "q", "iq", remap)
-	map("o", "nb", "inb", remap)
-	map("o", "nq", "inq", remap)
-	map("o", "lb", "ilb", remap)
-	map("o", "lq", "ilq", remap)
-	-- Text objects motions
+
 	-- Cut
 	-- map("x", "d", "ygvd", opts)
 	-- map("x", "c", "ygvc", opts)
@@ -85,6 +79,16 @@ local function surround()
 	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>")
 	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>")
 	map("n", "q", "<cmd>lua require('surround').toggle_quotes()<cr>")
+end
+
+-------------------- wellle/targets.vim
+local function targets()
+	map("o", "b", "ib")
+	map("o", "nb", "inb", remap)
+	map("o", "lb", "ilb", remap)
+	map("o", "q", "iq", remap)
+	map("o", "lq", "ilq", remap)
+	map("o", "nq", "inq", remap)
 end
 
 -------------------- phaazon/hop.nvim
@@ -259,6 +263,7 @@ return {
 	pulse = pulse,
 	indentwise = indentwise,
 	funk = funk,
+	targets = targets,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
