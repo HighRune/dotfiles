@@ -186,6 +186,12 @@ return require("packer").startup({
 				require("setup").highlightedyank()
 			end,
 		})
+		use({
+			"svban/YankAssassin.vim",
+			config = function()
+				require("setup").yankassassin()
+			end,
+		})
 		-- use({
 		-- 	"andymass/vim-matchup",
 		-- })
