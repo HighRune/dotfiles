@@ -102,7 +102,12 @@ return require("packer").startup({
 		-- 	end,
 		-- })
 		use("michaeljsmith/vim-indent-object")
-		use("wellle/targets.vim")
+		use({
+			"wellle/targets.vim",
+			config = function()
+				require("setup").targets()
+			end,
+		})
 		use("kana/vim-textobj-user")
 		use("vimtaku/vim-textobj-keyvalue")
 		use("PeterRincker/vim-argumentative")
