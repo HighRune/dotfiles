@@ -179,6 +179,7 @@ return require("packer").startup({
 			end,
 		})
 		use("tpope/vim-repeat")
+		use("machakann/vim-highlightedyank")
 		-- use({
 		-- 	"andymass/vim-matchup",
 		-- })
