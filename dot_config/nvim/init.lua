@@ -111,7 +111,6 @@ return require("packer").startup({
 			end,
 		})
 		use("kana/vim-textobj-user")
-		use("vimtaku/vim-textobj-keyvalue")
 		-- use("PeterRincker/vim-argumentative")
 		use({
 			"windwp/nvim-autopairs",
