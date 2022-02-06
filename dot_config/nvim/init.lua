@@ -74,7 +74,7 @@ return require("packer").startup({
 				require("mappings").funk()
 			end,
 		})
-		-- use({ "tommcdo/vim-ninja-feet" })
+		use({ "tommcdo/vim-ninja-feet" })
 		use({
 			"akinsho/bufferline.nvim",
 			config = function()
@@ -173,7 +173,6 @@ return require("packer").startup({
 				require("mappings").dial()
 			end,
 		})
-		use("tpope/vim-repeat")
 		-- use({
 		-- 	"andymass/vim-matchup",
 		-- })
