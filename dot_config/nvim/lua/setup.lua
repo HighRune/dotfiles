@@ -238,6 +238,12 @@ end
 local function highlightedyank()
 	cmd("let g:highlightedyank_highlight_duration = 100")
 end
+
+-------------------- svban/YankAssassin.vim
+local function yankassassin()
+	cmd("let g:yankassassin_use_mappings = 1")
+end
+
 -------------------- wellle/targets.vim
 local function targets()
 	cmd("call targets#mappings#extend({'a': {'argument': [{'o': '[{([]', 'c': '[])}]', 's': ','}]}})")
@@ -291,5 +297,6 @@ return {
 	funk = funk,
 	targets = targets,
 	highlightedyank = highlightedyank,
+	yankassassin = yankassassin,
 	-- miniyank = miniyank,
 }
