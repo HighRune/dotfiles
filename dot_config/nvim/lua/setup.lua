@@ -292,6 +292,5 @@ return {
 	funk = funk,
 	targets = targets,
 	highlightedyank = highlightedyank,
-	yankassassin = yankassassin,
 	-- miniyank = miniyank,
 }
