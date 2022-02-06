@@ -236,10 +236,15 @@ local function dial()
 	table.insert(d.config.searchlist.normal, "custom#boolean")
 end
 
+-------------------- Matt-A-Bennett/vim-surround-funk
 local function funk()
 	cmd("let g:surround_funk_create_mappings = 0")
 end
 
+-------------------- machakann/vim-highlightedyank
+local function highlightedyank()
+	cmd("let g:highlightedyank_highlight_duration = 500")
+end
 -------------------- wellle/targets.vim
 local function targets()
 	cmd("call targets#mappings#extend({'a': {'argument': [{'o': '[{([]', 'c': '[])}]', 's': ','}]}})")
@@ -292,5 +297,6 @@ return {
 	dial = dial,
 	funk = funk,
 	targets = targets,
+	highlightedyank = highlightedyank,
 	-- miniyank = miniyank,
 }
