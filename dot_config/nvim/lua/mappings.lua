@@ -44,10 +44,8 @@ local function vanilla()
 	map("o", "lb", "ilb", remap)
 	map("o", "lq", "ilq", remap)
 	-- Text objects motions
-	map("n", "zq", "z[iq", remap)
-	map("n", "Zq", "z]iq", remap)
-	map("n", "zb", "z[ib", remap)
-	map("n", "Zb", "z]ib", remap)
+	map("n", "zq", "vinqo<esc>", remap)
+	map("n", "zb", "vanbo<esc>", remap)
 	-- Cut
 	-- map("x", "d", "ygvd", opts)
 	-- map("x", "c", "ygvc", opts)
