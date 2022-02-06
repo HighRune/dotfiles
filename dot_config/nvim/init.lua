@@ -173,6 +173,7 @@ return require("packer").startup({
 				require("mappings").dial()
 			end,
 		})
+		use("tpope/vim-repeat")
 		-- use({
 		-- 	"andymass/vim-matchup",
 		-- })
