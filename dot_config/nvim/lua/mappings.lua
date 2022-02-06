@@ -39,7 +39,6 @@ local function vanilla()
 	map("o", "W", "iW")
 	map("o", "b", "ib")
 	map("o", "q", "iq", remap)
-	map("o", "ai", "aI", remap)
 	map("o", "nb", "inb", remap)
 	map("o", "nq", "inq", remap)
 	map("o", "lb", "ilb", remap)
@@ -116,6 +115,10 @@ local function indentwise()
 	map("n", "<C-j>", "<Plug>(IndentWiseBlockScopeBoundaryEnd)")
 end
 
+-------------------- michaeljsmith/vim-indent-object
+local function indentobject()
+	map("o", "aI")
+end
 -------------------- justinmk/vim-sneak
 local function sneak()
 	map("n", "s", "<Plug>Sneak_s")
