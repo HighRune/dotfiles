@@ -117,7 +117,7 @@ end
 
 -------------------- michaeljsmith/vim-indent-object
 local function indentobject()
-	map("o", "aI")
+	map("o", "ai", "aI", remap)
 end
 -------------------- justinmk/vim-sneak
 local function sneak()
@@ -249,7 +249,6 @@ return {
 	vanilla = vanilla,
 	telescope = telescope,
 	surround = surround,
-	cutlass = cutlass,
 	splitjoin = splitjoin,
 	arpeggio = arpeggio,
 	fm = fm,
@@ -264,6 +263,7 @@ return {
 	pulse = pulse,
 	indentwise = indentwise,
 	funk = funk,
+	indentobject = indentobject,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
