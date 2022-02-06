@@ -241,7 +241,12 @@ end
 
 -------------------- wellle/targets.vim
 local function targets()
-	cmd("call targets#mappings#extend({'a': {'argument': [{'o': '[{([]', 'c': '[])}]', 's': ','}]}})")
+	cmd([[
+		autocmd User targets#mappings#user call targets#mappings#extend({
+		\ 'a': {'argument': [{'o': '[{([]', 'c': '[])}]', 's': ','}]}
+	  \ 'b': {'pair': [{'o':'(', 'c':')'}, {'o':'[', 'c':']'}, {'o':'{', 'c':'}'}, {'o':'<', 'c':'>'}]}
+		\ })
+  ]])
 end
 
 -------------------- ibhagwan/fzf-lua
