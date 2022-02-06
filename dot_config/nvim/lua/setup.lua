@@ -243,7 +243,7 @@ end
 
 -------------------- machakann/vim-highlightedyank
 local function highlightedyank()
-	cmd("let g:highlightedyank_highlight_duration = 500")
+	cmd("let g:highlightedyank_highlight_duration = 100")
 end
 -------------------- wellle/targets.vim
 local function targets()
