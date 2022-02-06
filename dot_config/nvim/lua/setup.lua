@@ -241,7 +241,9 @@ local function funk()
 end
 
 -------------------- wellle/targets.vim
-cmd("call targets#mappings#extend({'a': {'argument': [{'o': '[{([]', 'c': '[])}]', 's': ','}]}})")
+local function targets()
+	cmd("call targets#mappings#extend({'a': {'argument': [{'o': '[{([]', 'c': '[])}]', 's': ','}]}})")
+end
 
 -------------------- ibhagwan/fzf-lua
 local function fzf()
@@ -289,5 +291,6 @@ return {
 	fzf = fzf,
 	dial = dial,
 	funk = funk,
+	targets = targets,
 	-- miniyank = miniyank,
 }
