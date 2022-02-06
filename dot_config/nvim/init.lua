@@ -89,6 +89,7 @@ return require("packer").startup({
 		use("tpope/vim-commentary")
 		use("JoosepAlviste/nvim-ts-context-commentstring")
 		use("tommcdo/vim-lion")
+		use("tommcdo/vim-exchange")
 		use("p00f/nvim-ts-rainbow")
 		use({
 			"AndrewRadev/splitjoin.vim",
