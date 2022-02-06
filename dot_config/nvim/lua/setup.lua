@@ -1,5 +1,6 @@
 local g = vim.g
 local cmd = vim.cmd
+local call = vim.call
 
 -------------------- wbthomason/packer.nvim
 local function packer()
@@ -239,6 +240,9 @@ end
 local function funk()
 	cmd("let g:surround_funk_create_mappings = 0")
 end
+
+-------------------- wellle/targets.vim
+call("targets#mappings#extend({'a': {'argument': [{'o': '[{([]', 'c': '[])}]', 's': ','}]}})")
 
 -------------------- ibhagwan/fzf-lua
 local function fzf()
