@@ -1,6 +1,5 @@
 local g = vim.g
 local cmd = vim.cmd
-local call = vim.call
 
 -------------------- wbthomason/packer.nvim
 local function packer()
@@ -242,7 +241,7 @@ local function funk()
 end
 
 -------------------- wellle/targets.vim
-call("targets#mappings#extend({'a': {'argument': [{'o': '[{([]', 'c': '[])}]', 's': ','}]}})")
+cmd("call targets#mappings#extend({'a': {'argument': [{'o': '[{([]', 'c': '[])}]', 's': ','}]}})")
 
 -------------------- ibhagwan/fzf-lua
 local function fzf()
