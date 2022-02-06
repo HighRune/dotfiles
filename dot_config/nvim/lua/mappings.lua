@@ -83,11 +83,11 @@ end
 
 -------------------- wellle/targets.vim
 local function targets()
-	-- Brackets
-	map("o", "b", "ib")
+	-- -- Brackets
+	map("o", "b", "ib", remap)
 	map("o", "nb", "inb", remap)
 	map("o", "lb", "ilb", remap)
-	-- Quotes
+	-- -- Quotes
 	map("o", "q", "iq", remap)
 	map("o", "lq", "ilq", remap)
 	map("o", "nq", "inq", remap)
