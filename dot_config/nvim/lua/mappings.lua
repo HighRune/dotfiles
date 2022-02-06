@@ -115,10 +115,6 @@ local function indentwise()
 	map("n", "<C-j>", "<Plug>(IndentWiseBlockScopeBoundaryEnd)")
 end
 
--------------------- michaeljsmith/vim-indent-object
-local function indentobject()
-	map("o", "ai", "aI", remap)
-end
 -------------------- justinmk/vim-sneak
 local function sneak()
 	map("n", "s", "<Plug>Sneak_s")
@@ -263,7 +259,6 @@ return {
 	pulse = pulse,
 	indentwise = indentwise,
 	funk = funk,
-	indentobject = indentobject,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
