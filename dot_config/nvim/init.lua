@@ -110,7 +110,7 @@ return require("packer").startup({
 				require("mappings").targets()
 			end,
 		})
-		use("kana/vim-textobj-user")
+		-- use("kana/vim-textobj-user")
 		-- use("PeterRincker/vim-argumentative")
 		use({
 			"windwp/nvim-autopairs",
