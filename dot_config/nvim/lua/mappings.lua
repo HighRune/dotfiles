@@ -96,8 +96,8 @@ local function targets()
 	map("n", "gq", "vanqo<esc>", remap)
 	map("n", "gQ", "valqo<esc>", remap)
 	cmd([[
-	nnoremap <silent> <Plug>goToNextQuote  vanqo<esc>
-  \ :call repeat#set("<Plug>goToNextQuote", v:count)<cr>
+	nmap <silent> <Plug>goToNextQuote  vanqo<esc>
+  \ :call repeat#set("\<Plug>goToNextQuote", v:count)<cr>
   nmap gq <Plug>goToNextQuote
 	]])
 end
