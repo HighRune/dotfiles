@@ -125,6 +125,8 @@ end
 local function sneak()
 	map("n", "s", "<Plug>Sneak_s")
 	map("n", "S", "<Plug>Sneak_S")
+	map("n", "gs", "5s", remap)
+	map("n", "gS", "5S", remap)
 	map("n", "f", "<Plug>Sneak_f")
 	map("n", "F", "<Plug>Sneak_F")
 	map("n", "t", "<Plug>Sneak_t")
