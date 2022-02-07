@@ -206,6 +206,14 @@ local function pounce()
 	})
 end
 
+-------------------- AndrewRadev/splitjoin.vim
+local function splitjoin()
+	cmd([[
+  let g:splitjoin_split_mapping = ''
+  let g:splitjoin_join_mapping = ''
+  ]])
+end
+
 -------------------- gbprod/cutlass.nvim
 local function cutlass()
 	require("cutlass").setup({
@@ -297,5 +305,6 @@ return {
 	funk = funk,
 	targets = targets,
 	highlightedyank = highlightedyank,
+	splitjoin = splitjoin,
 	-- miniyank = miniyank,
 }
