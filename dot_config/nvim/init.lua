@@ -93,7 +93,10 @@ return require("packer").startup({
 		use("p00f/nvim-ts-rainbow")
 		use({
 			"AndrewRadev/splitjoin.vim",
-			config = require("mappings").splitjoin(),
+			config = function()
+				require("mappings").splitjoin()
+				require("setup").splitjoin()
+			end,
 		})
 		-- use({
 		-- 	"inside/vim-search-pulse",
