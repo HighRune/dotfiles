@@ -36,7 +36,7 @@ local function vanilla()
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Words
 	map("o", "w", "iw")
-	map("o", "W", "iW")
+	map("o", "W", "iW", remap)
 
 	-- Cut
 	-- map("x", "d", "ygvd", opts)
