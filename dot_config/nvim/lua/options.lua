@@ -8,6 +8,7 @@ cmd([[autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none]])
 cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
 cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
 cmd([[autocmd User SneakLeave highlight clear Sneak]])
+cmd([[autocmd User SneakLeave highlight clear SneakScope]])
 
 -- cmd([[color haslo]])
 
