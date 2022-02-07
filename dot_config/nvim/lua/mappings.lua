@@ -87,10 +87,19 @@ local function targets()
 	map("o", "b", "ib", remap)
 	map("o", "nb", "inb", remap)
 	map("o", "lb", "ilb", remap)
+	map("n", "gb", "vanbo<esc>", remap)
+	map("n", "gB", "valbo<esc>", remap)
 	-- -- Quotes
 	map("o", "q", "iq", remap)
 	map("o", "lq", "ilq", remap)
 	map("o", "nq", "inq", remap)
+	map("n", "gq", "vanqo<esc>", remap)
+	map("n", "gQ", "valqo<esc>", remap)
+	cmd([[
+	nnoremap <silent> <Plug>goToNextQuote  vanqo<esc>
+  \ :call repeat#set("<Plug>goToNextQuote", v:count)<cr>
+  nmap gq <Plug>goToNextQuote
+	]])
 end
 
 -------------------- phaazon/hop.nvim
@@ -125,8 +134,8 @@ end
 local function sneak()
 	map("n", "s", "<Plug>Sneak_s")
 	map("n", "S", "<Plug>Sneak_S")
-	map("n", "gs", "4s", remap)
-	map("n", "gS", "4S", remap)
+	map("n", "gs", "2s", remap)
+	map("n", "gS", "2S", remap)
 	map("n", "f", "<Plug>Sneak_f")
 	map("n", "F", "<Plug>Sneak_F")
 	map("n", "t", "<Plug>Sneak_t")
