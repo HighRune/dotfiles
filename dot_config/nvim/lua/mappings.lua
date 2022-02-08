@@ -78,7 +78,7 @@ local function surround()
 	map("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>")
 	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>")
 	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>")
-	map("n", "q", "<cmd>lua require('surround').toggle_quotes()<cr>")
+	map("n", "Q", "<cmd>lua require('surround').toggle_quotes()<cr>")
 end
 
 -------------------- wellle/targets.vim
@@ -95,11 +95,12 @@ local function targets()
 	map("o", "nq", "inq", remap)
 	map("n", "gq", "vanqo<esc>", remap)
 	map("n", "gQ", "valqo<esc>", remap)
-	cmd([[
-	nmap <silent> <Plug>goToNextQuote  vanqo<esc>
-  \ :call repeat#set("\<Plug>goToNextQuote", v:count)<cr>
-  nmap gq <Plug>goToNextQuote
-	]])
+
+	-- cmd([[
+	-- nmap <silent> <Plug>goToNextQuote  vanqo<esc>
+	-- \ :call repeat#set("\<Plug>goToNextQuote", v:count)<cr>
+	-- nmap gq <Plug>goToNextQuote
+	-- ]])
 end
 
 -------------------- phaazon/hop.nvim
