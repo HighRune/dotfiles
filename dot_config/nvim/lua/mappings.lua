@@ -41,6 +41,8 @@ local function vanilla()
 	cmd([[
   :noremap <expr> h repmo#SelfKey('h', 'l')|sunmap h
   :noremap <expr> l repmo#SelfKey('l', 'h')|sunmap l
+  :map <expr> ; repmo#LastKey(';')|sunmap ;
+  :map <expr> , repmo#LastRevKey(',')|sunmap ,
   ]])
 
 	-- Cut
