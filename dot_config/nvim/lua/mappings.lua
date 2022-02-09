@@ -38,6 +38,11 @@ local function vanilla()
 	map("o", "w", "iw")
 	map("o", "W", "iW", remap)
 
+	cmd([[
+  :noremap <expr> h repmo#SelfKey('h', 'l')|sunmap h
+  :noremap <expr> l repmo#SelfKey('l', 'h')|sunmap l
+  ]])
+
 	-- Cut
 	-- map("x", "d", "ygvd", opts)
 	-- map("x", "c", "ygvc", opts)
