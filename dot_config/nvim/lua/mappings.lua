@@ -38,13 +38,6 @@ local function vanilla()
 	map("o", "w", "iw")
 	map("o", "W", "iW", remap)
 
-	cmd([[
-  :noremap <expr> h repmo#SelfKey('h', 'l')|sunmap h
-  :noremap <expr> l repmo#SelfKey('l', 'h')|sunmap l
-  :map <expr> ; repmo#LastKey(';')|sunmap ;
-  :map <expr> , repmo#LastRevKey(',')|sunmap ,
-  ]])
-
 	-- Cut
 	-- map("x", "d", "ygvd", opts)
 	-- map("x", "c", "ygvc", opts)
@@ -102,6 +95,13 @@ local function targets()
 	map("o", "nq", "inq", remap)
 	map("n", "gq", "vanqo<esc>", remap)
 	map("n", "gQ", "valqo<esc>", remap)
+
+	cmd([[
+map <expr> ib repmo#Key('<Plug>(targets-i)b', '<Plug>(targets-a)b')|nunmap ib|sunmap ib
+map <expr> ab repmo#Key('<Plug>(targets-a)b', '<Plug>(targets-i)b')|nunmap ab|sunmap ab
+  ]])
+	map("", ";", [["repmo#LastKey(';')|sunmap ;"]], expr)
+	map("", ",", [["repmo#LastRevKey(',')|sunmap ,"]], expr)
 
 	-- cmd([[
 	-- nmap <silent> <Plug>goToNextQuote  vanqo<esc>
