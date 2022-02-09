@@ -96,13 +96,6 @@ local function targets()
 	map("n", "gq", "vanqo<esc>", remap)
 	map("n", "gQ", "valqo<esc>", remap)
 
-	cmd([[
-map <expr> ib repmo#Key('<Plug>(targets-i)b', '<Plug>(targets-a)b')|nunmap ib|sunmap ib
-map <expr> ab repmo#Key('<Plug>(targets-a)b', '<Plug>(targets-i)b')|nunmap ab|sunmap ab
-  ]])
-	map("", ";", [["repmo#LastKey(';')|sunmap ;"]], expr)
-	map("", ",", [["repmo#LastRevKey(',')|sunmap ,"]], expr)
-
 	-- cmd([[
 	-- nmap <silent> <Plug>goToNextQuote  vanqo<esc>
 	-- \ :call repeat#set("\<Plug>goToNextQuote", v:count)<cr>
