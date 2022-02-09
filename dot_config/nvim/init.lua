@@ -189,6 +189,7 @@ return require("packer").startup({
 			end,
 		})
 		use("svban/YankAssassin.vim")
+		use("Houl/repmo-vim")
 		-- use({
 		-- 	"andymass/vim-matchup",
 		-- })
