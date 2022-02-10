@@ -61,7 +61,7 @@ return require("packer").startup({
 		})
 		use({
 			"lukas-reineke/indent-blankline.nvim",
-			config = require("setup").indentBlankline(),
+			-- config = require("setup").indentBlankline(),
 		})
 		-- use({
 		-- 	"echasnovski/mini.nvim",
