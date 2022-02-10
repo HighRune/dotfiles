@@ -59,10 +59,10 @@ return require("packer").startup({
 				require("numb").setup()
 			end,
 		})
-		use({
-			"lukas-reineke/indent-blankline.nvim",
-			config = require("setup").indentBlankline(),
-		})
+		-- use({
+		-- 	"lukas-reineke/indent-blankline.nvim",
+		-- 	config = require("setup").indentBlankline(),
+		-- })
 		use({
 			"echasnovski/mini.nvim",
 			branch = "stable",
