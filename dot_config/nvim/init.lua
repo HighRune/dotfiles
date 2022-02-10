@@ -64,9 +64,10 @@ return require("packer").startup({
 			config = require("setup").indentBlankline(),
 		})
 		use({
-			"mini.indentscope",
+			"echasnovski/mini.nvim",
+			branch = "stable",
 			config = function()
-				-- require("mini.indentscope").setup({})
+				require("mini.indentscope").setup({})
 			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
