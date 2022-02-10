@@ -82,10 +82,10 @@ return require("packer").startup({
 			end,
 		})
 		use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
-		use({
-			"sbdchd/neoformat",
-			config = require("setup").neoformat(),
-		})
+		-- use({
+		-- 	"sbdchd/neoformat",
+		-- 	config = require("setup").neoformat(),
+		-- })
 		use("tpope/vim-commentary")
 		use("JoosepAlviste/nvim-ts-context-commentstring")
 		use("tommcdo/vim-lion")
