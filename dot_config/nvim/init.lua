@@ -66,9 +66,9 @@ return require("packer").startup({
 		use({
 			"echasnovski/mini.nvim",
 			branch = "stable",
-			-- config = function()
-			-- require("mini.indentscope").setup({})
-			-- end,
+			config = function()
+				require("mini.indentscope").setup({})
+			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
 		-- use("nvim-treesitter/playground")
