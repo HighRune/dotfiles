@@ -61,12 +61,12 @@ return require("packer").startup({
 		})
 		use({
 			"lukas-reineke/indent-blankline.nvim",
-			-- config = require("setup").indentBlankline(),
+			config = require("setup").indentBlankline(),
 		})
 		use({
 			"mini.indentscope",
 			config = function()
-				require("mini.indentscope").setup({})
+				-- require("mini.indentscope").setup({})
 			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
