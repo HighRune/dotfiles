@@ -67,6 +67,10 @@ local function setup()
 		on_attach(client, buffer)
 	end
 
+	local function on_attach_volar(client, buffer)
+		client.resolved_capabilities.document_formatting = false
+		on_attach(client, buffer)
+	end
 	-------------------- williamboman/nvim-lsp-installer
 	require("nvim-lsp-installer").on_server_ready(function(server)
 		local opts = {}
@@ -85,6 +89,11 @@ local function setup()
 
 		if server.name == "tsserver" then
 			opts.on_attach = on_attach_tsserver
+			opts.settings = { format = { enable = false } }
+		end
+
+		if server.name == "volar" then
+			opts.on_attach = on_attach_volar
 			opts.settings = { format = { enable = false } }
 		end
 
