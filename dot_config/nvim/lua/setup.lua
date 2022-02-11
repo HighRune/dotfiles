@@ -98,6 +98,11 @@ augroup END
 	-- vim.api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
 end
 
+-------------------- echasnovski/mini.nvim
+local function indentscope()
+	-- require("").setup({})
+end
+
 -------------------- lewis6991/gitsigns.nvim
 local function gitsigns()
 	require("gitsigns").setup({
@@ -306,5 +311,6 @@ return {
 	targets = targets,
 	highlightedyank = highlightedyank,
 	splitjoin = splitjoin,
+	indentscope = indentscope,
 	-- miniyank = miniyank,
 }
