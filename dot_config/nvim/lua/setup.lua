@@ -100,9 +100,11 @@ end
 
 -------------------- echasnovski/mini.nvim
 local function indentscope()
-	require("mini.indentscope").setup({
+	local indentscope = require("mini.indentscope")
+	indentscope.setup({
 		draw = {
 			delay = 0,
+			animation = indentscope.gen_animation("none"),
 		},
 		mappings = {
 			object_scope = "ii",
