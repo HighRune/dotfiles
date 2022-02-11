@@ -63,13 +63,12 @@ return require("packer").startup({
 			"lukas-reineke/indent-blankline.nvim",
 			-- config = require("setup").indentBlankline(),
 		})
-		-- use({
-		-- 	"echasnovski/mini.nvim",
-		-- 	branch = "stable",
-		-- 	config = function()
-		-- 		require("mini.indentscope").setup()
-		-- 	end,
-		-- })
+		use({
+			"echasnovski/mini.nvim",
+			config = function()
+				-- require("mini.indentscope").setup()
+			end,
+		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
 		-- use("nvim-treesitter/playground")
 		use("windwp/nvim-ts-autotag")
