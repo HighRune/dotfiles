@@ -115,7 +115,7 @@ local function indentscope()
 		options = {
 			border = "both",
 			indent_at_cursor = true,
-			try_as_border = false,
+			try_as_border = true,
 		},
 		symbol = "▏",
 	})
