@@ -111,7 +111,7 @@ return require("packer").startup({
 		-- 		require("mappings").pulse()
 		-- 	end,
 		-- })
-		use("michaeljsmith/vim-indent-object")
+		-- use("michaeljsmith/vim-indent-object")
 		use({
 			"wellle/targets.vim",
 			config = function()
