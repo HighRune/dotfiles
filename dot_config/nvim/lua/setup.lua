@@ -100,7 +100,23 @@ end
 
 -------------------- echasnovski/mini.nvim
 local function indentscope()
-	-- require("").setup({})
+	require("mini.indentscope").setup({
+		draw = {
+			delay = 0,
+		},
+		mappings = {
+			object_scope = "ii",
+			object_scope_with_border = "ai",
+			goto_top = "<S-CR>",
+			goto_bottom = "<CR>",
+		},
+		options = {
+			border = "both",
+			indent_at_cursor = true,
+			try_as_border = false,
+		},
+		symbol = "▏",
+	})
 end
 
 -------------------- lewis6991/gitsigns.nvim
