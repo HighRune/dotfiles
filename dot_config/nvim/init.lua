@@ -167,12 +167,12 @@ return require("packer").startup({
 				require("mappings").sneak()
 			end,
 		})
-		use({
-			"jeetsukumaran/vim-indentwise",
-			config = function()
-				require("mappings").indentwise()
-			end,
-		})
+		-- use({
+		-- 	"jeetsukumaran/vim-indentwise",
+		-- 	config = function()
+		-- 		require("mappings").indentwise()
+		-- 	end,
+		-- })
 		use({
 			"ibhagwan/fzf-lua",
 			config = function()
