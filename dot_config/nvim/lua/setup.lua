@@ -274,10 +274,9 @@ end
 local function targets()
 	cmd([[
 		autocmd User targets#mappings#user call targets#mappings#extend({
-		\ 'a': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
+    \ 'a': {'argument': [{'o': '[[(]', 'c': '[])]', 's': ','}]},
 		\ 'p': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
-    \ 'e': {'argument': [{'o': '[', 'c': ']', 's': ','}]},
-	  \ 'b': {'pair': [{'o':'(', 'c':')'}, {'o':'[', 'c':']'}, {'o':'{', 'c':'}'}, {'o':'<', 'c':'>'}]},
+	  \ 'b': {'pair': [{'o':'(', 'c':')'}, {'o':'[', 'c':']'}, {'o':'<', 'c':'>'}]},
 		\ })
   ]])
 end
