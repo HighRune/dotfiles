@@ -32,7 +32,7 @@ local function vanilla()
 	-- Line
 	map("n", "0", "g0")
 	map("n", "$", "g$:set ve= ve=all<cr>")
-	map("n", "^", "g^")
+	map("n", "&", "g^")
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Words
 	map("o", "w", "iw")
