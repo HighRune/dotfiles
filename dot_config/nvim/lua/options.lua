@@ -5,6 +5,14 @@ local cmd = vim.cmd
 
 -- cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
 -- cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
+cmd([[
+autocmd ColorScheme * highlight NormalFloat guibg=none
+autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none
+autocmd ColorScheme * highlight DiagnosticFloatingError guifg=white guibg=#000000
+autocmd ColorScheme * highlight DiagnosticFloatingHint guifg=white guibg=#000000
+autocmd ColorScheme * highlight DiagnosticFloatingInfo guifg=white guibg=#000000
+autocmd ColorScheme * highlight DiagnosticFloatingWarn guifg=white guibg=#000000
+]])
 cmd([[autocmd User SneakLeave highlight clear Sneak]])
 cmd([[autocmd User SneakLeave highlight clear SneakScope]])
 
