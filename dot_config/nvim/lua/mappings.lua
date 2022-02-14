@@ -184,12 +184,12 @@ local function funk()
 	map({ "o", "x" }, "aF", "<Plug>(SelectWholeFUNCTION)")
 	map({ "o", "x" }, "if", "<Plug>(SelectFunctionName)")
 	map({ "o", "x" }, "iF", "<Plug>(SelectFunctionNAME)")
-	map("n", "dsf", "<Plug>(DeleteSurroundingFunction)")
-	map("n", "dsF", "<Plug>(DeleteSurroundingFUNCTION)")
-	map("n", "csf", "<Plug>(ChangeSurroundingFunction)")
-	map("n", "csF", "<Plug>(ChangeSurroundingFUNCTION)")
-	map("n", "ysf", "<Plug>(YankSurroundingFunction)")
-	map("n", "ysF", "<Plug>(YankSurroundingFUNCTION)")
+	map("n", "dSf", "<Plug>(DeleteSurroundingFunction)")
+	map("n", "dSF", "<Plug>(DeleteSurroundingFUNCTION)")
+	map("n", "cSf", "<Plug>(ChangeSurroundingFunction)")
+	map("n", "cSF", "<Plug>(ChangeSurroundingFUNCTION)")
+	map("n", "ySf", "<Plug>(YankSurroundingFunction)")
+	map("n", "ySF", "<Plug>(YankSurroundingFUNCTION)")
 end
 
 -------------------- chaoren/vim-wordmotion
