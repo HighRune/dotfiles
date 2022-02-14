@@ -190,6 +190,8 @@ local function funk()
 	map("n", "cSF", "<Plug>(ChangeSurroundingFUNCTION)")
 	map("n", "ySf", "<Plug>(YankSurroundingFunction)")
 	map("n", "ySF", "<Plug>(YankSurroundingFUNCTION)")
+	map({ "n", "v" }, "gs", "<Plug>(GripSurroundObject)")
+	map({ "n", "v" }, "gS", "<Plug>(GripSurroundObjectNoPaste)")
 end
 
 -------------------- chaoren/vim-wordmotion
