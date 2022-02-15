@@ -83,14 +83,15 @@ end
 
 -------------------- wellle/targets.vim
 local function targets()
-	-- -- Brackets
-	-- map("o", "b", "ib", remap)
-	-- map("o", "nb", "inb", remap)
-	-- map("o", "lb", "ilb", remap)
-	-- -- Quotes
-	-- map("o", "q", "iq", remap)
-	-- map("o", "lq", "ilq", remap)
-	-- map("o", "nq", "inq", remap)
+	-- Text objects
+	map("o", "b", "ib", remap)
+	map("o", "nb", "inb", remap)
+	map("o", "lb", "ilb", remap)
+	map("o", "q", "iq", remap)
+	map("o", "lq", "ilq", remap)
+	map("o", "nq", "inq", remap)
+
+	-- Motions
 	map("n", "gb", "vanbo<esc>", remap)
 	map("n", "gB", "valbo<esc>", remap)
 	map("n", "gq", "vanqo<esc>", remap)
