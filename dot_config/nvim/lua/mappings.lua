@@ -87,14 +87,16 @@ local function targets()
 	-- map("o", "b", "ib", remap)
 	-- map("o", "nb", "inb", remap)
 	-- map("o", "lb", "ilb", remap)
-	map("n", "gb", "vanbo<esc>", remap)
-	map("n", "gB", "valbo<esc>", remap)
 	-- -- Quotes
 	-- map("o", "q", "iq", remap)
 	-- map("o", "lq", "ilq", remap)
 	-- map("o", "nq", "inq", remap)
+	map("n", "gb", "vanbo<esc>", remap)
+	map("n", "gB", "valbo<esc>", remap)
 	map("n", "gq", "vanqo<esc>", remap)
 	map("n", "gQ", "valqo<esc>", remap)
+	map("n", "ga", "vanao<esc>", remap)
+	map("n", "gA", "valao<esc>", remap)
 
 	-- cmd([[
 	-- nmap <silent> <Plug>goToNextQuote  vanqo<esc>
