@@ -97,6 +97,11 @@ local function targets()
 	map("n", "gq", "vanqo<esc>", remap)
 	map("n", "gQ", "valqo<esc>", remap)
 
+	cmd([[
+	map <expr> h repmo#SelfKey('h', 'l')|sunmap h
+  map <expr> l repmo#SelfKey('l', 'h')|sunmap l
+	]])
+
 	-- cmd([[
 	-- nmap <silent> <Plug>goToNextQuote  vanqo<esc>
 	-- \ :call repeat#set("\<Plug>goToNextQuote", v:count)<cr>
