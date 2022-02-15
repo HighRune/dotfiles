@@ -95,8 +95,6 @@ local function targets()
 	map("n", "gB", "valbo<esc>", remap)
 	map("n", "gq", "vanqo<esc>", remap)
 	map("n", "gQ", "valqo<esc>", remap)
-	map("n", "ga", "vanao<esc>", remap)
-	map("n", "gA", "valao<esc>", remap)
 
 	-- cmd([[
 	-- nmap <silent> <Plug>goToNextQuote  vanqo<esc>
