@@ -247,7 +247,10 @@ end
 
 -------------------- justinmk/vim-sneak
 local function sneak()
-	cmd("let g:sneak#use_ic_scs = 1")
+	cmd([[
+	let g:sneak#use_ic_scs = 1
+  let g:sneak#label = 1
+	]])
 end
 
 -------------------- monaqa/dial.nvim
