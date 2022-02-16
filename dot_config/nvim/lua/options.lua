@@ -16,7 +16,7 @@ autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTex
 ]])
 
 cmd([[
-autocmd User SneakLeave highlight clear Sneak
+" autocmd User SneakLeave highlight clear Sneak
 " autocmd User SneakLeave highlight clear SneakScope
 ]])
 
