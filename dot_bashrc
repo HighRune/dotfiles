@@ -236,3 +236,6 @@ export CLOUDSDK_PYTHON=python3.9
 export PATH=$PATH:/home/charles/.cargo/bin
 
 export MANPAGER='nvim +Man!'
+
+# Disable Ctrl-S
+stty -ixon
