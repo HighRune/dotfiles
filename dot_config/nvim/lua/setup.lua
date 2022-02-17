@@ -275,6 +275,7 @@ end
 -------------------- wellle/targets.vim
 local function targets()
 	cmd([[
+	let g:targets_gracious = 0
 	autocmd User targets#mappings#user call targets#mappings#extend({
 	\ 'a': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
 	\ 'p': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
