@@ -98,8 +98,8 @@ local function targets()
 	map("o", "nQ", "inQ", remap)
 
 	-- Motions
-	map("n", "ga", "vanio<esc>", remap)
-	map("n", "Ga", "valio<esc>", remap)
+	map("n", "ga", "vinao<esc>", remap)
+	map("n", "Ga", "vilao<esc>", remap)
 	map("n", "gb", "vanbo<esc>", remap)
 	map("n", "Gb", "valbo<esc>", remap)
 	map("n", "gB", "vanBo<esc>", remap)
