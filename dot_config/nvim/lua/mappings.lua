@@ -98,14 +98,16 @@ local function targets()
 	map("o", "nQ", "inQ", remap)
 
 	-- Motions
-	map("n", "zb", "vanbo<esc>", remap)
-	map("n", "Zb", "valbo<esc>", remap)
-	map("n", "zB", "vanBo<esc>", remap)
-	map("n", "ZB", "valBo<esc>", remap)
-	map("n", "zq", "vanqo<esc>", remap)
-	map("n", "Zq", "valqo<esc>", remap)
-	map("n", "zQ", "vanQo<esc>", remap)
-	map("n", "ZQ", "valQo<esc>", remap)
+	map("n", "ga", "vanio<esc>", remap)
+	map("n", "Ga", "valio<esc>", remap)
+	map("n", "gb", "vanbo<esc>", remap)
+	map("n", "Gb", "valbo<esc>", remap)
+	map("n", "gB", "vanBo<esc>", remap)
+	map("n", "GB", "valBo<esc>", remap)
+	map("n", "gq", "vanqo<esc>", remap)
+	map("n", "Gq", "valqo<esc>", remap)
+	map("n", "gQ", "vanQo<esc>", remap)
+	map("n", "GQ", "valQo<esc>", remap)
 
 	-- cmd([[
 	-- nmap <silent> <Plug>goToNextQuote  vanqo<esc>
