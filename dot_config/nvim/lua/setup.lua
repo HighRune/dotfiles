@@ -123,7 +123,7 @@ local function surround()
 			find = "",
 			find_left = "",
 			highlight = "",
-			replace = "cr",
+			replace = "cs",
 			update_n_lines = "",
 		},
 	})
