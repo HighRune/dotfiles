@@ -40,16 +40,6 @@ end
 -- 	g.miniyank_maxitems = 5
 -- end
 
--------------------- blackCauldron7/surround.nvim
-
-local function surround()
-	require("surround").setup({
-		load_keymaps = false,
-		quotes = { "'", '"' },
-		context_offset = 50,
-	})
-end
-
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	cmd("let g:wordmotion_nomap = 1")
@@ -118,6 +108,24 @@ local function indentscope()
 			try_as_border = true,
 		},
 		symbol = "▏",
+	})
+end
+
+local function surround()
+	local surround = require("mini.surround")
+	surround.setup({
+		n_lines = 20,
+		highlight_duration = 500,
+		funname_pattern = "[%w_%.]+",
+		mappings = {
+			add = "ys",
+			delete = "ds",
+			find = "",
+			find_left = "",
+			highlight = "",
+			replace = "cr",
+			update_n_lines = "",
+		},
 	})
 end
 
