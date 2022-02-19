@@ -72,15 +72,6 @@ local function fzf()
 	map("n", "<leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
 end
 
--------------------- blackCauldron7/surround.nvim
-local function surround()
-	map("v", "s", "<esc>gv<cmd>lua require('surround').surround_add(false)<cr>")
-	map("n", "ys", "<cmd>lua require('surround').surround_add(true)<cr>")
-	map("n", "cs", "<cmd>lua require('surround').surround_replace()<cr>")
-	map("n", "ds", "<cmd>lua require('surround').surround_delete()<cr>")
-	map("n", "q", "<cmd>lua require('surround').toggle_quotes()<cr>")
-end
-
 -------------------- wellle/targets.vim
 local function targets()
 	-- Text objects
