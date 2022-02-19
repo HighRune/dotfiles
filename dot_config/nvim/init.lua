@@ -67,6 +67,7 @@ return require("packer").startup({
 			"echasnovski/mini.nvim",
 			config = function()
 				require("setup").indentscope()
+				require("setup").surround()
 			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
@@ -125,13 +126,6 @@ return require("packer").startup({
 			"windwp/nvim-autopairs",
 			config = require("config.nvim-autopairs").setup(),
 		})
-		-- use({
-		-- 	"blackCauldron7/surround.nvim",
-		-- 	config = function()
-		-- 		require("setup").surround()
-		-- 		require("mappings").surround()
-		-- 	end,
-		-- })
 		use({
 			"chaoren/vim-wordmotion",
 			config = function()
