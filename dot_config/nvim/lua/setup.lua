@@ -342,7 +342,6 @@ return {
 	sneak = sneak,
 	fzf = fzf,
 	dial = dial,
-	funk = funk,
 	targets = targets,
 	highlightedyank = highlightedyank,
 	splitjoin = splitjoin,
