@@ -16,20 +16,12 @@ local function dial()
 	require("dial.config").augends:register_group({
 		default = {
 			augend.integer.alias.decimal,
-			augend.integer.alias.hex,
+			augend.integer.alias.decimal_int,
 			augend.date.alias["%Y/%m/%d"],
-		},
-		typescript = {
-			augend.integer.alias.decimal,
-			augend.integer.alias.hex,
+			augend.semver.alias.semver,
+			augend.constant.alias.bool,
 			augend.constant.new({ elements = { "let", "const" } }),
-		},
-		visual = {
-			augend.integer.alias.decimal,
-			augend.integer.alias.hex,
-			augend.date.alias["%Y/%m/%d"],
-			augend.constant.alias.alpha,
-			augend.constant.alias.Alpha,
+			augend.constant.new({ elements = { "&&", "||" }, word = false, cyclic = true }),
 		},
 	})
 end
