@@ -167,13 +167,13 @@ return require("packer").startup({
 				require("mappings").fzf()
 			end,
 		})
-		use({
-			"monaqa/dial.nvim",
-			config = function()
-				require("setup").dial()
-				require("mappings").dial()
-			end,
-		})
+		-- use({
+		-- 	"monaqa/dial.nvim",
+		-- 	config = function()
+		-- 		require("setup").dial()
+		-- 		require("mappings").dial()
+		-- 	end,
+		-- })
 		use("tpope/vim-repeat")
 		use({
 			"machakann/vim-highlightedyank",
