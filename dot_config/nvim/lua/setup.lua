@@ -11,6 +11,28 @@ local function packer()
 ]])
 end
 
+local function dial()
+	local augend = require("dial.augend")
+	require("dial.config").augends:register_group({
+		default = {
+			augend.integer.alias.decimal,
+			augend.integer.alias.hex,
+			augend.date.alias["%Y/%m/%d"],
+		},
+		typescript = {
+			augend.integer.alias.decimal,
+			augend.integer.alias.hex,
+			augend.constant.new({ elements = { "let", "const" } }),
+		},
+		visual = {
+			augend.integer.alias.decimal,
+			augend.integer.alias.hex,
+			augend.date.alias["%Y/%m/%d"],
+			augend.constant.alias.alpha,
+			augend.constant.alias.Alpha,
+		},
+	})
+end
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
 	require("bufferline").setup({
@@ -331,6 +353,7 @@ return {
 	cutlass = cutlass,
 	sneak = sneak,
 	fzf = fzf,
+	dial = dial,
 	targets = targets,
 	highlightedyank = highlightedyank,
 	splitjoin = splitjoin,
