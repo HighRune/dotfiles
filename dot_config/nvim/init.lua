@@ -170,6 +170,7 @@ return require("packer").startup({
 		use({
 			"monaqa/dial.nvim",
 			config = function()
+				require("setup").dial()
 				require("mappings").dial()
 			end,
 		})
