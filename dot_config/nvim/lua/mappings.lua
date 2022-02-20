@@ -180,22 +180,6 @@ local function dial()
 	map("v", "g<C-x>", "<Plug>(dial-decrement-additional)")
 end
 
--------------------- Matt-A-Bennett/vim-surround-funk
-local function funk()
-	-- map({ "o", "x" }, "af", "<Plug>(SelectWholeFunction)")
-	-- map({ "o", "x" }, "Af", "<Plug>(SelectWholeFUNCTION)")
-	-- map({ "o", "x" }, "an", "<Plug>(SelectFunctionName)")
-	-- map({ "o", "x" }, "An", "<Plug>(SelectFunctionNAME)")
-	map("n", "dsf", "<Plug>(DeleteSurroundingFunction)")
-	map("n", "dSf", "<Plug>(DeleteSurroundingFUNCTION)")
-	map("n", "csf", "<Plug>(ChangeSurroundingFunction)")
-	map("n", "cSf", "<Plug>(ChangeSurroundingFUNCTION)")
-	map("n", "ysf", "<Plug>(YankSurroundingFunction)")
-	map("n", "ySF", "<Plug>(YankSurroundingFUNCTION)")
-	map({ "n", "v" }, "gs", "<Plug>(GripSurroundObject)")
-	map({ "n", "v" }, "gS", "<Plug>(GripSurroundObjectNoPaste)")
-end
-
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	map("n", "W", "<Plug>WordMotion_w")
@@ -279,7 +263,6 @@ return {
 	sneak = sneak,
 	pulse = pulse,
 	indentwise = indentwise,
-	funk = funk,
 	targets = targets,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
