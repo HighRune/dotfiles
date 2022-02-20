@@ -182,10 +182,10 @@ end
 
 -------------------- Matt-A-Bennett/vim-surround-funk
 local function funk()
-	map({ "o", "x" }, "af", "<Plug>(SelectWholeFunction)")
-	map({ "o", "x" }, "Af", "<Plug>(SelectWholeFUNCTION)")
-	map({ "o", "x" }, "an", "<Plug>(SelectFunctionName)")
-	map({ "o", "x" }, "An", "<Plug>(SelectFunctionNAME)")
+	-- map({ "o", "x" }, "af", "<Plug>(SelectWholeFunction)")
+	-- map({ "o", "x" }, "Af", "<Plug>(SelectWholeFUNCTION)")
+	-- map({ "o", "x" }, "an", "<Plug>(SelectFunctionName)")
+	-- map({ "o", "x" }, "An", "<Plug>(SelectFunctionNAME)")
 	map("n", "dsf", "<Plug>(DeleteSurroundingFunction)")
 	map("n", "dSf", "<Plug>(DeleteSurroundingFUNCTION)")
 	map("n", "csf", "<Plug>(ChangeSurroundingFunction)")
