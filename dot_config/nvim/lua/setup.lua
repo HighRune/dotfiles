@@ -260,16 +260,6 @@ local function sneak()
 	]])
 end
 
--------------------- monaqa/dial.nvim
-local function dial()
-	local d = require("dial")
-	d.augends["custom#boolean"] = d.common.enum_cyclic({
-		name = "boolean",
-		strlist = { "true", "false" },
-	})
-	table.insert(d.config.searchlist.normal, "custom#boolean")
-end
-
 -------------------- machakann/vim-highlightedyank
 local function highlightedyank()
 	cmd("let g:highlightedyank_highlight_duration = 100")
@@ -341,7 +331,6 @@ return {
 	cutlass = cutlass,
 	sneak = sneak,
 	fzf = fzf,
-	dial = dial,
 	targets = targets,
 	highlightedyank = highlightedyank,
 	splitjoin = splitjoin,
