@@ -35,10 +35,10 @@ local function setup()
 				enable = true,
 				lookahead = true,
 				keymaps = {
-					-- ["af"] = "@function.outer",
-					-- ["if"] = "@function.inner",
-					-- ["ac"] = "@call.outer",
-					-- ["ic"] = "@call.inner",
+					["af"] = "@function.outer",
+					["if"] = "@function.inner",
+					["ac"] = "@call.outer",
+					["ic"] = "@call.inner",
 				},
 			},
 			-- swap = {
