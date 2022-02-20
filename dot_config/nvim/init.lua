@@ -171,7 +171,7 @@ return require("packer").startup({
 			"monaqa/dial.nvim",
 			config = function()
 				require("setup").dial()
-				-- require("mappings").dial()
+				require("mappings").dial()
 			end,
 		})
 		use("tpope/vim-repeat")
