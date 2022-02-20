@@ -11,6 +11,7 @@ local function packer()
 ]])
 end
 
+-------------------- monaqa/dial.nvim
 local function dial()
 	local augend = require("dial.augend")
 	require("dial.config").augends:register_group({
@@ -25,6 +26,7 @@ local function dial()
 		},
 	})
 end
+
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
 	require("bufferline").setup({
