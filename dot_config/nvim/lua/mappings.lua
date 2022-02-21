@@ -1,5 +1,6 @@
 local cmd = vim.cmd
 local map = vim.keymap.set
+local call = vim.call
 local silent = { silent = true }
 local expr = { expr = true }
 local remap = { remap = true }
@@ -167,6 +168,7 @@ end
 
 -------------------- kana/vim-arpeggio
 local function arpeggio()
+	call("arpeggio#map", "i", "", 0, "eu", "<Esc>`^")
 	-- call("arpeggio#map", "n", "e", 0, "hl", "(virtcol('$') / 2) . '<Bar>'")
 	-- map("n", "<Plug>(arpeggio-default:s)", "l")
 end
