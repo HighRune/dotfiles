@@ -174,12 +174,12 @@ local function arpeggio()
 end
 -------------------- monaqa/dial.nvim
 local function dial()
-	vim.api.nvim_set_keymap("n", "<C-a>", require("dial.map").inc_normal(), { noremap = true })
-	vim.api.nvim_set_keymap("n", "<C-x>", require("dial.map").dec_normal(), { noremap = true })
-	vim.api.nvim_set_keymap("v", "<C-a>", require("dial.map").inc_visual(), { noremap = true })
-	vim.api.nvim_set_keymap("v", "<C-x>", require("dial.map").dec_visual(), { noremap = true })
-	vim.api.nvim_set_keymap("v", "g<C-a>", require("dial.map").inc_gvisual(), { noremap = true })
-	vim.api.nvim_set_keymap("v", "g<C-x>", require("dial.map").dec_gvisual(), { noremap = true })
+	map("n", "<C-a>", require("dial.map").inc_normal())
+	map("n", "<C-x>", require("dial.map").dec_normal())
+	map("v", "<C-a>", require("dial.map").inc_visual())
+	map("v", "<C-x>", require("dial.map").dec_visual())
+	map("v", "g<C-a>", require("dial.map").inc_gvisual())
+	map("v", "g<C-x>", require("dial.map").dec_gvisual())
 end
 
 -------------------- chaoren/vim-wordmotion
