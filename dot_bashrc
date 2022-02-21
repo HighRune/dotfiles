@@ -239,5 +239,3 @@ export MANPAGER='nvim +Man!'
 
 # Disable Ctrl-S
 stty -ixon
-
-export XTERM='alacritty'
