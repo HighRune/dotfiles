@@ -177,6 +177,7 @@ eval "$(fnm env)"
 # fzf
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
+export FZF_DEFAULT_COMMAND="fd --hidden --follow --exclude '.git' --exclude 'node_modules'"
 
 # custom bindings
 # bind '"\C-n":"nvim \C-m"'
