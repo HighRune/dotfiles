@@ -134,12 +134,12 @@ local function surround()
 		highlight_duration = 500,
 		funname_pattern = "[%w_%.]+",
 		mappings = {
-			-- add = "ys",
-			delete = "ds",
+			add = "",
+			delete = "",
 			find = "",
 			find_left = "",
 			highlight = "",
-			replace = "cs",
+			replace = "",
 			update_n_lines = "",
 		},
 	})
