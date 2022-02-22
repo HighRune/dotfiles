@@ -814,6 +814,13 @@ gcloud config set compute/region <region name>
 gcloud container clusters get-credentials <cluster name>
 ```
 
+## gsutil
+
+```
+gsutil ls  # List buckets of the current project
+
+```
+
 ## VUE
 
 ### vue-cli
