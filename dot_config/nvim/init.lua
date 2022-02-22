@@ -67,7 +67,7 @@ return require("packer").startup({
 			"echasnovski/mini.nvim",
 			config = function()
 				require("setup").indentscope()
-				require("setup").surround()
+				-- require("setup").surround()
 			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
