@@ -317,9 +317,6 @@ local function fzf()
 				scrollchars = { "▎", "" },
 			},
 		},
-		fzf_opts = {
-			["--hidden"] = "",
-		},
 		keymap = {
 			builtin = {
 				["<C-e>"] = "preview-page-down",
