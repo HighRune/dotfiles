@@ -818,6 +818,7 @@ gcloud container clusters get-credentials <cluster name>
 
 ```
 gsutil ls  # List buckets of the current project
+gsutil cp -r gs://<source bucket>/2022-01-02T18:36:08_85547 gs://<destination bucket>/2022-01-02T18:36:08_85547 # Copy object to another bucket
 
 ```
 
