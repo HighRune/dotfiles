@@ -88,6 +88,12 @@ return require("packer").startup({
 		})
 		-- use("tpope/vim-commentary")
 		-- use("JoosepAlviste/nvim-ts-context-commentstring")
+		use({
+			"numToStr/Comment.nvim",
+			config = function()
+				require("Comment").setup()
+			end,
+		})
 		use("tommcdo/vim-lion")
 		use("tommcdo/vim-exchange")
 		use("p00f/nvim-ts-rainbow")
