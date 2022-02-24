@@ -12,9 +12,9 @@ local function setup()
 			enable = true,
 		},
 		-- JoosepAlviste/nvim-ts-context-commentstring
-		context_commentstring = {
-			enable = true,
-		},
+		-- context_commentstring = {
+		-- 	enable = true,
+		-- },
 		-- windwp/nvim-ts-autotag
 		autotag = {
 			enable = true,
