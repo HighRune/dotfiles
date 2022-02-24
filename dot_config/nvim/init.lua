@@ -86,8 +86,8 @@ return require("packer").startup({
 			"sbdchd/neoformat",
 			config = require("setup").neoformat(),
 		})
-		use("tpope/vim-commentary")
-		use("JoosepAlviste/nvim-ts-context-commentstring")
+		-- use("tpope/vim-commentary")
+		-- use("JoosepAlviste/nvim-ts-context-commentstring")
 		use("tommcdo/vim-lion")
 		use("tommcdo/vim-exchange")
 		use("p00f/nvim-ts-rainbow")
