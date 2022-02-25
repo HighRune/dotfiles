@@ -58,7 +58,10 @@ end
 
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-	cmd("let g:wordmotion_nomap = 1")
+	cmd([[
+	-- let g:wordmotion_nomap = 1
+	let g:wordmotion_spaces = '_-.:'
+	]])
 end
 
 -------------------- phaazon/hop.nvim
