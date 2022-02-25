@@ -59,8 +59,9 @@ end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	-- let g:wordmotion_nomap = 1
+	-- let g:wordmotion_uppercase_spaces = ',/?_-.:<>()\[\]{}&*=!+"'''
 	cmd([[
-	let g:wordmotion_uppercase_spaces = ',/?_-.:<>()\[\]{}&*=!+"'''
+	let g:wordmotion_uppercase_spaces = ',/_-.:<>()\[\]{}&*=!+"'''
 	]])
 end
 
