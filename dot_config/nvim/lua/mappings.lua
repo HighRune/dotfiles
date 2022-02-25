@@ -184,12 +184,12 @@ end
 
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-	-- map("n", "W", "<Plug>WordMotion_w")
-	-- map("n", "B", "<Plug>WordMotion_b")
-	-- map("n", "E", "<Plug>WordMotion_e")
-	-- map("n", "gE", "<Plug>WordMotion_ge")
-	-- map("o", "aW", "<Plug>WordMotion_aw")
-	-- map("o", "iW", "<Plug>WordMotion_iw")
+	map("n", "W", "<Plug>WordMotion_w")
+	map("n", "B", "<Plug>WordMotion_b")
+	map("n", "E", "<Plug>WordMotion_e")
+	map("n", "gE", "<Plug>WordMotion_ge")
+	map("o", "aW", "<Plug>WordMotion_aw")
+	map("o", "iW", "<Plug>WordMotion_iw")
 end
 
 -------------------- neovim/nvim-lspconfig
