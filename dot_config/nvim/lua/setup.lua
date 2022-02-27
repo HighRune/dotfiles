@@ -64,8 +64,11 @@ local function wordmotion()
 	-- let g:wordmotion_spaces = ['\w\@<=-\w\@=', '\.']
 	-- let g:wordmotion_uppercase_spaces = ['\w\@<=\.\w\@=']
 	-- let g:wordmotion_uppercase_spaces = ['\.']
-	-- let g:wordmotion_uppercase_spaces = ['\.\w\@<=\.\w\@=']
+	-- let g:wordmotion_uppercase_spaces = ['\w\@<=.', '[\|(\w\@=']
+	-- Move to character after the one specified
+	-- let g:wordmotion_uppercase_spaces = ['''\|,\|\.\|/\|<\|>\|[\|]\|(\w\@=']
 	cmd([[
+	let g:wordmotion_uppercase_spaces = ',/.:<>()\[\]{}&*=!+"'''
 	]])
 end
 
