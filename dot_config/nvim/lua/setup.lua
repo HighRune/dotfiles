@@ -58,18 +58,29 @@ end
 
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-	-- let g:wordmotion_uppercase_spaces = ',/?_-.:<>()\[\]{}&*=!+"'''
-	-- let g:wordmotion_uppercase_spaces = ',/_-.:<>()\[\]{}&*=!+"'''
-	-- let g:wordmotion_spaces = ['\w\@<=-\w\@=', '\.']
-	-- let g:wordmotion_uppercase_spaces = ['\w\@<=\.\w\@=']
-	-- let g:wordmotion_uppercase_spaces = ['\.']
-	-- let g:wordmotion_uppercase_spaces = ['\w\@<=.', '[\|(\w\@=']
-	-- Move to character after the one specified
-	-- let g:wordmotion_uppercase_spaces = ['''\|,\|\.\|/\|<\|>\|[\|]\|(\w\@=']
-	cmd([[
-	let g:wordmotion_nomap = 1
-	let g:wordmotion_uppercase_spaces = ',/.:<>()\[\]{}&*=!+"'''
-	]])
+	g.wordmotion_nomap = 1
+	-- Move to the character following those characters
+	g.wordmotion_uppercase_spaces = {
+		",",
+		"/",
+		".",
+		":",
+		"<",
+		">",
+		"(",
+		")",
+		"[",
+		"]",
+		"{",
+		"}",
+		"&",
+		"*",
+		"=",
+		"!",
+		"+",
+		"?",
+		"'",
+	}
 end
 
 -------------------- phaazon/hop.nvim
