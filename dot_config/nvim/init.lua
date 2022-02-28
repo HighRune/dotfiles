@@ -180,12 +180,6 @@ return require("packer").startup({
 				require("mappings").dial()
 			end,
 		})
-		use({
-			"mvllow/modes.nvim",
-			config = function()
-				require("modes").setup()
-			end,
-		})
 		use("tpope/vim-repeat")
 		use({
 			"machakann/vim-highlightedyank",
