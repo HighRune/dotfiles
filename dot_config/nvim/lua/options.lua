@@ -13,12 +13,11 @@ autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTe
 autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
 autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
 autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
+autocmd ColorScheme * hi ModesCopy guibg=#f5c359"
+autocmd ColorScheme * hi ModesDelete guibg=#c75c6a"
+autocmd ColorScheme * hi ModesInsert guibg=#78ccc5"
+autocmd ColorScheme * hi ModesVisual guibg=#9745be"
 ]])
-
-cmd("hi ModesCopy guibg=#f5c359")
-cmd("hi ModesDelete guibg=#c75c6a")
-cmd("hi ModesInsert guibg=#78ccc5")
-cmd("hi ModesVisual guibg=#9745be")
 
 cmd([[
 autocmd User SneakLeave highlight clear Sneak
