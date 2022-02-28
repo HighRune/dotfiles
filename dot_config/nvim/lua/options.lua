@@ -13,10 +13,6 @@ autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTe
 autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
 autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
 autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
-autocmd ColorScheme * hi ModesCopy guibg=#f5c359
-autocmd ColorScheme * hi ModesDelete guibg=#c75c6a
-autocmd ColorScheme * hi ModesInsert guibg=#78ccc5
-autocmd ColorScheme * hi ModesVisual guibg=#9745be
 ]])
 
 cmd([[
