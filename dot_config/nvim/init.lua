@@ -183,6 +183,7 @@ return require("packer").startup({
 		use({
 			"mvllow/modes.nvim",
 			config = function()
+				vim.opt.cursorline = true
 				require("modes").setup()
 			end,
 		})
