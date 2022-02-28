@@ -183,8 +183,11 @@ return require("packer").startup({
 		use({
 			"mvllow/modes.nvim",
 			config = function()
-				vim.opt.cursorline = true
 				require("modes").setup()
+				vim.cmd("hi ModesCopy guibg=#f5c359")
+				vim.cmd("hi ModesDelete guibg=#c75c6a")
+				vim.cmd("hi ModesInsert guibg=#78ccc5")
+				vim.cmd("hi ModesVisual guibg=#9745be")
 			end,
 		})
 		use("tpope/vim-repeat")
