@@ -6,6 +6,7 @@ local function setup()
 		map_bs = false,
 		map_cr = false,
 		check_ts = true,
+		ignored_next_char = "[%w%.]",
 		-- fast_wrap = {
 		-- 	map = "<C-h>",
 		-- 	chars = { "{", "[", "(", '"', "'" },
