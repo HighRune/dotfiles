@@ -15,6 +15,11 @@ autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTex
 autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
 ]])
 
+cmd("hi ModesCopy guibg=#f5c359")
+cmd("hi ModesDelete guibg=#c75c6a")
+cmd("hi ModesInsert guibg=#78ccc5")
+cmd("hi ModesVisual guibg=#9745be")
+
 cmd([[
 autocmd User SneakLeave highlight clear Sneak
 autocmd User SneakLeave highlight clear SneakScope
