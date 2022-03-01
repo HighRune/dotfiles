@@ -171,6 +171,7 @@ end
 -------------------- lewis6991/gitsigns.nvim
 local function gitsigns()
 	require("gitsigns").setup({
+		current_line_blame = true,
 		signs = {
 			add = {
 				hl = "GitSignsAdd",
