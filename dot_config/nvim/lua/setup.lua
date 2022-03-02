@@ -173,7 +173,6 @@ end
 local function gitsigns()
 	require("gitsigns").setup({
 		current_line_blame_opts = {
-			virt_text_pos = "overlay",
 			delay = 0,
 		},
 		on_attach = function(bufnr)
@@ -190,24 +189,16 @@ local function gitsigns()
 			map("n", "<S-left>", "&diff ? '<S-left>' : '<cmd>Gitsigns prev_hunk<CR>'", { expr = true })
 
 			-- Actions
-			map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>")
-			map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>")
-			map("n", "<leader>hS", gs.stage_buffer)
+			map({ "n", "v" }, "<leader>ga", ":Gitsigns stage_hunk<CR>") -- git add
+			map({ "n", "v" }, "<leader>gc", ":Gitsigns reset_hunk<CR>") -- git checkout --
+			map("n", "<leader>gA", gs.stage_buffer)
 			map("n", "<leader>hu", gs.undo_stage_hunk)
-			map("n", "<leader>hR", gs.reset_buffer)
-			map("n", "<leader>hp", gs.preview_hunk)
-			map("n", "<leader>hb", function()
-				gs.blame_line({ full = true })
-			end)
+			map("n", "<leader>gC", gs.reset_buffer)
 			map("n", "<leader>tb", gs.toggle_current_line_blame)
-			map("n", "<leader>hd", gs.diffthis)
-			map("n", "<leader>hD", function()
-				gs.diffthis("~")
-			end)
 			map("n", "<leader>td", gs.toggle_deleted)
 
 			-- Text object
-			map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
+			map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
 		end,
 		signs = {
 			add = {
