@@ -81,6 +81,7 @@ local function wordmotion()
 		"+",
 		"?",
 		"'",
+		'"',
 	}
 end
 
