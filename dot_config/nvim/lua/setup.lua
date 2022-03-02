@@ -186,8 +186,8 @@ local function gitsigns()
 			end
 
 			-- Navigation
-			map("n", "<S-left>", "&diff ? '<S-left>' : '<cmd>Gitsigns next_hunk<CR>'", { expr = true })
-			map("n", "<S-right>", "&diff ? '<S-right>' : '<cmd>Gitsigns prev_hunk<CR>'", { expr = true })
+			map("n", "<S-right>", "&diff ? '<S-right>' : '<cmd>Gitsigns next_hunk<CR>'", { expr = true })
+			map("n", "<S-left>", "&diff ? '<S-left>' : '<cmd>Gitsigns prev_hunk<CR>'", { expr = true })
 
 			-- Actions
 			map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>")
