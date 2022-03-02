@@ -191,14 +191,14 @@ local function gitsigns()
 			-- Actions
 			map({ "n", "v" }, "<leader>ga", ":Gitsigns stage_hunk<CR>") -- git add
 			map({ "n", "v" }, "<leader>gc", ":Gitsigns reset_hunk<CR>") -- git checkout --
+			map({ "n", "v" }, "<leader>gr", gs.undo_stage_hunk) -- git reset
 			map("n", "<leader>gA", gs.stage_buffer)
-			map("n", "<leader>hu", gs.undo_stage_hunk)
 			map("n", "<leader>gC", gs.reset_buffer)
-			map("n", "<leader>tb", gs.toggle_current_line_blame)
-			map("n", "<leader>td", gs.toggle_deleted)
+			map("n", "<leader>gb", gs.toggle_current_line_blame)
+			map("n", "<leader>gd", gs.toggle_deleted)
 
 			-- Text object
-			map({ "o", "x" }, "ig", ":<C-U>Gitsigns select_hunk<CR>")
+			map({ "o", "x" }, "g", ":<C-U>Gitsigns select_hunk<CR>")
 		end,
 		signs = {
 			add = {
