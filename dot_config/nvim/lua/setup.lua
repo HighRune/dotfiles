@@ -189,11 +189,11 @@ local function gitsigns()
 			map("n", "<S-left>", "&diff ? '<S-left>' : '<cmd>Gitsigns prev_hunk<CR>'", { expr = true })
 
 			-- Actions
-			map({ "n", "v" }, "<leader>ga", ":Gitsigns stage_hunk<CR>") -- git add
-			map({ "n", "v" }, "<leader>gc", ":Gitsigns reset_hunk<CR>") -- git checkout --
-			map({ "n", "v" }, "<leader>gr", gs.undo_stage_hunk) -- git reset
-			map("n", "<leader>gA", gs.stage_buffer)
-			map("n", "<leader>gC", gs.reset_buffer)
+			map({ "n", "v" }, "<leader>gA", ":Gitsigns stage_hunk<CR>") -- git add
+			map({ "n", "v" }, "<leader>gC", ":Gitsigns reset_hunk<CR>") -- git checkout --
+			map({ "n", "v" }, "<leader>gR", gs.undo_stage_hunk) -- git reset
+			map("n", "<leader>ga", gs.stage_buffer)
+			map("n", "<leader>gc", gs.reset_buffer)
 			map("n", "<leader>gb", gs.toggle_current_line_blame)
 			map("n", "<leader>gd", gs.toggle_deleted)
 
