@@ -175,32 +175,7 @@ local function gitsigns()
 		current_line_blame_opts = {
 			delay = 0,
 		},
-		on_attach = function(bufnr)
-			local gs = package.loaded.gitsigns
-
-			local function map(mode, l, r, opts)
-				opts = opts or {}
-				opts.buffer = bufnr
-				vim.keymap.set(mode, l, r, opts)
-			end
-
-			-- Navigation
-			map("n", "<S-right>", "&diff ? '<S-right>' : '<cmd>Gitsigns next_hunk<CR>'", { expr = true })
-			map("n", "<S-left>", "&diff ? '<S-left>' : '<cmd>Gitsigns prev_hunk<CR>'", { expr = true })
-
-			-- Actions
-			map({ "n", "v" }, "<leader>ha", gs.stage_hunk)
-			map({ "n", "v" }, "<leader>hr", gs.undo_stage_hunk)
-			map({ "n", "v" }, "<leader>hc", gs.reset_hunk)
-			map("n", "<leader>ga", gs.stage_buffer)
-			map("n", "<leader>gr", gs.reset_buffer_index)
-			map("n", "<leader>gc", gs.reset_buffer)
-			map("n", "<leader>gb", gs.toggle_current_line_blame)
-			map("n", "<leader>gd", gs.toggle_deleted)
-
-			-- Text object
-			map({ "o", "x" }, "g", ":<C-U>Gitsigns select_hunk<CR>")
-		end,
+		on_attach = require("mappings").gitsigns,
 		signs = {
 			add = {
 				hl = "GitSignsAdd",
