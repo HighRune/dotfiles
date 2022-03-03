@@ -189,9 +189,9 @@ local function gitsigns()
 			map("n", "<S-left>", "&diff ? '<S-left>' : '<cmd>Gitsigns prev_hunk<CR>'", { expr = true })
 
 			-- Actions
-			map({ "n", "v" }, "<leader>gha", gs.stage_hunk)
-			map({ "n", "v" }, "<leader>ghr", gs.undo_stage_hunk)
-			map({ "n", "v" }, "<leader>ghc", gs.reset_hunk)
+			map({ "n", "v" }, "<leader>ha", gs.stage_hunk)
+			map({ "n", "v" }, "<leader>hr", gs.undo_stage_hunk)
+			map({ "n", "v" }, "<leader>hc", gs.reset_hunk)
 			map("n", "<leader>ga", gs.stage_buffer)
 			map("n", "<leader>gr", gs.reset_buffer_index)
 			map("n", "<leader>gc", gs.reset_buffer)
