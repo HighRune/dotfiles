@@ -41,6 +41,16 @@ local function setup()
 					["ic"] = "@call.inner",
 				},
 			},
+			move = {
+				enable = true,
+				set_jumps = true,
+				goto_next_start = {
+					["]]"] = "@function.outer",
+				},
+				goto_previous_start = {
+					["[["] = "@function.outer",
+				},
+			},
 			-- swap = {
 			-- 	enable = true,
 			-- 	swap_next = {
