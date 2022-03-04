@@ -63,8 +63,10 @@ git stash -k -u               # --include-untracked stash not staged changes and
 
 ```bash
 git checkout <branch>                      # Switch to the branch
-git checkout -- <file>                     # Delete file changes
+git checkout -- <path-to-file>             # Delete file changes
 git checkout -- .                          # Delete changes of current directory
+git checkout --theirs <path-to-file>       # Accept incoming changes and ignore current changes
+git checkout --ours <path-to-file>         # Ignore incoming changes and accept current changes
 git checkout -b <branch>                   # Create branch and switch to it
 git branch                                 # List locals branches
 git branch -r                              # List remote branches
