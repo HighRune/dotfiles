@@ -59,10 +59,6 @@ return require("packer").startup({
 				require("numb").setup()
 			end,
 		})
-		-- use({
-		-- 	"lukas-reineke/indent-blankline.nvim",
-		-- 	-- config = require("setup").indentBlankline(),
-		-- })
 		use({
 			"echasnovski/mini.nvim",
 			config = function()
@@ -71,39 +67,116 @@ return require("packer").startup({
 			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
+		-- use("windwp/nvim-ts-autotag")
+		-- use("itchyny/vim-cursorword")
+		-- use({
+		-- 	"akinsho/bufferline.nvim",
+		-- 	config = function()
+		-- 		-- require("setup").bufferline()
+		-- 		-- require("mappings").bufferline()
+		-- 	end,
+		-- })
+		-- use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
+		-- use({
+		-- 	"sbdchd/neoformat",
+		-- 	-- config = require("setup").neoformat(),
+		-- })
+		-- use({
+		-- 	"numToStr/Comment.nvim",
+		-- 	config = function()
+		-- 		-- require("Comment").setup()
+		-- 	end,
+		-- })
+		-- use("tommcdo/vim-lion")
+		-- use("tommcdo/vim-exchange")
+		-- use("p00f/nvim-ts-rainbow")
+		-- use({
+		-- 	"AndrewRadev/splitjoin.vim",
+		-- 	config = function()
+		-- 		-- require("mappings").splitjoin()
+		-- 		-- require("setup").splitjoin()
+		-- 	end,
+		-- })
+		-- use({
+		-- 	"wellle/targets.vim",
+		-- 	config = function()
+		-- 		-- require("setup").targets()
+		-- 		-- require("mappings").targets()
+		-- 	end,
+		-- })
+		-- use({
+		-- 	"windwp/nvim-autopairs",
+		-- 	-- config = require("config.nvim-autopairs").setup(),
+		-- })
+		-- use({
+		-- 	"chaoren/vim-wordmotion",
+		-- 	config = function()
+		-- 		-- require("setup").wordmotion()
+		-- 		-- require("mappings").wordmotion()
+		-- 	end,
+		-- })
+		-- use({
+		-- 	"kana/vim-arpeggio",
+		-- 	-- require("mappings").arpeggio(),
+		-- })
+		-- use({
+		-- 	"ahmedkhalf/project.nvim",
+		-- 	-- config = function()
+		-- 	-- require("project_nvim").setup()
+		-- 	-- end,
+		-- })
+		-- use({
+		-- 	"nvim-lualine/lualine.nvim",
+		-- 	-- requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		-- 	-- config = "require('config.lualine').setup()",
+		-- })
+		-- use({
+		-- 	"gbprod/cutlass.nvim",
+		-- 	config = function()
+		-- 		-- require("setup").cutlass()
+		-- 	end,
+		-- })
+		-- use({
+		-- 	"justinmk/vim-sneak",
+		-- 	config = function()
+		-- 		-- require("setup").sneak()
+		-- 		-- require("mappings").sneak()
+		-- 	end,
+		-- })
+		-- use({
+		-- 	"ibhagwan/fzf-lua",
+		-- 	config = function()
+		-- 		-- require("setup").fzf()
+		-- 		-- require("mappings").fzf()
+		-- 	end,
+		-- })
+		-- use({
+		-- 	"monaqa/dial.nvim",
+		-- 	config = function()
+		-- 		-- require("setup").dial()
+		-- 		-- require("mappings").dial()
+		-- 	end,
+		-- })
+		-- use("tpope/vim-repeat")
+		-- use({
+		-- 	"machakann/vim-highlightedyank",
+		-- 	config = function()
+		-- 		-- require("setup").highlightedyank()
+		-- 	end,
+		-- })
+		-- use("svban/YankAssassin.vim")
+		-- **************************************
 		-- use("nvim-treesitter/playground")
-		use("windwp/nvim-ts-autotag")
-		use("itchyny/vim-cursorword")
-		use({
-			"akinsho/bufferline.nvim",
-			config = function()
-				-- require("setup").bufferline()
-				-- require("mappings").bufferline()
-			end,
-		})
-		use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
-		use({
-			"sbdchd/neoformat",
-			-- config = require("setup").neoformat(),
-		})
+		-- use({
+		-- 	"jeetsukumaran/vim-indentwise",
+		-- 	config = function()
+		-- 		require("mappings").indentwise()
+		-- 	end,
+		-- })
 		-- use("tpope/vim-commentary")
 		-- use("JoosepAlviste/nvim-ts-context-commentstring")
-		use({
-			"numToStr/Comment.nvim",
-			config = function()
-				-- require("Comment").setup()
-			end,
-		})
-		use("tommcdo/vim-lion")
-		use("tommcdo/vim-exchange")
-		use("p00f/nvim-ts-rainbow")
-		use({
-			"AndrewRadev/splitjoin.vim",
-			config = function()
-				-- require("mappings").splitjoin()
-				-- require("setup").splitjoin()
-			end,
-		})
+		-- use("kana/vim-textobj-user")
+		-- use("PeterRincker/vim-argumentative")
 		-- use({
 		-- 	"inside/vim-search-pulse",
 		-- 	config = function()
@@ -112,82 +185,10 @@ return require("packer").startup({
 		-- 	end,
 		-- })
 		-- use("michaeljsmith/vim-indent-object")
-		use({
-			"wellle/targets.vim",
-			config = function()
-				-- require("setup").targets()
-				-- require("mappings").targets()
-			end,
-		})
-		-- use("kana/vim-textobj-user")
-		-- use("PeterRincker/vim-argumentative")
-		use({
-			"windwp/nvim-autopairs",
-			-- config = require("config.nvim-autopairs").setup(),
-		})
-		use({
-			"chaoren/vim-wordmotion",
-			config = function()
-				-- require("setup").wordmotion()
-				-- require("mappings").wordmotion()
-			end,
-		})
-		use({
-			"kana/vim-arpeggio",
-			-- require("mappings").arpeggio(),
-		})
-		use({
-			"ahmedkhalf/project.nvim",
-			-- config = function()
-			-- require("project_nvim").setup()
-			-- end,
-		})
-		use({
-			"nvim-lualine/lualine.nvim",
-			-- requires = { "kyazdani42/nvim-web-devicons", opt = true },
-			-- config = "require('config.lualine').setup()",
-		})
-		use({
-			"gbprod/cutlass.nvim",
-			config = function()
-				-- require("setup").cutlass()
-			end,
-		})
-		use({
-			"justinmk/vim-sneak",
-			config = function()
-				-- require("setup").sneak()
-				-- require("mappings").sneak()
-			end,
-		})
 		-- use({
-		-- 	"jeetsukumaran/vim-indentwise",
-		-- 	config = function()
-		-- 		require("mappings").indentwise()
-		-- 	end,
+		-- 	"lukas-reineke/indent-blankline.nvim",
+		-- 	-- config = require("setup").indentBlankline(),
 		-- })
-		use({
-			"ibhagwan/fzf-lua",
-			config = function()
-				-- require("setup").fzf()
-				-- require("mappings").fzf()
-			end,
-		})
-		use({
-			"monaqa/dial.nvim",
-			config = function()
-				-- require("setup").dial()
-				-- require("mappings").dial()
-			end,
-		})
-		use("tpope/vim-repeat")
-		use({
-			"machakann/vim-highlightedyank",
-			config = function()
-				-- require("setup").highlightedyank()
-			end,
-		})
-		use("svban/YankAssassin.vim")
 		-- use("Houl/repmo-vim")
 		-- use({
 		-- 	"andymass/vim-matchup",
