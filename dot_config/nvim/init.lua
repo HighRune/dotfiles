@@ -166,13 +166,13 @@ return require("packer").startup({
 		-- 		require("mappings").indentwise()
 		-- 	end,
 		-- })
-		use({
-			"ibhagwan/fzf-lua",
-			config = function()
-				-- require("setup").fzf()
-				-- require("mappings").fzf()
-			end,
-		})
+		-- use({
+		-- 	"ibhagwan/fzf-lua",
+		-- 	config = function()
+		-- 		-- require("setup").fzf()
+		-- 		-- require("mappings").fzf()
+		-- 	end,
+		-- })
 		use({
 			"monaqa/dial.nvim",
 			config = function()
