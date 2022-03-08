@@ -93,75 +93,75 @@ return require("packer").startup({
 		use({
 			"AndrewRadev/splitjoin.vim",
 			config = function()
-				-- require("mappings").splitjoin()
-				-- require("setup").splitjoin()
+				require("mappings").splitjoin()
+				require("setup").splitjoin()
 			end,
 		})
 		use({
 			"wellle/targets.vim",
 			config = function()
-				-- require("setup").targets()
-				-- require("mappings").targets()
+				require("setup").targets()
+				require("mappings").targets()
 			end,
 		})
 		use({
 			"windwp/nvim-autopairs",
-			-- config = require("config.nvim-autopairs").setup(),
+			config = require("config.nvim-autopairs").setup(),
 		})
 		use({
 			"chaoren/vim-wordmotion",
 			config = function()
-				-- require("setup").wordmotion()
-				-- require("mappings").wordmotion()
+				require("setup").wordmotion()
+				require("mappings").wordmotion()
 			end,
 		})
 		use({
 			"kana/vim-arpeggio",
-			-- require("mappings").arpeggio(),
+			require("mappings").arpeggio(),
 		})
 		use({
 			"ahmedkhalf/project.nvim",
-			-- config = function()
-			-- require("project_nvim").setup()
-			-- end,
+			config = function()
+			require("project_nvim").setup()
+			end,
 		})
 		use({
 			"nvim-lualine/lualine.nvim",
-			-- requires = { "kyazdani42/nvim-web-devicons", opt = true },
-			-- config = "require('config.lualine').setup()",
+			requires = { "kyazdani42/nvim-web-devicons", opt = true },
+			config = "require('config.lualine').setup()",
 		})
 		use({
 			"gbprod/cutlass.nvim",
 			config = function()
-				-- require("setup").cutlass()
+				require("setup").cutlass()
 			end,
 		})
 		use({
 			"justinmk/vim-sneak",
 			config = function()
-				-- require("setup").sneak()
-				-- require("mappings").sneak()
+				require("setup").sneak()
+				require("mappings").sneak()
 			end,
 		})
 		use({
 			"ibhagwan/fzf-lua",
 			config = function()
-				-- require("setup").fzf()
-				-- require("mappings").fzf()
+				require("setup").fzf()
+				require("mappings").fzf()
 			end,
 		})
 		use({
 			"monaqa/dial.nvim",
 			config = function()
-				-- require("setup").dial()
-				-- require("mappings").dial()
+				require("setup").dial()
+				require("mappings").dial()
 			end,
 		})
 		use("tpope/vim-repeat")
 		use({
 			"machakann/vim-highlightedyank",
 			config = function()
-				-- require("setup").highlightedyank()
+				require("setup").highlightedyank()
 			end,
 		})
 		use("svban/YankAssassin.vim")
