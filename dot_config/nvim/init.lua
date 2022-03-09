@@ -122,7 +122,7 @@ return require("packer").startup({
 		use({
 			"ahmedkhalf/project.nvim",
 			config = function()
-			require("project_nvim").setup()
+				require("project_nvim").setup()
 			end,
 		})
 		use({
