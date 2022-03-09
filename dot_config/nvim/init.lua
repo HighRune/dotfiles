@@ -145,6 +145,7 @@ return require("packer").startup({
 		})
 		use({
 			"ibhagwan/fzf-lua",
+			disable = true,
 			config = function()
 				require("setup").fzf()
 				require("mappings").fzf()
