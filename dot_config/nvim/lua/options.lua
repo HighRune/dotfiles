@@ -13,7 +13,6 @@ autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTe
 autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
 autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
 autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
-autocmd TermOpen * startinsert
 autocmd User SneakLeave highlight clear Sneak
 autocmd User SneakLeave highlight clear SneakScope
 ]])
