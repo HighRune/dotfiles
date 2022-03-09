@@ -72,19 +72,19 @@ return require("packer").startup({
 		use({
 			"akinsho/bufferline.nvim",
 			config = function()
-				-- require("setup").bufferline()
-				-- require("mappings").bufferline()
+				require("setup").bufferline()
+				require("mappings").bufferline()
 			end,
 		})
 		use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
 		use({
 			"sbdchd/neoformat",
-			-- config = require("setup").neoformat(),
+			config = require("setup").neoformat(),
 		})
 		use({
 			"numToStr/Comment.nvim",
 			config = function()
-				-- require("Comment").setup()
+				require("Comment").setup()
 			end,
 		})
 		use("tommcdo/vim-lion")
