@@ -7,12 +7,12 @@ return require("packer").startup({
 	function(use)
 		use({
 			"lewis6991/impatient.nvim",
-			 disable = false,
+			disable = false,
 		})
 		use({
 			"wbthomason/packer.nvim",
 			config = require("setup").packer(),
-			 disable = false,
+			disable = false,
 		})
 		use({
 			"nvim-lua/plenary.nvim",
@@ -153,11 +153,11 @@ return require("packer").startup({
 			end,
 			disable = true,
 		})
-		use({
-			"windwp/nvim-autopairs",
-			config = require("config.nvim-autopairs").setup(),
-			disable = true,
-		})
+		-- use({
+		-- 	"windwp/nvim-autopairs",
+		-- 	config = require("config.nvim-autopairs").setup(),
+		-- 	disable = true,
+		-- })
 		use({
 			"chaoren/vim-wordmotion",
 			config = function()
