@@ -27,12 +27,12 @@ return require("packer").startup({
 		-- 	config = require("setup").tokyonight(),
 		-- 	disable = false,
 		-- })
-		use({
-			"nvim-treesitter/nvim-treesitter",
-			config = require("config.treesitter").setup(),
-			run = ":TSUpdate",
-			disable = true,
-		})
+		-- use({
+		-- 	"nvim-treesitter/nvim-treesitter",
+		-- 	config = require("config.treesitter").setup(),
+		-- 	run = ":TSUpdate",
+		-- 	disable = true,
+		-- })
 		use({
 			"neovim/nvim-lspconfig",
 			disable = false,
