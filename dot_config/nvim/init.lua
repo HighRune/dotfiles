@@ -25,7 +25,7 @@ return require("packer").startup({
 		use({
 			"folke/tokyonight.nvim",
 			config = require("setup").tokyonight(),
-			disable = false,
+			disable = true,
 		})
 		-- use({
 		-- 	"nvim-treesitter/nvim-treesitter",
