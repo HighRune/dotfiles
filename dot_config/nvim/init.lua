@@ -105,12 +105,12 @@ return require("packer").startup({
 				require("setup").bufferline()
 				require("mappings").bufferline()
 			end,
-			cond = false,
+			cond = true,
 		})
 		use({
 			"ms-jpq/coq.artifacts",
 			branch = "artifacts",
-			cond = false,
+			cond = true,
 		})
 		use({
 			"sbdchd/neoformat",
@@ -122,7 +122,7 @@ return require("packer").startup({
 			config = function()
 				require("Comment").setup()
 			end,
-			cond = false,
+			cond = true,
 		})
 		use({
 			"tommcdo/vim-lion",
@@ -134,7 +134,7 @@ return require("packer").startup({
 		})
 		use({
 			"p00f/nvim-ts-rainbow",
-			cond = false,
+			cond = true,
 		})
 		use({
 			"AndrewRadev/splitjoin.vim",
