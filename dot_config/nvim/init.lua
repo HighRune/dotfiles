@@ -37,11 +37,11 @@ return require("packer").startup({
 			"neovim/nvim-lspconfig",
 			disable = false,
 		})
-		use({
-			"williamboman/nvim-lsp-installer",
-			config = "require('config.lsp').setup()",
-			disable = false,
-		})
+		-- use({
+		-- 	"williamboman/nvim-lsp-installer",
+		-- 	config = "require('config.lsp').setup()",
+		-- 	disable = false,
+		-- })
 		-- use({
 		-- 	"ms-jpq/coq_nvim",
 		-- 	branch = "coq",
