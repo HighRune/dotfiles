@@ -35,12 +35,12 @@ return require("packer").startup({
 		})
 		use({
 			"neovim/nvim-lspconfig",
-			disable = true,
+			disable = false,
 		})
 		use({
 			"williamboman/nvim-lsp-installer",
 			config = "require('config.lsp').setup()",
-			disable = true,
+			disable = false,
 		})
 		use({
 			"ms-jpq/coq_nvim",
