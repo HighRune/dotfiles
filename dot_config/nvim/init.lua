@@ -7,20 +7,20 @@ return require("packer").startup({
 	function(use)
 		use({
 			"lewis6991/impatient.nvim",
-			cond = false,
+			cond = true,
 		})
 		use({
 			"wbthomason/packer.nvim",
 			config = require("setup").packer(),
-			cond = false,
+			cond = true,
 		})
 		use({
 			"nvim-lua/plenary.nvim",
-			cond = false,
+			cond = true,
 		})
 		use({
 			"kyazdani42/nvim-web-devicons",
-			cond = false,
+			cond = true,
 		})
 		use({
 			"folke/tokyonight.nvim",
@@ -35,12 +35,12 @@ return require("packer").startup({
 		})
 		use({
 			"neovim/nvim-lspconfig",
-			cond = false,
+			cond = true,
 		})
 		use({
 			"williamboman/nvim-lsp-installer",
 			-- config = "require('config.lsp').setup()",
-			disable = false,
+			disable = true,
 		})
 		-- use({
 		-- 	"ms-jpq/coq_nvim",
