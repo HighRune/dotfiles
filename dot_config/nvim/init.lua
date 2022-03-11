@@ -116,7 +116,7 @@ return require("packer").startup({
 		use({
 			"sbdchd/neoformat",
 			config = require("setup").neoformat(),
-			disable = true,
+			disable = false,
 		})
 		use({
 			"numToStr/Comment.nvim",
