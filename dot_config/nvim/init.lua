@@ -40,7 +40,7 @@ return require("packer").startup({
 		use({
 			"williamboman/nvim-lsp-installer",
 			-- config = "require('config.lsp').setup()",
-			disable = true,
+			cond = true,
 		})
 		-- use({
 		-- 	"ms-jpq/coq_nvim",
