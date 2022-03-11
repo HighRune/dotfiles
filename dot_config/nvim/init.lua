@@ -57,28 +57,28 @@ return require("packer").startup({
 				require("setup").fm()
 				require("mappings").fm()
 			end,
-			cond = false,
+			cond = true,
 		})
 		use({
 			"lewis6991/gitsigns.nvim",
 			config = function()
 				require("setup").gitsigns()
 			end,
-			cond = false,
+			cond = true,
 		})
 		use({
 			"norcalli/nvim-colorizer.lua",
 			config = function()
 				require("colorizer").setup()
 			end,
-			cond = false,
+			cond = true,
 		})
 		use({
 			"nacro90/numb.nvim",
 			config = function()
 				require("numb").setup()
 			end,
-			cond = false,
+			cond = true,
 		})
 		use({
 			"echasnovski/mini.nvim",
