@@ -31,16 +31,16 @@ return require("packer").startup({
 			"nvim-treesitter/nvim-treesitter",
 			config = require("config.treesitter").setup(),
 			run = ":TSUpdate",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"neovim/nvim-lspconfig",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"williamboman/nvim-lsp-installer",
 			config = "require('config.lsp').setup()",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"ms-jpq/coq_nvim",
@@ -49,7 +49,7 @@ return require("packer").startup({
 				require("config.coq").setup()
 				require("mappings").coq()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"is0n/fm-nvim",
@@ -57,48 +57,48 @@ return require("packer").startup({
 				require("setup").fm()
 				require("mappings").fm()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"lewis6991/gitsigns.nvim",
 			config = function()
 				require("setup").gitsigns()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"norcalli/nvim-colorizer.lua",
 			config = function()
 				require("colorizer").setup()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"nacro90/numb.nvim",
 			config = function()
 				require("numb").setup()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"echasnovski/mini.nvim",
 			config = function()
 				require("setup").indentscope()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter-textobjects",
-			disable = false,
+			disable = true,
 		})
 		-- ****************
 		use({
 			"windwp/nvim-ts-autotag",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"itchyny/vim-cursorword",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"akinsho/bufferline.nvim",
@@ -106,36 +106,36 @@ return require("packer").startup({
 				require("setup").bufferline()
 				require("mappings").bufferline()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"ms-jpq/coq.artifacts",
 			branch = "artifacts",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"sbdchd/neoformat",
 			config = require("setup").neoformat(),
-			disable = false,
+			disable = true,
 		})
 		use({
 			"numToStr/Comment.nvim",
 			config = function()
 				require("Comment").setup()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"tommcdo/vim-lion",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"tommcdo/vim-exchange",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"p00f/nvim-ts-rainbow",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"AndrewRadev/splitjoin.vim",
@@ -143,7 +143,7 @@ return require("packer").startup({
 				require("mappings").splitjoin()
 				require("setup").splitjoin()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"wellle/targets.vim",
@@ -151,12 +151,12 @@ return require("packer").startup({
 				require("setup").targets()
 				require("mappings").targets()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"windwp/nvim-autopairs",
 			config = require("config.nvim-autopairs").setup(),
-			disable = false,
+			disable = true,
 		})
 		use({
 			"chaoren/vim-wordmotion",
@@ -164,32 +164,32 @@ return require("packer").startup({
 				require("setup").wordmotion()
 				require("mappings").wordmotion()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"kana/vim-arpeggio",
 			require("mappings").arpeggio(),
-			disable = false,
+			disable = true,
 		})
 		use({
 			"ahmedkhalf/project.nvim",
 			config = function()
 				require("project_nvim").setup()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"nvim-lualine/lualine.nvim",
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
 			config = "require('config.lualine').setup()",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"gbprod/cutlass.nvim",
 			config = function()
 				require("setup").cutlass()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"justinmk/vim-sneak",
@@ -197,7 +197,7 @@ return require("packer").startup({
 				require("setup").sneak()
 				require("mappings").sneak()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"ibhagwan/fzf-lua",
@@ -205,7 +205,7 @@ return require("packer").startup({
 				require("setup").fzf()
 				require("mappings").fzf()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"monaqa/dial.nvim",
@@ -213,22 +213,22 @@ return require("packer").startup({
 				require("setup").dial()
 				require("mappings").dial()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"tpope/vim-repeat",
-			disable = false,
+			disable = true,
 		})
 		use({
 			"machakann/vim-highlightedyank",
 			config = function()
 				require("setup").highlightedyank()
 			end,
-			disable = false,
+			disable = true,
 		})
 		use({
 			"svban/YankAssassin.vim",
-			disable = false,
+			disable = true,
 		})
 		-- **************************************
 		-- use("nvim-treesitter/playground")
