@@ -85,20 +85,19 @@ return require("packer").startup({
 			config = function()
 				require("setup").indentscope()
 			end,
-			cond = false,
+			cond = true,
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter-textobjects",
-			cond = false,
+			cond = true,
 		})
-		-- ****************
 		use({
 			"windwp/nvim-ts-autotag",
-			cond = false,
+			cond = true,
 		})
 		use({
 			"itchyny/vim-cursorword",
-			cond = false,
+			cond = true,
 		})
 		use({
 			"akinsho/bufferline.nvim",
