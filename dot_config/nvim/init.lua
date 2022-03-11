@@ -29,7 +29,7 @@ return require("packer").startup({
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
-			config = require("config.treesitter").setup(),
+			-- config = require("config.treesitter").setup(),
 			run = ":TSUpdate",
 			cond = true,
 		})
