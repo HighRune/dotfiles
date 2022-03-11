@@ -166,11 +166,11 @@ return require("packer").startup({
 			end,
 			disable = true,
 		})
-		use({
-			"kana/vim-arpeggio",
-			require("mappings").arpeggio(),
-			disable = true,
-		})
+		-- use({
+		-- 	"kana/vim-arpeggio",
+		-- 	require("mappings").arpeggio(),
+		-- 	disable = true,
+		-- })
 		use({
 			"ahmedkhalf/project.nvim",
 			config = function()
