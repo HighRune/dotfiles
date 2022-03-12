@@ -3,7 +3,7 @@ local function mappings()
 	return require("mappings")
 end
 local function setup()
-	return require("mappings")
+	return require("setup")
 end
 
 require("options")
