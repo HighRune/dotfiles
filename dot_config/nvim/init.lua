@@ -35,15 +35,15 @@ return require("packer").startup({
 			config = "require('config.lsp').setup()",
 			cond = true,
 		})
-		-- use({
-		-- 	"ms-jpq/coq_nvim",
-		-- 	branch = "coq",
-		-- 	-- config = function()
-		-- 	-- 	require("config.coq").setup()
-		-- 	-- 	require("mappings").coq()
-		-- 	-- end,
-		-- 	cond = true,
-		-- })
+		use({
+			"ms-jpq/coq_nvim",
+			branch = "coq",
+			-- config = function()
+			-- 	require("config.coq").setup()
+			-- 	require("mappings").coq()
+			-- end,
+			cond = true,
+		})
 		-- use({
 		-- 	"is0n/fm-nvim",
 		-- 	config = function()
