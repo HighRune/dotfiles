@@ -41,7 +41,7 @@ return require("packer").startup({
 				require("config.coq").setup()
 				require("mappings").coq()
 			end,
-			requires = "ms-jpq/coq.artifacts",
+			-- requires = "ms-jpq/coq.artifacts",
 		})
 		-- use({
 		-- 	"ms-jpq/coq.artifacts",
