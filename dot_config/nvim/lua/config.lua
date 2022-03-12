@@ -1,3 +1,6 @@
+local g = vim.g
+local cmd = vim.cmd
+
 -------------------- wbthomason/packer.nvim
 local function packer()
 	cmd([[
@@ -7,3 +10,7 @@ local function packer()
   augroup end
 ]])
 end
+
+return {
+	packer = packer,
+}
