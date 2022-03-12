@@ -97,11 +97,10 @@ return require("packer").startup({
 		-- 	end,
 		-- 	cond = true,
 		-- })
-		-- use({
-		-- 	"ms-jpq/coq.artifacts",
-		-- 	branch = "artifacts",
-		-- 	cond = true,
-		-- })
+		use({
+			"ms-jpq/coq.artifacts",
+			branch = "artifacts",
+		})
 		-- use({
 		-- 	"sbdchd/neoformat",
 		-- 	config = require("setup").neoformat(),
