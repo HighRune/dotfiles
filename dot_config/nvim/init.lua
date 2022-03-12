@@ -1,10 +1,4 @@
 local fn = vim.fn
--- local function mappings()
--- 	return require("mappings")
--- end
--- local function setup()
--- 	return require("setup")
--- end
 
 require("options")
 require("mappings").vanilla()
@@ -16,7 +10,7 @@ return require("packer").startup({
 		})
 		use({
 			"wbthomason/packer.nvim",
-			config = require("setup").packer(),
+			config = require("config").packer(),
 		})
 		use({
 			"nvim-lua/plenary.nvim",
