@@ -22,11 +22,11 @@ return require("packer").startup({
 			"kyazdani42/nvim-web-devicons",
 			cond = true,
 		})
-		-- use({
-		-- 	"folke/tokyonight.nvim",
-		-- 	config = require("setup").tokyonight(),
-		-- 	cond = true,
-		-- })
+		use({
+			"folke/tokyonight.nvim",
+			config = require("setup").tokyonight,
+			cond = true,
+		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
 			-- config = require("config.treesitter").setup(),
