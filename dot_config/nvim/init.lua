@@ -52,10 +52,10 @@ return require("packer").startup({
 		use({
 			"is0n/fm-nvim",
 			config = function()
-				-- setup().fm()
-				-- mappings().fm()
-				require("setup").fm()
-				require("mappings").fm()
+				setup().fm()
+				mappings().fm()
+				-- require("setup").fm()
+				-- require("mappings").fm()
 			end,
 		})
 		use({
