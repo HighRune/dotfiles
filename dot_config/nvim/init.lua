@@ -33,16 +33,14 @@ return require("packer").startup({
 		use({
 			"williamboman/nvim-lsp-installer",
 			config = "require('config.lsp').setup()",
-			cond = true,
 		})
 		use({
 			"ms-jpq/coq_nvim",
 			branch = "coq",
-			-- config = function()
-			-- 	require("config.coq").setup()
-			-- 	require("mappings").coq()
-			-- end,
-			cond = true,
+			config = function()
+				require("config.coq").setup()
+				require("mappings").coq()
+			end,
 		})
 		-- use({
 		-- 	"is0n/fm-nvim",
