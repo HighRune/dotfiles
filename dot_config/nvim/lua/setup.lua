@@ -1,15 +1,15 @@
 local g = vim.g
 local cmd = vim.cmd
 
--------------------- wbthomason/packer.nvim
-local function packer()
-	cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
-  augroup end
-]])
-end
+-- -------------------- wbthomason/packer.nvim
+-- local function packer()
+-- 	cmd([[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+--   augroup end
+-- ]])
+-- end
 
 -------------------- monaqa/dial.nvim
 local function dial()
@@ -364,7 +364,7 @@ local function fzf()
 end
 
 return {
-	packer = packer,
+	-- packer = packer,
 	pulse = pulse,
 	surround = surround,
 	wordmotion = wordmotion,
