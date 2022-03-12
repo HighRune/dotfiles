@@ -1,4 +1,7 @@
 local fn = vim.fn
+local function mappings()
+	return require("mappings")
+end
 
 require("options")
 require("mappings").vanilla()
@@ -47,7 +50,8 @@ return require("packer").startup({
 			"is0n/fm-nvim",
 			config = function()
 				require("setup").fm()
-				require("mappings").fm()
+				-- require("mappings").fm()
+				mappings().fm()
 			end,
 		})
 		use({
