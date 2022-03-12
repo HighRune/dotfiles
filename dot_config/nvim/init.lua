@@ -1,10 +1,10 @@
 local fn = vim.fn
-local function mappings()
-	return require("mappings")
-end
-local function setup()
-	return require("setup")
-end
+-- local function mappings()
+-- 	return require("mappings")
+-- end
+-- local function setup()
+-- 	return require("setup")
+-- end
 
 require("options")
 require("mappings").vanilla()
@@ -52,10 +52,10 @@ return require("packer").startup({
 		use({
 			"is0n/fm-nvim",
 			config = function()
-				setup().fm()
-				mappings().fm()
-				-- require("setup").fm()
-				-- require("mappings").fm()
+				-- setup().fm()
+				-- mappings().fm()
+				require("setup").fm()
+				require("mappings").fm()
 			end,
 		})
 		use({
