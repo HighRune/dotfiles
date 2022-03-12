@@ -1,4 +1,4 @@
-local function setup()
+return function()
 	require("nvim-treesitter.configs").setup({
 		ensure_installed = "maintained",
 		highlight = {
@@ -82,5 +82,3 @@ local function setup()
 		-- },
 	})
 end
-
-return { setup = setup }
