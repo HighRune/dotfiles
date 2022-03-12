@@ -57,21 +57,21 @@ return require("packer").startup({
 		})
 		use({
 			"norcalli/nvim-colorizer.lua",
-			-- config = function()
-			-- 	require("colorizer").setup()
-			-- end,
+			config = function()
+				require("colorizer").setup()
+			end,
 		})
 		use({
 			"nacro90/numb.nvim",
-			-- config = function()
-			-- 	require("numb").setup()
-			-- end,
+			config = function()
+				require("numb").setup()
+			end,
 		})
 		use({
 			"echasnovski/mini.nvim",
-			-- config = function()
-			-- 	require("setup").indentscope()
-			-- end,
+			config = function()
+				require("setup").indentscope()
+			end,
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter-textobjects",
@@ -84,10 +84,10 @@ return require("packer").startup({
 		})
 		use({
 			"akinsho/bufferline.nvim",
-			-- config = function()
-			-- 	require("setup").bufferline()
-			-- 	require("mappings").bufferline()
-			-- end,
+			config = function()
+				require("setup").bufferline()
+				require("mappings").bufferline()
+			end,
 		})
 		use({
 			"ms-jpq/coq.artifacts",
@@ -95,13 +95,13 @@ return require("packer").startup({
 		})
 		use({
 			"sbdchd/neoformat",
-			-- config = require("setup").neoformat(),
+			config = require("setup").neoformat(),
 		})
 		use({
 			"numToStr/Comment.nvim",
-			-- config = function()
-			-- 	require("Comment").setup()
-			-- end,
+			config = function()
+				require("Comment").setup()
+			end,
 		})
 		use({
 			"tommcdo/vim-lion",
@@ -114,79 +114,79 @@ return require("packer").startup({
 		})
 		use({
 			"AndrewRadev/splitjoin.vim",
-			-- config = function()
-			-- 	require("mappings").splitjoin()
-			-- 	require("setup").splitjoin()
-			-- end,
+			config = function()
+				require("mappings").splitjoin()
+				require("setup").splitjoin()
+			end,
 		})
 		use({
 			"wellle/targets.vim",
-			-- config = function()
-			-- 	require("setup").targets()
-			-- 	require("mappings").targets()
-			-- end,
+			config = function()
+				require("setup").targets()
+				require("mappings").targets()
+			end,
 		})
 		use({
 			"windwp/nvim-autopairs",
-			-- config = require("config.nvim-autopairs").setup(),
+			config = require("config.nvim-autopairs").setup(),
 		})
 		use({
 			"chaoren/vim-wordmotion",
-			-- config = function()
-			-- 	require("setup").wordmotion()
-			-- 	require("mappings").wordmotion()
-			-- end,
+			config = function()
+				require("setup").wordmotion()
+				require("mappings").wordmotion()
+			end,
 		})
 		use({
 			"kana/vim-arpeggio",
-			-- require("mappings").arpeggio(),
+			require("mappings").arpeggio(),
 		})
 		use({
 			"ahmedkhalf/project.nvim",
-			-- config = function()
-			-- 	require("project_nvim").setup()
-			-- end,
+			config = function()
+				require("project_nvim").setup()
+			end,
 		})
 		use({
 			"nvim-lualine/lualine.nvim",
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
-			-- config = "require('config.lualine').setup()",
+			config = "require('config.lualine').setup()",
 		})
 		use({
 			"gbprod/cutlass.nvim",
-			-- config = function()
-			-- 	require("setup").cutlass()
-			-- end,
+			config = function()
+				require("setup").cutlass()
+			end,
 		})
 		use({
 			"justinmk/vim-sneak",
-			-- config = function()
-			-- 	require("setup").sneak()
-			-- 	require("mappings").sneak()
-			-- end,
+			config = function()
+				require("setup").sneak()
+				require("mappings").sneak()
+			end,
 		})
 		use({
 			"ibhagwan/fzf-lua",
-			-- config = function()
-			-- 	require("setup").fzf()
-			-- 	require("mappings").fzf()
-			-- end,
+			config = function()
+				require("setup").fzf()
+				require("mappings").fzf()
+			end,
 		})
 		use({
 			"monaqa/dial.nvim",
-			-- config = function()
-			-- 	require("setup").dial()
-			-- 	require("mappings").dial()
-			-- end,
+			config = function()
+				require("setup").dial()
+				require("mappings").dial()
+			end,
 		})
 		use({
 			"tpope/vim-repeat",
 		})
 		use({
 			"machakann/vim-highlightedyank",
-			-- config = function()
-			-- 	require("setup").highlightedyank()
-			-- end,
+			config = function()
+				require("setup").highlightedyank()
+			end,
 		})
 		use({
 			"svban/YankAssassin.vim",
