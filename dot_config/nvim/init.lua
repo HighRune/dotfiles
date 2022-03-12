@@ -24,7 +24,7 @@ return require("packer").startup({
 		})
 		use({
 			"folke/tokyonight.nvim",
-			run = require("setup").tokyonight,
+			config = require("setup").tokyonight,
 			cond = true,
 		})
 		use({
