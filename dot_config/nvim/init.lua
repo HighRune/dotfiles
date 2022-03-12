@@ -5,7 +5,6 @@ require("mappings").vanilla()
 
 return require("packer").startup({
 	function(use)
-		local mappings = require("mappings")
 		use({
 			"lewis6991/impatient.nvim",
 		})
@@ -48,8 +47,7 @@ return require("packer").startup({
 			"is0n/fm-nvim",
 			config = function()
 				require("setup").fm()
-				-- require("mappings").fm()
-				mappings.fm()
+				require("mappings").fm()
 			end,
 		})
 		use({
