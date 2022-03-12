@@ -43,10 +43,10 @@ return require("packer").startup({
 			end,
 			requires = "ms-jpq/coq.artifacts",
 		})
-		use({
-			"ms-jpq/coq.artifacts",
-			branch = "artifacts",
-		})
+		-- use({
+		-- 	"ms-jpq/coq.artifacts",
+		-- 	branch = "artifacts",
+		-- })
 		use({
 			"is0n/fm-nvim",
 			config = function()
