@@ -19,8 +19,8 @@ return require("packer").startup({
 			"kyazdani42/nvim-web-devicons",
 		})
 		use({
-      "folke/tokyonight.nvim",
-		 	config = require("setup").tokyonight(),
+			"folke/tokyonight.nvim",
+			config = require("setup").tokyonight(),
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
@@ -41,6 +41,11 @@ return require("packer").startup({
 				require("config.coq").setup()
 				require("mappings").coq()
 			end,
+			requires = "ms-jpq/coq.artifacts",
+		})
+		use({
+			"ms-jpq/coq.artifacts",
+			branch = "artifacts",
 		})
 		use({
 			"is0n/fm-nvim",
@@ -88,10 +93,6 @@ return require("packer").startup({
 				require("setup").bufferline()
 				require("mappings").bufferline()
 			end,
-		})
-		use({
-			"ms-jpq/coq.artifacts",
-			branch = "artifacts",
 		})
 		use({
 			"sbdchd/neoformat",
