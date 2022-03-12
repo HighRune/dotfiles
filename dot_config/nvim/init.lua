@@ -42,14 +42,13 @@ return require("packer").startup({
 				require("mappings").coq()
 			end,
 		})
-		-- use({
-		-- 	"is0n/fm-nvim",
-		-- 	config = function()
-		-- 		require("setup").fm()
-		-- 		require("mappings").fm()
-		-- 	end,
-		-- 	cond = true,
-		-- })
+		use({
+			"is0n/fm-nvim",
+			-- config = function()
+			-- 	require("setup").fm()
+			-- 	require("mappings").fm()
+			-- end,
+		})
 		-- use({
 		-- 	"lewis6991/gitsigns.nvim",
 		-- 	-- config = function()
