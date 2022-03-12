@@ -1,11 +1,11 @@
 local fn = vim.fn
-local mappings = require("mappings")
 
 require("options")
-mappings.vanilla()
+require("mappings").vanilla()
 
 return require("packer").startup({
 	function(use)
+		local mappings = require("mappings")
 		use({
 			"lewis6991/impatient.nvim",
 		})
