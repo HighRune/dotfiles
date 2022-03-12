@@ -11,7 +11,7 @@ return require("packer").startup({
 		})
 		use({
 			"wbthomason/packer.nvim",
-			config = require("setup").packer(),
+			-- config = require("setup").packer(),
 			cond = true,
 		})
 		use({
