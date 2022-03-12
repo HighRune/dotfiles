@@ -22,12 +22,11 @@ return require("packer").startup({
 		-- 	"folke/tokyonight.nvim",
 		-- 	config = require("setup").tokyonight,
 		-- })
-		-- use({
-		-- 	"nvim-treesitter/nvim-treesitter",
-		-- 	config = require("config.treesitter").setup(),
-		-- 	run = ":TSUpdate",
-		-- 	cond = true,
-		-- })
+		use({
+			"nvim-treesitter/nvim-treesitter",
+			-- config = require("config.treesitter").setup(),
+			run = ":TSUpdate",
+		})
 		-- use({
 		-- 	"neovim/nvim-lspconfig",
 		-- 	cond = true,
