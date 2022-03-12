@@ -32,7 +32,7 @@ return require("packer").startup({
 		})
 		use({
 			"williamboman/nvim-lsp-installer",
-			config = "require('config.lsp').setup()",
+			config = require("config.lsp").setup(),
 		})
 		use({
 			"ms-jpq/coq_nvim",
@@ -46,8 +46,6 @@ return require("packer").startup({
 		use({
 			"is0n/fm-nvim",
 			config = function()
-				-- setup().fm()
-				-- mappings().fm()
 				require("setup").fm()
 				require("mappings").fm()
 			end,
