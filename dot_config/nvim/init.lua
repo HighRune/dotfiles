@@ -8,10 +8,10 @@ return require("packer").startup({
 		use({
 			"lewis6991/impatient.nvim",
 		})
-		-- use({
-		-- 	"wbthomason/packer.nvim",
-		-- 	-- config = require("setup").packer(),
-		-- })
+		use({
+			"wbthomason/packer.nvim",
+			-- config = require("setup").packer(),
+		})
 		use({
 			"nvim-lua/plenary.nvim",
 		})
