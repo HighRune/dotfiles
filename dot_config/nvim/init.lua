@@ -49,13 +49,12 @@ return require("packer").startup({
 				require("mappings").fm()
 			end,
 		})
-		-- use({
-		-- 	"lewis6991/gitsigns.nvim",
-		-- 	-- config = function()
-		-- 	-- 	require("setup").gitsigns()
-		-- 	-- end,
-		-- 	cond = true,
-		-- })
+		use({
+			"lewis6991/gitsigns.nvim",
+			-- config = function()
+			-- 	require("setup").gitsigns()
+			-- end,
+		})
 		-- use({
 		-- 	"norcalli/nvim-colorizer.lua",
 		-- 	config = function()
