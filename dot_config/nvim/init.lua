@@ -2,7 +2,7 @@ local fn = vim.fn
 local mappings = require("mappings")
 
 require("options")
-require("mappings").vanilla()
+mappings.vanilla()
 
 return require("packer").startup({
 	function(use)
