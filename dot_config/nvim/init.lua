@@ -25,7 +25,7 @@ return require("packer").startup({
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
-			config = require("config.treesitter")(mappings),
+			config = require("config.treesitter")(),
 			run = ":TSUpdate",
 		})
 		use({
@@ -33,7 +33,7 @@ return require("packer").startup({
 		})
 		use({
 			"williamboman/nvim-lsp-installer",
-			config = require("config.lsp")(),
+			config = require("config.lsp")(mappings),
 		})
 		use({
 			"ms-jpq/coq_nvim",
