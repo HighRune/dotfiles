@@ -1,4 +1,5 @@
 local fn = vim.fn
+local mappings = require("mappings")
 
 require("options")
 require("mappings").vanilla()
@@ -24,7 +25,7 @@ return require("packer").startup({
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
-			config = require("config.treesitter")(),
+			config = require("config.treesitter")(mappings),
 			run = ":TSUpdate",
 		})
 		use({
