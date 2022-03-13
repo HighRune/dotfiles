@@ -1,5 +1,6 @@
-return function(mappings)
-	mappings()
+return function()
+	require("mappings").coq()
+
 	vim.g.coq_settings = {
 		auto_start = "shut-up",
 		-- weights = {
