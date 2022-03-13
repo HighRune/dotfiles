@@ -235,6 +235,34 @@ local function wordmotion()
 	}
 end
 
+-------------------- ibhagwan/fzf-lua
+local function fzf()
+	require("mappings").fzf()
+	require("fzf-lua").setup({
+		winopts = {
+			fullscreen = true,
+			border = "none",
+			preview = {
+				layout = "horizontal",
+				horizontal = "up:70%",
+				title = false,
+				delay = 0,
+				scrollchars = { "▎", "" },
+			},
+		},
+		keymap = {
+			builtin = {
+				["<C-e>"] = "preview-page-down",
+				["<C-u>"] = "preview-page-up",
+			},
+			-- fzf = {
+			-- 	["ctrl-e"] = "preview-page-down",
+			-- 	["ctrl-u"] = "preview-page-up",
+			-- },
+		},
+	})
+end
+
 return {
 	packer = packer,
 	tokyonight = tokyonight,
