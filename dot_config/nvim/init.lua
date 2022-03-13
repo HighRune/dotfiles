@@ -122,23 +122,16 @@ return require("packer").startup({
 		})
 		use({
 			"monaqa/dial.nvim",
-			config = function()
-				require("setup").dial()
-				require("mappings").dial()
-			end,
+			config = config.dial(),
 		})
-		use({
-			"tpope/vim-repeat",
-		})
+		use("tpope/vim-repeat")
 		use({
 			"machakann/vim-highlightedyank",
 			config = function()
 				require("setup").highlightedyank()
 			end,
 		})
-		use({
-			"svban/YankAssassin.vim",
-		})
+		use("svban/YankAssassin.vim")
 		-- **************************************
 		-- use("nvim-treesitter/playground")
 		-- use({
