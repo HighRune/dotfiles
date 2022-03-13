@@ -5,7 +5,7 @@ local diagnostic = vim.diagnostic
 
 -------------------- https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
 
-local function setup()
+return function()
 	diagnostic.config({
 		-- virtual_text = false,
 		-- virtual_lines = { prefix = "" },
@@ -112,5 +112,3 @@ local function setup()
 		cmd([[ do User LspAttachBuffers ]])
 	end)
 end
-
-return { setup = setup }
