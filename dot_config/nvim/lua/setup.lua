@@ -368,7 +368,7 @@ return {
 	pulse = pulse,
 	surround = surround,
 	wordmotion = wordmotion,
-	tokyonight = tokyonight(),
+	tokyonight = tokyonight,
 	solarized = solarized,
 	neoformat = neoformat,
 	fm = fm,
