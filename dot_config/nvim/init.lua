@@ -63,9 +63,7 @@ return require("packer").startup({
 		})
 		use({
 			"echasnovski/mini.nvim",
-			config = function()
-				require("setup").indentscope()
-			end,
+			config = config.indentscope(),
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter-textobjects",
@@ -78,10 +76,7 @@ return require("packer").startup({
 		})
 		use({
 			"akinsho/bufferline.nvim",
-			config = function()
-				require("setup").bufferline()
-				require("mappings").bufferline()
-			end,
+			config = require("config").bufferline(),
 		})
 		use({
 			"sbdchd/neoformat",
