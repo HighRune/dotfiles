@@ -1,4 +1,5 @@
-return function()
+return function(mappings)
+	mappings()
 	vim.g.coq_settings = {
 		auto_start = "shut-up",
 		-- weights = {
@@ -42,5 +43,4 @@ return function()
 			["repeat"] = "<leader>.",
 		},
 	}
-	require("mappings").coq()
 end
