@@ -94,9 +94,33 @@ local function gitsigns()
 	})
 end
 
+-------------------- echasnovski/mini.nvim
+local function indentscope()
+	local indentscope = require("mini.indentscope")
+	indentscope.setup({
+		draw = {
+			delay = 0,
+			animation = indentscope.gen_animation("none"),
+		},
+		mappings = {
+			object_scope = "ii",
+			object_scope_with_border = "ai",
+			goto_top = "<S-CR>",
+			goto_bottom = "<CR>",
+		},
+		options = {
+			border = "both",
+			indent_at_cursor = true,
+			try_as_border = true,
+		},
+		symbol = "▏",
+	})
+end
+
 return {
 	packer = packer,
 	tokyonight = tokyonight,
 	fm = fm,
 	gitsigns = gitsigns,
+	indentscope = indentscope,
 }
