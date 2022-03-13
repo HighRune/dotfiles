@@ -276,4 +276,5 @@ return {
 	wordmotion = wordmotion,
 	cutlass = cutlass,
 	sneak = sneak,
+	fzf = fzf,
 }
