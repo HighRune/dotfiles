@@ -76,7 +76,7 @@ return require("packer").startup({
 		})
 		use({
 			"akinsho/bufferline.nvim",
-			config = require("config").bufferline(),
+			config = config.bufferline(),
 		})
 		use({
 			"sbdchd/neoformat",
