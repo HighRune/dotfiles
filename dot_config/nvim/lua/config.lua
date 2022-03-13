@@ -151,6 +151,15 @@ augroup END
 	-- vim.api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
 end
 
+-------------------- AndrewRadev/splitjoin.vim
+local function splitjoin()
+	require("mappings").splitjoin()
+	cmd([[
+  let g:splitjoin_split_mapping = ''
+  let g:splitjoin_join_mapping = ''
+  ]])
+end
+
 return {
 	packer = packer,
 	tokyonight = tokyonight,
@@ -159,4 +168,5 @@ return {
 	indentscope = indentscope,
 	bufferline = bufferline,
 	neoformat = neoformat,
+	splitjoin = splitjoin,
 }
