@@ -21,6 +21,7 @@ end
 
 -------------------- is0n/fm-nvim
 local function fm()
+	require("mappings").fm()
 	require("fm-nvim").setup({
 		edit_cmd = "edit",
 		ui = {
