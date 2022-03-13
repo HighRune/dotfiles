@@ -54,7 +54,7 @@ return function(mappings)
 	-- Use an on_attach function to only map the following keys
 	-- after the language server attaches to the current buffer
 	local function on_attach(client, buffer)
-		mappings.lspconfig(buffer)
+		mappings(buffer)
 	end
 
 	local function on_attach_eslint(client, buffer)
