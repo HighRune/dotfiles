@@ -91,14 +91,11 @@ return require("packer").startup({
 		})
 		use({
 			"chaoren/vim-wordmotion",
-			config = function()
-				require("setup").wordmotion()
-				require("mappings").wordmotion()
-			end,
+			config = config.wordmotion(),
 		})
 		use({
 			"kana/vim-arpeggio",
-			require("mappings").arpeggio(),
+			config = require("mappings").arpeggio(),
 		})
 		use({
 			"ahmedkhalf/project.nvim",
