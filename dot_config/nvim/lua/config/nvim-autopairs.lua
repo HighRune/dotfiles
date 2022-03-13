@@ -1,4 +1,4 @@
-local function setup()
+return function()
 	local remap = vim.api.nvim_set_keymap
 	local npairs = require("nvim-autopairs")
 
@@ -45,5 +45,3 @@ local function setup()
 	end
 	remap("i", "<bs>", "v:lua.MUtils.BS()", { expr = true, noremap = true })
 end
-
-return { setup = setup }
