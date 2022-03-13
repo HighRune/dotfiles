@@ -280,6 +280,11 @@ local function dial()
 	})
 end
 
+-------------------- machakann/vim-highlightedyank
+local function highlightedyank()
+	cmd("let g:highlightedyank_highlight_duration = 100")
+end
+
 return {
 	packer = packer,
 	tokyonight = tokyonight,
@@ -295,4 +300,5 @@ return {
 	sneak = sneak,
 	fzf = fzf,
 	dial = dial,
+	highlightedyank = highlightedyank,
 }
