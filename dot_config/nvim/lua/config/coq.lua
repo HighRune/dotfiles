@@ -42,4 +42,5 @@ return function()
 			["repeat"] = "<leader>.",
 		},
 	}
+	require("mappings").coq()
 end
