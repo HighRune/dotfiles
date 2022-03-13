@@ -119,6 +119,7 @@ end
 
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
+	require("mappings").bufferline()
 	require("bufferline").setup({
 		options = {
 			indicator_icon = " ",
@@ -140,5 +141,5 @@ return {
 	fm = fm,
 	gitsigns = gitsigns,
 	indentscope = indentscope,
-	bufferline = bufferline
+	bufferline = bufferline,
 }
