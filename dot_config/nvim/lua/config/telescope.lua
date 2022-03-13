@@ -1,4 +1,5 @@
-local function setup()
+return function(mappings)
+	mappings()
 	require("telescope").setup({
 		pickers = {
 			find_files = {
@@ -26,7 +27,4 @@ local function setup()
 			},
 		},
 	})
-	require("mappings").telescope()
 end
-
-return { setup = setup }
