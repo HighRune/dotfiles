@@ -6,19 +6,13 @@ require("mappings").vanilla()
 return require("packer").startup({
 	function(use)
 		local config = require("config")
-		use({
-			"lewis6991/impatient.nvim",
-		})
+		use("lewis6991/impatient.nvim")
 		use({
 			"wbthomason/packer.nvim",
 			config = config.packer(),
 		})
-		use({
-			"nvim-lua/plenary.nvim",
-		})
-		use({
-			"kyazdani42/nvim-web-devicons",
-		})
+		use("nvim-lua/plenary.nvim")
+		use("kyazdani42/nvim-web-devicons")
 		use({
 			"folke/tokyonight.nvim",
 			config = config.tokyonight(),
@@ -28,9 +22,7 @@ return require("packer").startup({
 			config = require("config.treesitter")(),
 			run = ":TSUpdate",
 		})
-		use({
-			"neovim/nvim-lspconfig",
-		})
+		use("neovim/nvim-lspconfig")
 		use({
 			"williamboman/nvim-lsp-installer",
 			config = require("config.lsp")(),
@@ -65,15 +57,9 @@ return require("packer").startup({
 			"echasnovski/mini.nvim",
 			config = config.indentscope(),
 		})
-		use({
-			"nvim-treesitter/nvim-treesitter-textobjects",
-		})
-		use({
-			"windwp/nvim-ts-autotag",
-		})
-		use({
-			"itchyny/vim-cursorword",
-		})
+		use("nvim-treesitter/nvim-treesitter-textobjects")
+		use("windwp/nvim-ts-autotag")
+		use("itchyny/vim-cursorword")
 		use({
 			"akinsho/bufferline.nvim",
 			config = config.bufferline(),
@@ -88,29 +74,20 @@ return require("packer").startup({
 				require("Comment").setup()
 			end,
 		})
-		use({
-			"tommcdo/vim-lion",
-		})
-		use({
-			"tommcdo/vim-exchange",
-		})
-		use({
-			"p00f/nvim-ts-rainbow",
-		})
+		use("tommcdo/vim-lion")
+		use("tommcdo/vim-exchange")
+		use("p00f/nvim-ts-rainbow")
 		use({
 			"AndrewRadev/splitjoin.vim",
 			config = config.splitjoin(),
 		})
 		use({
 			"wellle/targets.vim",
-			config = function()
-				require("setup").targets()
-				require("mappings").targets()
-			end,
+			config = config.targets(),
 		})
 		use({
 			"windwp/nvim-autopairs",
-			config = require("config.nvim-autopairs").setup(),
+			config = require("config.nvim-autopairs")(),
 		})
 		use({
 			"chaoren/vim-wordmotion",
