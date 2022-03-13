@@ -1,7 +1,7 @@
 local fn = vim.fn
 local api = vim.api
 
-local function setup()
+return function()
 	local lualine = require("lualine")
 
 -- stylua: ignore
@@ -178,5 +178,3 @@ local colors = {
 	-- Now don't forget to initialize lualine
 	lualine.setup(config)
 end
-
-return { setup = setup }
