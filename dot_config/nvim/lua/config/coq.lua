@@ -1,4 +1,4 @@
-local function setup()
+return function()
 	vim.g.coq_settings = {
 		auto_start = "shut-up",
 		-- weights = {
@@ -43,5 +43,3 @@ local function setup()
 		},
 	}
 end
-
-return { setup = setup }
