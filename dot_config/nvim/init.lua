@@ -1,8 +1,7 @@
 local fn = vim.fn
-local mappings = require("mappings")
 
 require("options")
-mappings.vanilla()
+require("mappings").vanilla()
 
 return require("packer").startup({
 	function(use)
@@ -33,19 +32,19 @@ return require("packer").startup({
 		})
 		use({
 			"williamboman/nvim-lsp-installer",
-			config = require("config.lsp")(mappings.lspconfig),
+			config = require("config.lsp")(),
 		})
 		use({
 			"ms-jpq/coq_nvim",
 			branch = "coq",
-			config = require("config.coq")(mappings.coq),
+			config = require("config.coq")(),
 			requires = { "ms-jpq/coq.artifacts", branch = "artifacts" },
 		})
 		use({
 			"is0n/fm-nvim",
 			config = function()
 				require("setup").fm()
-				mappings.fm()
+				require("mappings").fm()
 			end,
 		})
 		use({
