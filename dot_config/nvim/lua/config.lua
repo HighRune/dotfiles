@@ -196,6 +196,15 @@ local function cutlass()
 	})
 end
 
+-------------------- justinmk/vim-sneak
+local function sneak()
+	require("mappings").sneak()
+
+	cmd([[
+	let g:sneak#use_ic_scs = 1
+	]])
+end
+
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	require("mappings").wordmotion()
@@ -238,4 +247,5 @@ return {
 	targets = targets,
 	wordmotion = wordmotion,
 	cutlass = cutlass,
+	sneak = sneak,
 }
