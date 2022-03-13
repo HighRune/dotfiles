@@ -110,9 +110,7 @@ return require("packer").startup({
 		})
 		use({
 			"gbprod/cutlass.nvim",
-			config = function()
-				require("setup").cutlass()
-			end,
+			config = config.cutlass(),
 		})
 		use({
 			"justinmk/vim-sneak",
