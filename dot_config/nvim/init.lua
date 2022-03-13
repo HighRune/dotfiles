@@ -20,7 +20,7 @@ return require("packer").startup({
 		})
 		use({
 			"folke/tokyonight.nvim",
-			config = require("config").tokyonight,
+			config = require("config").tokyonight(),
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
