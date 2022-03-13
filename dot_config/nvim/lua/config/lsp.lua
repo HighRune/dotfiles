@@ -5,7 +5,7 @@ local diagnostic = vim.diagnostic
 
 -------------------- https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
 
-return function()
+return function(mappings)
 	diagnostic.config({
 		-- virtual_text = false,
 		-- virtual_lines = { prefix = "" },
@@ -54,7 +54,7 @@ return function()
 	-- Use an on_attach function to only map the following keys
 	-- after the language server attaches to the current buffer
 	local function on_attach(client, buffer)
-		require("mappings").lspconfig(buffer)
+		mappings.lspconfig(buffer)
 	end
 
 	local function on_attach_eslint(client, buffer)
