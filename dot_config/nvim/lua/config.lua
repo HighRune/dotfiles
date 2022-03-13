@@ -285,6 +285,10 @@ local function highlightedyank()
 	cmd("let g:highlightedyank_highlight_duration = 100")
 end
 
+local function arpeggio()
+	require("mappings").arpeggio()
+end
+
 return {
 	packer = packer,
 	tokyonight = tokyonight,
@@ -301,4 +305,5 @@ return {
 	fzf = fzf,
 	dial = dial,
 	highlightedyank = highlightedyank,
+	arpeggio = arpeggio,
 }
