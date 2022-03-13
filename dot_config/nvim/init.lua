@@ -99,10 +99,7 @@ return require("packer").startup({
 		})
 		use({
 			"AndrewRadev/splitjoin.vim",
-			config = function()
-				require("mappings").splitjoin()
-				require("setup").splitjoin()
-			end,
+			config = config.splitjoin(),
 		})
 		use({
 			"wellle/targets.vim",
