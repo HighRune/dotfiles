@@ -117,10 +117,28 @@ local function indentscope()
 	})
 end
 
+-------------------- akinsho/bufferline.nvim
+local function bufferline()
+	require("bufferline").setup({
+		options = {
+			indicator_icon = " ",
+			separator_style = { "", "" },
+			tab_size = 0,
+			close_icon = "",
+		},
+		highlights = {
+			buffer_selected = {
+				gui = "bold",
+			},
+		},
+	})
+end
+
 return {
 	packer = packer,
 	tokyonight = tokyonight,
 	fm = fm,
 	gitsigns = gitsigns,
 	indentscope = indentscope,
+	bufferline = bufferline
 }
