@@ -37,10 +37,7 @@ return require("packer").startup({
 		use({
 			"ms-jpq/coq_nvim",
 			branch = "coq",
-			config = function()
-				require("config.coq").setup()
-				require("mappings").coq()
-			end,
+			config = require("config.coq")(),
 			requires = { "ms-jpq/coq.artifacts", branch = "artifacts" },
 		})
 		use({
