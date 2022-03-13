@@ -188,6 +188,36 @@ local function targets()
 	-- ]])
 end
 
+-------------------- chaoren/vim-wordmotion
+local function wordmotion()
+	require("mappings").wordmotion()
+	g.wordmotion_nomap = 1
+	-- Move to the character following those characters
+	g.wordmotion_uppercase_spaces = {
+		",",
+		"/",
+		".",
+		":",
+		"<",
+		">",
+		"(",
+		")",
+		"[",
+		"]",
+		"{",
+		"}",
+		"&",
+		"@",
+		"*",
+		"=",
+		"!",
+		"+",
+		"?",
+		"'",
+		'"',
+	}
+end
+
 return {
 	packer = packer,
 	tokyonight = tokyonight,
@@ -198,4 +228,5 @@ return {
 	neoformat = neoformat,
 	splitjoin = splitjoin,
 	targets = targets,
+	wordmotion = wordmotion,
 }
