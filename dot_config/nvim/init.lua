@@ -106,7 +106,7 @@ return require("packer").startup({
 		use({
 			"nvim-lualine/lualine.nvim",
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
-			config = "require('config.lualine').setup()",
+			config = "require('config.lualine')()",
 		})
 		use({
 			"gbprod/cutlass.nvim",
