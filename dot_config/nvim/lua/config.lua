@@ -53,7 +53,7 @@ local function fm()
 end
 
 return {
-	packer,
-	tokyonight,
-	fm,
+	packer = packer,
+	tokyonight = tokyonight,
+	fm = fm,
 }
