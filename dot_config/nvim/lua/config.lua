@@ -188,6 +188,14 @@ local function targets()
 	-- ]])
 end
 
+-------------------- gbprod/cutlass.nvim
+local function cutlass()
+	require("cutlass").setup({
+		cut_key = "m",
+		override_del = true,
+	})
+end
+
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	require("mappings").wordmotion()
@@ -229,4 +237,5 @@ return {
 	splitjoin = splitjoin,
 	targets = targets,
 	wordmotion = wordmotion,
+	cutlass = cutlass,
 }
