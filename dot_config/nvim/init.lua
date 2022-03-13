@@ -47,9 +47,7 @@ return require("packer").startup({
 		})
 		use({
 			"lewis6991/gitsigns.nvim",
-			config = function()
-				require("setup").gitsigns()
-			end,
+			config = config.gitsigns(),
 		})
 		use({
 			"norcalli/nvim-colorizer.lua",
