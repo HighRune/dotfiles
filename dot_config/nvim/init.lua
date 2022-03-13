@@ -11,7 +11,7 @@ return require("packer").startup({
 		})
 		use({
 			"wbthomason/packer.nvim",
-			config = require("config").packer(),
+			config = config.packer(),
 		})
 		use({
 			"nvim-lua/plenary.nvim",
@@ -21,7 +21,7 @@ return require("packer").startup({
 		})
 		use({
 			"folke/tokyonight.nvim",
-			config = require("config").tokyonight(),
+			config = config.tokyonight(),
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
