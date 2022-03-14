@@ -1,5 +1,3 @@
-local fn = vim.fn
-
 require("options")
 require("mappings").vanilla()
 
@@ -130,85 +128,6 @@ return require("packer").startup({
 		})
 		use("tpope/vim-repeat")
 		use("svban/YankAssassin.vim")
-		-- **************************************
-		-- use("nvim-treesitter/playground")
-		-- use({
-		-- 	"jeetsukumaran/vim-indentwise",
-		-- 	config = function()
-		-- 		require("mappings").indentwise()
-		-- 	end,
-		-- })
-		-- use("tpope/vim-commentary")
-		-- use("JoosepAlviste/nvim-ts-context-commentstring")
-		-- use("kana/vim-textobj-user")
-		-- use("PeterRincker/vim-argumentative")
-		-- use({
-		-- 	"inside/vim-search-pulse",
-		-- 	config = function()
-		-- 		require("setup").pulse()
-		-- 		require("mappings").pulse()
-		-- 	end,
-		-- })
-		-- use("michaeljsmith/vim-indent-object")
-		-- use({
-		-- 	"lukas-reineke/indent-blankline.nvim",
-		-- 	-- config = require("setup").indentBlankline(),
-		-- })
-		-- use("Houl/repmo-vim")
-		-- use({
-		-- 	"andymass/vim-matchup",
-		-- })
-		-- use({
-		-- 	"rlane/pounce.nvim",
-		-- 	-- config = function()
-		-- 	-- 	require("setup").pounce()
-		-- 	-- 	require("mappings").pounce()
-		-- 	-- end,
-		-- })
-		-- use({
-		-- 	"phaazon/hop.nvim",
-		-- 	-- config = function()
-		-- 	-- 	require("setup").hop()
-		-- 	-- 	require("mappings").hop()
-		-- 	-- end,
-		-- })
-		-- use({
-		-- 	"nvim-telescope/telescope.nvim",
-		-- 	-- config = require("config.telescope").setup(),
-		-- })
-		-- use({
-		-- 	"svermeulen/vim-cutlass",
-		-- 	config = function()
-		-- 		require("mappings").cutlass()
-		-- 	end,
-		-- })
-		-- use("bfredl/nvim-incnormal")
-		-- use({
-		-- 	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		-- 	config = function()
-		-- 		require("lsp_lines").register_lsp_virtual_lines()
-		-- 	end,
-		-- })
-		-- use({
-		-- 	"bfredl/nvim-miniyank",
-		-- 	config = function()
-		-- 		require("setup").miniyank()
-		-- 		require("mappings").miniyank()
-		-- 	end,
-		-- })
-		-- use("svermeulen/vim-yoink")
-		-- use("matze/vim-move")
-		-- use("RRethy/nvim-treesitter-textsubjects")
-		-- use({ "ibhagwan/fzf-lua", requires = { "vijaymarupudi/nvim-fzf" } })
-		-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
-		-- use("tpope/vim-abolish")
-		-- use("tpope/vim-surround")
-		-- use({
-		-- "bkad/CamelCaseMotion",
-		-- config = function()
-		-- require("mappings").camelCaseMotion()
-		-- end,
-		-- })
 	end,
 	config = {
 		display = {
@@ -227,6 +146,85 @@ return require("packer").startup({
 		-- },
 	},
 })
+
+-- use("nvim-treesitter/playground")
+-- use({
+-- 	"jeetsukumaran/vim-indentwise",
+-- 	config = function()
+-- 		require("mappings").indentwise()
+-- 	end,
+-- })
+-- use("tpope/vim-commentary")
+-- use("JoosepAlviste/nvim-ts-context-commentstring")
+-- use("kana/vim-textobj-user")
+-- use("PeterRincker/vim-argumentative")
+-- use({
+-- 	"inside/vim-search-pulse",
+-- 	config = function()
+-- 		require("setup").pulse()
+-- 		require("mappings").pulse()
+-- 	end,
+-- })
+-- use("michaeljsmith/vim-indent-object")
+-- use({
+-- 	"lukas-reineke/indent-blankline.nvim",
+-- 	-- config = require("setup").indentBlankline(),
+-- })
+-- use("Houl/repmo-vim")
+-- use({
+-- 	"andymass/vim-matchup",
+-- })
+-- use({
+-- 	"rlane/pounce.nvim",
+-- 	-- config = function()
+-- 	-- 	require("setup").pounce()
+-- 	-- 	require("mappings").pounce()
+-- 	-- end,
+-- })
+-- use({
+-- 	"phaazon/hop.nvim",
+-- 	-- config = function()
+-- 	-- 	require("setup").hop()
+-- 	-- 	require("mappings").hop()
+-- 	-- end,
+-- })
+-- use({
+-- 	"nvim-telescope/telescope.nvim",
+-- 	-- config = require("config.telescope").setup(),
+-- })
+-- use({
+-- 	"svermeulen/vim-cutlass",
+-- 	config = function()
+-- 		require("mappings").cutlass()
+-- 	end,
+-- })
+-- use("bfredl/nvim-incnormal")
+-- use({
+-- 	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+-- 	config = function()
+-- 		require("lsp_lines").register_lsp_virtual_lines()
+-- 	end,
+-- })
+-- use({
+-- 	"bfredl/nvim-miniyank",
+-- 	config = function()
+-- 		require("setup").miniyank()
+-- 		require("mappings").miniyank()
+-- 	end,
+-- })
+-- use("svermeulen/vim-yoink")
+-- use("matze/vim-move")
+-- use("RRethy/nvim-treesitter-textsubjects")
+-- use({ "ibhagwan/fzf-lua", requires = { "vijaymarupudi/nvim-fzf" } })
+-- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
+-- use("tpope/vim-abolish")
+-- use("tpope/vim-surround")
+-- use({
+-- "bkad/CamelCaseMotion",
+-- config = function()
+-- require("mappings").camelCaseMotion()
+-- end,
+-- })
 
 -------------------- kana/vim-arpeggio
 -- cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")

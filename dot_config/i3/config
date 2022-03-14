@@ -207,8 +207,8 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 exec --no-startup-id blueberry-tray
 
 # bindsym Print exec "scrot ~/Downloads/%Y-%m-%d-%T-screenshot.png"
-bindsym $mod+Shift+s exec "flameshot gui -p ~/Downloads"
-bindsym $mod+s exec "flameshot full -p ~/Downloads"
+bindsym $mod+Shift++ exec "flameshot gui -p ~/Downloads"
+bindsym $mod++ exec "flameshot full -p ~/Downloads"
 
 
 # Transparency 
