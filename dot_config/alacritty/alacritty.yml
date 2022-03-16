@@ -60,6 +60,9 @@ cursor:
 
 live_config_reload: true
 
+scrolling:
+  multiplier: 0
+
 key_bindings:
   # Enter vi mode
   # - { key: Escape, mods: Control, chars: "\x02\x5b" }
