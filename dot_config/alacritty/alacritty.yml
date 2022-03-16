@@ -67,7 +67,7 @@ key_bindings:
   - { key: Return, mods: Control, chars: "\x1b[13;5u" }
   # Tmux
   # Detach from session
-  - { key: D,      mods: Control|Shift, chars: "\x02\x64" }
+  - { key: Q,      mods: Control|Shift, chars: "\x02\x64" }
   # Switch session
   - { key: Tab,    mods: Alt, chars: "\x02\x29" }
   - { key: Tab,    mods: Alt|Shift, chars: "\x02\x28" }
