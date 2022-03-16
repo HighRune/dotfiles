@@ -89,10 +89,10 @@ key_bindings:
 
   - { key: V,              mods: Control|Shift,           action: Paste            }
   - { key: C,              mods: Control|Shift,           action: Copy             }
-  - { key: Up,    mods: Shift,   action: ScrollLineUp,  }
-  - { key: Down,  mods: shift,   action: ScrollLineDown }
-  - { key: Up,      mods: Control|Shift,       action: ScrollHalfPageUp        }
-  - { key: Down,      mods: Control|Shift,     action: ScrollHalfPageDown      }
+  # - { key: Up,    mods: Shift,   action: ScrollLineUp,  }
+  # - { key: Down,  mods: shift,   action: ScrollLineDown }
+  # - { key: Up,      mods: Control|Shift,       action: ScrollHalfPageUp        }
+  # - { key: Down,      mods: Control|Shift,     action: ScrollHalfPageDown      }
   # - { key: Home,      mods: Control,   action: ScrollToTop,   }
   # - { key: End,       mods: Control,   action: ScrollToBottom }
   - { key: Equals,         mods: Control,                 action: IncreaseFontSize }
