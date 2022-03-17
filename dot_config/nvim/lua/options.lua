@@ -43,6 +43,7 @@ o.breakindent = true -- Start wrapped lines indented
 -- o.showtabline=2  -- Always display the line with tab page labels
 o.ignorecase = true -- Ignore case in search patterns
 o.smartcase = true -- Override the 'ignorecase' option if the search pattern contains upper case characters
+o.iskeyword = "a-z,A-Z,48-57,_,.,-,>"
 o.signcolumn = "yes:1"
 o.expandtab = true -- Use the appropriate number of spaces to insert a <Tab>
 o.smartindent = true -- Do smart autoindenting when starting a new line
