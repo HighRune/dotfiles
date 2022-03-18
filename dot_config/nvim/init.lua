@@ -87,10 +87,10 @@ return require("packer").startup({
 			"windwp/nvim-autopairs",
 			config = require("config.autopairs")(),
 		})
-		-- use({
-		-- 	"chaoren/vim-wordmotion",
-		-- 	-- config = config.wordmotion(),
-		-- })
+		use({
+			"chaoren/vim-wordmotion",
+			-- 	-- config = config.wordmotion(),
+		})
 		use({
 			"kana/vim-arpeggio",
 			config = config.arpeggio(),
