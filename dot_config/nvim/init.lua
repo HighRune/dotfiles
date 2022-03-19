@@ -41,9 +41,7 @@ return require("packer").startup({
 		})
 		use({
 			"norcalli/nvim-colorizer.lua",
-			config = function()
-				require("colorizer").setup()
-			end,
+			config = config.colorizer,
 		})
 		use({
 			"nacro90/numb.nvim",
