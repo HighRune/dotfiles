@@ -11,6 +11,11 @@ local function packer()
 ]])
 end
 
+-------------------- ahmedkhalf/project.nvim
+local function project()
+	require("project_nvim").setup()
+end
+
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
 	g.tokyonight_style = "night"
@@ -312,4 +317,5 @@ return {
 	highlightedyank = highlightedyank,
 	arpeggio = arpeggio,
 	comment = comment,
+	project = project,
 }
