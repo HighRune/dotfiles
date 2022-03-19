@@ -287,7 +287,7 @@ end
 -- end
 
 return {
-	vanilla = vanilla,
+	core = core,
 	telescope = telescope,
 	splitjoin = splitjoin,
 	arpeggio = arpeggio,
