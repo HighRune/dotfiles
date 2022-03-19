@@ -1,5 +1,5 @@
 require("options")
--- require("mappings").core()
+require("mappings").core()
 
 return require("packer").startup({
 	function(use)
