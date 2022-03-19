@@ -205,6 +205,11 @@ local function sneak()
 	]])
 end
 
+-------------------- numToStr/Comment.nvim
+local function comment()
+	require("Comment").setup()
+end
+
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	require("mappings").wordmotion()
@@ -306,4 +311,5 @@ return {
 	dial = dial,
 	highlightedyank = highlightedyank,
 	arpeggio = arpeggio,
+	comment = comment,
 }
