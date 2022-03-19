@@ -68,9 +68,7 @@ return require("packer").startup({
 		})
 		use({
 			"numToStr/Comment.nvim",
-			config = function()
-				require("Comment").setup()
-			end,
+			config = config.comment(),
 		})
 		use("tommcdo/vim-lion")
 		use("tommcdo/vim-exchange")
