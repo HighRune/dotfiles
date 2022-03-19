@@ -309,6 +309,11 @@ local function highlightedyank()
 	cmd("let g:highlightedyank_highlight_duration = 100")
 end
 
+-------------------- numToStr/Comment.nvim
+local function comment()
+	require("Comment").setup()
+end
+
 -------------------- wellle/targets.vim
 local function targets()
 	cmd([[
@@ -385,5 +390,6 @@ return {
 	highlightedyank = highlightedyank,
 	splitjoin = splitjoin,
 	indentscope = indentscope,
+	comment = comment,
 	-- miniyank = miniyank,
 }
