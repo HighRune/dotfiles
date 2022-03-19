@@ -11,6 +11,11 @@ local function packer()
 ]])
 end
 
+-------------------- norcalli/nvim-colorizer.lua
+local function colorizer()
+	require("colorizer").setup()
+end
+
 -------------------- ahmedkhalf/project.nvim
 local function project()
 	require("project_nvim").setup()
@@ -324,4 +329,5 @@ return {
 	comment = comment,
 	project = project,
 	numb = numb,
+	colorizer = colorizer,
 }
