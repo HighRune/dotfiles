@@ -47,9 +47,7 @@ return require("packer").startup({
 		})
 		use({
 			"nacro90/numb.nvim",
-			config = function()
-				require("numb").setup()
-			end,
+			config = config.numb,
 		})
 		use({
 			"echasnovski/mini.nvim",
