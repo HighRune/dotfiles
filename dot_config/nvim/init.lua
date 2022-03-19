@@ -51,10 +51,10 @@ return require("packer").startup({
 				require("numb").setup()
 			end,
 		})
-		use({
-			"echasnovski/mini.nvim",
-			-- config = config.indentscope(),
-		})
+		-- use({
+		-- 	"echasnovski/mini.nvim",
+		-- 	-- config = config.indentscope(),
+		-- })
 		use("nvim-treesitter/nvim-treesitter-textobjects")
 		use("windwp/nvim-ts-autotag")
 		use("itchyny/vim-cursorword")
