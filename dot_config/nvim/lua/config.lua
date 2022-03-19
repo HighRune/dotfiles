@@ -16,6 +16,11 @@ local function project()
 	require("project_nvim").setup()
 end
 
+-------------------- nacro90/numb.nvim
+local function numb()
+	require("numb").setup()
+end
+
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
 	g.tokyonight_style = "night"
@@ -318,4 +323,5 @@ return {
 	arpeggio = arpeggio,
 	comment = comment,
 	project = project,
+	numb = numb,
 }
