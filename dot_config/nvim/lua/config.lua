@@ -183,10 +183,10 @@ local function targets()
 	autocmd User targets#mappings#user call targets#mappings#extend({
 	\ 'a': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
 	\ 'e': {'argument': [{'o': '\[', 'c': '\]', 's': ','}]},
-	\ 'p': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
+	\ 'b': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
 	\ 'A': {'pair': [{'o':'(', 'c':')'}]},
 	\ 'E': {'pair': [{'o':'\[', 'c':'\]'}]},
-	\ 'P': {'pair': [{'o':'{', 'c':'}'}]},
+	\ 'B': {'pair': [{'o':'{', 'c':'}'}]},
 	\ 'Q': {'quote': [{'d': '`'}]},
 	\ 's': { 'separator': [{'d':','}, {'d':'.'}, {'d':';'}, {'d':':'}, {'d':'+'}, {'d':'-'},
   \ {'d':'='}, {'d':'~'}, {'d':'_'}, {'d':'*'}, {'d':'#'}, {'d':'/'},
