@@ -56,6 +56,7 @@ opt.lazyredraw = true -- When running macros and regexes on a large file, lazy r
 -- lukas-reineke/indent-blankline.nvim
 opt.list = true
 opt.listchars:append("eol:↴")
+opt.laststatus = 3
 
 -- nvim-treesitter/nvim-treesitter
 o.foldmethod = "expr"
