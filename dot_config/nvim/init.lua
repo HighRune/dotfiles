@@ -83,7 +83,7 @@ return require("packer").startup({
 		})
 		use({
 			"chaoren/vim-wordmotion",
-			-- config = config.wordmotion(),
+			config = config.wordmotion(),
 		})
 		use({
 			"kana/vim-arpeggio",
