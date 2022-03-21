@@ -44,6 +44,7 @@ o.breakindent = true -- Start wrapped lines indented
 o.ignorecase = true -- Ignore case in search patterns
 o.smartcase = true -- Override the 'ignorecase' option if the search pattern contains upper case characters
 -- autocmd opt.iskeyword:remove("/", "(", "[", "{")
+opt.iskeyword:append({ "/", "(", "[", "{" })
 o.signcolumn = "yes:1"
 o.expandtab = true -- Use the appropriate number of spaces to insert a <Tab>
 o.smartindent = true -- Do smart autoindenting when starting a new line
