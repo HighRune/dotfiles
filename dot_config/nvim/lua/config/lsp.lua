@@ -72,10 +72,10 @@ return function()
 		on_attach(client, buffer)
 	end
 
-	-- local function on_attach_sumneko_lua(client, buffer)
-	-- 	client.resolved_capabilities.document_formatting = true
-	-- 	on_attach(client, buffer)
-	-- end
+	local function on_attach_sumneko_lua(client, buffer)
+		client.resolved_capabilities.document_formatting = true
+		on_attach(client, buffer)
+	end
 	-------------------- williamboman/nvim-lsp-installer
 	require("nvim-lsp-installer").on_server_ready(function(server)
 		local opts = {}
@@ -102,30 +102,10 @@ return function()
 			opts.settings = { format = { enable = false } }
 		end
 
-		-- if server.name == "sumneko_lua" then
-		-- 	opts.on_attach = on_attach_sumneko_lua
-		-- 	opts.settings = { format = { enable = true } }
-		-- end
-
 		if server.name == "sumneko_lua" then
-	 	local sumneko_opts = 
-    {
-    	settings = {
-    		Lua = {
-    			diagnostics = {
-    				globals = { "vim" },
-    			},
-    			workspace = {
-    				library = {
-    					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-    					[vim.fn.stdpath("config") .. "/lua"] = true,
-    				},
-    			},
-    		},
-    	},
-    }
-	 	opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
-    end
+			opts.on_attach = on_attach_sumneko_lua
+			opts.settings = { format = { enable = true } }
+		end
 
 		-- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
 		server:setup(require("coq").lsp_ensure_capabilities(opts))
