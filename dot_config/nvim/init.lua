@@ -58,10 +58,10 @@ return require("packer").startup({
 			"akinsho/bufferline.nvim",
 			config = config.bufferline(),
 		})
-		use({
-			"sbdchd/neoformat",
-			config = config.neoformat(),
-		})
+		-- use({
+		-- 	"sbdchd/neoformat",
+		-- 	config = config.neoformat(),
+		-- })
 		use({
 			"numToStr/Comment.nvim",
 			config = config.comment(),
