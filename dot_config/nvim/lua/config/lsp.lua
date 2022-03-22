@@ -108,8 +108,23 @@ return function()
 		-- end
 
 		if server.name == "sumneko_lua" then
-	 	  local sumneko_opts = require("lsp.settings.sumneko_lua")
-	 	  opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
+	 	local sumneko_opts = 
+    {
+    	settings = {
+    		Lua = {
+    			diagnostics = {
+    				globals = { "vim" },
+    			},
+    			workspace = {
+    				library = {
+    					[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+    					[vim.fn.stdpath("config") .. "/lua"] = true,
+    				},
+    			},
+    		},
+    	},
+    }
+	 	opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
     end
 
 		-- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
