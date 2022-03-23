@@ -258,6 +258,7 @@ end
 -------------------- ibhagwan/fzf-lua
 local function fzf()
 	require("mappings").fzf()
+	local actions = require("fzf-lua.actions")
 	require("fzf-lua").setup({
 		winopts = {
 			fullscreen = true,
@@ -275,10 +276,11 @@ local function fzf()
 				["<C-e>"] = "preview-page-down",
 				["<C-u>"] = "preview-page-up",
 			},
-			-- fzf = {
-			-- 	["ctrl-e"] = "preview-page-down",
-			-- 	["ctrl-u"] = "preview-page-up",
-			-- },
+			actions = {
+				files = {
+					["default"] = actions.file_edit,
+				},
+			},
 		},
 	})
 end
