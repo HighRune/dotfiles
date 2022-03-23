@@ -34,6 +34,7 @@ local function core()
 	map("n", "0", "g0")
 	map("n", "$", "g$:set ve= ve=all<cr>")
 	map("n", "&", "g^")
+	-- Paste
 	map("x", "p", '"_dP')
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Words
@@ -137,12 +138,12 @@ end
 
 -------------------- justinmk/vim-sneak
 local function sneak()
-	map("n", "s", ":<C-U>call sneak#wrap('', 3, 0, 2, 0)<CR>")
-	map("n", "S", ":<C-U>call sneak#wrap('', 3, 1, 2, 0)<CR>")
-	-- map("n", "<leader>s", "8s", remap)
-	-- map("n", "<leader>S", "8S", remap)
-	map("n", "f", "<Plug>Sneak_f")
-	map("n", "F", "<Plug>Sneak_F")
+	map("n", "s", ":<C-U>call sneak#wrap('', 2, 0, 2, 0)<CR>")
+	map("n", "S", ":<C-U>call sneak#wrap('', 2, 1, 2, 0)<CR>")
+	map("n", "f", "8s", remap)
+	map("n", "F", "8S", remap)
+	-- map("n", "f", "<Plug>Sneak_f")
+	-- map("n", "F", "<Plug>Sneak_F")
 	map("n", "t", "<Plug>Sneak_t")
 	map("n", "T", "<Plug>Sneak_T")
 	vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], expr)
