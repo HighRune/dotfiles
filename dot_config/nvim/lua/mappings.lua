@@ -34,6 +34,7 @@ local function core()
 	map("n", "0", "g0")
 	map("n", "$", "g$:set ve= ve=all<cr>")
 	map("n", "&", "g^")
+	map("x", "p", "_dP")
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Words
 	-- map("o", "w", "iw")
