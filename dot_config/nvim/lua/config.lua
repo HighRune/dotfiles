@@ -276,10 +276,10 @@ local function fzf()
 				["<C-e>"] = "preview-page-down",
 				["<C-u>"] = "preview-page-up",
 			},
-			actions = {
-				files = {
-					["default"] = actions.file_edit,
-				},
+		},
+		actions = {
+			files = {
+				["default"] = actions.file_edit,
 			},
 		},
 	})
