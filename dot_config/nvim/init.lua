@@ -120,6 +120,7 @@ return require("packer").startup({
 		})
 		use("tpope/vim-repeat")
 		use("svban/YankAssassin.vim")
+		use("kana/vim-textobj-user")
 	end,
 	config = {
 		display = {
