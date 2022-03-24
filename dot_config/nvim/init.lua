@@ -118,13 +118,6 @@ return require("packer").startup({
 			"machakann/vim-highlightedyank",
 			config = config.highlightedyank(),
 		})
-		use({
-			"mvllow/modes.nvim",
-			config = function()
-				vim.opt.cursorline = true
-				require("modes").setup()
-			end,
-		})
 		use("tpope/vim-repeat")
 		use("svban/YankAssassin.vim")
 	end,
