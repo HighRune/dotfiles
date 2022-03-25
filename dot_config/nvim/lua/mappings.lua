@@ -175,7 +175,7 @@ local function gitsigns(bufnr)
 	mmap("n", "<leader>gd", gs.toggle_deleted)
 
 	-- Text object
-	mmap({ "o", "x" }, "g", ":<C-U>Gitsigns select_hunk<CR>")
+	-- mmap({ "o", "x" }, "g", ":<C-U>Gitsigns select_hunk<CR>")
 end
 
 -------------------- akinsho/bufferline.nvim
