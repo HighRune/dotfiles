@@ -34,7 +34,12 @@ local function core()
 	map("n", "0", "g0")
 	map("n", "$", "g$:set ve= ve=all<cr>")
 	map("n", "&", "g^")
-	-- Paste
+	cmd([["
+nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+	"]])
 	map("x", "p", '"_dP')
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Words
