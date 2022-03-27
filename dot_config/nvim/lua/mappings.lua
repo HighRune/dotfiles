@@ -34,7 +34,6 @@ local function core()
 	map("n", "0", "g0")
 	map("n", "$", "g$:set ve= ve=all<cr>")
 	map("n", "&", "g^")
-	map("n", "p", '"_dP')
 	map("x", "p", '"_dP')
 	-- stylua: ignore
 	map("n", "<C-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
