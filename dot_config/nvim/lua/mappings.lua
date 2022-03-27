@@ -34,11 +34,11 @@ local function core()
 	map("n", "0", "g0")
 	map("n", "$", "g$:set ve= ve=all<cr>")
 	map("n", "&", "g^")
+	map("x", "p", '"_dP')
+	-- stylua: ignore
+	map("n", "<C-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
 	-- stylua: ignore
 	-- map("n", "<C-k>", "m`:silent +g/\m^\s*$/d<CR>``:noh<CR>")
-	-- stylua: ignore
-	-- map("n", "<C-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
-	map("x", "p", '"_dP')
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Words
 	-- map("o", "w", "iw")
