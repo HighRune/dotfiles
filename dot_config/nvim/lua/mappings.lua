@@ -34,10 +34,10 @@ local function core()
 	map("n", "0", "g0")
 	map("n", "$", "g$:set ve= ve=all<cr>")
 	map("n", "&", "g^")
-	cmd([[
-nnoremap <silent><C-k> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
-nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
-	]])
+	-- stylua: ignore
+	map("n", "<C-k>", "m`:silent +g/\m^\s*$/d<CR>``:noh<CR>")
+	-- stylua: ignore
+	map("n", "<C-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
 	map("x", "p", '"_dP')
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Words
@@ -164,8 +164,8 @@ local function gitsigns(bufnr)
 	end
 
 	-- Navigation
-	mmap("n", "<S-right>", "&diff ? '<S-right>' : '<cmd>Gitsigns next_hunk<CR>'", { expr = true })
-	mmap("n", "<S-left>", "&diff ? '<S-left>' : '<cmd>Gitsigns prev_hunk<CR>'", { expr = true })
+	mmap("n", "<S-right>", "&diff ? '<S-right>' : '<cmd>Gitsigns next_hunk<CR>'", expr)
+	mmap("n", "<S-left>", "&diff ? '<S-left>' : '<cmd>Gitsigns prev_hunk<CR>'", expr)
 
 	-- Actions
 	mmap({ "n", "v" }, "<leader>ha", gs.stage_hunk)
