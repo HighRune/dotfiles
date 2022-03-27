@@ -37,7 +37,8 @@ local function core()
 	map("x", "p", '"_dP')
 	map("n", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
 	map("n", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
-	map("n", "do", [[m`:silent +g/\m^\s*$/d<CR>``:noh<CR>]])
+	map("n", "do", [[&diff ? 'do' : 'm`:silent +g/\m^\s*$/d<CR>``:noh<CR>']], expr)
+	map("n", "dO", [[m`:silent -g/\m^\s*$/d<CR>``:noh<CR>']])
 	-- -- stylua: ignore
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Words
