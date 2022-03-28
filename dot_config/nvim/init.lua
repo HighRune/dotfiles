@@ -99,6 +99,10 @@ return require("packer").startup({
 			config = "require('config.lualine')()",
 		})
 		use({
+			"jeetsukumaran/vim-indentwise",
+			-- config = config.indentwise,
+		})
+		use({
 			"gbprod/cutlass.nvim",
 			config = config.cutlass(),
 		})
