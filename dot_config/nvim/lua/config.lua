@@ -35,6 +35,11 @@ local function tokyonight()
 	cmd("colorscheme tokyonight")
 end
 
+-------------------- jeetsukumaran/vim-indentwise
+local function indentwise()
+	require("mappings").indentwise()
+end
+
 -------------------- is0n/fm-nvim
 local function fm()
 	require("mappings").fm()
@@ -333,4 +338,5 @@ return {
 	project = project,
 	numb = numb,
 	colorizer = colorizer,
+	indentwise = indentwise,
 }
