@@ -134,8 +134,10 @@ end
 
 -------------------- jeetsukumaran/vim-indentwise
 local function indentwise()
-	map("n", "<C-k>", "<Plug>(IndentWiseBlockScopeBoundaryBegin)")
-	map("n", "<C-j>", "<Plug>(IndentWiseBlockScopeBoundaryEnd)")
+	-- map("n", "<C-k>", "<Plug>(IndentWisePreviousGreaterIndent)")
+	-- map("n", "<C-j>", "<Plug>(IndentWiseNextLesserIndent)")
+	-- map("n", "<C-right>", "<Plug>(IndentWisePreviousLesserIndent)")
+	-- map("n", "<C-left>", "<Plug>(IndentWiseNextGreaterIndent)")
 end
 
 -------------------- justinmk/vim-sneak
