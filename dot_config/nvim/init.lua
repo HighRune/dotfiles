@@ -100,7 +100,7 @@ return require("packer").startup({
 		})
 		use({
 			"jeetsukumaran/vim-indentwise",
-			-- config = config.indentwise,
+			config = config.indentwise(),
 		})
 		use({
 			"gbprod/cutlass.nvim",
