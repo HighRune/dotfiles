@@ -26,6 +26,10 @@ local function numb()
 	require("numb").setup()
 end
 
+local function skip()
+  g.vimskip_mapforwardskip = 's'
+  g.vimskip_mapbackwardskip = 'S'
+end
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
 	g.tokyonight_style = "night"
@@ -339,4 +343,5 @@ return {
 	numb = numb,
 	colorizer = colorizer,
 	indentwise = indentwise,
+	skip = skip
 }
