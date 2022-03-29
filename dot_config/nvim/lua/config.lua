@@ -26,9 +26,12 @@ local function numb()
 	require("numb").setup()
 end
 
+--------------------jayflo/vim-skip
 local function skip()
-  g.vimskip_mapforwardskip = 's'
-  g.vimskip_mapbackwardskip = 'S'
+	g.vimskip_disable_default_maps = 1
+	g.vimskip_mapforwardskip = "s"
+	g.vimskip_mapbackwardskip = "S"
+	g.vimskip_mode = "anti"
 end
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
@@ -343,5 +346,5 @@ return {
 	numb = numb,
 	colorizer = colorizer,
 	indentwise = indentwise,
-	skip = skip
+	skip = skip,
 }
