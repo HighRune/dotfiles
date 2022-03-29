@@ -127,7 +127,7 @@ return require("packer").startup({
 		use("kana/vim-textobj-user")
 		use({
 			"jayflo/vim-skip",
-			-- config = config.skip(),
+			config = config.skip(),
 		})
 	end,
 	config = {
