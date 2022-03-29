@@ -89,10 +89,10 @@ return require("packer").startup({
 			"chaoren/vim-wordmotion",
 			config = config.wordmotion(),
 		})
-		use({
-			"kana/vim-arpeggio",
-			config = config.arpeggio(),
-		})
+		-- use({
+		-- 	"kana/vim-arpeggio",
+		-- 	config = config.arpeggio(),
+		-- })
 		use({
 			"ahmedkhalf/project.nvim",
 			config = config.project(),
