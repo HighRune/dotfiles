@@ -12,10 +12,6 @@ return require("packer").startup({
 		use("nvim-lua/plenary.nvim")
 		use("kyazdani42/nvim-web-devicons")
 		use({
-			"jayflo/vim-skip",
-			config = config.skip(),
-		})
-		use({
 			"folke/tokyonight.nvim",
 			config = config.tokyonight(),
 		})
@@ -129,6 +125,10 @@ return require("packer").startup({
 		use("tpope/vim-repeat")
 		use("svban/YankAssassin.vim")
 		use("kana/vim-textobj-user")
+		use({
+			"jayflo/vim-skip",
+			config = config.skip(),
+		})
 	end,
 	config = {
 		display = {
