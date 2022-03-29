@@ -339,5 +339,4 @@ return {
 	numb = numb,
 	colorizer = colorizer,
 	indentwise = indentwise,
-	skip = skip,
 }
