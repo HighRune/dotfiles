@@ -102,10 +102,10 @@ return require("packer").startup({
 			"jeetsukumaran/vim-indentwise",
 			config = config.indentwise(),
 		})
-		use({
-			"gbprod/cutlass.nvim",
-			config = config.cutlass(),
-		})
+		-- use({
+		-- 	"gbprod/cutlass.nvim",
+		-- 	config = config.cutlass(),
+		-- })
 		use({
 			"justinmk/vim-sneak",
 			-- config = config.sneak(),
