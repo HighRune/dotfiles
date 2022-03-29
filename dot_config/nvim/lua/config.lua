@@ -28,10 +28,10 @@ end
 
 --------------------jayflo/vim-skip
 local function skip()
-	g.vimskip_disable_default_maps = 1
-	g.vimskip_mapforwardskip = "s"
-	g.vimskip_mapbackwardskip = "S"
-	g.vimskip_mode = "anti"
+	-- g.vimskip_disable_default_maps = 1
+	-- g.vimskip_mapforwardskip = "s"
+	-- g.vimskip_mapbackwardskip = "S"
+	-- g.vimskip_mode = "fixed"
 end
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
