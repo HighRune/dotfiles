@@ -11,6 +11,7 @@ return require("packer").startup({
 		})
 		use("nvim-lua/plenary.nvim")
 		use("kyazdani42/nvim-web-devicons")
+		use("jayflo/vim-skip")
 		use({
 			"folke/tokyonight.nvim",
 			config = config.tokyonight(),
