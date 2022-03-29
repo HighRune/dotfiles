@@ -109,7 +109,7 @@ return require("packer").startup({
 		})
 		use({
 			"justinmk/vim-sneak",
-			config = config.sneak(),
+			-- config = config.sneak(),
 		})
 		use({
 			"ibhagwan/fzf-lua",
