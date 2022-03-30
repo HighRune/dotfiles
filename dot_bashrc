@@ -227,18 +227,18 @@ function dev () {
     # 'nvim' Enter ':te' Enter 'i npm run dev' Enter \;
 }
 
-alias gs ='git status'
-# alias gpl ='git pull'
-# alias gp ='git push'
-# alias gd ='git diff'
-# alias gc ='git commit'
-# alias gco ='git checkout'
-# alias gcp ='git cherry-pick'
-# alias gb ='git branch'
-# alias gl ='git log'
-# alias ga ='git add'
-# alias gm ='git merge'
-# alias gr ='git reset'
+alias gs='git status'
+alias gpl='git pull'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
+alias gb='git branch'
+alias gl='git log'
+alias ga='git add'
+alias gm='git merge'
+alias gr='git reset'
 
 # ------------------------------- GCLOUD
 # The next line updates PATH for the Google Cloud SDK.
