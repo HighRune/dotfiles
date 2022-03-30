@@ -142,14 +142,14 @@ end
 
 -------------------- justinmk/vim-sneak
 local function sneak()
-	map("n", "s", ":<C-U>call sneak#wrap('', 2, 0, 2, 0)<CR>")
-	map("n", "S", ":<C-U>call sneak#wrap('', 2, 1, 2, 0)<CR>")
+	map({ "n", "x" }, "s", ":<C-U>call sneak#wrap('', 2, 0, 2, 0)<CR>")
+	map({ "n", "x" }, "S", ":<C-U>call sneak#wrap('', 2, 1, 2, 0)<CR>")
 	-- map("n", "f", "8s", remap)
 	-- map("n", "F", "8S", remap)
-	map("n", "f", "<Plug>Sneak_f")
-	map("n", "F", "<Plug>Sneak_F")
-	map("n", "t", "<Plug>Sneak_t")
-	map("n", "T", "<Plug>Sneak_T")
+	map({ "n", "x" }, "f", "<Plug>Sneak_f")
+	map({ "n", "x" }, "F", "<Plug>Sneak_F")
+	map({ "n", "x" }, "t", "<Plug>Sneak_t")
+	map({ "n", "x" }, "T", "<Plug>Sneak_T")
 	vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], expr)
 	vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], expr)
 end
