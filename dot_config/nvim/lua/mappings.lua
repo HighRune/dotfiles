@@ -38,6 +38,9 @@ local function core()
 	map("n", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", silent)
 	-- Paste
 	map("x", "p", '"_dP')
+	-- Multilines edit
+	map("x", "<C-n>", ":norm ")
+
 	-- -- stylua: ignore
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
 	-- Words
