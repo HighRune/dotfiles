@@ -40,6 +40,7 @@ local function core()
 	map("x", "p", '"_dP')
 	-- Multilines edit
 	map("x", "<C-n>", ":norm ")
+	-- cmd([[nnoremap <K> ciW<CR><Esc>:if match( @", "^\\s*$") < 0<Bar>exec "norm P-$diw+"<Bar>endif<CR>]])
 
 	-- -- stylua: ignore
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
