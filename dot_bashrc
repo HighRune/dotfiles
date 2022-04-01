@@ -240,6 +240,7 @@ alias gl='git log'
 alias ga='git add'
 alias gm='git merge'
 alias gr='git reset'
+alias grh='git reset HEAD~1'
 
 # ------------------------------- GCLOUD
 # The next line updates PATH for the Google Cloud SDK.
