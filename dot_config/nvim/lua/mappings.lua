@@ -271,6 +271,11 @@ local function coq()
 	map("i", "<S-Tab>", [[pumvisible() ? "<C-p>" : "<BS>"]], expr)
 end
 
+local function unimpaired()
+	map("n", "gp", "[p")
+	map("n", "gP", "]p")
+end
+
 -------------------- AndrewRadev/sideways.vim
 -- local function sideways()
 -- map("n", "<c-j>", ":SidewaysLeft<cr>", opts)
@@ -317,6 +322,7 @@ return {
 	indentwise = indentwise,
 	targets = targets,
 	gitsigns = gitsigns,
+	unimpaired = unimpaired,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
