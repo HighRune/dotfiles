@@ -125,7 +125,10 @@ return require("packer").startup({
 		use("tpope/vim-repeat")
 		use("svban/YankAssassin.vim")
 		use("kana/vim-textobj-user")
-		use("tpope/vim-unimpaired")
+		use({
+			"tpope/vim-unimpaired",
+			config = config.unimpaired(),
+		})
 	end,
 	config = {
 		display = {
