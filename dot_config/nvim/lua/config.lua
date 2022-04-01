@@ -40,6 +40,11 @@ local function indentwise()
 	require("mappings").indentwise()
 end
 
+-------------------- tpope/vim-unimpaired
+local function unimpaired()
+	require("mappings").unimpaired()
+end
+
 -------------------- is0n/fm-nvim
 local function fm()
 	require("mappings").fm()
@@ -339,4 +344,5 @@ return {
 	numb = numb,
 	colorizer = colorizer,
 	indentwise = indentwise,
+	unimpaired = unimpaired,
 }
