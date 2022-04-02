@@ -33,14 +33,37 @@ local function core()
 	map("n", "0", "g0")
 	map("n", "$", "g$:set ve= ve=all<cr>")
 	map("n", "&", "g^")
+	-- Multilines edit
+	map("x", "<C-n>", ":norm ")
 	-- New line
 	map("n", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", silent)
 	map("n", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", silent)
 	-- Paste
 	map("x", "p", '"_dP')
-	-- Multilines edit
-	map("x", "<C-n>", ":norm ")
-	-- cmd([[nnoremap <K> ciW<CR><Esc>:if match( @", "^\\s*$") < 0<Bar>exec "norm P-$diw+"<Bar>endif<CR>]])
+	cmd([[
+ function! s:putline(how, map) abort
+  let [body, type] = [getreg(v:register), getregtype(v:register)]
+  if type ==# 'V'
+    exe 'normal! "'.v:register.a:how
+  else
+    call setreg(v:register, body, 'l')
+    exe 'normal! "'.v:register.a:how
+    call setreg(v:register, body, type)
+  endif
+  silent! call repeat#set("\<Plug>(unimpaired-put-".a:map.")")
+endfunction
+
+nnoremap <silent> <Plug>(unimpaired-put-above) :call <SID>putline('gP', 'above')<CR>
+nnoremap <silent> <Plug>(unimpaired-put-below) :call <SID>putline('gp', 'below')<CR>
+nnoremap <silent> <Plug>(unimpaired-put-above-rightward) :<C-U>call <SID>putline(v:count1 . 'gP', 'Above')<CR>>']
+nnoremap <silent> <Plug>(unimpaired-put-below-rightward) :<C-U>call <SID>putline(v:count1 . 'gp', 'Below')<CR>>']
+nnoremap <silent> <Plug>(unimpaired-put-above-leftward)  :<C-U>call <SID>putline(v:count1 . 'gP', 'Above')<CR><']
+nnoremap <silent> <Plug>(unimpaired-put-below-leftward)  :<C-U>call <SID>putline(v:count1 . 'gp', 'Below')<CR><']
+nnoremap <silent> <Plug>(unimpaired-put-above-reformat)  :<C-U>call <SID>putline(v:count1 . 'gP', 'Above')<CR>=']
+nnoremap <silent> <Plug>(unimpaired-put-below-reformat)  :<C-U>call <SID>putline(v:count1 . 'gp', 'Below')<CR>=']
+nnoremap <silent> <Plug>unimpairedPutAbove :call <SID>putline('gP', 'above')<CR>
+nnoremap <silent> <Plug>unimpairedPutBelow :call <SID>putline('gp', 'below')<CR>
+]])
 
 	-- -- stylua: ignore
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
