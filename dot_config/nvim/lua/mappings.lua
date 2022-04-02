@@ -64,10 +64,10 @@ nnoremap <silent> <Plug>(unimpaired-put-below-reformat)  :<C-U>call <SID>putline
 nnoremap <silent> <Plug>unimpairedPutAbove :call <SID>putline('gP', 'above')<CR>
 nnoremap <silent> <Plug>unimpairedPutBelow :call <SID>putline('gp', 'below')<CR>
 
-" exe s:Map('n', 'gP', '<Plug>(unimpaired-put-above)')
-" exe s:Map('n', 'gp', '<Plug>(unimpaired-put-below)')
-" exe s:Map('n', 'gP', '<Plug>(unimpaired-put-above)')
-" exe s:Map('n', 'gp', '<Plug>(unimpaired-put-below)')
+nmap n gP <Plug>(unimpaired-put-above)
+nmap n gp <Plug>(unimpaired-put-below)
+nmap n gP <Plug>(unimpaired-put-above)
+nmap n gp <Plug>(unimpaired-put-below)
 ]])
 
 	-- -- stylua: ignore
