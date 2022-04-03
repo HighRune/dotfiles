@@ -53,20 +53,11 @@ local function core()
   silent! call repeat#set("\<Plug>(unimpaired-put-".a:map.")")
 endfunction
 
-nnoremap <silent> <Plug>(unimpaired-put-above) :call <SID>putline('gP', 'above')<CR>
-nnoremap <silent> <Plug>(unimpaired-put-below) :call <SID>putline('gp', 'below')<CR>
-nnoremap <silent> <Plug>(unimpaired-put-above-rightward) :<C-U>call <SID>putline(v:count1 . 'gP', 'Above')<CR>>']
-nnoremap <silent> <Plug>(unimpaired-put-below-rightward) :<C-U>call <SID>putline(v:count1 . 'gp', 'Below')<CR>>']
-nnoremap <silent> <Plug>(unimpaired-put-above-leftward)  :<C-U>call <SID>putline(v:count1 . 'gP', 'Above')<CR><']
-nnoremap <silent> <Plug>(unimpaired-put-below-leftward)  :<C-U>call <SID>putline(v:count1 . 'gp', 'Below')<CR><']
 nnoremap <silent> <Plug>(unimpaired-put-above-reformat)  :<C-U>call <SID>putline(v:count1 . 'gP', 'Above')<CR>=']
 nnoremap <silent> <Plug>(unimpaired-put-below-reformat)  :<C-U>call <SID>putline(v:count1 . 'gp', 'Below')<CR>=']
-nnoremap <silent> <Plug>unimpairedPutAbove :call <SID>putline('gP', 'above')<CR>
-nnoremap <silent> <Plug>unimpairedPutBelow :call <SID>putline('gp', 'below')<CR>
-
-nmap gP <Plug>(unimpaired-put-above-reformat)
-nmap gp <Plug>(unimpaired-put-below-reformat)
 ]])
+	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)")
+	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)")
 
 	-- -- stylua: ignore
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
