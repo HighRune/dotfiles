@@ -261,16 +261,19 @@ local function wordmotion()
 	}
 end
 
+-------------------- kana/vim-textobj-user
 local function textobjuser()
 	cmd([[
   call textobj#user#plugin('specialcharacter', {
 	\   'specialcharacter': {
-	\     'pattern': '<\|>\|\[\|]\|{\|}\|(\|)\|\.\|,\|:\|;\|=\|/',
+	\     'pattern': '<\|>\|\[\|]\|{\|}\|(\|)\|\.\|,\|:\|;\|=\|/\|?\|!',
 	\     'move-n': 'W',
+	\     'move-p': 'B',
 	\   },
 	\ })
   ]])
 end
+
 -------------------- ibhagwan/fzf-lua
 local function fzf()
 	require("mappings").fzf()
@@ -323,6 +326,7 @@ local function highlightedyank()
 	cmd("let g:highlightedyank_highlight_duration = 100")
 end
 
+-------------------- kana/vim-arpeggio
 local function arpeggio()
 	require("mappings").arpeggio()
 end
