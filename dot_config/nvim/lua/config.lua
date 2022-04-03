@@ -233,32 +233,32 @@ end
 
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-	-- require("mappings").wordmotion()
+	require("mappings").wordmotion()
 	g.wordmotion_nomap = 1
-	-- -- Move to the character following those characters
-	-- g.wordmotion_uppercase_spaces = {
-	-- 	",",
-	-- 	"/",
-	-- 	".",
-	-- 	":",
-	-- 	"<",
-	-- 	">",
-	-- 	"(",
-	-- 	")",
-	-- 	"[",
-	-- 	"]",
-	-- 	"{",
-	-- 	"}",
-	-- 	"&",
-	-- 	"@",
-	-- 	"*",
-	-- 	"=",
-	-- 	"!",
-	-- 	"+",
-	-- 	"?",
-	-- 	"'",
-	-- 	'"',
-	-- }
+	-- Move to the character following those characters
+	g.wordmotion_uppercase_spaces = {
+		",",
+		"/",
+		".",
+		":",
+		"<",
+		">",
+		"(",
+		")",
+		"[",
+		"]",
+		"{",
+		"}",
+		"&",
+		"@",
+		"*",
+		"=",
+		"!",
+		"+",
+		"?",
+		"'",
+		'"',
+	}
 end
 
 -------------------- kana/vim-textobj-user
