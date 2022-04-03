@@ -41,7 +41,7 @@ return function()
 			recommended = false,
 			jump_to_mark = "<C-CR>",
 			bigger_preview = "",
-			["repeat"] = "<leader>.",
+			["repeat"] = "<leader>p",
 		},
 	}
 end
