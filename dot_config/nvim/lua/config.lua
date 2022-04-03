@@ -261,6 +261,16 @@ local function wordmotion()
 	}
 end
 
+local function textobjuser()
+	cmd([[
+  call textobj#user#plugin('specialcharacter', {
+	\   'specialcharacter': {
+	\     'pattern': '<\|>\|\[\|]\|{\|}\|(\|)\|\.\|,\|:\|;\|=\|/',
+	\     'move-n': 'W',
+	\   },
+	\ })
+  ]])
+end
 -------------------- ibhagwan/fzf-lua
 local function fzf()
 	require("mappings").fzf()
@@ -339,4 +349,5 @@ return {
 	numb = numb,
 	colorizer = colorizer,
 	indentwise = indentwise,
+	textobjuser = textobjuser,
 }
