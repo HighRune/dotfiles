@@ -267,7 +267,9 @@ local function textobjuser()
   call textobj#user#plugin('specialcharacter', {
 	\   'specialcharacter': {
 	"\     'pattern': '\W\+',
-	\     'pattern': '<\|>\|\[\|]\|{\|}\|(\|)\|\.\|,\|:\|;\|=\|/\|?\|!',
+	\      'pattern': '\(\w\|\s\)\@!',
+	"\      'pattern': '\<\w\+\>',
+	"\     'pattern': '<\|>\|\[\|]\|{\|}\|(\|)\|\.\|,\|:\|;\|=\|/\|?\|!',
 	\     'move-n': 'W',
 	\     'move-p': 'B',
 	\   },
