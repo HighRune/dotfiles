@@ -274,13 +274,14 @@ local function textobjuser()
 	\     'move-p': 'B',
 	\   },
 	\ })
-  " call textobj#user#plugin('word', {
-	" \   'word': {
-	" \     'pattern': '\w',
-	" \     'move-n': 'w',
-	" \     'move-p': 'b',
-	" \   },
-	" \ })
+  call textobj#user#plugin('word', {
+	\   'word': {
+	"\     'pattern': '\w',
+	\      'pattern': '\<\w\+\>',
+	\     'move-n': 'w',
+	\     'move-p': 'b',
+	\   },
+	\ })
   ]])
 end
 
