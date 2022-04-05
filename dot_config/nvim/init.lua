@@ -131,7 +131,10 @@ return require("packer").startup({
 		})
 		use("D4KU/vim-textobj-chainmember")
 		use("glts/vim-textobj-comment")
-		use("kana/vim-submode")
+		use({
+			"kana/vim-submode",
+			config = config.submode(),
+		})
 	end,
 	config = {
 		display = {
