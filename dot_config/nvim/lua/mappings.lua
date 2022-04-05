@@ -245,12 +245,12 @@ end
 
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-	map({ "n", "o", "x" }, "W", "<Plug>WordMotion_w")
-	map({ "n", "o", "x" }, "B", "<Plug>WordMotion_b")
-	map({ "n", "o", "x" }, "E", "<Plug>WordMotion_e")
-	map({ "n", "o", "x" }, "gE", "<Plug>WordMotion_ge")
-	map({ "o", "x" }, "iW", "<Plug>WordMotion_iw")
-	map({ "o", "x" }, "aW", "<Plug>WordMotion_aw")
+	-- map({ "n", "o", "x" }, "W", "<Plug>WordMotion_w")
+	-- map({ "n", "o", "x" }, "B", "<Plug>WordMotion_b")
+	-- map({ "n", "o", "x" }, "E", "<Plug>WordMotion_e")
+	-- map({ "n", "o", "x" }, "gE", "<Plug>WordMotion_ge")
+	-- map({ "o", "x" }, "iW", "<Plug>WordMotion_iw")
+	-- map({ "o", "x" }, "aW", "<Plug>WordMotion_aw")
 	map({ "n", "o", "x" }, "w", "<Plug>WordMotion_W")
 	map({ "n", "o", "x" }, "b", "<Plug>WordMotion_B")
 	map({ "n", "o", "x" }, "e", "<Plug>WordMotion_E")
