@@ -124,6 +124,7 @@ return require("packer").startup({
 		})
 		use("tpope/vim-repeat")
 		use("svban/YankAssassin.vim")
+		use("D4KU/vim-textobj-chainmember")
 		use({
 			"kana/vim-textobj-user",
 			config = config.textobjuser(),
