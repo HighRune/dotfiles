@@ -116,7 +116,8 @@ local function targets()
 	-- map("o", "nQ", "inQ", remap)
 
 	-- Motions
-	-- map("n", "ga", "vInao<esc>", remap)
+	map("n", "ga", "vInao<esc>", remap)
+	map("n", "gA", "vIlao<esc>", remap)
 	-- map("n", "gA", "vanAo<esc>", remap)
 	-- map("n", "gp", "vInpo<esc>", remap)
 	-- map("n", "gP", "vanPo<esc>", remap)
@@ -124,6 +125,14 @@ local function targets()
 	-- map("n", "gE", "vanEo<esc>", remap)
 	-- map("n", "gq", "vanqo<esc>", remap)
 	-- map("n", "gQ", "vanQo<esc>", remap)
+
+	-- cmd([[
+	-- call submode#enter_with('undo/redo', 'n', '', 'ga', 'ga')
+	-- call submode#enter_with('undo/redo', 'n', '', 'gA', 'gA')
+	-- call submode#leave_with('undo/redo', 'n', '', '<Esc>')
+	-- call submode#map('undo/redo', 'n', '', 'a', 'a')
+	-- call submode#map('undo/redo', 'n', '', 'A', 'gA')
+	--  ]])
 
 	-- cmd([[
 	-- nmap <silent> <Plug>goToNextQuote  vanqo<esc>
