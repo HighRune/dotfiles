@@ -126,8 +126,10 @@ local function indentscope()
 		mappings = {
 			object_scope = "ii",
 			object_scope_with_border = "ai",
-			goto_top = "<S-CR>",
-			goto_bottom = "<CR>",
+			goto_top = "",
+			goto_bottom = "",
+			-- goto_top = "<S-CR>",
+			-- goto_bottom = "<CR>",
 		},
 		options = {
 			border = "both",
