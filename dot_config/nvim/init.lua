@@ -127,7 +127,10 @@ return require("packer").startup({
 		use({
 			"kana/vim-textobj-user",
 			config = config.textobjuser(),
-			requires = { "glts/vim-textobj-comment", opt = true },
+			requires = {
+				{ "glts/vim-textobj-comment", opt = true },
+				{ "D4KU/vim-textobj-chainmember", opt = true },
+			},
 		})
 	end,
 	config = {
