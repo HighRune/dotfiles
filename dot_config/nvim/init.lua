@@ -54,6 +54,7 @@ return require("packer").startup({
 		use("nvim-treesitter/nvim-treesitter-textobjects")
 		use("windwp/nvim-ts-autotag")
 		use("itchyny/vim-cursorword")
+		use("tpope/vim-surround")
 		use({
 			"akinsho/bufferline.nvim",
 			config = config.bufferline(),
@@ -220,7 +221,6 @@ return require("packer").startup({
 -- use({ "ibhagwan/fzf-lua", requires = { "vijaymarupudi/nvim-fzf" } })
 -- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
 -- use("tpope/vim-abolish")
--- use("tpope/vim-surround")
 -- use({
 -- "bkad/CamelCaseMotion",
 -- config = function()
