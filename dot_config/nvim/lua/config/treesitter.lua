@@ -37,8 +37,8 @@ return function()
 				keymaps = {
 					["af"] = "@function.outer",
 					["if"] = "@function.inner",
-					["ac"] = "@call.outer",
-					["ic"] = "@call.inner",
+					-- ["ac"] = "@call.outer",
+					-- ["ic"] = "@call.inner",
 				},
 			},
 			move = {
