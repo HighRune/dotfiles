@@ -128,6 +128,9 @@ return require("packer").startup({
 			"kana/vim-textobj-user",
 			config = config.textobjuser(),
 		})
+		use({
+			"glts/vim-textobj-comment",
+		})
 	end,
 	config = {
 		display = {
