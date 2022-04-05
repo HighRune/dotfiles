@@ -127,14 +127,6 @@ local function targets()
 	-- map("n", "gQ", "vanQo<esc>", remap)
 
 	-- cmd([[
-	-- call submode#enter_with('undo/redo', 'n', '', 'ga', 'ga')
-	-- call submode#enter_with('undo/redo', 'n', '', 'gA', 'gA')
-	-- call submode#leave_with('undo/redo', 'n', '', '<Esc>')
-	-- call submode#map('undo/redo', 'n', '', 'a', 'a')
-	-- call submode#map('undo/redo', 'n', '', 'A', 'gA')
-	--  ]])
-
-	-- cmd([[
 	-- nmap <silent> <Plug>goToNextQuote  vanqo<esc>
 	-- \ :call repeat#set("\<Plug>goToNextQuote", v:count)<cr>
 	-- nmap gq <Plug>goToNextQuote
