@@ -269,25 +269,25 @@ end
 
 -------------------- kana/vim-textobj-user
 local function textobjuser()
-	-- cmd([[
-	-- "call textobj#user#plugin('word', {
-	-- "\   'word': {
-	-- "\     'pattern': '\<\w\+\>',
-	-- "\     'move-n': 'w',
-	-- "\     'move-p': 'b',
-	-- "\     'move-N': 'e',
-	-- "\     'move-P': 'ge',
-	-- "\     'select': 'iw',
-	-- "\   },
-	-- "\ })
-	-- call textobj#user#plugin('specialcharacter', {
-	-- \   'specialcharacter': {
-	-- \     'pattern': '\(\w\|\s\)\@!',
-	-- \     'move-n': 'W',
-	-- \     'move-p': 'B',
-	-- \   },
-	-- \ })
-	-- ]])
+	cmd([[
+	"call textobj#user#plugin('word', {
+	"\   'word': {
+	"\     'pattern': '\<\w\+\>',
+	"\     'move-n': 'w',
+	"\     'move-p': 'b',
+	"\     'move-N': 'e',
+	"\     'move-P': 'ge',
+	"\     'select': 'iw',
+	"\   },
+	"\ })
+	call textobj#user#plugin('specialcharacter', {
+	\   'specialcharacter': {
+	\     'pattern': '\(\w\|\s\)\@!',
+	\     'move-n': 'W',
+	\     'move-p': 'B',
+	\   },
+	\ })
+	]])
 end
 
 -------------------- ibhagwan/fzf-lua
