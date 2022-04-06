@@ -345,13 +345,13 @@ end
 -------------------- kana/vim-submode
 local function submode()
 	cmd([[
-	call submode#enter_with('bnext/bprev', 'n', 's', '<leader>l', ':bn<CR>')
-	call submode#enter_with('bnext/bprev', 'n', 's', '<leader>h', ':bp<CR>')
-	call submode#map('bnext/bprev', 'n', 's', 'l', ':bn<CR>')
-	call submode#map('bnext/bprev', 'n', 's', 'h', ':bp<CR>')
+	"call submode#enter_with('bnext/bprev', 'n', 's', '<leader>l', ':bn<CR>')
+	"call submode#enter_with('bnext/bprev', 'n', 's', '<leader>h', ':bp<CR>')
+	"call submode#map('bnext/bprev', 'n', 's', 'l', ':bn<CR>')
+	"call submode#map('bnext/bprev', 'n', 's', 'h', ':bp<CR>')
 
-	call submode#enter_with('goto-argument', 'n', 's', 'ga', 'ga')
-	call submode#map('goto-argument', 'n', 's', 'a', 'ga')
+	"call submode#enter_with('goto-argument', 'n', 's', 'ga', 'vIlao<esc>')
+	"call submode#map('goto-argument', 'n', 's', 'a', 'vIlao<esc>')
 ]])
 end
 
