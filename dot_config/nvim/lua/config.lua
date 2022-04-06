@@ -345,17 +345,14 @@ end
 -------------------- kana/vim-submode
 local function submode()
 	cmd([[
-	let g:submode_keep_leaving_key=1
-let g:submode_timeout=0
-let g:submode_keyseqs_to_leave=['<Esc>', '<Enter>', 'q']
-call submode#map('windows', 'n', '', 'a', 'ga')
-call submode#map('windows', 'n', '', 'A', 'gA')
-call submode#enter_with('undo/redo', 'n', '', 'g-', 'g-')
-	call submode#enter_with('undo/redo', 'n', '', 'g+', 'g+')
-	call submode#leave_with('undo/redo', 'n', '', '<Esc>')
-	call submode#map('undo/redo', 'n', '', '-', 'g-')
-	call submode#map('undo/redo', 'n', '', '+', 'g+')
-	]])
+	call submode#enter_with('bnext/bprev', 'n', 's', '<leader>l', ':bn<CR>')
+	call submode#enter_with('bnext/bprev', 'n', 's', '<leader>h', ':bp<CR>')
+	call submode#map('bnext/bprev', 'n', 's', 'l', ':bn<CR>')
+	call submode#map('bnext/bprev', 'n', 's', 'h', ':bp<CR>')
+
+	call submode#enter_with('goto-argument', 'n', 's', 'ga', 'ga')
+	call submode#map('goto-argument', 'n', 's', 'a', 'ga')
+]])
 end
 
 -------------------- kana/vim-arpeggio
