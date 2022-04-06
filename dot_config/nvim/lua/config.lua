@@ -350,6 +350,11 @@ let g:submode_timeout=0
 let g:submode_keyseqs_to_leave=['<Esc>', '<Enter>', 'q']
 call submode#map('windows', 'n', '', 'a', 'ga')
 call submode#map('windows', 'n', '', 'A', 'gA')
+call submode#enter_with('undo/redo', 'n', '', 'g-', 'g-')
+	call submode#enter_with('undo/redo', 'n', '', 'g+', 'g+')
+	call submode#leave_with('undo/redo', 'n', '', '<Esc>')
+	call submode#map('undo/redo', 'n', '', '-', 'g-')
+	call submode#map('undo/redo', 'n', '', '+', 'g+')
 	]])
 end
 
