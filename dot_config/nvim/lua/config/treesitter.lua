@@ -37,20 +37,20 @@ return function()
 				keymaps = {
 					["af"] = "@function.outer",
 					["if"] = "@function.inner",
-					-- ["ac"] = "@call.outer",
-					-- ["ic"] = "@call.inner",
+					["aF"] = "@call.outer",
+					["iF"] = "@call.inner",
 				},
 			},
-			move = {
-				enable = true,
-				set_jumps = true,
-				goto_next_start = {
-					["]]"] = "@function.outer",
-				},
-				goto_previous_start = {
-					["[["] = "@function.outer",
-				},
-			},
+			-- move = {
+			-- 	enable = true,
+			-- 	set_jumps = true,
+			-- 	goto_next_start = {
+			-- 		["]]"] = "@function.outer",
+			-- 	},
+			-- 	goto_previous_start = {
+			-- 		["[["] = "@function.outer",
+			-- 	},
+			-- },
 			-- swap = {
 			-- 	enable = true,
 			-- 	swap_next = {
