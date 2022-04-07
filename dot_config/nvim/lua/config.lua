@@ -381,5 +381,4 @@ return {
 	indentwise = indentwise,
 	textobjuser = textobjuser,
 	submode = submode,
-	-- unit = unit,
 }
