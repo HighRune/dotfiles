@@ -33,6 +33,7 @@ local function core()
 	map("n", "0", "g0")
 	map("n", "$", "g$:set ve= ve=all<cr>")
 	map("n", "&", "g^")
+	map("n", "<S-CR>", "-")
 	-- Multilines edit
 	map("x", "<C-n>", ":norm ")
 	-- New line
