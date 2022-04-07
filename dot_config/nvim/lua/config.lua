@@ -349,9 +349,6 @@ local function submode()
 	"call submode#enter_with('bnext/bprev', 'n', 's', '<leader>h', ':bp<CR>')
 	"call submode#map('bnext/bprev', 'n', 's', 'l', ':bn<CR>')
 	"call submode#map('bnext/bprev', 'n', 's', 'h', ':bp<CR>')
-
-	"call submode#enter_with('goto-argument', 'n', 's', 'ga', 'vIlao<esc>')
-	"call submode#map('goto-argument', 'n', 's', 'a', 'vIlao<esc>')
 ]])
 end
 
