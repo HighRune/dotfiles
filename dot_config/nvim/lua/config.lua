@@ -349,10 +349,6 @@ local function submode()
 	"call submode#enter_with('bnext/bprev', 'n', 's', '<leader>h', ':bp<CR>')
 	"call submode#map('bnext/bprev', 'n', 's', 'l', ':bn<CR>')
 	"call submode#map('bnext/bprev', 'n', 's', 'h', ':bp<CR>')
-	"call submode#enter_with('bnext/bprev', 'n', 's', 'gx', '<Plug>(textobj-specialcharacter-specialcharacter-move-n)')
-	"call submode#enter_with('bnext/bprev', 'n', 's', 'gi', '<Plug>(textobj-specialcharacter-specialcharacter-move-p)')
-	"call submode#map('bnext/bprev', 'n', 's', 'x', '<Plug>(textobj-specialcharacter-specialcharacter-move-n)')
-	"call submode#map('bnext/bprev', 'n', 's', 'i', '<Plug>(textobj-specialcharacter-specialcharacter-move-p)')
 ]])
 end
 
