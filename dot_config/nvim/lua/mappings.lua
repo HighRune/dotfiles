@@ -37,8 +37,8 @@ local function core()
 	-- Multilines edit
 	map("x", "<C-n>", ":norm ")
 	-- New line
-	map("n", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", silent)
-	map("n", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", silent)
+	-- map("n", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", silent)
+	-- map("n", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", silent)
 	-- Paste
 	map("x", "p", '"_dP')
 	cmd([[
