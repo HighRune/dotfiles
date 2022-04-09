@@ -1,5 +1,6 @@
 local g = vim.g
 local cmd = vim.cmd
+local fn = vim.fn
 
 -------------------- wbthomason/packer.nvim
 local function packer()
@@ -349,11 +350,11 @@ local function submode()
 	"call submode#enter_with('bnext/bprev', 'n', 's', '<leader>h', ':bp<CR>')
 	"call submode#map('bnext/bprev', 'n', 's', 'l', ':bn<CR>')
 	"call submode#map('bnext/bprev', 'n', 's', 'h', ':bp<CR>')
-	call submode#enter_with('bnext/bprev', 'n', 's', 'go', ':set paste<CR>m`o<Esc>``:set nopaste<CR>')
-	call submode#enter_with('bnext/bprev', 'n', 's', 'gO', ':set paste<CR>m`O<Esc>``:set nopaste<CR>')
-	call submode#map('bnext/bprev', 'n', 's', 'o', ':set paste<CR>m`o<Esc>``:set nopaste<CR>')
-	call submode#map('bnext/bprev', 'n', 's', 'O', ':set paste<CR>m`O<Esc>``:set nopaste<CR>')
 ]])
+	fn["submode#enter_with"]("newline", "n", "s", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
+	fn["submode#enter_with"]("newline", "n", "s", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
+	fn["submode#map"]("newline", "n", "s", "o", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
+	fn["submode#map"]("newline", "n", "s", "O", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
 end
 
 -------------------- kana/vim-arpeggio
