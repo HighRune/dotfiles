@@ -1,4 +1,5 @@
 local cmd = vim.cmd
+local fn = vim.fn
 local map = vim.keymap.set
 local call = vim.call
 local silent = { silent = true }
@@ -290,6 +291,14 @@ local function coq()
 	map("i", "<S-Tab>", [[pumvisible() ? "<C-p>" : "<BS>"]], expr)
 end
 
+-------------------- kana/vim-submode
+local function submode()
+	fn["submode#enter_with"]("newline", "n", "s", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
+	fn["submode#enter_with"]("newline", "n", "s", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
+	fn["submode#map"]("newline", "n", "s", "o", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
+	fn["submode#map"]("newline", "n", "s", "O", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
+end
+
 -------------------- AndrewRadev/sideways.vim
 -- local function sideways()
 -- map("n", "<c-j>", ":SidewaysLeft<cr>", opts)
@@ -336,6 +345,7 @@ return {
 	indentwise = indentwise,
 	targets = targets,
 	gitsigns = gitsigns,
+	submode = submode,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
