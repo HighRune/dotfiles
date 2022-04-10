@@ -345,16 +345,13 @@ end
 
 -------------------- kana/vim-submode
 local function submode()
+	require("mappings").submode()
 	cmd([[
 	"call submode#enter_with('bnext/bprev', 'n', 's', '<leader>l', ':bn<CR>')
 	"call submode#enter_with('bnext/bprev', 'n', 's', '<leader>h', ':bp<CR>')
 	"call submode#map('bnext/bprev', 'n', 's', 'l', ':bn<CR>')
 	"call submode#map('bnext/bprev', 'n', 's', 'h', ':bp<CR>')
 ]])
-	fn["submode#enter_with"]("newline", "n", "s", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
-	fn["submode#enter_with"]("newline", "n", "s", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
-	fn["submode#map"]("newline", "n", "s", "o", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
-	fn["submode#map"]("newline", "n", "s", "O", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
 end
 
 -------------------- kana/vim-arpeggio
