@@ -298,9 +298,6 @@ local function submode()
 	fn["submode#enter_with"]("newline", "n", "s", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
 	fn["submode#map"]("newline", "n", "s", "o", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
 	fn["submode#map"]("newline", "n", "s", "O", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
-	g.submode_timeout = false
-	g.submode_keep_leaving_key = true
-	g.submode_always_show_submode = true
 end
 
 -------------------- AndrewRadev/sideways.vim
