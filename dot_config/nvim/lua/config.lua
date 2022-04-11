@@ -346,12 +346,9 @@ end
 -------------------- kana/vim-submode
 local function submode()
 	require("mappings").submode()
-	cmd([[
-	"call submode#enter_with('bnext/bprev', 'n', 's', '<leader>l', ':bn<CR>')
-	"call submode#enter_with('bnext/bprev', 'n', 's', '<leader>h', ':bp<CR>')
-	"call submode#map('bnext/bprev', 'n', 's', 'l', ':bn<CR>')
-	"call submode#map('bnext/bprev', 'n', 's', 'h', ':bp<CR>')
-]])
+	g.submode_timeout = false
+	g.submode_keep_leaving_key = true
+	g.submode_always_show_submode = true
 end
 
 -------------------- kana/vim-arpeggio
