@@ -301,6 +301,11 @@ local function submode()
 	fn["submode#enter_with"]("ge", "nxo", "", "ge", "ge")
 	fn["submode#map"]("ge", "nxo", "", "e", "ge")
 	fn["submode#map"]("ge", "nxo", "", "E", "e")
+	-- fn["submode#enter_with"]("gp", "n", "", "gP", "gP")
+	-- fn["submode#enter_with"]("gp", "n", "", "gp", "gp")
+	-- fn["submode#map"]("gp", "n", "", "P", "gP")
+	-- fn["submode#map"]("gp", "n", "", "p", "gp")
+
 	-- fn["submode#map"]("newline", "n", "s", "e", "<Plug>(textobj-specialcharacter)")
 end
 
