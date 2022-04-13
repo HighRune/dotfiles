@@ -139,6 +139,11 @@ local function indentscope()
 		},
 		symbol = "▏",
 	})
+	cmd([[
+augroup DisableIntentScope
+autocmd! FileType markdown,help,lsp-installer,packer let b:miniindentscope_disable=v:true
+augroup END
+]])
 end
 
 -------------------- akinsho/bufferline.nvim
