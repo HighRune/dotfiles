@@ -232,6 +232,7 @@ function dev () {
 }
 
 alias gs='git status'
+alias gsh='git stash'
 alias gpl='git pull'
 alias gp='git push'
 alias gpo='git push origin'
