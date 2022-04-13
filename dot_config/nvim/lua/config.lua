@@ -316,6 +316,7 @@ local function fzf()
 		actions = {
 			files = {
 				["default"] = actions.file_edit,
+				["alt-q"] = actions.file_sel_to_qf,
 			},
 		},
 	})
