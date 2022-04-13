@@ -141,7 +141,7 @@ local function indentscope()
 	})
 	cmd([[
 augroup DisableIntentScope
-autocmd! FileType markdown,help,lsp-installer,packer let b:miniindentscope_disable=v:true
+autocmd! FileType markdown,help,lsp-installer,packer,qf,man let b:miniindentscope_disable=v:true
 augroup END
 ]])
 end
