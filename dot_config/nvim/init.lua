@@ -116,6 +116,9 @@ return require("packer").startup({
 			config = config.fzf(),
 		})
 		use({
+			"kevinhwang91/nvim-bqf",
+		})
+		use({
 			"monaqa/dial.nvim",
 			config = config.dial(),
 		})
