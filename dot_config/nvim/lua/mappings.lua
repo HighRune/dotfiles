@@ -15,8 +15,8 @@ local function core()
 	map("", "Q", "<nop>")
 	map("", "q", "<nop>")
 	-- Quit
-	map("n", "<c-q>", ":q<cr>")
-	map("i", "<c-q>", "<esc>:q<cr>")
+	map("n", "<C-q>", ":q<cr>")
+	map("i", "<C-q>", "<esc>:q<cr>")
 	-- Save
 	map("n", "<C-s>", ":w<cr>")
 	map("i", "<C-s>", "<esc>`^:w<cr>")
@@ -38,6 +38,10 @@ local function core()
 	map("n", "<S-CR>", "-")
 	-- Multilines edit
 	map("x", "<C-n>", ":norm ")
+	-- Quickfix list
+	map("n", "<C-j>", ":cnext<CR>")
+	map("n", "<C-k>", ":cprev<CR>")
+
 	-- New line
 	-- map("n", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", silent)
 	-- map("n", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", silent)
