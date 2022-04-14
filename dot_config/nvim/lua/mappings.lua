@@ -34,6 +34,7 @@ local function core()
 	map("n", "j", "gj")
 	map("n", "0", "g0")
 	map("n", "$", "g$:set ve= ve=all<cr>")
+	map("n", "^", "g^")
 	map("n", "&", "g^")
 	map("n", "<S-CR>", "-")
 	-- Multilines edit
@@ -63,8 +64,8 @@ endfunction
 nnoremap <silent> <Plug>(unimpaired-put-above-reformat)  :<C-U>call <SID>putline(v:count1 . 'gP', 'Above')<CR>=']
 nnoremap <silent> <Plug>(unimpaired-put-below-reformat)  :<C-U>call <SID>putline(v:count1 . 'gp', 'Below')<CR>=']
 ]])
-	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)")
-	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)")
+	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g^")
+	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g^")
 
 	-- -- stylua: ignore
 	-- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
