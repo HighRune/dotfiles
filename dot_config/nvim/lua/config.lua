@@ -270,7 +270,7 @@ local function wordmotion()
 	g.wordmotion_nomap = 1
 	-- Move to the character following those characters
 	g.wordmotion_uppercase_spaces = spaces
-	g.wordmotion_spaces = spaces
+	-- g.wordmotion_spaces = spaces
 end
 
 -------------------- kana/vim-textobj-user
