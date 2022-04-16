@@ -286,13 +286,13 @@ local function textobjuser()
 	"\     'select': 'iw',
 	"\   },
 	"\ })
-	"call textobj#user#plugin('specialcharacter', {
-	"\   'specialcharacter': {
-	"\     'pattern': '\(\w\|\s\)\@!',
-	"\     'move-n': 's',
-	"\     'move-p': 'S',
-	"\   },
-	"\ })
+	call textobj#user#plugin('specialcharacter', {
+	\   'specialcharacter': {
+	\     'pattern': '\(\w\|\s\)\@!',
+	\     'move-n': 's',
+	\     'move-p': 'S',
+	\   },
+	\ })
 	]])
 end
 
