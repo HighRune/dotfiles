@@ -61,8 +61,8 @@ local function core()
   silent! call repeat#set("\<Plug>(unimpaired-put-".a:map.")")
 endfunction
 
-nnoremap <silent> <Plug>(unimpaired-put-above-reformat)  :<C-U>call <SID>putline(v:count1 . 'gP', 'Above')<CR>=']
-nnoremap <silent> <Plug>(unimpaired-put-below-reformat)  :<C-U>call <SID>putline(v:count1 . 'gp', 'Below')<CR>=']
+"nnoremap <silent> <Plug>(unimpaired-put-above-reformat)  :<C-U>call <SID>putline(v:count1 . 'gP', 'Above')<CR>=']
+"nnoremap <silent> <Plug>(unimpaired-put-below-reformat)  :<C-U>call <SID>putline(v:count1 . 'gp', 'Below')<CR>=']
 ]])
 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
