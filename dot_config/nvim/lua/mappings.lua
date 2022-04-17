@@ -37,8 +37,6 @@ local function core()
 	map("n", "^", "g^")
 	map("n", "&", "g^")
 	map("n", "<S-CR>", "-")
-	-- Multilines edit
-	map("x", "<C-n>", ":norm ")
 	-- -- Quickfix list
 	-- map("n", "<C-j>", ":cnext<CR>")
 	-- map("n", "<C-k>", ":cprev<CR>")
@@ -46,6 +44,7 @@ local function core()
 	-- New line
 	-- map("n", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", silent)
 	-- map("n", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", silent)
+	map("x", "<C-n>", ":norm ")
 	-- Paste
 	map("x", "p", '"_dP')
 	cmd([[
