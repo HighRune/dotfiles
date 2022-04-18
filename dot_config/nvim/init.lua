@@ -52,9 +52,9 @@ return require("packer").startup({
 		-- 	config = config.indentscope(),
 		-- })
 		use("nvim-treesitter/nvim-treesitter-textobjects")
-		use("windwp/nvim-ts-autotag")
-		use("itchyny/vim-cursorword")
-		use("tpope/vim-surround")
+		-- use("windwp/nvim-ts-autotag")
+		-- use("itchyny/vim-cursorword")
+		-- use("tpope/vim-surround")
 		-- use({
 		-- 	"akinsho/bufferline.nvim",
 		-- 	config = config.bufferline(),
@@ -67,21 +67,21 @@ return require("packer").startup({
 			"numToStr/Comment.nvim",
 			config = config.comment(),
 		})
-		use("tommcdo/vim-lion")
-		use("tommcdo/vim-exchange")
-		use("p00f/nvim-ts-rainbow")
-		use({
-			"AndrewRadev/splitjoin.vim",
-			config = config.splitjoin(),
-		})
+		-- use("tommcdo/vim-lion")
+		-- use("tommcdo/vim-exchange")
+		-- use("p00f/nvim-ts-rainbow")
+		-- use({
+		-- 	"AndrewRadev/splitjoin.vim",
+		-- 	config = config.splitjoin(),
+		-- })
 		use({
 			"wellle/targets.vim",
 			config = config.targets(),
 		})
-		use({
-			"windwp/nvim-autopairs",
-			config = require("config.autopairs")(),
-		})
+		-- use({
+		-- 	"windwp/nvim-autopairs",
+		-- 	config = require("config.autopairs")(),
+		-- })
 		use({
 			"chaoren/vim-wordmotion",
 			config = config.wordmotion(),
@@ -99,18 +99,18 @@ return require("packer").startup({
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
 			config = "require('config.lualine')()",
 		})
-		use({
-			"jeetsukumaran/vim-indentwise",
-			config = config.indentwise(),
-		})
+		-- use({
+		-- 	"jeetsukumaran/vim-indentwise",
+		-- 	config = config.indentwise(),
+		-- })
 		use({
 			"gbprod/cutlass.nvim",
 			config = config.cutlass(),
 		})
-		use({
-			"justinmk/vim-sneak",
-			config = config.sneak(),
-		})
+		-- use({
+		-- 	"justinmk/vim-sneak",
+		-- 	config = config.sneak(),
+		-- })
 		-- use({
 		-- 	"ibhagwan/fzf-lua",
 		-- 	config = config.fzf(),
@@ -118,10 +118,10 @@ return require("packer").startup({
 		-- use({
 		-- 	"kevinhwang91/nvim-bqf",
 		-- })
-		use({
-			"monaqa/dial.nvim",
-			config = config.dial(),
-		})
+		-- use({
+		-- 	"monaqa/dial.nvim",
+		-- 	config = config.dial(),
+		-- })
 		use({
 			"machakann/vim-highlightedyank",
 			config = config.highlightedyank(),
