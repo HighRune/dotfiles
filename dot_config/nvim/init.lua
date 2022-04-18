@@ -39,10 +39,10 @@ return require("packer").startup({
 		-- 	"lewis6991/gitsigns.nvim",
 		-- 	config = config.gitsigns(),
 		-- })
-		use({
-			"norcalli/nvim-colorizer.lua",
-			config = config.colorizer,
-		})
+		-- use({
+		-- 	"norcalli/nvim-colorizer.lua",
+		-- 	config = config.colorizer,
+		-- })
 		-- use({
 		-- 	"nacro90/numb.nvim",
 		-- 	config = config.numb,
@@ -51,7 +51,7 @@ return require("packer").startup({
 		-- 	"echasnovski/mini.nvim",
 		-- 	config = config.indentscope(),
 		-- })
-		use("nvim-treesitter/nvim-treesitter-textobjects")
+		-- use("nvim-treesitter/nvim-treesitter-textobjects")
 		-- use("windwp/nvim-ts-autotag")
 		-- use("itchyny/vim-cursorword")
 		-- use("tpope/vim-surround")
@@ -74,18 +74,18 @@ return require("packer").startup({
 		-- 	"AndrewRadev/splitjoin.vim",
 		-- 	config = config.splitjoin(),
 		-- })
-		use({
-			"wellle/targets.vim",
-			config = config.targets(),
-		})
+		-- use({
+		-- 	"wellle/targets.vim",
+		-- 	config = config.targets(),
+		-- })
 		-- use({
 		-- 	"windwp/nvim-autopairs",
 		-- 	config = require("config.autopairs")(),
 		-- })
-		use({
-			"chaoren/vim-wordmotion",
-			config = config.wordmotion(),
-		})
+		-- use({
+		-- 	"chaoren/vim-wordmotion",
+		-- 	config = config.wordmotion(),
+		-- })
 		-- use({
 		-- 	"kana/vim-arpeggio",
 		-- 	config = config.arpeggio(),
@@ -94,19 +94,19 @@ return require("packer").startup({
 		-- 	"ahmedkhalf/project.nvim",
 		-- 	config = config.project(),
 		-- })
-		use({
-			"nvim-lualine/lualine.nvim",
-			requires = { "kyazdani42/nvim-web-devicons", opt = true },
-			config = "require('config.lualine')()",
-		})
+		-- use({
+		-- 	"nvim-lualine/lualine.nvim",
+		-- 	requires = { "kyazdani42/nvim-web-devicons", opt = true },
+		-- 	config = "require('config.lualine')()",
+		-- })
 		-- use({
 		-- 	"jeetsukumaran/vim-indentwise",
 		-- 	config = config.indentwise(),
 		-- })
-		use({
-			"gbprod/cutlass.nvim",
-			config = config.cutlass(),
-		})
+		-- use({
+		-- 	"gbprod/cutlass.nvim",
+		-- 	config = config.cutlass(),
+		-- })
 		-- use({
 		-- 	"justinmk/vim-sneak",
 		-- 	config = config.sneak(),
