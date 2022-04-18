@@ -4,13 +4,13 @@ require("mappings").core()
 return require("packer").startup({
 	function(use)
 		local config = require("config")
-		use("lewis6991/impatient.nvim")
+		-- use("lewis6991/impatient.nvim")
 		use({
 			"wbthomason/packer.nvim",
 			config = config.packer(),
 		})
 		use("nvim-lua/plenary.nvim")
-		use("kyazdani42/nvim-web-devicons")
+		-- use("kyazdani42/nvim-web-devicons")
 		use({
 			"folke/tokyonight.nvim",
 			config = config.tokyonight(),
@@ -25,12 +25,12 @@ return require("packer").startup({
 			"williamboman/nvim-lsp-installer",
 			config = require("config.lsp")(),
 		})
-		use({
-			"ms-jpq/coq_nvim",
-			branch = "coq",
-			config = require("config.coq")(),
-			requires = { "ms-jpq/coq.artifacts", branch = "artifacts" },
-		})
+		-- use({
+		-- 	"ms-jpq/coq_nvim",
+		-- 	branch = "coq",
+		-- 	config = require("config.coq")(),
+		-- 	requires = { "ms-jpq/coq.artifacts", branch = "artifacts" },
+		-- })
 		-- use({
 		-- 	"is0n/fm-nvim",
 		-- 	config = config.fm(),
