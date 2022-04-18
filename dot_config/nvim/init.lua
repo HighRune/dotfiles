@@ -13,14 +13,14 @@ return require("packer").startup({
 		-- use("kyazdani42/nvim-web-devicons")
 		use({
 			"folke/tokyonight.nvim",
-			config = config.tokyonight(),
+			-- config = config.tokyonight(),
 		})
-		use({
-			"nvim-treesitter/nvim-treesitter",
-			config = require("config.treesitter")(),
-			run = ":TSUpdate",
-		})
-		use("neovim/nvim-lspconfig")
+		-- use({
+		-- 	"nvim-treesitter/nvim-treesitter",
+		-- 	config = require("config.treesitter")(),
+		-- 	run = ":TSUpdate",
+		-- })
+		-- use("neovim/nvim-lspconfig")
 		-- use({
 		-- 	"williamboman/nvim-lsp-installer",
 		-- 	config = require("config.lsp")(),
