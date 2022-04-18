@@ -72,63 +72,63 @@ return require("packer").startup({
 		use("p00f/nvim-ts-rainbow")
 		use({
 			"AndrewRadev/splitjoin.vim",
-			-- config = config.splitjoin(),
+			config = config.splitjoin(),
 		})
 		use({
 			"wellle/targets.vim",
-			-- config = config.targets(),
+			config = config.targets(),
 		})
 		use({
 			"windwp/nvim-autopairs",
-			-- config = require("config.autopairs")(),
+			config = require("config.autopairs")(),
 		})
 		use({
 			"chaoren/vim-wordmotion",
-			-- config = config.wordmotion(),
+			config = config.wordmotion(),
 		})
 		use({
 			"kana/vim-arpeggio",
-			-- config = config.arpeggio(),
+			config = config.arpeggio(),
 		})
 		use({
 			"ahmedkhalf/project.nvim",
-			-- config = config.project(),
+			config = config.project(),
 		})
-		-- use({
-		-- 	"nvim-lualine/lualine.nvim",
-		-- 	requires = { "kyazdani42/nvim-web-devicons", opt = true },
-		-- 	config = "require('config.lualine')()",
-		-- })
+		use({
+			"nvim-lualine/lualine.nvim",
+			requires = { "kyazdani42/nvim-web-devicons", opt = true },
+			-- config = "require('config.lualine')()",
+		})
 		-- use({
 		-- 	"jeetsukumaran/vim-indentwise",
 		-- 	config = config.indentwise(),
 		-- })
-		-- use({
-		-- 	"gbprod/cutlass.nvim",
-		-- 	config = config.cutlass(),
-		-- })
-		-- use({
-		-- 	"justinmk/vim-sneak",
-		-- 	config = config.sneak(),
-		-- })
-		-- use({
-		-- 	"ibhagwan/fzf-lua",
-		-- 	config = config.fzf(),
-		-- })
+		use({
+			"gbprod/cutlass.nvim",
+			-- config = config.cutlass(),
+		})
+		use({
+			"justinmk/vim-sneak",
+			-- config = config.sneak(),
+		})
+		use({
+			"ibhagwan/fzf-lua",
+			-- config = config.fzf(),
+		})
 		-- use({
 		-- 	"kevinhwang91/nvim-bqf",
 		-- })
-		-- use({
-		-- 	"monaqa/dial.nvim",
-		-- 	config = config.dial(),
-		-- })
-		-- use({
-		-- 	"machakann/vim-highlightedyank",
-		-- 	config = config.highlightedyank(),
-		-- })
-		-- use("tpope/vim-repeat")
-		-- use("svban/YankAssassin.vim")
-		-- use("D4KU/vim-textobj-chainmember")
+		use({
+			"monaqa/dial.nvim",
+			-- config = config.dial(),
+		})
+		use({
+			"machakann/vim-highlightedyank",
+			-- config = config.highlightedyank(),
+		})
+		use("tpope/vim-repeat")
+		use("svban/YankAssassin.vim")
+		use("D4KU/vim-textobj-chainmember")
 		use({
 			"kana/vim-textobj-user",
 			config = config.textobjuser(),
