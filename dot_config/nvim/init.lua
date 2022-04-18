@@ -43,10 +43,10 @@ return require("packer").startup({
 			"norcalli/nvim-colorizer.lua",
 			config = config.colorizer,
 		})
-		use({
-			"nacro90/numb.nvim",
-			config = config.numb,
-		})
+		-- use({
+		-- 	"nacro90/numb.nvim",
+		-- 	config = config.numb,
+		-- })
 		-- use({
 		-- 	"echasnovski/mini.nvim",
 		-- 	config = config.indentscope(),
