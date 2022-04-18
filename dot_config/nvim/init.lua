@@ -17,7 +17,7 @@ return require("packer").startup({
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
-			config = require("config.treesitter")(),
+			-- config = require("config.treesitter")(),
 			run = ":TSUpdate",
 		})
 		-- use("neovim/nvim-lspconfig")
