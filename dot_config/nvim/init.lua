@@ -11,10 +11,10 @@ return require("packer").startup({
 		})
 		use("nvim-lua/plenary.nvim")
 		use("kyazdani42/nvim-web-devicons")
-		use({
-			"folke/tokyonight.nvim",
-			config = config.tokyonight(),
-		})
+		-- use({
+		-- 	"folke/tokyonight.nvim",
+		-- 	config = config.tokyonight(),
+		-- })
 		use({
 			"nvim-treesitter/nvim-treesitter",
 			config = require("config.treesitter")(),
@@ -94,11 +94,11 @@ return require("packer").startup({
 			"ahmedkhalf/project.nvim",
 			config = config.project(),
 		})
-		-- use({
-		-- 	"nvim-lualine/lualine.nvim",
-		-- 	requires = { "kyazdani42/nvim-web-devicons", opt = true },
-		-- 	config = "require('config.lualine')()",
-		-- })
+		use({
+			"nvim-lualine/lualine.nvim",
+			requires = { "kyazdani42/nvim-web-devicons", opt = true },
+			config = "require('config.lualine')()",
+		})
 		use({
 			"jeetsukumaran/vim-indentwise",
 			config = config.indentwise(),
