@@ -11,10 +11,10 @@ return require("packer").startup({
 		})
 		use("nvim-lua/plenary.nvim")
 		use("kyazdani42/nvim-web-devicons")
-		-- use({
-		-- 	"folke/tokyonight.nvim",
-		-- 	config = config.tokyonight(),
-		-- })
+		use({
+			"folke/tokyonight.nvim",
+			config = config.tokyonight(),
+		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
 			config = require("config.treesitter")(),
@@ -55,10 +55,10 @@ return require("packer").startup({
 		use("windwp/nvim-ts-autotag")
 		use("itchyny/vim-cursorword")
 		use("tpope/vim-surround")
-		use({
-			"akinsho/bufferline.nvim",
-			config = config.bufferline(),
-		})
+		-- use({
+		-- 	"akinsho/bufferline.nvim",
+		-- 	config = config.bufferline(),
+		-- })
 		use({
 			"sbdchd/neoformat",
 			config = config.neoformat(),
