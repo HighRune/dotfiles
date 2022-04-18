@@ -99,10 +99,6 @@ return require("packer").startup({
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
 			config = "require('config.lualine')()",
 		})
-		-- use({
-		-- 	"jeetsukumaran/vim-indentwise",
-		-- 	config = config.indentwise(),
-		-- })
 		use({
 			"gbprod/cutlass.nvim",
 			config = config.cutlass(),
@@ -115,9 +111,6 @@ return require("packer").startup({
 			"ibhagwan/fzf-lua",
 			config = config.fzf(),
 		})
-		-- use({
-		-- 	"kevinhwang91/nvim-bqf",
-		-- })
 		use({
 			"monaqa/dial.nvim",
 			config = config.dial(),
@@ -158,6 +151,13 @@ return require("packer").startup({
 	},
 })
 
+-- use({
+-- 	"jeetsukumaran/vim-indentwise",
+-- 	config = config.indentwise(),
+-- })
+-- use({
+-- 	"kevinhwang91/nvim-bqf",
+-- })
 -- use("nvim-treesitter/playground")
 -- use({
 -- 	"jeetsukumaran/vim-indentwise",
