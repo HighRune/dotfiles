@@ -23,14 +23,14 @@ return require("packer").startup({
 		use("neovim/nvim-lspconfig")
 		use({
 			"williamboman/nvim-lsp-installer",
-			config = require("config.lsp")(),
+			-- config = require("config.lsp")(),
 		})
-		-- use({
-		-- 	"ms-jpq/coq_nvim",
-		-- 	branch = "coq",
-		-- 	config = require("config.coq")(),
-		-- 	requires = { "ms-jpq/coq.artifacts", branch = "artifacts" },
-		-- })
+		use({
+			"ms-jpq/coq_nvim",
+			branch = "coq",
+			config = require("config.coq")(),
+			requires = { "ms-jpq/coq.artifacts", branch = "artifacts" },
+		})
 		-- use({
 		-- 	"is0n/fm-nvim",
 		-- 	config = config.fm(),
