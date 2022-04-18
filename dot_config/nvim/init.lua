@@ -111,10 +111,10 @@ return require("packer").startup({
 			"justinmk/vim-sneak",
 			config = config.sneak(),
 		})
-		use({
-			"ibhagwan/fzf-lua",
-			config = config.fzf(),
-		})
+		-- use({
+		-- 	"ibhagwan/fzf-lua",
+		-- 	config = config.fzf(),
+		-- })
 		-- use({
 		-- 	"kevinhwang91/nvim-bqf",
 		-- })
