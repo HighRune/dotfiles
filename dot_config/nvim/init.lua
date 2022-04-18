@@ -33,11 +33,11 @@ return require("packer").startup({
 		})
 		use({
 			"is0n/fm-nvim",
-			config = config.fm(),
+			-- config = config.fm(),
 		})
 		use({
 			"lewis6991/gitsigns.nvim",
-			config = config.gitsigns(),
+			-- config = config.gitsigns(),
 		})
 		-- use({
 		-- 	"norcalli/nvim-colorizer.lua",
