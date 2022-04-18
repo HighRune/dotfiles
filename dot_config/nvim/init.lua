@@ -20,7 +20,7 @@ return require("packer").startup({
 			config = require("config.treesitter")(),
 			run = ":TSUpdate",
 		})
-		-- use("neovim/nvim-lspconfig")
+		use("neovim/nvim-lspconfig")
 		-- use({
 		-- 	"williamboman/nvim-lsp-installer",
 		-- 	config = require("config.lsp")(),
