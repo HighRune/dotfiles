@@ -122,22 +122,22 @@ return require("packer").startup({
 		-- 	"monaqa/dial.nvim",
 		-- 	config = config.dial(),
 		-- })
-		use({
-			"machakann/vim-highlightedyank",
-			config = config.highlightedyank(),
-		})
-		use("tpope/vim-repeat")
-		use("svban/YankAssassin.vim")
-		use("D4KU/vim-textobj-chainmember")
+		-- use({
+		-- 	"machakann/vim-highlightedyank",
+		-- 	config = config.highlightedyank(),
+		-- })
+		-- use("tpope/vim-repeat")
+		-- use("svban/YankAssassin.vim")
+		-- use("D4KU/vim-textobj-chainmember")
 		use({
 			"kana/vim-textobj-user",
-			-- config = config.textobjuser(),
+			config = config.textobjuser(),
 		})
 		use("glts/vim-textobj-comment")
-		use({
-			"kana/vim-submode",
-			config = config.submode(),
-		})
+		-- use({
+		-- 	"kana/vim-submode",
+		-- 	config = config.submode(),
+		-- })
 		-- use("/home/charles/Documents/dev/plugins/putline.nvim")
 	end,
 	config = {
