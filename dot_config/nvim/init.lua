@@ -119,14 +119,13 @@ return require("packer").startup({
 			"machakann/vim-highlightedyank",
 			config = config.highlightedyank(),
 		})
-		use("tpope/vim-repeat")
 		use("svban/YankAssassin.vim")
-		use("D4KU/vim-textobj-chainmember")
 		use({
 			"kana/vim-textobj-user",
 			config = config.textobjuser(),
 		})
 		use("glts/vim-textobj-comment")
+		use("D4KU/vim-textobj-chainmember")
 		use({
 			"kana/vim-submode",
 			config = config.submode(),
@@ -155,6 +154,7 @@ return require("packer").startup({
 	},
 })
 
+-- use("tpope/vim-repeat")
 -- use({
 -- 	"jeetsukumaran/vim-indentwise",
 -- 	config = config.indentwise(),
