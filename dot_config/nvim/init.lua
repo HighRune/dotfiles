@@ -136,7 +136,7 @@ return require("packer").startup({
 		use("glts/vim-textobj-comment")
 		use({
 			"kana/vim-submode",
-			-- config = config.submode(),
+			config = config.submode(),
 		})
 		use("/home/charles/Documents/dev/plugins/putline.nvim")
 	end,
