@@ -90,10 +90,10 @@ return require("packer").startup({
 		-- 	"kana/vim-arpeggio",
 		-- 	config = config.arpeggio(),
 		-- })
-		use({
-			"ahmedkhalf/project.nvim",
-			config = config.project(),
-		})
+		-- use({
+		-- 	"ahmedkhalf/project.nvim",
+		-- 	config = config.project(),
+		-- })
 		use({
 			"nvim-lualine/lualine.nvim",
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
