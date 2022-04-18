@@ -35,10 +35,10 @@ return require("packer").startup({
 		-- 	"is0n/fm-nvim",
 		-- 	config = config.fm(),
 		-- })
-		use({
-			"lewis6991/gitsigns.nvim",
-			config = config.gitsigns(),
-		})
+		-- use({
+		-- 	"lewis6991/gitsigns.nvim",
+		-- 	config = config.gitsigns(),
+		-- })
 		use({
 			"norcalli/nvim-colorizer.lua",
 			config = config.colorizer,
