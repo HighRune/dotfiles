@@ -131,7 +131,7 @@ return require("packer").startup({
 			"kana/vim-submode",
 			config = config.submode(),
 		})
-		-- use("/home/charles/Documents/dev/plugins/putline.nvim")
+		use("/home/charles/Documents/dev/plugins/putline.nvim")
 	end,
 	config = {
 		display = {
