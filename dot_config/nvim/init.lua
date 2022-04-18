@@ -115,9 +115,9 @@ return require("packer").startup({
 			"ibhagwan/fzf-lua",
 			config = config.fzf(),
 		})
-		use({
-			"kevinhwang91/nvim-bqf",
-		})
+		-- use({
+		-- 	"kevinhwang91/nvim-bqf",
+		-- })
 		use({
 			"monaqa/dial.nvim",
 			config = config.dial(),
