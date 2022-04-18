@@ -97,7 +97,7 @@ return require("packer").startup({
 		use({
 			"nvim-lualine/lualine.nvim",
 			requires = { "kyazdani42/nvim-web-devicons", opt = true },
-			-- config = "require('config.lualine')()",
+			config = "require('config.lualine')()",
 		})
 		-- use({
 		-- 	"jeetsukumaran/vim-indentwise",
@@ -105,26 +105,26 @@ return require("packer").startup({
 		-- })
 		use({
 			"gbprod/cutlass.nvim",
-			-- config = config.cutlass(),
+			config = config.cutlass(),
 		})
 		use({
 			"justinmk/vim-sneak",
-			-- config = config.sneak(),
+			config = config.sneak(),
 		})
 		use({
 			"ibhagwan/fzf-lua",
-			-- config = config.fzf(),
+			config = config.fzf(),
 		})
 		-- use({
 		-- 	"kevinhwang91/nvim-bqf",
 		-- })
 		use({
 			"monaqa/dial.nvim",
-			-- config = config.dial(),
+			config = config.dial(),
 		})
 		use({
 			"machakann/vim-highlightedyank",
-			-- config = config.highlightedyank(),
+			config = config.highlightedyank(),
 		})
 		use("tpope/vim-repeat")
 		use("svban/YankAssassin.vim")
@@ -134,11 +134,11 @@ return require("packer").startup({
 			config = config.textobjuser(),
 		})
 		use("glts/vim-textobj-comment")
-		-- use({
-		-- 	"kana/vim-submode",
-		-- 	config = config.submode(),
-		-- })
-		-- use("/home/charles/Documents/dev/plugins/putline.nvim")
+		use({
+			"kana/vim-submode",
+			-- config = config.submode(),
+		})
+		use("/home/charles/Documents/dev/plugins/putline.nvim")
 	end,
 	config = {
 		display = {
