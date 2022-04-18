@@ -132,7 +132,7 @@ return require("packer").startup({
 			config = config.submode(),
 		})
 		use({
-			"/home/charles/Documents/dev/plugins/putline",
+			"/home/charles/Documents/dev/plugins/putline.nvim",
 			config = require("putline").setup(),
 		})
 	end,
