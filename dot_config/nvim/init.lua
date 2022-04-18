@@ -41,15 +41,15 @@ return require("packer").startup({
 		})
 		use({
 			"norcalli/nvim-colorizer.lua",
-			-- config = config.colorizer,
+			config = config.colorizer,
 		})
 		use({
 			"nacro90/numb.nvim",
-			-- config = config.numb,
+			config = config.numb,
 		})
 		use({
 			"echasnovski/mini.nvim",
-			-- config = config.indentscope(),
+			config = config.indentscope(),
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
 		use("windwp/nvim-ts-autotag")
@@ -57,7 +57,7 @@ return require("packer").startup({
 		use("tpope/vim-surround")
 		use({
 			"akinsho/bufferline.nvim",
-			-- config = config.bufferline(),
+			config = config.bufferline(),
 		})
 		use({
 			"sbdchd/neoformat",
@@ -67,33 +67,33 @@ return require("packer").startup({
 			"numToStr/Comment.nvim",
 			config = config.comment(),
 		})
-		-- use("tommcdo/vim-lion")
-		-- use("tommcdo/vim-exchange")
-		-- use("p00f/nvim-ts-rainbow")
-		-- use({
-		-- 	"AndrewRadev/splitjoin.vim",
-		-- 	config = config.splitjoin(),
-		-- })
-		-- use({
-		-- 	"wellle/targets.vim",
-		-- 	config = config.targets(),
-		-- })
-		-- use({
-		-- 	"windwp/nvim-autopairs",
-		-- 	config = require("config.autopairs")(),
-		-- })
-		-- use({
-		-- 	"chaoren/vim-wordmotion",
-		-- 	config = config.wordmotion(),
-		-- })
-		-- use({
-		-- 	"kana/vim-arpeggio",
-		-- 	config = config.arpeggio(),
-		-- })
-		-- use({
-		-- 	"ahmedkhalf/project.nvim",
-		-- 	config = config.project(),
-		-- })
+		use("tommcdo/vim-lion")
+		use("tommcdo/vim-exchange")
+		use("p00f/nvim-ts-rainbow")
+		use({
+			"AndrewRadev/splitjoin.vim",
+			-- config = config.splitjoin(),
+		})
+		use({
+			"wellle/targets.vim",
+			-- config = config.targets(),
+		})
+		use({
+			"windwp/nvim-autopairs",
+			-- config = require("config.autopairs")(),
+		})
+		use({
+			"chaoren/vim-wordmotion",
+			-- config = config.wordmotion(),
+		})
+		use({
+			"kana/vim-arpeggio",
+			-- config = config.arpeggio(),
+		})
+		use({
+			"ahmedkhalf/project.nvim",
+			-- config = config.project(),
+		})
 		-- use({
 		-- 	"nvim-lualine/lualine.nvim",
 		-- 	requires = { "kyazdani42/nvim-web-devicons", opt = true },
