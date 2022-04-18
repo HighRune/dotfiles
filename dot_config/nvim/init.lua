@@ -57,7 +57,7 @@ return require("packer").startup({
 		use("tpope/vim-surround")
 		use({
 			"akinsho/bufferline.nvim",
-			-- config = config.bufferline(),
+			config = config.bufferline(),
 		})
 		use({
 			"sbdchd/neoformat",
