@@ -31,14 +31,14 @@ return require("packer").startup({
 			config = require("config.coq")(),
 			requires = { "ms-jpq/coq.artifacts", branch = "artifacts" },
 		})
-		-- use({
-		-- 	"is0n/fm-nvim",
-		-- 	config = config.fm(),
-		-- })
-		-- use({
-		-- 	"lewis6991/gitsigns.nvim",
-		-- 	config = config.gitsigns(),
-		-- })
+		use({
+			"is0n/fm-nvim",
+			config = config.fm(),
+		})
+		use({
+			"lewis6991/gitsigns.nvim",
+			config = config.gitsigns(),
+		})
 		-- use({
 		-- 	"norcalli/nvim-colorizer.lua",
 		-- 	config = config.colorizer,
