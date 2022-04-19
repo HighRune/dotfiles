@@ -83,8 +83,27 @@ local colors = {
 		-- },
 		{
 			"mode",
-			padding = { left = 0, right = 0 },
+			padding = { left = 0, right = 1 },
 			fmt = string.lower,
+		},
+
+		--------------------------- Mid section
+		{
+			function()
+				return "%="
+			end,
+		},
+		{
+			"filetype",
+			colored = true, -- Displays filetype icon in color if set to true
+			icon_only = true, -- Display only an icon for filetype
+			padding = { left = 0, right = 1 },
+		},
+		{
+			"filename",
+			cond = conditions.buffer_not_empty,
+			file_status = false,
+			padding = { left = 0, right = 0 },
 		},
 		{
 			"diagnostics",
@@ -98,13 +117,9 @@ local colors = {
 			-- 	hint = { fg = colors.cyan },
 			-- },
 		},
+	}
 
-		--------------------------- Mid section
-		{
-			function()
-				return "%="
-			end,
-		},
+	local sectionRight = {
 		{
 			"diff",
 			-- symbols = { added = " ", modified = " ", removed = " " },
@@ -116,20 +131,6 @@ local colors = {
 			-- },
 			cond = conditions.hide_in_width,
 		},
-		{
-			"filetype",
-			colored = true, -- Displays filetype icon in color if set to true
-			icon_only = true, -- Display only an icon for filetype
-			padding = { left = 0, right = 1 },
-		},
-		{
-			"filename",
-			cond = conditions.buffer_not_empty,
-			padding = { left = 0, right = 0 },
-		},
-	}
-
-	local sectionRight = {
 		{
 			"branch",
 			icon = "",
