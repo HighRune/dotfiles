@@ -317,6 +317,10 @@ local function fzf()
 				["<C-e>"] = "preview-page-down",
 				["<C-u>"] = "preview-page-up",
 			},
+			fzf = {
+				["tab"] = "down",
+				["btab"] = "up",
+			},
 		},
 		actions = {
 			files = {
