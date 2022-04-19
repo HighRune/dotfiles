@@ -312,20 +312,20 @@ local function fzf()
 				scrollchars = { "▎", "" },
 			},
 		},
-		keymap = {
-			-- 	builtin = {
-			-- 		["<C-e>"] = "preview-page-down",
-			-- 		["<C-u>"] = "preview-page-up",
-			-- 	},
-			fzf = {
-				["tab"] = "down",
-				["btab"] = "up",
-			},
-			buffers = {
-				["tab"] = "down",
-				["btab"] = "up",
-			},
-		},
+		-- keymap = {
+		-- 	builtin = {
+		-- 		["<C-e>"] = "preview-page-down",
+		-- 		["<C-u>"] = "preview-page-up",
+		-- 	},
+		-- fzf = {
+		-- 	["tab"] = "down",
+		-- 	["btab"] = "up",
+		-- },
+		-- buffers = {
+		-- 	["tab"] = "down",
+		-- 	["btab"] = "up",
+		-- },
+		-- },
 		actions = {
 			files = {
 				["default"] = actions.file_edit,
