@@ -313,13 +313,12 @@ local function fzf()
 			},
 		},
 		keymap = {
-			builtin = {
-				["<C-e>"] = "preview-page-down",
-				["<C-u>"] = "preview-page-up",
-			},
+			builtin = {},
 			fzf = {
 				["tab"] = "down",
 				["btab"] = "up",
+				["<C-e>"] = "preview-page-down",
+				["<C-u>"] = "preview-page-up",
 			},
 		},
 		actions = {
