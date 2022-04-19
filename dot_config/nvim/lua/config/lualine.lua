@@ -112,7 +112,10 @@ local colors = {
 		},
 
 		--------------------------- Mid section
-		{ "%=" },
+		-- { "%=" },
+	}
+
+	local sectionRight = {
 		{
 			"diff",
 			-- symbols = { added = " ", modified = " ", removed = " " },
@@ -130,9 +133,6 @@ local colors = {
 			fmt = trunc(120, 60, 60, true),
 			padding = { right = 0, left = 0 },
 		},
-	}
-
-	local sectionRight = {
 		-- {
 		-- 	"filesize",
 		-- 	cond = conditions.buffer_not_empty,
@@ -155,6 +155,7 @@ local colors = {
 			-- Disable sections and component separators
 			component_separators = "",
 			section_separators = "",
+			always_divide_middle = true,
 			globalstatus = true,
 			theme = {
 				-- We are going to use lualine_c an lualine_x as left and
