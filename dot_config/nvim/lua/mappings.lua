@@ -38,8 +38,8 @@ local function core()
 	map("n", "&", "g^")
 	map("n", "<S-CR>", "-")
 	-- -- Quickfix list
-	-- map("n", "<C-j>", ":cnext<CR>")
-	-- map("n", "<C-k>", ":cprev<CR>")
+	map("n", "<C-j>", ":cnext<CR>")
+	map("n", "<C-k>", ":cprev<CR>")
 
 	-- New line
 	-- map("n", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", silent)
