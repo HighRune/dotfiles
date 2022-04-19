@@ -40,6 +40,7 @@ local function core()
 	-- -- Quickfix list
 	-- map("n", "<C-j>", ":cnext<CR>")
 	-- map("n", "<C-k>", ":cprev<CR>")
+	map("n", "<leader>q", ":bwipeout<cr>", silent)
 	map("n", "<tab>", ":bnext<CR>", silent)
 	map("n", "<s-tab>", ":bprevious<CR>", silent)
 
@@ -221,7 +222,6 @@ end
 local function bufferline()
 	-- map("n", "<tab>", ":BufferLineCycleNext<cr>", silent)
 	-- map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", silent)
-	-- map("n", "<leader>q", ":bw<cr>", silent)
 	-- map("n", "<pageup>", ":BufferLineMovePrev<cr>", silent)
 	-- map("n", "<pagedown>", ":BufferLineMoveNext<cr>", silent)
 end
