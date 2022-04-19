@@ -321,10 +321,10 @@ local function fzf()
 			-- 	["tab"] = "down",
 			-- 	["btab"] = "up",
 			-- },
-			-- buffers = {
-			-- 	["tab"] = "down",
-			-- 	["btab"] = "up",
-			-- },
+			buffers = {
+				["tab"] = "down",
+				["btab"] = "up",
+			},
 		},
 		actions = {
 			files = {
