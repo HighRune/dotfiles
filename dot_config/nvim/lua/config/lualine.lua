@@ -117,9 +117,6 @@ local colors = {
 			-- 	hint = { fg = colors.cyan },
 			-- },
 		},
-	}
-
-	local sectionRight = {
 		{
 			"diff",
 			-- symbols = { added = " ", modified = " ", removed = " " },
@@ -131,6 +128,9 @@ local colors = {
 			-- },
 			cond = conditions.hide_in_width,
 		},
+	}
+
+	local sectionRight = {
 		{
 			"branch",
 			icon = "",
