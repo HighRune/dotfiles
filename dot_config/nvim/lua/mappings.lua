@@ -40,8 +40,8 @@ local function core()
 	-- -- Quickfix list
 	-- map("n", "<C-j>", ":cnext<CR>")
 	-- map("n", "<C-k>", ":cprev<CR>")
-	map("n", "<tab>", ":bnext<CR>", silent)
-	map("n", "<s-tab>", ":bprevious<CR>", silent)
+	-- map("n", "<tab>", ":bnext<CR>", silent)
+	-- map("n", "<s-tab>", ":bprevious<CR>", silent)
 
 	-- New line
 	-- map("n", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", silent)
@@ -105,7 +105,7 @@ end
 -------------------- junegunn/fzf
 local function fzf()
 	map("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>")
-	map("n", "<tab>", "<cmd>lua require('fzf-lua').buffers()<CR>")
+	map("n", "<leader>b", "<cmd>lua require('fzf-lua').buffers()<CR>")
 	map("n", "<leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
 end
 
