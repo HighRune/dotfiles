@@ -315,8 +315,8 @@ local function fzf()
 		keymap = {
 			builtin = {},
 			fzf = {
-				["tab"] = "down",
-				["btab"] = "up",
+				-- ["tab"] = "down",
+				-- ["btab"] = "up",
 				["ctrl-e"] = "preview-page-down",
 				["ctrl-u"] = "preview-page-up",
 			},
