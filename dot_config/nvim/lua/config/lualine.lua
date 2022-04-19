@@ -121,6 +121,11 @@ local colors = {
 
 	local sectionRight = {
 		{
+			"branch",
+			icon = "",
+			fmt = trunc(120, 60, 60, true),
+		},
+		{
 			"diff",
 			-- symbols = { added = " ", modified = " ", removed = " " },
 			symbols = { added = "+", modified = "~", removed = "-" },
@@ -130,11 +135,6 @@ local colors = {
 			-- 	removed = { fg = colors.red },
 			-- },
 			cond = conditions.hide_in_width,
-		},
-		{
-			"branch",
-			icon = "",
-			fmt = trunc(120, 60, 60, true),
 		},
 		{
 			"filesize",
