@@ -117,13 +117,24 @@ local colors = {
 			cond = conditions.hide_in_width,
 		},
 		{
-			"branch",
-			icon = "",
-			fmt = trunc(120, 60, 60, true),
+			"filetype",
+			colored = true, -- Displays filetype icon in color if set to true
+			icon_only = true, -- Display only an icon for filetype
+			padding = { left = 0, right = 1 },
+		},
+		{
+			"filename",
+			cond = conditions.buffer_not_empty,
+			padding = { left = 0, right = 0 },
 		},
 	}
 
 	local sectionRight = {
+		{
+			"branch",
+			icon = "",
+			fmt = trunc(120, 60, 60, true),
+		},
 		{
 			"filesize",
 			cond = conditions.buffer_not_empty,
