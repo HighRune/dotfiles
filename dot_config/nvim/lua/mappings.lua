@@ -38,8 +38,10 @@ local function core()
 	map("n", "&", "g^")
 	map("n", "<S-CR>", "-")
 	-- -- Quickfix list
-	map("n", "<C-j>", ":cnext<CR>")
-	map("n", "<C-k>", ":cprev<CR>")
+	-- map("n", "<C-j>", ":cnext<CR>")
+	-- map("n", "<C-k>", ":cprev<CR>")
+	map("n", "<tab>", ":bnext<CR>", silent)
+	map("n", "<s-tab>", ":bprevious<CR>", silent)
 
 	-- New line
 	-- map("n", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", silent)
@@ -222,8 +224,6 @@ local function bufferline()
 	-- map("n", "<leader>q", ":bw<cr>", silent)
 	-- map("n", "<pageup>", ":BufferLineMovePrev<cr>", silent)
 	-- map("n", "<pagedown>", ":BufferLineMoveNext<cr>", silent)
-	map("n", "<tab>", ":bnext<CR>", silent)
-	map("n", "<s-tab>", ":bprevious<CR>", silent)
 end
 
 -------------------- AndrewRadev/splitjoin.vim
