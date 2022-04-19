@@ -103,6 +103,7 @@ end
 -------------------- junegunn/fzf
 local function fzf()
 	map("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>")
+	map("n", "<leader>b", "<cmd>lua require('fzf-lua').buffers()<CR>")
 	map("n", "<leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
 end
 
