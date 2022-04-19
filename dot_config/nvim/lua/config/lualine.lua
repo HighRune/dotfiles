@@ -83,7 +83,7 @@ local colors = {
 		-- },
 		{
 			"mode",
-			padding = { left = 0, right = 1 },
+			padding = { left = 0, right = 2 },
 			fmt = string.lower,
 		},
 		{
@@ -96,14 +96,7 @@ local colors = {
 			"filename",
 			cond = conditions.buffer_not_empty,
 			file_status = false,
-			padding = { left = 0, right = 0 },
-		},
-
-		--------------------------- Mid section
-		{
-			function()
-				return "%="
-			end,
+			padding = { left = 0, right = 1 },
 		},
 		{
 			"diagnostics",
@@ -117,6 +110,9 @@ local colors = {
 			-- 	hint = { fg = colors.cyan },
 			-- },
 		},
+
+		--------------------------- Mid section
+		{ "%=" },
 		{
 			"diff",
 			-- symbols = { added = " ", modified = " ", removed = " " },
@@ -128,29 +124,30 @@ local colors = {
 			-- },
 			cond = conditions.hide_in_width,
 		},
-	}
-
-	local sectionRight = {
 		{
 			"branch",
 			icon = "",
 			fmt = trunc(120, 60, 60, true),
+			padding = { right = 0, left = 0 },
 		},
-		{
-			"filesize",
-			cond = conditions.buffer_not_empty,
-			padding = { right = 0, left = 1 },
-		},
-		{
-			"o:encoding",
-			cond = conditions.hide_in_width,
-			padding = { right = 0, left = 1 },
-		},
-		{
-			"fileformat",
-			icons_enabled = false,
-			padding = { right = 0, left = 1 },
-		},
+	}
+
+	local sectionRight = {
+		-- {
+		-- 	"filesize",
+		-- 	cond = conditions.buffer_not_empty,
+		-- 	padding = { right = 0, left = 1 },
+		-- },
+		-- {
+		-- 	"o:encoding",
+		-- 	cond = conditions.hide_in_width,
+		-- 	padding = { right = 0, left = 1 },
+		-- },
+		-- {
+		-- 	"fileformat",
+		-- 	icons_enabled = false,
+		-- 	padding = { right = 0, left = 1 },
+		-- },
 	}
 
 	local config = {
