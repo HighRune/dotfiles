@@ -317,8 +317,8 @@ local function fzf()
 			fzf = {
 				["tab"] = "down",
 				["btab"] = "up",
-				["<ctrl-e>"] = "preview-page-down",
-				["<ctrl-u>"] = "preview-page-up",
+				["ctrl-e"] = "preview-page-down",
+				["ctrl-u"] = "preview-page-up",
 			},
 		},
 		actions = {
