@@ -15,8 +15,8 @@ local function core()
 	map("", "Q", "<nop>")
 	map("", "q", "<nop>")
 	-- Quit
-	map("n", "<C-q>", ":q!<cr>")
-	map("i", "<C-q>", "<esc>:q!<cr>")
+	map("n", "<C-q>", ":q<cr>")
+	map("i", "<C-q>", "<esc>:q<cr>")
 	-- Save
 	map("n", "<C-s>", ":w<cr>")
 	map("i", "<C-s>", "<esc>`^:w<cr>")
@@ -40,7 +40,7 @@ local function core()
 	-- -- Quickfix list
 	-- map("n", "<C-j>", ":cnext<CR>")
 	-- map("n", "<C-k>", ":cprev<CR>")
-	map("n", "<leader>q", ":bwipeout<cr>", silent)
+	map("n", "<leader>q", ":bwipeout!<cr>", silent)
 	map("n", "<tab>", ":bnext<CR>", silent)
 	map("n", "<s-tab>", ":bprevious<CR>", silent)
 
