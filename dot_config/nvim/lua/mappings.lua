@@ -42,8 +42,12 @@ local function core()
 	map("n", "<Tab>", ":bnext<CR>", silent)
 	map("n", "<S-Tab>", ":bprevious<CR>", silent)
 	-- Quickfix list
-	map("n", "<C-Down>", ":cnext<CR>", silent)
-	map("n", "<C-Up>", ":cprev<CR>", silent)
+	cmd([[
+	command! Cnext try | cnext | catch | cfirst | catch | endtry
+  command! Cprev try | cprev | catch | clast | catch | endtry
+	]])
+	map("n", "<C-Down>", ":Cnext<CR>", silent)
+	map("n", "<C-Up>", ":Cprev<CR>", silent)
 	map("n", "<Leader>q", ":copen<CR>", silent)
 	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':cclose<CR>' : ':q!<cr>'", expr)
 	-- Paste
