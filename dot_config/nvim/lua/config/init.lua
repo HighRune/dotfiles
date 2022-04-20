@@ -4,6 +4,7 @@ local fn = vim.fn
 
 -------------------- wbthomason/packer.nvim
 local function packer()
+	require("mappings").packer()
 	cmd([[
   augroup packer_user_config
     autocmd!
