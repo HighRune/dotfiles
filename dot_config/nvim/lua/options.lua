@@ -13,7 +13,7 @@ autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTe
 autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
 autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
 autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
-autocmd ColorScheme * MsgArea guifg=#03ff13
+autocmd ColorScheme * highlight MsgArea guifg=#03ff13
 autocmd User SneakLeave highlight clear Sneak
 autocmd User SneakLeave highlight clear SneakScope
 au FileType qf call AdjustWindowHeight(3, 10)
