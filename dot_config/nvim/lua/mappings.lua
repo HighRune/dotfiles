@@ -49,8 +49,6 @@ local function core()
 	-- Misc
 	map("x", "<C-n>", ":norm ")
 	-- Packer
-	map("n", "<Leader>pc", ":PackerCompile<CR>")
-	map("n", "<Leader>ps", ":PackerSync<CR>")
 
 	-- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
 	-- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
@@ -80,6 +78,12 @@ local function core()
 	-- " Map it to a key
 	-- nnoremap J :call <SID>join_spaceless()<CR>
 	-- ]])
+end
+
+-------------------- wbthomason/packer.nvim
+local function packer()
+	map("n", "<Leader>pc", ":PackerCompile<CR>")
+	map("n", "<Leader>ps", ":PackerSync<CR>")
 end
 
 -------------------- nvim-telescope/telescope.nvim
@@ -350,6 +354,7 @@ return {
 	targets = targets,
 	gitsigns = gitsigns,
 	submode = submode,
+	packer = packer,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
