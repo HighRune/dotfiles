@@ -95,9 +95,14 @@ local colors = {
 		{
 			"filename",
 			cond = conditions.buffer_not_empty,
-			file_status = false,
+			file_status = true,
 			path = 1,
 			padding = { left = 0, right = 1 },
+			symbols = {
+				modified = "*",
+				readonly = "!",
+				unnamed = "no name",
+			},
 		},
 		{
 			"diagnostics",
