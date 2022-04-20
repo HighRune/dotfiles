@@ -137,6 +137,7 @@ return require("packer").startup({
 		})
 		use({
 			"kevinhwang91/nvim-bqf",
+			ft = "qf",
 		})
 	end,
 	config = {
