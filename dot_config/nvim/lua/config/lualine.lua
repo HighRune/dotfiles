@@ -132,7 +132,6 @@ local colors = {
 			icons_enabled = false,
 			icon = "",
 			fmt = function(branchName)
-				print(branchName)
 				return branchName == "" and "" or branchName .. " "
 			end,
 			-- fmt = trunc(120, 60, 60, true),
