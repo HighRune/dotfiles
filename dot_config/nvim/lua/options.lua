@@ -15,6 +15,10 @@ autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTex
 autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
 autocmd User SneakLeave highlight clear Sneak
 autocmd User SneakLeave highlight clear SneakScope
+au FileType qf call AdjustWindowHeight(3, 10)
+function! AdjustWindowHeight(minheight, maxheight)
+  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
 ]])
 
 -- cmd([[color haslo]])
