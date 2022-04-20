@@ -160,6 +160,7 @@ local colors = {
 		-- },
 	}
 
+	-- local extension = { sections = { lualine_a = { "mode" } } }
 	local config = {
 		options = {
 			-- Disable sections and component separators
@@ -194,6 +195,8 @@ local colors = {
 			lualine_y = {},
 			lualine_z = {},
 		},
+		extensions = { "quickfix" },
+		-- extensions = { extension },
 	}
 
 	-- Now don't forget to initialize lualine
