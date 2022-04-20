@@ -135,6 +135,9 @@ return require("packer").startup({
 			"Runeword/putline.nvim",
 			config = require("putline").setup(),
 		})
+		use({
+			"kevinhwang91/nvim-bqf",
+		})
 	end,
 	config = {
 		display = {
@@ -158,9 +161,6 @@ return require("packer").startup({
 -- use({
 -- 	"jeetsukumaran/vim-indentwise",
 -- 	config = config.indentwise(),
--- })
--- use({
--- 	"kevinhwang91/nvim-bqf",
 -- })
 -- use("nvim-treesitter/playground")
 -- use({
