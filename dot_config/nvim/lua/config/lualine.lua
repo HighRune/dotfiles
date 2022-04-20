@@ -129,8 +129,11 @@ local colors = {
 		},
 		{
 			"branch",
-			icon = "",
-			fmt = trunc(120, 60, 60, true),
+			icons_enabled = false,
+			fmt = function(branchName)
+				return branchName .. " "
+			end,
+			-- fmt = trunc(120, 60, 60, true),
 			padding = { right = 0, left = 0 },
 		},
 		-- {
