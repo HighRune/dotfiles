@@ -44,6 +44,9 @@ local function core()
 	-- Quickfix list
 	map("n", "<C-Down>", ":cnext<CR>", silent)
 	map("n", "<C-Up>", ":cprev<CR>", silent)
+	cmd([[
+nnoremap <expr> <C-q> (&buftype is# "quickfix" ? ":cclose<cr>" : ":q!<cr>")
+  ]])
 	-- Paste
 	map("x", "p", '"_dP')
 	-- Misc
