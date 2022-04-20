@@ -135,10 +135,6 @@ return require("packer").startup({
 			"Runeword/putline.nvim",
 			config = require("putline").setup(),
 		})
-		use({
-			"kevinhwang91/nvim-bqf",
-			ft = "qf",
-		})
 	end,
 	config = {
 		display = {
