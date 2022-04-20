@@ -96,6 +96,7 @@ local colors = {
 			"filename",
 			cond = conditions.buffer_not_empty,
 			file_status = false,
+			path = 1,
 			padding = { left = 0, right = 1 },
 		},
 		{
