@@ -15,8 +15,8 @@ local function core()
 	map("", "Q", "<nop>")
 	map("", "q", "<nop>")
 	-- Quit
-	map("n", "<C-q>", ":q<cr>")
-	map("i", "<C-q>", "<esc>:q<cr>")
+	map("n", "<C-q>", ":q!<cr>")
+	map("i", "<C-q>", "<esc>:q!<cr>")
 	-- Save
 	map("n", "<C-s>", ":w<cr>")
 	map("i", "<C-s>", "<esc>`^:w<cr>")
