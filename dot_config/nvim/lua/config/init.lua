@@ -321,12 +321,12 @@ local function fzf()
 				["ctrl-u"] = "preview-page-up",
 			},
 		},
-		actions = {
-			files = {
-				["default"] = actions.file_edit,
-				["alt-q"] = actions.file_sel_to_qf,
-			},
-		},
+		-- actions = {
+		-- 	files = {
+		-- 		-- ["default"] = actions.file_edit,
+		-- 		-- ["alt-q"] = actions.file_sel_to_qf,
+		-- 	},
+		-- },
 	})
 end
 
