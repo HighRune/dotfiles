@@ -13,6 +13,7 @@ autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTe
 autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
 autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
 autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
+" autocmd ColorScheme * highlight VertSplit guifg=#292e42
 autocmd User SneakLeave highlight clear Sneak
 autocmd User SneakLeave highlight clear SneakScope
 au FileType qf call AdjustWindowHeight(3, 10)
@@ -24,6 +25,7 @@ endfunction
 -- cmd([[color haslo]])
 
 -- o.scroll = 5
+opt.fillchars:append("horiz:.")
 g.mapleader = " "
 o.mouse = "a" -- Enables mouse support
 -- o.cursorline = true
