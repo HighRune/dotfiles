@@ -44,14 +44,11 @@ local function core()
 	-- Quickfix list
 	map("n", "<C-Down>", ":cnext<CR>", silent)
 	map("n", "<C-Up>", ":cprev<CR>", silent)
-	cmd([[
-nnoremap <expr> <C-q> (&buftype is# "quickfix" ? ":cclose<cr>" : ":q!<cr>")
-  ]])
+	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':cclose<CR>' : ':q!<cr>'", expr)
 	-- Paste
 	map("x", "p", '"_dP')
 	-- Misc
 	map("x", "<C-n>", ":norm ")
-	-- Packer
 
 	-- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
 	-- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
