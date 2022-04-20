@@ -42,15 +42,15 @@ local function core()
 	map("n", "<Tab>", ":bnext<CR>", silent)
 	map("n", "<S-Tab>", ":bprevious<CR>", silent)
 	-- Quickfix list
-	map("n", "<C-j>", ":cnext<CR>")
-	map("n", "<C-k>", ":cprev<CR>")
+	map("n", "<C-Down>", ":cnext<CR>", silent)
+	map("n", "<C-Up>", ":cprev<CR>", silent)
 	-- Paste
 	map("x", "p", '"_dP')
 	-- Misc
 	map("x", "<C-n>", ":norm ")
 	-- Packer
-	map("n", "<Leader>pc", ":PackerCompile")
-	map("n", "<Leader>ps", ":PackerSync")
+	map("n", "<Leader>pc", ":PackerCompile<CR>")
+	map("n", "<Leader>ps", ":PackerSync<CR>")
 
 	-- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
 	-- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
