@@ -135,6 +135,7 @@ return require("packer").startup({
 			"Runeword/putline.nvim",
 			config = require("putline").setup(),
 		})
+		use("ryvnf/readline.vim")
 	end,
 	config = {
 		display = {
