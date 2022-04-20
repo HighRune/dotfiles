@@ -38,9 +38,9 @@ local function core()
 	map("n", "&", "g^")
 	map("n", "<S-CR>", "-")
 	-- Buffers
-	map("n", "<leader>q", ":bwipeout!<cr>", silent)
-	map("n", "<tab>", ":bnext<CR>", silent)
-	map("n", "<s-tab>", ":bprevious<CR>", silent)
+	map("n", "<Leader>q", ":bwipeout!<CR>", silent)
+	map("n", "<Tab>", ":bnext<CR>", silent)
+	map("n", "<S-Tab>", ":bprevious<CR>", silent)
 	-- Quickfix list
 	map("n", "<C-j>", ":cnext<CR>")
 	map("n", "<C-k>", ":cprev<CR>")
@@ -48,6 +48,9 @@ local function core()
 	map("x", "p", '"_dP')
 	-- Misc
 	map("x", "<C-n>", ":norm ")
+	-- Packer
+	map("n", "<Leader>pc", ":PackerCompile")
+	map("n", "<Leader>ps", ":PackerSync")
 
 	-- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
 	-- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
