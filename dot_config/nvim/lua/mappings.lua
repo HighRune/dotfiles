@@ -105,10 +105,10 @@ end
 
 -------------------- junegunn/fzf
 local function fzf()
-	map("n", "<leader><leader>", "<cmd>lua require('fzf-lua').files()<CR>")
-	map("n", "<leader>b", "<cmd>lua require('fzf-lua').buffers()<CR>")
-	map("n", "<leader>k", "<cmd>lua require('fzf-lua').quickfix()<CR>")
-	map("n", "<leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
+	map("n", "<Leader><Leader>", "<cmd>lua require('fzf-lua').files()<CR>")
+	map("n", "<Leader><Tab>", "<cmd>lua require('fzf-lua').buffers()<CR>")
+	map("n", "<Leader>k", "<cmd>lua require('fzf-lua').quickfix()<CR>")
+	map("n", "<Leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
 end
 
 -------------------- wellle/targets.vim
