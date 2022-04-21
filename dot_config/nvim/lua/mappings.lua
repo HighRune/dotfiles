@@ -42,7 +42,7 @@ local function core()
 	map("n", "<C-Down>", ":try | cnext | catch | cfirst | catch | endtry<CR>", silent)
 	map("n", "<C-Up>", ":try | cprev | catch | clast | catch | endtry<CR>", silent)
 	map("n", "<Leader>i", ":copen<CR>", silent)
-	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':cclose<CR>' : ':q!<CR>'", expr)
+	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 	-- Paste
 	map("x", "p", '"_dP')
 	-- Misc
