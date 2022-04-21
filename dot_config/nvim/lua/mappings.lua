@@ -41,6 +41,12 @@ local function core()
 	-- Quickfix list
 	map("n", "<C-Down>", ":try | cnext | catch | cfirst | catch | endtry<CR>", silent)
 	map("n", "<C-Up>", ":try | cprev | catch | clast | catch | endtry<CR>", silent)
+	-- map("n", "<C-Up>", function()
+	-- 	local ok, result = pcall(cmd, "cprev")
+	-- 	if ok == false then
+	-- 		pcall(cmd, "clast")
+	-- 	end
+	-- end, silent)
 	map("n", "<Leader>i", ":copen<CR>", silent)
 	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 	-- Paste
