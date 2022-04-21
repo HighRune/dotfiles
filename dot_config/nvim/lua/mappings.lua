@@ -82,10 +82,7 @@ local function core()
 end
 
 -------------------- wbthomason/packer.nvim
-local function packer()
-	map("n", "<Leader>pc", ":PackerCompile<CR>")
-	map("n", "<Leader>ps", ":PackerSync<CR>")
-end
+local function packer() end
 
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
