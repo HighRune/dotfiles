@@ -35,13 +35,13 @@ local function core()
 	map("n", "&", "g^")
 	map("n", "<S-CR>", "-")
 	-- Buffers
-	map("n", "<Leader>c", ":bwipeout!<CR>", silent)
+	map("n", "<Leader>q", ":bwipeout!<CR>", silent)
 	map("n", "<Tab>", ":bnext<CR>", silent)
 	map("n", "<S-Tab>", ":bprevious<CR>", silent)
 	-- Quickfix list
 	map("n", "<C-Down>", ":try | cnext | catch | cfirst | catch | endtry<CR>", silent)
 	map("n", "<C-Up>", ":try | cprev | catch | clast | catch | endtry<CR>", silent)
-	map("n", "<Leader>q", ":copen<CR>", silent)
+	map("n", "<Leader>i", ":copen<CR>", silent)
 	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':cclose<CR>' : ':q!<CR>'", expr)
 	-- Paste
 	map("x", "p", '"_dP')
