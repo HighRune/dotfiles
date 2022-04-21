@@ -12,6 +12,9 @@ local function packer()
   augroup end
 ]])
 end
+-- cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal fo-=c fo-=r fo-=o fo+=t]])
+-- cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent! !chezmoi apply --source-path %]])
+-- cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent! !chezmoi add ~/.config/cheatsheet.md]])
 
 -------------------- norcalli/nvim-colorizer.lua
 local function colorizer()
