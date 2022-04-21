@@ -8,7 +8,7 @@ local function packer()
 	cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost ~/.local/share/chezmoi/dot_config/nvim/* :echom "hello"
+    autocmd BufWritePost ~/.local/share/chezmoi/dot_config/nvim/* :PackerCompile
   augroup end
 ]])
 end
