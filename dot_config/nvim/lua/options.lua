@@ -20,17 +20,6 @@ au FileType qf call AdjustWindowHeight(3, 10)
 function! AdjustWindowHeight(minheight, maxheight)
   exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
 endfunction
-" Automatically quit Vim if quickfix window is the last
-au BufEnter * call MyLastWindow()
-function! MyLastWindow()
-  " if the window is quickfix go on
-  if &buftype=="quickfix"
-    " if this window is last on screen quit without warning
-    if winbufnr(2) == -1
-      quit!
-    endif
-  endif
-endfunction
 ]])
 
 -- cmd([[color haslo]])
