@@ -61,6 +61,12 @@ local function core()
 		group = augroup("qf", { clear = true }),
 		command = "set nobuflisted",
 	})
+	cmd([[
+	au FileType qf call AdjustWindowHeight(3, 10)
+function! AdjustWindowHeight(minheight, maxheight)
+  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
+	]])
 	map("n", "<Leader>i", ":copen<CR>", silent)
 	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
