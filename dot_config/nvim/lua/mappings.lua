@@ -17,7 +17,9 @@ local function core()
 	-- Save
 	map("n", "<C-s>", ":w<cr>")
 	map("i", "<C-s>", "<esc>`^:w<cr>")
-	-- Esc
+	-- Edit
+	map("x", "p", '"_dP')
+	map("x", "<C-n>", ":norm ")
 	map("n", "<esc>", "<esc>^")
 	-- Scroll
 	map({ "n", "x" }, "<C-u>", "5k")
@@ -39,7 +41,7 @@ local function core()
 	map("n", "<Tab>", ":bnext<CR>", silent)
 	map("n", "<S-Tab>", ":bprevious<CR>", silent)
 	-- Quickfix list
-	map("n", "<C-Up>", function()
+	map("n", "<C-Down>", function()
 		if not pcall(cmd, "cnext") then
 			pcall(cmd, "cfirst")
 		end
@@ -51,10 +53,12 @@ local function core()
 	end, silent)
 	map("n", "<Leader>i", ":copen<CR>", silent)
 	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
-	-- Paste
-	map("x", "p", '"_dP')
-	-- Misc
-	map("x", "<C-n>", ":norm ")
+	cmd([[
+augroup qf
+    autocmd!
+    autocmd FileType qf set nobuflisted
+  augroup END
+	]])
 
 	-- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
 	-- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
