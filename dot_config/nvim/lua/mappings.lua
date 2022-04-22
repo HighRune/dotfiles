@@ -56,9 +56,10 @@ local function core()
 		end
 	end, silent)
 	-- Exclude quickfix buffer from the buffer list
+	local qf = augroup("qf", { clear = true })
 	autocmd("FileType", {
 		pattern = "qf",
-		group = augroup("qf", { clear = true }),
+		group = qf,
 		command = "set nobuflisted",
 	})
 	cmd([[
