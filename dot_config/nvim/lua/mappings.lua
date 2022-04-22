@@ -3,6 +3,9 @@ local fn = vim.fn
 local g = vim.g
 local map = vim.keymap.set
 local call = vim.call
+local api = vim.api
+local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
 local silent = { silent = true }
 local expr = { expr = true }
 local remap = { remap = true }
@@ -41,6 +44,7 @@ local function core()
 	map("n", "<Tab>", ":bnext<CR>", silent)
 	map("n", "<S-Tab>", ":bprevious<CR>", silent)
 	-- Quickfix list
+	-- Cycle through items of the list
 	map("n", "<C-Down>", function()
 		if not pcall(cmd, "cnext") then
 			pcall(cmd, "cfirst")
@@ -51,14 +55,14 @@ local function core()
 			pcall(cmd, "clast")
 		end
 	end, silent)
+	-- Exclude quickfix buffer from the buffer list
+	autocmd("FileType", {
+		pattern = "qf",
+		group = augroup("qf", { clear = true }),
+		command = "set nobuflisted",
+	})
 	map("n", "<Leader>i", ":copen<CR>", silent)
 	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
-	cmd([[
-augroup qf
-    autocmd!
-    autocmd FileType qf set nobuflisted
-  augroup END
-	]])
 
 	-- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
 	-- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
