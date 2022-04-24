@@ -62,19 +62,13 @@ local function core()
 		group = qf,
 		command = "set nobuflisted",
 	})
-	-- autocmd("FileType", {
-	-- 	pattern = "qf",
-	-- 	group = qf,
-	-- 	command = "",
-	-- })
-	map("n", "<C-t>", function()
-		cmd([[
-    function! AdjustWindowHeight(minheight, maxheight)
-  exe max([min([line("$"), a:maxheight]), a:minheight]) . 'wincmd _'
-endfunction
-  call AdjustWindowHeight(3, 10)
-]])
-	end, silent)
+	autocmd("FileType", {
+		pattern = "qf",
+		group = qf,
+		callback = function()
+			cmd(math.max(math.min(fn.line("$"), 10), 3) .. "wincmd _")
+		end,
+	})
 	map("n", "<Leader>i", ":copen<CR>", silent)
 	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
