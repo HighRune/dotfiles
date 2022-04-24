@@ -69,10 +69,10 @@ local function core()
 	-- })
 	map("n", "<C-t>", function()
 		cmd([[
-  call AdjustWindowHeight(3, 10)
     function! AdjustWindowHeight(minheight, maxheight)
   exe max([min([line("$"), a:maxheight]), a:minheight]) . 'wincmd _'
 endfunction
+  call AdjustWindowHeight(3, 10)
 ]])
 	end, silent)
 	map("n", "<Leader>i", ":copen<CR>", silent)
