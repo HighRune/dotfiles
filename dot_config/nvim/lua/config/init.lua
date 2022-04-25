@@ -313,6 +313,10 @@ local function fzf()
 				scrollchars = { "▎", "" },
 			},
 		},
+		quickfix = {
+			file_icons = true,
+			git_icons = true,
+		},
 		keymap = {
 			builtin = {},
 			fzf = {
