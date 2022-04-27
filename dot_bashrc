@@ -231,7 +231,8 @@ function dev () {
     # 'nvim' Enter ':te' Enter 'i npm run dev' Enter \;
 }
 
-alias tn='tmux new'
+alias tn='tmux'
+alias tl='tmux list'
 alias tk='tmux kill-server'
 alias tks='tmux kill-session -a'
 
