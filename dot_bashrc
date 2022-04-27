@@ -232,7 +232,7 @@ function dev () {
 }
 
 alias t='tmux'
-alias tl='tmux list'
+alias tl='tmux ls'
 alias tk='tmux kill-server'
 alias tka='tmux kill-session -a'
 
