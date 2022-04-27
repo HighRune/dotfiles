@@ -231,6 +231,10 @@ function dev () {
     # 'nvim' Enter ':te' Enter 'i npm run dev' Enter \;
 }
 
+alias tn='tmux new'
+alias tk='tmux kill-server'
+alias tks='tmux kill-session -a'
+
 alias gs='git status'
 alias gst='git stash'
 alias gpl='git pull'
@@ -264,5 +268,3 @@ export MANPAGER='nvim +Man!'
 
 # Disable Ctrl-S
 stty -ixon
-
-bind -x '"\C-s":"tmux new"'
