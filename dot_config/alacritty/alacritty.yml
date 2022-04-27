@@ -76,8 +76,8 @@ key_bindings:
   - { key: W,    mods: Control|Shift, command: { program: "tmux", args: ["kill-window"] }}
   - { key: R,    mods: Control|Shift, command: { program: "tmux", args: ["rename-window"] }}
   # Next / Previous window
-  - { key: Tab, mods: Control, chars: "\x02\x6e" }
-  - { key: Tab, mods: Control|Shift, chars: "\x02\x70" }
+  - { key: Tab, mods: Control, command: { program: "tmux", args: ["next-window"] }}
+  - { key: Tab, mods: Control|Shift, command: { program: "tmux", args: ["previous-window"] }}
   # Select window by number
   - { key: A,      mods: Control|Shift, chars: "\x02\x31" }
   - { key: O,      mods: Control|Shift, chars: "\x02\x32" }
