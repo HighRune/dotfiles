@@ -71,8 +71,8 @@ key_bindings:
   # Switch session
   # - { key: Tab,    mods: Alt, chars: "\x02\x29" }
   # - { key: Tab,    mods: Alt|Shift, chars: "\x02\x28" }
-  # - { key: Tab,    mods: Alt, command: { program: "tmux", args: ["switch-client ", "-n"] }}
-  # - { key: Tab,    mods: Alt|Shift, command: { program: "tmux", args: ["switch-client ", "-p"] }}
+  - { key: Tab,    mods: Alt, command: { program: "tmux", args: ["switch-client", "-n"] }}
+  - { key: Tab,    mods: Alt|Shift, command: { program: "tmux", args: ["switch-client", "-p"] }}
   # Create / Kill / Rename window
   - { key: T,      mods: Control|Shift, chars: "\x02\x63" }
   - { key: W,      mods: Control|Shift, chars: "\x02\x26" }
