@@ -55,16 +55,17 @@ local function core()
 			pcall(cmd, "clast")
 		end
 	end, silent)
+	local qf = augroup("qf", { clear = true })
 	-- Exclude quickfix buffer from the buffer list
 	autocmd("FileType", {
 		pattern = "qf",
-		group = augroup("qf", { clear = true }),
+		group = qf,
 		command = "set nobuflisted",
 	})
 	-- Automatically fitting a quickfix window to 10 lines max and 3 lines min height
 	autocmd("FileType", {
 		pattern = "qf",
-		group = augroup("qf", { clear = true }),
+		group = qf,
 		callback = function()
 			cmd(math.max(math.min(fn.line("$"), 10), 3) .. "wincmd _")
 		end,
