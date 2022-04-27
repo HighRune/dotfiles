@@ -63,11 +63,11 @@ live_config_reload: true
 key_bindings:
   # Enter vi mode
   # - { key: Escape, mods: Control, chars: "\x02\x5b" }
-  - { key: Return, mods: Shift,   chars: "\x1b[13;2u" }
-  - { key: Return, mods: Control, chars: "\x1b[13;5u" }
+  # - { key: Return, mods: Shift,   chars: "\x1b[13;2u" }
+  # - { key: Return, mods: Control, chars: "\x1b[13;5u" }
   # Tmux
   # Detach from session
-  - { key: Q,      mods: Control|Shift, chars: "\x02\x64" }
+  - { key: Q,      mods: Control|Shift, command: { program: "tmux", args: ["detach-client"] } }
   # Switch session
   - { key: Tab,    mods: Alt, command: { program: "tmux", args: ["switch-client", "-n"] }}
   - { key: Tab,    mods: Alt|Shift, command: { program: "tmux", args: ["switch-client", "-p"] }}
