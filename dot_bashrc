@@ -265,3 +265,4 @@ export MANPAGER='nvim +Man!'
 # Disable Ctrl-S
 stty -ixon
 
+bind -x '"\C-s":"tmux new"'
