@@ -317,8 +317,8 @@ local function textobjuser()
 	call textobj#user#plugin('specialcharacter', {
 	\   'specialcharacter': {
 	\     'pattern': '\(\w\|\s\)\@!',
-	\     'move-n': 's',
-	\     'move-p': 'S',
+	\     'move-n': 'S',
+	\     'move-p': 'H',
 	\   },
 	\ })
 	]])
