@@ -271,7 +271,7 @@ local function wordmotion()
 	}
 	local upspaces = {
 		-- "_",
-		"-",
+		-- "-",
 		",",
 		"/",
 		".",
