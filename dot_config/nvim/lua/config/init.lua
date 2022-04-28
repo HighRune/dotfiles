@@ -204,7 +204,7 @@ local function targets()
 	require("mappings").targets()
 	cmd([[
 	let g:targets_gracious = 1
-  let g:targets_nl = 'nl'
+  let g:targets_nl = 'ns'
   autocmd User targets#mappings#user call targets#mappings#extend({
 	\ 'b': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
 	\ 'a': {'argument': [{'o': '\[', 'c': '\]', 's': ','}]},
