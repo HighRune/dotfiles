@@ -250,8 +250,8 @@ end
 
 -------------------- kana/vim-arpeggio
 local function arpeggio()
-	call("arpeggio#map", "n", "", 0, "ns", "8s")
-	call("arpeggio#map", "n", "", 0, "NS", "8S")
+	-- call("arpeggio#map", "n", "", 0, "ns", "8s")
+	-- call("arpeggio#map", "n", "", 0, "NS", "8S")
 	-- call("arpeggio#map", "n", "e", 0, "hl", "(virtcol('$') / 2) . '<Bar>'")
 	-- map("n", "<Plug>(arpeggio-default:s)", "l")
 end
