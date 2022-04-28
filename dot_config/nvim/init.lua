@@ -120,10 +120,6 @@ return require("packer").startup({
 			config = config.highlightedyank(),
 		})
 		use("svban/YankAssassin.vim")
-		use({
-			"kana/vim-textobj-user",
-			config = config.textobjuser(),
-		})
 		use("glts/vim-textobj-comment")
 		use("D4KU/vim-textobj-chainmember")
 		use({
@@ -136,6 +132,10 @@ return require("packer").startup({
 			config = require("putline").setup(),
 		})
 		use("ryvnf/readline.vim")
+		use({
+			"kana/vim-textobj-user",
+			config = config.textobjuser(),
+		})
 	end,
 	config = {
 		display = {
