@@ -123,6 +123,10 @@ return require("packer").startup({
 		use("glts/vim-textobj-comment")
 		use("D4KU/vim-textobj-chainmember")
 		use({
+			"kana/vim-textobj-user",
+			config = config.textobjuser(),
+		})
+		use({
 			"kana/vim-submode",
 			config = config.submode(),
 		})
@@ -132,10 +136,6 @@ return require("packer").startup({
 			config = require("putline").setup(),
 		})
 		use("ryvnf/readline.vim")
-		use({
-			"kana/vim-textobj-user",
-			config = config.textobjuser(),
-		})
 	end,
 	config = {
 		display = {
