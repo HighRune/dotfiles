@@ -1,6 +1,8 @@
 local g = vim.g
 local cmd = vim.cmd
 local fn = vim.fn
+local autocmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
 
 -------------------- wbthomason/packer.nvim
 local function packer()
@@ -140,11 +142,18 @@ local function indentscope()
 		},
 		symbol = "▏",
 	})
-	cmd([[
-augroup DisableIntentScope
-autocmd! FileType markdown,help,lsp-installer,packer,qf,man let b:miniindentscope_disable=v:true
-augroup END
-]])
+	-- 	cmd([[
+	-- augroup DisableIntentScope
+	-- autocmd! FileType markdown,help,lsp-installer,packer,qf,man let b:miniindentscope_disable=v:true
+	-- augroup END
+	-- ]])
+	augroup("mini", {})
+	autocmd("FileType", {
+		desc = "Disable indent scope for conent types",
+		group = "mini",
+		pattern = "*",
+		command = "if index(['help', 'startify', 'dashboard', 'packer', 'neogitstatus', 'NvimTree', 'neo-tree', 'Trouble'], &ft) != -1 || index(['nofile', 'terminal', 'lsp-installer', 'lspinfo'], &bt) != -1 | let b:miniindentscope_disable=v:true | endif",
+	})
 end
 
 -------------------- akinsho/bufferline.nvim
