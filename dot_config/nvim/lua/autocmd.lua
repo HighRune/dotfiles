@@ -12,6 +12,9 @@ local function packer()
 ]])
 end
 
+local function indentscope() end
+
 return {
 	packer = packer,
+	indentscope = indentscope,
 }
