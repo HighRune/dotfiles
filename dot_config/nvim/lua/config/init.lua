@@ -7,6 +7,7 @@ local augroup = vim.api.nvim_create_augroup
 -------------------- wbthomason/packer.nvim
 local function packer()
 	require("mappings").packer()
+	-- require("autocmd").packer()
 	cmd([[
   augroup packer_user_config
     autocmd!
