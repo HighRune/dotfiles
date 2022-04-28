@@ -7,13 +7,7 @@ local augroup = vim.api.nvim_create_augroup
 -------------------- wbthomason/packer.nvim
 local function packer()
 	require("mappings").packer()
-	-- require("autocmd").packer()
-	cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost ~/.local/share/chezmoi/dot_config/nvim/* :PackerCompile
-  augroup end
-]])
+	require("autocmd").packer()
 end
 
 -------------------- norcalli/nvim-colorizer.lua
