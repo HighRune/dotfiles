@@ -47,10 +47,10 @@ return require("packer").startup({
 			"nacro90/numb.nvim",
 			config = config.numb,
 		})
-		-- use({
-		-- 	"echasnovski/mini.nvim",
-		-- 	-- config = config.indentscope(),
-		-- })
+		use({
+			"echasnovski/mini.nvim",
+			-- config = config.indentscope(),
+		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
 		use("windwp/nvim-ts-autotag")
 		use("itchyny/vim-cursorword")
