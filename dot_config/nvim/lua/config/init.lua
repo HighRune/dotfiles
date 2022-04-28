@@ -137,18 +137,7 @@ local function indentscope()
 		},
 		symbol = "▏",
 	})
-	-- 	cmd([[
-	-- augroup DisableIntentScope
-	-- autocmd! FileType markdown,help,lsp-installer,packer,qf,man let b:miniindentscope_disable=v:true
-	-- augroup END
-	-- ]])
-	augroup("mini", {})
-	autocmd("FileType", {
-		desc = "Disable indent scope for conent types",
-		group = "mini",
-		pattern = "*",
-		command = "if index(['help', 'startify', 'dashboard', 'packer', 'neogitstatus', 'NvimTree', 'neo-tree', 'Trouble'], &ft) != -1 || index(['nofile', 'terminal', 'lsp-installer', 'lspinfo'], &bt) != -1 | let b:miniindentscope_disable=v:true | endif",
-	})
+	require("autocmd").indentscope()
 end
 
 -------------------- akinsho/bufferline.nvim
