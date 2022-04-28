@@ -49,7 +49,7 @@ return require("packer").startup({
 		})
 		use({
 			"echasnovski/mini.nvim",
-			config = config.indentscope(),
+			-- config = config.indentscope(),
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
 		use("windwp/nvim-ts-autotag")
