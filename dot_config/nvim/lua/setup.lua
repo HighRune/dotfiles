@@ -173,6 +173,15 @@ local function bufferline()
 	})
 end
 
+-------------------- gbprod/cutlass.nvim
+local function cutlass()
+	require("cutlass").setup({
+		cut_key = "m",
+		override_del = true,
+		exclude = { "ns", "nS" },
+	})
+end
+
 return {
 	colorizer = colorizer,
 	project = project,
@@ -182,4 +191,5 @@ return {
 	gitsigns = gitsigns,
 	indentscope = indentscope,
 	bufferline = bufferline,
+	cutlass = cutlass,
 }
