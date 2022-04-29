@@ -98,9 +98,17 @@ local function sneak()
 	cmd([[let g:sneak#use_ic_scs = 1]])
 end
 
+local function targets()
+	cmd([[
+	let g:targets_gracious = 1
+  let g:targets_nl = 'sh'
+	]])
+end
+
 return {
 	core = core,
 	tokyonight = tokyonight,
 	splitjoin = splitjoin,
 	sneak = sneak,
+	targets = targets,
 }
