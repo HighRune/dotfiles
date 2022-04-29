@@ -34,8 +34,14 @@ augroup END
 ]])
 end
 
+local function targets()
+	cmd([[
+  ]])
+end
+
 return {
 	packer = packer,
 	indentscope = indentscope,
 	neoformat = neoformat,
+	targets = targets,
 }
