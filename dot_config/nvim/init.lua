@@ -78,7 +78,10 @@ return require("packer").startup({
 		-- })
 		use({
 			"sbdchd/neoformat",
-			config = config.neoformat(),
+			config = function()
+				require("options").neoformat()
+				require("autocmd").neoformat()
+			end,
 		})
 		use({
 			"numToStr/Comment.nvim",
