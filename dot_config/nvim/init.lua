@@ -16,7 +16,9 @@ return require("packer").startup({
 		use("kyazdani42/nvim-web-devicons")
 		use({
 			"folke/tokyonight.nvim",
-			config = config.tokyonight(),
+			config = function()
+				require("options").tokyonight()
+			end,
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
