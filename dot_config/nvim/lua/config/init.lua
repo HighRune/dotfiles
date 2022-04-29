@@ -207,9 +207,7 @@ end
 
 -------------------- kana/vim-submode
 local function submode()
-	g.submode_timeout = false
-	g.submode_keep_leaving_key = true
-	g.submode_always_show_submode = true
+	-- require("options").submode()
 	require("mappings").submode()
 end
 
