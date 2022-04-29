@@ -272,6 +272,14 @@ end
 
 -------------------- kana/vim-textobj-user
 local function textobjuser()
+	fn["textobj#user#plugin"]("specialcharacter", {
+		specialcharacter = {
+			pattern = [[\(\w\|\s\)\@!]],
+			["move-n"] = "S",
+			["move-p"] = "H",
+		},
+	})
+
 	cmd([[
 	"call textobj#user#plugin('word', {
 	"\   'word': {
@@ -283,14 +291,7 @@ local function textobjuser()
 	"\     'select': 'iw',
 	"\   },
 	"\ })
-	call textobj#user#plugin('specialcharacter', {
-	\   'specialcharacter': {
-	\     'pattern': '\(\w\|\s\)\@!',
-	\     'move-n': 'S',
-	\     'move-p': 'H',
-	\   },
-	\ })
-	]])
+	"]])
 end
 
 -------------------- ibhagwan/fzf-lua
