@@ -7,7 +7,10 @@ return require("packer").startup({
 		use("lewis6991/impatient.nvim")
 		use({
 			"wbthomason/packer.nvim",
-			config = config.packer(),
+			config = function()
+				require("mappings").packer()
+				require("autocmd").packer()
+			end,
 		})
 		use("nvim-lua/plenary.nvim")
 		use("kyazdani42/nvim-web-devicons")
