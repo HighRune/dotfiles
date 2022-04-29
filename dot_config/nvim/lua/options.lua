@@ -105,10 +105,15 @@ local function targets()
 	]])
 end
 
+local function highlightedyank()
+	g.highlightedyank_highlight_duration = 100
+end
+
 return {
 	core = core,
 	tokyonight = tokyonight,
 	splitjoin = splitjoin,
 	sneak = sneak,
 	targets = targets,
+	highlightedyank = highlightedyank,
 }
