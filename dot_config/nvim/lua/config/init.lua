@@ -57,6 +57,7 @@ end
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
 	require("mappings").bufferline()
+	require("setup").bufferline()
 end
 
 -------------------- sbdchd/neoformat
@@ -180,19 +181,16 @@ local function textobjuser()
 			["move-p"] = "H",
 		},
 	})
-
-	cmd([[
-	"call textobj#user#plugin('word', {
-	"\   'word': {
-	"\     'pattern': '\<\w\+\>',
-	"\     'move-n': 'w',
-	"\     'move-p': 'b',
-	"\     'move-N': 'e',
-	"\     'move-P': 'ge',
-	"\     'select': 'iw',
-	"\   },
-	"\ })
-	"]])
+	-- fn["textobj#user#plugin"]("word", {
+	-- 	word = {
+	-- 		pattern = [[\<\w\+\>]],
+	-- 		["move-n"] = "w",
+	-- 		["move-p"] = "b",
+	-- 		["move-N"] = "e",
+	-- 		["move-P"] = "ge",
+	-- 		select = "iw",
+	-- 	},
+	-- })
 end
 
 -------------------- ibhagwan/fzf-lua
