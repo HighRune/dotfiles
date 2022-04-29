@@ -202,7 +202,7 @@ end
 
 -------------------- machakann/vim-highlightedyank
 local function highlightedyank()
-	-- require("options").highlightedyank()
+	require("options").highlightedyank()
 end
 
 -------------------- kana/vim-submode
