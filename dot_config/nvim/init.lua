@@ -1,4 +1,4 @@
-require("options")
+require("options").core()
 require("mappings").core()
 
 return require("packer").startup({
