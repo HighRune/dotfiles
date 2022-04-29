@@ -159,7 +159,7 @@ end
 -------------------- sbdchd/neoformat
 local function neoformat()
 	-- Enable lua formater
-	cmd("let g:neoformat_enabled_lua = ['stylua']")
+	g.neoformat_enabled_lua = { "stylua" }
 	-- Format on write
 	require("autocmd").neoformat()
 
@@ -172,10 +172,8 @@ end
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
 	require("mappings").splitjoin()
-	cmd([[
-  let g:splitjoin_split_mapping = ''
-  let g:splitjoin_join_mapping = ''
-  ]])
+	g.splitjoin_split_mapping = ""
+	g.splitjoin_join_mapping = ""
 end
 
 -------------------- wellle/targets.vim
@@ -351,7 +349,7 @@ end
 
 -------------------- machakann/vim-highlightedyank
 local function highlightedyank()
-	cmd("let g:highlightedyank_highlight_duration = 100")
+	g.highlightedyank_highlight_duration = 100
 end
 
 -------------------- kana/vim-submode
