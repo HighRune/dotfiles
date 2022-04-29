@@ -103,10 +103,10 @@ return require("packer").startup({
 			"gbprod/cutlass.nvim",
 			config = config.cutlass(),
 		})
-		-- use({
-		-- 	"justinmk/vim-sneak",
-		-- 	-- config = config.sneak(),
-		-- })
+		use({
+			"justinmk/vim-sneak",
+			-- config = config.sneak(),
+		})
 		use({
 			"ibhagwan/fzf-lua",
 			config = config.fzf(),
