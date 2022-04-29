@@ -58,8 +58,7 @@ end
 
 -------------------- sbdchd/neoformat
 local function neoformat()
-	-- Enable lua formater
-	g.neoformat_enabled_lua = { "stylua" }
+	-- require("options").neoformat()
 	require("autocmd").neoformat()
 
 	-- vim.cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
@@ -207,7 +206,7 @@ end
 
 -------------------- kana/vim-submode
 local function submode()
-	-- require("options").submode()
+	require("options").submode()
 	require("mappings").submode()
 end
 
