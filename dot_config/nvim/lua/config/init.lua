@@ -60,7 +60,6 @@ end
 local function neoformat()
 	-- Enable lua formater
 	g.neoformat_enabled_lua = { "stylua" }
-	-- Format on write
 	require("autocmd").neoformat()
 
 	-- vim.cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
