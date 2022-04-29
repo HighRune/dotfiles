@@ -97,7 +97,9 @@ return require("packer").startup({
 		})
 		use({
 			"ahmedkhalf/project.nvim",
-			config = config.project(),
+			config = function()
+				require("setup").project()
+			end,
 		})
 		use({
 			"nvim-lualine/lualine.nvim",
