@@ -131,6 +131,31 @@ local function gitsigns()
 	})
 end
 
+-------------------- echasnovski/mini.nvim
+local function indentscope()
+	local scope = require("mini.indentscope")
+	scope.setup({
+		draw = {
+			delay = 0,
+			animation = scope.gen_animation("none"),
+		},
+		mappings = {
+			object_scope = "ii",
+			object_scope_with_border = "ai",
+			goto_top = "",
+			goto_bottom = "",
+			-- goto_top = "<S-CR>",
+			-- goto_bottom = "<CR>",
+		},
+		options = {
+			border = "both",
+			indent_at_cursor = true,
+			try_as_border = true,
+		},
+		symbol = "▏",
+	})
+end
+
 return {
 	colorizer = colorizer,
 	project = project,
@@ -138,4 +163,5 @@ return {
 	fm = fm,
 	fzf = fzf,
 	gitsigns = gitsigns,
+	indentscope = indentscope,
 }
