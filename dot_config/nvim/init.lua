@@ -63,7 +63,10 @@ return require("packer").startup({
 		})
 		use({
 			"echasnovski/mini.nvim",
-			config = config.indentscope(),
+			config = function()
+				require("autocmd").indentscope()
+				require("setup").indentscope()
+			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
 		use("windwp/nvim-ts-autotag")
