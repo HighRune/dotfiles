@@ -21,7 +21,9 @@ local function numb()
 end
 
 -------------------- ibhagwan/fzf-lua
-local function fzf()
+local function fzf() end
+
+local function fm()
 	require("fm-nvim").setup({
 		edit_cmd = "edit",
 		ui = {
@@ -56,5 +58,6 @@ return {
 	colorizer = colorizer,
 	project = project,
 	numb = numb,
+	fm = fm,
 	fzf = fzf,
 }
