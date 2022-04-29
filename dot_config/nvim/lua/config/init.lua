@@ -40,77 +40,11 @@ end
 -------------------- is0n/fm-nvim
 local function fm()
 	require("mappings").fm()
-	require("fm-nvim").setup({
-		edit_cmd = "edit",
-		ui = {
-			default = "float",
-			float = {
-				border = "none",
-				float_hl = "Normal",
-				border_hl = "FloatBorder",
-				blend = 0,
-				height = 999,
-				width = 999,
-			},
-			split = {
-				direction = "topleft",
-				size = 24,
-			},
-		},
-		cmds = {
-			vifm_cmd = "vifm",
-		},
-		mappings = {
-			-- vert_split = "<C-v>",
-			-- horz_split = "<C-h>",
-			-- tabedit = "<C-t>",
-			-- edit = "<C-e>",
-			-- ESC = "<ESC>",
-		},
-	})
+	require("setup").fm()
 end
 
 -------------------- lewis6991/gitsigns.nvim
-local function gitsigns()
-	require("gitsigns").setup({
-		current_line_blame_opts = {
-			delay = 0,
-		},
-		on_attach = require("mappings").gitsigns,
-		signs = {
-			add = {
-				hl = "GitSignsAdd",
-				text = "+",
-				numhl = "GitSignsAddNr",
-				linehl = "GitSignsAddLn",
-			},
-			change = {
-				hl = "GitSignsChange",
-				text = "~",
-				numhl = "GitSignsChangeNr",
-				linehl = "GitSignsChangeLn",
-			},
-			delete = {
-				hl = "GitSignsDelete",
-				text = "_",
-				numhl = "GitSignsDeleteNr",
-				linehl = "GitSignsDeleteLn",
-			},
-			topdelete = {
-				hl = "GitSignsDelete",
-				text = "‾",
-				numhl = "GitSignsDeleteNr",
-				linehl = "GitSignsDeleteLn",
-			},
-			changedelete = {
-				hl = "GitSignsChange",
-				text = "~",
-				numhl = "GitSignsChangeNr",
-				linehl = "GitSignsChangeLn",
-			},
-		},
-	})
-end
+local function gitsigns() end
 
 -------------------- echasnovski/mini.nvim
 local function indentscope()
