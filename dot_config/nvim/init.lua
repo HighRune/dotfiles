@@ -99,7 +99,11 @@ return require("packer").startup({
 		})
 		use({
 			"wellle/targets.vim",
-			config = config.targets(),
+			config = function()
+				require("mappings").targets()
+				require("options").targets()
+				require("autocmd").targets()
+			end,
 		})
 		use({
 			"windwp/nvim-autopairs",
