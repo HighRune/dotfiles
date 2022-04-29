@@ -60,11 +60,6 @@ end
 local function neoformat()
 	require("options").neoformat()
 	require("autocmd").neoformat()
-
-	-- vim.cmd("let g:neoformat_enabled_javascript = ['eslint_d']")
-	-- vim.cmd("let g:neoformat_enabled_typescript = ['eslint_d']")
-	-- vim.api.nvim_command([[autocmd BufWritePre * lua vim.lsp.buf.formatting_seq_sync()]])
-	-- vim.api.nvim_set_keymap("n", "<leader>f", ":Neoformat<CR>", { noremap = true })
 end
 
 -------------------- AndrewRadev/splitjoin.vim
@@ -149,6 +144,7 @@ local function wordmotion()
 		'"',
 	}
 	require("mappings").wordmotion()
+	-- require("options").wordmotion()
 	g.wordmotion_nomap = 1
 	-- Move to the character following those characters
 	g.wordmotion_uppercase_spaces = upspaces
