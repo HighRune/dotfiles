@@ -95,7 +95,7 @@ local function splitjoin()
 end
 
 local function sneak()
-	cmd([[let g:sneak#use_ic_scs = 1]])
+	g["sneak#use_ic_scs"] = 1
 end
 
 local function targets()
