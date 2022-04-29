@@ -21,8 +21,43 @@ local function numb()
 end
 
 -------------------- ibhagwan/fzf-lua
-local function fzf() end
+local function fzf()
+	-- local actions = require("fzf-lua.actions")
+	require("fzf-lua").setup({
+		winopts = {
+			fullscreen = true,
+			border = "none",
+			preview = {
+				layout = "horizontal",
+				horizontal = "up:70%",
+				title = false,
+				delay = 0,
+				scrollchars = { "▎", "" },
+			},
+		},
+		quickfix = {
+			file_icons = true,
+			git_icons = true,
+		},
+		keymap = {
+			builtin = {},
+			fzf = {
+				-- ["tab"] = "down",
+				-- ["btab"] = "up",
+				["ctrl-e"] = "preview-page-down",
+				["ctrl-u"] = "preview-page-up",
+			},
+		},
+		-- actions = {
+		-- 	files = {
+		-- 		-- ["default"] = actions.file_edit,
+		-- 		-- ["alt-q"] = actions.file_sel_to_qf,
+		-- 	},
+		-- },
+	})
+end
 
+-------------------- is0n/fm-nvim
 local function fm()
 	require("fm-nvim").setup({
 		edit_cmd = "edit",
