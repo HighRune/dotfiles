@@ -156,6 +156,7 @@ local function indentscope()
 	})
 end
 
+-------------------- akinsho/bufferline.nvim
 local function bufferline()
 	require("bufferline").setup({
 		options = {
