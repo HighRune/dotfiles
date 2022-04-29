@@ -91,7 +91,9 @@ local function targets()
 end
 
 -------------------- gbprod/cutlass.nvim
-local function cutlass() end
+local function cutlass()
+	require("setup").cutlass()
+end
 
 -------------------- justinmk/vim-sneak
 local function sneak()
@@ -104,7 +106,7 @@ end
 
 -------------------- numToStr/Comment.nvim
 local function comment()
-	require("Comment").setup()
+	require("setup").comment()
 end
 
 -------------------- chaoren/vim-wordmotion
