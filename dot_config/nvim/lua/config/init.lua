@@ -44,31 +44,12 @@ local function fm()
 end
 
 -------------------- lewis6991/gitsigns.nvim
-local function gitsigns() end
+local function gitsigns()
+	require("setup").gitsigns()
+end
 
 -------------------- echasnovski/mini.nvim
 local function indentscope()
-	local indentscope = require("mini.indentscope")
-	indentscope.setup({
-		draw = {
-			delay = 0,
-			animation = indentscope.gen_animation("none"),
-		},
-		mappings = {
-			object_scope = "ii",
-			object_scope_with_border = "ai",
-			goto_top = "",
-			goto_bottom = "",
-			-- goto_top = "<S-CR>",
-			-- goto_bottom = "<CR>",
-		},
-		options = {
-			border = "both",
-			indent_at_cursor = true,
-			try_as_border = true,
-		},
-		symbol = "▏",
-	})
 	require("autocmd").indentscope()
 end
 
