@@ -25,11 +25,7 @@ end
 
 -------------------- folke/tokyonight.nvim
 local function tokyonight()
-	g.tokyonight_style = "night"
-	g.tokyonight_transparent = true
-	g.tokyonight_transparent_sidebar = true
-	g.tokyonight_colors = { green = "magenta2" }
-	cmd("colorscheme tokyonight")
+	require("options").tokyonight()
 end
 
 -------------------- jeetsukumaran/vim-indentwise
