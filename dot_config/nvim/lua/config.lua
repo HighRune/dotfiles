@@ -163,6 +163,10 @@ local function arpeggio()
 	require("mappings").arpeggio()
 end
 
+local function treesitter()
+	require("setup").treesitter()
+end
+
 return {
 	packer = packer,
 	tokyonight = tokyonight,
@@ -187,4 +191,5 @@ return {
 	indentwise = indentwise,
 	textobjuser = textobjuser,
 	submode = submode,
+	treesitter = treesitter,
 }
