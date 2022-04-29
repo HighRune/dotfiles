@@ -71,8 +71,7 @@ end
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
 	require("mappings").splitjoin()
-	g.splitjoin_split_mapping = ""
-	g.splitjoin_join_mapping = ""
+	-- require("options").splitjoin()
 end
 
 -------------------- wellle/targets.vim
