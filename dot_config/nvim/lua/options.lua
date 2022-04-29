@@ -89,7 +89,13 @@ local function tokyonight()
 	cmd("colorscheme tokyonight")
 end
 
+local function splitjoin()
+	g.splitjoin_split_mapping = ""
+	g.splitjoin_join_mapping = ""
+end
+
 return {
 	core = core,
 	tokyonight = tokyonight,
+	splitjoin = splitjoin,
 }
