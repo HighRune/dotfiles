@@ -182,6 +182,11 @@ local function cutlass()
 	})
 end
 
+-------------------- numToStr/Comment.nvim
+local function comment()
+	require("Comment").setup()
+end
+
 return {
 	colorizer = colorizer,
 	project = project,
@@ -192,4 +197,5 @@ return {
 	indentscope = indentscope,
 	bufferline = bufferline,
 	cutlass = cutlass,
+	comment = comment,
 }
