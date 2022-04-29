@@ -77,7 +77,7 @@ end
 -------------------- wellle/targets.vim
 local function targets()
 	require("mappings").targets()
-	-- require("options").targets()
+	require("options").targets()
 	require("autocmd").targets()
 end
 
@@ -202,7 +202,7 @@ end
 
 -------------------- machakann/vim-highlightedyank
 local function highlightedyank()
-	g.highlightedyank_highlight_duration = 100
+	-- require("options").highlightedyank()
 end
 
 -------------------- kana/vim-submode
