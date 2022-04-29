@@ -85,7 +85,9 @@ return require("packer").startup({
 		})
 		use({
 			"numToStr/Comment.nvim",
-			config = config.comment(),
+			config = function()
+				require("setup").comment()
+			end,
 		})
 		use("tommcdo/vim-lion")
 		use("tommcdo/vim-exchange")
@@ -136,10 +138,10 @@ return require("packer").startup({
 		})
 		use({
 			"justinmk/vim-sneak",
-			config = function()
-				require("mappings").sneak()
-				require("options").sneak()
-			end,
+			-- config = function()
+			-- 	require("mappings").sneak()
+			-- 	require("options").sneak()
+			-- end,
 		})
 		use({
 			"ibhagwan/fzf-lua",
