@@ -91,13 +91,7 @@ local function targets()
 end
 
 -------------------- gbprod/cutlass.nvim
-local function cutlass()
-	require("cutlass").setup({
-		cut_key = "m",
-		override_del = true,
-		exclude = { "ns", "nS" },
-	})
-end
+local function cutlass() end
 
 -------------------- justinmk/vim-sneak
 local function sneak()
