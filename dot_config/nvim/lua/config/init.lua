@@ -10,17 +10,17 @@ end
 
 -------------------- norcalli/nvim-colorizer.lua
 local function colorizer()
-	require("colorizer").setup()
+	require("setup").colorizer()
 end
 
 -------------------- ahmedkhalf/project.nvim
 local function project()
-	require("project_nvim").setup()
+	require("setup").project()
 end
 
 -------------------- nacro90/numb.nvim
 local function numb()
-	require("numb").setup()
+	require("setup").numb()
 end
 
 -------------------- folke/tokyonight.nvim
