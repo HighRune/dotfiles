@@ -94,8 +94,13 @@ local function splitjoin()
 	g.splitjoin_join_mapping = ""
 end
 
+local function sneak()
+	cmd([[let g:sneak#use_ic_scs = 1]])
+end
+
 return {
 	core = core,
 	tokyonight = tokyonight,
 	splitjoin = splitjoin,
+	sneak = sneak,
 }
