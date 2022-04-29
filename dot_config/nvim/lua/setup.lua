@@ -89,10 +89,53 @@ local function fm()
 	})
 end
 
+-------------------- lewis6991/gitsigns.nvim
+local function gitsigns()
+	require("gitsigns").setup({
+		current_line_blame_opts = {
+			delay = 0,
+		},
+		on_attach = require("mappings").gitsigns,
+		signs = {
+			add = {
+				hl = "GitSignsAdd",
+				text = "+",
+				numhl = "GitSignsAddNr",
+				linehl = "GitSignsAddLn",
+			},
+			change = {
+				hl = "GitSignsChange",
+				text = "~",
+				numhl = "GitSignsChangeNr",
+				linehl = "GitSignsChangeLn",
+			},
+			delete = {
+				hl = "GitSignsDelete",
+				text = "_",
+				numhl = "GitSignsDeleteNr",
+				linehl = "GitSignsDeleteLn",
+			},
+			topdelete = {
+				hl = "GitSignsDelete",
+				text = "‾",
+				numhl = "GitSignsDeleteNr",
+				linehl = "GitSignsDeleteLn",
+			},
+			changedelete = {
+				hl = "GitSignsChange",
+				text = "~",
+				numhl = "GitSignsChangeNr",
+				linehl = "GitSignsChangeLn",
+			},
+		},
+	})
+end
+
 return {
 	colorizer = colorizer,
 	project = project,
 	numb = numb,
 	fm = fm,
 	fzf = fzf,
+	gitsigns = gitsigns,
 }
