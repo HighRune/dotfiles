@@ -2,7 +2,6 @@ local cmd = vim.cmd
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
--------------------- wbthomason/packer.nvim
 local function packer()
 	cmd([[
   augroup packer_user_config
@@ -26,7 +25,17 @@ local function indentscope()
 	-- ]])
 end
 
+local function neoformat()
+	cmd([[
+augroup fmt
+  autocmd!
+  au BufWritePre *.lua try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
+augroup END
+]])
+end
+
 return {
 	packer = packer,
 	indentscope = indentscope,
+	neoformat = neoformat,
 }
