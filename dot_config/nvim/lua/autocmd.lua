@@ -26,6 +26,7 @@ local function indentscope()
 end
 
 local function neoformat()
+	-- Format on write
 	cmd([[
 augroup fmt
   autocmd!
