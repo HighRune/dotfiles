@@ -120,8 +120,56 @@ local function neoformat()
 end
 
 local function wordmotion()
-	local spaces = ""
-	local upspaces = ""
+	local spaces = {
+		"_",
+		"-",
+		",",
+		"/",
+		".",
+		":",
+		"<",
+		">",
+		"(",
+		")",
+		"[",
+		"]",
+		"{",
+		"}",
+		"&",
+		"@",
+		"*",
+		"=",
+		"!",
+		"+",
+		"?",
+		"'",
+		'"',
+	}
+	local upspaces = {
+		-- "_",
+		-- "-",
+		",",
+		"/",
+		".",
+		":",
+		"<",
+		">",
+		"(",
+		")",
+		"[",
+		"]",
+		"{",
+		"}",
+		"&",
+		"@",
+		"*",
+		"=",
+		"!",
+		"+",
+		"?",
+		"'",
+		'"',
+	}
 	g.wordmotion_nomap = 1
 	-- Move to the character following those characters
 	g.wordmotion_spaces = spaces
