@@ -109,6 +109,12 @@ local function highlightedyank()
 	g.highlightedyank_highlight_duration = 100
 end
 
+local function submode()
+	g.submode_timeout = false
+	g.submode_keep_leaving_key = true
+	g.submode_always_show_submode = true
+end
+
 return {
 	core = core,
 	tokyonight = tokyonight,
@@ -116,4 +122,5 @@ return {
 	sneak = sneak,
 	targets = targets,
 	highlightedyank = highlightedyank,
+	submode = submode,
 }
