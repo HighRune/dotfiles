@@ -71,7 +71,7 @@ end
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
 	require("mappings").splitjoin()
-	-- require("options").splitjoin()
+	require("options").splitjoin()
 end
 
 -------------------- wellle/targets.vim
@@ -92,10 +92,7 @@ end
 -------------------- justinmk/vim-sneak
 local function sneak()
 	require("mappings").sneak()
-
-	cmd([[
-	let g:sneak#use_ic_scs = 1
-	]])
+	-- require("options").sneak()
 end
 
 -------------------- numToStr/Comment.nvim
