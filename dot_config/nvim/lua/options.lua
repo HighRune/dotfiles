@@ -81,6 +81,15 @@ autocmd User SneakLeave highlight clear SneakScope
 	cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent! !chezmoi add ~/.config/cheatsheet.md]])
 end
 
+local function tokyonight()
+	g.tokyonight_style = "night"
+	g.tokyonight_transparent = true
+	g.tokyonight_transparent_sidebar = true
+	g.tokyonight_colors = { green = "magenta2" }
+	cmd("colorscheme tokyonight")
+end
+
 return {
 	core = core,
+	tokyonight = tokyonight,
 }
