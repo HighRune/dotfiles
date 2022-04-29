@@ -77,10 +77,7 @@ end
 -------------------- wellle/targets.vim
 local function targets()
 	require("mappings").targets()
-	cmd([[
-	let g:targets_gracious = 1
-  let g:targets_nl = 'sh'
-	]])
+	-- require("options").targets()
 	require("autocmd").targets()
 end
 
@@ -92,7 +89,7 @@ end
 -------------------- justinmk/vim-sneak
 local function sneak()
 	require("mappings").sneak()
-	-- require("options").sneak()
+	require("options").sneak()
 end
 
 -------------------- numToStr/Comment.nvim
