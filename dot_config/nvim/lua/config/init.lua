@@ -1,8 +1,6 @@
 local g = vim.g
 local cmd = vim.cmd
 local fn = vim.fn
-local autocmd = vim.api.nvim_create_autocmd
-local augroup = vim.api.nvim_create_augroup
 
 -------------------- wbthomason/packer.nvim
 local function packer()
@@ -188,14 +186,6 @@ local function targets()
   let g:targets_nl = 'sh'
 	]])
 	require("autocmd").targets()
-	-- cmd([[
-	-- autocmd User targets#mappings#user call targets#mappings#extend({
-	-- \ 'a': {'argument': [{'o': '[[(]', 'c': '[])]', 's': ','}]},
-	-- \ 'A': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
-	-- \ 'b': {'pair': [{'o':'(', 'c':')'}, {'o':'[', 'c':']'}, {'o':'<', 'c':'>'}]},
-	-- \ 'B': {'pair': [{'o':'{', 'c': '}'}]},
-	-- \ })
-	-- ]])
 end
 
 -------------------- gbprod/cutlass.nvim
