@@ -136,7 +136,10 @@ return require("packer").startup({
 		})
 		use({
 			"justinmk/vim-sneak",
-			config = config.sneak(),
+			config = function()
+				require("mappings").sneak()
+				require("options").sneak()
+			end,
 		})
 		use({
 			"ibhagwan/fzf-lua",
