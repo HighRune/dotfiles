@@ -36,6 +36,20 @@ end
 
 local function targets()
 	cmd([[
+	let g:targets_gracious = 1
+  let g:targets_nl = 'sh'
+  autocmd User targets#mappings#user call targets#mappings#extend({
+	\ 'b': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
+	\ 'a': {'argument': [{'o': '\[', 'c': '\]', 's': ','}]},
+	\ 'o': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
+	\ 'B': {'pair': [{'o':'(', 'c':')'}]},
+	\ 'A': {'pair': [{'o':'\[', 'c':'\]'}]},
+	\ 'O': {'pair': [{'o':'{', 'c':'}'}]},
+	\ 'Q': {'quote': [{'d': '`'}]},
+	\ 's': { 'separator': [{'d':','}, {'d':'.'}, {'d':';'}, {'d':':'}, {'d':'+'}, {'d':'-'},
+  \ {'d':'='}, {'d':'~'}, {'d':'_'}, {'d':'*'}, {'d':'#'}, {'d':'/'},
+  \ {'d':'\'}, {'d':'|'}, {'d':'&'}, {'d':'$'}] },
+	\ })
   ]])
 end
 
