@@ -36,8 +36,6 @@ end
 
 local function targets()
 	cmd([[
-	let g:targets_gracious = 1
-  let g:targets_nl = 'sh'
   autocmd User targets#mappings#user call targets#mappings#extend({
 	\ 'b': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
 	\ 'a': {'argument': [{'o': '\[', 'c': '\]', 's': ','}]},
