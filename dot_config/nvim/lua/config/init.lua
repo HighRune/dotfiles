@@ -51,24 +51,12 @@ end
 -------------------- echasnovski/mini.nvim
 local function indentscope()
 	require("autocmd").indentscope()
+	require("setup").indentscope()
 end
 
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
 	require("mappings").bufferline()
-	require("bufferline").setup({
-		options = {
-			indicator_icon = " ",
-			separator_style = { "", "" },
-			tab_size = 0,
-			close_icon = "",
-		},
-		highlights = {
-			buffer_selected = {
-				gui = "bold",
-			},
-		},
-	})
 end
 
 -------------------- sbdchd/neoformat
