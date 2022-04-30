@@ -139,8 +139,8 @@ return require("packer").startup({
 		use({
 			"justinmk/vim-sneak",
 			config = function()
-				require("mappings").sneak()
-				require("options").sneak()
+				-- require("options").sneak()
+				-- require("mappings").sneak()
 			end,
 		})
 		use({
