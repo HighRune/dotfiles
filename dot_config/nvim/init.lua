@@ -4,16 +4,10 @@ require("mappings").core()
 return require("packer").startup({
 	function(use)
 		local config = require("config")
-		local setup = require("setup")
-		local autocmd = require("autocmd")
-		local mappings = require("mappings")
-		local options = require("options")
 		use("lewis6991/impatient.nvim")
 		use({
 			"wbthomason/packer.nvim",
 			config = function()
-				-- mappings.packer()
-				-- autocmd.packer()
 				require("mappings").packer()
 				require("autocmd").packer()
 			end,
@@ -23,14 +17,12 @@ return require("packer").startup({
 		use({
 			"folke/tokyonight.nvim",
 			config = function()
-				-- options.tokyonight()
 				require("options").tokyonight()
 			end,
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
 			config = function()
-				-- setup.treesitter()
 				require("setup").treesitter()
 			end,
 			run = ":TSUpdate",
@@ -49,8 +41,6 @@ return require("packer").startup({
 		use({
 			"is0n/fm-nvim",
 			config = function()
-				-- mappings.fm()
-				-- setup.fm()
 				require("mappings").fm()
 				require("setup").fm()
 			end,
@@ -58,21 +48,18 @@ return require("packer").startup({
 		use({
 			"lewis6991/gitsigns.nvim",
 			config = function()
-				-- setup.gitsigns()
 				require("setup").gitsigns()
 			end,
 		})
 		use({
 			"norcalli/nvim-colorizer.lua",
 			config = function()
-				-- setup.colorizer()
 				require("setup").colorizer()
 			end,
 		})
 		use({
 			"nacro90/numb.nvim",
 			config = function()
-				-- setup.numb()
 				require("setup").numb()
 			end,
 		})
@@ -81,8 +68,6 @@ return require("packer").startup({
 			config = function()
 				require("autocmd").indentscope()
 				require("setup").indentscope()
-				-- autocmd.indentscope()
-				-- setup.indentscope()
 			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
@@ -96,8 +81,6 @@ return require("packer").startup({
 		use({
 			"sbdchd/neoformat",
 			config = function()
-				-- options.neoformat()
-				-- autocmd.neoformat()
 				require("options").neoformat()
 				require("autocmd").neoformat()
 			end,
@@ -105,7 +88,6 @@ return require("packer").startup({
 		use({
 			"numToStr/Comment.nvim",
 			config = function()
-				-- setup.comment()
 				require("setup").comment()
 			end,
 		})
@@ -115,8 +97,6 @@ return require("packer").startup({
 		use({
 			"AndrewRadev/splitjoin.vim",
 			config = function()
-				-- mappings.splitjoin()
-				-- options.splitjoin()
 				require("mappings").splitjoin()
 				require("options").splitjoin()
 			end,
@@ -124,9 +104,6 @@ return require("packer").startup({
 		use({
 			"wellle/targets.vim",
 			config = function()
-				-- mappings.targets()
-				-- options.targets()
-				-- autocmd.targets()
 				require("mappings").targets()
 				require("options").targets()
 				require("autocmd").targets()
@@ -139,8 +116,6 @@ return require("packer").startup({
 		use({
 			"chaoren/vim-wordmotion",
 			config = function()
-				-- mappings.wordmotion()
-				-- options.wordmotion()
 				require("mappings").wordmotion()
 				require("options").wordmotion()
 			end,
@@ -148,14 +123,12 @@ return require("packer").startup({
 		use({
 			"kana/vim-arpeggio",
 			config = function()
-				-- mappings.arpeggio()
 				require("mappings").arpeggio()
 			end,
 		})
 		use({
 			"ahmedkhalf/project.nvim",
 			config = function()
-				-- setup.project()
 				require("setup").project()
 			end,
 		})
@@ -167,7 +140,6 @@ return require("packer").startup({
 		use({
 			"gbprod/cutlass.nvim",
 			config = function()
-				-- setup.cutlass()
 				require("setup").cutlass()
 			end,
 		})
@@ -181,8 +153,6 @@ return require("packer").startup({
 		use({
 			"ibhagwan/fzf-lua",
 			config = function()
-				-- mappings.fzf()
-				-- setup.fzf()
 				require("mappings").fzf()
 				require("setup").fzf()
 			end,
@@ -194,7 +164,6 @@ return require("packer").startup({
 		use({
 			"machakann/vim-highlightedyank",
 			config = function()
-				-- options.highlightedyank()
 				require("options").highlightedyank()
 			end,
 		})
@@ -208,8 +177,6 @@ return require("packer").startup({
 		use({
 			"kana/vim-submode",
 			config = function()
-				-- options.submode()
-				-- mappings.submode()
 				require("options").submode()
 				require("mappings").submode()
 			end,
