@@ -120,7 +120,9 @@ return require("packer").startup({
 		})
 		use({
 			"kana/vim-arpeggio",
-			config = config.arpeggio(),
+			config = function()
+				require("mappings").arpeggio()
+			end,
 		})
 		use({
 			"ahmedkhalf/project.nvim",
