@@ -148,7 +148,10 @@ return require("packer").startup({
 		})
 		use({
 			"ibhagwan/fzf-lua",
-			config = config.fzf(),
+			config = function()
+				require("mappings").fzf()
+				require("setup").fzf()
+			end,
 		})
 		use({
 			"monaqa/dial.nvim",
