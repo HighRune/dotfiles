@@ -12,23 +12,27 @@ return require("packer").startup({
 		use({
 			"wbthomason/packer.nvim",
 			config = function()
-				mappings.packer()
-				autocmd.packer()
-			end,
+				-- mappings.packer()
+				-- autocmd.packer()
+    require("mappings").packer()
+		require("autocmd").packer()
+  end,
 		})
 		use("nvim-lua/plenary.nvim")
 		use("kyazdani42/nvim-web-devicons")
 		use({
 			"folke/tokyonight.nvim",
 			config = function()
-				options.tokyonight()
-			end,
+				-- options.tokyonight()
+        require("options").tokyonight()
+      end,
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
 			config = function()
-				setup.treesitter()
-			end,
+				-- setup.treesitter()
+        require("setup").treesitter()
+      end,
 			run = ":TSUpdate",
 		})
 		use("neovim/nvim-lspconfig")
@@ -45,33 +49,40 @@ return require("packer").startup({
 		use({
 			"is0n/fm-nvim",
 			config = function()
-				mappings.fm()
-				setup.fm()
-			end,
+				-- mappings.fm()
+				-- setup.fm()
+        require("mappings").fm()
+        require("setup").fm()
+      end,
 		})
 		use({
 			"lewis6991/gitsigns.nvim",
 			config = function()
-				setup.gitsigns()
-			end,
+				-- setup.gitsigns()
+        require("setup").gitsigns()
+      end,
 		})
 		use({
 			"norcalli/nvim-colorizer.lua",
 			config = function()
-				setup.colorizer()
+				-- setup.colorizer()
+        require("setup").colorizer()
 			end,
 		})
 		use({
 			"nacro90/numb.nvim",
 			config = function()
-				setup.numb()
-			end,
+				-- setup.numb()
+        require("setup").numb()
+      end,
 		})
 		use({
 			"echasnovski/mini.nvim",
 			config = function()
-				autocmd.indentscope()
-				setup.indentscope()
+        require("autocmd").indentscope()
+        require("setup").indentscope()
+        -- autocmd.indentscope()
+				-- setup.indentscope()
 			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
@@ -85,15 +96,18 @@ return require("packer").startup({
 		use({
 			"sbdchd/neoformat",
 			config = function()
-				options.neoformat()
-				autocmd.neoformat()
-			end,
+				-- options.neoformat()
+				-- autocmd.neoformat()
+        require("options").neoformat()
+        require("autocmd").neoformat()
+      end,
 		})
 		use({
 			"numToStr/Comment.nvim",
 			config = function()
-				setup.comment()
-			end,
+				-- setup.comment()
+        require("setup").comment()
+      end,
 		})
 		use("tommcdo/vim-lion")
 		use("tommcdo/vim-exchange")
@@ -101,17 +115,22 @@ return require("packer").startup({
 		use({
 			"AndrewRadev/splitjoin.vim",
 			config = function()
-				mappings.splitjoin()
-				options.splitjoin()
-			end,
+				-- mappings.splitjoin()
+				-- options.splitjoin()
+        require("mappings").splitjoin()
+        require("options").splitjoin()
+      end,
 		})
 		use({
 			"wellle/targets.vim",
 			config = function()
-				mappings.targets()
-				options.targets()
-				autocmd.targets()
-			end,
+				-- mappings.targets()
+				-- options.targets()
+				-- autocmd.targets()
+        require("mappings").targets()
+        require("options").targets()
+        require("autocmd").targets()
+      end,
 		})
 		use({
 			"windwp/nvim-autopairs",
@@ -120,21 +139,25 @@ return require("packer").startup({
 		use({
 			"chaoren/vim-wordmotion",
 			config = function()
-				mappings.wordmotion()
-				options.wordmotion()
-			end,
+				-- mappings.wordmotion()
+				-- options.wordmotion()
+        require("mappings").wordmotion()
+        require("options").wordmotion()
+      end,
 		})
 		use({
 			"kana/vim-arpeggio",
 			config = function()
-				mappings.arpeggio()
-			end,
+				-- mappings.arpeggio()
+        require("mappings").arpeggio()
+      end,
 		})
 		use({
 			"ahmedkhalf/project.nvim",
 			config = function()
-				setup.project()
-			end,
+				-- setup.project()
+        require("setup").project()
+      end,
 		})
 		use({
 			"nvim-lualine/lualine.nvim",
@@ -144,8 +167,9 @@ return require("packer").startup({
 		use({
 			"gbprod/cutlass.nvim",
 			config = function()
-				setup.cutlass()
-			end,
+				-- setup.cutlass()
+        require("setup").cutlass()
+      end,
 		})
 		use({
 			"justinmk/vim-sneak",
@@ -157,9 +181,11 @@ return require("packer").startup({
 		use({
 			"ibhagwan/fzf-lua",
 			config = function()
-				mappings.fzf()
-				setup.fzf()
-			end,
+				-- mappings.fzf()
+				-- setup.fzf()
+        require("mappings").fzf()
+        require("setup").fzf()
+      end,
 		})
 		use({
 			"monaqa/dial.nvim",
@@ -168,8 +194,9 @@ return require("packer").startup({
 		use({
 			"machakann/vim-highlightedyank",
 			config = function()
-				options.highlightedyank()
-			end,
+				-- options.highlightedyank()
+        require("options").highlightedyank()
+      end,
 		})
 		use("svban/YankAssassin.vim")
 		use("glts/vim-textobj-comment")
@@ -181,9 +208,11 @@ return require("packer").startup({
 		use({
 			"kana/vim-submode",
 			config = function()
-				options.submode()
-				mappings.submode()
-			end,
+				-- options.submode()
+				-- mappings.submode()
+        require("options").submode()
+        require("mappings").submode()
+      end,
 		})
 		use({
 			-- "/home/charles/Documents/dev/plugins/putline.nvim",
