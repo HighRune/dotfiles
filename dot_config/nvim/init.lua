@@ -113,7 +113,10 @@ return require("packer").startup({
 		})
 		use({
 			"chaoren/vim-wordmotion",
-			config = config.wordmotion(),
+			config = function()
+				require("mappings").wordmotion()
+				require("options").wordmotion()
+			end,
 		})
 		use({
 			"kana/vim-arpeggio",
