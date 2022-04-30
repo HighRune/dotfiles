@@ -4,12 +4,16 @@ require("mappings").core()
 return require("packer").startup({
 	function(use)
 		local config = require("config")
+		local setup = require("setup")
+		local autocmd = require("autocmd")
+		local mappings = require("mappings")
+		local options = require("options")
 		use("lewis6991/impatient.nvim")
 		use({
 			"wbthomason/packer.nvim",
 			config = function()
-				require("mappings").packer()
-				require("autocmd").packer()
+				mappings.packer()
+				autocmd.packer()
 			end,
 		})
 		use("nvim-lua/plenary.nvim")
@@ -17,13 +21,13 @@ return require("packer").startup({
 		use({
 			"folke/tokyonight.nvim",
 			config = function()
-				require("options").tokyonight()
+				options.tokyonight()
 			end,
 		})
 		use({
 			"nvim-treesitter/nvim-treesitter",
 			config = function()
-				require("setup").treesitter()
+				setup.treesitter()
 			end,
 			run = ":TSUpdate",
 		})
@@ -41,33 +45,33 @@ return require("packer").startup({
 		use({
 			"is0n/fm-nvim",
 			config = function()
-				require("mappings").fm()
-				require("setup").fm()
+				mappings.fm()
+				setup.fm()
 			end,
 		})
 		use({
 			"lewis6991/gitsigns.nvim",
 			config = function()
-				require("setup").gitsigns()
+				setup.gitsigns()
 			end,
 		})
 		use({
 			"norcalli/nvim-colorizer.lua",
 			config = function()
-				require("setup").colorizer()
+				setup.colorizer()
 			end,
 		})
 		use({
 			"nacro90/numb.nvim",
 			config = function()
-				require("setup").numb()
+				setup.numb()
 			end,
 		})
 		use({
 			"echasnovski/mini.nvim",
 			config = function()
-				require("autocmd").indentscope()
-				require("setup").indentscope()
+				autocmd.indentscope()
+				setup.indentscope()
 			end,
 		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
@@ -81,14 +85,14 @@ return require("packer").startup({
 		use({
 			"sbdchd/neoformat",
 			config = function()
-				require("options").neoformat()
-				require("autocmd").neoformat()
+				options.neoformat()
+				autocmd.neoformat()
 			end,
 		})
 		use({
 			"numToStr/Comment.nvim",
 			config = function()
-				require("setup").comment()
+				setup.comment()
 			end,
 		})
 		use("tommcdo/vim-lion")
@@ -97,16 +101,16 @@ return require("packer").startup({
 		use({
 			"AndrewRadev/splitjoin.vim",
 			config = function()
-				require("mappings").splitjoin()
-				require("options").splitjoin()
+				mappings.splitjoin()
+				options.splitjoin()
 			end,
 		})
 		use({
 			"wellle/targets.vim",
 			config = function()
-				require("mappings").targets()
-				require("options").targets()
-				require("autocmd").targets()
+				mappings.targets()
+				options.targets()
+				autocmd.targets()
 			end,
 		})
 		use({
@@ -116,20 +120,20 @@ return require("packer").startup({
 		use({
 			"chaoren/vim-wordmotion",
 			config = function()
-				require("mappings").wordmotion()
-				require("options").wordmotion()
+				mappings.wordmotion()
+				options.wordmotion()
 			end,
 		})
 		use({
 			"kana/vim-arpeggio",
 			config = function()
-				require("mappings").arpeggio()
+				mappings.arpeggio()
 			end,
 		})
 		use({
 			"ahmedkhalf/project.nvim",
 			config = function()
-				require("setup").project()
+				setup.project()
 			end,
 		})
 		use({
@@ -140,7 +144,7 @@ return require("packer").startup({
 		use({
 			"gbprod/cutlass.nvim",
 			config = function()
-				require("setup").cutlass()
+				setup.cutlass()
 			end,
 		})
 		use({
@@ -153,8 +157,8 @@ return require("packer").startup({
 		use({
 			"ibhagwan/fzf-lua",
 			config = function()
-				require("mappings").fzf()
-				require("setup").fzf()
+				mappings.fzf()
+				setup.fzf()
 			end,
 		})
 		use({
@@ -164,7 +168,7 @@ return require("packer").startup({
 		use({
 			"machakann/vim-highlightedyank",
 			config = function()
-				require("options").highlightedyank()
+				options.highlightedyank()
 			end,
 		})
 		use("svban/YankAssassin.vim")
@@ -177,8 +181,8 @@ return require("packer").startup({
 		use({
 			"kana/vim-submode",
 			config = function()
-				require("options").submode()
-				require("mappings").submode()
+				options.submode()
+				mappings.submode()
 			end,
 		})
 		use({
