@@ -2,100 +2,100 @@ local g = vim.g
 local cmd = vim.cmd
 local fn = vim.fn
 
--------------------- wbthomason/packer.nvim
-local function packer()
-	require("mappings").packer()
-	require("autocmd").packer()
-end
-
--------------------- norcalli/nvim-colorizer.lua
-local function colorizer()
-	require("setup").colorizer()
-end
-
--------------------- ahmedkhalf/project.nvim
-local function project()
-	require("setup").project()
-end
-
--------------------- nacro90/numb.nvim
-local function numb()
-	require("setup").numb()
-end
-
--------------------- folke/tokyonight.nvim
-local function tokyonight()
-	require("options").tokyonight()
-end
-
--------------------- jeetsukumaran/vim-indentwise
-local function indentwise()
-	require("mappings").indentwise()
-end
-
--------------------- is0n/fm-nvim
-local function fm()
-	require("mappings").fm()
-	require("setup").fm()
-end
-
--------------------- lewis6991/gitsigns.nvim
-local function gitsigns()
-	require("setup").gitsigns()
-end
-
--------------------- echasnovski/mini.nvim
-local function indentscope()
-	require("autocmd").indentscope()
-	require("setup").indentscope()
-end
-
--------------------- akinsho/bufferline.nvim
-local function bufferline()
-	require("mappings").bufferline()
-	require("setup").bufferline()
-end
-
--------------------- sbdchd/neoformat
-local function neoformat()
-	require("options").neoformat()
-	require("autocmd").neoformat()
-end
-
--------------------- AndrewRadev/splitjoin.vim
-local function splitjoin()
-	require("mappings").splitjoin()
-	require("options").splitjoin()
-end
-
--------------------- wellle/targets.vim
-local function targets()
-	require("mappings").targets()
-	require("options").targets()
-	require("autocmd").targets()
-end
-
--------------------- gbprod/cutlass.nvim
-local function cutlass()
-	require("setup").cutlass()
-end
-
--------------------- justinmk/vim-sneak
-local function sneak()
-	require("mappings").sneak()
-	require("options").sneak()
-end
-
--------------------- numToStr/Comment.nvim
-local function comment()
-	require("setup").comment()
-end
-
--------------------- chaoren/vim-wordmotion
-local function wordmotion()
-	require("mappings").wordmotion()
-	require("options").wordmotion()
-end
+-- -------------------- wbthomason/packer.nvim
+-- local function packer()
+-- 	require("mappings").packer()
+-- 	require("autocmd").packer()
+-- end
+--
+-- -------------------- norcalli/nvim-colorizer.lua
+-- local function colorizer()
+-- 	require("setup").colorizer()
+-- end
+--
+-- -------------------- ahmedkhalf/project.nvim
+-- local function project()
+-- 	require("setup").project()
+-- end
+--
+-- -------------------- nacro90/numb.nvim
+-- local function numb()
+-- 	require("setup").numb()
+-- end
+--
+-- -------------------- folke/tokyonight.nvim
+-- local function tokyonight()
+-- 	require("options").tokyonight()
+-- end
+--
+-- -------------------- jeetsukumaran/vim-indentwise
+-- local function indentwise()
+-- 	require("mappings").indentwise()
+-- end
+--
+-- -------------------- is0n/fm-nvim
+-- local function fm()
+-- 	require("mappings").fm()
+-- 	require("setup").fm()
+-- end
+--
+-- -------------------- lewis6991/gitsigns.nvim
+-- local function gitsigns()
+-- 	require("setup").gitsigns()
+-- end
+--
+-- -------------------- echasnovski/mini.nvim
+-- local function indentscope()
+-- 	require("autocmd").indentscope()
+-- 	require("setup").indentscope()
+-- end
+--
+-- -------------------- akinsho/bufferline.nvim
+-- local function bufferline()
+-- 	require("mappings").bufferline()
+-- 	require("setup").bufferline()
+-- end
+--
+-- -------------------- sbdchd/neoformat
+-- local function neoformat()
+-- 	require("options").neoformat()
+-- 	require("autocmd").neoformat()
+-- end
+--
+-- -------------------- AndrewRadev/splitjoin.vim
+-- local function splitjoin()
+-- 	require("mappings").splitjoin()
+-- 	require("options").splitjoin()
+-- end
+--
+-- -------------------- wellle/targets.vim
+-- local function targets()
+-- 	require("mappings").targets()
+-- 	require("options").targets()
+-- 	require("autocmd").targets()
+-- end
+--
+-- -------------------- gbprod/cutlass.nvim
+-- local function cutlass()
+-- 	require("setup").cutlass()
+-- end
+--
+-- -------------------- justinmk/vim-sneak
+-- local function sneak()
+-- 	require("mappings").sneak()
+-- 	require("options").sneak()
+-- end
+--
+-- -------------------- numToStr/Comment.nvim
+-- local function comment()
+-- 	require("setup").comment()
+-- end
+--
+-- -------------------- chaoren/vim-wordmotion
+-- local function wordmotion()
+-- 	require("mappings").wordmotion()
+-- 	require("options").wordmotion()
+-- end
 
 -------------------- kana/vim-textobj-user
 local function textobjuser()
@@ -118,11 +118,11 @@ local function textobjuser()
 	-- })
 end
 
--------------------- ibhagwan/fzf-lua
-local function fzf()
-	require("mappings").fzf()
-	require("setup").fzf()
-end
+-- -------------------- ibhagwan/fzf-lua
+-- local function fzf()
+-- 	require("mappings").fzf()
+-- 	require("setup").fzf()
+-- end
 
 -------------------- monaqa/dial.nvim
 local function dial()
@@ -147,25 +147,25 @@ local function dial()
 	})
 end
 
--------------------- machakann/vim-highlightedyank
-local function highlightedyank()
-	require("options").highlightedyank()
-end
-
--------------------- kana/vim-submode
-local function submode()
-	require("options").submode()
-	require("mappings").submode()
-end
-
--------------------- kana/vim-arpeggio
-local function arpeggio()
-	require("mappings").arpeggio()
-end
-
-local function treesitter()
-	require("setup").treesitter()
-end
+-- -------------------- machakann/vim-highlightedyank
+-- local function highlightedyank()
+-- 	require("options").highlightedyank()
+-- end
+--
+-- -------------------- kana/vim-submode
+-- local function submode()
+-- 	require("options").submode()
+-- 	require("mappings").submode()
+-- end
+--
+-- -------------------- kana/vim-arpeggio
+-- local function arpeggio()
+-- 	require("mappings").arpeggio()
+-- end
+--
+-- local function treesitter()
+-- 	require("setup").treesitter()
+-- end
 
 return {
 	packer = packer,
