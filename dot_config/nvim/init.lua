@@ -173,6 +173,7 @@ return require("packer").startup({
 		use("svban/YankAssassin.vim")
 		use("glts/vim-textobj-comment")
 		use("D4KU/vim-textobj-chainmember")
+		use("kana/vim-textobj-line")
 		use({
 			"kana/vim-textobj-user",
 			config = function()
