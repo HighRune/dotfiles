@@ -168,8 +168,8 @@ local function textobjuser()
 		specialcharacter = {
 			-- pattern = [[\(\w\|\s\)\@!]],
 			pattern = [[\s\+]],
-			["move-n"] = "S",
-			["move-p"] = "H",
+			["move-n"] = "s",
+			["move-p"] = "S",
 		},
 	})
 	-- fn["textobj#user#plugin"]("word", {
