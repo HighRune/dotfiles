@@ -82,7 +82,7 @@ end
 
 local function sneak()
 	-- g["sneak#use_ic_scs"] = 1
-	cmd("g:sneak#use_ic_scs = 1")
+	cmd("let g:sneak#use_ic_scs = 1")
 end
 
 local function targets()
