@@ -4,6 +4,7 @@ require("mappings").core()
 
 return require("packer").startup({
 	function(use)
+		local config = require("config")
 		use("lewis6991/impatient.nvim")
 		use({
 			"wbthomason/packer.nvim",
