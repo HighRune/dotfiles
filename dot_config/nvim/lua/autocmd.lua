@@ -41,20 +41,12 @@ end
 
 local function neoformat()
 	-- Format on write
-	cmd([[
-augroup fmt
-  autocmd!
-  au BufWritePre *.lua try | undojoin | Neoformat | catch /^Vim\%((\a\+)\)\=:E790/ | finally | silent Neoformat | endtry
-augroup END
-]])
-	-- augroup("neoformat", { clear = true })
-	-- autocmd("BufWritePre", {
-	-- 	group = "neoformat",
-	-- 	pattern = "*.lua",
-	-- 	callback = function()
-	-- 		pcall(cmd, "Neoformat")
-	-- 	end,
-	-- })
+	augroup("neoformat", { clear = true })
+	autocmd("BufWritePre", {
+		group = "neoformat",
+		pattern = "*.lua",
+		command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
+	})
 end
 
 local function targets()
