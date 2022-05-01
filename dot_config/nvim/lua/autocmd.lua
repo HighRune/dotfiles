@@ -31,7 +31,7 @@ local function packer()
 end
 
 local function indentscope()
-	augroup("indentscope")
+	augroup("indentscope", {})
 	autocmd("FileType", {
 		group = "indentscope",
 		pattern = "*",
