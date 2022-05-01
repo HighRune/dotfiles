@@ -4,15 +4,7 @@ local fn = vim.fn
 local opt = vim.opt
 local cmd = vim.cmd
 
--- cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
--- cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
-
 local function core()
-	cmd([[
-autocmd User SneakLeave highlight clear Sneak
-autocmd User SneakLeave highlight clear SneakScope
-]])
-
 	-- cmd([[color haslo]])
 
 	-- o.scroll = 5
