@@ -4,7 +4,6 @@ require("mappings").core()
 
 return require("packer").startup({
 	function(use)
-		local config = require("config")
 		use("lewis6991/impatient.nvim")
 		use({
 			"wbthomason/packer.nvim",
@@ -31,12 +30,12 @@ return require("packer").startup({
 		use("neovim/nvim-lspconfig")
 		use({
 			"williamboman/nvim-lsp-installer",
-			config = config.lsp(),
+			config = require("config.lsp")(),
 		})
 		use({
 			"ms-jpq/coq_nvim",
 			branch = "coq",
-			config = config.coq(),
+			config = require("config.coq")(),
 			requires = { "ms-jpq/coq.artifacts", branch = "artifacts" },
 		})
 		use({
