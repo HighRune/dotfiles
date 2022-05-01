@@ -86,5 +86,4 @@ return {
 	targets = targets,
 	sneak = sneak,
 	core = core,
-	colorscheme = function() end,
 }
