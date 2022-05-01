@@ -98,25 +98,25 @@ local fn = vim.fn
 -- end
 
 -------------------- kana/vim-textobj-user
-local function textobjuser()
-	fn["textobj#user#plugin"]("specialcharacter", {
-		specialcharacter = {
-			pattern = [[\(\w\|\s\)\@!]],
-			["move-n"] = "S",
-			["move-p"] = "H",
-		},
-	})
-	-- fn["textobj#user#plugin"]("word", {
-	-- 	word = {
-	-- 		pattern = [[\<\w\+\>]],
-	-- 		["move-n"] = "w",
-	-- 		["move-p"] = "b",
-	-- 		["move-N"] = "e",
-	-- 		["move-P"] = "ge",
-	-- 		select = "iw",
-	-- 	},
-	-- })
-end
+-- local function textobjuser()
+-- 	fn["textobj#user#plugin"]("specialcharacter", {
+-- 		specialcharacter = {
+-- 			pattern = [[\(\w\|\s\)\@!]],
+-- 			["move-n"] = "S",
+-- 			["move-p"] = "H",
+-- 		},
+-- 	})
+-- 	-- fn["textobj#user#plugin"]("word", {
+-- 	-- 	word = {
+-- 	-- 		pattern = [[\<\w\+\>]],
+-- 	-- 		["move-n"] = "w",
+-- 	-- 		["move-p"] = "b",
+-- 	-- 		["move-N"] = "e",
+-- 	-- 		["move-P"] = "ge",
+-- 	-- 		select = "iw",
+-- 	-- 	},
+-- 	-- })
+-- end
 
 -- -------------------- ibhagwan/fzf-lua
 -- local function fzf()
