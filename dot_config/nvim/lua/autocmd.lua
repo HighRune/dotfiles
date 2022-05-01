@@ -31,42 +31,12 @@ local function packer()
 end
 
 local function indentscope()
-	augroup("indentscope", {})
+	augroup("indentscope")
 	autocmd("FileType", {
 		group = "indentscope",
 		pattern = "*",
-		callback = function()
-			local filetype = {
-				help = true,
-				startify = true,
-				dashboard = true,
-				packer = true,
-				neogitstatus = true,
-				NvimTree = true,
-				["neo-tree"] = true,
-				Trouble = true,
-			}
-			local buffertype = {
-				nofile = true,
-				terminal = true,
-				["lsp-installer"] = true,
-				lspinfo = true,
-			}
-			-- local aa = cmd("&ft")
-			-- local bb = cmd("&bt")
-			-- print(cmd("&ft"))
-			-- print(cmd("&bt"))
-			-- if filetype[aa] or buffertype[bb] then
-			-- 	cmd("let b:miniindentscope_disable=v:true | endif")
-			-- end
-		end,
-		-- command = "if index(['help', 'startify', 'dashboard', 'packer', 'neogitstatus', 'NvimTree', 'neo-tree', 'Trouble'], &ft) != -1 || index(['nofile', 'terminal', 'lsp-installer', 'lspinfo'], &bt) != -1 | let b:miniindentscope_disable=v:true | endif",
+		command = "if index(['help', 'startify', 'dashboard', 'packer', 'neogitstatus', 'NvimTree', 'neo-tree', 'Trouble'], &ft) != -1 || index(['nofile', 'terminal', 'lsp-installer', 'lspinfo'], &bt) != -1 | let b:miniindentscope_disable=v:true | endif",
 	})
-	-- 	cmd([[
-	-- augroup DisableIntentScope
-	-- autocmd! FileType markdown,help,lsp-installer,packer,qf,man let b:miniindentscope_disable=v:true
-	-- augroup END
-	-- ]])
 end
 
 local function neoformat()
