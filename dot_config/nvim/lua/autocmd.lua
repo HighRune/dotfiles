@@ -79,6 +79,9 @@ local function targets()
 	-- ]])
 end
 
+-- cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
+-- cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
+
 return {
 	packer = packer,
 	indentscope = indentscope,
