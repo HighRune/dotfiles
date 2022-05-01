@@ -172,7 +172,9 @@ return require("packer").startup({
 		use("D4KU/vim-textobj-chainmember")
 		use({
 			"kana/vim-textobj-user",
-			config = config.textobjuser(),
+			config = function()
+				require("options").textobjuser()
+			end,
 		})
 		use({
 			"kana/vim-submode",
