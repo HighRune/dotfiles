@@ -9,13 +9,6 @@ local cmd = vim.cmd
 
 local function core()
 	cmd([[
-autocmd ColorScheme * highlight NormalFloat guibg=none
-autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none
-autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTextError
-autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
-autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
-autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
-" autocmd ColorScheme * highlight VertSplit guifg=#292e42
 autocmd User SneakLeave highlight clear Sneak
 autocmd User SneakLeave highlight clear SneakScope
 ]])
