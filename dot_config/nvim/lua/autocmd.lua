@@ -22,12 +22,12 @@ autocmd User SneakLeave highlight clear SneakScope
 end
 
 local function packer()
-	cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost ~/.local/share/chezmoi/dot_config/nvim/* :PackerCompile
-  augroup end
-]])
+	augroup("packer_user_config", { clear = true })
+	autocmd("BufWritePost", {
+		group = "packer_user_config",
+		pattern = "~/.local/share/chezmoi/dot_config/nvim/*",
+		command = ":PackerCompile",
+	})
 end
 
 local function indentscope()
