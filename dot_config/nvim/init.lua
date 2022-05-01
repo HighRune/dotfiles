@@ -111,7 +111,7 @@ return require("packer").startup({
 		})
 		use({
 			"windwp/nvim-autopairs",
-			config = require("config.autopairs")(),
+			config = require("config.autopairs"),
 		})
 		use({
 			"chaoren/vim-wordmotion",
