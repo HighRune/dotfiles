@@ -2,6 +2,18 @@ local cmd = vim.cmd
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
+local function colorscheme()
+	cmd([[
+autocmd ColorScheme * highlight NormalFloat guibg=none
+autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none
+autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTextError
+autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
+autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
+autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
+" autocmd ColorScheme * highlight VertSplit guifg=#292e42
+]])
+end
+
 local function packer()
 	cmd([[
   augroup packer_user_config
@@ -65,4 +77,5 @@ return {
 	indentscope = indentscope,
 	neoformat = neoformat,
 	targets = targets,
+	colorscheme = colorscheme,
 }
