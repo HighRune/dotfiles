@@ -159,7 +159,9 @@ return require("packer").startup({
 		})
 		use({
 			"monaqa/dial.nvim",
-			config = config.dial(),
+			config = function()
+				require("options").dial()
+			end,
 		})
 		use({
 			"machakann/vim-highlightedyank",
