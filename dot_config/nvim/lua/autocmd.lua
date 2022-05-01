@@ -52,10 +52,10 @@ local function indentscope()
 				["lsp-installer"] = true,
 				lspinfo = true,
 			}
-			local aa = cmd("&ft")
-			local bb = cmd("&bt")
-			print(cmd("&ft"))
-			print(cmd("&bt"))
+			-- local aa = cmd("&ft")
+			-- local bb = cmd("&bt")
+			-- print(cmd("&ft"))
+			-- print(cmd("&bt"))
 			-- if filetype[aa] or buffertype[bb] then
 			-- 	cmd("let b:miniindentscope_disable=v:true | endif")
 			-- end
