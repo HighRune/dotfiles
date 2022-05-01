@@ -2,6 +2,11 @@ local cmd = vim.cmd
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
+local function core()
+	cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent! !chezmoi apply --source-path %]])
+	cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent! !chezmoi add ~/.config/cheatsheet.md]])
+end
+
 local function colorscheme()
 	cmd([[
 autocmd ColorScheme * highlight NormalFloat guibg=none
@@ -84,4 +89,5 @@ return {
 	targets = targets,
 	colorscheme = colorscheme,
 	sneak = sneak,
+	core = core,
 }
