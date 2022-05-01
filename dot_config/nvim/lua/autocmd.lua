@@ -5,9 +5,6 @@ local augroup = vim.api.nvim_create_augroup
 local function core()
 	cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent! !chezmoi apply --source-path %]])
 	cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent! !chezmoi add ~/.config/cheatsheet.md]])
-end
-
-local function colorscheme()
 	cmd([[
 autocmd ColorScheme * highlight NormalFloat guibg=none
 autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none
@@ -87,7 +84,6 @@ return {
 	indentscope = indentscope,
 	neoformat = neoformat,
 	targets = targets,
-	colorscheme = colorscheme,
 	sneak = sneak,
 	core = core,
 }
