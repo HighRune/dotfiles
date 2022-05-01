@@ -1,7 +1,7 @@
-local g = vim.g
-local cmd = vim.cmd
-local fn = vim.fn
-
+-- local g = vim.g
+-- local cmd = vim.cmd
+-- local fn = vim.fn
+--
 -- -------------------- wbthomason/packer.nvim
 -- local function packer()
 -- 	require("mappings").packer()
@@ -125,27 +125,27 @@ local fn = vim.fn
 -- end
 
 -------------------- monaqa/dial.nvim
-local function dial()
-	require("mappings").dial()
-	local augend = require("dial.augend")
-	require("dial.config").augends:register_group({
-		default = {
-			augend.integer.alias.decimal,
-			augend.integer.alias.decimal_int,
-			augend.date.alias["%Y/%m/%d"],
-			augend.semver.alias.semver,
-			augend.constant.alias.bool,
-			augend.constant.new({
-				elements = { "let", "const" },
-			}),
-			augend.constant.new({
-				elements = { "&&", "||" },
-				word = false,
-				cyclic = true,
-			}),
-		},
-	})
-end
+-- local function dial()
+-- 	require("mappings").dial()
+-- 	local augend = require("dial.augend")
+-- 	require("dial.config").augends:register_group({
+-- 		default = {
+-- 			augend.integer.alias.decimal,
+-- 			augend.integer.alias.decimal_int,
+-- 			augend.date.alias["%Y/%m/%d"],
+-- 			augend.semver.alias.semver,
+-- 			augend.constant.alias.bool,
+-- 			augend.constant.new({
+-- 				elements = { "let", "const" },
+-- 			}),
+-- 			augend.constant.new({
+-- 				elements = { "&&", "||" },
+-- 				word = false,
+-- 				cyclic = true,
+-- 			}),
+-- 		},
+-- 	})
+-- end
 
 -- -------------------- machakann/vim-highlightedyank
 -- local function highlightedyank()
@@ -167,29 +167,29 @@ end
 -- 	require("setup").treesitter()
 -- end
 
-return {
-	packer = packer,
-	tokyonight = tokyonight,
-	fm = fm,
-	gitsigns = gitsigns,
-	indentscope = indentscope,
-	bufferline = bufferline,
-	neoformat = neoformat,
-	splitjoin = splitjoin,
-	targets = targets,
-	wordmotion = wordmotion,
-	cutlass = cutlass,
-	sneak = sneak,
-	fzf = fzf,
-	dial = dial,
-	highlightedyank = highlightedyank,
-	arpeggio = arpeggio,
-	comment = comment,
-	project = project,
-	numb = numb,
-	colorizer = colorizer,
-	indentwise = indentwise,
-	textobjuser = textobjuser,
-	submode = submode,
-	treesitter = treesitter,
-}
+-- return {
+-- 	packer = packer,
+-- 	tokyonight = tokyonight,
+-- 	fm = fm,
+-- 	gitsigns = gitsigns,
+-- 	-- indentscope = indentscope,
+-- 	-- bufferline = bufferline,
+-- 	neoformat = neoformat,
+-- 	splitjoin = splitjoin,
+-- 	targets = targets,
+-- 	wordmotion = wordmotion,
+-- 	cutlass = cutlass,
+-- 	sneak = sneak,
+-- 	fzf = fzf,
+-- 	dial = dial,
+-- 	highlightedyank = highlightedyank,
+-- 	arpeggio = arpeggio,
+-- 	comment = comment,
+-- 	project = project,
+-- 	numb = numb,
+-- 	colorizer = colorizer,
+-- 	indentwise = indentwise,
+-- 	textobjuser = textobjuser,
+-- 	submode = submode,
+-- 	treesitter = treesitter,
+-- }
