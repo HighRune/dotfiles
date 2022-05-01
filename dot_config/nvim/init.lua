@@ -1,3 +1,4 @@
+require("autocmd").colorscheme()
 require("options").core()
 require("mappings").core()
 
