@@ -143,14 +143,14 @@ return require("packer").startup({
 				require("setup").cutlass()
 			end,
 		})
-		use({
-			"justinmk/vim-sneak",
-			config = function()
-				-- require("autocmd").sneak()
-				-- require("options").sneak()
-				-- require("mappings").sneak()
-			end,
-		})
+		-- use({
+		-- 	"justinmk/vim-sneak",
+		-- 	config = function()
+		-- 		-- require("autocmd").sneak()
+		-- 		-- require("options").sneak()
+		-- 		-- require("mappings").sneak()
+		-- 	end,
+		-- })
 		use({
 			"ibhagwan/fzf-lua",
 			config = function()
