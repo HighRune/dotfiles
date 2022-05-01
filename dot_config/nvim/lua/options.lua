@@ -197,6 +197,28 @@ local function textobjuser()
 	-- })
 end
 
+local function dial()
+	require("mappings").dial()
+	local augend = require("dial.augend")
+	require("dial.config").augends:register_group({
+		default = {
+			augend.integer.alias.decimal,
+			augend.integer.alias.decimal_int,
+			augend.date.alias["%Y/%m/%d"],
+			augend.semver.alias.semver,
+			augend.constant.alias.bool,
+			augend.constant.new({
+				elements = { "let", "const" },
+			}),
+			augend.constant.new({
+				elements = { "&&", "||" },
+				word = false,
+				cyclic = true,
+			}),
+		},
+	})
+end
+
 return {
 	core = core,
 	tokyonight = tokyonight,
@@ -208,4 +230,5 @@ return {
 	neoformat = neoformat,
 	wordmotion = wordmotion,
 	textobjuser = textobjuser,
+	dial = dial,
 }
