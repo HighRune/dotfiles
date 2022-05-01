@@ -1,5 +1,6 @@
 local o = vim.o
 local g = vim.g
+local fn = vim.fn
 local opt = vim.opt
 local cmd = vim.cmd
 
@@ -176,6 +177,26 @@ local function wordmotion()
 	g.wordmotion_uppercase_spaces = upspaces
 end
 
+local function textobjuser()
+	fn["textobj#user#plugin"]("specialcharacter", {
+		specialcharacter = {
+			pattern = [[\(\w\|\s\)\@!]],
+			["move-n"] = "S",
+			["move-p"] = "H",
+		},
+	})
+	-- fn["textobj#user#plugin"]("word", {
+	-- 	word = {
+	-- 		pattern = [[\<\w\+\>]],
+	-- 		["move-n"] = "w",
+	-- 		["move-p"] = "b",
+	-- 		["move-N"] = "e",
+	-- 		["move-P"] = "ge",
+	-- 		select = "iw",
+	-- 	},
+	-- })
+end
+
 return {
 	core = core,
 	tokyonight = tokyonight,
@@ -186,4 +207,5 @@ return {
 	submode = submode,
 	neoformat = neoformat,
 	wordmotion = wordmotion,
+	textobjuser = textobjuser,
 }
