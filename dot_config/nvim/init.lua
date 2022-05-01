@@ -31,12 +31,12 @@ return require("packer").startup({
 		use("neovim/nvim-lspconfig")
 		use({
 			"williamboman/nvim-lsp-installer",
-			config = require("config.lsp")(),
+			config = config.lsp(),
 		})
 		use({
 			"ms-jpq/coq_nvim",
 			branch = "coq",
-			config = require("config.coq")(),
+			config = config.coq(),
 			requires = { "ms-jpq/coq.artifacts", branch = "artifacts" },
 		})
 		use({
