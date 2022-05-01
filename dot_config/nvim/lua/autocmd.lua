@@ -14,6 +14,13 @@ autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTex
 ]])
 end
 
+local function sneak()
+	cmd([[
+autocmd User SneakLeave highlight clear Sneak
+autocmd User SneakLeave highlight clear SneakScope
+]])
+end
+
 local function packer()
 	cmd([[
   augroup packer_user_config
@@ -78,4 +85,5 @@ return {
 	neoformat = neoformat,
 	targets = targets,
 	colorscheme = colorscheme,
+	sneak = sneak,
 }
