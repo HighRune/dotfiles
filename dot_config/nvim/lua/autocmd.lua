@@ -35,7 +35,32 @@ local function indentscope()
 	autocmd("FileType", {
 		group = "indentscope",
 		pattern = "*",
-		command = "if index(['help', 'startify', 'dashboard', 'packer', 'neogitstatus', 'NvimTree', 'neo-tree', 'Trouble'], &ft) != -1 || index(['nofile', 'terminal', 'lsp-installer', 'lspinfo'], &bt) != -1 | let b:miniindentscope_disable=v:true | endif",
+		callback = function()
+			local filetype = {
+				help = true,
+				startify = true,
+				dashboard = true,
+				packer = true,
+				neogitstatus = true,
+				NvimTree = true,
+				["neo-tree"] = true,
+				Trouble = true,
+			}
+			local buffertype = {
+				nofile = true,
+				terminal = true,
+				["lsp-installer"] = true,
+				lspinfo = true,
+			}
+			local aa = cmd("&ft")
+			local bb = cmd("&bt")
+			print(cmd("&ft"))
+			print(cmd("&bt"))
+			-- if filetype[aa] or buffertype[bb] then
+			-- 	cmd("let b:miniindentscope_disable=v:true | endif")
+			-- end
+		end,
+		-- command = "if index(['help', 'startify', 'dashboard', 'packer', 'neogitstatus', 'NvimTree', 'neo-tree', 'Trouble'], &ft) != -1 || index(['nofile', 'terminal', 'lsp-installer', 'lspinfo'], &bt) != -1 | let b:miniindentscope_disable=v:true | endif",
 	})
 	-- 	cmd([[
 	-- augroup DisableIntentScope
