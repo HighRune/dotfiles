@@ -86,10 +86,8 @@ local function sneak()
 end
 
 local function targets()
-	cmd([[
-	let g:targets_gracious = 1
-  let g:targets_nl = 'sh'
-	]])
+	g.targets_gracious = 1
+	g.targets_nl = "sh"
 end
 
 local function highlightedyank()
@@ -103,7 +101,7 @@ local function submode()
 end
 
 local function neoformat()
-	g.neoformat_enabled_lua = { "stylua" } -- Enable lua formater
+	g.neoformat_enabled_lua = { "stylua" }
 end
 
 local function wordmotion()
