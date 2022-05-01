@@ -148,7 +148,7 @@ return require("packer").startup({
 			config = function()
 				require("autocmd").sneak()
 				require("options").sneak()
-				-- require("mappings").sneak()
+				require("mappings").sneak()
 			end,
 		})
 		use({
