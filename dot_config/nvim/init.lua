@@ -1,4 +1,4 @@
--- require("autocmd").core()
+require("autocmd").core()
 require("options").core()
 require("mappings").core()
 
