@@ -82,7 +82,7 @@ end
 
 local function targets()
 	g.targets_gracious = 1
-	g.targets_nl = "sh"
+	g.targets_nl = "hn"
 end
 
 local function highlightedyank()
