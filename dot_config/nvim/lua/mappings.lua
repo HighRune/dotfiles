@@ -240,6 +240,8 @@ end
 
 -------------------- AndrewRadev/splitjoin.vim
 local function splitjoin()
+	g.splitjoin_split_mapping = ""
+	g.splitjoin_join_mapping = ""
 	map("n", "gj", ":SplitjoinJoin<cr>")
 	map("n", "gk", ":SplitjoinSplit<cr>")
 end
