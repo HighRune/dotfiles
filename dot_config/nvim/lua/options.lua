@@ -184,7 +184,6 @@ local function textobjuser()
 end
 
 local function dial()
-	require("mappings").dial()
 	local augend = require("dial.augend")
 	require("dial.config").augends:register_group({
 		default = {
