@@ -98,7 +98,6 @@ return require("packer").startup({
 			"AndrewRadev/splitjoin.vim",
 			config = function()
 				require("mappings").splitjoin()
-				require("options").splitjoin()
 			end,
 		})
 		use({
