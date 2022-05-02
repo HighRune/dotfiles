@@ -330,7 +330,7 @@ local function submode()
 end
 
 local function textobjchainmember()
-	cmd("g:textobj_chainmember_no_default_key_mappings = 1")
+	cmd("let g:textobj_chainmember_no_default_key_mappings = 1")
 	map("o", "am", "<Plug>(textobj-chainmember-a)")
 	map("o", "im", "<Plug>(textobj-chainmember-i)")
 	-- map("o", "", "<Plug>(textobj-chainmember-last-a)")
