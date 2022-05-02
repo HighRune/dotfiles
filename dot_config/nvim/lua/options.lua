@@ -75,11 +75,6 @@ local function tokyonight()
 	cmd("colorscheme tokyonight")
 end
 
-local function splitjoin()
-	g.splitjoin_split_mapping = ""
-	g.splitjoin_join_mapping = ""
-end
-
 local function sneak()
 	-- g["sneak#use_ic_scs"] = 1
 	cmd("let g:sneak#use_ic_scs = 1")
@@ -207,7 +202,6 @@ end
 return {
 	core = core,
 	tokyonight = tokyonight,
-	splitjoin = splitjoin,
 	sneak = sneak,
 	targets = targets,
 	highlightedyank = highlightedyank,
