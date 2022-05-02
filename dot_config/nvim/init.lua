@@ -172,7 +172,12 @@ return require("packer").startup({
 		})
 		use("svban/YankAssassin.vim")
 		use("glts/vim-textobj-comment")
-		use("D4KU/vim-textobj-chainmember")
+		use({
+			"D4KU/vim-textobj-chainmember",
+			config = function()
+				-- require("options").textobjchainmember()
+			end,
+		})
 		use("kana/vim-textobj-line")
 		use({
 			"kana/vim-textobj-user",
