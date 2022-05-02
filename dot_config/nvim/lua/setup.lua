@@ -39,21 +39,21 @@ local function fzf()
 			file_icons = true,
 			git_icons = true,
 		},
-		-- keymap = {
-		-- builtin = {},
-		-- fzf = {
-		-- 	-- ["tab"] = "down",
-		-- 	-- ["btab"] = "up",
-		-- 	["ctrl-e"] = "preview-page-down",
-		-- 	["ctrl-u"] = "preview-page-up",
-		-- },
-		-- },
-		-- actions = {
-		-- 	files = {
-		-- 		-- ["default"] = actions.file_edit,
-		-- 		-- ["alt-q"] = actions.file_sel_to_qf,
-		-- 	},
-		-- },
+		keymap = {
+			builtin = {},
+			fzf = {
+				-- 	-- ["tab"] = "down",
+				-- 	-- ["btab"] = "up",
+				["ctrl-e"] = "preview-page-down",
+				["ctrl-u"] = "preview-page-up",
+			},
+			-- },
+			-- actions = {
+			-- 	files = {
+			-- 		-- ["default"] = actions.file_edit,
+			-- 		-- ["alt-q"] = actions.file_sel_to_qf,
+			-- 	},
+		},
 	})
 end
 
