@@ -329,6 +329,16 @@ local function submode()
 	-- fn["submode#map"]("newline", "n", "s", "e", "<Plug>(textobj-specialcharacter)")
 end
 
+local function textobjchainmember()
+	cmd("g:textobj_chainmember_no_default_key_mappings = 1")
+	map("o", "am", "<Plug>(textobj-chainmember-a)")
+	map("o", "im", "<Plug>(textobj-chainmember-i)")
+	-- map("o", "", "<Plug>(textobj-chainmember-last-a)")
+	-- map("o", "", "<Plug>(textobj-chainmember-last-i)")
+	-- map("o", "", "<Plug>(textobj-chainmember-next-a)")
+	-- map("o", "", "<Plug>(textobj-chainmember-next-i)")
+end
+
 -------------------- AndrewRadev/sideways.vim
 -- local function sideways()
 -- map("n", "<c-j>", ":SidewaysLeft<cr>", opts)
@@ -377,6 +387,7 @@ return {
 	gitsigns = gitsigns,
 	submode = submode,
 	packer = packer,
+	textobjchainmember = textobjchainmember,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
