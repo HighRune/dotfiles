@@ -118,7 +118,7 @@ end
 local function fzf()
 	map("n", "<Leader><Leader>", "<cmd>lua require('fzf-lua').files()<CR>")
 	map("n", "<Leader><Tab>", "<cmd>lua require('fzf-lua').buffers()<CR>")
-	map("n", "<Leader>k", "<cmd>lua require('fzf-lua').quickfix()<CR>")
+	-- map("n", "<Leader>x", "<cmd>lua require('fzf-lua').quickfix({multiprocess=true})<CR>")
 	map("n", "<Leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
 end
 
