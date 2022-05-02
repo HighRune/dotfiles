@@ -175,7 +175,7 @@ return require("packer").startup({
 		use({
 			"D4KU/vim-textobj-chainmember",
 			config = function()
-				-- require("options").textobjchainmember()
+				require("mappings").textobjchainmember()
 			end,
 		})
 		use("kana/vim-textobj-line")
