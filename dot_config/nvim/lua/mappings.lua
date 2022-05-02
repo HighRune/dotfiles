@@ -44,35 +44,35 @@ local function core()
 	map("n", "<Leader>q", ":bwipeout!<CR>", silent)
 	map("n", "<Tab>", ":bnext<CR>", silent)
 	map("n", "<S-Tab>", ":bprevious<CR>", silent)
-	-- -- Quickfix list
-	-- -- Cycle through items of the list
-	-- map("n", "<C-Down>", function()
-	-- 	if not pcall(cmd, "cnext") then
-	-- 		pcall(cmd, "cfirst")
-	-- 	end
-	-- end, silent)
-	-- map("n", "<C-Up>", function()
-	-- 	if not pcall(cmd, "cprev") then
-	-- 		pcall(cmd, "clast")
-	-- 	end
-	-- end, silent)
-	-- local qf = augroup("qf", { clear = true })
-	-- -- Exclude quickfix buffer from the buffer list
-	-- autocmd("FileType", {
-	-- 	pattern = "qf",
-	-- 	group = qf,
-	-- 	command = "set nobuflisted",
-	-- })
-	-- -- Automatically fitting a quickfix window to 10 lines max and 3 lines min height
-	-- autocmd("FileType", {
-	-- 	pattern = "qf",
-	-- 	group = qf,
-	-- 	callback = function()
-	-- 		cmd(math.max(math.min(fn.line("$"), 10), 3) .. "wincmd _")
-	-- 	end,
-	-- })
-	-- map("n", "<Leader>i", ":copen<CR>", silent)
-	-- map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
+	-- Quickfix list
+	-- Cycle through items of the list
+	map("n", "<C-Down>", function()
+		if not pcall(cmd, "cnext") then
+			pcall(cmd, "cfirst")
+		end
+	end, silent)
+	map("n", "<C-Up>", function()
+		if not pcall(cmd, "cprev") then
+			pcall(cmd, "clast")
+		end
+	end, silent)
+	local qf = augroup("qf", { clear = true })
+	-- Exclude quickfix buffer from the buffer list
+	autocmd("FileType", {
+		pattern = "qf",
+		group = qf,
+		command = "set nobuflisted",
+	})
+	-- Automatically fitting a quickfix window to 10 lines max and 3 lines min height
+	autocmd("FileType", {
+		pattern = "qf",
+		group = qf,
+		callback = function()
+			cmd(math.max(math.min(fn.line("$"), 10), 3) .. "wincmd _")
+		end,
+	})
+	map("n", "<Leader>i", ":copen<CR>", silent)
+	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
 	-- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
 	-- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
