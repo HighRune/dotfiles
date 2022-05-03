@@ -166,13 +166,6 @@ local function textobjuser()
 			["move-p"] = "S",
 		},
 	})
-	fn["textobj#user#plugin"]("nonwhitespacecharacter", {
-		nonwhitespacecharacter = {
-			pattern = [[\S]],
-			-- pattern = [[\s\+]],
-			-- 		select = "iw",
-		},
-	})
 	-- fn["textobj#user#plugin"]("word", {
 	-- 	word = {
 	-- 		pattern = [[\<\w\+\>]],
