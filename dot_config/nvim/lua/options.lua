@@ -170,7 +170,7 @@ local function textobjuser()
 		nonwhitespacecharacter = {
 			pattern = [[\S]],
 			-- pattern = [[\s\+]],
-			select = ['ad', 'id'],
+			-- 		select = "iw",
 		},
 	})
 	-- fn["textobj#user#plugin"]("word", {
