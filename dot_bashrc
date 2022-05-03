@@ -257,6 +257,8 @@ alias grs1='git reset HEAD~1'
 alias npml='npm ls --depth=0'
 alias npmg='npm ls -g --depth=0'
 
+alias chrome='google-chrome-stable'
+
 # ------------------------------- GCLOUD
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/charles/google-cloud-sdk/path.bash.inc' ]; then . '/home/charles/google-cloud-sdk/path.bash.inc'; fi
