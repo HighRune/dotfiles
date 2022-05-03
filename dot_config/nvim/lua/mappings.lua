@@ -125,8 +125,9 @@ end
 local function fzf()
 	map("n", "<Leader><Leader>", "<cmd>lua require('fzf-lua').files()<CR>")
 	map("n", "<Leader><Tab>", "<cmd>lua require('fzf-lua').buffers()<CR>")
-	-- map("n", "<Leader>x", "<cmd>lua require('fzf-lua').quickfix({multiprocess=true})<CR>")
 	map("n", "<Leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
+	map("n", "<Leader>h", "<cmd>lua require('fzf-lua').help_tags()<CR>")
+	-- map("n", "<Leader>x", "<cmd>lua require('fzf-lua').quickfix({multiprocess=true})<CR>")
 end
 
 -------------------- wellle/targets.vim
@@ -224,9 +225,9 @@ local function gitsigns(bufnr)
 	mmap("n", "<S-left>", "&diff ? '<S-left>' : '<cmd>Gitsigns prev_hunk<CR>'", expr)
 
 	-- Actions
-	mmap({ "n", "v" }, "<leader>ha", gs.stage_hunk)
-	mmap({ "n", "v" }, "<leader>hr", gs.undo_stage_hunk)
-	mmap({ "n", "v" }, "<leader>hc", gs.reset_hunk)
+	-- mmap({ "n", "v" }, "<leader>ha", gs.stage_hunk)
+	-- mmap({ "n", "v" }, "<leader>hr", gs.undo_stage_hunk)
+	-- mmap({ "n", "v" }, "<leader>hc", gs.reset_hunk)
 	mmap("n", "<leader>ga", gs.stage_buffer)
 	mmap("n", "<leader>gr", gs.reset_buffer_index)
 	mmap("n", "<leader>gc", gs.reset_buffer)
@@ -309,7 +310,7 @@ local function lspconfig(buffer)
 	map("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", { buffer = buffer })
 	map("n", "<left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
 	map("n", "<right>", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
-	map("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", { buffer = buffer })
+	-- map("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", { buffer = buffer })
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
 	-- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
 end
