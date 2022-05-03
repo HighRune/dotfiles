@@ -14,6 +14,7 @@ local function core()
 	-- Help
 	cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
 	cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
+	cmd("iabbrev co console.log('<Esc>F%s<a-:>:call getchar()<CR>")
 	-- Disable keys
 	map("", "Q", "<nop>")
 	map("", "q", "<nop>")
