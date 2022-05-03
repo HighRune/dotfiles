@@ -198,6 +198,7 @@ return require("packer").startup({
 			config = require("putline").setup(),
 		})
 		use("ryvnf/readline.vim")
+		use("tpope/vim-abolish")
 	end,
 	config = {
 		display = {
@@ -292,7 +293,6 @@ return require("packer").startup({
 -- use("RRethy/nvim-treesitter-textsubjects")
 -- use({ "ibhagwan/fzf-lua", requires = { "vijaymarupudi/nvim-fzf" } })
 -- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
--- use("tpope/vim-abolish")
 -- use({
 -- "bkad/CamelCaseMotion",
 -- config = function()
