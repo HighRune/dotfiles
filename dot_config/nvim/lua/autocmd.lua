@@ -47,7 +47,8 @@ local function neoformat()
 	autocmd("BufWritePre", {
 		group = "neoformat",
 		pattern = "*.lua",
-		command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
+		command = "undojoin | Neoformat",
+		-- command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
 	})
 end
 
