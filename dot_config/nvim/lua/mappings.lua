@@ -289,8 +289,8 @@ local function wordmotion()
 	map({ "n", "o", "x" }, "b", "<Plug>WordMotion_B")
 	map({ "n", "o", "x" }, "e", "<Plug>WordMotion_E")
 	map({ "n", "o", "x" }, "ge", "<Plug>WordMotion_gE")
-	map({ "o", "x" }, "iw", "<Plug>WordMotion_iW")
-	map({ "o", "x" }, "aw", "<Plug>WordMotion_aW")
+	-- map({ "o", "x" }, "iw", "<Plug>WordMotion_iW")
+	-- map({ "o", "x" }, "aw", "<Plug>WordMotion_aW")
 end
 
 -------------------- neovim/nvim-lspconfig
