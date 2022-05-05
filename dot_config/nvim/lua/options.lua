@@ -158,27 +158,52 @@ local function wordmotion()
 end
 
 local function textobjuser()
-	fn["textobj#user#plugin"]("specialcharacters", {
-		specialcharacters = {
-			pattern = [[\(\w\|\s\)\@!]],
-			["move-n"] = "s",
-			["move-p"] = "S",
-		},
-	})
+	-- fn["textobj#user#plugin"]("specialcharacters", {
+	-- 	specialcharacters = {
+	-- 		pattern = [[\(\w\|\s\)\@!]],
+	-- 		["move-n"] = "s",
+	-- 		["move-p"] = "S",
+	-- 	},
+	-- })
 	-- pattern = [[\S\+]],
 
-	cmd([[
-    call textobj#user#plugin('contiuous', {
-  \   'continuous': {
-  \     'pattern': '\S\+',
-  \     'select': ['aw', 'iw'],
-  \     'move-n': 'w',
-  \     'move-p': 'b',
-  \     'move-N': 'e',
-  \     'move-P': 'ge',
-   \   },
-  \ })
-   ]])
+	-- 	cmd([[
+	-- "     call textobj#user#plugin('handyobjects', {
+	-- " \   'underscores_a': {
+	-- " \     'select': 'ar',
+	-- " \     'pattern': '_\_[^_]*_'
+	-- " \   },
+	-- " \   'underscores_i': {
+	-- " \     'select': 'ir',
+	-- " \     'pattern': '_\zs\_[^_]\+\ze_'
+	-- " \   },
+	-- " \ })
+	-- call textobj#user#plugin('contiuous', {
+	--   \   'continuous': {
+	--   \     'pattern': '\S\+',
+	--   \     'move-n': 'w',
+	--   \     'move-p': 'b',
+	--   \     'move-N': 'e',
+	--   \     'move-P': 'ge',
+	--   \   },
+	--   \   'continuous_a': {
+	--   \     'select': 'aw',
+	--   \     'pattern': '\s\S\+\s'
+	--   \   },
+	--   \ })
+	--    ]])
+	-- \     'select': ['aw', 'iw'],
+	-- call textobj#user#plugin('contiuous', {
+	--   \   'continuous': {
+	--   \     'pattern': '\S\+',
+	--   \     'select': ['aw', 'iw'],
+	--   \     'move-n': 'w',
+	--   \     'move-p': 'b',
+	--   \     'move-N': 'e',
+	--   \     'move-P': 'ge',
+	--   \   },
+	--   \ })
+	--   ]])
 	-- fn["textobj#user#plugin"]("whitespaces", {
 	-- whitespaces = {
 	-- 	pattern = [[\S\zs\s\+]],
