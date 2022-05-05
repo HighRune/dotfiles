@@ -174,7 +174,15 @@ local function textobjuser()
 	  \     'move-N': 'e',
 	  \     'move-P': 'ge',
 	  \   },
-	  \ })
+	  \   'word_a': {
+	  \     'select': 'aw',
+	  \     'pattern': '\s\=\<\w\+\>\s\='
+	  \   },
+	  \   'word_i': {
+	  \   'select': 'iw',
+	  \     'pattern': '\<\w\+\>'
+    \   },
+    \ })
 	]])
 
 	-- cmd([[
