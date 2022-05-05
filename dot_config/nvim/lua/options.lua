@@ -174,7 +174,7 @@ local function textobjuser()
 	})
 	-- fn["textobj#user#plugin"]("whitespaces", {
 	-- whitespaces = {
-		pattern = [[\S\+]],
+		-- pattern = [[\S\+]],
 	-- 	pattern = [[\S\zs\s\+]],
 	-- 	["move-n"] = "s",
 	-- 	["move-p"] = "S",
