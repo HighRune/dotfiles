@@ -233,6 +233,7 @@ function dev () {
 
 alias t='tmux'
 alias tl='tmux ls'
+alias ta='tmux attach'
 alias tk='tmux kill-server'
 alias tka='tmux kill-session -a'
 
