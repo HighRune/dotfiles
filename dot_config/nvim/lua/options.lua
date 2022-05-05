@@ -158,16 +158,26 @@ local function wordmotion()
 end
 
 local function textobjuser()
-	-- fn["textobj#user#plugin"]("specialcharacters", {
-	-- 	specialcharacters = {
-	-- 		pattern = [[\(\w\|\s\)\@!]],
-	-- 		["move-n"] = "s",
-	-- 		["move-p"] = "S",
-	-- 	},
-	-- })
-	-- pattern = [[\S\+]],
+	fn["textobj#user#plugin"]("specialcharacters", {
+		move = {
+			pattern = [[\(\w\|\s\)\@!]],
+			["move-n"] = "s",
+			["move-p"] = "S",
+		},
+	})
+	cmd([[
+	call textobj#user#plugin('word', {
+	  \   'move': {
+	  \     'pattern': '\<\w\+\>',
+	  \     'move-n': 'w',
+	  \     'move-p': 'b',
+	  \     'move-N': 'e',
+	  \     'move-P': 'ge',
+	  \   },
+	  \ })
+	]])
 
-	-- 	cmd([[
+	-- cmd([[
 	-- "     call textobj#user#plugin('handyobjects', {
 	-- " \   'underscores_a': {
 	-- " \     'select': 'ar',
@@ -221,6 +231,7 @@ local function textobjuser()
 	-- 		select = "iw",
 	-- 	},
 	-- })
+	-- pattern = [[\S\+]],
 end
 
 local function dial()
