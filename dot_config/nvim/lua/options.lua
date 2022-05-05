@@ -165,13 +165,18 @@ local function textobjuser()
 			["move-p"] = "S",
 		},
 	})
-	fn["textobj#user#plugin"]("continuous", {
-		continuous = {
-			pattern = [[\S\+]],
-			select = "ar",
-		},
-	})
+	-- pattern = [[\S\+]],
 
+	cmd([[
+  	call textobj#user#plugin('contiuous', {
+	\   'continuous': {
+	\     'pattern': '\S\+',
+	\     'select': ['ar', 'ir'],
+	\     'move-n' = 'r',
+	\     'move-p' = 'R'
+  \   },
+	\ })
+  ]])
 	-- fn["textobj#user#plugin"]("whitespaces", {
 	-- whitespaces = {
 	-- 	pattern = [[\S\zs\s\+]],
