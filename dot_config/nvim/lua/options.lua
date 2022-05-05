@@ -153,8 +153,8 @@ local function wordmotion()
 		'"',
 	}
 	-- Move to the character following those characters
-	g.wordmotion_spaces = spaces
-	g.wordmotion_uppercase_spaces = upspaces
+	-- g.wordmotion_spaces = spaces
+	-- g.wordmotion_uppercase_spaces = upspaces
 end
 
 local function textobjuser()
