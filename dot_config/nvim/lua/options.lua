@@ -158,13 +158,20 @@ local function wordmotion()
 end
 
 local function textobjuser()
-	fn["textobj#user#plugin"]("specialcharacter", {
-		specialcharacter = {
+	fn["textobj#user#plugin"]("special", {
+		special = {
 			pattern = [[\(\w\|\s\)\@!]],
 			-- whitespaces
 			-- pattern = [[\s\+]],
 			-- pattern = [[\S\+]],
 			-- pattern = [[\S\zs\s\+]],
+			["move-n"] = "s",
+			["move-p"] = "S",
+		},
+	})
+	fn["textobj#user#plugin"]("whitespaces", {
+		whitespaces = {
+			pattern = [[\S\zs\s\+]],
 			["move-n"] = "s",
 			["move-p"] = "S",
 		},
