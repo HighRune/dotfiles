@@ -158,7 +158,7 @@ local function wordmotion()
 end
 
 local function textobjuser()
-	fn["textobj#user#plugin"]("special", {
+	fn["textobj#user#plugin"]("specialChar", {
 		special = {
 			pattern = [[\(\w\|\s\)\@!]],
 			-- whitespaces
