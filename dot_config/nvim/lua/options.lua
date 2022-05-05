@@ -171,7 +171,7 @@ local function textobjuser()
   	call textobj#user#plugin('contiuous', {
 	\   'continuous': {
 	\     'pattern': '\S\+',
-	\     'select': ['w', 'iw'],
+	\     'select': ['aw', 'iw'],
   \   },
 	\ })
   ]])
