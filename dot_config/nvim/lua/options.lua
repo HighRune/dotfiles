@@ -176,7 +176,7 @@ local function textobjuser()
 	  \   },
 	  \   'word_a': {
 	  \     'select': 'aw',
-	  \     'pattern': '\s\=\<\w\+\>\s\='
+	  \     'pattern': '\s*\<\w\+\>\s*'
 	  \   },
 	  \   'word_i': {
 	  \   'select': 'iw',
