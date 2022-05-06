@@ -176,7 +176,7 @@ local function textobjuser()
 	  \   },
 	  \   'word_a': {
 	  \     'select': 'aw',
-	  \     'pattern': '\s*\<\w\+\>\s*'
+	  \     'pattern': '^\(\s*\)\zs\<\w\+\>\s*\|\s*\<\w\+\>\s*'
 	  \   },
 	  \   'word_i': {
 	  \   'select': 'iw',
@@ -186,6 +186,7 @@ local function textobjuser()
 	]])
 
 	-- cmd([[
+	-- -- -- \     'pattern': '\s*\<\w\+\>\s*'
 	-- "     call textobj#user#plugin('handyobjects', {
 	-- " \   'underscores_a': {
 	-- " \     'select': 'ar',
