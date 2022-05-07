@@ -176,15 +176,15 @@ local function textobjuser()
 	  \   },
 	  \   'word_a': {
 	  \     'select': 'aw',
-	  \     'pattern': '^\(\s*\)\zs\<\[=[:alnum:]=]\+\>\s*\|\s*\<\[=[:alnum:]=]\+\>\s*'
+	  \     'pattern': '^\(\s*\)\zs\<[=[:alnum:]=]\+\>\s*\|\s*\<[=[:alnum:]=]\+\>\s*'
 	  \   },
 	  \   'word_A': {
 	  \     'select': 'Aw',
-	  \     'pattern': '\[=[:alnum:]=]\+\(\W*\|\S*\)'
+	  \     'pattern': '[=[:alnum:]=]\+\(\W*\|\S*\)'
     \   },
     \   'word_i': {
 	  \   'select': 'iw',
-	  \     'pattern': '\<\[=[:alnum:]=]\+\>'
+	  \     'pattern': '\<[=[:alnum:]=]\+\>'
     \   },
     \ })
 	]])
