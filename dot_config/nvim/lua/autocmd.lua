@@ -50,12 +50,12 @@ local function neoformat()
 	-- 	command = "undojoin | Neoformat",
 	-- 	-- command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
 	-- })
-  cmd([[
-  augroup fmt
-  \ autocmd!
-  \ autocmd BufWritePre *.lua undojoin | Neoformat
-  \ augroup END
-  ]])
+  -- cmd([[
+  -- augroup fmt
+  -- \ autocmd!
+  -- \ autocmd BufWritePre *.lua undojoin | Neoformat
+  -- \ augroup END
+  -- ]])
 end
 
 local function targets()
