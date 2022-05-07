@@ -74,10 +74,10 @@ return require("packer").startup({
 		use("windwp/nvim-ts-autotag")
 		use("itchyny/vim-cursorword")
 		use("tpope/vim-surround")
-		-- use({
-		-- 	"akinsho/bufferline.nvim",
-		-- 	config = config.bufferline(),
-		-- })
+		use({
+			"akinsho/bufferline.nvim",
+			config = config.bufferline(),
+		})
 		use({
 			"sbdchd/neoformat",
 			config = function()
@@ -112,13 +112,13 @@ return require("packer").startup({
 			"windwp/nvim-autopairs",
 			config = require("config.autopairs")(),
 		})
-		use({
-			"chaoren/vim-wordmotion",
-			config = function()
-				-- require("mappings").wordmotion()
-				-- require("options").wordmotion()
-			end,
-		})
+		-- use({
+		-- 	"chaoren/vim-wordmotion",
+		-- 	config = function()
+		-- 		-- require("mappings").wordmotion()
+		-- 		-- require("options").wordmotion()
+		-- 	end,
+		-- })
 		use({
 			"kana/vim-arpeggio",
 			config = function()
