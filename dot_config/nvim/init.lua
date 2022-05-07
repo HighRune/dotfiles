@@ -115,8 +115,8 @@ return require("packer").startup({
 		use({
 			"chaoren/vim-wordmotion",
 			config = function()
-				require("mappings").wordmotion()
-				require("options").wordmotion()
+				-- require("mappings").wordmotion()
+				-- require("options").wordmotion()
 			end,
 		})
 		use({
