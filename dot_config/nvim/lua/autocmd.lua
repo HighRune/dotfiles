@@ -43,13 +43,13 @@ end
 
 local function neoformat()
 	-- Format on write
-	augroup("neoformat", { clear = true })
-	autocmd("BufWritePre", {
-		group = "neoformat",
-		pattern = "*.lua",
-		command = "undojoin | Neoformat",
-		-- command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
-	})
+	-- augroup("neoformat", { clear = true })
+	-- autocmd("BufWritePre", {
+	-- 	group = "neoformat",
+	-- 	pattern = "*.lua",
+	-- 	command = "undojoin | Neoformat",
+	-- 	-- command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
+	-- })
 end
 
 local function targets()
