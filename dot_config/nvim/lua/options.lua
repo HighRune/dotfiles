@@ -169,7 +169,7 @@ local function textobjuser()
 	cmd([[
 	call textobj#user#plugin('word', {
 	  \   'move': {
-    \   'pattern': '\<[=[:alnum:]=]\+\>',
+    \   'pattern': '[=[:alnum:]=]\+',
     \     'move-n': 'w',
 	  \     'move-p': 'b',
 	  \     'move-N': 'e',
