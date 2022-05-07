@@ -178,7 +178,11 @@ local function textobjuser()
 	  \     'select': 'aw',
 	  \     'pattern': '^\(\s*\)\zs\<\w\+\>\s*\|\s*\<\w\+\>\s*'
 	  \   },
-	  \   'word_i': {
+	  \   'word_A': {
+	  \     'select': 'Aw',
+	  \     'pattern': '\w\+\(\W*\|\S*\)'
+    \   },
+    \   'word_i': {
 	  \   'select': 'iw',
 	  \     'pattern': '\<\w\+\>'
     \   },
