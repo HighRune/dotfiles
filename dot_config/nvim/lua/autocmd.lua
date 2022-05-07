@@ -53,7 +53,7 @@ local function neoformat()
 	cmd([[
   augroup fmt
   autocmd!
-  autocmd BufWritePre *.lua try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry
+  BufWritePre *.lua undojoin | Neoformat
   augroup END
   ]])
 end
