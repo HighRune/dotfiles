@@ -164,7 +164,15 @@ local function textobjuser()
 			["move-n"] = "W",
 			["move-p"] = "B",
 		},
-	})
+		special_i = {
+		  select = "iW",
+			pattern = [[\(\W\&\S\)\+]],
+    },
+		special_a = {
+		  select = "aW",
+			pattern = [[\s*\(\W\&\S\)\+\s*]],
+    },
+  })
   -- pattern = [[\(\w\|\s\)\@!]],
   -- \   'pattern': '\[[:alnum:]]\+',
   -- \   'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
