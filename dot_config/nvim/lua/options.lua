@@ -177,17 +177,17 @@ local function textobjuser()
 	  \     'move-N': 'e',
 	  \     'move-P': 'ge',
 	  \   },
-	  \   'word_a': {
-	  \     'select': 'aw',
-	  \     'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
-	  \   },
-	  \   'word_A': {
-	  \     'select': 'Aw',
-	  \     'pattern': '\(\W*\&\S*\)\w\+\(\W*\&\S*\)'
-    \   },
     \   'word_i': {
 	  \   'select': 'iw',
 	  \     'pattern': '\w\+'
+    \   },
+    \   'word_a': {
+	  \     'select': 'aw',
+	  \     'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
+	  \   },
+    \   'word_I': {
+	  \     'select': 'Iw',
+	  \     'pattern': '\(\W*\&\S*\)\w\+\(\W*\&\S*\)'
     \   },
     \ })
 	]])
