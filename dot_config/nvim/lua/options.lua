@@ -166,6 +166,8 @@ local function textobjuser()
 		},
 	})
   -- \   'pattern': '\[[:alnum:]]\+',
+  -- \   'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
+  -- \   'pattern': '\(\s*\w\+\s*\)\(\W\)\@='
   cmd([[
 	call textobj#user#plugin('word', {
 	  \   'move': {
