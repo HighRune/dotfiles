@@ -160,11 +160,12 @@ end
 local function textobjuser()
 	fn["textobj#user#plugin"]("specialcharacters", {
 		move = {
-			pattern = [[\(\w\|\s\)\@!]],
+			pattern = [[\(\W\&\S\)\+]],
 			["move-n"] = "s",
 			["move-p"] = "S",
 		},
 	})
+  -- pattern = [[\(\w\|\s\)\@!]],
   -- \   'pattern': '\[[:alnum:]]\+',
   -- \   'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
   -- \   'pattern': '\(\s*\w\+\s*\)\(\W\)\@='
