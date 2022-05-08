@@ -185,7 +185,7 @@ local function textobjuser()
     \   },
     \   'word_i': {
 	  \   'select': 'iw',
-	  \     'pattern': '[=[:alnum:]=]\+'
+	  \     'pattern': '\w\+'
     \   },
     \ })
 	]])
