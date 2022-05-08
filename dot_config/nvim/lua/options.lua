@@ -183,7 +183,7 @@ local function textobjuser()
 	  \   },
 	  \   'word_A': {
 	  \     'select': 'Aw',
-	  \     'pattern': '\w\+\(\W*\|\S*\)'
+	  \     'pattern': '\(\W*\&\S*\)\w\+\(\W*\&\S*\)'
     \   },
     \   'word_i': {
 	  \   'select': 'iw',
