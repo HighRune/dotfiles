@@ -279,7 +279,7 @@ end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
 	g.wordmotion_nomap = 1
-	map({ "n", "o", "x" }, "gw", "<Plug>WordMotion_w")
+	-- map({ "n", "o", "x" }, "gw", "<Plug>WordMotion_w")
 	-- map({ "n", "o", "x" }, "W", "<Plug>WordMotion_w")
 	-- map({ "n", "o", "x" }, "B", "<Plug>WordMotion_b")
 	-- map({ "n", "o", "x" }, "E", "<Plug>WordMotion_e")
