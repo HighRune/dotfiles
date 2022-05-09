@@ -163,7 +163,9 @@ local function textobjuser()
 			pattern = [[\(\W\&\S\)\+]],
 			["move-n"] = "W",
 			["move-p"] = "B",
-		},
+      ['move-N'] = 'E',
+      ['move-P'] = 'gE',
+    },
 		special_i = {
 		  select = "iW",
 			pattern = [[\(\W\&\S\)\+]],
