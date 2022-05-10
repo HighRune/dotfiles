@@ -179,6 +179,10 @@ local function textobjuser()
   -- \   'pattern': '\[[:alnum:]]\+',
   -- \   'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
   -- \   'pattern': '\(\s*\w\+\s*\)\(\W\)\@='
+  --   \   'word_a': {
+	--  \     'select': 'aw',
+	--  \     'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
+  -- \   },
   cmd([[
 	call textobj#user#plugin('word', {
 	  \   'move': {
@@ -192,10 +196,6 @@ local function textobjuser()
 	  \   'select': 'iw',
 	  \     'pattern': '\w\+'
     \   },
-    \   'word_a': {
-	  \     'select': 'aw',
-	  \     'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
-	  \   },
     \   'word_I': {
 	  \     'select': 'Iw',
 	  \     'pattern': '\(\W*\&\S*\)\w\+\(\W*\&\S*\)'
