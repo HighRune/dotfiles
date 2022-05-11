@@ -173,12 +173,6 @@ return require("packer").startup({
 		use("svban/YankAssassin.vim")
 		use("glts/vim-textobj-comment")
     use({
-      "jeetsukumaran/vim-indentwise",
-      config = function()
-        -- require("mappings").indentwise()
-      end,
-    })
-    use({
 			"D4KU/vim-textobj-chainmember",
 			config = function()
 				require("mappings").textobjchainmember()
