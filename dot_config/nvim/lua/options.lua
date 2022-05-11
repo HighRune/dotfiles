@@ -82,7 +82,7 @@ end
 
 local function targets()
 	g.targets_gracious = 1
-	g.targets_nl = "nN"
+	g.targets_nl = "nt"
 	g.targets_aiAI = 'aIAi'
 end
 
