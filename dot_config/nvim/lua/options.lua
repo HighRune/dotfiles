@@ -8,7 +8,7 @@ local function core()
 	-- cmd([[color haslo]])
 
 	-- o.scroll = 5
-	opt.fillchars:append("horiz:.")
+	-- opt.fillchars:append("horiz:.")
 	g.mapleader = " "
 	o.mouse = "a" -- Enables mouse support
 	-- o.cursorline = true
