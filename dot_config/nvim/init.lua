@@ -195,7 +195,7 @@ return require("packer").startup({
 		})
 		use({
 			"/home/charles/Documents/dev/plugins/putline.nvim",
-			"Runeword/putline.nvim",
+			-- "Runeword/putline.nvim",
 			config = require("putline").setup(),
 		})
 		use("ryvnf/readline.vim")
