@@ -81,6 +81,13 @@ local function core()
 	map("n", "<Leader>i", ":copen<CR>", silent)
 	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
+	map("n", "gP", function()
+		require("putline").above()
+	end)
+	map("n", "gp", function()
+		require("putline").below()
+	end)
+
 	-- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
 	-- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
 
