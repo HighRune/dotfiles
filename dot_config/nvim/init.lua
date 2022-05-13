@@ -70,6 +70,7 @@ return require("packer").startup({
 				require("setup").indentscope()
 			end,
 		})
+		use("jessekelighine/vindent.vim")
 		use("nvim-treesitter/nvim-treesitter-textobjects")
 		use("windwp/nvim-ts-autotag")
 		use("itchyny/vim-cursorword")
