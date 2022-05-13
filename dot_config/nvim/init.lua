@@ -70,7 +70,12 @@ return require("packer").startup({
 				require("setup").indentscope()
 			end,
 		})
-		use("jessekelighine/vindent.vim")
+		use({
+			"jessekelighine/vindent.vim",
+			config = function()
+				require("mappings").vindent()
+			end,
+		})
 		use("nvim-treesitter/nvim-treesitter-textobjects")
 		use("windwp/nvim-ts-autotag")
 		use("itchyny/vim-cursorword")
@@ -173,7 +178,7 @@ return require("packer").startup({
 		})
 		use("svban/YankAssassin.vim")
 		use("glts/vim-textobj-comment")
-    use({
+		use({
 			"D4KU/vim-textobj-chainmember",
 			config = function()
 				require("mappings").textobjchainmember()
