@@ -46,7 +46,7 @@ local function core()
 	map("n", "$", "g$:set ve= ve=all<CR>")
 	map("n", "^", "g^")
 	map("n", "&", "g^")
-	map("n", "<S-CR>", "-")
+	-- map("n", "<S-CR>", "-")
 	-- Buffers
 	map("n", "<Leader>q", ":bwipeout!<CR>", silent)
 	map("n", "<Tab>", ":bnext<CR>", silent)
@@ -181,8 +181,8 @@ local function hop()
 end
 
 local function vindent()
-	g.vindent_motion_diff_prev = "[;"
-	g.vindent_motion_diff_next = "];"
+	g.vindent_motion_diff_prev = "<S-CR>"
+  g.vindent_motion_diff_next = "<CR>"
 end
 
 -------------------- inside/vim-search-pulse
