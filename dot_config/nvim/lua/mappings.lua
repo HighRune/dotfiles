@@ -180,6 +180,11 @@ local function hop()
 	-- map("v", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 end
 
+local function vindent()
+	g.vindent_motion_diff_prev = "[;"
+	g.vindent_motion_diff_next = "];"
+end
+
 -------------------- inside/vim-search-pulse
 local function pulse()
 	-- cmd([[
@@ -412,6 +417,7 @@ return {
 	submode = submode,
 	packer = packer,
 	textobjchainmember = textobjchainmember,
+	vindent = vindent,
 	-- pounce = pounce,
 	-- miniyank = miniyank,
 	-- sideways = sideways,
