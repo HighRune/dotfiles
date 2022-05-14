@@ -58,22 +58,22 @@ return function()
 	end
 
 	local function on_attach_eslint(client, buffer)
-		client.resolved_capabilities.document_formatting = true
+		client.server_capabilities.document_formatting = true
 		on_attach(client, buffer)
 	end
 
 	local function on_attach_tsserver(client, buffer)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false
 		on_attach(client, buffer)
 	end
 
 	local function on_attach_volar(client, buffer)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false
 		on_attach(client, buffer)
 	end
 
 	local function on_attach_sumneko_lua(client, buffer)
-		client.resolved_capabilities.document_formatting = true
+		client.server_capabilities.document_formatting = true
 		on_attach(client, buffer)
 	end
 	-------------------- williamboman/nvim-lsp-installer
