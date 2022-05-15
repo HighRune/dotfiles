@@ -187,8 +187,8 @@ local function hop()
 end
 
 local function vindent()
-	g.vindent_motion_diff_prev = "<S-CR>"
-	g.vindent_motion_diff_next = "<CR>"
+  g.vindent_motion_diff_prev = "<C-k>"
+  g.vindent_motion_diff_next = "<C-j>"
 end
 
 -------------------- inside/vim-search-pulse
