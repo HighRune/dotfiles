@@ -92,14 +92,6 @@ return require("packer").startup({
 			end,
 		})
 		use({
-			"toppair/reach.nvim",
-			config = function()
-				require("reach").setup({
-					notifications = true,
-				})
-			end,
-		})
-		use({
 			"numToStr/Comment.nvim",
 			config = function()
 				require("setup").comment()
