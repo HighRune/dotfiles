@@ -51,8 +51,6 @@ local function core()
 	map("n", "<Leader>q", ":bwipeout!<CR>", silent)
 	map("n", "<Tab>", ":bnext<CR>", silent)
 	map("n", "<S-Tab>", ":bprevious<CR>", silent)
-	map("n", "<leader><Tab>", [[:call setqflist(map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), '{"bufnr": v:val}'))
-]])
 	-- Quickfix list
 	-- Cycle through items of the list
 	map("n", "<C-Down>", function()
