@@ -91,6 +91,7 @@ return require("packer").startup({
 				require("autocmd").neoformat()
 			end,
 		})
+		use("toppair/reach.nvim")
 		use({
 			"numToStr/Comment.nvim",
 			config = function()
