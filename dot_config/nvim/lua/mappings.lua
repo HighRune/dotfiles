@@ -82,10 +82,16 @@ local function core()
 	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
 	map("n", "gP", function()
-		require("putline").above()
+		require("putline").putLinewiseAbove()
 	end)
 	map("n", "gp", function()
-		require("putline").below()
+		require("putline").putLinewiseBelow()
+	end)
+	map("n", "p", function()
+		require("putline").putCharwiseAfter()
+	end)
+	map("n", "P", function()
+		require("putline").putCharwiseBefore()
 	end)
 
 	-- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
@@ -182,7 +188,7 @@ end
 
 local function vindent()
 	g.vindent_motion_diff_prev = "<S-CR>"
-  g.vindent_motion_diff_next = "<CR>"
+	g.vindent_motion_diff_next = "<CR>"
 end
 
 -------------------- inside/vim-search-pulse
