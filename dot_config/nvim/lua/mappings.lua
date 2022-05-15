@@ -51,6 +51,8 @@ local function core()
 	map("n", "<Leader>q", ":bwipeout!<CR>", silent)
 	map("n", "<Tab>", ":bnext<CR>", silent)
 	map("n", "<S-Tab>", ":bprevious<CR>", silent)
+	map("n", "<leader><Tab>", [[:call setqflist(map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), '{"bufnr": v:val}'))
+]])
 	-- Quickfix list
 	-- Cycle through items of the list
 	map("n", "<C-Down>", function()
@@ -137,9 +139,9 @@ end
 -------------------- junegunn/fzf
 local function fzf()
 	map("n", "<Leader><Leader>", "<cmd>lua require('fzf-lua').files()<CR>")
-	map("n", "<Leader><Tab>", "<cmd>lua require('fzf-lua').buffers()<CR>")
 	map("n", "<Leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
 	map("n", "<Leader>h", "<cmd>lua require('fzf-lua').help_tags()<CR>")
+  -- map("n", "<Leader><Tab>", "<cmd>lua require('fzf-lua').buffers()<CR>")
 	-- map("n", "<Leader>x", "<cmd>lua require('fzf-lua').quickfix({multiprocess=true})<CR>")
 end
 
