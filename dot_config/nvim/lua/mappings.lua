@@ -52,6 +52,9 @@ local function core()
 	map("n", "<Tab>", ":bnext<CR>", silent)
 	map("n", "<S-Tab>", ":bprevious<CR>", silent)
 	-- Quickfix list
+  map("n", "<leader><Tab>", function()
+		require("putline").quickfixBuffers()
+  end)
 	-- Cycle through items of the list
 	map("n", "<C-Down>", function()
 		if not pcall(cmd, "cnext") then
