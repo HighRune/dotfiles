@@ -70,14 +70,14 @@ key_bindings:
 
   # Tmux
   # Detach from session
-  - { key: Q,      mods: Control|Shift, command: { program: "tmux", args: ["detach-client"] } }
-  # Switch session
+  # - { key: Q,      mods: Control|Shift, command: { program: "tmux", args: ["detach-client"] } }
+  # # Switch session
   - { key: Tab,    mods: Alt, command: { program: "tmux", args: ["switch-client", "-n"] }}
   - { key: Tab,    mods: Alt|Shift, command: { program: "tmux", args: ["switch-client", "-p"] }}
   # Create / Kill / Rename window
-  - { key: T,    mods: Control|Shift, command: { program: "tmux", args: ["new-window"] }}
-  - { key: W,    mods: Control|Shift, command: { program: "tmux", args: ["kill-window"] }}
-  - { key: R,    mods: Control|Shift, command: { program: "tmux", args: ["rename-window"] }}
+  # - { key: T,    mods: Control|Shift, command: { program: "tmux", args: ["new-window"] }}
+  # - { key: W,    mods: Control|Shift, command: { program: "tmux", args: ["kill-window"] }}
+  # - { key: R,    mods: Control|Shift, command: { program: "tmux", args: ["rename-window"] }}
   # Next / Previous window
   - { key: Tab, mods: Control, command: { program: "tmux", args: ["next-window"] }}
   - { key: Tab, mods: Control|Shift, command: { program: "tmux", args: ["previous-window"] }}
