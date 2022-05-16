@@ -234,7 +234,7 @@ function dev () {
 alias t='tmux'
 alias tl='tmux ls'
 alias ta='tmux attach'
-alias td='tmux detach-client'
+alias td='tmux detach'
 alias tnw='tmux new-window'
 alias trw='tmux rename-window'
 alias tkw='tmux kill-window'
