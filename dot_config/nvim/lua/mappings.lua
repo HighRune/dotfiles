@@ -46,26 +46,23 @@ local function core()
 	map("n", "$", "g$:set ve= ve=all<CR>")
 	map("n", "^", "g^")
 	map("n", "&", "g^")
-	-- map("n", "<S-CR>", "-")
+
 	-- Buffers
-	map("n", "<Leader>q", ":bwipeout!<CR>", silent)
-	map("n", "<Tab>", ":bnext<CR>", silent)
-	map("n", "<S-Tab>", ":bprevious<CR>", silent)
+  map("n", "<Leader>q", ":bwipeout!<CR>", silent)
+  -- map("n", "<Tab>", ":bnext<CR>", silent)
+  -- map("n", "<S-Tab>", ":bprevious<CR>", silent)
+
 	-- Quickfix list
   map("n", "<leader><Tab>", function()
-		require("putline").quickfixBuffers()
+		require("putline").buffersToQfWindow()
   end)
-	-- Cycle through items of the list
-	map("n", "<C-Down>", function()
-		if not pcall(cmd, "cnext") then
-			pcall(cmd, "cfirst")
-		end
+	map("n", "<Tab>", function()
+		require("putline").nextQfItem()
 	end, silent)
-	map("n", "<C-Up>", function()
-		if not pcall(cmd, "cprev") then
-			pcall(cmd, "clast")
-		end
+	map("n", "<S-Tab>", function()
+    require("putline").prevQfItem()
 	end, silent)
+
 	local qf = augroup("qf", { clear = true })
 	-- Exclude quickfix buffer from the buffer list
 	autocmd("FileType", {
@@ -81,7 +78,6 @@ local function core()
 			cmd(math.max(math.min(fn.line("$"), 10), 3) .. "wincmd _")
 		end,
 	})
-	map("n", "<Leader>i", ":copen<CR>", silent)
 	map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
 	map("n", "gP", function()
