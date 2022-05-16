@@ -233,13 +233,13 @@ function dev () {
 
 alias t='tmux'
 alias tl='tmux ls'
-alias trw='tmux rename-window'
 alias ta='tmux attach'
 alias td='tmux detach-client'
 alias tnw='tmux new-window'
-alias tk='tmux kill-server'
+alias trw='tmux rename-window'
 alias tkw='tmux kill-window'
-alias tks='tmux kill-session -a'
+alias tk='tmux kill-server'
+alias tks='tmux kill-session'
 
 alias gs='git status'
 alias gst='git stash'
