@@ -200,9 +200,9 @@ return require("packer").startup({
 			end,
 		})
 		use({
-			"/home/charles/Documents/dev/plugins/putline.nvim",
-			-- "Runeword/putline.nvim",
-			config = require("putline").setup(),
+			"/home/charles/Documents/dev/plugins/booster.nvim",
+			-- "Runeword/booster.nvim",
+			config = require("booster").setup(),
 		})
 		use("ryvnf/readline.vim")
 		use("tpope/vim-abolish")
