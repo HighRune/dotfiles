@@ -200,7 +200,7 @@ return require("packer").startup({
 			end,
 		})
 		use({
-			"/home/charles/Documents/dev/plugins/booster.nvim",
+			-- "/home/charles/Documents/dev/plugins/booster.nvim",
 			-- "Runeword/booster.nvim",
 			config = require("booster").setup(),
 		})
