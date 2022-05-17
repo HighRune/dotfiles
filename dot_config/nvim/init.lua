@@ -199,11 +199,11 @@ return require("packer").startup({
 				require("mappings").submode()
 			end,
 		})
-		-- use({
-			-- "/home/charles/Documents/dev/plugins/booster.nvim",
+		use({
+			"/home/charles/Documents/dev/plugins/booster.nvim",
 			-- "Runeword/booster.nvim",
 			-- config = require("booster").setup(),
-		-- })
+		})
 		use("ryvnf/readline.vim")
 		use("tpope/vim-abolish")
 	end,
