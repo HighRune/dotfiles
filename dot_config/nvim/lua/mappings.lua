@@ -54,7 +54,7 @@ local function core()
 
 	-- Quickfix list
   map("n", "<leader><Tab>", function()
-		require("booster").buffersToQfWindow()
+		require("booster").addBuffersToQfList()
   end)
 	map("n", "<Tab>", function()
 		require("booster").cycleNextQfItem()
