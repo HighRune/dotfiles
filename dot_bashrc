@@ -241,6 +241,11 @@ alias tkw='tmux kill-window'
 alias tk='tmux kill-server'
 alias tks='tmux kill-session'
 
+alias id='i3-msg move workspace to output down'
+alias it='i3-msg move workspace to output top'
+alias il='i3-msg move workspace to output left'
+alias ir='i3-msg move workspace to output right'
+
 alias gs='git status'
 alias gst='git stash'
 alias gpl='git pull'
