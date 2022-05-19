@@ -49,19 +49,19 @@ local function core()
 
 	-- Buffers
   map("n", "<Leader>q", ":bwipeout!<CR>", silent)
-  -- map("n", "<Tab>", ":bnext<CR>", silent)
-  -- map("n", "<S-Tab>", ":bprevious<CR>", silent)
+  map("n", "<Tab>", ":bnext<CR>", silent)
+  map("n", "<S-Tab>", ":bprevious<CR>", silent)
 
 	-- Quickfix list
   map("n", "<leader><Tab>", function()
 		require("booster").addBuffersToQfList()
   end)
-	map("n", "<Tab>", function()
-		require("booster").cycleNextQfItem()
-	end, silent)
-	map("n", "<S-Tab>", function()
-    require("booster").cyclePrevQfItem()
-	end, silent)
+	-- map("n", "<Tab>", function()
+	-- 	require("booster").cycleNextQfItem()
+	-- end, silent)
+	-- map("n", "<S-Tab>", function()
+ --    require("booster").cyclePrevQfItem()
+	-- end, silent)
 
 	local qf = augroup("qf", { clear = true })
 	-- Exclude quickfix buffer from the buffer list
