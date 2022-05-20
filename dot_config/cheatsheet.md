@@ -109,6 +109,8 @@ git fetch                         # Download remote changes
 git pull                          # Download and merge remote changes with locals ones
 git pull --all                    # Pull all branches
 git merge foo                     # Merge branch foo above the current branch
+git checkout --theirs .           # Accept incoming changes (use code of the source branch)
+git checkout --ours .             # Ignore incoming changes (use code of the target branch)
 git rebase foo                    # Merge branch foo below the current branch
                                   # If git branch diverged after rebase, git push -f the branch
 git rebase --abort                # Cancel current rebase
