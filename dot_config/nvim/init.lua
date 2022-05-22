@@ -118,6 +118,14 @@ return require("packer").startup({
       "windwp/nvim-autopairs",
       config = require("config.autopairs")(),
     })
+    use {
+      "folke/trouble.nvim",
+      requires = "kyazdani42/nvim-web-devicons",
+      -- config = function()
+      --   require("trouble").setup {
+      --   }
+      -- end
+    }
     -- use({
     -- 	"chaoren/vim-wordmotion",
     -- 	config = function()
