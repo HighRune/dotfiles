@@ -128,8 +128,8 @@ return require("packer").startup({
           return
         end
         cybu.setup()
-        vim.keymap.set("n", "<Tab>", "<Plug>(CybuPrev)")
-        vim.keymap.set("n", "<S-Tab>", "<Plug>(CybuNext)")
+        -- vim.keymap.set("n", "<Tab>", "<Plug>(CybuPrev)")
+        -- vim.keymap.set("n", "<S-Tab>", "<Plug>(CybuNext)")
       end,
     })
     -- use {
