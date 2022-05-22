@@ -122,15 +122,15 @@ return require("packer").startup({
       "ghillb/cybu.nvim",
       branch = "v1.x",
       requires = { "kyazdani42/nvim-web-devicons" },
-      -- config = function()
-      --   local ok, cybu = pcall(require, "cybu")
-      --   if not ok then
-      --     return
-      --   end
-      --   cybu.setup()
-      --   vim.keymap.set("n", "K", "<Plug>(CybuPrev)")
-      --   vim.keymap.set("n", "J", "<Plug>(CybuNext)")
-      -- end,
+      config = function()
+        local ok, cybu = pcall(require, "cybu")
+        if not ok then
+          return
+        end
+        cybu.setup()
+        vim.keymap.set("n", "K", "<Plug>(CybuPrev)")
+        vim.keymap.set("n", "J", "<Plug>(CybuNext)")
+      end,
     })
     -- use {
     --   "folke/trouble.nvim",
