@@ -123,11 +123,7 @@ return require("packer").startup({
       branch = "v1.x",
       requires = { "kyazdani42/nvim-web-devicons" },
       config = function()
-        local ok, cybu = pcall(require, "cybu")
-        if not ok then
-          return
-        end
-        cybu.setup()
+        require("setup").cybu()
         require("mappings").cybu()
       end,
     })
