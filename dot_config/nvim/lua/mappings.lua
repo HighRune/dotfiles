@@ -56,12 +56,12 @@ local function core()
   map("n", "<leader><Tab>", function()
 		require("booster").addBuffersToQfList()
   end)
-	-- map("n", "<Tab>", function()
-	-- 	require("booster").cycleNextQfItem()
-	-- end, silent)
-	-- map("n", "<S-Tab>", function()
- --    require("booster").cyclePrevQfItem()
-	-- end, silent)
+	map("n", "<C-j>", function()
+		require("booster").cycleNextQfItem()
+	end, silent)
+	map("n", "<C-k>", function()
+    require("booster").cyclePrevQfItem()
+	end, silent)
 
 	local qf = augroup("qf", { clear = true })
 	-- Exclude quickfix buffer from the buffer list
@@ -186,8 +186,8 @@ local function hop()
 end
 
 local function vindent()
-  g.vindent_motion_diff_prev = "<C-k>"
-  g.vindent_motion_diff_next = "<C-j>"
+  -- g.vindent_motion_diff_prev = "<C-k>"
+  -- g.vindent_motion_diff_next = "<C-j>"
 end
 
 -------------------- inside/vim-search-pulse
