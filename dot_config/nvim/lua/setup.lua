@@ -277,10 +277,8 @@ local function cybu()
   require("cybu").setup({
     position = {
       relative_to = "win",
-      anchor = "topcenter",
-      vertical_offset = 10,
-      horizontal_offset = 0,
-      max_win_height = 5,
+      anchor = "center-left",
+      max_win_height = 10,
       max_win_width = 0.5,
     },
     style = {
@@ -300,9 +298,7 @@ local function cybu()
       },
     },
     display_time = 750,
-    exclude = {
-      "qf",
-    },
+    exclude = { "qf" },
     fallback = function() end,
   })
 end
