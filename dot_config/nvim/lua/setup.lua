@@ -274,43 +274,37 @@ end
 
 -------------------- ghillb/cybu.nvim
 local function cybu()
-require("cybu").setup({
-  position = {
-    relative_to = "win",          -- win, editor, cursor
-    anchor = "topcenter",         -- topleft, topcenter, topright,
-                                    -- centerleft, center, centerright,
-                                    -- bottomleft, bottomcenter, bottomright
-    vertical_offset = 10,         -- vertical offset from anchor in lines
-    horizontal_offset = 0,        -- vertical offset from anchor in columns
-    max_win_height = 5,           -- height of cybu window in lines
-    max_win_width = 0.5,          -- integer for absolute in columns
-                                    -- float for relative to win/editor width
-  },
-  style = {
-    path = "relative",            -- absolute, relative, tail (filename only)
-    border = "rounded",           -- single, double, rounded, none
-    separator = " ",              -- string used as separator
-    prefix = "…",                 -- string used as prefix for truncated paths
-    padding = 1,                  -- left & right padding in number of spaces
-    devicons = {
-      enabled = true,             -- enable or disable web dev icons
-      colored = true,             -- enable color for web dev icons
+  require("cybu").setup({
+    position = {
+      relative_to = "win",
+      anchor = "topcenter",
+      vertical_offset = 10,
+      horizontal_offset = 0,
+      max_win_height = 5,
+      max_win_width = 0.5,
     },
-    highlights = {                -- see highlights via :highlight
-      current_buffer = "Visual",    -- used for the current buffer
-      adjacent_buffers = "Comment", -- used for buffers not in focus
-      background = "Normal",        -- used for the window background
+    style = {
+      path = "relative",
+      border = "rounded",
+      separator = " ",
+      prefix = "…",
+      padding = 1,
+      devicons = {
+        enabled = true,
+        colored = true,
+      },
+      highlights = {
+        current_buffer = "Normal",
+        adjacent_buffers = "Comment",
+        background = "Normal",
+      },
     },
-  },
-  display_time = 750,             -- time the cybu window is displayed
-  exclude = {                     -- filetypes, cybu will not be active
-    "neo-tree",
-    "fugitive",
-    "qf",
-  },
-  fallback = function() end,      -- arbitrary fallback function
-                                    -- used in excluded filetypes
-})
+    display_time = 750,
+    exclude = {
+      "qf",
+    },
+    fallback = function() end,
+  })
 end
 
 return {
