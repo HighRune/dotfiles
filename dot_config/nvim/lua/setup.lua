@@ -283,7 +283,7 @@ local function cybu()
       max_win_width = 0.5,
     },
     style = {
-      path = "tail",
+      path = "relative",
       border = "rounded",
       separator = " ",
       prefix = "…",
@@ -298,7 +298,7 @@ local function cybu()
         background = "Normal",
       },
     },
-    display_time = 800,
+    display_time = 1000,
     exclude = { "qf" },
     fallback = function() end,
   })
