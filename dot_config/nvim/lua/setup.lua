@@ -277,12 +277,13 @@ local function cybu()
   require("cybu").setup({
     position = {
       relative_to = "win",
-      anchor = "center-left",
-      max_win_height = 10,
+      anchor = "centerleft",
+      horizontal_offset = 12,
+      max_win_height = 20,
       max_win_width = 0.5,
     },
     style = {
-      path = "relative",
+      path = "tail",
       border = "rounded",
       separator = " ",
       prefix = "…",
@@ -297,7 +298,7 @@ local function cybu()
         background = "Normal",
       },
     },
-    display_time = 750,
+    display_time = 800,
     exclude = { "qf" },
     fallback = function() end,
   })
