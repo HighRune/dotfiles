@@ -277,13 +277,12 @@ local function cybu()
   require("cybu").setup({
     position = {
       relative_to = "win",
-      anchor = "centerleft",
-      horizontal_offset = 12,
+      anchor = "center",
       max_win_height = 20,
       max_win_width = 0.5,
     },
     style = {
-      path = "relative",
+      path = "tail",
       border = "rounded",
       separator = " ",
       prefix = "…",
@@ -293,12 +292,12 @@ local function cybu()
         colored = true,
       },
       highlights = {
-        current_buffer = "Normal",
-        adjacent_buffers = "Comment",
+        current_buffer = "Visual",
+        adjacent_buffers = "Normal",
         background = "Normal",
       },
     },
-    display_time = 1000,
+    display_time = 800,
     exclude = { "qf" },
     fallback = function() end,
   })
