@@ -49,8 +49,8 @@ local function core()
 
 	-- Buffers
   map("n", "<Leader>q", ":bwipeout!<CR>", silent)
-  map("n", "<Tab>", ":bnext<CR>", silent)
-  map("n", "<S-Tab>", ":bprevious<CR>", silent)
+  -- map("n", "<Tab>", ":bnext<CR>", silent)
+  -- map("n", "<S-Tab>", ":bprevious<CR>", silent)
 
 	-- Quickfix list
   map("n", "<leader><Tab>", function()
