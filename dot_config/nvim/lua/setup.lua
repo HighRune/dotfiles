@@ -276,7 +276,7 @@ end
 local function cybu()
   cmd([[
     highlight currentBuffer guifg=white guibg=#1e2633 gui=italic
-    highlight adjacentBuffers guifg=#cccccc
+    highlight adjacentBuffers guifg=#525369
     highlight buffersWindow guibg=#0a172e
     ]])
   require("cybu").setup({
