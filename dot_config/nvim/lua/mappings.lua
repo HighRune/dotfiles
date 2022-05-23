@@ -186,8 +186,8 @@ local function hop()
 end
 
 local function cybu()
-  map("n", "<Tab>", "<Plug>(CybuPrev)")
-  map("n", "<S-Tab>", "<Plug>(CybuNext)")
+  map("n", "<Tab>", "<Plug>(CybuNext)")
+  map("n", "<S-Tab>", "<Plug>(CybuPrev)")
 end
 
 local function vindent()
