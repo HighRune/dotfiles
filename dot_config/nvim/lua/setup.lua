@@ -275,8 +275,8 @@ end
 -------------------- ghillb/cybu.nvim
 local function cybu()
   cmd([[
-    highlight currentBuffer guifg=#cccccc guibg=#1e2633 gui=italic
-    highlight adjacentBuffers guifg=#444e5e
+    highlight currentBuffer guifg=white guibg=#1e2633 gui=italic
+    highlight adjacentBuffers guifg=#cccccc
     highlight buffersWindow guibg=#0a172e
     ]])
   require("cybu").setup({
