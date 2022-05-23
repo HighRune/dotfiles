@@ -282,6 +282,7 @@ local function cybu()
       max_win_width = 0.5,
     },
     style = {
+      hide_buffer_id = true,
       path = "tail",
       border = "rounded",
       separator = " ",
