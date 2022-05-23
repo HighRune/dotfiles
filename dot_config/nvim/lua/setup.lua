@@ -274,6 +274,11 @@ end
 
 -------------------- ghillb/cybu.nvim
 local function cybu()
+  cmd([[
+    highlight currentBuffer guifg=#cccccc guibg=#1e2633 gui=italic
+    highlight adjacentBuffers guifg=#444e5e
+    highlight buffersWindow guibg=#0a172e
+    ]])
   require("cybu").setup({
     position = {
       relative_to = "win",
@@ -284,7 +289,7 @@ local function cybu()
     style = {
       hide_buffer_id = true,
       path = "tail",
-      border = "rounded",
+      border = "none",
       separator = " ",
       prefix = "…",
       padding = 1,
@@ -293,9 +298,9 @@ local function cybu()
         colored = true,
       },
       highlights = {
-        current_buffer = "Visual",
-        adjacent_buffers = "Normal",
-        background = "Normal",
+        current_buffer = "currentBuffer",
+        adjacent_buffers = "adjacentBuffers",
+        background = "buffersWindow",
       },
     },
     display_time = 800,
