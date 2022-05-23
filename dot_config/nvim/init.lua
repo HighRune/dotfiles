@@ -120,7 +120,7 @@ return require("packer").startup({
     })
     use({
       "ghillb/cybu.nvim",
-      branch = "v1.x",
+      branch = "main",
       requires = { "kyazdani42/nvim-web-devicons" },
       config = function()
         require("setup").cybu()
