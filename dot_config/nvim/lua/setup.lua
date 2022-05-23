@@ -303,7 +303,7 @@ local function cybu()
         background = "buffersWindow",
       },
     },
-    display_time = 800,
+    display_time = 700,
     exclude = { "qf" },
     fallback = function() end,
   })
