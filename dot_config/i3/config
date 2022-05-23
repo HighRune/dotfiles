@@ -8,7 +8,9 @@ set $mod Mod4
 
 # _______________________________ WINDOWS
 
-default_border none
+# default_border none
+default_border pixel 1
+default_floating_border pixel 1
 title_align center
 floating_modifier $mod
 focus_on_window_activation focus
