@@ -295,7 +295,7 @@ local function cybu()
       padding = 1,
       devicons = {
         enabled = true,
-        colored = true,
+        colored = false,
       },
       highlights = {
         current_buffer = "currentBuffer",
