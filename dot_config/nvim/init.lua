@@ -99,7 +99,7 @@ return require("packer").startup({
     })
     use("tommcdo/vim-lion")
     use("tommcdo/vim-exchange")
-    use("p00f/nvim-ts-rainbow")
+    -- use("p00f/nvim-ts-rainbow")
     use({
       "AndrewRadev/splitjoin.vim",
       config = function()
