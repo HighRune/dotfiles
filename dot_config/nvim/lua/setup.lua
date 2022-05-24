@@ -36,10 +36,6 @@ local function fzf()
         scrollchars = { "▎", "" },
       },
     },
-    -- quickfix = {
-    -- 	file_icons = true,
-    -- 	git_icons = true,
-    -- },
     keymap = {
       builtin = {},
       fzf = {
@@ -48,10 +44,10 @@ local function fzf()
         ["ctrl-e"] = "preview-page-down",
         ["ctrl-u"] = "preview-page-up",
       },
-      actions = {
-        files = {
-          ["default"] = actions.file_edit,
-        },
+    },
+    actions = {
+      files = {
+        ["default"] = actions.file_edit,
       },
     },
   })
