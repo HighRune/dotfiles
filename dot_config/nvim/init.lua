@@ -218,26 +218,26 @@ return require("packer").startup({
     })
     use({
       "RRethy/nvim-base16",
-      -- config = function()
-      --   require('base16-colorscheme').setup({
-      --     base00 = "none",
-      --     base01 = "#262626",
-      --     base02 = "#393939",
-      --     base03 = "#525252",
-      --     base04 = "#6F6F6F",
-      --     base05 = "#FAFAFA",
-      --     base06 = "#FAFAFA",
-      --     base07 = "#FFFFFF",
-      --     base08 = "#be95ff",
-      --     base09 = "#3ddbd9",
-      --     base0A = "#0043ce",
-      --     base0B = "#33b1ff",
-      --     base0C = "#ff7eb6",
-      --     base0D = "#00ff15",
-      --     base0E = "#be95ff",
-      --     base0F = "#3ddbd9",
-      --   })
-      -- end
+      config = function()
+        require('base16-colorscheme').setup({
+          base00 = "none",
+          base01 = "#262626",
+          base02 = "#393939",
+          base03 = "#525252",
+          base04 = "#6F6F6F",
+          base05 = "#FAFAFA",
+          base06 = "#FAFAFA",
+          base07 = "#FFFFFF",
+          base08 = "#be95ff",
+          base09 = "#3ddbd9",
+          base0A = "#0043ce",
+          base0B = "#33b1ff",
+          base0C = "#ff7eb6",
+          base0D = "#00ff15",
+          base0E = "#be95ff",
+          base0F = "#3ddbd9",
+        })
+      end
     })
     use({
       "/home/charles/Documents/dev/plugins/booster.nvim",
