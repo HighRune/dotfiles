@@ -233,7 +233,7 @@ return require("packer").startup({
           base0A = "#0043ce",
           base0B = "#33b1ff",
           base0C = "#ff7eb6",
-          base0D = "#00ff15",
+          base0D = "#00C76E",
           base0E = "#be95ff",
           base0F = "#3ddbd9",
         })
