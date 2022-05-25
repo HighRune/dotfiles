@@ -14,12 +14,12 @@ return require("packer").startup({
     })
     use("nvim-lua/plenary.nvim")
     use("kyazdani42/nvim-web-devicons")
-    use({
-      "folke/tokyonight.nvim",
+    -- use({
+    --   "folke/tokyonight.nvim",
       -- config = function()
       --   require("options").tokyonight()
       -- end,
-    })
+    -- })
     use({
       "nvim-treesitter/nvim-treesitter",
       config = function()
