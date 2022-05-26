@@ -232,9 +232,9 @@ return require("packer").startup({
           -- base08 = "#00FFC8",
           -- base08 = "#86FFE5",
           -- base08 = "#00FFC8",
-          base08 = "#FAFAFA",
+          base08 = "#BAB8FF",
           base09 = "#72FF00",
-          base0A = "#FFD000",
+          base0A = "#FF9FC9",
           -- base0A = "#FFD000",
           -- base0A = "#73C5FF",
           -- base0B = "#FF0053",
@@ -242,7 +242,8 @@ return require("packer").startup({
           base0C = "#00FF92",
           -- base0C = "#00FF92",
           base0D = "#9700FF",
-          base0E = "#FAFAFA",
+          -- base0E = "#55FFE3",
+          base0E = "#00FF92",
           base0F = "#FAFAFA",
         })
       end
