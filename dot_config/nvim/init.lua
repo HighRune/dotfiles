@@ -228,14 +228,15 @@ return require("packer").startup({
           base05 = "#FAFAFA",
           base06 = "#FAFAFA",
           base07 = "#FAFAFA",
-          base08 = "#DD25FF",
+          -- base08 = "#DD25FF",
+          base08 = "#1BF5D5",
           base09 = "#72FF00",
           base0A = "#73C5FF",
           -- base0B = "#FF0053",
           base0B = "#BDFFBC",
           base0C = "#00FF92",
           base0D = "#9700FF",
-          base0E = "#1BF5D5",
+          base0E = "#FAFAFA",
           base0F = "#FAFAFA",
         })
       end
