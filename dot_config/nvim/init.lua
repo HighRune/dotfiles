@@ -30,7 +30,9 @@ return require("packer").startup({
     use({
       "m-demare/hlargs.nvim",
       config = function()
-        require('hlargs').setup()
+        require('hlargs').setup({
+          color = '#ef9062',
+        })
       end
     })
     use("neovim/nvim-lspconfig")
