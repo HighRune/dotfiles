@@ -176,15 +176,12 @@ local function treesitter()
     -- p00f/nvim-ts-rainbow
     rainbow = {
       enable = true,
-      extended_mode = true,
       max_file_lines = nil,
       colors = {
         "#FF0048",
         "#B800FF",
         "#FAFF00"
       },
-      termcolors = {
-      }
     },
     -- andymass/vim-matchup
     -- matchup = {
