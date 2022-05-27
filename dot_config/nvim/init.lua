@@ -27,14 +27,19 @@ return require("packer").startup({
       end,
       run = ":TSUpdate",
     })
-    use({
-      "m-demare/hlargs.nvim",
-      config = function()
-        require('hlargs').setup({
-          color = '#ef9062',
-        })
-      end
-    })
+    -- "#B800FF",
+    -- "#FF0053",
+    -- color = '#ef9062',
+    -- base01 = "#262626",
+    -- base02 = "#353340",
+    -- base03 = "#4B4761",
+    -- base04 = "#6F6F6F",
+    -- base05 = "#FAFAFA",
+    -- base06 = "#FAFAFA",
+    -- base07 = "#FAFAFA",
+    -- base08 = "#DD25FF",
+    -- base0A = "#B800FF",
+    -- base0B = "#FF0053",
     use("neovim/nvim-lspconfig")
     use({
       "williamboman/nvim-lsp-installer",
@@ -237,6 +242,14 @@ return require("packer").startup({
     })
     use("ryvnf/readline.vim")
     use("tpope/vim-abolish")
+    use({
+      "m-demare/hlargs.nvim",
+      config = function()
+        require('hlargs').setup({
+          color = "#FFEA00",
+        })
+      end
+    })
   end,
   config = {
     display = {
