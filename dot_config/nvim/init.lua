@@ -219,7 +219,7 @@ return require("packer").startup({
     use({
       "RRethy/nvim-base16",
       config = function()
-      -- require("setup").base16()
+        require("setup").base16()
       end
     })
     use({
