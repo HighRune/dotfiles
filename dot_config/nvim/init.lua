@@ -99,7 +99,7 @@ return require("packer").startup({
     })
     use("tommcdo/vim-lion")
     use("tommcdo/vim-exchange")
-    -- use("p00f/nvim-ts-rainbow")
+    use("p00f/nvim-ts-rainbow")
     use({
       "AndrewRadev/splitjoin.vim",
       config = function()
@@ -222,8 +222,8 @@ return require("packer").startup({
         require('base16-colorscheme').setup({
           base00 = "none",
           base01 = "#262626",
-          base02 = "#393939",
-          base03 = "#525252",
+          base02 = "#353340",
+          base03 = "#4B4761",
           base04 = "#6F6F6F",
           base05 = "#FAFAFA",
           base06 = "#FAFAFA",
@@ -234,13 +234,16 @@ return require("packer").startup({
           -- base08 = "#00FFC8",
           base08 = "#BAB8FF",
           base09 = "#72FF00",
-          base0A = "#9FEFFF",
-          -- base0A = "#FFD000",
-          -- base0A = "#73C5FF",
+          -- base0A = "#9FC8FF",
+          base0A = "#B2FFFC",
+          -- base0A = "#FF0048",
+          -- base0A = "#B800FF",
+          -- base0A = "#FF0053",
+          -- base0A = "#73FAFF",
           -- base0B = "#FF0053",
           base0B = "#BDFFBC",
-          -- base0C = "#FF4100",
-          base0C = "#FF0062",
+          base0C = "#FF4100",
+          -- base0C = "#FF2D4D",
           -- base0C = "#00FF92",
           base0D = "#9700FF",
           -- base0E = "#55FFE3",
