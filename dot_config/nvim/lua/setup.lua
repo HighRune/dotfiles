@@ -175,7 +175,7 @@ local function treesitter()
     },
     -- p00f/nvim-ts-rainbow
     rainbow = {
-      enable = true,
+      enable = false,
       max_file_lines = nil,
       colors = {
         "#FF0048",
