@@ -228,8 +228,8 @@ local function sneak()
   map({ "n", "x", "o" }, "F", "<Plug>Sneak_F")
   map({ "n", "x", "o" }, "t", "<Plug>Sneak_t")
   map({ "n", "x", "o" }, "T", "<Plug>Sneak_T")
-  vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], expr)
-  vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], expr)
+  -- vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], expr)
+  -- vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], expr)
 end
 
 -------------------- lewis6991/gitsigns.nvim
