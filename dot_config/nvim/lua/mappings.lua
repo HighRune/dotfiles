@@ -230,7 +230,7 @@ local function sneak()
   map({ "n", "x", "o" }, "T", "<Plug>Sneak_T")
   cmd([[
   nmap <expr> n sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n'
-  nmap <expr> N sneak#is_sneaking() ? '<Plug>Sneak_;' : 'N'
+  nmap <expr> N sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N'
 ]])
   -- vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], expr)
   -- vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], expr)
