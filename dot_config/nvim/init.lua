@@ -80,7 +80,7 @@ return require("packer").startup({
     use("nvim-treesitter/nvim-treesitter-textobjects")
     use("windwp/nvim-ts-autotag")
     use("itchyny/vim-cursorword")
-    use("tpope/vim-surround")
+    -- use("tpope/vim-surround")
     -- use({
     -- 	"akinsho/bufferline.nvim",
     -- 	-- config = config.bufferline(),
