@@ -99,21 +99,7 @@ return require("packer").startup({
     })
     use("tommcdo/vim-lion")
     use("tommcdo/vim-exchange")
-    use({ "p00f/nvim-ts-rainbow",
-      -- config = function()
-      --   require 'nvim-treesitter.configs'.setup {
-      --     rainbow = {
-      --       colors = {
-      --         "#FF0048",
-      --         "#B800FF",
-      --         "#FAFF00"
-      --       },
-      --       termcolors = {
-      --       }
-      --     },
-      --   }
-      -- end,
-    })
+    use("p00f/nvim-ts-rainbow")
     use({
       "AndrewRadev/splitjoin.vim",
       config = function()
