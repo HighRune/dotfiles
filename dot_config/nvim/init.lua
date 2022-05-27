@@ -27,7 +27,12 @@ return require("packer").startup({
       end,
       run = ":TSUpdate",
     })
-    use("m-demare/hlargs.nvim")
+    use({
+      "m-demare/hlargs.nvim",
+      config = function()
+        require('hlargs').setup()
+      end
+    })
     use("neovim/nvim-lspconfig")
     use({
       "williamboman/nvim-lsp-installer",
