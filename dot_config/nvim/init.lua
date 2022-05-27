@@ -166,12 +166,12 @@ return require("packer").startup({
       end,
     })
     use({
-    	"justinmk/vim-sneak",
-    	config = function()
-    require("autocmd").sneak()
-    -- require("options").sneak()
-    -- require("mappings").sneak()
-    end,
+      "justinmk/vim-sneak",
+      config = function()
+        require("autocmd").sneak()
+        require("options").sneak()
+        require("mappings").sneak()
+      end,
     })
     use({
       "ibhagwan/fzf-lua",
