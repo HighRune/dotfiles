@@ -168,9 +168,9 @@ return require("packer").startup({
     use({
     	"justinmk/vim-sneak",
     	config = function()
-    require("autocmd").sneak()
-    require("options").sneak()
-    require("mappings").sneak()
+    -- require("autocmd").sneak()
+    -- require("options").sneak()
+    -- require("mappings").sneak()
     end,
     })
     use({
