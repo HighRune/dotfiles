@@ -16,9 +16,9 @@ return require("packer").startup({
     use("kyazdani42/nvim-web-devicons")
     -- use({
     --   "folke/tokyonight.nvim",
-      -- config = function()
-      --   require("options").tokyonight()
-      -- end,
+    -- config = function()
+    --   require("options").tokyonight()
+    -- end,
     -- })
     use({
       "nvim-treesitter/nvim-treesitter",
@@ -99,7 +99,21 @@ return require("packer").startup({
     })
     use("tommcdo/vim-lion")
     use("tommcdo/vim-exchange")
-    use("p00f/nvim-ts-rainbow")
+    use({ "p00f/nvim-ts-rainbow",
+      -- config = function()
+      --   require 'nvim-treesitter.configs'.setup {
+      --     rainbow = {
+      --       colors = {
+      --         "#FF0048",
+      --         "#B800FF",
+      --         "#FAFF00"
+      --       },
+      --       termcolors = {
+      --       }
+      --     },
+      --   }
+      -- end,
+    })
     use({
       "AndrewRadev/splitjoin.vim",
       config = function()
