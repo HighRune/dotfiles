@@ -79,18 +79,6 @@ return require("packer").startup({
     use("nvim-treesitter/nvim-treesitter-textobjects")
     use("windwp/nvim-ts-autotag")
     use("itchyny/vim-cursorword")
-    -- use("tpope/vim-surround")
-    -- use({
-    -- 	"akinsho/bufferline.nvim",
-    -- 	-- config = config.bufferline(),
-    -- })
-    -- use({
-    --   "sbdchd/neoformat",
-    --   config = function()
-    --     require("options").neoformat()
-    --     require("autocmd").neoformat()
-    --   end,
-    -- })
     use({
       "numToStr/Comment.nvim",
       config = function()
@@ -127,21 +115,6 @@ return require("packer").startup({
         require("mappings").cybu()
       end,
     })
-    -- use {
-    --   "folke/trouble.nvim",
-    --   requires = "kyazdani42/nvim-web-devicons",
-    --   -- config = function()
-    --   --   require("trouble").setup {
-    --   --   }
-    --   -- end
-    -- }
-    -- use({
-    -- 	"chaoren/vim-wordmotion",
-    -- 	config = function()
-    -- 		-- require("mappings").wordmotion()
-    -- 		-- require("options").wordmotion()
-    -- 	end,
-    -- })
     use({
       "kana/vim-arpeggio",
       config = function()
@@ -249,6 +222,33 @@ return require("packer").startup({
   },
 })
 
+-- use {
+--   "folke/trouble.nvim",
+--   requires = "kyazdani42/nvim-web-devicons",
+--   -- config = function()
+--   --   require("trouble").setup {
+--   --   }
+--   -- end
+-- }
+-- use({
+-- 	"chaoren/vim-wordmotion",
+-- 	config = function()
+-- 		-- require("mappings").wordmotion()
+-- 		-- require("options").wordmotion()
+-- 	end,
+-- })
+-- use("tpope/vim-surround")
+-- use({
+-- 	"akinsho/bufferline.nvim",
+-- 	-- config = config.bufferline(),
+-- })
+-- use({
+--   "sbdchd/neoformat",
+--   config = function()
+--     require("options").neoformat()
+--     require("autocmd").neoformat()
+--   end,
+-- })
 -- use("tpope/vim-repeat")
 -- use({
 -- 	"jeetsukumaran/vim-indentwise",
