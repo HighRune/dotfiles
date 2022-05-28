@@ -147,6 +147,7 @@ return require("packer").startup({
         require("mappings").sneak()
       end,
     })
+    use("nvim-treesitter/playground")
     use({
       "ibhagwan/fzf-lua",
       config = function()
@@ -256,7 +257,6 @@ return require("packer").startup({
 -- 	"jeetsukumaran/vim-indentwise",
 -- 	config = config.indentwise(),
 -- })
--- use("nvim-treesitter/playground")
 -- use({
 -- 	"jeetsukumaran/vim-indentwise",
 -- 	config = function()
