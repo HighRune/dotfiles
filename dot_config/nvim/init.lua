@@ -84,13 +84,13 @@ return require("packer").startup({
     -- 	"akinsho/bufferline.nvim",
     -- 	-- config = config.bufferline(),
     -- })
-    use({
-      "sbdchd/neoformat",
-      config = function()
-        require("options").neoformat()
-        require("autocmd").neoformat()
-      end,
-    })
+    -- use({
+    --   "sbdchd/neoformat",
+    --   config = function()
+    --     require("options").neoformat()
+    --     require("autocmd").neoformat()
+    --   end,
+    -- })
     use({
       "numToStr/Comment.nvim",
       config = function()
