@@ -121,6 +121,7 @@ return require("packer").startup({
         require("mappings").arpeggio()
       end,
     })
+    use("rktjmp/lush.nvim")
     use({
       "ahmedkhalf/project.nvim",
       config = function()
