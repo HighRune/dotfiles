@@ -190,12 +190,13 @@ return require("packer").startup({
         require("mappings").submode()
       end,
     })
-    use({
-      "RRethy/nvim-base16",
-      config = function()
-        require("setup").base16()
-      end
-    })
+    -- use({
+    --   "RRethy/nvim-base16",
+    --   config = function()
+    --     require("setup").base16()
+    --   end
+    -- })
+    use("/home/charles/Documents/dev/plugins/blaster")
     use({
       "/home/charles/Documents/dev/plugins/booster.nvim",
       -- "Runeword/booster.nvim",
