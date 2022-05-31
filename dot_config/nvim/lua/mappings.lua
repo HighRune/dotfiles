@@ -91,7 +91,7 @@ local function core()
   -- Put charwise after cursor + space prefix
   map("n", "gsp", function() require("booster").putCharwise("p", ' ') end)
   -- Put charwise before cursor + space suffix
-  map("n", "gsP", function() require("booster").putCharwise("p", nil, ' ') end)
+  map("n", "gsP", function() require("booster").putCharwise("P", nil, ' ') end)
 
   -- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
   -- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
