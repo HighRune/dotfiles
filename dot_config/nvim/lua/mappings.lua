@@ -80,25 +80,18 @@ local function core()
   })
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
-  map("n", "gP", function()
-    -- Put linewise above cursor
-    require("booster").putLinewise("]P", nil, nil, "`]")
-
-  end)
-  map("n", "gp", function()
-    -- Put linewise below cursor
-    require("booster").putLinewise("]p", nil, nil, "`]")
-  end)
-  map("n", "p", function()
-    require("booster").putCharwiseAfter()
-  end)
-  map("n", "gsp", function()
-    require("booster").putSpaceCharwiseAfter()
-
-  end)
-  map("n", "P", function()
-    require("booster").putCharwiseBefore()
-  end)
+  -- Put linewise above cursor
+  map("n", "gP", function() require("booster").putLinewise("]P", "`]") end)
+  -- Put linewise below cursor
+  map("n", "gp", function() require("booster").putLinewise("]p", "`]") end)
+  -- Put charwise after cursor
+  map("n", "p", function() require("booster").putCharwise("p") end)
+  -- Put charwise before cursor
+  map("n", "P", function() require("booster").putCharwise("P") end)
+  -- Put charwise after cursor + space prefix
+  map("n", "gsp", function() require("booster").putCharwise("p", ' ') end)
+  -- Put charwise before cursor + space suffix
+  map("n", "gsP", function() require("booster").putCharwise("p", nil, ' ') end)
 
   -- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
   -- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
