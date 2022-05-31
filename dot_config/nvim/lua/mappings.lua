@@ -81,16 +81,20 @@ local function core()
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
   map("n", "gP", function()
-    require("booster").putLinewiseAbove()
+    -- Put linewise above cursor
+    require("booster").putLinewise("]P", nil, nil, "`]")
+
   end)
   map("n", "gp", function()
-    require("booster").putLinewiseBelow()
+    -- Put linewise below cursor
+    require("booster").putLinewise("]p", nil, nil, "`]")
   end)
   map("n", "p", function()
     require("booster").putCharwiseAfter()
   end)
   map("n", "gsp", function()
     require("booster").putSpaceCharwiseAfter()
+
   end)
   map("n", "P", function()
     require("booster").putCharwiseBefore()
@@ -234,7 +238,7 @@ local function sneak()
   cmd([[
   nmap <expr> n sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n'
   nmap <expr> N sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N'
-]])
+]] )
   -- vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], expr)
   -- vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], expr)
 end
