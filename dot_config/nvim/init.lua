@@ -205,6 +205,7 @@ return require("packer").startup({
     })
     use("ryvnf/readline.vim")
     use("tpope/vim-abolish")
+    use("tpope/vim-surround")
     -- use("m-demare/hlargs.nvim")
   end,
   config = {
@@ -240,7 +241,6 @@ return require("packer").startup({
 -- 		-- require("options").wordmotion()
 -- 	end,
 -- })
--- use("tpope/vim-surround")
 -- use({
 -- 	"akinsho/bufferline.nvim",
 -- 	-- config = config.bufferline(),
