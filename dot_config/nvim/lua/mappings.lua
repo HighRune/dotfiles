@@ -80,15 +80,17 @@ local function core()
   })
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
+  -- Select previously changed or yanked text
+  map("n", "<leader>p", '`[v`]')
   -- Put linewise below/above cursor
-  map("n", "gpl", function() require("booster").putLinewise("]p`]") end)
-  map("n", "gPl", function() require("booster").putLinewise("]P`]") end)
+  map("n", "gp", function() require("booster").putLinewise("]p`]") end)
+  map("n", "gP", function() require("booster").putLinewise("]P`]") end)
   -- Put charwise after/before cursor
   map("n", "p", function() require("booster").putCharwise("p") end)
   map("n", "P", function() require("booster").putCharwise("P") end)
   -- Put charwise after/before cursor + surround characters
-  map("n", "gps", function() require("booster").putCharwise("p", true) end)
-  map("n", "gPs", function() require("booster").putCharwise("P", true) end)
+  map("n", "gsp", function() require("booster").putCharwise("p", true) end)
+  map("n", "gsP", function() require("booster").putCharwise("P", true) end)
 
   -- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
   -- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
