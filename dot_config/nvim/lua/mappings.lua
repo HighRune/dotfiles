@@ -40,7 +40,6 @@ local function core()
   map("i", "<C-k>", "<esc>ld$i")
   -- Motions
   map({ "n", "x", "o" }, "s", "l")
-  map({ "n", "x", "o" }, "l", "s")
   map("n", "k", "gk")
   map("n", "j", "gj")
   map("n", "0", "g0")
