@@ -53,15 +53,9 @@ local function core()
   -- map("n", "<S-Tab>", ":bprevious<CR>", silent)
 
   -- Quickfix list
-  map("n", "<leader><Tab>", function()
-    require("booster").addBuffersToQfList()
-  end)
-  map("n", "<C-j>", function()
-    require("booster").cycleNextQfItem()
-  end, silent)
-  map("n", "<C-k>", function()
-    require("booster").cyclePrevQfItem()
-  end, silent)
+  map("n", "<leader><Tab>", require("booster").addBuffersToQfList)
+  map("n", "<C-j>", require("booster").cycleNextQfItem, silent)
+  map("n", "<C-k>", require("booster").cyclePrevQfItem, silent)
 
   local qf = augroup("qf", { clear = true })
   -- Exclude quickfix buffer from the buffer list
@@ -83,14 +77,14 @@ local function core()
   -- Select previously changed or yanked text
   map("n", "<leader>p", '`[v`]')
   -- Put linewise below/above cursor
-  map("n", "gp", function() require("booster").putLinewise("]p`]") end)
-  map("n", "gP", function() require("booster").putLinewise("]P`]") end)
+  map("n", "gp", require("booster").putLinewise("]p`]"))
+  map("n", "gP", require("booster").putLinewise("]P`]"))
   -- Put charwise after/before cursor
-  map("n", "p", function() require("booster").putCharwise("p") end)
-  map("n", "P", function() require("booster").putCharwise("P") end)
+  map("n", "p", require("booster").putCharwise("p"))
+  map("n", "P", require("booster").putCharwise("P"))
   -- Put charwise after/before cursor + surround characters
-  map("n", "gsp", function() require("booster").putCharwise("p", true) end)
-  map("n", "gsP", function() require("booster").putCharwise("P", true) end)
+  map("n", "gsp", require("booster").putCharwise("p", true))
+  map("n", "gsP", require("booster").putCharwise("P", true))
 
   -- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
   -- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
