@@ -79,12 +79,15 @@ local function core()
   -- Put linewise below/above cursor
   map("n", "gp", require("booster").putLinewise("]p`]"))
   map("n", "gP", require("booster").putLinewise("]P`]"))
-  -- Put charwise after/before cursor
+  -- Put charwise
   map("n", "p", require("booster").putCharwise("p"))
   map("n", "P", require("booster").putCharwise("P"))
-  -- Put charwise after/before cursor + surround characters
-  map("n", "gsp", require("booster").putCharwise("p", true))
-  map("n", "gsP", require("booster").putCharwise("P", true))
+  map("n", "gsp", require("booster").putCharwise("p", true, true))
+  map("n", "gsP", require("booster").putCharwise("P", true, true))
+  map("n", "gap", require("booster").putCharwise("p", false, true))
+  map("n", "gaP", require("booster").putCharwise("P", false, true))
+  map("n", "gip", require("booster").putCharwise("p", true, false))
+  map("n", "giP", require("booster").putCharwise("P", true, false))
 
   -- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
   -- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
