@@ -56,41 +56,18 @@ local function core()
   map("n", "<leader><Tab>", require("booster").addBuffersToQfList)
   map("n", "<C-j>", require("booster").cycleNextQfItem, silent)
   map("n", "<C-k>", require("booster").cyclePrevQfItem, silent)
-
-  local qf = augroup("qf", { clear = true })
-  -- Exclude quickfix buffer from the buffer list
-  autocmd("FileType", {
-    pattern = "qf",
-    group = qf,
-    command = "set nobuflisted",
-  })
-  -- Automatically fitting a quickfix window to 10 lines max and 3 lines min height
-  autocmd("FileType", {
-    pattern = "qf",
-    group = qf,
-    callback = function()
-      cmd(math.max(math.min(fn.line("$"), 10), 3) .. "wincmd _")
-    end,
-  })
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
-  -- Select previously changed or yanked text
-  map("n", "<leader>p", '`[v`]')
-  -- Put linewise below/above cursor
-  map("n", "gp", require("booster").putLinewise("]p`]"))
-  map("n", "gP", require("booster").putLinewise("]P`]"))
+  -- Put linewise
+  map("n", "glp", require("booster").putLinewise("]p`]"))
+  map("n", "glP", require("booster").putLinewise("]P`]"))
   -- Put charwise
   map("n", "p", require("booster").putCharwise("p"))
   map("n", "P", require("booster").putCharwise("P"))
+  map("n", "gp", require("booster").putCharwise("p", true, nil))
+  map("n", "gP", require("booster").putCharwise("P", nil, true))
   map("n", "gsp", require("booster").putCharwise("p", true, true))
   map("n", "gsP", require("booster").putCharwise("P", true, true))
-  map("n", "gap", require("booster").putCharwise("p", false, true))
-  map("n", "gaP", require("booster").putCharwise("P", false, true))
-  map("n", "gip", require("booster").putCharwise("p", true, false))
-  map("n", "giP", require("booster").putCharwise("P", true, false))
-
-  -- 	map("n", "gP", "<Plug>(unimpaired-put-above-reformat)g$:set ve= ve=all<CR>")
-  -- 	map("n", "gp", "<Plug>(unimpaired-put-below-reformat)g$:set ve= ve=all<CR>")
 
   -- -- stylua: ignore
   -- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
