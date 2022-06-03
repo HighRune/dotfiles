@@ -59,6 +59,10 @@ local function core()
   map("n", "<C-k>", require("booster").cyclePrevQfItem, silent)
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
+  -- `[ To beginning of previously changed or yanked text
+  -- `] To end of previously changed or yanked text
+  -- ]p Paste under the current indentation level
+
   -- Put linewise
   map("n", "glp", require("booster").putLinewise("]p`]"))
   map("n", "glP", require("booster").putLinewise("]P`]"))
