@@ -64,15 +64,15 @@ local function core()
   -- ]p Paste under the current indentation level
 
   -- Put linewise
-  map("n", "glp", require("booster").putLinewise("]p`]"))
-  map("n", "glP", require("booster").putLinewise("]P`]"))
+  map({"n","x"}, "glp", require("booster").putLinewise("]p`]"))
+  map({"n","x"}, "glP", require("booster").putLinewise("]P`]"))
   -- Put charwise
-  map("n", "p", require("booster").putCharwise("p"))
-  map("n", "P", require("booster").putCharwise("P"))
-  map("n", "gp", require("booster").putCharwise("p", true, nil))
-  map("n", "gP", require("booster").putCharwise("P", nil, true))
-  map("n", "gsp", require("booster").putCharwise("p", true, true))
-  map("n", "gsP", require("booster").putCharwise("P", true, true))
+  map({"n", "x"}, "p", require("booster").putCharwise("p"))
+  map({"n", "x"}, "P", require("booster").putCharwise("P"))
+  map({"n", "x"}, "gp", require("booster").putCharwise("p", true, nil))
+  map({"n", "x"}, "gP", require("booster").putCharwise("P", nil, true))
+  map({"n", "x"}, "gsp", require("booster").putCharwise("p", true, true))
+  map({"n", "x"}, "gsP", require("booster").putCharwise("P", true, true))
 
   -- -- stylua: ignore
   -- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
