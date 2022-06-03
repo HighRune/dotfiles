@@ -29,6 +29,7 @@ local function core()
   map("i", "<C-s>", "<esc>`^:w<CR>")
   -- Edit
   map("x", "p", '"_dP')
+  map("n", "dd", 'dd^')
   map("x", "<C-n>", ":norm ")
   map("n", "<esc>", "<esc>^")
   -- Scroll
