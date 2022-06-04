@@ -268,7 +268,7 @@ alias npml='npm ls --depth=0'
 alias npmg='npm ls -g --depth=0'
 
 alias chrome='google-chrome-stable'
-alias shd='shutdown now'
+alias shn='shutdown now'
 alias cpk='colorpicker'
 
 # ------------------------------- GCLOUD
