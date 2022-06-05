@@ -878,7 +878,7 @@ rg -e <pattern>
 4. Commit and push
 ```
 
-## MANJARO
+## ARCH
 
 ```bash
 pacman -Ss <package>                 # Search a package
