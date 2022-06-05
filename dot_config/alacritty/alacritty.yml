@@ -75,11 +75,11 @@ key_bindings:
   - { key: Tab, mods: Control|Shift, command: { program: "tmux", args: ["previous-window"] }}
 
   # Select window by number
-  - { key: A,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "1"] } }
-  - { key: O,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "2"] } }
-  - { key: E,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "3"] } }
-  - { key: U,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "4"] } }
-  - { key: I,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "5"] } }
+  # - { key: A,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "1"] } }
+  # - { key: O,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "2"] } }
+  # - { key: E,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "3"] } }
+  # - { key: U,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "4"] } }
+  # - { key: I,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "5"] } }
 
   # Move window
   - { key: PageUp, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t", "-1", ";", "select-window", "-t", "-1"] }}
