@@ -108,6 +108,11 @@ return function()
       opts.settings = { format = { enable = true } }
     end
 
+    if server.name == "yamlls" then
+      opts.on_attach = on_attach_sumneko_lua
+      opts.settings = { format = { enable = true } }
+    end
+
     -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
     server:setup(require("coq").lsp_ensure_capabilities(opts))
     cmd([[ do User LspAttachBuffers ]])
