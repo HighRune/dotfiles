@@ -66,7 +66,7 @@ live_config_reload: true
 
 key_bindings:
   # Enable key combinations
-  - { key: Escape, mods: Control, chars: "\x02\x5b" }
+  # - { key: Escape, mods: Control, chars: "\x02\x5b" }
   - { key: Return, mods: Shift,   chars: "\x1b[13;2u" }
   - { key: Return, mods: Control, chars: "\x1b[13;5u" }
 
