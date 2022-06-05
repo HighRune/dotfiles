@@ -239,6 +239,8 @@ alias tn='tmux new-window'
 alias tr='tmux rename-window'
 alias tk='tmux kill-window'
 alias tks='tmux kill-server'
+alias tnc='tmux switch-client -n'
+alias tpc='tmux switch-client -p'
 # alias tks='tmux kill-session'
 
 alias id='i3-msg move workspace to output down'
