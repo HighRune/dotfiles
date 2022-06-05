@@ -92,8 +92,8 @@ key_bindings:
   - { key: C,              mods: Control|Shift,           action: Copy             }
 
   # Scroll
-  - { key: Left,      mods: Shift,       action: ScrollHalfPageUp        }
-  - { key: Right,      mods: Shift,     action: ScrollHalfPageDown      }
+  - { key: U,      mods: Control|Shift,       action: ScrollHalfPageUp        }
+  - { key: E,      mods: Control|Shift,     action: ScrollHalfPageDown      }
   # - { key: Up,    mods: Shift,   action: ScrollLineUp,  }
   # - { key: Down,  mods: shift,   action: ScrollLineDown }
   # - { key: Home,      mods: Control,   action: ScrollToTop,   }
