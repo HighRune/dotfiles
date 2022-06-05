@@ -72,29 +72,34 @@ key_bindings:
   - { key: Return, mods: Shift,   chars: "\x1b[13;2u" }
   - { key: Return, mods: Control, chars: "\x1b[13;5u" }
 
-  # # Switch tmux session
-  # - { key: Tab,    mods: Alt, command: { program: "tmux", args: ["switch-client", "-n"] }}
-  # - { key: Tab,    mods: Alt|Shift, command: { program: "tmux", args: ["switch-client", "-p"] }}
-  # Next / Previous window
+  # Cycle window
   - { key: Tab, mods: Control, command: { program: "tmux", args: ["next-window"] }}
   - { key: Tab, mods: Control|Shift, command: { program: "tmux", args: ["previous-window"] }}
+
   # Select window by number
   - { key: A,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "1"] } }
   - { key: O,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "2"] } }
   - { key: E,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "3"] } }
   - { key: U,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "4"] } }
   - { key: I,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "5"] } }
+
+  # Move window
   - { key: PageUp, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t", "-1", ";", "select-window", "-t", "-1"] }}
   - { key: PageDown, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t", "+1", ";", "select-window", "-t", "+1"] }}
 
+  # Copy / Paste
   - { key: V,              mods: Control|Shift,           action: Paste            }
   - { key: C,              mods: Control|Shift,           action: Copy             }
-  # - { key: Up,    mods: Shift,   action: ScrollLineUp,  }
-  # - { key: Down,  mods: shift,   action: ScrollLineDown }
+
+  # Scroll
   - { key: Up,      mods: Shift,       action: ScrollHalfPageUp        }
   - { key: Down,      mods: Shift,     action: ScrollHalfPageDown      }
+  # - { key: Up,    mods: Shift,   action: ScrollLineUp,  }
+  # - { key: Down,  mods: shift,   action: ScrollLineDown }
   # - { key: Home,      mods: Control,   action: ScrollToTop,   }
   # - { key: End,       mods: Control,   action: ScrollToBottom }
+
+  # Font
   - { key: Equals,         mods: Control,                 action: IncreaseFontSize }
   - { key: Plus,           mods: Control,                 action: IncreaseFontSize }
   - { key: NumpadAdd,      mods: Control,                 action: IncreaseFontSize }
