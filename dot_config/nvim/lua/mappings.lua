@@ -69,7 +69,7 @@ local function core()
   -- Put charwise
   map({"n", "x"}, "p", require("booster").putCharwise("p"))
   map({"n", "x"}, "P", require("booster").putCharwise("P"))
-  map({"n", "x"}, "gp", require("booster").putCharwise("p", true, nil))
+  map({"n", "x"}, "gp", require("booster").putCharwise("p", true))
   map({"n", "x"}, "gP", require("booster").putCharwise("P", nil, true))
   map({"n", "x"}, "gsp", require("booster").putCharwise("p", true, true))
   map({"n", "x"}, "gsP", require("booster").putCharwise("P", true, true))
