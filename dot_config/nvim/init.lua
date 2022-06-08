@@ -16,9 +16,9 @@ return require("packer").startup({
     use("kyazdani42/nvim-web-devicons")
     use({
       "folke/tokyonight.nvim",
-    config = function()
-      require("options").tokyonight()
-    end,
+      config = function()
+        require("options").tokyonight()
+      end,
     })
     use({
       "nvim-treesitter/nvim-treesitter",
@@ -85,8 +85,13 @@ return require("packer").startup({
         require("setup").comment()
       end,
     })
-    use("tommcdo/vim-lion")
     use("tommcdo/vim-exchange")
+    use({
+      "smjonas/inc-rename.nvim",
+      config = function()
+        require("inc_rename").setup()
+      end,
+    })
     use("p00f/nvim-ts-rainbow")
     use({
       "AndrewRadev/splitjoin.vim",
