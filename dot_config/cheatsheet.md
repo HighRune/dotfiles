@@ -514,7 +514,7 @@ ps -ef | grep xcap              # search xcap process among all processes (full 
 sudo find / -type f -newermt 2018-11-26 ! -newermt 2018-11-27 -ls   # cherche tous les fichiers modifiés à une date donnée
 sudo find / -name "*.ppk" -type f                 # Cherche les clées .ppk
 find . -name "*.vim" -type f
-find /path/to/folder/ -iname *file_name_portion*  # Search file
+find /path/to/folder/ -iname *file_name_portion*  # Search file (case insensitive)
 <cmd> | grep foo                                  # Filtre le résultat de la commande sur les caractères "foo"
 grep -i "fontface" /etc/default/console-setup     # Cherche les lignes avec le mot
 grep -rnw '/path/to/somewhere/' -e 'pattern'      # Cherche un pattern et retourne les informations des fichiers le contenant
