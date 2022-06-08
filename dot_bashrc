@@ -246,7 +246,7 @@ alias tps='tmux switch-client -p'
 alias tls='tmux switch-client -l'
 alias tks='tmux kill-session'
 alias trs='tmux rename-session'
-alias tka='tmux kill-server'
+alias tkk='tmux kill-server'
 alias tss='source ~/.config/tmux/plugins/tmux-resurrect/scripts/save.sh'
 alias trr='source ~/.config/tmux/plugins/tmux-resurrect/scripts/restore.sh'
 
