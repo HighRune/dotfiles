@@ -92,7 +92,7 @@ key_bindings:
   # Scroll
   - { key: U,      mods: Control|Shift,       action: ScrollHalfPageUp        }
   - { key: E,      mods: Control|Shift,     action: ScrollHalfPageDown      }
-  - { key: K,    mods: Control|Shift,   action: ScrollLineUp,  }
+  - { key: K,    mods: Control|Shift,   action: ScrollLineUp  }
   - { key: J,  mods: Control|Shift,   action: ScrollLineDown }
   # - { key: Home,      mods: Control,   action: ScrollToTop,   }
   # - { key: End,       mods: Control,   action: ScrollToBottom }
