@@ -101,6 +101,43 @@ return function()
     if server.name == "volar" then
       opts.on_attach = on_attach_volar
       opts.settings = { format = { enable = false } }
+      opts.init_options = {
+        documentFeatures = {
+          documentColor = false,
+          documentFormatting = {
+            defaultPrintWidth = 100
+          },
+          documentSymbol = true,
+          foldingRange = true,
+          linkedEditingRange = true,
+          selectionRange = true
+        },
+        languageFeatures = {
+          callHierarchy = true,
+          codeAction = true,
+          codeLens = true,
+          completion = {
+            defaultAttrNameCase = "kebabCase",
+            defaultTagNameCase = "both"
+          },
+          definition = true,
+          diagnostics = true,
+          documentHighlight = true,
+          documentLink = true,
+          hover = true,
+          implementation = true,
+          references = true,
+          rename = true,
+          renameFileRefactoring = true,
+          schemaRequestService = true,
+          semanticTokens = false,
+          signatureHelp = true,
+          typeDefinition = true
+        },
+        typescript = {
+          serverPath = ""
+        }
+      }
     end
 
     if server.name == "sumneko_lua" then
