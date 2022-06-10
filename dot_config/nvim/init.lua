@@ -138,12 +138,12 @@ return require("packer").startup({
       requires = { "kyazdani42/nvim-web-devicons", opt = true },
       config = "require('config.lualine')()",
     })
-    use({
-      "gbprod/cutlass.nvim",
-      config = function()
-        require("setup").cutlass()
-      end,
-    })
+    -- use({
+    --   "gbprod/cutlass.nvim",
+    --   config = function()
+    --     require("setup").cutlass()
+    --   end,
+    -- })
     use({
       "justinmk/vim-sneak",
       config = function()
