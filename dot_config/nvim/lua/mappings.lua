@@ -28,7 +28,7 @@ local function core()
   map("n", "<C-s>", ":w<CR>")
   map("i", "<C-s>", "<esc>`^:w<CR>")
   -- Edit
-  map("x", "p", '"_dP')
+  -- map("x", "p", '"_dP')
   map("x", "<C-n>", ":norm ")
   map("n", "<esc>", "<esc>^")
   map("n", "dd", 'dd^')
