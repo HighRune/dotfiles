@@ -31,7 +31,7 @@ local function core()
   map("x", "p", '"_dP')
   map("x", "<C-n>", ":norm ")
   map("n", "<esc>", "<esc>^")
-  -- map("n", "dd", 'dd^')
+  map("n", "dd", 'dd^')
   -- Scroll
   map({ "n", "x" }, "<C-u>", "5k")
   map({ "n", "x" }, "<C-e>", "5j")
