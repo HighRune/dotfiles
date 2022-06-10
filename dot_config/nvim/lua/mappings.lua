@@ -29,7 +29,6 @@ local function core()
   map("i", "<C-s>", "<esc>`^:w<CR>")
   -- Edit
   map("x", "p", '"_dP')
-  map("n", "dd", 'dd^')
   map("x", "<C-n>", ":norm ")
   map("n", "<esc>", "<esc>^")
   -- Scroll
@@ -171,6 +170,10 @@ end
 local function vindent()
   -- g.vindent_motion_diff_prev = "<C-k>"
   -- g.vindent_motion_diff_next = "<C-j>"
+end
+
+local function cutlass()
+  map("n", "dd", 'dd^')
 end
 
 -------------------- inside/vim-search-pulse
@@ -411,7 +414,8 @@ return {
   packer = packer,
   textobjchainmember = textobjchainmember,
   vindent = vindent,
-  cybu = cybu
+  cybu = cybu,
+  cutlass = cutlass
   -- pounce = pounce,
   -- miniyank = miniyank,
   -- sideways = sideways,
