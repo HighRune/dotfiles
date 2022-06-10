@@ -142,6 +142,7 @@ return require("packer").startup({
       "gbprod/cutlass.nvim",
       config = function()
         require("setup").cutlass()
+        require("mappings").cutlass()
       end,
     })
     use({
