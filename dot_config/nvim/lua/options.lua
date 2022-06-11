@@ -7,10 +7,10 @@ local cmd = vim.cmd
 local function core()
 	-- cmd([[color haslo]])
   -- cmd([[colorscheme blaster]])
-  cmd([[
-  set background=dark
-  colorscheme snow
-  ]])
+  -- cmd([[
+  -- set background=dark
+  -- colorscheme snow
+  -- ]])
 
 	-- o.scroll = 5
 	-- opt.fillchars:append("horiz:.")
