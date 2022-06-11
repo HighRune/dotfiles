@@ -14,6 +14,7 @@ return require("packer").startup({
     })
     use("nvim-lua/plenary.nvim")
     use("kyazdani42/nvim-web-devicons")
+    use("haystackandroid/snow")
     -- use({
     --   "folke/tokyonight.nvim",
     --   config = function()
