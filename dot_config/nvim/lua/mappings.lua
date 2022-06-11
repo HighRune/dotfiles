@@ -64,25 +64,25 @@ local function core()
   -- ]p Paste under the current indentation level
 
   -- Put linewise
-  map({"n","x"}, "glp", require("booster").putLinewise(']p`]', '0'))
-  map({"n","x"}, "glP", require("booster").putLinewise(']P`]', '0'))
+  map({"n","x"}, "glp", require("booster").putLinewise('"0]p`]'))
+  map({"n","x"}, "glP", require("booster").putLinewise('"0]P`]'))
   -- Put charwise
-  map({"n", "x"}, "p", require("booster").putCharwise('p', '0'))
-  map({"n", "x"}, "P", require("booster").putCharwise('P', '0'))
-  map({"n", "x"}, "gp", require("booster").putCharwise('p', '0', true))
-  map({"n", "x"}, "gP", require("booster").putCharwise('P', '0', nil, true))
-  map({"n", "x"}, "gsp", require("booster").putCharwise('p', '0', true, true))
-  map({"n", "x"}, "gsP", require("booster").putCharwise('P', '0', true, true))
+  map({"n", "x"}, "p", require("booster").putCharwise('"0p'))
+  map({"n", "x"}, "P", require("booster").putCharwise('"0P'))
+  map({"n", "x"}, "gp", require("booster").putCharwise('"0p', true))
+  map({"n", "x"}, "gP", require("booster").putCharwise('"0P', nil, true))
+  map({"n", "x"}, "gsp", require("booster").putCharwise('"0p', true, true))
+  map({"n", "x"}, "gsP", require("booster").putCharwise('"0P', true, true))
   -- Put linewise
   map({"n","x"}, "glm", require("booster").putLinewise(']p`]'))
   map({"n","x"}, "glM", require("booster").putLinewise(']P`]'))
   -- Put charwise
   map({"n", "x"}, "m", require("booster").putCharwise('p'))
   map({"n", "x"}, "M", require("booster").putCharwise('P'))
-  map({"n", "x"}, "gm", require("booster").putCharwise('p', nil, true))
-  map({"n", "x"}, "gM", require("booster").putCharwise('P', nil, nil, true))
-  map({"n", "x"}, "gsm", require("booster").putCharwise('p', nil, true, true))
-  map({"n", "x"}, "gsm", require("booster").putCharwise('P', nil, true, true))
+  map({"n", "x"}, "gm", require("booster").putCharwise('p', true))
+  map({"n", "x"}, "gM", require("booster").putCharwise('P', nil, true))
+  map({"n", "x"}, "gsm", require("booster").putCharwise('p', true, true))
+  map({"n", "x"}, "gsm", require("booster").putCharwise('P', true, true))
 
   -- -- stylua: ignore
   -- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
