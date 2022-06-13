@@ -114,7 +114,7 @@ return function()
         },
         languageFeatures = {
           callHierarchy = true,
-          codeAction = true,
+          codeAction = false,
           codeLens = true,
           completion = {
             defaultAttrNameCase = "kebabCase",
