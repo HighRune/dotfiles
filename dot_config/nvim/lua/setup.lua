@@ -258,6 +258,21 @@ local function bufferline()
   })
 end
 
+local function installer()
+require("nvim-lsp-installer").setup({
+    ui = {
+      keymaps = {
+        toggle_server_expand = "<TAB>",
+        install_server = "gi",
+        update_server = "gu",
+        check_server_version = "gv",
+        update_all_servers = "gU",
+        check_outdated_servers = "gO",
+        uninstall_server = "gd",
+      },
+    }
+})
+end
 -------------------- gbprod/cutlass.nvim
 local function cutlass()
   require("cutlass").setup({
@@ -357,5 +372,6 @@ return {
   comment = comment,
   treesitter = treesitter,
   cybu = cybu,
-  base16 = base16
+  base16 = base16,
+  installer = installer
 }
