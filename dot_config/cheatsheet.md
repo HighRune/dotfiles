@@ -641,6 +641,7 @@ mkfs.vfat -F32 /dev/mmcblk0p1 -l CRISTAL  # Formate le disque en FAT32 (version 
 :s/<str1>/<str2>/           # Remplace toutes les occurences de str1 par str2 sur les lignes sélectionné en visual mode
 :%s/\'\([^']*\)\'/"\1"/g    # Remplace toutes les single quotes par des double quotes
 :s/,/\r&/                   # Ajoute une nouvelle ligne après chaque virgule
+:reg                        # Show the contents of all registers
 :sort u                     # Trie les lignes et supprime celles en double
 :NERDTree                   # Ouvre la fenêtre nerdtree
 :NERDTreeFocus
