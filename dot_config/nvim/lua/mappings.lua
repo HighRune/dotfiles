@@ -74,8 +74,6 @@ local function core()
   -- Put linewise
   map({"n","x"}, "glp", require("booster").putLinewise(']p`]'))
   map({"n","x"}, "glP", require("booster").putLinewise(']P`]'))
-  map({"n","x"}, "glhp", require("booster").putLinewise(']p`]', true))
-  map({"n","x"}, "glhP", require("booster").putLinewise(']P`]', true))
   map({"n","x"}, "gllp", require("booster").putLinewise(']p`]', nil, true))
   map({"n","x"}, "gllP", require("booster").putLinewise(']P`]', nil, true))
   map({"n","x"}, "glsp", require("booster").putLinewise(']p`]', true, true))
