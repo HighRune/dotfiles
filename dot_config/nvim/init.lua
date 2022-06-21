@@ -38,7 +38,10 @@ return require("packer").startup({
     })
     use({
       'anuvyklack/hydra.nvim',
-      requires = 'anuvyklack/keymap-layer.nvim'
+      requires = 'anuvyklack/keymap-layer.nvim',
+      config = function()
+        require("mappings").hydra()
+      end,
     })
     use({
       "ms-jpq/coq_nvim",
