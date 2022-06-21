@@ -81,6 +81,7 @@ local function core()
   -- Put charwise
   map({"n", "x"}, "p", require("booster").putCharwise('p'))
   map({"n", "x"}, "P", require("booster").putCharwise('P'))
+  -- map({"n", "x"}, ",", require("booster").putCharwise('P', function (str) print('str', str) end))
   map({"n", "x"}, "gp", require("booster").putCharwisePrefix('p'))
   map({"n", "x"}, "gP", require("booster").putCharwiseSuffix('P'))
   map({"n", "x"}, "gsp", require("booster").putCharwiseSurround('p'))
