@@ -197,13 +197,13 @@ return require("packer").startup({
         require("options").textobjuser()
       end,
     })
-    use({
-      "kana/vim-submode",
-      config = function()
-        require("options").submode()
-        require("mappings").submode()
-      end,
-    })
+    -- use({
+    --   "kana/vim-submode",
+    --   config = function()
+    --     require("options").submode()
+    --     require("mappings").submode()
+    --   end,
+    -- })
     -- use({
     --   "RRethy/nvim-base16",
     --   config = function()
