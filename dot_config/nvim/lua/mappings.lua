@@ -31,13 +31,13 @@ local function core()
   map("x", "<C-n>", ":norm ")
   map("n", "<esc>", "<esc>^")
   map("x", "p", '"_dP')
-  map({ "n", "v"}, "x", '"_x')
+  map({ "n", "v" }, "x", '"_x')
   -- Delete
-  map({ "n", "v"}, "d", '"_d')
+  map({ "n", "v" }, "d", '"_d')
   map("n", "D", '"_D')
   map("n", "dd", '"_dd^')
   -- Cut
-  map({ "n", "v"}, "m", 'd')
+  map({ "n", "v" }, "m", 'd')
   map("n", "M", 'D')
   map("n", "mm", 'dd^')
   -- Scroll
@@ -72,20 +72,20 @@ local function core()
   -- ]p Paste under the current indentation level
 
   -- Put linewise
-  map({"n","x"}, "glp", require("booster").putLinewise(']p`]'))
-  map({"n","x"}, "glP", require("booster").putLinewise(']P`]'))
-  map({"n","x"}, "gllp", require("booster").putLinewiseSuffix(']p`]'))
-  map({"n","x"}, "gllP", require("booster").putLinewiseSuffix(']P`]'))
-  map({"n","x"}, "glsp", require("booster").putLinewiseSurround(']p`]'))
-  map({"n","x"}, "glsP", require("booster").putLinewiseSurround(']P`]'))
+  map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
+  map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
+  map({ "n", "x" }, "gllp", require("booster").putLinewiseSuffix(']p`]'))
+  map({ "n", "x" }, "gllP", require("booster").putLinewiseSuffix(']P`]'))
+  map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
+  map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
   -- Put charwise
-  map({"n", "x"}, "p", require("booster").putCharwise('p'))
-  map({"n", "x"}, "P", require("booster").putCharwise('P'))
+  map({ "n", "x" }, "p", require("booster").putCharwise('p'))
+  map({ "n", "x" }, "P", require("booster").putCharwise('P'))
   -- map({"n", "x"}, ",", require("booster").putCharwise('P', function (str) print('str', str) end))
-  map({"n", "x"}, "gp", require("booster").putCharwisePrefix('p'))
-  map({"n", "x"}, "gP", require("booster").putCharwiseSuffix('P'))
-  map({"n", "x"}, "gsp", require("booster").putCharwiseSurround('p'))
-  map({"n", "x"}, "gsP", require("booster").putCharwiseSurround('P'))
+  map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('p'))
+  map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('P'))
+  map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('p'))
+  map({ "n", "x" }, "gsP", require("booster").putCharwiseSurround('P'))
 
   -- -- stylua: ignore
   -- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
@@ -187,25 +187,25 @@ local function vindent()
 end
 
 -------------------- inside/vim-search-pulse
-local function pulse()
-  -- cmd([[
-  -- nmap n n<Plug>Pulse
-  -- nmap N N<Plug>Pulse
-  -- nmap * *<Plug>Pulse
-  -- nmap # #<Plug>Pulse
-  -- " Pulses cursor line on first match
-  -- " when doing search with / or ?
-  -- cmap <silent> <expr> <enter> search_pulse#PulseFirst()
-  -- ]])
-end
+-- local function pulse()
+-- cmd([[
+-- nmap n n<Plug>Pulse
+-- nmap N N<Plug>Pulse
+-- nmap * *<Plug>Pulse
+-- nmap # #<Plug>Pulse
+-- " Pulses cursor line on first match
+-- " when doing search with / or ?
+-- cmap <silent> <expr> <enter> search_pulse#PulseFirst()
+-- ]])
+-- end
 
 -------------------- jeetsukumaran/vim-indentwise
-local function indentwise()
-  -- map("n", "<C-k>", "<Plug>(IndentWisePreviousGreaterIndent)")
-  -- map("n", "<C-j>", "<Plug>(IndentWiseNextLesserIndent)")
-  -- map("n", "<C-right>", "<Plug>(IndentWisePreviousLesserIndent)")
-  -- map("n", "<C-left>", "<Plug>(IndentWiseNextGreaterIndent)")
-end
+-- local function indentwise()
+-- map("n", "<C-k>", "<Plug>(IndentWisePreviousGreaterIndent)")
+-- map("n", "<C-j>", "<Plug>(IndentWiseNextLesserIndent)")
+-- map("n", "<C-right>", "<Plug>(IndentWisePreviousLesserIndent)")
+-- map("n", "<C-left>", "<Plug>(IndentWiseNextGreaterIndent)")
+-- end
 
 -------------------- justinmk/vim-sneak
 local function sneak()
@@ -329,7 +329,7 @@ local function lspconfig(buffer)
   map("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>", { buffer = buffer })
   map("n", "<left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
   map("n", "<right>", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
-  map('n', '<leader>l', vim.diagnostic.setloclist, { noremap=true, silent=true })
+  map('n', '<leader>l', vim.diagnostic.setloclist, { noremap = true, silent = true })
   -- map("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", { buffer = buffer })
   -- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
   -- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
@@ -363,6 +363,15 @@ local function submode()
 
   -- map({ "n", "o", "x" }, "s", "<Plug>(textobj-specialcharacter)")
   -- fn["submode#map"]("newline", "n", "s", "e", "<Plug>(textobj-specialcharacter)")
+end
+
+local function hydra()
+  local Hydra = require('hydra')
+
+  Hydra({ name = 'po', mode = 'n', body = 'g', heads = {
+    { 'o', ':set paste<CR>m`o<Esc>``:set nopaste<CR>' },
+    { 'O', ':set paste<CR>m`O<Esc>``:set nopaste<CR>' },
+  } })
 end
 
 local function textobjchainmember()
@@ -417,15 +426,16 @@ return {
   fzf = fzf,
   dial = dial,
   sneak = sneak,
-  pulse = pulse,
-  indentwise = indentwise,
   targets = targets,
   gitsigns = gitsigns,
-  submode = submode,
   packer = packer,
   textobjchainmember = textobjchainmember,
   vindent = vindent,
-  cybu = cybu
+  cybu = cybu,
+  hydra = hydra
+  -- indentwise = indentwise,
+  -- pulse = pulse,
+  -- submode = submode,
   -- pounce = pounce,
   -- miniyank = miniyank,
   -- sideways = sideways,
