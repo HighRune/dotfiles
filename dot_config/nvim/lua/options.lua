@@ -77,10 +77,10 @@ local function tokyonight()
 end
 
 local function sneak()
-  -- g["sneak#use_ic_scs"] = 1
-  -- g["sneak#absolute_dir"] = 1
-  cmd("let g:sneak#use_ic_scs = 1")
-  cmd("let g:sneak#absolute_dir = 1")
+  g["sneak#use_ic_scs"] = 1
+  g["sneak#absolute_dir"] = 1
+  -- cmd("let g:sneak#use_ic_scs = 1")
+  -- cmd("let g:sneak#absolute_dir = 1")
 end
 
 local function targets()
