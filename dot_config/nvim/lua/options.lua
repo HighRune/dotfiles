@@ -91,12 +91,6 @@ local function highlightedyank()
 	g.highlightedyank_highlight_duration = 100
 end
 
-local function submode()
-	g.submode_timeout = false
-	g.submode_keep_leaving_key = true
-	g.submode_always_show_submode = true
-end
-
 local function neoformat()
 	g.neoformat_enabled_lua = { "stylua" }
 end
@@ -290,7 +284,6 @@ return {
 	sneak = sneak,
 	targets = targets,
 	highlightedyank = highlightedyank,
-	submode = submode,
 	neoformat = neoformat,
 	wordmotion = wordmotion,
 	textobjuser = textobjuser,
