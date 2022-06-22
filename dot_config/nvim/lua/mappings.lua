@@ -369,8 +369,8 @@ local function hydra()
   local Hydra = require('hydra')
 
   Hydra({ name = 'go', mode = 'n', body = 'g', heads = {
-    { 'o', ':set paste<CR>m`o<Esc>``:set nopaste<CR>', { expr = true } },
-    { 'O', ':set paste<CR>m`O<Esc>``:set nopaste<CR>', { expr = true } },
+    { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>' },
+    { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>' },
   } })
 end
 
