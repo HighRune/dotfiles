@@ -342,29 +342,6 @@ local function coq()
   map("i", "<S-Tab>", [[pumvisible() ? "<C-p>" : "<BS>"]], expr)
 end
 
--------------------- kana/vim-submode
-local function submode()
-  fn["submode#enter_with"]("newline", "n", "s", "go", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
-  fn["submode#enter_with"]("newline", "n", "s", "gO", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
-  fn["submode#map"]("newline", "n", "s", "o", ":set paste<CR>m`o<Esc>``:set nopaste<CR>")
-  fn["submode#map"]("newline", "n", "s", "O", ":set paste<CR>m`O<Esc>``:set nopaste<CR>")
-  -- fn["submode#enter_with"]("ge", "n", "", "ge", "ge")
-  -- fn["submode#leave_with"]("ge", "n", "", "g")
-  -- fn["submode#map"]("ge", "n", "", "e", "ge")
-  -- fn["submode#enter_with"]("gE", "n", "", "gE", "gE")
-  -- fn["submode#leave_with"]("gE", "n", "", "g")
-  -- fn["submode#map"]("gE", "n", "", "E", "gE")
-  -- fn["submode#enter_with"]("ge", "n", "", "ge", "<Plug>WordMotion_gE")
-  -- fn["submode#map"]("ge", "n", "", "e", "<Plug>WordMotion_gE")
-  -- fn["submode#enter_with"]("gp", "n", "", "gP", "gP")
-  -- fn["submode#enter_with"]("gp", "n", "", "gp", "gp")
-  -- fn["submode#map"]("gp", "n", "", "P", "gP")
-  -- fn["submode#map"]("gp", "n", "", "p", "gp")
-
-  -- map({ "n", "o", "x" }, "s", "<Plug>(textobj-specialcharacter)")
-  -- fn["submode#map"]("newline", "n", "s", "e", "<Plug>(textobj-specialcharacter)")
-end
-
 local function hydra()
   local Hydra = require('hydra')
 
@@ -372,6 +349,9 @@ local function hydra()
     { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>', { silent = true }},
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true }},
   } })
+
+  -- map({ "n", "o", "x" }, "s", "<Plug>(textobj-specialcharacter)")
+  -- fn["submode#map"]("newline", "n", "s", "e", "<Plug>(textobj-specialcharacter)")
 end
 
 local function textobjchainmember()
@@ -435,7 +415,6 @@ return {
   hydra = hydra
   -- indentwise = indentwise,
   -- pulse = pulse,
-  -- submode = submode,
   -- pounce = pounce,
   -- miniyank = miniyank,
   -- sideways = sideways,
