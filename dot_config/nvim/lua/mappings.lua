@@ -79,6 +79,7 @@ local function core()
   map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
   -- Put charwise
+  -- map({ "n", "x" }, "p", 'col(".") >= col("$")-1 ? "$p" : "p"', expr)
   map({ "n", "x" }, "p", require("booster").putCharwise('p'))
   map({ "n", "x" }, "P", require("booster").putCharwise('P'))
   -- map({"n", "x"}, ",", require("booster").putCharwise('P', function (str) print('str', str) end))
