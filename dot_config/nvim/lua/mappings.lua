@@ -78,11 +78,25 @@ local function core()
   map({ "n", "x" }, "gllP", require("booster").putLinewiseSuffix(']P`]'))
   map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
-  -- Put charwise
-  -- map({ "n", "x" }, "p", 'col(".") >= col("$")-1 ? "$p" : "p"', expr)
-  map({ "n", "x" }, "p", require("booster").putCharwise('p'))
+
+  -- local function snapToLine(command)
+  local function snapToLine()
+    if fn.col(".") >= fn.col("$") - 1 then
+      -- return "$" .. command
+      return "$p"
+    elseif fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)") then
+      -- return "^" .. command
+      return "^p"
+    else
+      -- return command
+      return 'p'
+    end
+  end
+
+-- Put charwise
+  map({ "n", "x" }, "p", snapToLine, expr)
+  -- map({ "n", "x" }, "p", require("booster").putCharwise('p'))
   map({ "n", "x" }, "P", require("booster").putCharwise('P'))
-  -- map({"n", "x"}, ",", require("booster").putCharwise('P', function (str) print('str', str) end))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('p'))
   map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('P'))
   map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('p'))
