@@ -1012,3 +1012,10 @@ UPDATE <schema>.<table> SET password = crypt('<password>', gen_salt('bf')) WHERE
 # typematic delay and rate
 server-command=X -ardelay 250 -arinterval 20
 ```
+
+## QMK
+
+```bash
+qmk compile -kb ferris/sweep -km dvorak
+qmk flash -kb ferris/sweep -km dvorak
+```
