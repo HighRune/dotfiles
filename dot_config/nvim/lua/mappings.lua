@@ -79,22 +79,18 @@ local function core()
   map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
 
-  -- local function snapToLine(command)
-  local function snapToLine()
+  local function snapToLine(command)
     if fn.col(".") >= fn.col("$") - 1 then
-      -- return "$" .. command
-      return "$p"
+      return "$" .. command
     elseif fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)") then
-      -- return "^" .. command
-      return "^p"
+      return "^" .. command
     else
-      -- return command
-      return 'p'
+      return command
     end
   end
 
 -- Put charwise
-  map({ "n", "x" }, "p", snapToLine, expr)
+  map({ "n", "x" }, "p", function() return snapToLine('p') end, expr)
   -- map({ "n", "x" }, "p", require("booster").putCharwise('p'))
   map({ "n", "x" }, "P", require("booster").putCharwise('P'))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('p'))
