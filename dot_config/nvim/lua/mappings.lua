@@ -69,7 +69,9 @@ local function core()
 
   local function snapTo(command, callback)
     return function()
-      if (fn.col(".") >= fn.col("$") - 1) or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)")) then
+      if (fn.col(".") >= fn.col("$"))
+          or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)") - 1)
+      then
         fn.execute('normal! ' .. command)
         callback()
       else
