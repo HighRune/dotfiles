@@ -79,31 +79,32 @@ local function core()
   map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
 
-  local function snapToLineEnd(command)
+  local function snapToLineEnd(callback)
     return function()
       if (fn.col(".") >= fn.col("$") - 1) or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)")) then
-        fn.execute('normal! $' .. command)
+        fn.execute('normal! $')
+        callback()
       else
-        fn.execute('normal! ' .. command)
+        fn.execute('normal! ')
+        callback()
       end
     end
   end
 
-  local function snapToLineStart(command)
+  local function snapToLineStart(callback)
     return function()
       if (fn.col(".") >= fn.col("$") - 1) or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)")) then
-        fn.execute('normal! ^' .. command)
+        fn.execute('normal! ^')
+        callback()
       else
-        fn.execute('normal! ' .. command)
+        callback()
       end
     end
   end
 
   -- Put charwise
-  map({ "n", "x" }, "p", snapToLineEnd('p'))
-  map({ "n", "x" }, "P", snapToLineStart('P'))
-  -- map({ "n", "x" }, "p", require("booster").putCharwise('p'))
-  -- map({ "n", "x" }, "P", require("booster").putCharwise('P'))
+  map({ "n", "x" }, "p", snapToLineEnd(require("booster").putCharwise('p')))
+  map({ "n", "x" }, "P", snapToLineStart(require("booster").putCharwise('P')))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('p'))
   map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('P'))
   map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('p'))
