@@ -14,12 +14,12 @@ return require("packer").startup({
     })
     use("nvim-lua/plenary.nvim")
     use("kyazdani42/nvim-web-devicons")
-    use({
-      "folke/tokyonight.nvim",
-      config = function()
-        require("options").tokyonight()
-      end,
-    })
+    -- use({
+    --   "folke/tokyonight.nvim",
+    --   config = function()
+    --     require("options").tokyonight()
+    --   end,
+    -- })
     use({
       "nvim-treesitter/nvim-treesitter",
       config = function()
@@ -213,7 +213,7 @@ return require("packer").startup({
     --     require("setup").base16()
     --   end
     -- })
-    -- use("/home/charles/Documents/dev/plugins/blaster")
+    use("/home/charles/Documents/dev/plugins/blaster")
     use({
       "/home/charles/Documents/dev/plugins/booster.nvim",
       -- "Runeword/booster.nvim",
