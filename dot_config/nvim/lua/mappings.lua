@@ -67,6 +67,17 @@ local function core()
   map("n", "<C-k>", require("booster").cyclePrevQfItem, silent)
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
+  local function snapTo(command, callback)
+    return function()
+      if (fn.col(".") >= fn.col("$") - 1) or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)")) then
+        fn.execute('normal! ' .. command)
+        callback()
+      else
+        callback()
+      end
+    end
+  end
+
   -- `[ To beginning of previously changed or yanked text
   -- `] To end of previously changed or yanked text
   -- ]p Paste under the current indentation level
@@ -79,32 +90,9 @@ local function core()
   map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
 
-  local function snapToLineEnd(callback)
-    return function()
-      if (fn.col(".") >= fn.col("$") - 1) or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)")) then
-        fn.execute('normal! $')
-        callback()
-      else
-        fn.execute('normal! ')
-        callback()
-      end
-    end
-  end
-
-  local function snapToLineStart(callback)
-    return function()
-      if (fn.col(".") >= fn.col("$") - 1) or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)")) then
-        fn.execute('normal! ^')
-        callback()
-      else
-        callback()
-      end
-    end
-  end
-
   -- Put charwise
-  map({ "n", "x" }, "p", snapToLineEnd(require("booster").putCharwise('p')))
-  map({ "n", "x" }, "P", snapToLineStart(require("booster").putCharwise('P')))
+  map({ "n", "x" }, "p", snapTo('$', require("booster").putCharwise('p')))
+  map({ "n", "x" }, "P", snapTo('^', require("booster").putCharwise('P')))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('p'))
   map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('P'))
   map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('p'))
