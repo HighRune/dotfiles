@@ -81,31 +81,27 @@ local function core()
 
   local function snapToLineEnd(command)
     return function()
-    if (fn.col(".") >= fn.col("$") - 1) or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)")) then
-        print('1')
-      return "$" .. command
-    else
-        print('3')
-      return command
-    end
+      if (fn.col(".") >= fn.col("$") - 1) or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)")) then
+        fn.execute('normal! $' .. command)
+      else
+        fn.execute('normal! ' .. command)
+      end
     end
   end
 
-local function snapToLineStart(command)
-  return function()
-  if (fn.col(".") >= fn.col("$") - 1) or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)")) then
-      print('1')
-    return "^" .. command
-  else
-      print('3')
-    return command
+  local function snapToLineStart(command)
+    return function()
+      if (fn.col(".") >= fn.col("$") - 1) or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)")) then
+        fn.execute('normal! ^' .. command)
+      else
+        fn.execute('normal! ' .. command)
+      end
+    end
   end
-  end
-end
 
--- Put charwise
-  map({ "n", "x" }, "p", snapToLineEnd('p'), expr)
-  map({ "n", "x" }, "P", snapToLineStart('P'), expr)
+  -- Put charwise
+  map({ "n", "x" }, "p", snapToLineEnd('p'))
+  map({ "n", "x" }, "P", snapToLineStart('P'))
   -- map({ "n", "x" }, "p", require("booster").putCharwise('p'))
   -- map({ "n", "x" }, "P", require("booster").putCharwise('P'))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('p'))
