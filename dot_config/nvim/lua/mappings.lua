@@ -67,7 +67,7 @@ local function core()
   map("n", "<C-k>", require("booster").cyclePrevQfItem, silent)
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
-  local function snapTo(command, callback)
+  local function snapToLine(command, callback)
     return function()
       if (fn.col(".") >= fn.col("$"))
           or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)") - 1)
@@ -79,6 +79,13 @@ local function core()
       end
     end
   end
+
+  -- local function snapToWord(command, callback)
+  --   return function()
+  --     fn.execute('normal! ge' .. command)
+  --     callback()
+  --   end
+  -- end
 
   -- `[ To beginning of previously changed or yanked text
   -- `] To end of previously changed or yanked text
@@ -93,8 +100,10 @@ local function core()
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
 
   -- Put charwise
-  map({ "n", "x" }, "p", snapTo('$', require("booster").putCharwise('p')))
-  map({ "n", "x" }, "P", snapTo('^', require("booster").putCharwise('P')))
+  map({ "n", "x" }, "p", snapToLine('$', require("booster").putCharwise('geep')))
+  map({ "n", "x" }, "P", snapToLine('^', require("booster").putCharwise('gewP')))
+  -- map({ "n", "x" }, "p", snapToWord('e', require("booster").putCharwise('p')))
+  -- map({ "n", "x" }, "P", snapToWord('w', require("booster").putCharwise('P')))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('p'))
   map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('P'))
   map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('p'))
