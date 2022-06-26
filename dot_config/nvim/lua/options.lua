@@ -156,27 +156,27 @@ local function wordmotion()
 end
 
 local function textobjuser()
-  fn["textobj#user#plugin"]("specialcharacters", {
-    move = {
-      pattern = [[\(\W\&\S\)\+]],
-      ["move-n"] = "W",
-      ["move-p"] = "B",
-      ['move-N'] = 'E',
-      ['move-P'] = 'gE',
-    },
-  })
-
-  cmd([[
-  call textobj#user#plugin('word', {
-    \   'move': {
-    \   'pattern': '\<\w\+\>',
-    \     'move-n': 'w',
-    \     'move-p': 'b',
-    \     'move-N': 'e',
-    \     'move-P': 'ge',
-    \   },
-    \ })
-  ]])
+  -- fn["textobj#user#plugin"]("specialcharacters", {
+  --   move = {
+  --     pattern = [[\(\W\&\S\)\+]],
+  --     ["move-n"] = "W",
+  --     ["move-p"] = "B",
+  --     ['move-N'] = 'E',
+  --     ['move-P'] = 'gE',
+  --   },
+  -- })
+  --
+  -- cmd([[
+  -- call textobj#user#plugin('word', {
+  --   \   'move': {
+  --   \   'pattern': '\<\w\+\>',
+  --   \     'move-n': 'w',
+  --   \     'move-p': 'b',
+  --   \     'move-N': 'e',
+  --   \     'move-P': 'ge',
+  --   \   },
+  --   \ })
+  -- ]])
 
   -- fn["textobj#user#plugin"]("specialcharacters", {
   --   move = {
