@@ -290,7 +290,7 @@ end
 -------------------- ghillb/cybu.nvim
 local function cybu()
   cmd([[
-    highlight currentBuffer guifg=white guibg=#1e2633 gui=italic
+    highlight currentBuffer guifg=white guibg=#1e2633
     highlight adjacentBuffers guifg=#7a7c9e
     highlight buffersWindow guibg=#0a172e
     ]])
