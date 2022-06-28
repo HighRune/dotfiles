@@ -297,7 +297,7 @@ local function cybu()
   require("cybu").setup({
     position = {
       relative_to = "win",
-      anchor = "bottomleft",
+      anchor = "centerleft",
       max_win_height = 20,
       max_win_width = 0.5,
     },
