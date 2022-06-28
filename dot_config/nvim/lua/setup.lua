@@ -298,6 +298,8 @@ local function cybu()
     position = {
       relative_to = "win",
       anchor = "bottomleft",
+      horizontal_offset = 7,
+      vertical_offset = -2,
       max_win_height = 20,
       max_win_width = 0.5,
     },
