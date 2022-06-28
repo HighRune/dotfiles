@@ -92,12 +92,12 @@ local function core()
   -- ]p Paste under the current indentation level
 
   -- require("booster").setup({
-  --     putLinewiseSurround = {
-  --       chars = {
-  --         [','] = { 'ii', 'uu' },
-  --       }
-  --     },
-  --   })
+  --   putLinewiseSurround = {
+  --     chars = {
+  --       [','] = { 'ii', 'uu' },
+  --     }
+  --   },
+  -- })
 
   -- require("booster").setup(function(opts)
   --   opts.putLinewiseSurround.chars = {
