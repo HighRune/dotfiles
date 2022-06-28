@@ -91,6 +91,7 @@ local function core()
   -- `] To end of previously changed or yanked text
   -- ]p Paste under the current indentation level
 
+  require("booster").setup()
   -- Put linewise
   map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
   map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
