@@ -291,26 +291,26 @@ end
 local function cybu()
   cmd([[
     highlight currentBuffer guifg=white guibg=#1e2633 gui=italic
-    highlight adjacentBuffers guifg=#525369
+    highlight adjacentBuffers guifg=#7a7c9e
     highlight buffersWindow guibg=#0a172e
     ]])
   require("cybu").setup({
     position = {
       relative_to = "win",
-      anchor = "center",
+      anchor = "bottomleft",
       max_win_height = 20,
       max_win_width = 0.5,
     },
     style = {
       hide_buffer_id = true,
-      path = "tail",
+      -- path = "tail",
       border = "none",
       separator = " ",
       prefix = "…",
       padding = 1,
       devicons = {
         enabled = true,
-        colored = false,
+        colored = true,
       },
       highlights = {
         current_buffer = "currentBuffer",
@@ -318,7 +318,7 @@ local function cybu()
         background = "buffersWindow",
       },
     },
-    display_time = 700,
+    display_time = 900,
     exclude = { "qf" },
     fallback = function() end,
   })
