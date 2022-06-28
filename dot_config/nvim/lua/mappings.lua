@@ -103,14 +103,10 @@ local function core()
   -- Put charwise
   map({ "n", "x" }, "p", snapToLine('$', require("booster").putCharwise('p')))
   map({ "n", "x" }, "P", snapToLine('^', require("booster").putCharwise('P')))
-  -- map({ "n", "x" }, "p", snapToLine('$', require("booster").putCharwise('geep')))
-  -- map({ "n", "x" }, "P", snapToLine('^', require("booster").putCharwise('gewP')))
-  -- map({ "n", "x" }, "p", snapToWord('e', require("booster").putCharwise('p')))
-  -- map({ "n", "x" }, "P", snapToWord('w', require("booster").putCharwise('P')))
-  map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('p'))
-  map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('P'))
-  map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('p'))
-  map({ "n", "x" }, "gsP", require("booster").putCharwiseSurround('P'))
+  map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('geep'))
+  map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('gewP'))
+  map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('geep'))
+  map({ "n", "x" }, "gsP", require("booster").putCharwiseSurround('gewP'))
 
   -- -- stylua: ignore
   -- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
