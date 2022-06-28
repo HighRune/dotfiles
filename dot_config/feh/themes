@@ -1,2 +1,4 @@
-feh -B black \
+feh \
+-B black \
+--edit \
 --scale-down
