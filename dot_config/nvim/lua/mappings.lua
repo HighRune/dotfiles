@@ -106,6 +106,7 @@ local function core()
   -- end)
 
   -- Put linewise
+  -- map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]', function(str) return '-----' .. str .. '-----' end))
   map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
   map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
   map({ "n", "x" }, "gllp", require("booster").putLinewiseSuffix(']p`]'))
