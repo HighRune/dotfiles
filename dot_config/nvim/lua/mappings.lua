@@ -364,8 +364,8 @@ local function lspconfig(buffer)
     buffer = buffer,
   })
   map("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>", { buffer = buffer })
-  map("n", "<left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
-  map("n", "<right>", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
+  map("n", "<right>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
+  map("n", "<left>", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
   map('n', '<leader>l', vim.diagnostic.setloclist, { noremap = true, silent = true })
   -- map("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", { buffer = buffer })
   -- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
