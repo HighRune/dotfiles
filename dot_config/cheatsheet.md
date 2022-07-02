@@ -809,6 +809,13 @@ firebase use <project_id>
 
 ```
 
+## qmk
+
+```
+qmk flash -kb ferris/sweep -km default -bl dfu-split-left
+qmk flash -kb ferris/sweep -km default -bl dfu-split-right
+```
+
 ## gcloud
 
 ```bash
