@@ -116,7 +116,6 @@ local function core()
 
   -- Put charwise
   map({ "n", "x" }, "<C-p>", require("booster").putCharwise('p'))
-  map({ "n", "x" }, "<C-P>", require("booster").putCharwise('P'))
   map({ "n", "x" }, "p", snapToLine('$', require("booster").putCharwise('geep')))
   map({ "n", "x" }, "P", snapToLine('^', require("booster").putCharwise('gewP')))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('geep'))
