@@ -192,6 +192,13 @@ return require("packer").startup({
         require("mappings").textobjchainmember()
       end,
     })
+    use({
+      "chaoren/vim-wordmotion",
+      config = function()
+        require("mappings").wordmotion()
+        -- require("options").wordmotion()
+      end,
+    })
     use("kana/vim-textobj-line")
     -- use("Julian/vim-textobj-variable-segment")
     use({
@@ -250,13 +257,6 @@ return require("packer").startup({
 --   --   }
 --   -- end
 -- }
--- use({
--- 	"chaoren/vim-wordmotion",
--- 	config = function()
--- 		-- require("mappings").wordmotion()
--- 		-- require("options").wordmotion()
--- 	end,
--- })
 -- use({
 -- 	"akinsho/bufferline.nvim",
 -- 	-- config = config.bufferline(),
