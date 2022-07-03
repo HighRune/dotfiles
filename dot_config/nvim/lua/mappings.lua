@@ -389,6 +389,12 @@ local function hydra()
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true } },
   } })
 
+  Hydra({ name = 'gw', mode = 'n', body = 'g', heads = {
+    { 'w', '<Plug>WordMotion_w', { silent = true } },
+    { 'b', '<Plug>WordMotion_b', { silent = true } },
+    { 'e', '<Plug>WordMotion_e', { silent = true } },
+  } })
+
   -- map({ "n", "o", "x" }, "s", "<Plug>(textobj-specialcharacter)")
   -- fn["submode#map"]("newline", "n", "s", "e", "<Plug>(textobj-specialcharacter)")
 end
