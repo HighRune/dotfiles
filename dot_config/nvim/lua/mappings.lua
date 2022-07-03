@@ -63,8 +63,8 @@ local function core()
 
   -- Quickfix list
   map("n", "<leader><Tab>", require("booster").addBuffersToQfList)
-  map("n", "<C-right>", require("booster").cycleNextLocItem, silent)
-  map("n", "<C-left>", require("booster").cyclePrevLocItem, silent)
+  map("n", "<C-down>", require("booster").cycleNextLocItem, silent)
+  map("n", "<C-up>", require("booster").cyclePrevLocItem, silent)
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
   local function snapToLine(command, callback)
@@ -365,8 +365,8 @@ local function lspconfig(buffer)
     buffer = buffer,
   })
   map("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>", { buffer = buffer })
-  map("n", "<left>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
-  map("n", "<right>", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
+  map("n", "<up>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
+  map("n", "<down>", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
   map('n', '<leader>l', vim.diagnostic.setloclist, { noremap = true, silent = true })
   map('n', '<leader>x', vim.diagnostic.setqflist, { noremap = true, silent = true })
   -- map("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", { buffer = buffer })
