@@ -395,7 +395,6 @@ local function hydra()
       -- invoke_on_body = true,
       on_enter = function()
         print('hydra enter')
-        fn.execute("normal ! <Plug>WordMotion_w")
       end
     },
     heads = {
@@ -404,7 +403,8 @@ local function hydra()
       { 'e', '<Plug>WordMotion_e', { silent = true } },
       { 'iw', '<Plug>WordMotion_iw', { silent = true } },
       { 'aw', '<Plug>WordMotion_aw', { silent = true } },
-      { 'q', nil, { nowait = true } }
+      { 'q', nil, { exit = true } },
+      { '<Esc>', nil, { exit = true } }
     } })
 
   -- map({ "n", "o", "x" }, "s", "<Plug>(textobj-specialcharacter)")
