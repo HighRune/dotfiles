@@ -115,9 +115,10 @@ local function core()
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
 
   -- Put charwise
-  map({ "n", "x" }, "<C-p>", require("booster").putCharwise('p'))
-  map({ "n", "x" }, "p", snapToLine('$', require("booster").putCharwise('geep')))
-  map({ "n", "x" }, "P", snapToLine('^', require("booster").putCharwise('gewP')))
+  map({ "n", "x" }, "p", require("booster").putCharwise('p'))
+  map({ "n", "x" }, "P", require("booster").putCharwise('P'))
+  -- map({ "n", "x" }, "p", snapToLine('$', require("booster").putCharwise('geep')))
+  -- map({ "n", "x" }, "P", snapToLine('^', require("booster").putCharwise('gewP')))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('geep'))
   map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('gewP'))
   map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('geep'))
