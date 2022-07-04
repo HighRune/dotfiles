@@ -389,13 +389,23 @@ local function hydra()
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true } },
   } })
 
-  Hydra({ name = 'gw', mode = {"o", "n"}, body = 'gw', heads = {
-    { 'w', '<Plug>WordMotion_w', { silent = true } },
-    { 'b', '<Plug>WordMotion_b', { silent = true } },
-    { 'e', '<Plug>WordMotion_e', { silent = true } },
-    -- { 'iw', '<Plug>WordMotion_iw', { silent = true } },
-    -- { 'aw', '<Plug>WordMotion_aw', { silent = true } },
-  } })
+  Hydra({ name = 'gw', mode = { 'o', 'n' }, body = 'gw',
+    config = {
+      color = 'pink',
+      -- invoke_on_body = true,
+      on_enter = function()
+        print('hydra enter')
+        fn.execute("normal ! <Plug>WordMotion_w")
+      end
+    },
+    heads = {
+      { 'w', '<Plug>WordMotion_w', { silent = true } },
+      { 'b', '<Plug>WordMotion_b', { silent = true } },
+      { 'e', '<Plug>WordMotion_e', { silent = true } },
+      { 'iw', '<Plug>WordMotion_iw', { silent = true } },
+      { 'aw', '<Plug>WordMotion_aw', { silent = true } },
+      { 'q', nil, { nowait = true } }
+    } })
 
   -- map({ "n", "o", "x" }, "s", "<Plug>(textobj-specialcharacter)")
   -- fn["submode#map"]("newline", "n", "s", "e", "<Plug>(textobj-specialcharacter)")
