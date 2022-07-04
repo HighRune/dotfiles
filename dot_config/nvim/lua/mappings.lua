@@ -404,7 +404,8 @@ local function hydra()
       { 'iw', '<Plug>WordMotion_iw', { silent = true } },
       { 'aw', '<Plug>WordMotion_aw', { silent = true } },
       { 'q', nil, { exit = true } },
-      { '<Esc>', nil, { exit = true } }
+      { '<Esc>', nil, { exit = true } },
+      { '<C-s>', nil, { exit = true } }
     } })
 
   -- map({ "n", "o", "x" }, "s", "<Plug>(textobj-specialcharacter)")
