@@ -80,6 +80,13 @@ local function core()
     end
   end
 
+  local function cursorIsAfterLine ()
+    return (vim.o.virtualedit ~= '') and (fn.col('.') >= fn.col('$'))
+  end
+
+  local function cursorIsBeforeLine ()
+    return (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)") - 1) 
+  end
   -- local function snapToWord(command, callback)
   --   return function()
   --     fn.execute('normal! ge' .. command)
