@@ -76,7 +76,7 @@ local function core()
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
 
   -- Put charwise
-  map({ "n", "x" }, "x", require("booster").snapToLineEnd(function() fn.execute('normal! "_x') end))
+  map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
   map({ "n", "x" }, "p", require("booster").snapToLineEnd(require("booster").putCharwise('p')))
   map({ "n", "x" }, "P", require("booster").snapToLineStart(require("booster").putCharwise('P')))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('geep'))
