@@ -67,7 +67,9 @@ local function core()
   map("n", "<C-up>", require("booster").cyclePrevLocItem, silent)
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
-  -- Put linewise
+  -------------------- Runeword/booster.nvim
+  map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
+
   map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
   map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
   map({ "n", "x" }, "gllp", require("booster").putLinewiseSuffix(']p`]'))
@@ -75,8 +77,6 @@ local function core()
   map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
 
-  -- Put charwise
-  map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
   map({ "n", "x" }, "p", require("booster").snapToLineEnd(require("booster").putCharwise('p')))
   map({ "n", "x" }, "P", require("booster").snapToLineStart(require("booster").putCharwise('P')))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('geep'))
