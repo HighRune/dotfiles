@@ -215,8 +215,8 @@ local function sneak()
   map({ "n", "x" }, "S", ":<C-U>call sneak#wrap('', 3, 1, 2, 0)<CR>")
   map({ "n", "x", "o" }, "f", "<Plug>Sneak_f")
   map({ "n", "x", "o" }, "F", "<Plug>Sneak_F")
-  map({ "n", "x", "o" }, "t", "<Plug>Sneak_t")
-  map({ "n", "x", "o" }, "T", "<Plug>Sneak_T")
+  -- map({ "n", "x", "o" }, "t", "<Plug>Sneak_t")
+  -- map({ "n", "x", "o" }, "T", "<Plug>Sneak_T")
 
   cmd([[
   nmap <expr> n sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n'
