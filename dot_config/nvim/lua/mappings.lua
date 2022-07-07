@@ -67,53 +67,7 @@ local function core()
   map("n", "<C-up>", require("booster").cyclePrevLocItem, silent)
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
-  local function snapToLine(command, callback)
-    return function()
-      if (fn.col(".") >= fn.col("$"))
-          or (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)") - 1)
-      then
-        fn.execute('normal! ' .. command)
-        callback()
-      else
-        callback()
-      end
-    end
-  end
-
-  local function cursorIsAfterLine ()
-    return (vim.o.virtualedit ~= '') and (fn.col('.') >= fn.col('$'))
-  end
-
-  local function cursorIsBeforeLine ()
-    return (fn.col(".") <= string.find(fn.getline(fn.line(".")), "(%S)") - 1) 
-  end
-  -- local function snapToWord(command, callback)
-  --   return function()
-  --     fn.execute('normal! ge' .. command)
-  --     callback()
-  --   end
-  -- end
-
-  -- `[ To beginning of previously changed or yanked text
-  -- `] To end of previously changed or yanked text
-  -- ]p Paste under the current indentation level
-
-  -- require("booster").setup({
-  --   putLinewiseSurround = {
-  --     chars = {
-  --       [','] = { 'ii', 'uu' },
-  --     }
-  --   },
-  -- })
-
-  -- require("booster").setup(function(opts)
-  --   opts.putLinewiseSurround.chars = {
-  --     [','] = { 'oo', 'uu' },
-  --   }
-  -- end)
-
   -- Put linewise
-  -- map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]', function(str) return '-----' .. str .. '-----' end))
   map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
   map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
   map({ "n", "x" }, "gllp", require("booster").putLinewiseSuffix(']p`]'))
@@ -122,8 +76,8 @@ local function core()
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
 
   -- Put charwise
-  map({ "n", "x" }, "p", snapToLine('$', require("booster").putCharwise('p')))
-  map({ "n", "x" }, "P", snapToLine('^', require("booster").putCharwise('P')))
+  map({ "n", "x" }, "p", require("booster").snapToLineEnd(require("booster").putCharwise('p')))
+  map({ "n", "x" }, "P", require("booster").snapToLineStart(require("booster").putCharwise('P')))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('geep'))
   map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('gewP'))
   map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('geep'))
