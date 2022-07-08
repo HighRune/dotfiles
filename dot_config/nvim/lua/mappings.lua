@@ -69,6 +69,7 @@ local function core()
 
   -------------------- Runeword/booster.nvim
   -- map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
+  map({ "n", "x" }, "x", '"_x')
 
   map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
   map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
