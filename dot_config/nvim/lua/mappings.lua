@@ -68,7 +68,7 @@ local function core()
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
   -------------------- Runeword/booster.nvim
-  map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
+  -- map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
 
   map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
   map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
