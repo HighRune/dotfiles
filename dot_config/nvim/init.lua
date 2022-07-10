@@ -207,6 +207,12 @@ return require("packer").startup({
         require("options").textobjuser()
       end,
     })
+    use({
+      "kylechui/nvim-surround",
+      config = function()
+        require("nvim-surround").setup({})
+      end
+    })
     -- use({
     --   "kana/vim-submode",
     --   config = function()
@@ -228,7 +234,7 @@ return require("packer").startup({
     })
     use("ryvnf/readline.vim")
     use("tpope/vim-abolish")
-    use("tpope/vim-surround")
+    -- use("tpope/vim-surround")
     -- use("m-demare/hlargs.nvim")
   end,
   config = {
