@@ -166,11 +166,7 @@ return require("packer").startup({
           'e',
           't',
           'o',
-          'n',
-          'o',
-          'n',
           'a',
-          's',
           'k',
           'm',
           'j',
@@ -183,10 +179,10 @@ return require("packer").startup({
           'p',
           'g',
         }
-        -- require('leap').opts.special_keys = {
-        --   next_match = '<n>',
-        --   prev_match = '<N>',
-        -- }
+        require('leap').opts.special_keys = {
+          next_match = 'n',
+          prev_match = 'N',
+        }
       end
     })
     -- use({
