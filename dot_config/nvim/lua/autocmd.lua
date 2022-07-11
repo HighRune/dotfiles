@@ -36,8 +36,9 @@ end
 
 local function sneak()
   cmd([[
-autocmd User SneakLeave highlight clear Sneak
-autocmd User SneakLeave highlight clear SneakScope
+" autocmd User SneakLeave highlight clear Sneak
+" autocmd User SneakLeave highlight clear SneakScope
+autocmd ColorScheme * highlight Sneak guifg=black guibg=red ctermfg=black ctermbg=red
 ]] )
 end
 
