@@ -156,13 +156,16 @@ return require("packer").startup({
     --   end,
     -- })
     use({
-      "justinmk/vim-sneak",
-      config = function()
-        require("autocmd").sneak()
-        require("options").sneak()
-        require("mappings").sneak()
-      end,
+      "ggandor/leap.nvim"
     })
+    -- use({
+    --   "justinmk/vim-sneak",
+    --   config = function()
+    --     require("autocmd").sneak()
+    --     require("options").sneak()
+    --     require("mappings").sneak()
+    --   end,
+    -- })
     use("nvim-treesitter/playground")
     use({
       "ibhagwan/fzf-lua",
