@@ -68,7 +68,7 @@ local function core()
   map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
   -------------------- Runeword/booster.nvim
-  map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
+  -- map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
 
   map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
   map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
@@ -76,6 +76,20 @@ local function core()
   map({ "n", "x" }, "gllP", require("booster").putLinewiseSuffix(']P`]'))
   map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
+
+-- local counter = 0
+--
+-- function _G.__dot_repeat(motion) -- 4.
+--     if motion == nil then
+--         vim.o.operatorfunc = "v:lua.require('booster').snapToLineEnd('_x')()"
+--         return "g@$" -- 2.
+--     end
+--
+--     -- print("counter:", counter, "motion:", motion)
+--     counter = counter + 1
+-- end
+--
+-- vim.keymap.set("n", "ga", _G.__dot_repeat, expr)
 
   map({ "n", "x" }, "p", require("booster").jumpToLineEnd(require("booster").putCharwise('p')))
   map({ "n", "x" }, "P", require("booster").jumpToLineStart(require("booster").putCharwise('P')))
