@@ -814,8 +814,9 @@ firebase use <project_id>
 ```
 qmk config
 qmk new-keymap
-qmk flash -kb ferris/sweep -km default -bl dfu-split-left
-qmk flash -kb ferris/sweep -km default -bl dfu-split-right
+qmk compile -kb ferris/sweep -km runeword
+qmk flash -kb ferris/sweep -km runeword -bl dfu-split-left
+qmk flash -kb ferris/sweep -km runeword -bl dfu-split-right
 qmk json2c -o keymap.c keymap.json
 ```
 
