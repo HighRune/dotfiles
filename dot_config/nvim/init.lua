@@ -231,6 +231,7 @@ return require("packer").startup({
     })
     use("kana/vim-textobj-line")
     -- use("Julian/vim-textobj-variable-segment")
+    use('jinh0/eyeliner.nvim')
     use({
       "kana/vim-textobj-user",
       config = function()
