@@ -812,6 +812,7 @@ firebase use <project_id>
 ## qmk
 
 ```
+qmk config
 qmk new-keymap
 qmk flash -kb ferris/sweep -km default -bl dfu-split-left
 qmk flash -kb ferris/sweep -km default -bl dfu-split-right
