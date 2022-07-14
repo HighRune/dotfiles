@@ -51,6 +51,13 @@ local function packer()
   })
 end
 
+local function eyeliner()
+  cmd([[
+highlight EyelinerPrimary gui=bold
+highlight EyelinerSecondary gui=bold
+]] )
+end
+
 local function indentscope()
   augroup("indentscope", { clear = true })
   autocmd("FileType", {
@@ -112,4 +119,5 @@ return {
   targets = targets,
   sneak = sneak,
   core = core,
+  eyeliner = eyeliner,
 }
