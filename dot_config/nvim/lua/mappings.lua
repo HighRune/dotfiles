@@ -33,6 +33,7 @@ local function core()
   map("x", "p", '"_dP')
   -- map({ "n", "v" }, "x", '"_x')
   map({ 'n', 'x' }, 's', 'f')
+  map({ 'n', 'x' }, 'S', 'F')
   -- Delete
   map({ "n", "v" }, "d", '"_d')
   map("n", "D", '"_D')
