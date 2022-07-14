@@ -817,7 +817,7 @@ qmk new-keymap
 qmk compile -kb ferris/sweep -km runeword
 qmk flash -kb ferris/sweep -km runeword -bl dfu-split-left
 qmk flash -kb ferris/sweep -km runeword -bl dfu-split-right
-qmk json2c -o keymap.c keymap.json
+qmk json2c -o _keymap.c keymap.json
 ```
 
 ## gcloud
