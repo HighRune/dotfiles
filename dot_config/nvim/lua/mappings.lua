@@ -78,19 +78,19 @@ local function core()
   map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
 
--- local counter = 0
---
--- function _G.__dot_repeat(motion) -- 4.
---     if motion == nil then
---         vim.o.operatorfunc = "v:lua.require('booster').snapToLineEnd('_x')()"
---         return "g@$" -- 2.
---     end
---
---     -- print("counter:", counter, "motion:", motion)
---     counter = counter + 1
--- end
---
--- vim.keymap.set("n", "ga", _G.__dot_repeat, expr)
+  -- local counter = 0
+  --
+  -- function _G.__dot_repeat(motion) -- 4.
+  --     if motion == nil then
+  --         vim.o.operatorfunc = "v:lua.require('booster').snapToLineEnd('_x')()"
+  --         return "g@$" -- 2.
+  --     end
+  --
+  --     -- print("counter:", counter, "motion:", motion)
+  --     counter = counter + 1
+  -- end
+  --
+  -- vim.keymap.set("n", "ga", _G.__dot_repeat, expr)
 
   map({ "n", "x" }, "p", require("booster").jumpToLineEnd(require("booster").putCharwise('p')))
   map({ "n", "x" }, "P", require("booster").jumpToLineStart(require("booster").putCharwise('P')))
@@ -222,6 +222,11 @@ end
 -- map("n", "<C-right>", "<Plug>(IndentWisePreviousLesserIndent)")
 -- map("n", "<C-left>", "<Plug>(IndentWiseNextGreaterIndent)")
 -- end
+
+local function leap()
+  map({ "n", "x" }, "f", "<Plug>(leap-forward)")
+  map({ "n", "x" }, "F", "<Plug>(leap-backward)")
+end
 
 -------------------- justinmk/vim-sneak
 local function sneak()
@@ -450,7 +455,8 @@ return {
   textobjchainmember = textobjchainmember,
   vindent = vindent,
   cybu = cybu,
-  hydra = hydra
+  hydra = hydra,
+  leap = leap,
   -- indentwise = indentwise,
   -- pulse = pulse,
   -- pounce = pounce,
