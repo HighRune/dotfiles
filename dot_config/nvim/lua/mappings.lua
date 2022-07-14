@@ -72,12 +72,12 @@ local function core()
   -------------------- Runeword/booster.nvim
   -- map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
 
-  map({ "n", "x" }, "gl", require("booster").putLinewise(']p`]'))
-  map({ "n", "x" }, "gL", require("booster").putLinewise(']P`]'))
-  map({ "n", "x" }, "gll", require("booster").putLinewiseSuffix(']p`]'))
-  map({ "n", "x" }, "glL", require("booster").putLinewiseSuffix(']P`]'))
-  map({ "n", "x" }, "gsl", require("booster").putLinewiseSurround(']p`]'))
-  map({ "n", "x" }, "gsL", require("booster").putLinewiseSurround(']P`]'))
+  map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
+  map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
+  map({ "n", "x" }, "gllp", require("booster").putLinewiseSuffix(']p`]'))
+  map({ "n", "x" }, "gllP", require("booster").putLinewiseSuffix(']P`]'))
+  map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
+  map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
 
   -- local counter = 0
   --
