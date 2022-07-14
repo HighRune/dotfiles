@@ -158,6 +158,7 @@ return require("packer").startup({
     use({
       "ggandor/leap.nvim",
       config = function()
+        require("mappings").leap()
         require('leap').opts.safe_labels = nil
         require('leap').opts.labels = {
           'u',
