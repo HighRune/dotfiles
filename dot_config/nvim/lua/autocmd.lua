@@ -53,8 +53,8 @@ end
 
 local function eyeliner()
   cmd([[
-highlight EyelinerPrimary gui=bold
-highlight EyelinerSecondary gui=bold
+highlight EyelinerPrimary gui=bold,italic
+highlight EyelinerSecondary gui=bold,italic
 ]] )
 end
 
