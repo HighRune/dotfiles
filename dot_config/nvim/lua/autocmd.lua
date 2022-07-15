@@ -13,6 +13,7 @@ autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTe
 autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
 autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
 autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
+" autocmd ColorScheme * highlight CursorLine gui=bold guibg=none
 " autocmd ColorScheme * highlight VertSplit guifg=#292e42
 " autocmd ColorScheme * highlight Hlargs guifg=#FAFF00
 ]] )
