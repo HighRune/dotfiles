@@ -158,33 +158,8 @@ return require("packer").startup({
     use({
       "ggandor/leap.nvim",
       config = function()
-      --   require("options").leap()
-      -- end,
+        require("options").leap()
         require("mappings").leap()
-        require('leap').opts.safe_labels = nil
-        require('leap').opts.labels = {
-          'u',
-          'h',
-          'e',
-          't',
-          'o',
-          'a',
-          'k',
-          'm',
-          'j',
-          'w',
-          'q',
-          'v',
-          '.',
-          'c',
-          'r',
-          'p',
-          'g',
-        }
-        -- require('leap').opts.special_keys = {
-        --   next_match = 'n',
-        --   prev_match = 'N',
-        -- }
       end
     })
     -- use({
