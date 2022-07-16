@@ -76,6 +76,29 @@ local function tokyonight()
   cmd("colorscheme tokyonight")
 end
 
+local function leap()
+  require('leap').opts.safe_labels = nil
+  require('leap').opts.labels = {
+    'u',
+    'h',
+    'e',
+    't',
+    'o',
+    'a',
+    'k',
+    'm',
+    'j',
+    'w',
+    'q',
+    'v',
+    '.',
+    'c',
+    'r',
+    'p',
+    'g',
+  }
+end
+
 local function sneak()
   g["sneak#use_ic_scs"] = 1
   g["sneak#absolute_dir"] = 1
@@ -315,4 +338,5 @@ return {
   wordmotion = wordmotion,
   textobjuser = textobjuser,
   dial = dial,
+  leap = leap
 }
