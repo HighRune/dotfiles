@@ -122,15 +122,15 @@ return require("packer").startup({
       "windwp/nvim-autopairs",
       config = require("config.autopairs")(),
     })
-    use({
-      "ghillb/cybu.nvim",
-      branch = "main",
-      requires = { "kyazdani42/nvim-web-devicons" },
-      config = function()
-        require("setup").cybu()
-        require("mappings").cybu()
-      end,
-    })
+    -- use({
+    --   "ghillb/cybu.nvim",
+    --   branch = "main",
+    --   requires = { "kyazdani42/nvim-web-devicons" },
+    --   config = function()
+    --     require("setup").cybu()
+    --     require("mappings").cybu()
+    --   end,
+    -- })
     use({
       "kana/vim-arpeggio",
       config = function()
