@@ -43,8 +43,8 @@ local function core()
   map("n", "M", 'D')
   map("n", "mm", 'dd^')
   -- Scroll
-  -- map({ "n", "x" }, "<C-u>", "5k")
-  -- map({ "n", "x" }, "<C-e>", "5j")
+  map({ "n", "x" }, "down", "5k")
+  map({ "n", "x" }, "up", "5j")
   -- Readline
   map("i", "<C-a>", "<esc>I")
   map("i", "<C-e>", "<end>")
@@ -351,8 +351,8 @@ local function lspconfig(buffer)
     buffer = buffer,
   })
   map("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>", { buffer = buffer })
-  map("n", "<up>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
-  map("n", "<down>", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
+  map("n", '<right>', "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
+  map("n", "<left>", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
   map('n', '<leader>l', vim.diagnostic.setloclist, { noremap = true, silent = true })
   map('n', '<leader>x', vim.diagnostic.setqflist, { noremap = true, silent = true })
   -- map("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", { buffer = buffer })
@@ -375,10 +375,10 @@ local function hydra()
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true } },
   } })
 
-  Hydra({ name = 'scroll', mode = 'n', body = '<C-u>', config = { invoke_on_body = true }, heads = {
-    { 'u', '5k' },
-    { 'e', '5j' },
-  } })
+  -- Hydra({ name = 'scroll', mode = 'n', body = '<C-u>', config = { invoke_on_body = true }, heads = {
+  --   { 'u', '5k' },
+  --   { 'e', '5j' },
+  -- } })
 
   -- Hydra({ name = 'gw', mode = { 'o', 'n' }, body = 'gw',
   --   config = {
