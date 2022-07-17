@@ -375,7 +375,7 @@ local function hydra()
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true } },
   } })
 
-  Hydra({ name = 'scroll', mode = 'n', body = '<C-u>', heads = {
+  Hydra({ name = 'scroll', mode = 'n', body = '<C-u>', config = { invoke_on_body = true }, heads = {
     { 'u', '5k' },
     { 'e', '5j' },
   } })
