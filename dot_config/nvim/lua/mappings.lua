@@ -43,8 +43,8 @@ local function core()
   map("n", "M", 'D')
   map("n", "mm", 'dd^')
   -- Scroll
-  map({ "n", "x" }, "<C-u>", "5k")
-  map({ "n", "x" }, "<C-e>", "5j")
+  -- map({ "n", "x" }, "<C-u>", "5k")
+  -- map({ "n", "x" }, "<C-e>", "5j")
   -- Readline
   map("i", "<C-a>", "<esc>I")
   map("i", "<C-e>", "<end>")
@@ -375,24 +375,29 @@ local function hydra()
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true } },
   } })
 
-  Hydra({ name = 'gw', mode = { 'o', 'n' }, body = 'gw',
-    config = {
-      color = 'pink',
-      invoke_on_body = true,
-      on_enter = function()
-        print('hydra enter')
-      end
-    },
-    heads = {
-      { 'w', '<Plug>WordMotion_w', { silent = true } },
-      { 'b', '<Plug>WordMotion_b', { silent = true } },
-      { 'e', '<Plug>WordMotion_e', { silent = true } },
-      { 'iw', '<Plug>WordMotion_iw', { silent = true } },
-      { 'aw', '<Plug>WordMotion_aw', { silent = true } },
-      { 'q', nil, { exit = true } },
-      { '<Esc>', nil, { exit = true } },
-      { '<C-s>', nil, { exit = true } }
-    } })
+  Hydra({ name = 'scroll', mode = 'n', body = '<C-u>', heads = {
+    { 'u', '5k', { silent = true } },
+    { 'e', '5j', { silent = true } },
+  } })
+
+  -- Hydra({ name = 'gw', mode = { 'o', 'n' }, body = 'gw',
+  --   config = {
+  --     color = 'pink',
+  --     invoke_on_body = true,
+  --     on_enter = function()
+  --       print('hydra enter')
+  --     end
+  --   },
+  --   heads = {
+  --     { 'w', '<Plug>WordMotion_w', { silent = true } },
+  --     { 'b', '<Plug>WordMotion_b', { silent = true } },
+  --     { 'e', '<Plug>WordMotion_e', { silent = true } },
+  --     { 'iw', '<Plug>WordMotion_iw', { silent = true } },
+  --     { 'aw', '<Plug>WordMotion_aw', { silent = true } },
+  --     { 'q', nil, { exit = true } },
+  --     { '<Esc>', nil, { exit = true } },
+  --     { '<C-s>', nil, { exit = true } }
+  --   } })
 
   -- map({ "n", "o", "x" }, "s", "<Plug>(textobj-specialcharacter)")
   -- fn["submode#map"]("newline", "n", "s", "e", "<Plug>(textobj-specialcharacter)")
