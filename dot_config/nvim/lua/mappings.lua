@@ -376,8 +376,8 @@ local function hydra()
   } })
 
   Hydra({ name = 'scroll', mode = 'n', body = '<C-u>', config = { invoke_on_body = true }, heads = {
-    { 'u', '5k', { silent = true } },
-    { 'e', '5j', { silent = true } },
+    { 'u', '5k' },
+    { 'e', '5j' },
   } })
 
   -- Hydra({ name = 'gw', mode = { 'o', 'n' }, body = 'gw',
