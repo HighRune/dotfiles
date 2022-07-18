@@ -12,7 +12,7 @@
 #define IGNORE_MOD_TAP_INTERRUPT
 #define TAPPING_FORCE_HOLD
 
-// #undef COMBO_COUNT
-// #undef COMBO_TERM
-// #define COMBO_COUNT 5
-// #define COMBO_TERM 25
+#undef COMBO_COUNT
+#undef COMBO_TERM
+#define COMBO_COUNT 8
+#define COMBO_TERM 25
