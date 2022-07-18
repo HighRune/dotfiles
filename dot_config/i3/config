@@ -76,22 +76,22 @@ workspace_layout tabbed
 # bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace.sh
 
 # Switch to workspace
-bindsym $mod+1    workspace  $ws1
-bindsym $mod+2    workspace  $ws2
-bindsym $mod+3    workspace  $ws3
-bindsym $mod+0    workspace  $ws4
+bindsym $mod+a    workspace  $ws1
+bindsym $mod+o    workspace  $ws2
+bindsym $mod+e    workspace  $ws3
+bindsym $mod+u    workspace  $ws4
 
 # Move focused container to workspace
-bindsym $mod+Shift+1    move container to workspace  $ws1
-bindsym $mod+Shift+2    move container to workspace  $ws2
-bindsym $mod+Shift+3    move container to workspace  $ws3
-bindsym $mod+Shift+0    move container to workspace  $ws4
+bindsym $mod+Shift+a    move container to workspace  $ws1
+bindsym $mod+Shift+o    move container to workspace  $ws2
+bindsym $mod+Shift+e    move container to workspace  $ws3
+bindsym $mod+Shift+u    move container to workspace  $ws4
 
 # Set workspaces names
-set $ws1 "1:1"
-set $ws2 "2:2"
-set $ws3 "3:3"
-set $ws4 "4:0"
+set $ws1 "1:a"
+set $ws2 "2:o"
+set $ws3 "3:e"
+set $ws4 "4:u"
 
 # Use workspaces on different displays:
 # workspace $ws1 output VGA-0
