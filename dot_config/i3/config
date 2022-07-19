@@ -17,8 +17,10 @@ bindsym $mod+Return [urgent=latest] focus
 # Focus window
 # bindsym $mod+Escape focus down
 # bindsym $mod+Shift+Escape focus up
-bindsym $mod+Tab focus right
-bindsym $mod+Shift+Tab focus left
+# bindsym $mod+Tab focus right
+# bindsym $mod+Shift+Tab focus left
+bindsym $mod+u focus right
+bindsym $mod+Shift+u focus left
 # bindsym $mod+j focus left
 # bindsym $mod+k focus right
 
@@ -79,19 +81,16 @@ workspace_layout tabbed
 bindsym $mod+a    workspace  $ws1
 bindsym $mod+o    workspace  $ws2
 bindsym $mod+e    workspace  $ws3
-bindsym $mod+u    workspace  $ws4
 
 # Move focused container to workspace
 bindsym $mod+Shift+a    move container to workspace  $ws1
 bindsym $mod+Shift+o    move container to workspace  $ws2
 bindsym $mod+Shift+e    move container to workspace  $ws3
-bindsym $mod+Shift+u    move container to workspace  $ws4
 
 # Set workspaces names
 set $ws1 "1:a"
 set $ws2 "2:o"
 set $ws3 "3:e"
-set $ws4 "4:u"
 
 # Use workspaces on different displays:
 # workspace $ws1 output VGA-0
