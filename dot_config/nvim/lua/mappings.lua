@@ -43,8 +43,8 @@ local function core()
   map("n", "M", 'D')
   map("n", "mm", 'dd^')
   -- Scroll
-  map({ "n", "x" }, "<down>", "5k")
-  map({ "n", "x" }, "<up>", "5j")
+  map({ "n", "x" }, "<C-u>", "5k")
+  map({ "n", "x" }, "<C-e>", "5j")
   -- Readline
   map("i", "<C-a>", "<esc>I")
   map("i", "<C-e>", "<end>")
