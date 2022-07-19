@@ -350,9 +350,9 @@ local function lspconfig(buffer)
   map("n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", {
     buffer = buffer,
   })
-  map("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>", { buffer = buffer })
-  map("n", '<right>', "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
-  map("n", "<left>", "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
+  map("n", '<leader>f', "<cmd>lua vim.lsp.buf.format()<CR>", { buffer = buffer })
+  map("n", '<up>', "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
+  map("n", '<down>', "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
   map('n', '<leader>l', vim.diagnostic.setloclist, { noremap = true, silent = true })
   map('n', '<leader>x', vim.diagnostic.setqflist, { noremap = true, silent = true })
   -- map("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", { buffer = buffer })
