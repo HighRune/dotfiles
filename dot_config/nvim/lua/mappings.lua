@@ -281,10 +281,10 @@ end
 
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
-  -- map("n", "<tab>", ":BufferLineCycleNext<cr>", silent)
-  -- map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", silent)
-  -- map("n", "<pageup>", ":BufferLineMovePrev<cr>", silent)
-  -- map("n", "<pagedown>", ":BufferLineMoveNext<cr>", silent)
+  map("n", "<tab>", ":BufferLineCycleNext<cr>", silent)
+  map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", silent)
+  map("n", "<pageup>", ":BufferLineMovePrev<cr>", silent)
+  map("n", "<pagedown>", ":BufferLineMoveNext<cr>", silent)
 end
 
 -------------------- AndrewRadev/splitjoin.vim
