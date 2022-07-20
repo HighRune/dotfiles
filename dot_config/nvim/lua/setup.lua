@@ -251,6 +251,8 @@ local function bufferline()
       close_icon = "",
     },
     highlights = {
+      attribute = "fg",
+      highlight = "none",
       buffer_selected = {
         gui = "bold",
       },
@@ -259,7 +261,7 @@ local function bufferline()
 end
 
 local function installer()
-require("nvim-lsp-installer").setup({
+  require("nvim-lsp-installer").setup({
     ui = {
       keymaps = {
         toggle_server_expand = "<TAB>",
@@ -271,8 +273,9 @@ require("nvim-lsp-installer").setup({
         uninstall_server = "gd",
       },
     }
-})
+  })
 end
+
 -------------------- gbprod/cutlass.nvim
 local function cutlass()
   require("cutlass").setup({
