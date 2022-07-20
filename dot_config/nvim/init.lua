@@ -123,8 +123,8 @@ return require("packer").startup({
       config = require("config.autopairs")(),
     })
     use({
-    	'akinsho/bufferline.nvim',
-    	config = function()
+      'akinsho/bufferline.nvim',
+      config = function()
         require('mappings').bufferline()
         require('setup').bufferline()
       end
