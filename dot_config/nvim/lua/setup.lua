@@ -251,14 +251,45 @@ local function bufferline()
       close_icon = "",
     },
     highlights = {
-      background = {
-          guifg = 'none',
-          guibg = 'none'
-      },
-      buffer_selected = {
-        gui = "bold",
-      },
-    },
+        fill = {
+            guifg = 'none',
+            guibg = 'none',
+        },
+        background = {
+            guifg = 'none',
+            guibg = 'none'
+        },
+        tab = {
+            guifg = 'none',
+            guibg = 'none'
+        },
+        tab_selected = {
+            guifg = 'none',
+            guibg = 'none'
+        },
+        tab_close = {
+            guifg = 'none',
+            guibg = 'none'
+        },
+        buffer_visible = {
+            guifg = 'none',
+            guibg = 'none'
+        },
+        buffer_selected = {
+            guifg = 'none',
+            guibg = 'none',
+            gui = "bold,italic"
+        },
+    }
+    -- highlights = {
+    --   background = {
+    --       guifg = 'none',
+    --       guibg = 'none'
+    --   },
+    --   buffer_selected = {
+    --     gui = "bold",
+    --   },
+    -- },
   })
 end
 
