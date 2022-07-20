@@ -123,14 +123,18 @@ return require("packer").startup({
       config = require("config.autopairs")(),
     })
     use({
-      "ghillb/cybu.nvim",
-      branch = "main",
-      requires = { "kyazdani42/nvim-web-devicons" },
-      config = function()
-        require("setup").cybu()
-        require("mappings").cybu()
-      end,
+    	"akinsho/bufferline.nvim",
+    	-- config = config.bufferline(),
     })
+    -- use({
+    --   "ghillb/cybu.nvim",
+    --   branch = "main",
+    --   requires = { "kyazdani42/nvim-web-devicons" },
+    --   config = function()
+    --     require("setup").cybu()
+    --     require("mappings").cybu()
+    --   end,
+    -- })
     use({
       "kana/vim-arpeggio",
       config = function()
@@ -276,10 +280,6 @@ return require("packer").startup({
 --   --   }
 --   -- end
 -- }
--- use({
--- 	"akinsho/bufferline.nvim",
--- 	-- config = config.bufferline(),
--- })
 -- use({
 --   "sbdchd/neoformat",
 --   config = function()
