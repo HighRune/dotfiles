@@ -123,8 +123,11 @@ return require("packer").startup({
       config = require("config.autopairs")(),
     })
     use({
-    	"akinsho/bufferline.nvim",
-    	-- config = config.bufferline(),
+    	'akinsho/bufferline.nvim',
+    	config = function()
+        require('mappings').bufferline()
+        require('setup').bufferline()
+      end
     })
     -- use({
     --   "ghillb/cybu.nvim",
