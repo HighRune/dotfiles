@@ -251,11 +251,9 @@ local function bufferline()
       close_icon = "",
     },
     highlights = {
-      fill = {
-        guibg = {
-          attribute = "fg",
-          highlight = "none"
-        }
+      background = {
+          guifg = 'none',
+          guibg = 'none'
       },
       buffer_selected = {
         gui = "bold",
