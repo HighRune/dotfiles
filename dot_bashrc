@@ -293,3 +293,5 @@ export MANPAGER='nvim +Man!'
 
 # Disable Ctrl-S
 stty -ixon
+
+set -o vi
