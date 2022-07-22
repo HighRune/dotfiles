@@ -6,7 +6,7 @@ local cmd = vim.cmd
 
 local function core()
   -- cmd([[color haslo]])
-  -- cmd([[colorscheme blaster]])
+  cmd([[colorscheme blaster]])
 
   -- o.scroll = 5
   -- opt.fillchars:append("horiz:.")
