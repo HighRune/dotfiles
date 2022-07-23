@@ -72,7 +72,7 @@ local function tokyonight()
   g.tokyonight_style = "night"
   g.tokyonight_transparent = true
   g.tokyonight_transparent_sidebar = true
-  g.tokyonight_colors = { green = "magenta2" }
+  g.tokyonight_colors = { green = "#FF9EFF" }
   g.tokyonight_dark_float = false
   g.tokyonight_dark_sidebar = false
   cmd("colorscheme tokyonight")
