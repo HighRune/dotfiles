@@ -246,7 +246,7 @@ return require("packer").startup({
     --     require("setup").base16()
     --   end
     -- })
-    use("/home/charles/Documents/dev/plugins/blaster")
+    -- use("/home/charles/Documents/dev/plugins/blaster")
     use({
       "/home/charles/Documents/dev/plugins/booster.nvim",
       -- "Runeword/booster.nvim",
