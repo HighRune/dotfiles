@@ -278,7 +278,7 @@ local function bufferline()
         buffer_selected = {
             guifg = 'none',
             guibg = 'none',
-            gui = "bold,italic"
+            gui = 'bold'
         },
     }
     -- highlights = {
