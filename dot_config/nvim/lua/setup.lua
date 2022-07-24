@@ -250,37 +250,6 @@ local function bufferline()
       tab_size = 0,
       close_icon = "",
     },
-    highlights = {
-        fill = {
-            guifg = 'none',
-            guibg = 'none',
-        },
-        background = {
-            guifg = 'none',
-            guibg = 'none'
-        },
-        tab = {
-            guifg = 'none',
-            guibg = 'none'
-        },
-        tab_selected = {
-            guifg = 'none',
-            guibg = 'none'
-        },
-        tab_close = {
-            guifg = 'none',
-            guibg = 'none'
-        },
-        buffer_visible = {
-            guifg = 'none',
-            guibg = 'none'
-        },
-        buffer_selected = {
-            guifg = 'none',
-            guibg = 'none',
-            gui = 'bold'
-        },
-    }
     -- highlights = {
     --   background = {
     --       guifg = 'none',
