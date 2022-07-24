@@ -127,6 +127,7 @@ return require("packer").startup({
       config = function()
         require('mappings').bufferline()
         require('setup').bufferline()
+        require('autocmd').bufferline()
       end
     })
     -- use({
