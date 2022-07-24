@@ -31,10 +31,6 @@ return require("packer").startup({
     use({
       "williamboman/nvim-lsp-installer",
       config = require("config.lsp")()
-      -- config = function()
-      --   require("setup").installer()
-      --   require("config.lsp")
-      -- end,
     })
     use({
       'anuvyklack/hydra.nvim',
@@ -130,15 +126,6 @@ return require("packer").startup({
         require('autocmd').bufferline()
       end
     })
-    -- use({
-    --   "ghillb/cybu.nvim",
-    --   branch = "main",
-    --   requires = { "kyazdani42/nvim-web-devicons" },
-    --   config = function()
-    --     require("setup").cybu()
-    --     require("mappings").cybu()
-    --   end,
-    -- })
     use({
       "kana/vim-arpeggio",
       config = function()
@@ -157,12 +144,6 @@ return require("packer").startup({
       requires = { "kyazdani42/nvim-web-devicons", opt = true },
       config = "require('config.lualine')()",
     })
-    -- use({
-    --   "gbprod/cutlass.nvim",
-    --   config = function()
-    --     require("setup").cutlass()
-    --   end,
-    -- })
     use({
       "ggandor/leap.nvim",
       config = function()
@@ -215,13 +196,7 @@ return require("packer").startup({
       end,
     })
     use("kana/vim-textobj-line")
-    -- use("Julian/vim-textobj-variable-segment")
-    -- use({
-    --   "jinh0/eyeliner.nvim",
-    --   config = function()
-    --     require("autocmd").eyeliner()
-    --   end,
-    -- })
+    use("Julian/vim-textobj-variable-segment")
     use({
       "kana/vim-textobj-user",
       config = function()
@@ -234,20 +209,6 @@ return require("packer").startup({
         require("nvim-surround").setup({})
       end
     })
-    -- use({
-    --   "kana/vim-submode",
-    --   config = function()
-    --     require("options").submode()
-    --     require("mappings").submode()
-    --   end,
-    -- })
-    -- use({
-    --   "RRethy/nvim-base16",
-    --   config = function()
-    --     require("setup").base16()
-    --   end
-    -- })
-    -- use("/home/charles/Documents/dev/plugins/blaster")
     use({
       "/home/charles/Documents/dev/plugins/booster.nvim",
       -- "Runeword/booster.nvim",
@@ -255,8 +216,14 @@ return require("packer").startup({
     })
     use("ryvnf/readline.vim")
     use("tpope/vim-abolish")
-    -- use("tpope/vim-surround")
+    -- use("/home/charles/Documents/dev/plugins/blaster")
     -- use("m-demare/hlargs.nvim")
+    -- use({
+    --   "jinh0/eyeliner.nvim",
+    --   config = function()
+    --     require("autocmd").eyeliner()
+    --   end,
+    -- })
   end,
   config = {
     display = {
