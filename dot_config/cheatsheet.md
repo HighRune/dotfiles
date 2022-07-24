@@ -770,6 +770,7 @@ nvim -V10nvim.log           # nvim logs
 :verbose inoremap <esc>     # debug init.vim
 :messages                   # error messages
 :highlight                  # highlight groups
+:so $VIMRUNTIME/syntax/hitest.vim # highlight groups in a new window
 :echo &ft                   # display file type
 ```
 
