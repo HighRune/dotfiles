@@ -10,6 +10,7 @@ local function core()
 autocmd ColorScheme * highlight NormalFloat guibg=none
 autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none
 autocmd ColorScheme * highlight BufferLineFill guibg=none
+autocmd ColorScheme * highlight BufferLineBufferSelected gui=bold
 autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTextError
 autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
 autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
