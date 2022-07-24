@@ -250,15 +250,6 @@ local function bufferline()
       tab_size = 0,
       close_icon = "",
     },
-    -- highlights = {
-    --   background = {
-    --       guifg = 'none',
-    --       guibg = 'none'
-    --   },
-    --   buffer_selected = {
-    --     gui = "bold",
-    --   },
-    -- },
   })
 end
 
