@@ -7,18 +7,16 @@ local function core()
   cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent! !chezmoi apply --source-path %]])
   cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent! !chezmoi add ~/.config/cheatsheet.md]])
   cmd([[
-autocmd ColorScheme * highlight NormalFloat guibg=none
-autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none
-autocmd ColorScheme * highlight BufferLineFill guibg=none
-autocmd ColorScheme * highlight BufferLineBufferSelected gui=bold
-autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTextError
-autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
-autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
-autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
-" autocmd ColorScheme * highlight CursorLine gui=bold guibg=none
-" autocmd ColorScheme * highlight VertSplit guifg=#292e42
-" autocmd ColorScheme * highlight Hlargs guifg=#FAFF00
-]] )
+  autocmd ColorScheme * highlight NormalFloat guibg=none
+  autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none
+  autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTextError
+  autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
+  autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
+  autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
+  " autocmd ColorScheme * highlight CursorLine gui=bold guibg=none
+  " autocmd ColorScheme * highlight VertSplit guifg=#292e42
+  " autocmd ColorScheme * highlight Hlargs guifg=#FAFF00
+  ]])
 
   local qf = augroup("qf", { clear = true })
   -- Exclude quickfix buffer from the buffer list
@@ -37,12 +35,19 @@ autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTex
   })
 end
 
+local function bufferline()
+  cmd([[
+  autocmd ColorScheme * highlight BufferLineFill guibg=none
+  autocmd ColorScheme * highlight BufferLineBufferSelected gui=bold
+  ]])
+end
+
 local function sneak()
   cmd([[
-" autocmd User SneakLeave highlight clear Sneak
-" autocmd User SneakLeave highlight clear SneakScope
-autocmd ColorScheme * highlight Sneak guifg=black guibg=red ctermfg=black ctermbg=red
-]] )
+  " autocmd User SneakLeave highlight clear Sneak
+  " autocmd User SneakLeave highlight clear SneakScope
+  autocmd ColorScheme * highlight Sneak guifg=black guibg=red ctermfg=black ctermbg=red
+  ]])
 end
 
 local function packer()
@@ -56,9 +61,9 @@ end
 
 local function eyeliner()
   cmd([[
-highlight EyelinerPrimary gui=bold,italic,underline
-highlight EyelinerSecondary gui=bold,italic,underline
-]] )
+  highlight EyelinerPrimary gui=bold,italic,underline
+  highlight EyelinerSecondary gui=bold,italic,underline
+  ]])
 end
 
 local function indentscope()
@@ -123,4 +128,5 @@ return {
   sneak = sneak,
   core = core,
   eyeliner = eyeliner,
+  bufferline = bufferline,
 }
