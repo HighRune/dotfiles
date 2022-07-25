@@ -243,14 +243,14 @@ end
 
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
-  require("bufferline").setup({
+  require('bufferline').setup({
     options = {
-      indicator_icon = " ",
-      separator_style = { "", "" },
+      indicator_icon = ' ',
+      separator_style = { '', '' },
       tab_size = 0,
       buffer_close_icon = '',
       modified_icon = '',
-      close_icon = "",
+      close_icon = '',
     },
   })
 end
