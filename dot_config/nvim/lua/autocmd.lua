@@ -60,13 +60,6 @@ local function packer()
   })
 end
 
-local function eyeliner()
-  cmd([[
-  highlight EyelinerPrimary gui=bold,italic,underline
-  highlight EyelinerSecondary gui=bold,italic,underline
-  ]])
-end
-
 local function indentscope()
   augroup("indentscope", { clear = true })
   autocmd("FileType", {
