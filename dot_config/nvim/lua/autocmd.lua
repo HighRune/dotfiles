@@ -121,6 +121,5 @@ return {
   targets = targets,
   sneak = sneak,
   core = core,
-  eyeliner = eyeliner,
   bufferline = bufferline,
 }
