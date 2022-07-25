@@ -118,13 +118,17 @@ return require("packer").startup({
       "windwp/nvim-autopairs",
       config = require("config.autopairs")(),
     })
+    -- use({
+    --   'akinsho/bufferline.nvim',
+    --   config = function()
+    --     require('mappings').bufferline()
+    --     require('setup').bufferline()
+    --     require('autocmd').bufferline()
+    --   end
+    -- })
     use({
-      'akinsho/bufferline.nvim',
-      config = function()
-        require('mappings').bufferline()
-        require('setup').bufferline()
-        require('autocmd').bufferline()
-      end
+      'romgrk/barbar.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons' }
     })
     use({
       "kana/vim-arpeggio",
