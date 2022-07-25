@@ -164,9 +164,6 @@ return require("packer").startup({
                   if buffer.is_modified then
                     return "#e5c463"
                   end
-                  if buffer.lsp.errors ~= 0 then
-                    return "#fc5d7c"
-                  end
                 end,
                 style = function(buffer)
                   if buffer.is_focused then
