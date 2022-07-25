@@ -127,6 +127,13 @@ return require("packer").startup({
     --   end
     -- })
     use({
+       'noib3/nvim-cokeline',
+       requires = 'kyazdani42/nvim-web-devicons',
+       config = function()
+         require('cokeline').setup()
+       end
+     })
+    use({
       "kana/vim-arpeggio",
       config = function()
         require("mappings").arpeggio()
