@@ -131,7 +131,7 @@ return require("packer").startup({
       requires = { 'kyazdani42/nvim-web-devicons' },
       config = function()
         require('bufferline').setup {
-          animation = true,
+          animation = false,
           auto_hide = false,
           tabpages = true,
           closable = false,
@@ -141,7 +141,7 @@ return require("packer").startup({
           icon_separator_active = '',
           icon_separator_inactive = '',
           icon_close_tab = '',
-          icon_close_tab_modified = '●',
+          icon_close_tab_modified = '',
           icon_pinned = '車',
           insert_at_end = false,
           insert_at_start = false,
@@ -151,6 +151,26 @@ return require("packer").startup({
           letters = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
           no_name_title = nil,
         }
+
+        vim.cmd([[
+        hi BufferCurrent guibg=none
+        hi BufferCurrentIndex guibg=none
+        hi BufferCurrentMod guibg=none
+        hi BufferCurrentSign guibg=none
+        hi BufferCurrentTarget guibg=none
+        hi BufferVisible guibg=none
+        hi BufferVisibleIndex guibg=none
+        hi BufferVisibleMod guibg=none
+        hi BufferVisibleSign guibg=none
+        hi BufferVisibleTarget guibg=none
+        hi BufferInactive guibg=none
+        hi BufferInactiveIndex guibg=none
+        hi BufferInactiveMod guibg=none
+        hi BufferInactiveSign guibg=none
+        hi BufferInactiveTarget guibg=none
+        hi BufferTabpages guibg=none
+        hi BufferTabpageFill guibg=none
+        ]])
       end,
     })
     use({
