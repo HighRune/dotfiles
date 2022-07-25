@@ -309,6 +309,13 @@ local function textobjuser()
   -- pattern = [[\S\+]],
 end
 
+local function eyeliner()
+  cmd([[
+  highlight EyelinerPrimary gui=bold,italic,underline
+  highlight EyelinerSecondary gui=bold,italic,underline
+  ]])
+end
+
 local function dial()
   local augend = require("dial.augend")
   require("dial.config").augends:register_group({
@@ -340,5 +347,6 @@ return {
   wordmotion = wordmotion,
   textobjuser = textobjuser,
   dial = dial,
-  leap = leap
+  leap = leap,
+  eyeliner = eyeliner,
 }
