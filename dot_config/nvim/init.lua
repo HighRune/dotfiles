@@ -118,72 +118,12 @@ return require("packer").startup({
       "windwp/nvim-autopairs",
       config = require("config.autopairs")(),
     })
-    -- use({
-    --   'akinsho/bufferline.nvim',
-    --   config = function()
-    --     require('mappings').bufferline()
-    --     require('setup').bufferline()
-    --     require('autocmd').bufferline()
-    --   end
-    -- })
     use({
-      'noib3/nvim-cokeline',
-      requires = 'kyazdani42/nvim-web-devicons',
+      'akinsho/bufferline.nvim',
       config = function()
-        local get_hex = require("cokeline/utils").get_hex
-        local space = { text = " " }
-        require("cokeline").setup(
-          {
-            mappings = {
-              cycle_prev_next = true,
-            },
-            default_hl = {
-              fg = function(buffer)
-                return buffer.is_focused and nil or get_hex("Comment", "fg")
-              end,
-              bg = "none",
-            },
-            components = {
-              space,
-              {
-                text = function(buffer)
-                  return buffer.devicon.icon
-                end,
-                fg = function(buffer)
-                  return buffer.devicon.color
-                end
-              },
-              {
-                text = function(buffer)
-                  return buffer.filename
-                end,
-                fg = function(buffer)
-                  if buffer.is_focused then
-                    return "#78dce8"
-                  end
-                  if buffer.is_modified then
-                    return "#e5c463"
-                  end
-                end,
-                style = function(buffer)
-                  if buffer.is_focused then
-                    return "underline"
-                  end
-                  return nil
-                end
-              },
-              {
-                text = function(buffer)
-                  if buffer.is_readonly then
-                    return " 🔒"
-                  end
-                  return ""
-                end
-              },
-              space
-            }
-          }
-        )
+        require('mappings').bufferline()
+        require('setup').bufferline()
+        require('autocmd').bufferline()
       end
     })
     use({
