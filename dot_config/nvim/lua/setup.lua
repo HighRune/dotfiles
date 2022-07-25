@@ -248,6 +248,7 @@ local function bufferline()
       indicator_icon = " ",
       separator_style = { "", "" },
       tab_size = 0,
+      buffer_close_icon = '',
       close_icon = "",
     },
   })
