@@ -38,8 +38,8 @@ end
 local function bufferline()
   cmd([[
   autocmd ColorScheme * highlight BufferLineFill guibg=none
-  autocmd ColorScheme * highlight BufferLineBackground guifg=none
-  autocmd ColorScheme * highlight BufferLineBufferSelected gui=bold
+  autocmd ColorScheme * highlight BufferLineBackground guifg=#7a7c9e
+  autocmd ColorScheme * highlight BufferLineBufferSelected guifg=white gui=none
   ]])
 end
 
