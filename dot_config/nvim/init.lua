@@ -196,7 +196,7 @@ return require("packer").startup({
       end,
     })
     use("kana/vim-textobj-line")
-    use("Julian/vim-textobj-variable-segment")
+    -- use("Julian/vim-textobj-variable-segment")
     use({
       "kana/vim-textobj-user",
       config = function()
