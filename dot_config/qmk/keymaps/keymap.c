@@ -1,34 +1,5 @@
 #include QMK_KEYBOARD_H
 
-// Quad Tap-Dance
-typedef struct {
-  bool is_press_action;
-  int state;
-} tap;
-
-enum {
-  SINGLE_TAP = 1,
-  SINGLE_HOLD = 2,
-  DOUBLE_TAP = 3,
-  DOUBLE_HOLD = 4,
-  DOUBLE_SINGLE_TAP = 5, //send two single taps
-  TRIPLE_TAP = 6,
-  TRIPLE_HOLD = 7
-};
-
-//Tap dance enums
-enum {
-  X_CTL = 0,
-  SOME_OTHER_DANCE
-};
-
-int cur_dance (qk_tap_dance_state_t *state);
-
-//for the x tap dance. Put it here so it can be used in any keymap
-void x_finished (qk_tap_dance_state_t *state, void *user_data);
-void x_reset (qk_tap_dance_state_t *state, void *user_data);
-
-// Combos
 enum combos { 
   L1C,
   L1S,
@@ -38,10 +9,10 @@ enum combos {
   L2S,
   L2G,
   L2A,
-  L1CS,
-  L1GS,
-  L2CS,
-  L2GS,
+  // L1CS,
+  // L1GS,
+  // L2CS,
+  // L2GS,
 };
 
 const uint16_t PROGMEM l1c[] = { OSL(1), KC_U, COMBO_END};
@@ -52,10 +23,10 @@ const uint16_t PROGMEM l2c[] = { OSL(2), KC_H, COMBO_END};
 const uint16_t PROGMEM l2s[] = { OSL(2), KC_T, COMBO_END};
 const uint16_t PROGMEM l2g[] = { OSL(2), KC_N, COMBO_END};
 const uint16_t PROGMEM l2a[] = { OSL(2), KC_S, COMBO_END};
-const uint16_t PROGMEM l1cs[] = { KC_E, KC_U, COMBO_END};
-const uint16_t PROGMEM l1gs[] = { KC_E, KC_O, COMBO_END};
-const uint16_t PROGMEM l2cs[] = { KC_T, KC_H, COMBO_END};
-const uint16_t PROGMEM l2gs[] = { KC_T, KC_N, COMBO_END};
+// const uint16_t PROGMEM l1cs[] = { KC_E, KC_U, COMBO_END};
+// const uint16_t PROGMEM l1gs[] = { KC_E, KC_O, COMBO_END};
+// const uint16_t PROGMEM l2cs[] = { KC_T, KC_H, COMBO_END};
+// const uint16_t PROGMEM l2gs[] = { KC_T, KC_N, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [L1C] = COMBO(l1c, OSM(MOD_LCTL)),
@@ -66,10 +37,10 @@ combo_t key_combos[COMBO_COUNT] = {
   [L2S] = COMBO(l2s, OSM(MOD_RSFT)),
   [L2G] = COMBO(l2g, OSM(MOD_RGUI)),
   [L2A] = COMBO(l2a, OSM(MOD_RALT)),
-  [L1CS] = COMBO(l1cs, LCTL(KC_LSFT)),
-  [L1GS] = COMBO(l1gs, LGUI(KC_LSFT)),
-  [L2CS] = COMBO(l2cs, RCTL(KC_RSFT)),
-  [L2GS] = COMBO(l2gs, RGUI(KC_RSFT)),
+  // [L1CS] = COMBO(l1cs, LCTL(KC_LSFT)),
+  // [L1GS] = COMBO(l1gs, LGUI(KC_LSFT)),
+  // [L2CS] = COMBO(l2cs, RCTL(KC_RSFT)),
+  // [L2GS] = COMBO(l2gs, RGUI(KC_RSFT)),
 };
 
 /* THIS FILE WAS GENERATED!
@@ -79,7 +50,7 @@ combo_t key_combos[COMBO_COUNT] = {
  */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[0] = LAYOUT_split_3x5_2(KC_QUOT, KC_COMM, KC_DOT, KC_P, KC_Y, KC_F, KC_G, KC_C, KC_R, KC_L, KC_A, KC_O, KC_E, KC_U, KC_I, KC_D, KC_H, KC_T, KC_N, KC_S, KC_SCLN, KC_Q, KC_J, KC_K, KC_X, KC_B, KC_M, KC_W, KC_V, KC_Z, TD(X_CTL), OSL(1), OSL(2), KC_SPC),
+	[0] = LAYOUT_split_3x5_2(KC_QUOT, KC_COMM, KC_DOT, KC_P, KC_Y, KC_F, KC_G, KC_C, KC_R, KC_L, KC_A, KC_O, KC_E, KC_U, KC_I, KC_D, KC_H, KC_T, KC_N, KC_S, KC_SCLN, KC_Q, KC_J, KC_K, KC_X, KC_B, KC_M, KC_W, KC_V, KC_Z, OSM(MOD_LSFT), OSL(1), OSL(2), KC_SPC),
 	[1] = LAYOUT_split_3x5_2(KC_AMPR, KC_EXLM, KC_EQL, KC_QUES, KC_GRV, KC_BSLS, KC_SLSH, KC_PERC, KC_LBRC, KC_RBRC, OSM(MOD_LALT), OSM(MOD_LGUI), OSM(MOD_LSFT), OSM(MOD_LCTL), KC_TILD, KC_AT, KC_HASH, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE, KC_UNDS, KC_MINS, KC_PLUS, KC_NO, KC_NO, KC_CIRC, KC_DLR, KC_LCBR, KC_RCBR, KC_TRNS, OSL(3), KC_TRNS, KC_TRNS),
 	[2] = LAYOUT_split_3x5_2(KC_END, KC_HOME, KC_PGDN, KC_PGUP, KC_CAPS, KC_NO, KC_WH_U, KC_WH_D, KC_WH_L, KC_WH_R, KC_ESC, KC_BSPC, KC_ENT, KC_TAB, KC_DEL, KC_NO, OSM(MOD_RCTL), OSM(MOD_RSFT), OSM(MOD_RGUI), OSM(MOD_RALT), KC_LEFT, KC_RGHT, KC_DOWN, KC_UP, KC_INS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, TO(0), KC_TRNS),
 	[3] = LAYOUT_split_3x5_2(KC_NO, KC_NO, KC_NO, KC_NO, QK_BOOT, KC_PEQL, KC_PMNS, KC_PPLS, KC_0, KC_9, OSM(MOD_LALT), OSM(MOD_LGUI), OSM(MOD_LSFT), OSM(MOD_LCTL), KC_NO, KC_PAST, KC_1, KC_2, KC_3, KC_4, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PSLS, KC_5, KC_6, KC_7, KC_8, KC_TRNS, TO(0), KC_TRNS, KC_TRNS)
@@ -88,65 +59,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // layer_state_t layer_state_set_user(layer_state_t state) {
 //   return update_tri_layer_state(state, 1, 2, 3);
 // }
-
-// Quad Tap-Dance
-int cur_dance (qk_tap_dance_state_t *state) {
-  if (state->count == 1) {
-    if (state->interrupted || !state->pressed)  return SINGLE_TAP;
-    //key has not been interrupted, but they key is still held. Means you want to send a 'HOLD'.
-    else return SINGLE_HOLD;
-  }
-  else if (state->count == 2) {
-    /*
-     * DOUBLE_SINGLE_TAP is to distinguish between typing "pepper", and actually wanting a double tap
-     * action when hitting 'pp'. Suggested use case for this return value is when you want to send two
-     * keystrokes of the key, and not the 'double tap' action/macro.
-    */
-    if (state->interrupted) return DOUBLE_SINGLE_TAP;
-    else if (state->pressed) return DOUBLE_HOLD;
-    else return DOUBLE_TAP;
-  }
-  //Assumes no one is trying to type the same letter three times (at least not quickly).
-  //If your tap dance key is 'KC_W', and you want to type "www." quickly - then you will need to add
-  //an exception here to return a 'TRIPLE_SINGLE_TAP', and define that enum just like 'DOUBLE_SINGLE_TAP'
-  if (state->count == 3) {
-    if (state->interrupted || !state->pressed)  return TRIPLE_TAP;
-    else return TRIPLE_HOLD;
-  }
-  else return 8; //magic number. At some point this method will expand to work for more presses
-}
-
-//instanalize an instance of 'tap' for the 'x' tap dance.
-static tap xtap_state = {
-  .is_press_action = true,
-  .state = 0
-};
-
-void x_finished (qk_tap_dance_state_t *state, void *user_data) {
-  xtap_state.state = cur_dance(state);
-  switch (xtap_state.state) {
-    case SINGLE_TAP: register_code(OSM(MOD_RCTL)); break;
-    case SINGLE_HOLD: register_code(KC_RCTL); break;
-    case DOUBLE_TAP: register_code(OSM(MOD_RGUI)); break;
-    case DOUBLE_HOLD: register_code(KC_RGUI); break;
-    case DOUBLE_SINGLE_TAP: register_code(KC_X); unregister_code(KC_X); register_code(KC_X);
-    //Last case is for fast typing. Assuming your key is `f`:
-    //For example, when typing the word `buffer`, and you want to make sure that you send `ff` and not `Esc`.
-    //In order to type `ff` when typing fast, the next character will have to be hit within the `TAPPING_TERM`, which by default is 200ms.
-  }
-}
-
-void x_reset (qk_tap_dance_state_t *state, void *user_data) {
-  switch (xtap_state.state) {
-    case SINGLE_TAP: unregister_code(OSM(MOD_RCTL)); break;
-    case SINGLE_HOLD: unregister_code(KC_RCTL); break;
-    case DOUBLE_TAP: unregister_code(OSM(MOD_RGUI)); break;
-    case DOUBLE_HOLD: unregister_code(KC_RGUI);
-    case DOUBLE_SINGLE_TAP: unregister_code(KC_X);
-  }
-  xtap_state.state = 0;
-}
-
-qk_tap_dance_action_t tap_dance_actions[] = {
-  [X_CTL]     = ACTION_TAP_DANCE_FN_ADVANCED(NULL,x_finished, x_reset)
-};
