@@ -280,6 +280,7 @@ alias chrome='google-chrome-stable'
 alias shn='shutdown now'
 alias cpk='colorpicker'
 
+alias hd='xrandr --output eDP1 --off --output DP1 --off --output DP2 --off --output DP3 --off --output HDMI1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI2 --off --output HDMI3 --off --output VIRTUAL1 --off && feh --bg-fill ~/.config/Skin\ The\ Remixes.png'
 # ------------------------------- GCLOUD
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/charles/google-cloud-sdk/path.bash.inc' ]; then . '/home/charles/google-cloud-sdk/path.bash.inc'; fi
