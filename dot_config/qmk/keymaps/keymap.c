@@ -1,5 +1,34 @@
 #include QMK_KEYBOARD_H
 
+// Quad Tap-Dance
+typedef enum {
+    TD_NONE,
+    TD_UNKNOWN,
+    TD_SINGLE_TAP,
+    TD_SINGLE_HOLD,
+    TD_DOUBLE_TAP,
+    TD_DOUBLE_HOLD,
+    TD_DOUBLE_SINGLE_TAP,
+    TD_TRIPLE_TAP,
+    TD_TRIPLE_HOLD
+} td_state_t;
+
+typedef struct {
+    bool is_press_action;
+    td_state_t state;
+} td_tap_t;
+
+enum {
+    X_CTL,
+    SOME_OTHER_DANCE
+};
+
+td_state_t cur_dance(qk_tap_dance_state_t *state);
+
+void x_finished(qk_tap_dance_state_t *state, void *user_data);
+void x_reset(qk_tap_dance_state_t *state, void *user_data);
+
+// Combos
 enum combos { 
   L1C,
   L1S,
@@ -50,7 +79,7 @@ combo_t key_combos[COMBO_COUNT] = {
  */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[0] = LAYOUT_split_3x5_2(KC_QUOT, KC_COMM, KC_DOT, KC_P, KC_Y, KC_F, KC_G, KC_C, KC_R, KC_L, KC_A, KC_O, KC_E, KC_U, KC_I, KC_D, KC_H, KC_T, KC_N, KC_S, KC_SCLN, KC_Q, KC_J, KC_K, KC_X, KC_B, KC_M, KC_W, KC_V, KC_Z, OSM(MOD_LSFT), OSL(1), OSL(2), KC_SPC),
+	[0] = LAYOUT_split_3x5_2(KC_QUOT, KC_COMM, KC_DOT, KC_P, KC_Y, KC_F, KC_G, KC_C, KC_R, KC_L, KC_A, KC_O, KC_E, KC_U, KC_I, KC_D, KC_H, KC_T, KC_N, KC_S, KC_SCLN, KC_Q, KC_J, KC_K, KC_X, KC_B, KC_M, KC_W, KC_V, KC_Z, TD(X_CTL), OSL(1), OSL(2), KC_SPC),
 	[1] = LAYOUT_split_3x5_2(KC_AMPR, KC_EXLM, KC_EQL, KC_QUES, KC_GRV, KC_BSLS, KC_SLSH, KC_PERC, KC_LBRC, KC_RBRC, OSM(MOD_LALT), OSM(MOD_LGUI), OSM(MOD_LSFT), OSM(MOD_LCTL), KC_TILD, KC_AT, KC_HASH, KC_ASTR, KC_LPRN, KC_RPRN, KC_PIPE, KC_UNDS, KC_MINS, KC_PLUS, KC_NO, KC_NO, KC_CIRC, KC_DLR, KC_LCBR, KC_RCBR, KC_TRNS, OSL(3), KC_TRNS, KC_TRNS),
 	[2] = LAYOUT_split_3x5_2(KC_END, KC_HOME, KC_PGDN, KC_PGUP, KC_CAPS, KC_NO, KC_WH_U, KC_WH_D, KC_WH_L, KC_WH_R, KC_ESC, KC_BSPC, KC_ENT, KC_TAB, KC_DEL, KC_NO, OSM(MOD_RCTL), OSM(MOD_RSFT), OSM(MOD_RGUI), OSM(MOD_RALT), KC_LEFT, KC_RGHT, KC_DOWN, KC_UP, KC_INS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS, KC_TRNS, TO(0), KC_TRNS),
 	[3] = LAYOUT_split_3x5_2(KC_NO, KC_NO, KC_NO, KC_NO, QK_BOOT, KC_PEQL, KC_PMNS, KC_PPLS, KC_0, KC_9, OSM(MOD_LALT), OSM(MOD_LGUI), OSM(MOD_LSFT), OSM(MOD_LCTL), KC_NO, KC_PAST, KC_1, KC_2, KC_3, KC_4, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_PSLS, KC_5, KC_6, KC_7, KC_8, KC_TRNS, TO(0), KC_TRNS, KC_TRNS)
@@ -59,3 +88,51 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // layer_state_t layer_state_set_user(layer_state_t state) {
 //   return update_tri_layer_state(state, 1, 2, 3);
 // }
+
+// Quad Tap-Dance
+td_state_t cur_dance(qk_tap_dance_state_t *state) {
+    if (state->count == 1) {
+        if (state->interrupted || !state->pressed) return TD_SINGLE_TAP;
+        else return TD_SINGLE_HOLD;
+    } else if (state->count == 2) {
+        if (state->interrupted) return TD_DOUBLE_SINGLE_TAP;
+        else if (state->pressed) return TD_DOUBLE_HOLD;
+        else return TD_DOUBLE_TAP;
+    }
+
+    if (state->count == 3) {
+        if (state->interrupted || !state->pressed) return TD_TRIPLE_TAP;
+        else return TD_TRIPLE_HOLD;
+    } else return TD_UNKNOWN;
+}
+
+static td_tap_t xtap_state = {
+    .is_press_action = true,
+    .state = TD_NONE
+};
+
+void x_finished(qk_tap_dance_state_t *state, void *user_data) {
+    xtap_state.state = cur_dance(state);
+    switch (xtap_state.state) {
+        case TD_SINGLE_TAP: register_code(KC_X); break;
+        case TD_SINGLE_HOLD: register_code(KC_LCTL); break;
+        case TD_DOUBLE_TAP: register_code(KC_ESC); break;
+        case TD_DOUBLE_HOLD: register_code(KC_LALT); break;
+        case TD_DOUBLE_SINGLE_TAP: tap_code(KC_X); register_code(KC_X);
+    }
+}
+
+void x_reset(qk_tap_dance_state_t *state, void *user_data) {
+    switch (xtap_state.state) {
+        case TD_SINGLE_TAP: unregister_code(KC_X); break;
+        case TD_SINGLE_HOLD: unregister_code(KC_LCTL); break;
+        case TD_DOUBLE_TAP: unregister_code(KC_ESC); break;
+        case TD_DOUBLE_HOLD: unregister_code(KC_LALT);
+        case TD_DOUBLE_SINGLE_TAP: unregister_code(KC_X);
+    }
+    xtap_state.state = TD_NONE;
+}
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [X_CTL] = ACTION_TAP_DANCE_FN_ADVANCED(NULL, x_finished, x_reset)
+};
