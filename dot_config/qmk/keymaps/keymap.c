@@ -9,10 +9,10 @@ enum combos {
   L2S,
   L2G,
   L2A,
-  // L1CS,
-  // L1GS,
-  // L2CS,
-  // L2GS,
+  L1CS,
+  L1GS,
+  L2CS,
+  L2GS,
 };
 
 const uint16_t PROGMEM l1c[] = { OSL(1), KC_U, COMBO_END};
@@ -23,10 +23,10 @@ const uint16_t PROGMEM l2c[] = { OSL(2), KC_H, COMBO_END};
 const uint16_t PROGMEM l2s[] = { OSL(2), KC_T, COMBO_END};
 const uint16_t PROGMEM l2g[] = { OSL(2), KC_N, COMBO_END};
 const uint16_t PROGMEM l2a[] = { OSL(2), KC_S, COMBO_END};
-// const uint16_t PROGMEM l1cs[] = { KC_E, KC_U, COMBO_END};
-// const uint16_t PROGMEM l1gs[] = { KC_E, KC_O, COMBO_END};
-// const uint16_t PROGMEM l2cs[] = { KC_T, KC_H, COMBO_END};
-// const uint16_t PROGMEM l2gs[] = { KC_T, KC_N, COMBO_END};
+const uint16_t PROGMEM l1cs[] = { OSL(1), KC_E, KC_U, COMBO_END};
+const uint16_t PROGMEM l1gs[] = { OSL(1), KC_E, KC_O, COMBO_END};
+const uint16_t PROGMEM l2cs[] = { OSL(2), KC_T, KC_H, COMBO_END};
+const uint16_t PROGMEM l2gs[] = { OSL(2), KC_T, KC_N, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [L1C] = COMBO(l1c, OSM(MOD_LCTL)),
@@ -37,10 +37,10 @@ combo_t key_combos[COMBO_COUNT] = {
   [L2S] = COMBO(l2s, OSM(MOD_RSFT)),
   [L2G] = COMBO(l2g, OSM(MOD_RGUI)),
   [L2A] = COMBO(l2a, OSM(MOD_RALT)),
-  // [L1CS] = COMBO(l1cs, LCTL(KC_LSFT)),
-  // [L1GS] = COMBO(l1gs, LGUI(KC_LSFT)),
-  // [L2CS] = COMBO(l2cs, RCTL(KC_RSFT)),
-  // [L2GS] = COMBO(l2gs, RGUI(KC_RSFT)),
+  [L1CS] = COMBO(l1cs, LCTL(KC_LSFT)),
+  [L1GS] = COMBO(l1gs, LGUI(KC_LSFT)),
+  [L2CS] = COMBO(l2cs, RCTL(KC_RSFT)),
+  [L2GS] = COMBO(l2gs, RGUI(KC_RSFT)),
 };
 
 /* THIS FILE WAS GENERATED!
