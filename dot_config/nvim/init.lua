@@ -75,6 +75,7 @@ return require("packer").startup({
       config = function()
         require("autocmd").indentscope()
         require("setup").indentscope()
+        require("setup").ai()
       end,
     })
     use({
