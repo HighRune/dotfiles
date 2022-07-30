@@ -186,7 +186,7 @@ source /usr/share/fzf/completion.bash
 # custom bindings
 # bind '"\C-n":"nvim \C-m"'
 bind -x '"\C-n":"nvim"'
-bind '"\C-u":"\C-u\C-k"'
+bind '"\C-u":"\C-u \C-k"'
 
 # ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
