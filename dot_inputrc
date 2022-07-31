@@ -1,3 +1,2 @@
-set bind-tty-special-chars off
+# set bind-tty-special-chars off
 "\C-u": kill-whole-line
-"\C-e": 'echo C-e'
