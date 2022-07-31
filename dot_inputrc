@@ -1,2 +1,2 @@
 "\C-u": kill-whole-line
-"\C-e": 'echo hello'
+"\C-e": 'echo C-e'
