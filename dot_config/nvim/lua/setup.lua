@@ -216,16 +216,16 @@ local function treesitter()
     -- },
     -- nvim-treesitter/nvim-treesitter-textobjects
     textobjects = {
-      select = {
-        enable = true,
-        lookahead = true,
-        keymaps = {
-          ["af"] = "@function.outer",
-          ["if"] = "@function.inner",
-          ["aF"] = "@call.outer",
-          ["iF"] = "@call.inner",
-        },
-      },
+      -- select = {
+      --   enable = true,
+      --   lookahead = true,
+      --   keymaps = {
+      --     ["af"] = "@function.outer",
+      --     ["if"] = "@function.inner",
+      --     ["aF"] = "@call.outer",
+      --     ["iF"] = "@call.inner",
+      --   },
+      -- },
       -- move = {
       -- 	enable = true,
       -- 	set_jumps = true,
