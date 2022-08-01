@@ -75,7 +75,7 @@ return require("packer").startup({
       config = function()
         require("autocmd").indentscope()
         require("setup").indentscope()
-        -- require("setup").ai()
+        require("setup").ai()
       end,
     })
     use({
@@ -107,14 +107,14 @@ return require("packer").startup({
         require("mappings").splitjoin()
       end,
     })
-    use({
-      "wellle/targets.vim",
-      config = function()
-        require("mappings").targets()
-        require("options").targets()
-        require("autocmd").targets()
-      end,
-    })
+    -- use({
+    --   "wellle/targets.vim",
+    --   config = function()
+    --     require("mappings").targets()
+    --     require("options").targets()
+    --     require("autocmd").targets()
+    --   end,
+    -- })
     use({
       "windwp/nvim-autopairs",
       config = require("config.autopairs")(),
