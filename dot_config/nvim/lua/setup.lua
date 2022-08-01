@@ -155,29 +155,27 @@ end
 local function ai()
   local gen_spec = require('mini.ai').gen_spec
   require('mini.ai').setup({
-    {
-      custom_textobjects = {
-        b = gen_spec.argument({ brackets = { '%b()' } }),
-        a = gen_spec.argument({ brackets = { '%b[]' } }),
-        o = gen_spec.argument({ brackets = { '%b{}' } }),
-        B = gen_spec.pair('(', ')', { type = 'balanced' }),
-        A = gen_spec.pair('[', ']', { type = 'balanced' }),
-        O = gen_spec.pair('{', '}', { type = 'balanced' }),
-        Q = gen_spec.pair('`', '`', { type = 'balanced' }),
-      },
-      mappings = {
-        around = 'a',
-        inside = 'i',
-        around_next = 'an',
-        inside_next = 'in',
-        around_last = 'al',
-        inside_last = 'il',
-        goto_left = 'g[',
-        goto_right = 'g]',
-      },
-      n_lines = 50,
-      search_method = 'cover_or_nearest',
-    }
+    custom_textobjects = {
+      b = gen_spec.argument({ brackets = { '%b()' } }),
+      a = gen_spec.argument({ brackets = { '%b[]' } }),
+      o = gen_spec.argument({ brackets = { '%b{}' } }),
+      B = gen_spec.pair('(', ')', { type = 'balanced' }),
+      A = gen_spec.pair('[', ']', { type = 'balanced' }),
+      O = gen_spec.pair('{', '}', { type = 'balanced' }),
+      Q = gen_spec.pair('`', '`', { type = 'balanced' }),
+    },
+    mappings = {
+      around = 'a',
+      inside = 'i',
+      around_next = 'an',
+      inside_next = 'in',
+      around_last = 'al',
+      inside_last = 'il',
+      goto_left = 'g[',
+      goto_right = 'g]',
+    },
+    n_lines = 50,
+    search_method = 'cover_or_nearest',
   })
 end
 
