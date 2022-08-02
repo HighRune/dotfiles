@@ -263,7 +263,7 @@ bar {
 bindsym $mod+j exec alacritty
 bindsym $mod+k exec /usr/bin/google-chrome-stable
 bindsym $mod+semicolon exec /usr/bin/thunar
-bindsym $mod+up exec 'i3-msg move workspace to output next'
+bindsym $mod+up exec i3-msg move workspace to output next
 
 # rofi bindings fancy application menu (two bindings F9/$mod+d)
 
