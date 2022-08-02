@@ -277,6 +277,7 @@ alias shn='shutdown now'
 alias cpk='colorpicker'
 
 alias single='$HOME/.screenlayout/single.sh && feh --bg-fill ~/.config/Skin\ The\ Remixes.png'
+alias dual='$HOME/.screenlayout/dual.sh'
 # ------------------------------- GCLOUD
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/charles/google-cloud-sdk/path.bash.inc' ]; then . '/home/charles/google-cloud-sdk/path.bash.inc'; fi
