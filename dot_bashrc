@@ -274,7 +274,7 @@ alias npmg='npm ls -g --depth=0'
 
 alias chrome='google-chrome-stable'
 alias shn='shutdown now'
-alias cpk='colorpicker'
+alias pick='colorpicker'
 
 alias single='$HOME/.screenlayout/single.sh && feh --bg-fill ~/.config/Skin\ The\ Remixes.png'
 alias dual='$HOME/.screenlayout/dual.sh'
