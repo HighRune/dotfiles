@@ -131,8 +131,8 @@ bindsym $mod+Shift+c reload
 # bindsym $mod+Shift+r restart
 
 
-bindsym $mod+f exec xrandr --output eDP1 --off --output DP1 --off --output DP2 --off --output DP3 --off --output HDMI1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI2 --off --output HDMI3 --off --output VIRTUAL1 --off ; exec feh --bg-fill $wallpaper
-bindsym $mod+Shift+f exec xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP1 --off --output DP2 --off --output DP3 --off --output HDMI1 --off --output HDMI2 --off --output HDMI3 --off --output VIRTUAL1 --off ; exec feh --bg-fill $wallpaper
+# bindsym $mod+f exec xrandr --output eDP1 --off --output DP1 --off --output DP2 --off --output DP3 --off --output HDMI1 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI2 --off --output HDMI3 --off --output VIRTUAL1 --off ; exec feh --bg-fill $wallpaper
+# bindsym $mod+Shift+f exec xrandr --output eDP1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP1 --off --output DP2 --off --output DP3 --off --output HDMI1 --off --output HDMI2 --off --output HDMI3 --off --output VIRTUAL1 --off ; exec feh --bg-fill $wallpaper
 
 
 # _______________________________ MULTIMEDIA
@@ -277,8 +277,8 @@ bar {
 
 bindsym $mod+e exec alacritty
 bindsym $mod+u exec /usr/bin/google-chrome-stable
-bindsym $mod+semicolon exec /usr/bin/thunar
-bindsym $mod+Shift+i exec i3-msg move workspace to output next
+bindsym $mod+a exec /usr/bin/thunar
+bindsym $mod+0 exec i3-msg move workspace to output next
 
 # rofi bindings fancy application menu (two bindings F9/$mod+d)
 
