@@ -275,8 +275,8 @@ bar {
 
 # _______________________________ APPLICATIONS
 
-bindsym $mod+j exec alacritty
-bindsym $mod+k exec /usr/bin/google-chrome-stable
+bindsym $mod+e exec alacritty
+bindsym $mod+u exec /usr/bin/google-chrome-stable
 bindsym $mod+semicolon exec /usr/bin/thunar
 bindsym $mod+Shift+i exec i3-msg move workspace to output next
 
