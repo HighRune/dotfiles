@@ -91,44 +91,44 @@ end
 --   -- Format on write
 --   augroup("neoformat", { clear = true })
 --   autocmd("BufWritePre", {
---   	group = "neoformat",
---   	pattern = "*.lua",
---   	command = "undojoin | Neoformat",
---   	-- command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
+--     group = "neoformat",
+--     pattern = "*.lua",
+--     command = "undojoin | Neoformat",
+--     -- command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
 --   })
 --   cmd([[
---    augroup fmt
---    autocmd!
---    autocmd BufWritePre *.lua undojoin | Neoformat
---    augroup END
---    ]])
+--     augroup fmt
+--     autocmd!
+--     autocmd BufWritePre *.lua undojoin | Neoformat
+--     augroup END
+--   ]])
 -- end
 
 -- local function targets()
 --   cmd([[
---   autocmd User targets#mappings#user call targets#mappings#extend({
--- 	\ 'b': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
--- 	\ 'a': {'argument': [{'o': '\[', 'c': '\]', 's': ','}]},
--- 	\ 'o': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
--- 	\ 'B': {'pair': [{'o':'(', 'c':')'}]},
--- 	\ 'A': {'pair': [{'o':'[', 'c':']'}]},
--- 	\ 'O': {'pair': [{'o':'{', 'c':'}'}]},
--- 	\ 'Q': {'quote': [{'d': '`'}]},
--- 	\ 's': { 'separator': [{'d':','}, {'d':'.'}, {'d':';'}, {'d':':'}, {'d':'+'}, {'d':'-'},
---   \ {'d':'='}, {'d':'~'}, {'d':'_'}, {'d':'*'}, {'d':'#'}, {'d':'/'},
---   \ {'d':'\'}, {'d':'|'}, {'d':'&'}, {'d':'$'}] },
--- 	\ })
+--     autocmd User targets#mappings#user call targets#mappings#extend({
+--     \ 'b': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
+--     \ 'a': {'argument': [{'o': '\[', 'c': '\]', 's': ','}]},
+--     \ 'o': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
+--     \ 'B': {'pair': [{'o':'(', 'c':')'}]},
+--     \ 'A': {'pair': [{'o':'[', 'c':']'}]},
+--     \ 'O': {'pair': [{'o':'{', 'c':'}'}]},
+--     \ 'Q': {'quote': [{'d': '`'}]},
+--     \ 's': { 'separator': [{'d':','}, {'d':'.'}, {'d':';'}, {'d':':'}, {'d':'+'}, {'d':'-'},
+--     \ {'d':'='}, {'d':'~'}, {'d':'_'}, {'d':'*'}, {'d':'#'}, {'d':'/'},
+--     \ {'d':'\'}, {'d':'|'}, {'d':'&'}, {'d':'$'}] },
+--     \ })
 --   ]])
 -- end
 
--- cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
--- cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
+-- local function telescope()
+--   cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
+--   cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
+-- end
 
 return {
   packer = packer,
   indentscope = indentscope,
-  -- neoformat = neoformat,
-  -- targets = targets,
   sneak = sneak,
   core = core,
   bufferline = bufferline,
