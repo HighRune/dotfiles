@@ -4,8 +4,19 @@ local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 
 local function core()
-  cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent! !chezmoi apply --source-path %]])
-  cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent! !chezmoi add ~/.config/cheatsheet.md]])
+  augroup("chezmoi", { clear = true })
+
+  autocmd("BufWritePost", {
+    group = "chezmoi",
+    pattern = "~/.local/share/chezmoi/*",
+    command = ":silent! !chezmoi apply --source-path %",
+  })
+  autocmd("BufLeave", {
+    group = "chezmoi",
+    pattern = "~/.config/cheatsheet.md",
+    command = ":silent! !chezmoi add ~/.config/cheatsheet.md",
+  })
+
   cmd([[
   autocmd ColorScheme * highlight NormalFloat guibg=none
   autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none
