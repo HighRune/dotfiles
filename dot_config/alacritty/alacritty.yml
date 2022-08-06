@@ -81,19 +81,9 @@ key_bindings:
   - { key: Key7, mods: Control, chars: "\x1b[55;5u" }
   - { key: Key8, mods: Control, chars: "\x1b[56;5u" }
   - { key: Key9, mods: Control, chars: "\x1b[57;5u" }
+  - { key: PageUp, mods: Control|Shift, chars: "\x1b[5;6u" }
+  - { key: PageDown, mods: Control|Shift, chars: "\x1b[6;6u" }
   # - { key: Escape, mods: Control, chars: "\x02\x5b" }
-
-  # _____________________________ tmux
-
-  # - { key: Tab, mods: Control, command: { program: "tmux", args: ["next-window"] }}
-  # - { key: Tab, mods: Control|Shift, command: { program: "tmux", args: ["previous-window"] }}
-
-  # Select window by number
-  # - { key: A,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "1"] } }
-  # - { key: O,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "2"] } }
-  # - { key: E,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "3"] } }
-  # - { key: U,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "4"] } }
-  # - { key: I,      mods: Control|Shift, command: { program: "tmux", args: ["select-window", "-t", "5"] } }
 
   # Move window
   - { key: PageUp, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t", "-1", ";", "select-window", "-t", "-1"] }}
