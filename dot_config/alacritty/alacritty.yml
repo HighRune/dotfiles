@@ -81,8 +81,8 @@ key_bindings:
   - { key: Key7, mods: Control, chars: "\x1b[55;5u" }
   - { key: Key8, mods: Control, chars: "\x1b[56;5u" }
   - { key: Key9, mods: Control, chars: "\x1b[57;5u" }
-  - { key: PageUp, mods: Control|Shift, chars: "\x1b[5;6u" }
-  - { key: PageDown, mods: Control|Shift, chars: "\x1b[6;6u" }
+  - { key: PageUp, mods: Control|Shift, chars: "\x1b[5;6~" }
+  - { key: PageDown, mods: Control|Shift, chars: "\x1b[6;6~" }
   # - { key: Escape, mods: Control, chars: "\x02\x5b" }
 
   # _____________________________ Copy Paste
