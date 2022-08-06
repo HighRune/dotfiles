@@ -5,6 +5,7 @@ local augroup = vim.api.nvim_create_augroup
 
 local function core()
   augroup("chezmoi", { clear = true })
+  augroup("tmux", { clear = true })
 
   autocmd("BufWritePost", {
     group = "chezmoi",
@@ -15,6 +16,12 @@ local function core()
     group = "chezmoi",
     pattern = "~/.config/cheatsheet.md",
     command = ":silent! !chezmoi add ~/.config/cheatsheet.md",
+  })
+
+  autocmd("BufWritePost", {
+    group = "tmux",
+    pattern = "~/.config/tmux/tmux.conf",
+    command = ":silent! !tmux source-file ~/.config/tmux/.tmux.conf",
   })
 
   cmd([[
@@ -80,47 +87,39 @@ local function indentscope()
   })
 end
 
-local function neoformat()
-  -- Format on write
-  -- augroup("neoformat", { clear = true })
-  -- autocmd("BufWritePre", {
-  -- 	group = "neoformat",
-  -- 	pattern = "*.lua",
-  -- 	command = "undojoin | Neoformat",
-  -- 	-- command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
-  -- })
-  -- cmd([[
-  --  augroup fmt
-  --  autocmd!
-  --  autocmd BufWritePre *.lua undojoin | Neoformat
-  --  augroup END
-  --  ]])
-end
+-- local function neoformat()
+--   -- Format on write
+--   augroup("neoformat", { clear = true })
+--   autocmd("BufWritePre", {
+--   	group = "neoformat",
+--   	pattern = "*.lua",
+--   	command = "undojoin | Neoformat",
+--   	-- command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
+--   })
+--   cmd([[
+--    augroup fmt
+--    autocmd!
+--    autocmd BufWritePre *.lua undojoin | Neoformat
+--    augroup END
+--    ]])
+-- end
 
-local function targets()
-  cmd([[
-  autocmd User targets#mappings#user call targets#mappings#extend({
-	\ 'b': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
-	\ 'a': {'argument': [{'o': '\[', 'c': '\]', 's': ','}]},
-	\ 'o': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
-	\ 'B': {'pair': [{'o':'(', 'c':')'}]},
-	\ 'A': {'pair': [{'o':'[', 'c':']'}]},
-	\ 'O': {'pair': [{'o':'{', 'c':'}'}]},
-	\ 'Q': {'quote': [{'d': '`'}]},
-	\ 's': { 'separator': [{'d':','}, {'d':'.'}, {'d':';'}, {'d':':'}, {'d':'+'}, {'d':'-'},
-  \ {'d':'='}, {'d':'~'}, {'d':'_'}, {'d':'*'}, {'d':'#'}, {'d':'/'},
-  \ {'d':'\'}, {'d':'|'}, {'d':'&'}, {'d':'$'}] },
-	\ })
-  ]])
-  -- cmd([[
-  -- autocmd User targets#mappings#user call targets#mappings#extend({
-  -- \ 'a': {'argument': [{'o': '[[(]', 'c': '[])]', 's': ','}]},
-  -- \ 'A': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
-  -- \ 'b': {'pair': [{'o':'(', 'c':')'}, {'o':'[', 'c':']'}, {'o':'<', 'c':'>'}]},
-  -- \ 'B': {'pair': [{'o':'{', 'c': '}'}]},
-  -- \ })
-  -- ]])
-end
+-- local function targets()
+--   cmd([[
+--   autocmd User targets#mappings#user call targets#mappings#extend({
+-- 	\ 'b': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
+-- 	\ 'a': {'argument': [{'o': '\[', 'c': '\]', 's': ','}]},
+-- 	\ 'o': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
+-- 	\ 'B': {'pair': [{'o':'(', 'c':')'}]},
+-- 	\ 'A': {'pair': [{'o':'[', 'c':']'}]},
+-- 	\ 'O': {'pair': [{'o':'{', 'c':'}'}]},
+-- 	\ 'Q': {'quote': [{'d': '`'}]},
+-- 	\ 's': { 'separator': [{'d':','}, {'d':'.'}, {'d':';'}, {'d':':'}, {'d':'+'}, {'d':'-'},
+--   \ {'d':'='}, {'d':'~'}, {'d':'_'}, {'d':'*'}, {'d':'#'}, {'d':'/'},
+--   \ {'d':'\'}, {'d':'|'}, {'d':'&'}, {'d':'$'}] },
+-- 	\ })
+--   ]])
+-- end
 
 -- cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
 -- cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
@@ -128,8 +127,8 @@ end
 return {
   packer = packer,
   indentscope = indentscope,
-  neoformat = neoformat,
-  targets = targets,
+  -- neoformat = neoformat,
+  -- targets = targets,
   sneak = sneak,
   core = core,
   bufferline = bufferline,
