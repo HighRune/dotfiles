@@ -2,10 +2,12 @@ local cmd = vim.cmd
 local fn = vim.fn
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
+local hi = vim.api.nvim_set_hl
 
 local function core()
   augroup("chezmoi", { clear = true })
   augroup("tmux", { clear = true })
+  augroup("diagnostic", { clear = true })
 
   autocmd("BufWritePost", {
     group = "chezmoi",
@@ -24,13 +26,20 @@ local function core()
     command = ":silent! !tmux source-file ~/.config/tmux/.tmux.conf",
   })
 
+  autocmd("ColorScheme", {
+    group = "diagnostic",
+    pattern = "*",
+    callback = function()
+      hi(0, 'DiagnosticFloatingError', { link = 'DiagnosticVirtualTextError' })
+      hi(0, 'DiagnosticFloatingHint', { link = 'DiagnosticVirtualTextHint' })
+      hi(0, 'DiagnosticFloatingInfo ', { link = 'DiagnosticVirtualTextInfo' })
+      hi(0, 'DiagnosticFloatingWarn', { link = 'DiagnosticVirtualTextWarn' })
+    end
+  })
+
   cmd([[
   autocmd ColorScheme * highlight NormalFloat guibg=none
   autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none
-  autocmd ColorScheme * highlight link DiagnosticFloatingError DiagnosticVirtualTextError
-  autocmd ColorScheme * highlight link DiagnosticFloatingHint DiagnosticVirtualTextHint
-  autocmd ColorScheme * highlight link DiagnosticFloatingInfo DiagnosticVirtualTextInfo
-  autocmd ColorScheme * highlight link DiagnosticFloatingWarn DiagnosticVirtualTextWarn
   " autocmd ColorScheme * highlight CursorLine gui=bold guibg=none
   " autocmd ColorScheme * highlight VertSplit guifg=#292e42
   " autocmd ColorScheme * highlight Hlargs guifg=#FAFF00
