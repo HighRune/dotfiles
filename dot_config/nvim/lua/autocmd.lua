@@ -7,7 +7,7 @@ local hi = vim.api.nvim_set_hl
 local function core()
   augroup("chezmoi", { clear = true })
   augroup("tmux", { clear = true })
-  augroup("diagnostic", { clear = true })
+  augroup("colorscheme", { clear = true })
 
   autocmd("BufWritePost", {
     group = "chezmoi",
@@ -27,23 +27,23 @@ local function core()
   })
 
   autocmd("ColorScheme", {
-    group = "diagnostic",
+    group = "colorscheme",
     pattern = "*",
     callback = function()
       hi(0, 'DiagnosticFloatingError', { link = 'DiagnosticVirtualTextError' })
       hi(0, 'DiagnosticFloatingHint', { link = 'DiagnosticVirtualTextHint' })
-      hi(0, 'DiagnosticFloatingInfo ', { link = 'DiagnosticVirtualTextInfo' })
+      hi(0, 'DiagnosticFloatingInfo', { link = 'DiagnosticVirtualTextInfo' })
       hi(0, 'DiagnosticFloatingWarn', { link = 'DiagnosticVirtualTextWarn' })
+      hi(0, 'NormalFloat', { bg = 'none' })
+      hi(0, 'FloatBorder', { bg = 'none', fg = 'none' })
     end
   })
 
-  cmd([[
-  autocmd ColorScheme * highlight NormalFloat guibg=none
-  autocmd ColorScheme * highlight FloatBorder guifg=none guibg=none
-  " autocmd ColorScheme * highlight CursorLine gui=bold guibg=none
-  " autocmd ColorScheme * highlight VertSplit guifg=#292e42
-  " autocmd ColorScheme * highlight Hlargs guifg=#FAFF00
-  ]])
+  -- cmd([[
+  -- autocmd ColorScheme * highlight CursorLine gui=bold guibg=none
+  -- autocmd ColorScheme * highlight VertSplit guifg=#292e42
+  -- autocmd ColorScheme * highlight Hlargs guifg=#FAFF00
+  -- ]])
 
   local qf = augroup("qf", { clear = true })
   -- Exclude quickfix buffer from the buffer list
