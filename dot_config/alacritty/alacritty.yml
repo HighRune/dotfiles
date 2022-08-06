@@ -85,30 +85,28 @@ key_bindings:
   - { key: PageDown, mods: Control|Shift, chars: "\x1b[6;6u" }
   # - { key: Escape, mods: Control, chars: "\x02\x5b" }
 
-  # Move window
-  - { key: PageUp, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t", "-1", ";", "select-window", "-t", "-1"] }}
-  - { key: PageDown, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t", "+1", ";", "select-window", "-t", "+1"] }}
+  # _____________________________ Copy Paste
 
-  # Copy / Paste
-  - { key: V,              mods: Control|Shift,           action: Paste            }
-  - { key: C,              mods: Control|Shift,           action: Copy             }
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
 
-  # Scroll
-  - { key: U,      mods: Control|Shift,       action: ScrollHalfPageUp        }
-  - { key: E,      mods: Control|Shift,     action: ScrollHalfPageDown      }
-  - { key: K,    mods: Control|Shift,   action: ScrollLineUp  }
-  - { key: J,  mods: Control|Shift,   action: ScrollLineDown }
-  # - { key: Home,      mods: Control,   action: ScrollToTop,   }
-  # - { key: End,       mods: Control,   action: ScrollToBottom }
+  # _____________________________ Scroll
 
-  # Font
+  - { key: U, mods: Control|Shift, action: ScrollHalfPageUp }
+  - { key: E, mods: Control|Shift, action: ScrollHalfPageDown }
+  - { key: K, mods: Control|Shift, action: ScrollLineUp }
+  - { key: J, mods: Control|Shift, action: ScrollLineDown }
+
+  # _____________________________ Font
+
   - { key: Equals,         mods: Control,                 action: IncreaseFontSize }
   - { key: Plus,           mods: Control,                 action: IncreaseFontSize }
   - { key: NumpadAdd,      mods: Control,                 action: IncreaseFontSize }
   - { key: Minus,          mods: Control,                 action: DecreaseFontSize }
   - { key: NumpadSubtract, mods: Control,                 action: DecreaseFontSize }
 
-  # Vi mode
+  # _____________________________ Vi mode
+
   - { key: Escape,  mods: Shift, mode: ~Search,    action: ToggleViMode            }
   - { key: Escape,  mods: Shift, mode: Vi|~Search, action: ScrollToBottom          }
   - { key: Escape,                      mode: Vi|~Search, action: ClearSelection          }
