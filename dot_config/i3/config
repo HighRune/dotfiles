@@ -276,8 +276,8 @@ bar {
 # _______________________________ APPLICATIONS
 
 bindsym $mod+e exec (i3-msg [class="Alacritty"] focus | grep true) || exec alacritty
-# bindsym $mod+u exec (i3-msg [class="Google-chrome"] focus | grep true) || exec /usr/bin/google-chrome-stable
 bindsym $mod+u exec (i3-msg [class="Google-chrome"] focus | grep true) || exec google-chrome-stable
+bindsym $mod+i exec (i3-msg [class="slack"] focus | grep true) || exec slack
 
 bindsym $mod+Shift+e exec alacritty
 bindsym $mod+Shift+u exec google-chrome-stable
