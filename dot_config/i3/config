@@ -276,7 +276,7 @@ bar {
 # _______________________________ APPLICATIONS
 
 bindsym $mod+e exec alacritty
-bindsym $mod+u exec /usr/bin/google-chrome-stable
+bindsym $mod+u [class="Google-chrome"] focus || exec /usr/bin/google-chrome-stable
 bindsym $mod+a exec /usr/bin/thunar
 bindsym $mod+0 exec i3-msg move workspace to output next
 
