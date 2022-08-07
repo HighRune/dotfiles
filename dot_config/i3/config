@@ -31,12 +31,10 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# Set floating (nontiling) for apps needing it
+# Set floating mode for some applications
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-
-# Set floating (nontiling) for special apps
 for_window [class="Xsane" instance="xsane"] floating enable
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
 for_window [class="qt5ct" instance="qt5ct"] floating enable
@@ -51,6 +49,7 @@ bindsym $mod+v split v
 
 # _______________________________ WORKSPACES
 
+# Move workspace to next monitor
 bindsym $mod+0 exec i3-msg move workspace to output next
 
 # Switch to workspace
