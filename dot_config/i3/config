@@ -8,11 +8,8 @@ set $mod Mod4
 
 # _______________________________ WINDOWS
 
-default_border none
-title_align center
-floating_modifier $mod
-focus_on_window_activation focus
 bindsym $mod+Return [urgent=latest] focus
+bindsym $mod+q kill
 
 # Focus window
 # bindsym $mod+Escape focus down
@@ -26,9 +23,10 @@ bindsym $mod+Shift+Tab focus left
 # bindsym $mod+Shift+j move left
 # bindsym $mod+Shift+k move right
 
-# toggle tiling / floating
+# toggle mode tiling / floating
 bindsym $mod+Shift+space floating toggle
-# change focus between tiling / floating windows
+
+# toggle focus tiling / floating
 bindsym $mod+space focus mode_toggle
 
 # Set floating mode for some applications
@@ -41,6 +39,11 @@ for_window [class="qt5ct" instance="qt5ct"] floating enable
 for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Pamac-manager"] floating enable
+
+default_border none
+title_align center
+floating_modifier $mod
+focus_on_window_activation focus
 
 # _______________________________ CONTAINERS
 
@@ -87,11 +90,9 @@ set $ws9 "4:9"
 
 # _______________________________ KEYBINDINGS
 
-bindsym $mod+q kill
 bindsym $mod+r reload
 # bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
 # bindsym $mod+l exec ~/.config/i3/scripts/blur-lock.sh
-
 
 bindsym $mod+e exec (i3-msg [class="Alacritty"] focus | grep true) || exec alacritty
 bindsym $mod+u exec (i3-msg [class="Google-chrome"] focus | grep true) || exec google-chrome-stable
