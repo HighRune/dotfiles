@@ -16,8 +16,8 @@ bindsym $mod+q kill
 # bindsym $mod+Shift+Escape focus up
 # bindsym $mod+Tab focus right
 # bindsym $mod+Shift+Tab focus left
-bindsym $mod+Tab exec (i3-msg focus right | grep true) || focus down
-bindsym $mod+Shift+Tab exec (i3-msg focus left | grep true) || focus up
+bindsym $mod+Tab focus right; focus down
+bindsym $mod+Shift+Tab focus left; focus up
 
 # Move focused window
 # bindsym $mod+Shift+Prior move up
