@@ -49,8 +49,9 @@ focus_on_window_activation focus
 
 # _______________________________ CONTAINERS
 
-bindsym $mod+h split h
-bindsym $mod+v split v
+# bindsym $mod+h split h
+# bindsym $mod+v split v
+bindsym $mod+s layout toggle split
 
 # _______________________________ WORKSPACES
 
