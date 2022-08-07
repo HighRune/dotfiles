@@ -39,26 +39,20 @@ local function core()
     end
   })
 
-  -- cmd([[
-  -- autocmd ColorScheme * highlight CursorLine gui=bold guibg=none
-  -- autocmd ColorScheme * highlight VertSplit guifg=#292e42
-  -- autocmd ColorScheme * highlight Hlargs guifg=#FAFF00
-  -- ]])
-
   local qf = augroup("qf", { clear = true })
+
   -- Exclude quickfix buffer from the buffer list
   autocmd("FileType", {
     pattern = "qf",
     group = qf,
     command = "set nobuflisted",
   })
+
   -- Automatically fitting a quickfix window to 10 lines max and 3 lines min height
   autocmd("FileType", {
     pattern = "qf",
     group = qf,
-    callback = function()
-      cmd(math.max(math.min(fn.line("$"), 10), 3) .. "wincmd _")
-    end,
+    callback = function() cmd(math.max(math.min(fn.line("$"), 10), 3) .. "wincmd _") end,
   })
 end
 
@@ -96,6 +90,12 @@ local function indentscope()
   })
 end
 
+-- cmd([[
+-- autocmd ColorScheme * highlight CursorLine gui=bold guibg=none
+-- autocmd ColorScheme * highlight VertSplit guifg=#292e42
+-- autocmd ColorScheme * highlight Hlargs guifg=#FAFF00
+-- ]])
+
 -- local function neoformat()
 --   -- Format on write
 --   augroup("neoformat", { clear = true })
@@ -105,6 +105,7 @@ end
 --     command = "undojoin | Neoformat",
 --     -- command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
 --   })
+
 --   cmd([[
 --     augroup fmt
 --     autocmd!
