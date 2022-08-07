@@ -278,10 +278,11 @@ bar {
 bindsym $mod+e exec (i3-msg [class="Alacritty"] focus | grep true) || exec alacritty
 bindsym $mod+u exec (i3-msg [class="Google-chrome"] focus | grep true) || exec google-chrome-stable
 bindsym $mod+i exec (i3-msg [class="slack"] focus | grep true) || exec slack
+bindsym $mod+a exec (i3-msg [class="thunar"] focus | grep true) || exec thunar
 
 bindsym $mod+Shift+e exec alacritty
 bindsym $mod+Shift+u exec google-chrome-stable
-bindsym $mod+a exec /usr/bin/thunar
+
 bindsym $mod+0 exec i3-msg move workspace to output next
 
 # rofi bindings fancy application menu (two bindings F9/$mod+d)
