@@ -86,12 +86,12 @@ return function()
       padding = { left = 1, right = 2 },
       fmt = string.lower,
     },
-    {
-      "filetype",
-      colored = true, -- Displays filetype icon in color if set to true
-      icon_only = true, -- Display only an icon for filetype
-      padding = { left = 0, right = 1 },
-    },
+    -- {
+    --   "filetype",
+    --   colored = true, -- Displays filetype icon in color if set to true
+    --   icon_only = true, -- Display only an icon for filetype
+    --   padding = { left = 0, right = 1 },
+    -- },
     {
       "filename",
       cond = conditions.buffer_not_empty,
