@@ -83,7 +83,7 @@ return function()
     -- },
     {
       "mode",
-      padding = { left = 0, right = 2 },
+      padding = { left = 1, right = 2 },
       fmt = string.lower,
     },
     {
@@ -141,7 +141,7 @@ return function()
         return branchName == "" and "" or branchName .. " "
       end,
       -- fmt = trunc(120, 60, 60, true),
-      padding = { right = 0, left = 0 },
+      padding = { right = 1, left = 0 },
     },
     -- {
     -- 	"filesize",
