@@ -138,7 +138,7 @@ return function()
       icons_enabled = false,
       icon = "",
       fmt = function(branchName)
-        return branchName == "" and "" or branchName .. " "
+        return branchName == "" and "" or branchName
       end,
       -- fmt = trunc(120, 60, 60, true),
       padding = { right = 1, left = 0 },
