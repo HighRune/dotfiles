@@ -20,9 +20,9 @@ font:
   bold_italic:
     family: Hack Nerd Font
     style: Bold Italic
-  size: 12.0
+  size: 10.0
   offset:
-    y: 3
+    y: 5
 
 colors:
   # TokyoNight Alacritty Colors
