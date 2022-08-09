@@ -210,7 +210,7 @@ bindsym XF86AudioMute exec pamixer -t && notify-send "mute: $(pamixer --get-mute
    set $purple         #e345ff
    set $darkgrey       #383c4a
    set $grey           #b0b5bd
-   set $mediumgrey     #8b8b8b
+   set $mediumgrey     #7a7c9e
    set $yellowbrown    #e1b700
 
 # Windows color
@@ -233,11 +233,11 @@ bindsym XF86AudioMute exec pamixer -t && notify-send "mute: $(pamixer --get-mute
 
            colors {
                background         $transparent
-               statusline         $grey
+               statusline         $mediumgrey
                # Workspaces colors
                #                  $border    $bg       $txt   $indicator
                focused_workspace  $transparent  $transparent $white $purple
-               inactive_workspace $transparent  $transparent $grey  $purple
+               inactive_workspace $transparent  $transparent $mediumgrey  $purple
                urgent_workspace   $lightblue    $transparent $white $purple
            }
    }
