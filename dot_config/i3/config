@@ -16,10 +16,10 @@ bindsym $mod+q kill
 # bindsym $mod+Shift+Escape focus up
 # bindsym $mod+Tab focus right
 # bindsym $mod+Shift+Tab focus left
-bindsym $mod+Tab focus right; focus down; border pixel 4; exec "sleep 0.4 && i3-msg border none"
-bindsym $mod+Shift+Tab focus left; focus up; border pixel 4; exec "sleep 0.4 && i3-msg border none"
+bindsym $mod+Tab focus right; focus down
+bindsym $mod+Shift+Tab focus left; focus up
 
-bindsym $mod+o split toggle; border pixel 4; exec "sleep 0.4 && i3-msg border none"
+bindsym $mod+o split toggle
 
 # Move focused window
 # bindsym $mod+Shift+Prior move up
@@ -44,7 +44,7 @@ for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Pamac-manager"] floating enable
 
-default_border none
+default_border pixel
 title_align center
 floating_modifier $mod
 focus_on_window_activation focus
