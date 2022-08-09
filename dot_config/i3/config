@@ -16,8 +16,10 @@ bindsym $mod+q kill
 # bindsym $mod+Shift+Escape focus up
 # bindsym $mod+Tab focus right
 # bindsym $mod+Shift+Tab focus left
-bindsym $mod+Tab focus right; focus down
-bindsym $mod+Shift+Tab focus left; focus up
+bindsym $mod+Tab focus right; focus down; border pixel 4; exec "sleep 0.4 && i3-msg border none"
+bindsym $mod+Shift+Tab focus left; focus up; border pixel 4; exec "sleep 0.4 && i3-msg border none"
+
+bindsym $mod+o split toggle; border pixel 4; exec "sleep 0.4 && i3-msg border none"
 
 # Move focused window
 # bindsym $mod+Shift+Prior move up
