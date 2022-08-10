@@ -1,4 +1,5 @@
 general {
+    output_format = "i3bar"
     color_good = "#7a7c9e"
     color_degraded = "#5294e2"
     color_bad = "#5294e2"
