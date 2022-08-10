@@ -12,20 +12,14 @@ bindsym $mod+Return [urgent=latest] focus
 bindsym $mod+q kill
 
 # Focus window
-# bindsym $mod+Escape focus down
-# bindsym $mod+Shift+Escape focus up
-# bindsym $mod+Tab focus right
-# bindsym $mod+Shift+Tab focus left
 bindsym $mod+Tab focus right; focus down
 bindsym $mod+Shift+Tab focus left; focus up
 
 bindsym $mod+o split toggle
 
 # Move focused window
-# bindsym $mod+Shift+Prior move up
-# bindsym $mod+Shift+Next  move down
-# bindsym $mod+Shift+j move left
-# bindsym $mod+Shift+k move right
+bindsym $mod+Shift+Next  move right; move down
+bindsym $mod+Shift+Prior move left; move up
 
 # toggle mode tiling / floating
 bindsym $mod+Shift+space floating toggle
