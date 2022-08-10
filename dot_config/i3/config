@@ -91,8 +91,6 @@ set $ws9 "4:9"
 # _______________________________ KEYBINDINGS
 
 bindsym $mod+r reload
-# bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
-# bindsym $mod+l exec ~/.config/i3/scripts/blur-lock.sh
 
 bindsym $mod+e exec (i3-msg [class="Alacritty"] focus | grep true) || exec alacritty
 bindsym $mod+u exec (i3-msg [class="Google-chrome"] focus | grep true) || exec google-chrome-stable
@@ -101,22 +99,19 @@ bindsym $mod+a exec (i3-msg [class="thunar"] focus | grep true) || exec thunar
 
 bindsym $mod+Shift+e exec alacritty
 bindsym $mod+Shift+u exec google-chrome-stable
-
-# Rofi application menu
+bindsym $mod+f exec "flameshot gui -p ~/Downloads"
+bindsym $mod+Shift+f exec "flameshot full -p ~/Downloads"
 bindsym $mod+d exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
-bindsym F9 exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
-# Rofi window menu
 bindsym $mod+t exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi 
-bindsym F10 exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi 
+# bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
+# bindsym $mod+l exec ~/.config/i3/scripts/blur-lock.sh
+# bindsym Print exec "scrot ~/Downloads/%Y-%m-%d-%T-screenshot.png"
 
 # _______________________________ MULTIMEDIA
 
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-# bindsym $mod+space exec playerctl play-pause
-# bindsym $mod+n exec playerctl next
-# bindsym $mod+p exec playerctl previous
 # bindsym $mod+j exec playerctl position 5+
 # bindsym $mod+l exec playerctl position 5-
 
@@ -126,7 +121,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -3
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
 
-# Mute
 bindsym XF86AudioMute exec pamixer -t && notify-send "mute: $(pamixer --get-mute)"
 # bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 
@@ -162,23 +156,14 @@ bindsym XF86AudioMute exec pamixer -t && notify-send "mute: $(pamixer --get-mute
 # Start blueberry app for managing bluetooth devices from tray:
    exec --no-startup-id blueberry-tray
 
-# bindsym Print exec "scrot ~/Downloads/%Y-%m-%d-%T-screenshot.png"
-   bindsym $mod+Shift++ exec "flameshot gui -p ~/Downloads"
-   bindsym $mod++ exec "flameshot full -p ~/Downloads"
-
-
-# Transparency 
-# exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
-# exec --no-startup-id picom CGb
+   # Transparency 
    exec --no-startup-id picom --experimental-backends
 
-# Networkmanager-applet
+   # Network manager
    exec --no-startup-id nm-applet
 
-
+   # Wallpaper
    set $wallpaper ~/.config/Skin\ The\ Remixes.png
-# Set wallpaper
-# exec --no-startup-id nitrogen --restore
    exec --no-startup-id feh --bg-fill $wallpaper 
 
 # Set powersavings for display:
@@ -218,7 +203,7 @@ bindsym XF86AudioMute exec pamixer -t && notify-send "mute: $(pamixer --get-mute
            position top 
            workspace_min_width 30
            tray_output primary
-           tray_padding 0
+           tray_padding 5px
            strip_workspace_numbers yes
            font pango:Noto Sans Regular 18px
 
