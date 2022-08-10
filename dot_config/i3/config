@@ -120,16 +120,11 @@ bindsym XF86AudioPrev exec playerctl previous
 # bindsym $mod+j exec playerctl position 5+
 # bindsym $mod+l exec playerctl position 5-
 
-bindsym XF86MonBrightnessUp exec xbacklight +5
-bindsym XF86MonBrightnessDown exec xbacklight -5
-
-# bindsym $mod+Right exec xbacklight +3
-# bindsym $mod+Left exec xbacklight -3
+bindsym XF86MonBrightnessUp exec xbacklight +3
+bindsym XF86MonBrightnessDown exec xbacklight -3
 
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
-# bindsym $mod+Up exec amixer -D pulse sset Master 5%+
-# bindsym $mod+Down exec amixer -D pulse sset Master 5%-
 
 # Mute
 bindsym XF86AudioMute exec pamixer -t && notify-send "mute: $(pamixer --get-mute)"
