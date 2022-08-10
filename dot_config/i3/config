@@ -10,22 +10,23 @@ set $mod Mod4
 
 bindsym $mod+Return [urgent=latest] focus
 bindsym $mod+q kill
-
-# Focus window
-bindsym $mod+Tab focus right; focus down
-bindsym $mod+Shift+Tab focus left; focus up
-
 bindsym $mod+o split toggle
 
-# Move focused window
-bindsym $mod+Shift+Next  move right; move down
-bindsym $mod+Shift+Prior move left; move up
-
-# toggle mode tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# toggle focus tiling / floating
+# Focus window
+bindsym $mod+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Up focus up
+bindsym $mod+Down focus down
 bindsym $mod+space focus mode_toggle
+
+# Move window
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left  move left
+bindsym $mod+Shift+Up    move up
+bindsym $mod+Shift+Down  move down
+
+# Toggle window mode
+bindsym $mod+Shift+space floating toggle
 
 # Set floating mode for some applications
 for_window [class="Yad" instance="yad"] floating enable
@@ -121,13 +122,14 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # bindsym XF86MonBrightnessUp exec xbacklight +10
 # bindsym XF86MonBrightnessDown exec xbacklight -10
-bindsym $mod+Right exec xbacklight +3
-bindsym $mod+Left exec xbacklight -3
+
+# bindsym $mod+Right exec xbacklight +3
+# bindsym $mod+Left exec xbacklight -3
 
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
-bindsym $mod+Up exec amixer -D pulse sset Master 5%+
-bindsym $mod+Down exec amixer -D pulse sset Master 5%-
+# bindsym $mod+Up exec amixer -D pulse sset Master 5%+
+# bindsym $mod+Down exec amixer -D pulse sset Master 5%-
 
 # Mute
 bindsym XF86AudioMute exec pamixer -t && notify-send "mute: $(pamixer --get-mute)"
