@@ -120,8 +120,8 @@ bindsym XF86AudioPrev exec playerctl previous
 # bindsym $mod+j exec playerctl position 5+
 # bindsym $mod+l exec playerctl position 5-
 
-# bindsym XF86MonBrightnessUp exec xbacklight +10
-# bindsym XF86MonBrightnessDown exec xbacklight -10
+bindsym XF86MonBrightnessUp exec xbacklight +5
+bindsym XF86MonBrightnessDown exec xbacklight -5
 
 # bindsym $mod+Right exec xbacklight +3
 # bindsym $mod+Left exec xbacklight -3
