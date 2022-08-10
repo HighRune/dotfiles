@@ -1,7 +1,7 @@
 # _______________________________ BASE
 
-font pango:Noto Sans Regular 14
-# font pango:Hack Nerd Font 16
+font pango:Noto Sans Regular 20px
+# font pango:Hack Nerd Font 20px
 
 # Set the mod key to the winkey
 set $mod Mod4
@@ -225,7 +225,7 @@ bindsym XF86AudioMute exec pamixer -t && notify-send "mute: $(pamixer --get-mute
            tray_output primary
            tray_padding 0
            strip_workspace_numbers yes
-           font pango:Noto Sans Regular 15
+           font pango:Noto Sans Regular 18px
 
            colors {
                background         $transparent
