@@ -3,8 +3,6 @@ general {
   color_degraded = "#5294e2"
   color_bad = "#5294e2"
   interval = 1
-  separator = false
-  separator_block_width = 40
 }
 
 order += "wireless _first_"
@@ -26,7 +24,7 @@ wireless _first_ {
 
 ethernet _first_ {
   format_up = "E %speed"
-  format_down = "E down"
+  format_down = ""
   separator = false
   separator_block_width = 40
 }
@@ -38,7 +36,7 @@ battery all {
 }
 
 disk "/" {
-  format = "%avail"
+  format = "%percentage_used"
   separator = false
   separator_block_width = 40
 }
@@ -72,4 +70,6 @@ tztime day {
 
 tztime hour {
   format = "%H : %M"
+  separator = false
+  separator_block_width = 40
 }
