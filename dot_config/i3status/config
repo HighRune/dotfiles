@@ -80,5 +80,5 @@ tztime hour {
 tztime day {
   format = "%a%d-%m"
   separator = false
-  separator_block_width = 80
+  separator_block_width = 40
 }
