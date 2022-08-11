@@ -16,7 +16,7 @@ order += "tztime day"
 order += "tztime hour"
 
 wireless _first_ {
-  format_up = "%essid 直 %quality"
+  format_up = "直%quality"
   format_down = ""
   separator = false
   separator_block_width = 40
@@ -56,7 +56,7 @@ cpu_usage {
   separator_block_width = 40
 }
 memory {
-  format = " %percentage_used"
+  format = " %percentage_used"
   threshold_degraded = "1G"
   format_degraded = "MEMORY < %available"
   separator = false
@@ -72,13 +72,13 @@ volume master {
 }
 
 tztime day {
-  format = "%a %d-%m"
+  format = "%a%d-%m"
   separator = false
   separator_block_width = 40
 }
 
 tztime hour {
-  format = "%H : %M"
+  format = "%H:%M"
   separator = false
   separator_block_width = 40
 }
