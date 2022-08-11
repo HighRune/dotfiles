@@ -3,7 +3,6 @@ general {
   color_degraded = "#5294e2"
   color_bad = "#5294e2"
   interval = 1
-  align = "left"
 }
 
 # order += "wireless _first_"
@@ -39,6 +38,7 @@ battery all {
   integer_battery_capacity = true
   separator = false
   separator_block_width = 40
+  align = "left"
 }
 
 disk "/" {
@@ -49,12 +49,14 @@ disk "/" {
   prefix_type = "binary"
   separator = false
   separator_block_width = 40
+  align = "left"
 }
 
 cpu_usage {
   format = " %usage"
   separator = false
   separator_block_width = 40
+  align = "left"
 }
 memory {
   format = " %percentage_used"
@@ -62,6 +64,7 @@ memory {
   format_degraded = "MEMORY < %available"
   separator = false
   separator_block_width = 40
+  align = "left"
 }
 
 volume master {
@@ -70,16 +73,19 @@ volume master {
   device = "pulse"
   separator = false
   separator_block_width = 40
+  align = "left"
 }
 
 tztime hour {
   format = "%H:%M"
   separator = false
   separator_block_width = 40
+  align = "left"
 }
 
 tztime day {
   format = "%a%d-%m"
   separator = false
   separator_block_width = 40
+  align = "left"
 }
