@@ -205,7 +205,8 @@ bindsym XF86AudioMute exec pamixer -t && notify-send "mute: $(pamixer --get-mute
            tray_output primary
            tray_padding 5px
            strip_workspace_numbers yes
-           font pango:Noto Sans Regular 18px
+           # font pango:Noto Sans Regular 18px
+           font pango:Hack Nerd Font 18px
 
            colors {
                background         $transparent
