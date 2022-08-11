@@ -61,8 +61,8 @@ memory {
 }
 
 volume master {
-  format = "V %volume"
-  format_muted = "V %volume muted"
+  format = "墳 %volume"
+  format_muted = "ﱝ %volume"
   device = "pulse"
   separator = false
   separator_block_width = 40
