@@ -16,8 +16,8 @@ order += "tztime day"
 order += "tztime hour"
 
 wireless _first_ {
-  format_up = "W %quality %essid"
-  format_down = "W down"
+  format_up = "%quality %essid"
+  format_down = ""
   separator = false
   separator_block_width = 40
 }
@@ -33,10 +33,6 @@ battery all {
   format = "%status %percentage"
   last_full_capacity = true
   integer_battery_capacity = true
-  format_down = "No battery"
-  status_chr = ""
-  status_bat = ""
-  status_full = ""
   separator = false
   separator_block_width = 40
 }
@@ -61,8 +57,7 @@ memory {
 }
 
 volume master {
-  format = "墳 %volume"
-  format_muted = "ﱝ %volume"
+  format = "V %volume"
   device = "pulse"
   separator = false
   separator_block_width = 40
