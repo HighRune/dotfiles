@@ -7,7 +7,7 @@ general {
 
 order += "wireless _first_"
 order += "ethernet _first_"
-order += "disk /"
+# order += "disk /"
 order += "cpu_usage"
 order += "memory"
 order += "battery all"
@@ -35,11 +35,11 @@ battery all {
     separator_block_width = 40
 }
 
-disk "/" {
-  format = "%avail"
-    separator = false
-    separator_block_width = 40
-}
+# disk "/" {
+#   format = "%avail"
+#     separator = false
+#     separator_block_width = 40
+# }
 
 cpu_usage {
   format = "CPU %usage"
