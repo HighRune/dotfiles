@@ -3,6 +3,7 @@ general {
   color_degraded = "#5294e2"
   color_bad = "#5294e2"
   interval = 1
+  align = "left"
 }
 
 # order += "wireless _first_"
