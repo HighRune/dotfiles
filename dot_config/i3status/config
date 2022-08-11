@@ -8,8 +8,8 @@ general {
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "disk /"
-order += "cpu_usage"
 order += "memory"
+order += "cpu_usage"
 order += "volume master"
 order += "battery all"
 order += "tztime day"
@@ -42,7 +42,7 @@ battery all {
 
 disk "/" {
   format = ""
-  format_below_threshold = "D %percentage_used"
+  format_below_threshold = "﫭%percentage_used"
   threshold_type = "gbytes_avail"
   low_threshold = 20
   prefix_type = "binary"
@@ -64,21 +64,21 @@ memory {
 }
 
 volume master {
-  format = "奄 %volume"
+  format = "墳%volume"
   format_muted = "ﱝ %volume"
   device = "pulse"
   separator = false
   separator_block_width = 40
 }
 
-tztime day {
-  format = "%a%d-%m"
+tztime hour {
+  format = "%H:%M"
   separator = false
   separator_block_width = 40
 }
 
-tztime hour {
-  format = "%H:%M"
+tztime day {
+  format = "%a%d-%m"
   separator = false
   separator_block_width = 40
 }
