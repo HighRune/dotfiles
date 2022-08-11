@@ -1,8 +1,10 @@
 general {
-    color_good = "#7a7c9e"
-    color_degraded = "#5294e2"
-    color_bad = "#5294e2"
-    interval = 1
+  color_good = "#7a7c9e"
+  color_degraded = "#5294e2"
+  color_bad = "#5294e2"
+  interval = 1
+  separator_block_width = 40
+  separator = false
 }
 
 order += "wireless _first_"
@@ -16,53 +18,38 @@ order += "tztime hour"
 
 wireless _first_ {
   format_up = "W %quality %essid"
-    format_down = "W down"
-    separator = false
-    separator_block_width = 40
+  format_down = "W down"
 }
 
 ethernet _first_ {
   format_up = "E %speed"
-    format_down = "E down"
-    separator = false
-    separator_block_width = 40
+  format_down = "E down"
 }
 
 battery all {
   format = "%status %percentage %remaining"
-    separator = false
-    separator_block_width = 40
+  status_full: "FULL"
 }
 
 cpu_usage {
   format = "C %usage"
-    separator = false
-    separator_block_width = 40
 }
 memory {
   format = "M %percentage_used"
-    threshold_degraded = "1G"
-    format_degraded = "MEMORY < %available"
-    separator = false
-    separator_block_width = 40
+  threshold_degraded = "1G"
+  format_degraded = "MEMORY < %available"
 }
 
 volume master {
   format = "V %volume"
-    format_muted = "V %volume muted"
-    device = "pulse"
-    separator = false
-    separator_block_width = 40
+  format_muted = "V %volume muted"
+  device = "pulse"
 }
 
 tztime day {
   format = "%a %d-%m"
-    separator = false
-    separator_block_width = 40
 }
 
 tztime hour {
   format = "%H : %M"
-    separator = false
-    separator_block_width = 40
 }
