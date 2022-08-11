@@ -36,18 +36,18 @@ battery all {
 }
 
 disk "/" {
-  format = "%percentage_used"
+  format = "D %percentage_used"
   separator = false
   separator_block_width = 40
 }
 
 cpu_usage {
-  format = "CPU %usage"
+  format = "C %usage"
   separator = false
   separator_block_width = 40
 }
 memory {
-  format = "%used / %total"
+  format = "M %percentage_used"
   threshold_degraded = "1G"
   format_degraded = "MEMORY < %available"
   separator = false
