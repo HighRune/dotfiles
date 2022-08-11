@@ -30,7 +30,7 @@ ethernet _first_ {
 }
 
 battery all {
-  format = "%status %percentage"
+  format = " %status %percentage"
   last_full_capacity = true
   integer_battery_capacity = true
   separator = false
@@ -48,12 +48,12 @@ disk "/" {
 }
 
 cpu_usage {
-  format = "C %usage"
+  format = " %usage"
   separator = false
   separator_block_width = 40
 }
 memory {
-  format = "M %percentage_used"
+  format = " %percentage_used"
   threshold_degraded = "1G"
   format_degraded = "MEMORY < %available"
   separator = false
