@@ -3,8 +3,8 @@ general {
   color_degraded = "#5294e2"
   color_bad = "#5294e2"
   interval = 1
-  # separator_block_width = 40
-  # separator = false
+  separator_block_width = 40
+  separator = false
 }
 
 order += "wireless _first_"
@@ -28,7 +28,7 @@ ethernet _first_ {
 
 battery all {
   format = "%status %percentage %remaining"
-  status_full: "FULL"
+  status_full = "FULL"
 }
 
 cpu_usage {
