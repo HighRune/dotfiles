@@ -36,7 +36,6 @@ local function core()
       hi(0, 'DiagnosticFloatingWarn', { link = 'DiagnosticVirtualTextWarn' })
       hi(0, 'NormalFloat', { bg = 'none' })
       hi(0, 'FloatBorder', { bg = 'none', fg = 'none' })
-      hi(0, 'StatusLine', { bg = 'none', fg = 'red' })
     end
   })
 
