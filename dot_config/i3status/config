@@ -57,8 +57,8 @@ cpu_usage {
 }
 
 memory {
-  format = "%percentage_used"
-  # ﮕ threshold_degraded = "1G"
+  format = "ﮕ %percentage_used"
+  threshold_degraded = "1G"
   separator = false
   separator_block_width = 40
 }
