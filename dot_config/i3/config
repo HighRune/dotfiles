@@ -28,6 +28,11 @@ bindsym $mod+Shift+Down  move down
 # Toggle window mode
 bindsym $mod+Shift+space floating toggle
 
+# Assign window to workspace
+assign [class="Alacritty"] 1
+assign [class="Google-chrome"] 2
+assign [class="slack"] 4
+
 # Set floating mode for some applications
 for_window [class="Yad" instance="yad"] floating enable
 for_window [class="Galculator" instance="galculator"] floating enable
