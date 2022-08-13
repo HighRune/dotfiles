@@ -62,7 +62,7 @@ bindsym $mod+s layout toggle split
 # Move workspace to next monitor
 bindsym $mod+0 exec i3-msg move workspace to output next
 
-# Switch to workspace
+# Move to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -95,6 +95,7 @@ bindsym $mod+a exec (i3-msg [class="thunar"] focus | grep true) || exec thunar
 
 bindsym $mod+Shift+e exec alacritty
 bindsym $mod+Shift+u exec google-chrome-stable
+bindsym $mod+Shift+a exec thunar
 bindsym $mod+f exec "flameshot gui -p ~/Downloads"
 bindsym $mod+Shift+f exec "flameshot full -p ~/Downloads"
 bindsym $mod+d exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
