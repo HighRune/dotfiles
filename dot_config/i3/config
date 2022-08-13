@@ -44,6 +44,8 @@ for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Pamac-manager"] floating enable
 
+for_window [class=.*] focus
+
 default_border none
 # title_align center
 floating_modifier $mod
