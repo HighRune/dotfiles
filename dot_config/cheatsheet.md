@@ -416,7 +416,7 @@ cat /home/<user>/id_rsa.pub >> ./authorized_keys
 ### utility
 
 ```bash
-localectl status # system locale and keymap
+localectl # system locale and keymap
 who    # List user sessions
 which
 command -v <the-command> # check if command exist
