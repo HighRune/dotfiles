@@ -419,6 +419,7 @@ cat /home/<user>/id_rsa.pub >> ./authorized_keys
 localectl # system locale and keymap
 localectl list-x11-keymap-variants us # list keymap us variants
 localectl --no-convert set-x11-keymap us ""
+localectl --no-convert set-x11-keymap us altgr-intl
 who    # List user sessions
 which
 command -v <the-command> # check if command exist
