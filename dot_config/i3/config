@@ -55,7 +55,7 @@ focus_on_window_activation focus
 
 # bindsym $mod+h split h
 # bindsym $mod+v split v
-bindsym $mod+s layout toggle split
+# bindsym $mod+s layout toggle split
 
 # _______________________________ WORKSPACES
 
@@ -88,18 +88,18 @@ bindsym $mod+Shift+9 move container to workspace 9; workspace 9
 
 bindsym $mod+r reload
 
-bindsym $mod+e exec (i3-msg [class="Alacritty"] focus | grep true) || exec alacritty
-bindsym $mod+u exec (i3-msg [class="Google-chrome"] focus | grep true) || exec google-chrome-stable
-bindsym $mod+i exec (i3-msg [class="Slack"] focus | grep true) || exec slack
-bindsym $mod+a exec (i3-msg [class="Thunar"] focus | grep true) || exec thunar
+bindsym $mod+h exec (i3-msg [class="Alacritty"] focus | grep true) || exec alacritty
+bindsym $mod+t exec (i3-msg [class="Google-chrome"] focus | grep true) || exec google-chrome-stable
+bindsym $mod+n exec (i3-msg [class="Thunar"] focus | grep true) || exec thunar
+bindsym $mod+s exec (i3-msg [class="Slack"] focus | grep true) || exec slack
 
-bindsym $mod+Shift+e exec alacritty
-bindsym $mod+Shift+u exec google-chrome-stable
-bindsym $mod+Shift+a exec thunar
+bindsym $mod+Shift+h exec alacritty
+bindsym $mod+Shift+t exec google-chrome-stable
+bindsym $mod+Shift+n exec thunar
 bindsym $mod+f exec "flameshot gui -p ~/Downloads"
 bindsym $mod+Shift+f exec "flameshot full -p ~/Downloads"
 bindsym $mod+d exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
-bindsym $mod+t exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi 
+# bindsym $mod+t exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi 
 # bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
 # bindsym $mod+l exec ~/.config/i3/scripts/blur-lock.sh
 # bindsym Print exec "scrot ~/Downloads/%Y-%m-%d-%T-screenshot.png"
