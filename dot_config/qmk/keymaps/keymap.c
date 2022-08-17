@@ -1,5 +1,62 @@
 #include QMK_KEYBOARD_H
 
+enum custom_keycodes {
+    GRVA = SAFE_RANGE,
+    GRVE,
+    GRVU,
+    CIRA,
+    CIRO,
+    CIRE,
+    CIRU,
+    CIRI,
+};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+    case GRVA:
+        if (record->event.pressed) {
+        SEND_STRING(SS_RALT("`")"a");
+        }
+        break;
+    case GRVE:
+        if (record->event.pressed) {
+        SEND_STRING(SS_RALT("`")"e");
+        }
+        break;
+    case GRVU:
+        if (record->event.pressed) {
+        SEND_STRING(SS_RALT("`")"u");
+        }
+        break;
+    case CIRA:
+        if (record->event.pressed) {
+        SEND_STRING(SS_RALT("6")"a");
+        }
+        break;
+    case CIRO:
+        if (record->event.pressed) {
+        SEND_STRING(SS_RALT("6")"o");
+        }
+        break;
+    case CIRE:
+        if (record->event.pressed) {
+        SEND_STRING(SS_RALT("6")"e");
+        }
+        break;
+    case CIRU:
+        if (record->event.pressed) {
+        SEND_STRING(SS_RALT("6")"u");
+        }
+        break;
+    case CIRI:
+        if (record->event.pressed) {
+        SEND_STRING(SS_RALT("6")"i");
+        }
+        break;
+    }
+    return true;
+};
+
 enum combos { 
   L1C,
   L1S,
@@ -13,11 +70,15 @@ enum combos {
   L1GS,
   L2CS,
   L2GS,
-  L3QUOTA,
-  L3QUOTO,
-  L3QUOTE,
-  L3QUOTU,
-  L3QUOTI,
+  L3ACUE,
+  L3GRVA,
+  L3GRVE,
+  L3GRVU,
+  L3CIRA,
+  L3CIRO,
+  L3CIRE,
+  L3CIRU,
+  L3CIRI,
 };
 
 const uint16_t PROGMEM l1c[] = { OSL(2), KC_U, COMBO_END};
@@ -32,11 +93,15 @@ const uint16_t PROGMEM l1cs[] = { OSL(2), KC_E, KC_U, COMBO_END};
 const uint16_t PROGMEM l1gs[] = { OSL(2), KC_E, KC_O, COMBO_END};
 const uint16_t PROGMEM l2cs[] = { OSL(1), KC_T, KC_H, COMBO_END};
 const uint16_t PROGMEM l2gs[] = { OSL(1), KC_T, KC_N, COMBO_END};
-const uint16_t PROGMEM l3quota[] = { OSL(3), KC_A, COMBO_END};
-const uint16_t PROGMEM l3quoto[] = { OSL(3), KC_O, COMBO_END};
-const uint16_t PROGMEM l3quote[] = { OSL(3), KC_E, COMBO_END};
-const uint16_t PROGMEM l3quotu[] = { OSL(3), KC_U, COMBO_END};
-const uint16_t PROGMEM l3quoti[] = { OSL(3), KC_I, COMBO_END};
+const uint16_t PROGMEM l3acue[] = { OSL(3), KC_O, COMBO_END};
+const uint16_t PROGMEM l3grva[] = { OSL(3), KC_A, COMBO_END};
+const uint16_t PROGMEM l3grve[] = { OSL(3), KC_E, COMBO_END};
+const uint16_t PROGMEM l3grvu[] = { OSL(3), KC_U, COMBO_END};
+const uint16_t PROGMEM l3cira[] = { OSL(3), KC_QUOT, COMBO_END};
+const uint16_t PROGMEM l3ciro[] = { OSL(3), KC_COMM, COMBO_END};
+const uint16_t PROGMEM l3cire[] = { OSL(3), KC_DOT, COMBO_END};
+const uint16_t PROGMEM l3ciru[] = { OSL(3), KC_P, COMBO_END};
+const uint16_t PROGMEM l3ciri[] = { OSL(3), KC_Y, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [L1C] = COMBO(l1c, OSM(MOD_LCTL)),
@@ -51,11 +116,15 @@ combo_t key_combos[COMBO_COUNT] = {
   [L1GS] = COMBO(l1gs, OSM(MOD_LGUI|MOD_LSFT)),
   [L2CS] = COMBO(l2cs, OSM(MOD_RCTL|MOD_RSFT)),
   [L2GS] = COMBO(l2gs, OSM(MOD_RGUI|MOD_RSFT)),
-  [L3QUOTA] = COMBO(l3quota, RALT(KC_A)),
-  [L3QUOTO] = COMBO(l3quoto, RALT(KC_O)),
-  [L3QUOTE] = COMBO(l3quote, RALT(KC_E)),
-  [L3QUOTU] = COMBO(l3quotu, RALT(KC_U)),
-  [L3QUOTI] = COMBO(l3quoti, RALT(KC_I)),
+  [L3ACUE] = COMBO(l3acue, RALT(KC_E)),
+  [L3GRVA] = COMBO(l3grva, GRVA),
+  [L3GRVE] = COMBO(l3grve, GRVE),
+  [L3GRVU] = COMBO(l3grvu, GRVU),
+  [L3CIRA] = COMBO(l3cira, CIRA),
+  [L3CIRO] = COMBO(l3ciro, CIRO),
+  [L3CIRE] = COMBO(l3cire, CIRE),
+  [L3CIRU] = COMBO(l3ciru, CIRU),
+  [L3CIRI] = COMBO(l3ciri, CIRI),
 };
 
 /* THIS FILE WAS GENERATED!
