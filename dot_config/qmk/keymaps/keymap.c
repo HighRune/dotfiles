@@ -9,6 +9,9 @@ enum custom_keycodes {
     CIRE,
     CIRU,
     CIRI,
+    UMLE,
+    UMLU,
+    UMLI,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -53,6 +56,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         SEND_STRING(SS_RALT("6")"i");
         }
         break;
+    case UMLE:
+        if (record->event.pressed) {
+          SEND_STRING(SS_RALT(SS_RSFT("\""))"e");
+        }
+        break;
+    case UMLU:
+        if (record->event.pressed) {
+          SEND_STRING(SS_RALT(SS_RSFT("\""))"u");
+        }
+        break;
+    case UMLI:
+        if (record->event.pressed) {
+          SEND_STRING(SS_RALT(SS_RSFT("\""))"i");
+        }
+        break;
     }
     return true;
 };
@@ -79,6 +97,10 @@ enum combos {
   L3CIRE,
   L3CIRU,
   L3CIRI,
+  L3UMLE,
+  L3UMLU,
+  L3UMLI,
+  L3CEDC,
 };
 
 const uint16_t PROGMEM l1c[] = { OSL(2), KC_U, COMBO_END};
@@ -102,6 +124,10 @@ const uint16_t PROGMEM l3ciro[] = { OSL(3), KC_COMM, COMBO_END};
 const uint16_t PROGMEM l3cire[] = { OSL(3), KC_DOT, COMBO_END};
 const uint16_t PROGMEM l3ciru[] = { OSL(3), KC_P, COMBO_END};
 const uint16_t PROGMEM l3ciri[] = { OSL(3), KC_Y, COMBO_END};
+const uint16_t PROGMEM l3umle[] = { OSL(3), KC_J, COMBO_END};
+const uint16_t PROGMEM l3umlu[] = { OSL(3), KC_K, COMBO_END};
+const uint16_t PROGMEM l3umli[] = { OSL(3), KC_X, COMBO_END};
+const uint16_t PROGMEM l3cedc[] = { OSL(3), KC_C, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [L1C] = COMBO(l1c, OSM(MOD_LCTL)),
@@ -125,6 +151,10 @@ combo_t key_combos[COMBO_COUNT] = {
   [L3CIRE] = COMBO(l3cire, CIRE),
   [L3CIRU] = COMBO(l3ciru, CIRU),
   [L3CIRI] = COMBO(l3ciri, CIRI),
+  [L3UMLE] = COMBO(l3umle, UMLE),
+  [L3UMLU] = COMBO(l3umlu, UMLU),
+  [L3UMLI] = COMBO(l3umli, UMLI),
+  [L3CEDC] = COMBO(l3cedc, RALT(KC_COMM)),
 };
 
 /* THIS FILE WAS GENERATED!
