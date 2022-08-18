@@ -3,6 +3,10 @@ local lsp = vim.lsp
 local fn = vim.fn
 local diagnostic = vim.diagnostic
 
+return function()
+   require("mason").setup()
+end
+
 -------------------- https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
 
 -- return function()
