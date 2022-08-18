@@ -28,10 +28,12 @@ return require("packer").startup({
       run = ":TSUpdate",
     })
     use("neovim/nvim-lspconfig")
-    use({
-      "williamboman/nvim-lsp-installer",
-      config = require("config.lsp")()
-    })
+    -- use({
+    --   "williamboman/nvim-lsp-installer",
+    --   config = require("config.lsp")()
+    -- })
+    use { "williamboman/mason.nvim" }
+    use { "williamboman/mason-lspconfig.nvim" }
     use({
       'anuvyklack/hydra.nvim',
       requires = 'anuvyklack/keymap-layer.nvim',
