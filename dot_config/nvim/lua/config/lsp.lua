@@ -7,8 +7,6 @@ local diagnostic = vim.diagnostic
 
 return function()
   diagnostic.config({
-    -- virtual_text = false,
-    -- virtual_lines = { prefix = "" },
     virtual_text = {
       prefix = "",
       spacing = 2,
@@ -24,31 +22,9 @@ return function()
           diagnostic.user_data.lsp.code,
           diagnostic.message
         )
-        -- return dump(diagnostic)
       end,
     },
   })
-
-  -- function dump(o)
-  -- 	if type(o) == "table" then
-  -- 		local s = "{ "
-  -- 		for k, v in pairs(o) do
-  -- 			if type(k) ~= "number" then
-  -- 				k = '"' .. k .. '"'
-  -- 			end
-  -- 			s = s .. "[" .. k .. "] = " .. dump(v) .. ","
-  -- 		end
-  -- 		return s .. "} "
-  -- 	else
-  -- 		return tostring(o)
-  -- 	end
-  -- end
-
-  -- local signs = { Error = "e", Warn = "w", Hint = "h", Info = "i" }
-  -- for type, sign in pairs(signs) do
-  -- 	local hl = "DiagnosticSign" .. type
-  -- 	fn.sign_define(hl, { text = sign, texthl = hl })
-  -- end
 
   -------------------- neovim/nvim-lspconfig
   -- Use an on_attach function to only map the following keys
