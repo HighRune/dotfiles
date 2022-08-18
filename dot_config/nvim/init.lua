@@ -33,7 +33,9 @@ return require("packer").startup({
     --   config = require("config.lsp")()
     -- })
     use { "williamboman/mason.nvim" }
-    use { "williamboman/mason-lspconfig.nvim" }
+    use { "williamboman/mason-lspconfig.nvim",
+      config = require("config.lsp")()
+    }
     use({
       'anuvyklack/hydra.nvim',
       requires = 'anuvyklack/keymap-layer.nvim',
