@@ -29,7 +29,7 @@ return function()
   require("mason").setup()
 
   -------------------- williamboman/mason-lspconfig.nvim
-  require("mason-lspconfig")
+  -- require("mason-lspconfig")
 
   -------------------- neovim/nvim-lspconfig
   local function on_attach(client, buffer)
@@ -56,7 +56,8 @@ return function()
   --   on_attach(client, buffer)
   -- end
 
-  local lspconfig = require("lspconfig")
+  -- local lspconfig = require("lspconfig")
+  local lspconfig = require("mason-lspconfig")
   local lsp_flags = { debounce_text_changes = 0 }
 
   lspconfig['typescript-language-server'].setup({
