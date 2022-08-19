@@ -26,9 +26,11 @@ return function()
     },
   })
 
+-------------------- williamboman/mason.nvim
+     require("mason").setup()
+
+  -------------------- williamboman/mason-lspconfig.nvim
   -------------------- neovim/nvim-lspconfig
-  -- Use an on_attach function to only map the following keys
-  -- after the language server attaches to the current buffer
   local function on_attach(client, buffer)
     require("mappings").lspconfig(buffer)
   end
@@ -43,39 +45,34 @@ return function()
     on_attach(client, buffer)
   end
 
-  -- local function on_attach_volar(client, buffer)
-  --   client.server_capabilities.documentFormattingProvider = false
-  --   on_attach(client, buffer)
-  -- end
-
   local function on_attach_sumneko_lua(client, buffer)
     client.server_capabilities.documentFormattingProvider = true
     on_attach(client, buffer)
   end
 
+  -- local function on_attach_volar(client, buffer)
+  --   client.server_capabilities.documentFormattingProvider = false
+  --   on_attach(client, buffer)
+  -- end
 
--------------------- williamboman/mason.nvim
-     require("mason").setup()
-
--------------------- williamboman/mason-lspconfig.nvim
      local lspconfig = require("mason-lspconfig")
 
-     -- lspconfig.tsserver.setup({
-     --   on_attach = on_attach_tsserver
-     --   settings = { format = { enable = false } }
-     -- })
-     -- lspconfig.eslint.setup({
-     --   on_attach = on_attach_eslint
-     --   settings = { format = { enable = true } }
-     -- })
-     -- lspconfig.sumneko_lua.setup({
-     --   on_attach = on_attach_sumneko_lua
-     --   settings = { format = { enable = true } }
-     -- })
-     -- lspconfig.yamlls.setup({
-     --   on_attach = on_attach_sumneko_lua
-     --   settings = { format = { enable = true } }
-     -- })
+     lspconfig.tsserver.setup({
+       on_attach = on_attach_tsserver,
+       settings = { format = { enable = false } }
+     })
+     lspconfig.eslint.setup({
+       on_attach = on_attach_eslint,
+       settings = { format = { enable = true } }
+     })
+     lspconfig.sumneko_lua.setup({
+       on_attach = on_attach_sumneko_lua,
+       settings = { format = { enable = true } }
+     })
+     lspconfig.yamlls.setup({
+       on_attach = on_attach_sumneko_lua,
+       settings = { format = { enable = true } }
+     })
   end
 
   -- require("nvim-lsp-installer").on_server_ready(function(server)
