@@ -3,9 +3,8 @@ local lsp = vim.lsp
 local fn = vim.fn
 local diagnostic = vim.diagnostic
 
--------------------- https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
-
 return function()
+  -------------------- https://github.com/neovim/nvim-lspconfig/wiki/UI-customization
   diagnostic.config({
     virtual_text = {
       prefix = "",
@@ -26,10 +25,11 @@ return function()
     },
   })
 
--------------------- williamboman/mason.nvim
--------------------- williamboman/mason-lspconfig.nvim
-     require("mason").setup()
-     require("mason-lspconfig")
+  -------------------- williamboman/mason.nvim
+  require("mason").setup()
+
+  -------------------- williamboman/mason-lspconfig.nvim
+  require("mason-lspconfig")
 
   -------------------- neovim/nvim-lspconfig
   local function on_attach(client, buffer)
@@ -56,99 +56,100 @@ return function()
   --   on_attach(client, buffer)
   -- end
 
-     local lspconfig = require("lspconfig")
+  local lspconfig = require("lspconfig")
+  local lsp_flags = { debounce_text_changes = 0 }
 
-     lspconfig.tsserver.setup({
-       on_attach = on_attach_tsserver,
-       settings = { format = { enable = false } }
-     })
-     lspconfig.eslint.setup({
-       on_attach = on_attach_eslint,
-       settings = { format = { enable = true } }
-     })
-     lspconfig.sumneko_lua.setup({
-       on_attach = on_attach_sumneko_lua,
-       settings = { format = { enable = true } }
-     })
-     lspconfig.yamlls.setup({
-       on_attach = on_attach_sumneko_lua,
-       settings = { format = { enable = true } }
-     })
-  end
+  lspconfig.tsserver.setup({
+    on_attach = on_attach_tsserver,
+    settings = { format = { enable = false } },
+    flags = lsp_flags,
+  })
+  lspconfig.eslint.setup({
+    on_attach = on_attach_eslint,
+    settings = { format = { enable = true } },
+    flags = lsp_flags,
+  })
+  lspconfig.sumneko_lua.setup({
+    on_attach = on_attach_sumneko_lua,
+    settings = { format = { enable = true } },
+    flags = lsp_flags,
+  })
+  lspconfig.yamlls.setup({
+    on_attach = on_attach_sumneko_lua,
+    settings = { format = { enable = true } },
+    flags = lsp_flags,
+  })
+end
 
-  -- require("nvim-lsp-installer").on_server_ready(function(server)
-    -- local opts = {}
-    -- opts.on_attach = on_attach
-    -- opts.flags = { debounce_text_changes = 0 }
-    --
-    -- -- (optional) Customize the options passed to the server
-    -- -- if server.name == "tsserver" then
-    -- --     opts.root_dir = function() ... end
-    -- -- end
-    --
-    -- if server.name == "eslint" then
-    --   opts.on_attach = on_attach_eslint
-    --   opts.settings = { format = { enable = true } }
-    -- end
-    --
-    -- if server.name == "tsserver" then
-    --   opts.on_attach = on_attach_tsserver
-    --   opts.settings = { format = { enable = false } }
-    -- end
-    --
-    -- if server.name == "volar" then
-    --   opts.on_attach = on_attach_volar
-    --   opts.settings = { format = { enable = false } }
-    --   opts.init_options = {
-    --     documentFeatures = {
-    --       documentColor = false,
-    --       documentFormatting = {
-    --         defaultPrintWidth = 100
-    --       },
-    --       documentSymbol = true,
-    --       foldingRange = true,
-    --       linkedEditingRange = true,
-    --       selectionRange = true
-    --     },
-    --     languageFeatures = {
-    --       callHierarchy = true,
-    --       codeAction = false,
-    --       codeLens = true,
-    --       completion = {
-    --         defaultAttrNameCase = "kebabCase",
-    --         defaultTagNameCase = "both"
-    --       },
-    --       definition = true,
-    --       diagnostics = true,
-    --       documentHighlight = true,
-    --       documentLink = true,
-    --       hover = true,
-    --       implementation = true,
-    --       references = true,
-    --       rename = true,
-    --       renameFileRefactoring = true,
-    --       schemaRequestService = true,
-    --       semanticTokens = false,
-    --       signatureHelp = true,
-    --       typeDefinition = true
-    --     },
-    --     typescript = {
-    --       serverPath = ""
-    --     }
-    --   }
-    -- end
+-- require("nvim-lsp-installer").on_server_ready(function(server)
+-- local opts = {}
+-- opts.on_attach = on_attach
+-- opts.flags = { debounce_text_changes = 0 }
+--
+-- if server.name == "eslint" then
+--   opts.on_attach = on_attach_eslint
+--   opts.settings = { format = { enable = true } }
+-- end
+--
+-- if server.name == "tsserver" then
+--   opts.on_attach = on_attach_tsserver
+--   opts.settings = { format = { enable = false } }
+-- end
+--
+-- if server.name == "volar" then
+--   opts.on_attach = on_attach_volar
+--   opts.settings = { format = { enable = false } }
+--   opts.init_options = {
+--     documentFeatures = {
+--       documentColor = false,
+--       documentFormatting = {
+--         defaultPrintWidth = 100
+--       },
+--       documentSymbol = true,
+--       foldingRange = true,
+--       linkedEditingRange = true,
+--       selectionRange = true
+--     },
+--     languageFeatures = {
+--       callHierarchy = true,
+--       codeAction = false,
+--       codeLens = true,
+--       completion = {
+--         defaultAttrNameCase = "kebabCase",
+--         defaultTagNameCase = "both"
+--       },
+--       definition = true,
+--       diagnostics = true,
+--       documentHighlight = true,
+--       documentLink = true,
+--       hover = true,
+--       implementation = true,
+--       references = true,
+--       rename = true,
+--       renameFileRefactoring = true,
+--       schemaRequestService = true,
+--       semanticTokens = false,
+--       signatureHelp = true,
+--       typeDefinition = true
+--     },
+--     typescript = {
+--       serverPath = ""
+--     }
+--   }
+-- end
 
-    -- if server.name == "sumneko_lua" then
-    --   opts.on_attach = on_attach_sumneko_lua
-    --   opts.settings = { format = { enable = true } }
-    -- end
-    --
-    -- if server.name == "yamlls" then
-    --   opts.on_attach = on_attach_sumneko_lua
-    --   opts.settings = { format = { enable = true } }
-    -- end
-    --
-    -- -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
-    -- server:setup(require("coq").lsp_ensure_capabilities(opts))
-    -- cmd([[ do User LspAttachBuffers ]])
-  -- end)
+-- if server.name == "sumneko_lua" then
+--   opts.on_attach = on_attach_sumneko_lua
+--   opts.settings = { format = { enable = true } }
+-- end
+--
+-- if server.name == "yamlls" then
+--   opts.on_attach = on_attach_sumneko_lua
+--   opts.settings = { format = { enable = true } }
+-- end
+--
+-- -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
+-- server:setup(require("coq").lsp_ensure_capabilities(opts))
+-- cmd([[ do User LspAttachBuffers ]])
+
+-- end)
