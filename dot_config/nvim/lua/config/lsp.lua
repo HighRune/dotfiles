@@ -27,9 +27,10 @@ return function()
   })
 
 -------------------- williamboman/mason.nvim
+-------------------- williamboman/mason-lspconfig.nvim
      require("mason").setup()
+     require("mason-lspconfig")
 
-  -------------------- williamboman/mason-lspconfig.nvim
   -------------------- neovim/nvim-lspconfig
   local function on_attach(client, buffer)
     require("mappings").lspconfig(buffer)
@@ -55,7 +56,7 @@ return function()
   --   on_attach(client, buffer)
   -- end
 
-     local lspconfig = require("mason-lspconfig")
+     local lspconfig = require("lspconfig")
 
      lspconfig.tsserver.setup({
        on_attach = on_attach_tsserver,
