@@ -60,10 +60,10 @@ return function()
 -------------------- williamboman/mason-lspconfig.nvim
      local lspconfig = require("mason-lspconfig")
 
-     lspconfig.tsserver.setup({
-       on_attach = on_attach_tsserver
-       settings = { format = { enable = false } }
-     })
+     -- lspconfig.tsserver.setup({
+     --   on_attach = on_attach_tsserver
+     --   settings = { format = { enable = false } }
+     -- })
      -- lspconfig.eslint.setup({
      --   on_attach = on_attach_eslint
      --   settings = { format = { enable = true } }
