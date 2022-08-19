@@ -60,22 +60,22 @@ return function()
 -------------------- williamboman/mason-lspconfig.nvim
      local lspconfig = require("mason-lspconfig")
 
-     lspconfig.tsserver.setup {
+     lspconfig.tsserver.setup({
        on_attach = on_attach_tsserver
        settings = { format = { enable = false } }
-     }
-     lspconfig.eslint.setup {
+     })
+     lspconfig.eslint.setup({
        on_attach = on_attach_eslint
        settings = { format = { enable = true } }
-     }
-     lspconfig.sumneko_lua.setup {
+     })
+     lspconfig.sumneko_lua.setup({
        on_attach = on_attach_sumneko_lua
        settings = { format = { enable = true } }
-     }
-     lspconfig.yamlls.setup {
+     })
+     lspconfig.yamlls.setup({
        on_attach = on_attach_sumneko_lua
        settings = { format = { enable = true } }
-     }
+     })
   end
 
   -- require("nvim-lsp-installer").on_server_ready(function(server)
