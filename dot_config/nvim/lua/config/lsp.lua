@@ -29,7 +29,7 @@ return function()
   require("mason").setup()
 
   -------------------- williamboman/mason-lspconfig.nvim
-  require("mason-lspconfig")
+  require("mason-lspconfig").setup()
 
   -------------------- neovim/nvim-lspconfig
   local function on_attach(client, buffer)
