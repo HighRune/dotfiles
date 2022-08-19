@@ -67,15 +67,16 @@ return function()
      lspconfig.eslint.setup {
        on_attach = on_attach_eslint
        settings = { format = { enable = true } }
-    }
-    lspconfig.sumneko_lua.setup {
-      on_attach = on_attach_sumneko_lua
-      settings = { format = { enable = true } }
-   }
-   lspconfig.yamlls.setup {
-     on_attach = on_attach_sumneko_lua
-     settings = { format = { enable = true } }
-  }
+     }
+     lspconfig.sumneko_lua.setup {
+       on_attach = on_attach_sumneko_lua
+       settings = { format = { enable = true } }
+     }
+     lspconfig.yamlls.setup {
+       on_attach = on_attach_sumneko_lua
+       settings = { format = { enable = true } }
+     }
+  end
 
   -- require("nvim-lsp-installer").on_server_ready(function(server)
     -- local opts = {}
@@ -153,4 +154,3 @@ return function()
     -- server:setup(require("coq").lsp_ensure_capabilities(opts))
     -- cmd([[ do User LspAttachBuffers ]])
   -- end)
-end
