@@ -351,6 +351,29 @@ local function cybu()
   })
 end
 
+local function bettern()
+  require("better-n").setup {
+    callbacks = {
+      mapping_executed = function(_mode, _key)
+        vim.cmd [[ nohl ]]
+      end
+    },
+    mappings = {
+      ["#"] = { previous = "n", next = "<s-n>" },
+      ["F"] = { previous = ";", next = "," },
+      ["T"] = { previous = ";", next = "," },
+      ["?"] = { previous = "n", next = "<s-n>", cmdline = true },
+      ["<leader>hn"] = { previous = "<leader>hp", next = "<leader>hn" },
+      ["<leader>hp"] = { previous = "<leader>hp", next = "<leader>hn" },
+      ["<leader>bn"] = { previous = "<leader>bp", next = "<leader>bn" },
+      ["<leader>bp"] = { previous = "<leader>bp", next = "<leader>bn" },
+    }
+  }
+
+  vim.keymap.set("n", "n", require("better-n").n, { nowait = true })
+  vim.keymap.set("n", "<s-n>", require("better-n").shift_n, { nowait = true })
+end
+
 -------------------- RRethy/nvim-base16
 local function base16()
   require('base16-colorscheme').setup({
