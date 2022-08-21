@@ -159,7 +159,7 @@ return require("packer").startup({
     use({
       "jonatan-branting/nvim-better-n",
       config = function()
-        require("setup").leap()
+        require("setup").bettern()
       end
     })
     -- use({
