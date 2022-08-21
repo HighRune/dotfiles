@@ -156,6 +156,9 @@ return require("packer").startup({
         require("mappings").leap()
       end
     })
+    use({
+      "jonatan-branting/nvim-better-n",
+    })
     -- use({
     --   "justinmk/vim-sneak",
     --   config = function()
