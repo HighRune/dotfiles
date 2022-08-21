@@ -360,13 +360,9 @@ local function bettern()
     },
     mappings = {
       ["#"] = { previous = "n", next = "<s-n>" },
-      ["F"] = { previous = ";", next = "," },
-      ["T"] = { previous = ";", next = "," },
+      ["F"] = { previous = "n", next = "<s-n>" },
+      ["T"] = { previous = "n", next = "<s-n>" },
       ["?"] = { previous = "n", next = "<s-n>", cmdline = true },
-      ["<leader>hn"] = { previous = "<leader>hp", next = "<leader>hn" },
-      ["<leader>hp"] = { previous = "<leader>hp", next = "<leader>hn" },
-      ["<leader>bn"] = { previous = "<leader>bp", next = "<leader>bn" },
-      ["<leader>bp"] = { previous = "<leader>bp", next = "<leader>bn" },
     }
   }
 
