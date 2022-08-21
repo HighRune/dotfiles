@@ -425,4 +425,5 @@ return {
   base16 = base16,
   installer = installer,
   ai = ai,
+  bettern = bettern
 }
