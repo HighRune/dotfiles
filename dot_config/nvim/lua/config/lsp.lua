@@ -67,25 +67,21 @@ return function()
   local lspconfig = require("lspconfig")
   local lsp_flags = { debounce_text_changes = 0 }
 
-  -- lspconfig['typescript-language-server'].setup({
   lspconfig['tsserver'].setup({
     on_attach = on_attach_tsserver,
     settings = { format = { enable = false } },
     flags = lsp_flags,
   })
-  -- lspconfig['eslint-lsp'].setup({
   lspconfig['eslint'].setup({
     on_attach = on_attach_eslint,
     settings = { format = { enable = true } },
     flags = lsp_flags,
   })
-  -- lspconfig['lua-language-server'].setup({
   lspconfig['sumneko_lua'].setup({
     on_attach = on_attach_sumneko_lua,
     settings = { format = { enable = true } },
     flags = lsp_flags,
   })
-  -- lspconfig['yaml-language-server'].setup({
   lspconfig['yamlls'].setup({
     on_attach = on_attach_sumneko_lua,
     settings = { format = { enable = true } },
