@@ -149,13 +149,13 @@ return require("packer").startup({
       requires = { "kyazdani42/nvim-web-devicons", opt = true },
       config = "require('config.lualine')()",
     })
-    use({
-      "ggandor/leap.nvim",
-      config = function()
-        require("options").leap()
-        require("mappings").leap()
-      end
-    })
+    -- use({
+    --   "ggandor/leap.nvim",
+    --   config = function()
+    --     require("options").leap()
+    --     require("mappings").leap()
+    --   end
+    -- })
     use({
       "jonatan-branting/nvim-better-n",
       config = function()
