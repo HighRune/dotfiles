@@ -82,6 +82,7 @@ end
 local function leap()
   require('leap').opts.safe_labels = nil
   require('leap').opts.labels = { 'u', 'h', 'e', 't', 'o', 'a', 'k', 'm', 'j', 'w', 'q', 'v', '.', 'c', 'r', 'p', 'g' }
+  require('leap').opts.highlight_unlabeled = true
   require('leap').opts.special_keys = {
     repeat_search = 'n',
     next_match    = 'n',
