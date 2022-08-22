@@ -354,16 +354,9 @@ end
 -------------------- jonatan-branting/nvim-better-n
 local function bettern()
   require("better-n").setup {
-    callbacks = {
-      mapping_executed = function(_mode, _key)
-        vim.cmd [[ nohl ]]
-      end
-    },
     mappings = {
-      ["#"] = { previous = "n", next = "<s-n>" },
       ["F"] = { previous = "n", next = "<s-n>" },
       ["T"] = { previous = "n", next = "<s-n>" },
-      ["?"] = { previous = "n", next = "<s-n>", cmdline = true },
     }
   }
 end
