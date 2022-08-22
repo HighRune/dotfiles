@@ -354,6 +354,7 @@ end
 -------------------- jonatan-branting/nvim-better-n
 local function bettern()
   require("better-n").setup {
+    callbacks = {},
     mappings = {
       ["F"] = { previous = "n", next = "<s-n>" },
       ["T"] = { previous = "n", next = "<s-n>" },
