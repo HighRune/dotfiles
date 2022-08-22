@@ -57,9 +57,9 @@ end
 local function leap()
   require('leap').setup {
     special_keys = {
-      repeat_search = '<enter>',
-      next_match    = '<enter>',
-      prev_match    = '<shift><enter>',
+      repeat_search = 'n',
+      next_match    = 'n',
+      prev_match    = 'N',
     },
   }
 end
