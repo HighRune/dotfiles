@@ -154,7 +154,7 @@ return require("packer").startup({
       config = function()
         require("options").leap()
         require("mappings").leap()
-        -- require("setup").leap()
+        require("setup").leap()
       end
     })
     -- use({
