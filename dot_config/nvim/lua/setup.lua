@@ -272,7 +272,7 @@ end
 local function bufferline()
   require('bufferline').setup({
     options = {
-      indicator_icon = ' ',
+      indicator = { style = 'none' },
       separator_style = { '', '' },
       tab_size = 0,
       buffer_close_icon = '',
