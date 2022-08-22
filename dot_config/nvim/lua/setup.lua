@@ -414,5 +414,4 @@ return {
   installer = installer,
   ai = ai,
   bettern = bettern,
-  leap = leap
 }
