@@ -193,9 +193,16 @@ local function hop()
   -- map("v", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
 end
 
+-------------------- ghillb/cybu.nvim
 local function cybu()
   map("n", "<Tab>", "<Plug>(CybuNext)")
   map("n", "<S-Tab>", "<Plug>(CybuPrev)")
+end
+
+-------------------- jonatan-branting/nvim-better-n
+local function bettern()
+  map("n", "n", require("better-n").n, { nowait = true })
+  map("n", "<s-n>", require("better-n").shift_n, { nowait = true })
 end
 
 local function vindent()
@@ -463,6 +470,7 @@ return {
   cybu = cybu,
   hydra = hydra,
   leap = leap,
+  bettern = bettern
   -- indentwise = indentwise,
   -- pulse = pulse,
   -- pounce = pounce,
