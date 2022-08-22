@@ -56,18 +56,10 @@ end
 -------------------- ggandor/leap.nvim
 local function leap()
   require('leap').setup {
-    max_aot_targets = nil,
-    highlight_unlabeled = false,
-    case_sensitive = false,
-    equivalence_classes = { ' \t\r\n', },
-    safe_labels = {},
-    labels = {},
     special_keys = {
       repeat_search = '<enter>',
       next_match    = '<enter>',
-      prev_match    = '<tab>',
-      next_group    = '<space>',
-      prev_group    = '<tab>',
+      prev_match    = '<shift><enter>',
     },
   }
 end
@@ -432,5 +424,6 @@ return {
   base16 = base16,
   installer = installer,
   ai = ai,
-  bettern = bettern
+  bettern = bettern,
+  leap = leap
 }
