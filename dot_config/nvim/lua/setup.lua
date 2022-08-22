@@ -59,7 +59,7 @@ local function leap()
     special_keys = {
       repeat_search = '<enter>',
       next_match    = '<enter>',
-      prev_match    = '<s-enter>',
+      prev_match    = '<s-cr>',
     },
   }
 end
