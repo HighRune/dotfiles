@@ -351,6 +351,7 @@ local function cybu()
   })
 end
 
+-------------------- jonatan-branting/nvim-better-n
 local function bettern()
   require("better-n").setup {
     callbacks = {
@@ -365,9 +366,6 @@ local function bettern()
       ["?"] = { previous = "n", next = "<s-n>", cmdline = true },
     }
   }
-
-  vim.keymap.set("n", "n", require("better-n").n, { nowait = true })
-  vim.keymap.set("n", "<s-n>", require("better-n").shift_n, { nowait = true })
 end
 
 -------------------- RRethy/nvim-base16
