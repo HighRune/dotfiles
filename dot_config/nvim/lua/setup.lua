@@ -56,11 +56,11 @@ end
 -------------------- ggandor/leap.nvim
 local function leap()
   require('leap').setup {
-    special_keys = {
-      repeat_search = '<enter>',
-      next_match    = '<enter>',
-      prev_match    = '<tab>',
-    },
+    -- special_keys = {
+    --   repeat_search = '<enter>',
+    --   next_match    = '<enter>',
+    --   prev_match    = '<tab>',
+    -- },
   }
 end
 
