@@ -232,8 +232,8 @@ end
 -- end
 
 local function leap()
-  map({ "n", "x" }, "f", "<Plug>(leap-forward)", remap)
-  map({ "n", "x" }, "F", "<Plug>(leap-backward)", remap)
+  map({ "n", "x" }, "s", "<Plug>(leap-forward)", remap)
+  map({ "n", "x" }, "S", "<Plug>(leap-backward)", remap)
 end
 
 -------------------- justinmk/vim-sneak
