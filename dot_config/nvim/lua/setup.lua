@@ -53,17 +53,6 @@ local function fzf()
   })
 end
 
--------------------- ggandor/leap.nvim
-local function leap()
-  require('leap').setup {
-    special_keys = {
-      repeat_search = 'n',
-      next_match    = 'n',
-      prev_match    = 'N',
-    },
-  }
-end
-
 -------------------- is0n/fm-nvim
 local function fm()
   require("fm-nvim").setup({
