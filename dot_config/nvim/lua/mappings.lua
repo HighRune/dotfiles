@@ -94,7 +94,7 @@ local function core()
   -- vim.keymap.set("n", "ga", _G.__dot_repeat, expr)
 
   -- map({ "n", "x" }, "p", require("booster").jumpToLineEnd(require("booster").putCharwise('p')))
-  -- map({ "n", "x" }, "p", require("booster").putCharwise('p'))
+  map({ "n", "x" }, "p", require("booster").putCharwise('p'))
   map({ "n", "x" }, "P", require("booster").jumpToLineStart(require("booster").putCharwise('P')))
   map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('p'))
   map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('P'))
