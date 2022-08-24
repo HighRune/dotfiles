@@ -78,6 +78,7 @@ local function core()
   map({ "n", "x" }, "gllP", require("booster").putLinewiseSuffix(']P`]'))
   map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
   map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
+  vim.keymap.set("n", "t", require("booster").__dot_repeat, { expr = true })
 
   -- local counter = 0
   --
