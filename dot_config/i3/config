@@ -169,7 +169,7 @@ exec --no-startup-id nm-applet
 
 # Windows color
 #                       $BORDER    $BGROUND   $TEXT  $INDICATOR
-   client.focused             $white        $transparent  $white $purple
+   client.focused             $white        $white  $white $purple
    client.unfocused           $transparent  $transparent  $grey  $purple
    client.focused_inactive    $transparent  $transparent  $grey  $purple
    client.urgent              $lightblue    $transparent  $white $purple
