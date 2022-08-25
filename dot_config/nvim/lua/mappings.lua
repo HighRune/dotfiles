@@ -294,6 +294,15 @@ local function bufferline()
   map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", silent)
   map("n", "<pageup>", ":BufferLineMovePrev<cr>", silent)
   map("n", "<pagedown>", ":BufferLineMoveNext<cr>", silent)
+  map("n", "<c-1>", ":BufferLineGoToBuffer 1<cr>", silent)
+  map("n", "<c-2>", ":BufferLineGoToBuffer 2<cr>", silent)
+  map("n", "<c-3>", ":BufferLineGoToBuffer 3<cr>", silent)
+  map("n", "<c-4>", ":BufferLineGoToBuffer 4<cr>", silent)
+  map("n", "<c-5>", ":BufferLineGoToBuffer 5<cr>", silent)
+  map("n", "<c-6>", ":BufferLineGoToBuffer 6<cr>", silent)
+  map("n", "<c-7>", ":BufferLineGoToBuffer 7<cr>", silent)
+  map("n", "<c-8>", ":BufferLineGoToBuffer 8<cr>", silent)
+  map("n", "<c-9>", ":BufferLineGoToBuffer -1<cr>", silent)
 end
 
 -------------------- AndrewRadev/splitjoin.vim
