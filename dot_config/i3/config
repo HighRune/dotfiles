@@ -46,7 +46,7 @@ for_window [class="Pamac-manager"] floating enable
 
 for_window [class=.*] focus
 
-default_border pixel 1
+default_border pixel 8
 hide_edge_borders both
 # title_align center
 floating_modifier $mod
