@@ -45,10 +45,9 @@ for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enabl
 for_window [class="Pamac-manager"] floating enable
 
 for_window [class=.*] focus
+for_window [class=.*] border pixel 6
 
-default_border pixel 8
-hide_edge_borders both
-# title_align center
+hide_edge_borders smart
 floating_modifier $mod
 focus_on_window_activation focus
 
@@ -152,12 +151,11 @@ exec --no-startup-id nm-applet
 
 # _______________________________ STYLE
 
-# Colors
    set $darktrans      #00000096
    set $transparent    #00000000
-   set $darkbluetrans  #08052be6
+   set $lightbluetrans #0080ff60
    set $darkblue       #08052b
-   set $lightblue      #5294e2
+   set $lightblue      #5294E2
    set $urgentred      #e53935
    set $white          #ffffff
    set $black          #000000
@@ -167,12 +165,11 @@ exec --no-startup-id nm-applet
    set $mediumgrey     #7a7c9e
    set $yellowbrown    #e1b700
 
-# Windows color
-#                       $BORDER    $BGROUND   $TEXT  $INDICATOR
-   client.focused             $lightblue    $transparent  $white $purple
-   client.unfocused           $transparent  $transparent  $grey  $purple
-   client.focused_inactive    $transparent  $transparent  $grey  $purple
-   client.urgent              $lightblue    $transparent  $white $purple
+#  COLORCLASS                 BORDER          BGROUND       TEXT   INDICATOR
+   client.focused             $transparent    $lightbluetrans $white $purple
+   client.unfocused           $transparent    $transparent    $grey  $purple
+   client.focused_inactive    $transparent    $transparent    $grey  $purple
+   client.urgent              $transparent    $transparent    $white $purple
 
    bar {
            # status_command i3blocks -c ~/.config/i3/i3blocks.conf
@@ -189,10 +186,9 @@ exec --no-startup-id nm-applet
            colors {
                background         $transparent
                statusline         $mediumgrey
-               # Workspaces colors
-               #                  $border    $bg       $txt   $indicator
-               focused_workspace  $transparent  $transparent $white $purple
-               inactive_workspace $transparent  $transparent $mediumgrey  $purple
-               urgent_workspace   $lightblue    $transparent $white $purple
+#              COLORCLASS         BORDER       BGROUND      TEXT        INDICATOR
+               focused_workspace  $transparent $transparent $white      $purple
+               inactive_workspace $transparent $transparent $mediumgrey $purple
+               urgent_workspace   $lightblue   $transparent $white      $purple
            }
    }
