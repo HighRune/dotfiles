@@ -156,12 +156,12 @@ local function ai()
   local gen_spec = require('mini.ai').gen_spec
   require('mini.ai').setup({
     custom_textobjects = {
-      b = gen_spec.argument({ brackets = { '%b()' } }),
-      a = gen_spec.argument({ brackets = { '%b[]' } }),
+      a = gen_spec.argument({ brackets = { '%b()' } }),
       o = gen_spec.argument({ brackets = { '%b{}' } }),
-      B = gen_spec.pair('(', ')', { type = 'balanced' }),
-      A = gen_spec.pair('[', ']', { type = 'balanced' }),
+      e = gen_spec.argument({ brackets = { '%b[]' } }),
+      A = gen_spec.pair('(', ')', { type = 'balanced' }),
       O = gen_spec.pair('{', '}', { type = 'balanced' }),
+      E = gen_spec.pair('[', ']', { type = 'balanced' }),
       Q = gen_spec.pair('`', '`', { type = 'balanced' }),
     },
     mappings = {
