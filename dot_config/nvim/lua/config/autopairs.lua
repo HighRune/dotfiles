@@ -3,7 +3,7 @@ return function()
 	local npairs = require("nvim-autopairs")
 
 	npairs.setup({
-		map_bs = false,
+		map_bs = true,
 		map_cr = false,
 		check_ts = true,
 		ignored_next_char = "[%w%.]",
