@@ -1,6 +1,7 @@
-# _______________________________ General
+# _______________________________ GENERAL
 
 set $mod Mod4
+bindsym $mod+r reload
 font pango:Noto Sans Regular 20px
 # font pango:Hack Nerd Font 20px
 
@@ -78,9 +79,7 @@ assign [class="Alacritty"] 1
 assign [class="Google-chrome"] 2
 assign [class="Slack"] 4
 
-# _______________________________ KEYBINDINGS
-
-bindsym $mod+r reload
+# _______________________________ APPLICATIONS
 
 bindsym $mod+h exec (i3-msg [class="Alacritty"] focus | grep true) || exec alacritty
 bindsym $mod+t exec (i3-msg [class="Google-chrome"] focus | grep true) || exec google-chrome-stable
@@ -90,8 +89,8 @@ bindsym $mod+s exec (i3-msg [class="Slack"] focus | grep true) || exec slack
 bindsym $mod+Shift+h exec alacritty
 bindsym $mod+Shift+t exec google-chrome-stable
 bindsym $mod+Shift+n exec thunar
-bindsym $mod+f exec "flameshot gui -p ~/Downloads"
-bindsym $mod+Shift+f exec "flameshot full -p ~/Downloads"
+bindsym $mod+p exec "flameshot gui -p ~/Downloads"
+bindsym $mod+Shift+p exec "flameshot full -p ~/Downloads"
 bindsym $mod+d exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
 # bindsym $mod+t exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi 
 # bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
@@ -103,8 +102,8 @@ bindsym $mod+d exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-# bindsym $mod+j exec playerctl position 5+
-# bindsym $mod+l exec playerctl position 5-
+bindsym $mod+XF86AudioNext exec playerctl position 5+
+bindsym $mod+XF86AudioPrev exec playerctl position 5-
 
 bindsym XF86MonBrightnessUp exec xbacklight +3
 bindsym XF86MonBrightnessDown exec xbacklight -3
@@ -112,14 +111,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -3
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
 bindsym XF86AudioMute exec amixer -D pulse sset Master toggle
-
-# Pulse Audio controls
-# Volume up
-# bindsym XF86AudioRaiseVolume exec pamixer -i 5 --allow-boost && dunstify -h string:x-dunst-stack-tag:volume volume: $(pamixer --get-volume)%
-# Volume down
-# bindsym XF86AudioLowerVolume exec pamixer -d 5 --allow-boost && dunstify -h string:x-dunst-stack-tag:volume volume: $(pamixer --get-volume)%
-# Mute
-# bindsym XF86AudioMute exec pamixer -t && dunstify -h string:x-dunst-stack-tag:mute mute: $(pamixer --get-mute)!
 
 # _______________________________ AUTOSTART
 
