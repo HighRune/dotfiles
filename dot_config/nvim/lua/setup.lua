@@ -127,7 +127,7 @@ local function gitsigns()
   })
 end
 
--------------------- echasnovski/mini.nvim
+-------------------- echasnovski/mini.nvim#miniai
 local function indentscope()
   local scope = require("mini.indentscope")
   scope.setup({
@@ -152,6 +152,7 @@ local function indentscope()
   })
 end
 
+-------------------- echasnovski/mini.nvim#miniai
 local function ai()
   local gen_spec = require('mini.ai').gen_spec
   require('mini.ai').setup({
@@ -179,6 +180,7 @@ local function ai()
   })
 end
 
+-------------------- echasnovski/mini.nvim#miniindentscope
 local function treesitter()
   require("nvim-treesitter.configs").setup({
     ensure_installed = "all",
@@ -282,22 +284,6 @@ local function bufferline()
   })
 end
 
-local function installer()
-  require("nvim-lsp-installer").setup({
-    ui = {
-      keymaps = {
-        toggle_server_expand = "<TAB>",
-        install_server = "gi",
-        update_server = "gu",
-        check_server_version = "gv",
-        update_all_servers = "gU",
-        check_outdated_servers = "gO",
-        uninstall_server = "gd",
-      },
-    }
-  })
-end
-
 -------------------- gbprod/cutlass.nvim
 local function cutlass()
   require("cutlass").setup({
@@ -312,45 +298,6 @@ local function comment()
   require("Comment").setup()
 end
 
--------------------- ghillb/cybu.nvim
-local function cybu()
-  cmd([[
-    highlight currentBuffer guifg=white guibg=#1e2633
-    highlight adjacentBuffers guifg=#7a7c9e
-    highlight buffersWindow guibg=#0a172e
-    ]])
-  require("cybu").setup({
-    position = {
-      relative_to = "win",
-      anchor = "bottomleft",
-      horizontal_offset = 7,
-      vertical_offset = -2,
-      max_win_height = 20,
-      max_win_width = 0.5,
-    },
-    style = {
-      hide_buffer_id = true,
-      -- path = "tail",
-      border = "none",
-      separator = " ",
-      prefix = "…",
-      padding = 1,
-      devicons = {
-        enabled = true,
-        colored = true,
-      },
-      highlights = {
-        current_buffer = "currentBuffer",
-        adjacent_buffers = "adjacentBuffers",
-        background = "buffersWindow",
-      },
-    },
-    display_time = 1200,
-    exclude = { "qf" },
-    fallback = function() end,
-  })
-end
-
 -------------------- jonatan-branting/nvim-better-n
 local function bettern()
   require("better-n").setup {
@@ -360,41 +307,6 @@ local function bettern()
       ["T"] = { previous = "n", next = "<s-n>" },
     }
   }
-end
-
--------------------- RRethy/nvim-base16
-local function base16()
-  require('base16-colorscheme').setup({
-    base00 = "none",
-    base01 = "#262626",
-    base02 = "#353340",
-    base03 = "#4B4761",
-    base04 = "#6F6F6F",
-    base05 = "#FAFAFA",
-    base06 = "#FAFAFA",
-    base07 = "#FAFAFA",
-    -- base08 = "#DD25FF",
-    -- base08 = "#00FFC8",
-    -- base08 = "#86FFE5",
-    -- base08 = "#00FFC8",
-    base08 = "#BAB8FF",
-    base09 = "#72FF00",
-    -- base0A = "#9FC8FF",
-    base0A = "#B2FFFC",
-    -- base0A = "#FF0048",
-    -- base0A = "#B800FF",
-    -- base0A = "#FF0053",
-    -- base0A = "#73FAFF",
-    -- base0B = "#FF0053",
-    base0B = "#BDFFBC",
-    base0C = "#FF4100",
-    -- base0C = "#FF2D4D",
-    -- base0C = "#00FF92",
-    base0D = "#9700FF",
-    -- base0E = "#55FFE3",
-    base0E = "#00FF92",
-    base0F = "#FAFAFA",
-  })
 end
 
 return {
@@ -409,9 +321,6 @@ return {
   cutlass = cutlass,
   comment = comment,
   treesitter = treesitter,
-  cybu = cybu,
-  base16 = base16,
-  installer = installer,
   ai = ai,
   bettern = bettern,
 }
