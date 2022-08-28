@@ -8,13 +8,14 @@ local function core()
   augroup("chezmoi", { clear = true })
   augroup("tmux", { clear = true })
   augroup("diagnostic", { clear = true })
-  augroup("bufferline", { clear = true })
+  augroup("qf", { clear = true })
 
   autocmd("BufWritePost", {
     group = "chezmoi",
     pattern = "~/.local/share/chezmoi/*",
     command = ":silent! !chezmoi apply --source-path %",
   })
+
   autocmd("BufLeave", {
     group = "chezmoi",
     pattern = "~/.config/cheatsheet.md",
@@ -40,32 +41,23 @@ local function core()
     end
   })
 
-  local qf = augroup("qf", { clear = true })
-
   -- Exclude quickfix buffer from the buffer list
   autocmd("FileType", {
+    group = "qf",
     pattern = "qf",
-    group = qf,
     command = "set nobuflisted",
   })
 
   -- Automatically fitting a quickfix window to 10 lines max and 3 lines min height
   autocmd("FileType", {
+    group = "qf",
     pattern = "qf",
-    group = qf,
     callback = function() cmd(math.max(math.min(fn.line("$"), 10), 3) .. "wincmd _") end,
   })
 end
 
--- local function bufferline()
---   cmd([[
---   autocmd ColorScheme * highlight BufferLineFill guibg=none
---   autocmd ColorScheme * highlight BufferLineBackground guifg=#7a7c9e
---   autocmd ColorScheme * highlight BufferLineBufferSelected guifg=white gui=none
---   ]])
--- end
-
 local function bufferline()
+  augroup("bufferline", { clear = true })
   autocmd("ColorScheme", {
     group = "bufferline",
     pattern = "*",
@@ -75,14 +67,6 @@ local function bufferline()
       hi(0, 'BufferLineBufferSelected', { fg = 'white', bg = 'none' })
     end
   })
-end
-
-local function sneak()
-  cmd([[
-  " autocmd User SneakLeave highlight clear Sneak
-  " autocmd User SneakLeave highlight clear SneakScope
-  autocmd ColorScheme * highlight Sneak guifg=black guibg=red ctermfg=black ctermbg=red
-  ]])
 end
 
 local function packer()
@@ -127,23 +111,6 @@ end
 --   ]])
 -- end
 
--- local function targets()
---   cmd([[
---     autocmd User targets#mappings#user call targets#mappings#extend({
---     \ 'b': {'argument': [{'o': '(', 'c': ')', 's': ','}]},
---     \ 'a': {'argument': [{'o': '\[', 'c': '\]', 's': ','}]},
---     \ 'o': {'argument': [{'o': '{', 'c': '}', 's': ','}]},
---     \ 'B': {'pair': [{'o':'(', 'c':')'}]},
---     \ 'A': {'pair': [{'o':'[', 'c':']'}]},
---     \ 'O': {'pair': [{'o':'{', 'c':'}'}]},
---     \ 'Q': {'quote': [{'d': '`'}]},
---     \ 's': { 'separator': [{'d':','}, {'d':'.'}, {'d':';'}, {'d':':'}, {'d':'+'}, {'d':'-'},
---     \ {'d':'='}, {'d':'~'}, {'d':'_'}, {'d':'*'}, {'d':'#'}, {'d':'/'},
---     \ {'d':'\'}, {'d':'|'}, {'d':'&'}, {'d':'$'}] },
---     \ })
---   ]])
--- end
-
 -- local function telescope()
 --   cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
 --   cmd([[autocmd ColorScheme * highlight TelescopeNormal guibg=none]])
@@ -152,7 +119,6 @@ end
 return {
   packer = packer,
   indentscope = indentscope,
-  sneak = sneak,
   core = core,
   bufferline = bufferline,
 }
