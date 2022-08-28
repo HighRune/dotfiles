@@ -7,7 +7,8 @@ local hi = vim.api.nvim_set_hl
 local function core()
   augroup("chezmoi", { clear = true })
   augroup("tmux", { clear = true })
-  augroup("colorscheme", { clear = true })
+  augroup("diagnostic", { clear = true })
+  augroup("bufferline", { clear = true })
 
   autocmd("BufWritePost", {
     group = "chezmoi",
@@ -27,7 +28,7 @@ local function core()
   })
 
   autocmd("ColorScheme", {
-    group = "colorscheme",
+    group = "diagnostic",
     pattern = "*",
     callback = function()
       hi(0, 'DiagnosticFloatingError', { link = 'DiagnosticVirtualTextError' })
@@ -56,12 +57,24 @@ local function core()
   })
 end
 
+-- local function bufferline()
+--   cmd([[
+--   autocmd ColorScheme * highlight BufferLineFill guibg=none
+--   autocmd ColorScheme * highlight BufferLineBackground guifg=#7a7c9e
+--   autocmd ColorScheme * highlight BufferLineBufferSelected guifg=white gui=none
+--   ]])
+-- end
+
 local function bufferline()
-  cmd([[
-  autocmd ColorScheme * highlight BufferLineFill guibg=none
-  autocmd ColorScheme * highlight BufferLineBackground guifg=#7a7c9e
-  autocmd ColorScheme * highlight BufferLineBufferSelected guifg=white gui=none
-  ]])
+  autocmd("ColorScheme", {
+    group = "bufferline",
+    pattern = "*",
+    callback = function()
+      hi(0, 'BufferLineFill', { bg = 'none' })
+      hi(0, 'BufferLineBackground', { fg = '#7a7c9e' })
+      hi(0, 'BufferLineBufferSelected', { fg = 'white', bg = 'none' })
+    end
+  })
 end
 
 local function sneak()
