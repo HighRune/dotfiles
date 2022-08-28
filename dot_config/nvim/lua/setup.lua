@@ -127,7 +127,7 @@ local function gitsigns()
   })
 end
 
--------------------- echasnovski/mini.nvim#miniai
+-------------------- echasnovski/mini.nvim#miniindentscope
 local function indentscope()
   local scope = require("mini.indentscope")
   scope.setup({
@@ -180,28 +180,15 @@ local function ai()
   })
 end
 
--------------------- echasnovski/mini.nvim#miniindentscope
+-------------------- nvim-treesitter/nvim-treesitter
 local function treesitter()
   require("nvim-treesitter.configs").setup({
     ensure_installed = "all",
-    highlight = {
-      enable = true,
-    },
-    indent = {
-      enable = true,
-    },
-    -- windwp/nvim-autopairs
-    autopairs = {
-      enable = true,
-    },
-    -- JoosepAlviste/nvim-ts-context-commentstring
-    -- context_commentstring = {
-    -- 	enable = true,
-    -- },
-    -- windwp/nvim-ts-autotag
-    autotag = {
-      enable = true,
-    },
+    highlight = { enable = true, },
+    indent = { enable = true, },
+    autopairs = { enable = true, }, -- windwp/nvim-autopairs
+    autotag = { enable = true, }, -- windwp/nvim-ts-autotag
+    -- matchup = { enable = true, }, -- andymass/vim-matchup
     -- p00f/nvim-ts-rainbow
     rainbow = {
       enable = false,
@@ -212,42 +199,40 @@ local function treesitter()
         "#FAFF00"
       },
     },
-    -- andymass/vim-matchup
-    -- matchup = {
-    -- 	enable = true,
-    -- },
+
     -- nvim-treesitter/nvim-treesitter-textobjects
-    textobjects = {
-      -- select = {
-      --   enable = true,
-      --   lookahead = true,
-      --   keymaps = {
-      --     ["af"] = "@function.outer",
-      --     ["if"] = "@function.inner",
-      --     ["aF"] = "@call.outer",
-      --     ["iF"] = "@call.inner",
-      --   },
-      -- },
-      -- move = {
-      -- 	enable = true,
-      -- 	set_jumps = true,
-      -- 	goto_next_start = {
-      -- 		["]]"] = "@function.outer",
-      -- 	},
-      -- 	goto_previous_start = {
-      -- 		["[["] = "@function.outer",
-      -- 	},
-      -- },
-      -- swap = {
-      -- 	enable = true,
-      -- 	swap_next = {
-      -- 		["<c-k>"] = "@parameter.inner",
-      -- 	},
-      -- 	swap_previous = {
-      -- 		["<c-j>"] = "@parameter.inner",
-      -- 	},
-      -- },
-    },
+    -- textobjects = {
+    -- select = {
+    --   enable = true,
+    --   lookahead = true,
+    --   keymaps = {
+    --     ["af"] = "@function.outer",
+    --     ["if"] = "@function.inner",
+    --     ["aF"] = "@call.outer",
+    --     ["iF"] = "@call.inner",
+    --   },
+    -- },
+    -- move = {
+    -- 	enable = true,
+    -- 	set_jumps = true,
+    -- 	goto_next_start = {
+    -- 		["]]"] = "@function.outer",
+    -- 	},
+    -- 	goto_previous_start = {
+    -- 		["[["] = "@function.outer",
+    -- 	},
+    -- },
+    -- swap = {
+    -- 	enable = true,
+    -- 	swap_next = {
+    -- 		["<c-k>"] = "@parameter.inner",
+    -- 	},
+    -- 	swap_previous = {
+    -- 		["<c-j>"] = "@parameter.inner",
+    -- 	},
+    -- },
+    -- },
+
     -- nvim-treesitter/playground
     -- playground = {
     -- 	enable = true,
