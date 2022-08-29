@@ -29,7 +29,7 @@ return function()
     keymap = {
       recommended = false,
       pre_select = true,
-      jump_to_mark = '',
+      jump_to_mark = '<c-cr>',
       bigger_preview = '',
       ['repeat'] = '',
     },
