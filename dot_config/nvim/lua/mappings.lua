@@ -6,6 +6,8 @@ local call = vim.call
 local api = vim.api
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
+local diagnostic = vim.diagnostic
+local lsp = vim.lsp
 local silent = { silent = true }
 local expr = { expr = true }
 local remap = { remap = true }
@@ -331,11 +333,11 @@ local function lspconfig(buffer)
   map("n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", {
     buffer = buffer,
   })
-  map("n", '<leader>f', "<cmd>lua vim.lsp.buf.format()<CR>", { buffer = buffer })
+  map("n", '<leader>f', lsp.buf.format, { buffer = buffer })
   map("n", '<down>', "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
   map("n", '<up>', "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
-  map('n', '<leader>l', vim.diagnostic.setloclist, { noremap = true, silent = true })
-  map('n', '<leader>x', vim.diagnostic.setqflist, { noremap = true, silent = true })
+  map('n', '<leader>l', diagnostic.setloclist, { noremap = true, silent = true })
+  map('n', '<leader>x', diagnostic.setqflist, { noremap = true, silent = true })
   -- map("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", { buffer = buffer })
   -- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
   -- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
@@ -408,7 +410,6 @@ return {
   fzf = fzf,
   dial = dial,
   sneak = sneak,
-  targets = targets,
   gitsigns = gitsigns,
   textobjchainmember = textobjchainmember,
   vindent = vindent,
