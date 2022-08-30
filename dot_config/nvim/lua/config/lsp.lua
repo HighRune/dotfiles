@@ -59,10 +59,10 @@ return function()
     on_attach(client, buffer)
   end
 
-  -- local function on_attach_volar(client, buffer)
-  --   client.server_capabilities.documentFormattingProvider = false
-  --   on_attach(client, buffer)
-  -- end
+  local function on_attach_volar(client, buffer)
+    client.server_capabilities.documentFormattingProvider = false
+    on_attach(client, buffer)
+  end
 
   local lspconfig = require("lspconfig")
   local lsp_flags = { debounce_text_changes = 0 }
@@ -85,6 +85,11 @@ return function()
   lspconfig['yamlls'].setup({
     on_attach = on_attach_sumneko_lua,
     settings = { format = { enable = true } },
+    flags = lsp_flags,
+  })
+  lspconfig['volar'].setup({
+    on_attach = on_attach_volar,
+    settings = { format = { enable = false } },
     flags = lsp_flags,
   })
 end
