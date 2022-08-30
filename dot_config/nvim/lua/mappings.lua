@@ -133,9 +133,6 @@ local function core()
   -- ]])
 end
 
--------------------- wbthomason/packer.nvim
-local function packer() end
-
 -------------------- nvim-telescope/telescope.nvim
 local function telescope()
   -- map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts)
@@ -150,40 +147,6 @@ local function fzf()
   map("n", "<Leader>h", "<cmd>lua require('fzf-lua').help_tags()<CR>")
   -- map("n", "<Leader><Tab>", "<cmd>lua require('fzf-lua').buffers()<CR>")
   -- map("n", "<Leader>x", "<cmd>lua require('fzf-lua').quickfix({multiprocess=true})<CR>")
-end
-
--------------------- wellle/targets.vim
-local function targets()
-  -- Text objects
-  -- -- map("o", "p", "ip", remap)
-  -- map("o", "np", "inp", remap)
-  -- map("o", "lp", "ilp", remap)
-  -- -- map("o", "P", "iP", remap)
-  -- map("o", "nP", "inP", remap)
-  -- map("o", "lP", "ilP", remap)
-  -- -- map("o", "q", "iq", remap)
-  -- map("o", "lq", "ilq", remap)
-  -- map("o", "nq", "inq", remap)
-  -- -- map("o", "Q", "iQ", remap)
-  -- map("o", "lQ", "ilQ", remap)
-  -- map("o", "nQ", "inQ", remap)
-
-  -- Motions
-  -- map("n", "ga", "vInao<esc>", remap)
-  -- map("n", "gA", "vIlao<esc>", remap)
-  -- map("n", "gA", "vanAo<esc>", remap)
-  -- map("n", "gp", "vInpo<esc>", remap)
-  -- map("n", "gP", "vanPo<esc>", remap)
-  -- map("n", "ge", "vIneo<esc>", remap)
-  -- map("n", "gE", "vanEo<esc>", remap)
-  -- map("n", "gq", "vanqo<esc>", remap)
-  -- map("n", "gQ", "vanQo<esc>", remap)
-
-  -- cmd([[
-  -- nmap <silent> <Plug>goToNextQuote  vanqo<esc>
-  -- \ :call repeat#set("\<Plug>goToNextQuote", v:count)<cr>
-  -- nmap gq <Plug>goToNextQuote
-  -- ]])
 end
 
 -------------------- phaazon/hop.nvim
@@ -431,34 +394,6 @@ local function textobjchainmember()
   -- map("o", "", "<Plug>(textobj-chainmember-next-i)")
 end
 
--------------------- AndrewRadev/sideways.vim
--- local function sideways()
--- map("n", "<c-j>", ":SidewaysLeft<cr>", opts)
--- map("n", "<c-k>", ":SidewaysRight<cr>", opts)
--- end
--------------------- bkad/CamelCaseMotion
--- local function camelCaseMotion()
--- cmd([[
--- map <silent> W <Plug>CamelCaseMotion_w
--- map <silent> B <Plug>CamelCaseMotion_b
--- map <silent> E <Plug>CamelCaseMotion_e
--- map <silent> gE <Plug>CamelCaseMotion_ge
--- omap <silent> iW <Plug>CamelCaseMotion_iw
--- omap <silent> iB <Plug>CamelCaseMotion_ib
--- omap <silent> iE <Plug>CamelCaseMotion_ie
--- xmap <silent> iW <Plug>CamelCaseMotion_iw
--- xmap <silent> iB <Plug>CamelCaseMotion_ib
--- xmap <silent> iE <Plug>CamelCaseMotion_ie
--- ]])
--- end
--------------------- bfredl/nvim-miniyank
--- local function miniyank()
--- map("", "p", "<Plug>(miniyank-autoput)", { silent = true })
--- map("", "P", "<Plug>(miniyank-autoPut)", { silent = true })
--- map("", "<c-n>", "<Plug>(miniyank-cycle)", { silent = true })
--- map("", "<c-p>", "<Plug>(miniyank-cycleback)", { silent = true })
--- end
-
 return {
   core = core,
   telescope = telescope,
@@ -475,17 +410,10 @@ return {
   sneak = sneak,
   targets = targets,
   gitsigns = gitsigns,
-  packer = packer,
   textobjchainmember = textobjchainmember,
   vindent = vindent,
   cybu = cybu,
   hydra = hydra,
   leap = leap,
   bettern = bettern
-  -- indentwise = indentwise,
-  -- pulse = pulse,
-  -- pounce = pounce,
-  -- miniyank = miniyank,
-  -- sideways = sideways,
-  -- camelCaseMotion = camelCaseMotion,
 }
