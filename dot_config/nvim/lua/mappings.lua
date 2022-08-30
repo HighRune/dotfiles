@@ -321,26 +321,15 @@ end
 
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
-  map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { buffer = buffer })
-  map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { buffer = buffer })
-  map("n", "<leader>i", "<cmd>lua vim.lsp.buf.implementation()<CR>", { buffer = buffer })
-  map("n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", { buffer = buffer })
-  map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", { buffer = buffer })
-  map("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<CR>", { buffer = buffer })
-  map("n", "<leader>a", "<cmd>lua vim.lsp.buf.code_action()<CR>", { buffer = buffer })
-  map("n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", { buffer = buffer })
-  map("n", "<leader>wd", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", { buffer = buffer })
-  map("n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", {
-    buffer = buffer,
-  })
+  map("n", "gd", lsp.buf.definition, { buffer = buffer })
+  map("n", "gr", lsp.buf.references, { buffer = buffer })
   map("n", '<leader>f', lsp.buf.format, { buffer = buffer })
-  map("n", '<down>', "<cmd>lua vim.diagnostic.goto_prev()<CR>", { buffer = buffer })
-  map("n", '<up>', "<cmd>lua vim.diagnostic.goto_next()<CR>", { buffer = buffer })
+  map("n", '<down>', diagnostic.goto_prev, { buffer = buffer })
+  map("n", '<up>', diagnostic.goto_next, { buffer = buffer })
   map('n', '<leader>l', diagnostic.setloclist, { noremap = true, silent = true })
   map('n', '<leader>x', diagnostic.setqflist, { noremap = true, silent = true })
-  -- map("n", "<leader>h", "<cmd>lua vim.diagnostic.open_float()<CR>", { buffer = buffer })
-  -- "<cmd>lua vim.lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' ))<CR>"
-  -- "<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>"
+  -- lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' })
+  -- lsp.buf.formatting_seq_sync
 end
 
 local function coq()
