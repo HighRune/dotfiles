@@ -8,7 +8,6 @@ return require("packer").startup({
     use({
       "wbthomason/packer.nvim",
       config = function()
-        require("mappings").packer()
         require("autocmd").packer()
       end,
     })
