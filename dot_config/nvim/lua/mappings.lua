@@ -416,5 +416,5 @@ return {
   cybu = cybu,
   hydra = hydra,
   leap = leap,
-  bettern = bettern
+  bettern = bettern,
 }
