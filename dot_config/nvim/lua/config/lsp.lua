@@ -35,6 +35,7 @@ return function()
       'eslint',
       'sumneko_lua',
       'yamlls',
+      'volar',
     },
     automatic_installation = true,
   })
