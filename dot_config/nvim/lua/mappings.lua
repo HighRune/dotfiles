@@ -259,15 +259,15 @@ local function bufferline()
   map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", silent)
   map("n", "<pageup>", ":BufferLineMovePrev<cr>", silent)
   map("n", "<pagedown>", ":BufferLineMoveNext<cr>", silent)
-  map("n", "<a-1>", function () require("bufferline").go_to_buffer(1) end)
-  map("n", "<a-2>", function () require("bufferline").go_to_buffer(2) end)
-  map("n", "<a-3>", function () require("bufferline").go_to_buffer(3) end)
-  map("n", "<a-4>", function () require("bufferline").go_to_buffer(4) end)
-  map("n", "<a-5>", function () require("bufferline").go_to_buffer(5) end)
-  map("n", "<a-6>", function () require("bufferline").go_to_buffer(6) end)
-  map("n", "<a-7>", function () require("bufferline").go_to_buffer(7) end)
-  map("n", "<a-8>", function () require("bufferline").go_to_buffer(8) end)
-  map("n", "<a-9>", function () require("bufferline").go_to_buffer(-1) end)
+  map("n", "<a-1>", function() require("bufferline").go_to_buffer(1) end)
+  map("n", "<a-2>", function() require("bufferline").go_to_buffer(2) end)
+  map("n", "<a-3>", function() require("bufferline").go_to_buffer(3) end)
+  map("n", "<a-4>", function() require("bufferline").go_to_buffer(4) end)
+  map("n", "<a-5>", function() require("bufferline").go_to_buffer(5) end)
+  map("n", "<a-6>", function() require("bufferline").go_to_buffer(6) end)
+  map("n", "<a-7>", function() require("bufferline").go_to_buffer(7) end)
+  map("n", "<a-8>", function() require("bufferline").go_to_buffer(8) end)
+  map("n", "<a-9>", function() require("bufferline").go_to_buffer(-1) end)
 end
 
 -------------------- AndrewRadev/splitjoin.vim
@@ -342,10 +342,34 @@ end
 local function hydra()
   local Hydra = require('hydra')
 
-  Hydra({ name = 'go', mode = 'n', body = 'g', heads = {
-    { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>', { silent = true } },
-    { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true } },
-  } })
+  Hydra({ name = 'go', mode = 'n', body = 'g',
+    heads = {
+      { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>', { silent = true } },
+      { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true } },
+    }
+  })
+
+  Hydra({ mode = 'n', body = '<c-u>',
+    config = {
+      invoke_on_body = true,
+      on_enter = function() fn.execute("normal! 5k") end,
+    },
+    heads = {
+      { 'u', '5k' },
+      { 'e', '5j' },
+    }
+  })
+
+  Hydra({ mode = 'n', body = '<c-e>',
+    config = {
+      invoke_on_body = true,
+      on_enter = function() fn.execute("normal! 5j") end,
+    },
+    heads = {
+      { 'u', '5k' },
+      { 'e', '5j' },
+    }
+  })
 
   -- Hydra({ name = 'scroll', mode = 'n', body = '<C-u>', config = { invoke_on_body = true }, heads = {
   --   { 'u', '5k' },
