@@ -342,10 +342,10 @@ end
 local function hydra()
   local Hydra = require('hydra')
 
-  Hydra({ name = 'go', mode = 'n', body = 'g',
+  Hydra({ name = 'newline', mode = 'n', body = 'g',
     heads = {
-      { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>', { silent = true } },
-      { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>', { silent = true } },
+      { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>' },
+      { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>' },
     }
   })
 
@@ -353,6 +353,7 @@ local function hydra()
     config = {
       invoke_on_body = true,
       on_enter = function() fn.execute("normal! 5k") end,
+      hint = false,
     },
     heads = {
       { 'u', '5k' },
@@ -360,10 +361,11 @@ local function hydra()
     }
   })
 
-  Hydra({ mode = 'n', body = '<c-e>',
+  Hydra({ name = 'scroll', mode = 'n', body = '<c-e>',
     config = {
       invoke_on_body = true,
       on_enter = function() fn.execute("normal! 5j") end,
+      hint = false
     },
     heads = {
       { 'u', '5k' },
