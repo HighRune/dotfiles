@@ -342,36 +342,30 @@ end
 local function hydra()
   local Hydra = require('hydra')
 
-  Hydra({ name = 'newline', mode = 'n', body = 'g',
-    heads = {
-      { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>' },
-      { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>' },
-    }
-  })
+  Hydra({ name = 'newline', mode = 'n', body = 'g', heads = {
+    { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>' },
+    { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>' },
+  } })
 
-  Hydra({ mode = 'n', body = '<c-u>',
-    config = {
-      invoke_on_body = true,
-      on_enter = function() fn.execute("normal! 5k") end,
-      hint = false,
-    },
-    heads = {
-      { 'u', '5k' },
-      { 'e', '5j' },
-    }
-  })
+  local scroll = Hydra({ mode = 'n', config = { hint = false }, heads = {
+    { 'u', '5k' },
+    { 'e', '5j' },
+  } })
 
-  Hydra({ name = 'scroll', mode = 'n', body = '<c-e>',
-    config = {
-      invoke_on_body = true,
-      on_enter = function() fn.execute("normal! 5j") end,
-      hint = false
-    },
-    heads = {
-      { 'u', '5k' },
-      { 'e', '5j' },
-    }
-  })
+  map("n", "<C-e>", function() scroll:activate() fn.execute("normal! 5j") end)
+  map("n", "<C-u>", function() scroll:activate() fn.execute("normal! 5k") end)
+
+  -- Hydra({ name = 'scroll', mode = 'n', body = '<c-e>',
+  --   config = {
+  --     invoke_on_body = true,
+  --     on_enter = function() fn.execute("normal! 5j") end,
+  --     hint = false
+  --   },
+  --   heads = {
+  --     { 'u', '5k' },
+  --     { 'e', '5j' },
+  --   }
+  -- })
 
   -- Hydra({ name = 'scroll', mode = 'n', body = '<C-u>', config = { invoke_on_body = true }, heads = {
   --   { 'u', '5k' },
