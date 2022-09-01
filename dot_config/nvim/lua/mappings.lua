@@ -33,9 +33,7 @@ local function core()
   map("x", "<C-n>", ":norm ")
   map("n", "<esc>", "<esc>^")
   map("x", "p", '"_dP')
-  -- map({ "n", "v" }, "x", '"_x')
-  -- map({ 'n', 'x' }, 's', 'f')
-  -- map({ 'n', 'x' }, 'S', 'F')
+  map({ "n", "v" }, "x", '"_x')
   -- Delete
   map({ "n", "v" }, "d", '"_d')
   map("n", "D", '"_D')
@@ -52,7 +50,6 @@ local function core()
   map("i", "<C-e>", "<end>")
   map("i", "<C-k>", "<esc>ld$i")
   -- Motions
-  -- map({ "n", "x", "o" }, "s", "l")
   map("n", "k", "gk")
   map("n", "j", "gj")
   map("n", "0", "g0")
@@ -109,30 +106,6 @@ local function core()
   -- map({ "n", "x" }, "gsP", require("booster").putCharwiseSurround('gewP'))
 
   -- -- stylua: ignore
-  -- map("n", "gm", "(virtcol('$') / 2) . '<Bar>'", { expr = true })
-  -- Words
-  -- map("o", "w", "iw")
-  -- map("o", "W", "iW", remap)
-
-  -- Cut
-  -- map("x", "d", "ygvd", opts)
-  -- map("x", "c", "ygvc", opts)
-  -- map("x", "x", "ygvx", opts)
-  -- Join
-  -- cmd([[
-  -- " Like gJ, but always remove spaces
-  -- fun! s:join_spaceless()
-  -- execute 'normal! gJ'
-
-  -- " Remove character under the cursor if it's whitespace.
-  -- if matchstr(getline('.'), '\%' . col('.') . 'c.') =~ '\s'
-  -- execute 'normal! dw'
-  -- endif
-  -- endfun
-
-  -- " Map it to a key
-  -- nnoremap J :call <SID>join_spaceless()<CR>
-  -- ]])
 end
 
 -------------------- nvim-telescope/telescope.nvim
@@ -151,30 +124,10 @@ local function fzf()
   -- map("n", "<Leader>x", "<cmd>lua require('fzf-lua').quickfix({multiprocess=true})<CR>")
 end
 
--------------------- phaazon/hop.nvim
-local function hop()
-  -- map("n", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
-  -- map("v", "s", "<cmd>lua require('hop').hint_words()<cr>", {})
-
-  -- map("n", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
-  -- map("v", "l", "<cmd>lua require('hop').hint_lines()<cr>", {})
-end
-
--------------------- ghillb/cybu.nvim
-local function cybu()
-  map("n", "<Tab>", "<Plug>(CybuNext)")
-  map("n", "<S-Tab>", "<Plug>(CybuPrev)")
-end
-
 -------------------- jonatan-branting/nvim-better-n
 local function bettern()
   map("n", "n", require("better-n").n, { nowait = true })
   map("n", "<s-n>", require("better-n").shift_n, { nowait = true })
-end
-
-local function vindent()
-  -- g.vindent_motion_diff_prev = "<C-k>"
-  -- g.vindent_motion_diff_next = "<C-j>"
 end
 
 -------------------- inside/vim-search-pulse
@@ -188,14 +141,6 @@ end
 -- " when doing search with / or ?
 -- cmap <silent> <expr> <enter> search_pulse#PulseFirst()
 -- ]])
--- end
-
--------------------- jeetsukumaran/vim-indentwise
--- local function indentwise()
--- map("n", "<C-k>", "<Plug>(IndentWisePreviousGreaterIndent)")
--- map("n", "<C-j>", "<Plug>(IndentWiseNextLesserIndent)")
--- map("n", "<C-right>", "<Plug>(IndentWisePreviousLesserIndent)")
--- map("n", "<C-left>", "<Plug>(IndentWiseNextGreaterIndent)")
 -- end
 
 local function leap()
@@ -283,14 +228,6 @@ local function fm()
   map("n", "<leader>n", ":Vifm<cr>")
 end
 
--------------------- kana/vim-arpeggio
-local function arpeggio()
-  -- call("arpeggio#map", "n", "", 0, "ns", "8s")
-  -- call("arpeggio#map", "n", "", 0, "NS", "8S")
-  -- call("arpeggio#map", "n", "e", 0, "hl", "(virtcol('$') / 2) . '<Bar>'")
-  -- map("n", "<Plug>(arpeggio-default:s)", "l")
-end
-
 -------------------- monaqa/dial.nvim
 local function dial()
   map("n", "<C-a>", require("dial.map").inc_normal())
@@ -366,7 +303,6 @@ return {
   core = core,
   telescope = telescope,
   splitjoin = splitjoin,
-  arpeggio = arpeggio,
   fm = fm,
   lspconfig = lspconfig,
   hop = hop,
@@ -378,7 +314,6 @@ return {
   gitsigns = gitsigns,
   textobjchainmember = textobjchainmember,
   vindent = vindent,
-  cybu = cybu,
   hydra = hydra,
   leap = leap,
   bettern = bettern,
