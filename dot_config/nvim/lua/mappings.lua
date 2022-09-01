@@ -301,10 +301,6 @@ local function dial()
   map("v", "g<C-x>", require("dial.map").dec_gvisual())
 end
 
--------------------- chaoren/vim-wordmotion
-local function wordmotion()
-end
-
 -------------------- neovim/nvim-lspconfig
 local function lspconfig(buffer)
   map("n", "gd", lsp.buf.definition, { buffer = buffer })
@@ -333,6 +329,7 @@ local function hydra()
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>' },
   } })
 
+  -------------------- chaoren/vim-wordmotion
   local wordMotion = Hydra({ mode = { 'o', 'n', 'x' }, config = { hint = false, color = 'pink' }, heads = {
     { 'w', '<Plug>WordMotion_w' },
     { 'b', '<Plug>WordMotion_b' },
@@ -371,7 +368,6 @@ return {
   splitjoin = splitjoin,
   arpeggio = arpeggio,
   fm = fm,
-  wordmotion = wordmotion,
   lspconfig = lspconfig,
   hop = hop,
   bufferline = bufferline,
