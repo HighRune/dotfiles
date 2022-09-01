@@ -304,19 +304,6 @@ end
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
   g.wordmotion_nomap = 1
-  -- map({ "n", "o", "x" }, "gw", "<Plug>WordMotion_w")
-  -- map({ "n", "o", "x" }, "W", "<Plug>WordMotion_w")
-  -- map({ "n", "o", "x" }, "B", "<Plug>WordMotion_b")
-  -- map({ "n", "o", "x" }, "E", "<Plug>WordMotion_e")
-  -- map({ "n", "o", "x" }, "gE", "<Plug>WordMotion_ge")
-  -- map({ "o", "x" }, "iW", "<Plug>WordMotion_iw")
-  -- map({ "o", "x" }, "aW", "<Plug>WordMotion_aw")
-  -- map({ "n", "o", "x" }, "w", "<Plug>WordMotion_W")
-  -- map({ "n", "o", "x" }, "b", "<Plug>WordMotion_B")
-  -- map({ "n", "o", "x" }, "e", "<Plug>WordMotion_E")
-  -- map({ "n", "o", "x" }, "ge", "<Plug>WordMotion_gE")
-  -- map({ "o", "x" }, "iw", "<Plug>WordMotion_iW")
-  -- map({ "o", "x" }, "aw", "<Plug>WordMotion_aW")
 end
 
 -------------------- neovim/nvim-lspconfig
@@ -347,52 +334,26 @@ local function hydra()
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>' },
   } })
 
+  local wordMotion = Hydra({ mode = { 'o', 'n', 'x' }, config = { hint = false, color = 'pink' }, heads = {
+    { 'w', '<Plug>WordMotion_w' },
+    { 'b', '<Plug>WordMotion_b' },
+    { 'e', '<Plug>WordMotion_e' },
+    { 'iw', '<Plug>WordMotion_iw' },
+    { 'aw', '<Plug>WordMotion_aw' },
+    { 'ge', '<Plug>WordMotion_ge' },
+    { 'q', nil, { exit = true } },
+    { '<Esc>', nil, { exit = true } },
+    { '<C-s>', nil, { exit = true } }
+  } })
+
   local scroll = Hydra({ mode = 'n', config = { hint = false }, heads = {
     { 'u', '5k' },
     { 'e', '5j' },
   } })
 
-  map("n", "<C-e>", function() scroll:activate() fn.execute("normal! 5j") end)
-  map("n", "<C-u>", function() scroll:activate() fn.execute("normal! 5k") end)
-
-  -- Hydra({ name = 'scroll', mode = 'n', body = '<c-e>',
-  --   config = {
-  --     invoke_on_body = true,
-  --     on_enter = function() fn.execute("normal! 5j") end,
-  --     hint = false
-  --   },
-  --   heads = {
-  --     { 'u', '5k' },
-  --     { 'e', '5j' },
-  --   }
-  -- })
-
-  -- Hydra({ name = 'scroll', mode = 'n', body = '<C-u>', config = { invoke_on_body = true }, heads = {
-  --   { 'u', '5k' },
-  --   { 'e', '5j' },
-  -- } })
-
-  -- Hydra({ name = 'gw', mode = { 'o', 'n' }, body = 'gw',
-  --   config = {
-  --     color = 'pink',
-  --     invoke_on_body = true,
-  --     on_enter = function()
-  --       print('hydra enter')
-  --     end
-  --   },
-  --   heads = {
-  --     { 'w', '<Plug>WordMotion_w', { silent = true } },
-  --     { 'b', '<Plug>WordMotion_b', { silent = true } },
-  --     { 'e', '<Plug>WordMotion_e', { silent = true } },
-  --     { 'iw', '<Plug>WordMotion_iw', { silent = true } },
-  --     { 'aw', '<Plug>WordMotion_aw', { silent = true } },
-  --     { 'q', nil, { exit = true } },
-  --     { '<Esc>', nil, { exit = true } },
-  --     { '<C-s>', nil, { exit = true } }
-  --   } })
-
-  -- map({ "n", "o", "x" }, "s", "<Plug>(textobj-specialcharacter)")
-  -- fn["submode#map"]("newline", "n", "s", "e", "<Plug>(textobj-specialcharacter)")
+  map({ 'n', 'x' }, "<C-e>", function() scroll:activate() fn.execute("normal! 5j") end)
+  map({ 'n', 'x' }, "<C-u>", function() scroll:activate() fn.execute("normal! 5k") end)
+  map({ 'n', 'x' }, 'gw', function() wordMotion:activate() end)
 end
 
 local function textobjchainmember()
