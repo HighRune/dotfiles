@@ -113,61 +113,6 @@ local function neoformat()
 end
 
 local function wordmotion()
-  -- local spaces = {
-  --   "_",
-  --   "-",
-  --   ",",
-  --   "/",
-  --   ".",
-  --   ":",
-  --   "<",
-  --   ">",
-  --   "(",
-  --   ")",
-  --   "[",
-  --   "]",
-  --   "{",
-  --   "}",
-  --   "&",
-  --   "#",
-  --   "@",
-  --   "*",
-  --   "=",
-  --   "!",
-  --   "+",
-  --   "?",
-  --   "'",
-  --   '"',
-  -- }
-  -- local upspaces = {
-  --   -- "_",
-  --   -- "-",
-  --   ",",
-  --   "/",
-  --   ".",
-  --   ":",
-  --   "<",
-  --   ">",
-  --   "(",
-  --   ")",
-  --   "[",
-  --   "]",
-  --   "{",
-  --   "}",
-  --   "&",
-  --   "#",
-  --   "@",
-  --   "*",
-  --   "=",
-  --   "!",
-  --   "+",
-  --   "?",
-  --   "'",
-  --   '"',
-  -- }
-  -- Move to the character following those characters
-  -- g.wordmotion_spaces = spaces
-  -- g.wordmotion_uppercase_spaces = upspaces
 end
 
 local function textobjuser()
