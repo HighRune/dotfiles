@@ -185,7 +185,6 @@ return require("packer").startup({
         require("options").wordmotion()
       end,
     })
-    use("kana/vim-textobj-line")
     -- use("Julian/vim-textobj-variable-segment")
     use({
       "kana/vim-textobj-user",
