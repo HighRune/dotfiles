@@ -113,6 +113,7 @@ local function neoformat()
 end
 
 local function wordmotion()
+  g.wordmotion_nomap = 1
 end
 
 local function textobjuser()
