@@ -81,12 +81,6 @@ return require("packer").startup({
         require("setup").ai()
       end,
     })
-    use({
-      "jessekelighine/vindent.vim",
-      config = function()
-        require("mappings").vindent()
-      end,
-    })
     use("nvim-treesitter/nvim-treesitter-textobjects")
     use("windwp/nvim-ts-autotag")
     use("itchyny/vim-cursorword")
@@ -110,14 +104,6 @@ return require("packer").startup({
         require("mappings").splitjoin()
       end,
     })
-    -- use({
-    --   "wellle/targets.vim",
-    --   config = function()
-    --     require("mappings").targets()
-    --     require("options").targets()
-    --     require("autocmd").targets()
-    --   end,
-    -- })
     use({
       "windwp/nvim-autopairs",
       config = require("config.autopairs")(),
@@ -129,12 +115,6 @@ return require("packer").startup({
         require('setup').bufferline()
         require('autocmd').bufferline()
       end
-    })
-    use({
-      "kana/vim-arpeggio",
-      config = function()
-        require("mappings").arpeggio()
-      end,
     })
     use("rktjmp/lush.nvim")
     use({
@@ -253,14 +233,6 @@ return require("packer").startup({
   },
 })
 
--- use {
---   "folke/trouble.nvim",
---   requires = "kyazdani42/nvim-web-devicons",
---   -- config = function()
---   --   require("trouble").setup {
---   --   }
---   -- end
--- }
 -- use({
 --   "sbdchd/neoformat",
 --   config = function()
@@ -269,16 +241,6 @@ return require("packer").startup({
 --   end,
 -- })
 -- use("tpope/vim-repeat")
--- use({
--- 	"jeetsukumaran/vim-indentwise",
--- 	config = config.indentwise(),
--- })
--- use({
--- 	"jeetsukumaran/vim-indentwise",
--- 	config = function()
--- 		require("mappings").indentwise()
--- 	end,
--- })
 -- use("tpope/vim-commentary")
 -- use("JoosepAlviste/nvim-ts-context-commentstring")
 -- use("kana/vim-textobj-user")
@@ -289,90 +251,11 @@ return require("packer").startup({
 -- 		require("setup").pulse()
 -- 		require("mappings").pulse()
 -- 	end,
--- })
--- use("michaeljsmith/vim-indent-object")
--- use({
--- 	"lukas-reineke/indent-blankline.nvim",
--- 	-- config = require("setup").indentBlankline(),
--- })
--- use("Houl/repmo-vim")
--- use({
--- 	"andymass/vim-matchup",
--- })
--- use({
--- 	"rlane/pounce.nvim",
--- 	-- config = function()
--- 	-- 	require("setup").pounce()
--- 	-- 	require("mappings").pounce()
--- 	-- end,
--- })
--- use({
--- 	"phaazon/hop.nvim",
--- 	-- config = function()
--- 	-- 	require("setup").hop()
--- 	-- 	require("mappings").hop()
--- 	-- end,
--- })
 -- use({
 -- 	"nvim-telescope/telescope.nvim",
 -- 	-- config = require("config.telescope").setup(),
 -- })
--- use({
--- 	"svermeulen/vim-cutlass",
--- 	config = function()
--- 		require("mappings").cutlass()
--- 	end,
--- })
 -- use("bfredl/nvim-incnormal")
--- use({
--- 	"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
--- 	config = function()
--- 		require("lsp_lines").register_lsp_virtual_lines()
--- 	end,
--- })
--- use({
--- 	"bfredl/nvim-miniyank",
--- 	config = function()
--- 		require("setup").miniyank()
--- 		require("mappings").miniyank()
--- 	end,
--- })
--- use("svermeulen/vim-yoink")
--- use("matze/vim-move")
--- use("RRethy/nvim-treesitter-textsubjects")
--- use({ "ibhagwan/fzf-lua", requires = { "vijaymarupudi/nvim-fzf" } })
--- use({ "rrethy/vim-hexokinase", run = "make hexokinase", cmd = "HexokinaseTurnOn" })
--- use({
--- "bkad/CamelCaseMotion",
--- config = function()
--- require("mappings").camelCaseMotion()
--- end,
--- })
-
--------------------- kana/vim-arpeggio
--- cmd("call arpeggio#map('i', '', 0, 'jk', '<Esc>')")
-
--------------------- matze/vim-move
--- cmd("let g:move_key_modifier = 'S'")
-
 -------------------- AndrewRadev/sideways.vim
 -- api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 -- api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
-
--- -------------------- svermeulen/vim-yoink
--- cmd([[
--- nmap <c-n> <plug>(YoinkPostPasteSwapBack)
--- nmap <c-p> <plug>(YoinkPostPasteSwapForward)
-
--- nmap p <plug>(YoinkPaste_p)
--- nmap P <plug>(YoinkPaste_P)
-
--- " Also replace the default gp with yoink paste so we can toggle paste in this case too
--- nmap gp <plug>(YoinkPaste_gp)
--- nmap gP <plug>(YoinkPaste_gP)
-
--- let g:yoinkMaxItems = 5
--- let g:yoinkAutoFormatPaste = 1
--- let g:yoinkSwapClampAtEnds = 0
--- let g:yoinkSyncSystemClipboardOnFocus = 0
--- ]])
