@@ -303,7 +303,6 @@ end
 
 -------------------- chaoren/vim-wordmotion
 local function wordmotion()
-  g.wordmotion_nomap = 1
 end
 
 -------------------- neovim/nvim-lspconfig
