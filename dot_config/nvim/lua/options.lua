@@ -62,10 +62,6 @@ local function neoformat()
   g.neoformat_enabled_lua = { "stylua" }
 end
 
-local function wordmotion()
-  g.wordmotion_nomap = 1
-end
-
 local function textobjuser()
   -- fn["textobj#user#plugin"]("specialcharacters", {
   --   move = {
@@ -198,6 +194,5 @@ return {
   core = core,
   highlightedyank = highlightedyank,
   neoformat = neoformat,
-  wordmotion = wordmotion,
   textobjuser = textobjuser,
 }
