@@ -16,7 +16,7 @@ return require("packer").startup({
     use({
       "folke/tokyonight.nvim",
       config = function()
-        require("options").tokyonight()
+        require("setup").tokyonight()
       end,
     })
     use({
