@@ -48,11 +48,7 @@ local function core()
   o.foldexpr = "nvim_treesitter#foldexpr()"
 end
 
-local function neoformat()
-  g.neoformat_enabled_lua = { "stylua" }
-end
-
-local function textobjuser()
+-- local function textobjuser()
   -- fn["textobj#user#plugin"]("specialcharacters", {
   --   move = {
   --     pattern = [[\(\W\&\S\)\+]],
@@ -178,10 +174,8 @@ local function textobjuser()
   -- 	},
   -- })
   -- pattern = [[\S\+]],
-end
+-- end
 
 return {
   core = core,
-  neoformat = neoformat,
-  textobjuser = textobjuser,
 }
