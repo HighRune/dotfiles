@@ -28,13 +28,8 @@ local function core()
   o.showmode = false -- Disable message on the last line (Insert, Replace or Visual mode)
   o.linebreak = true -- Do not break words on line wrap
   o.breakindent = true -- Start wrapped lines indented
-  -- o.formatoptions = "cro"
-  -- vim.cmd([[filetype plugin indent on]])
-  -- o.showtabline=2  -- Always display the line with tab page labels
   o.ignorecase = true -- Ignore case in search patterns
   o.smartcase = true -- Override the 'ignorecase' option if the search pattern contains upper case characters
-  -- opt.iskeyword:remove({ "/", "(", "[", "{" })
-  -- opt.iskeyword:append({ "/", "(", "[", "{" })
   o.signcolumn = "yes:1"
   o.expandtab = true -- Use the appropriate number of spaces to insert a <Tab>
   o.smartindent = true -- Do smart autoindenting when starting a new line
@@ -48,7 +43,6 @@ local function core()
   opt.list = true
   opt.listchars:append("eol:↴")
   opt.laststatus = 3
-
   -- nvim-treesitter/nvim-treesitter
   o.foldmethod = "expr"
   o.foldexpr = "nvim_treesitter#foldexpr()"
