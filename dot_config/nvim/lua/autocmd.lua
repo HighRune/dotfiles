@@ -12,7 +12,7 @@ local function core()
   augroup("setlocal", { clear = true })
 
   -- Disable automatic comment insertion
-  autocmd({'BufWinEnter','BufRead','BufNewFile'}, {
+  autocmd({ 'BufWinEnter', 'BufRead', 'BufNewFile' }, {
     group = "setlocal",
     pattern = "*",
     command = "setlocal fo-=c fo-=r fo-=o fo+=t",
