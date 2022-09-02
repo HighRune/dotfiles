@@ -131,7 +131,7 @@ return require("packer").startup({
     use({
       "ggandor/leap.nvim",
       config = function()
-        require("options").leap()
+        require("setup").leap()
         require("mappings").leap()
       end
     })
