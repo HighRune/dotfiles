@@ -269,6 +269,27 @@ local function bufferline()
   })
 end
 
+local function dial()
+  local augend = require("dial.augend")
+  require("dial.config").augends:register_group({
+    default = {
+      augend.integer.alias.decimal,
+      augend.integer.alias.decimal_int,
+      augend.date.alias["%Y/%m/%d"],
+      augend.semver.alias.semver,
+      augend.constant.alias.bool,
+      augend.constant.new({
+        elements = { "let", "const" },
+      }),
+      augend.constant.new({
+        elements = { "&&", "||" },
+        word = false,
+        cyclic = true,
+      }),
+    },
+  })
+end
+
 -------------------- gbprod/cutlass.nvim
 local function cutlass()
   require("cutlass").setup({
@@ -321,4 +342,5 @@ return {
   ai = ai,
   bettern = bettern,
   leap = leap,
+  dial = dial,
 }
