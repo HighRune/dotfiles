@@ -53,10 +53,6 @@ local function core()
   o.foldmethod = "expr"
   o.foldexpr = "nvim_treesitter#foldexpr()"
 
-  -- cmd([[au FocusGained,BufEnter * :silent! !]]) -- Reload when entering the buffer or gaining focus
-  -- cmd([[au FocusLost,WinLeave * :silent! w]]) -- Save when exiting the buffer or losing focus
-  -- cmd([[autocmd BufEnter * :syntax sync fromstart]])     -- Fix syntax color
-
   -- Highlight a selection on yank
   -- cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higroup="IncSearch", timeout=100}]])
 
@@ -88,20 +84,6 @@ local function leap()
     next_match    = 'n',
     prev_match    = 'N',
   }
-end
-
-local function sneak()
-  g["sneak#use_ic_scs"] = 1
-  g["sneak#absolute_dir"] = 1
-  g["sneak#label"] = 1
-  -- cmd("let g:sneak#use_ic_scs = 1")
-  -- cmd("let g:sneak#absolute_dir = 1")
-end
-
-local function targets()
-  g.targets_gracious = 1
-  g.targets_nl = "nt"
-  g.targets_aiAI = 'aIAi'
 end
 
 local function highlightedyank()
@@ -244,13 +226,6 @@ local function textobjuser()
   -- pattern = [[\S\+]],
 end
 
-local function eyeliner()
-  cmd([[
-  highlight EyelinerPrimary gui=bold,italic,underline
-  highlight EyelinerSecondary gui=bold,italic,underline
-  ]])
-end
-
 local function dial()
   local augend = require("dial.augend")
   require("dial.config").augends:register_group({
@@ -275,13 +250,10 @@ end
 return {
   core = core,
   tokyonight = tokyonight,
-  sneak = sneak,
-  targets = targets,
   highlightedyank = highlightedyank,
   neoformat = neoformat,
   wordmotion = wordmotion,
   textobjuser = textobjuser,
   dial = dial,
   leap = leap,
-  eyeliner = eyeliner,
 }
