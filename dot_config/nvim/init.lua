@@ -27,10 +27,6 @@ return require("packer").startup({
       run = ":TSUpdate",
     })
     use("neovim/nvim-lspconfig")
-    -- use({
-    --   "williamboman/nvim-lsp-installer",
-    --   config = require("config.lsp")()
-    -- })
     use { "williamboman/mason.nvim" }
     use { "williamboman/mason-lspconfig.nvim",
       config = require("config.lsp")()
@@ -135,21 +131,6 @@ return require("packer").startup({
         require("mappings").leap()
       end
     })
-    -- use({
-    --   "jonatan-branting/nvim-better-n",
-    --   config = function()
-    --     require("setup").bettern()
-    --     require("mappings").bettern()
-    --   end
-    -- })
-    -- use({
-    --   "justinmk/vim-sneak",
-    --   config = function()
-    --     require("autocmd").sneak()
-    --     require("options").sneak()
-    --     require("mappings").sneak()
-    --   end,
-    -- })
     use("nvim-treesitter/playground")
     use({
       "ibhagwan/fzf-lua",
@@ -185,7 +166,6 @@ return require("packer").startup({
         require("setup").wordmotion()
       end,
     })
-    -- use("Julian/vim-textobj-variable-segment")
     use({
       "kana/vim-textobj-user",
       config = function()
@@ -206,13 +186,6 @@ return require("packer").startup({
     use("ryvnf/readline.vim")
     use("tpope/vim-abolish")
     -- use("/home/charles/Documents/dev/plugins/blaster")
-    -- use("m-demare/hlargs.nvim")
-    -- use({
-    --   "jinh0/eyeliner.nvim",
-    --   config = function()
-    --     require("autocmd").eyeliner()
-    --   end,
-    -- })
   end,
   config = {
     display = {
@@ -231,7 +204,17 @@ return require("packer").startup({
     -- },
   },
 })
-
+-- use({
+--   "inside/vim-search-pulse",
+--   config = function()
+--     require("setup").pulse()
+--     require("mappings").pulse()
+--   end,
+-- })
+-- use({
+--   "nvim-telescope/telescope.nvim",
+--   -- config = require("config.telescope").setup(),
+-- })
 -- use({
 --   "sbdchd/neoformat",
 --   config = function()
@@ -239,22 +222,13 @@ return require("packer").startup({
 --     require("autocmd").neoformat()
 --   end,
 -- })
--- use("tpope/vim-repeat")
--- use("tpope/vim-commentary")
--- use("JoosepAlviste/nvim-ts-context-commentstring")
--- use("kana/vim-textobj-user")
--- use("PeterRincker/vim-argumentative")
 -- use({
--- 	"inside/vim-search-pulse",
--- 	config = function()
--- 		require("setup").pulse()
--- 		require("mappings").pulse()
--- 	end,
--- use({
--- 	"nvim-telescope/telescope.nvim",
--- 	-- config = require("config.telescope").setup(),
+--   "jonatan-branting/nvim-better-n",
+--   config = function()
+--     require("setup").bettern()
+--     require("mappings").bettern()
+--   end
 -- })
 -- use("bfredl/nvim-incnormal")
--------------------- AndrewRadev/sideways.vim
--- api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
--- api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
+-- use("m-demare/hlargs.nvim")
+-- use("Julian/vim-textobj-variable-segment")
