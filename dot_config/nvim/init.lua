@@ -149,7 +149,7 @@ return require("packer").startup({
     use({
       "machakann/vim-highlightedyank",
       config = function()
-        require("options").highlightedyank()
+        require("setup").highlightedyank()
       end,
     })
     use("svban/YankAssassin.vim")
