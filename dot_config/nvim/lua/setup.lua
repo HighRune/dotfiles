@@ -15,6 +15,11 @@ local function project()
   require("project_nvim").setup()
 end
 
+-------------------- machakann/vim-highlightedyank
+local function highlightedyank()
+  g.highlightedyank_highlight_duration = 100
+end
+
 -------------------- nacro90/numb.nvim
 local function numb()
   require("numb").setup()
@@ -354,4 +359,5 @@ return {
   leap = leap,
   dial = dial,
   tokyonight = tokyonight,
+  highlightedyank = highlightedyank,
 }
