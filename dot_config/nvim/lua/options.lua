@@ -54,16 +54,6 @@ local function core()
   o.foldexpr = "nvim_treesitter#foldexpr()"
 end
 
-local function tokyonight()
-  g.tokyonight_style = "night"
-  g.tokyonight_transparent = true
-  g.tokyonight_transparent_sidebar = true
-  g.tokyonight_colors = { green = "#FF9EFF" }
-  g.tokyonight_dark_float = false
-  g.tokyonight_dark_sidebar = false
-  cmd("colorscheme tokyonight")
-end
-
 local function highlightedyank()
   g.highlightedyank_highlight_duration = 100
 end
@@ -206,7 +196,6 @@ end
 
 return {
   core = core,
-  tokyonight = tokyonight,
   highlightedyank = highlightedyank,
   neoformat = neoformat,
   wordmotion = wordmotion,
