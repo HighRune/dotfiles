@@ -294,6 +294,18 @@ local function bettern()
   }
 end
 
+-------------------- ggandor/leap.nvim
+local function leap()
+  require('leap').opts.safe_labels = nil
+  require('leap').opts.labels = { 'u', 'h', 'e', 't', 'o', 'a', 'k', 'm', 'j', 'w', 'q', 'v', '.', 'c', 'r', 'p', 'g' }
+  require('leap').opts.highlight_unlabeled = true
+  require('leap').opts.special_keys = {
+    repeat_search = 'n',
+    next_match    = 'n',
+    prev_match    = 'N',
+  }
+end
+
 return {
   colorizer = colorizer,
   project = project,
@@ -308,4 +320,5 @@ return {
   treesitter = treesitter,
   ai = ai,
   bettern = bettern,
+  leap = leap,
 }
