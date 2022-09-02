@@ -85,6 +85,16 @@ local function fm()
   })
 end
 
+local function tokyonight()
+  g.tokyonight_style = "night"
+  g.tokyonight_transparent = true
+  g.tokyonight_transparent_sidebar = true
+  g.tokyonight_colors = { green = "#FF9EFF" }
+  g.tokyonight_dark_float = false
+  g.tokyonight_dark_sidebar = false
+  cmd("colorscheme tokyonight")
+end
+
 -------------------- lewis6991/gitsigns.nvim
 local function gitsigns()
   require("gitsigns").setup({
@@ -343,4 +353,5 @@ return {
   bettern = bettern,
   leap = leap,
   dial = dial,
+  tokyonight = tokyonight,
 }
