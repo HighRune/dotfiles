@@ -170,6 +170,11 @@ local function sneak()
   -- vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], expr)
 end
 
+-------------------- chaoren/vim-wordmotion
+local function wordmotion()
+  g.wordmotion_nomap = 1
+end
+
 -------------------- lewis6991/gitsigns.nvim
 local function gitsigns(bufnr)
   local gs = package.loaded.gitsigns
@@ -315,4 +320,5 @@ return {
   hydra = hydra,
   leap = leap,
   bettern = bettern,
+  wordmotion = wordmotion
 }
