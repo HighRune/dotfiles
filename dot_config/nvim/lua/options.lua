@@ -64,18 +64,6 @@ local function tokyonight()
   cmd("colorscheme tokyonight")
 end
 
--------------------- ggandor/leap.nvim
-local function leap()
-  require('leap').opts.safe_labels = nil
-  require('leap').opts.labels = { 'u', 'h', 'e', 't', 'o', 'a', 'k', 'm', 'j', 'w', 'q', 'v', '.', 'c', 'r', 'p', 'g' }
-  require('leap').opts.highlight_unlabeled = true
-  require('leap').opts.special_keys = {
-    repeat_search = 'n',
-    next_match    = 'n',
-    prev_match    = 'N',
-  }
-end
-
 local function highlightedyank()
   g.highlightedyank_highlight_duration = 100
 end
@@ -245,5 +233,4 @@ return {
   wordmotion = wordmotion,
   textobjuser = textobjuser,
   dial = dial,
-  leap = leap,
 }
