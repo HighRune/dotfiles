@@ -52,12 +52,6 @@ local function core()
   -- nvim-treesitter/nvim-treesitter
   o.foldmethod = "expr"
   o.foldexpr = "nvim_treesitter#foldexpr()"
-
-  -- Highlight a selection on yank
-  -- cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higroup="IncSearch", timeout=100}]])
-
-  -- Disable automatic comment insertion
-  cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal fo-=c fo-=r fo-=o fo+=t]])
 end
 
 local function tokyonight()
