@@ -9,6 +9,14 @@ local function core()
   augroup("tmux", { clear = true })
   augroup("diagnostic", { clear = true })
   augroup("qf", { clear = true })
+  augroup("setlocal", { clear = true })
+
+  -- Disable automatic comment insertion
+  autocmd({'BufWinEnter','BufRead','BufNewFile'}, {
+    group = "setlocal",
+    pattern = "*",
+    command = "setlocal fo-=c fo-=r fo-=o fo+=t",
+  })
 
   autocmd("BufWritePost", {
     group = "chezmoi",
