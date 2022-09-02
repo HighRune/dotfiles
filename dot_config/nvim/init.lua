@@ -166,12 +166,7 @@ return require("packer").startup({
         require("setup").wordmotion()
       end,
     })
-    use({
-      "kana/vim-textobj-user",
-      config = function()
-        require("options").textobjuser()
-      end,
-    })
+    use("kana/vim-textobj-user")
     use({
       "kylechui/nvim-surround",
       config = function()
