@@ -182,7 +182,7 @@ return require("packer").startup({
     use({
       "chaoren/vim-wordmotion",
       config = function()
-        require("options").wordmotion()
+        require("setup").wordmotion()
       end,
     })
     -- use("Julian/vim-textobj-variable-segment")
