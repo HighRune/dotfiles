@@ -48,10 +48,6 @@ local function core()
   o.foldexpr = "nvim_treesitter#foldexpr()"
 end
 
-local function highlightedyank()
-  g.highlightedyank_highlight_duration = 100
-end
-
 local function neoformat()
   g.neoformat_enabled_lua = { "stylua" }
 end
@@ -186,7 +182,6 @@ end
 
 return {
   core = core,
-  highlightedyank = highlightedyank,
   neoformat = neoformat,
   textobjuser = textobjuser,
 }
