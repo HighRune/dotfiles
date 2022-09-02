@@ -58,10 +58,6 @@ local function core()
 
   -- Disable automatic comment insertion
   cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal fo-=c fo-=r fo-=o fo+=t]])
-
-  -- twpayne/chezmoi
-  cmd([[autocmd BufWritePost ~/.local/share/chezmoi/* :silent! !chezmoi apply --source-path %]])
-  cmd([[autocmd BufLeave ~/.config/cheatsheet.md :silent! !chezmoi add ~/.config/cheatsheet.md]])
 end
 
 local function tokyonight()
