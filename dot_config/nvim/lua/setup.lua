@@ -15,11 +15,6 @@ local function project()
   require("project_nvim").setup()
 end
 
--------------------- machakann/vim-highlightedyank
-local function highlightedyank()
-  g.highlightedyank_highlight_duration = 100
-end
-
 -------------------- nacro90/numb.nvim
 local function numb()
   require("numb").setup()
@@ -88,16 +83,6 @@ local function fm()
       -- ESC = "<ESC>",
     },
   })
-end
-
-local function tokyonight()
-  g.tokyonight_style = "night"
-  g.tokyonight_transparent = true
-  g.tokyonight_transparent_sidebar = true
-  g.tokyonight_colors = { green = "#FF9EFF" }
-  g.tokyonight_dark_float = false
-  g.tokyonight_dark_sidebar = false
-  cmd("colorscheme tokyonight")
 end
 
 -------------------- lewis6991/gitsigns.nvim
@@ -284,27 +269,6 @@ local function bufferline()
   })
 end
 
-local function dial()
-  local augend = require("dial.augend")
-  require("dial.config").augends:register_group({
-    default = {
-      augend.integer.alias.decimal,
-      augend.integer.alias.decimal_int,
-      augend.date.alias["%Y/%m/%d"],
-      augend.semver.alias.semver,
-      augend.constant.alias.bool,
-      augend.constant.new({
-        elements = { "let", "const" },
-      }),
-      augend.constant.new({
-        elements = { "&&", "||" },
-        word = false,
-        cyclic = true,
-      }),
-    },
-  })
-end
-
 -------------------- gbprod/cutlass.nvim
 local function cutlass()
   require("cutlass").setup({
@@ -330,66 +294,6 @@ local function bettern()
   }
 end
 
--------------------- ggandor/leap.nvim
-local function leap()
-  require('leap').opts.safe_labels = nil
-  require('leap').opts.labels = { 'u', 'h', 'e', 't', 'o', 'a', 'k', 'm', 'j', 'w', 'q', 'v', '.', 'c', 'r', 'p', 'g' }
-  require('leap').opts.highlight_unlabeled = true
-  require('leap').opts.special_keys = {
-    repeat_search = 'n',
-    next_match    = 'n',
-    prev_match    = 'N',
-  }
-end
-
--------------------- windwp/nvim-autopairs
-local function autopairs()
-  local remap = vim.api.nvim_set_keymap
-  local npairs = require("nvim-autopairs")
-
-  npairs.setup({
-    map_bs = true,
-    map_cr = false,
-    check_ts = true,
-    ignored_next_char = "[%w%.]",
-    -- fast_wrap = {
-    -- 	map = "<C-h>",
-    -- 	chars = { "{", "[", "(", '"', "'" },
-    -- 	pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
-    -- 	offset = 0,
-    -- 	end_key = "s",
-    -- 	keys = "aoeuhtns",
-    -- 	check_comma = true,
-    -- 	highlight = "Search",
-    -- 	highlight_grey = "Comment",
-    -- },
-  })
-
-  _G.MUtils = {}
-
-  MUtils.CR = function()
-    if fn.pumvisible() ~= 0 then
-      if fn.complete_info({ "selected" }).selected ~= -1 then
-        return npairs.esc("<c-y>")
-      else
-        return npairs.esc("<c-e>") .. npairs.autopairs_cr()
-      end
-    else
-      return npairs.autopairs_cr()
-    end
-  end
-  remap("i", "<cr>", "v:lua.MUtils.CR()", { expr = true, noremap = true })
-
-  MUtils.BS = function()
-    if fn.pumvisible() ~= 0 and fn.complete_info({ "mode" }).mode == "eval" then
-      return npairs.esc("<c-e>") .. npairs.autopairs_bs()
-    else
-      return npairs.autopairs_bs()
-    end
-  end
-  remap("i", "<bs>", "v:lua.MUtils.BS()", { expr = true, noremap = true })
-end
-
 return {
   colorizer = colorizer,
   project = project,
@@ -404,9 +308,4 @@ return {
   treesitter = treesitter,
   ai = ai,
   bettern = bettern,
-  leap = leap,
-  dial = dial,
-  tokyonight = tokyonight,
-  highlightedyank = highlightedyank,
-  autopairs = autopairs,
 }
