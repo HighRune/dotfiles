@@ -106,7 +106,9 @@ return require("packer").startup({
     })
     use({
       "windwp/nvim-autopairs",
-      config = require("config.autopairs")(),
+      config = function()
+        requires("setup").autopairs()
+      end
     })
     use({
       'akinsho/bufferline.nvim',
