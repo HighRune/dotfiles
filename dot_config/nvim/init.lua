@@ -104,12 +104,10 @@ return require("packer").startup({
         require("mappings").splitjoin()
       end,
     })
-    use({
-      "windwp/nvim-autopairs",
-      config = function()
-        requires("setup").autopairs()
-      end
-    })
+    -- use({
+    --   "windwp/nvim-autopairs",
+    --   config = require("config.autopairs")(),
+    -- })
     use({
       'akinsho/bufferline.nvim',
       config = function()
