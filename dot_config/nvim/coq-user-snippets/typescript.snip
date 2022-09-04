@@ -1,9 +1,13 @@
-snippet fd
+snippet Definition
+abbr function () {
+alias fu
  function ${1} () {
    ${0}
  }
 
-snippet fe
+snippet Expression
+abbr const = () => {
+alias co
  const ${1} = () => {
    ${0}
  }
@@ -20,3 +24,8 @@ snippet me
  ${1} () {
    ${0}
  }
+
+snippet Builtin
+abbr console.log
+alias cl
+ console.log('$1', ${0})
