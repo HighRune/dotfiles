@@ -311,6 +311,17 @@ sudo fdisk -l                   # Liste les volumes et repère le nom du volume 
 sudo dd bs=4M if=/home/<user>/Downloads/<image_system>.iso of=/dev/sda1 && sync	# Ecrit l'image système sur la clé usb
 ```
 
+### chroot
+```bash
+https://forum.endeavouros.com/t/the-latest-grub-package-update-needs-some-manual-intervention/30689
+sudo fdisk -l
+lsblk
+sudo cryptsetup open /dev/nvme0n1p2 crypto_LUKS
+sudo mount /dev/mapper/crypto_LUKS /mnt
+sudo mount /dev/nvme0n1p1 /mnt/boot/efi
+sudo arch-chroot /mnt
+```
+
 ### access rights
 
 ```bash
@@ -549,6 +560,9 @@ lsof -ti tcp:8085 | xargs kill -9 # Kill process runing on specified port
 ### misc
 
 ```bash
+
+efibootmgr                          # List boot entries
+efibootmgr -b 0001, 0004 -B         # Change boot order
 pkill -KILL -u <session>            # Kill user session
 sudo vi /etc/hosts                  # Add an host
 [<user>@<machine> ~]$               # '$' signifie connecté en tant qu'utilisateur
