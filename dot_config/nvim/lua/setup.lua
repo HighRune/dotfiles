@@ -294,6 +294,7 @@ local function bettern()
   }
 end
 
+-------------------- windwp/nvim-autopairs
 local function autopairs()
   local remap = vim.api.nvim_set_keymap
   local npairs = require("nvim-autopairs")
@@ -342,17 +343,19 @@ local function autopairs()
   remap("i", "<bs>", "v:lua.MUtils.BS()", { expr = true, noremap = true })
 end
 
+-------------------- ms-jpq/coq_nvim
 local function coq()
   require('mappings').coq()
 
   g.coq_settings = {
     auto_start = 'shut-up',
-    -- weights = {
-    -- 	prefix_matches = 0.5,
-    -- },
+    weights = {
+      prefix_matches = 50,
+      proximity = 0,
+    },
     match = {
-      -- exact_matches = 10,
       fuzzy_cutoff = 0.8,
+      exact_matches = 2,
     },
     display = {
       preview = {
@@ -364,7 +367,6 @@ local function coq()
         kind_context = { '', '' },
         source_context = { '', '' },
         fast_close = true,
-        -- x_truncate_len = 9999,
       },
       ghost_text = { enabled = false, },
     },
