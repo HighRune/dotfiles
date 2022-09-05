@@ -364,7 +364,7 @@ local function coq()
         border = 'solid',
       },
       pum = {
-        kind_context = { '', '' },
+        kind_context = { '   ', '' },
         source_context = { '', '' },
         fast_close = true,
       },
