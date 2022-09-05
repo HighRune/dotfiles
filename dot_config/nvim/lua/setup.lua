@@ -350,7 +350,7 @@ local function coq()
   g.coq_settings = {
     auto_start = 'shut-up',
     weights = {
-      prefix_matches = 50,
+      prefix_matches = 3,
       proximity = 0,
     },
     match = {
@@ -376,6 +376,11 @@ local function coq()
       jump_to_mark = '<c-cr>',
       bigger_preview = '',
       ['repeat'] = '',
+    },
+    clients = {
+      snippets = {
+        weight_adjust = 2,
+      },
     },
   }
 end
