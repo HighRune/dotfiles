@@ -1,31 +1,28 @@
-snippet Definition
-abbr function () {
-alias fu
+# function definition
+snippet fu 
+abbr function  () { 
  function ${1} () {
    ${0}
  }
 
-snippet Expression
-abbr const = () => {
-alias co
+# function expression
+snippet co
+abbr  const = () => { 
  const ${1} = () => {
    ${0}
  }
 
-snippet fc
+# function callback
+snippet cb
+abbr  (() => {  })
  ${1}(() => {
    ${0}
  })
 
 snippet im
+abbr import {  } from ''
  import { ${1} } from '${0}'
 
-snippet me
- ${1} () {
-   ${0}
- }
-
-snippet Builtin
-abbr console.log
-alias cl
+snippet cl
+abbr console.log('', )
  console.log('$1', ${0})
