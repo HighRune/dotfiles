@@ -352,6 +352,7 @@ local function coq()
     weights = {
       prefix_matches = 3,
       proximity = 0,
+      recency = 0,
     },
     match = {
       fuzzy_cutoff = 0.8,
