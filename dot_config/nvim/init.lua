@@ -14,7 +14,18 @@ return require("packer").startup({
     use("nvim-lua/plenary.nvim")
     use("kyazdani42/nvim-web-devicons")
     use({
+      'akinsho/bufferline.nvim',
+      config = function()
+        require('mappings').bufferline()
+        require('setup').bufferline()
+      end
+    })
+    use({
       "folke/tokyonight.nvim",
+      setup = function ()
+        -- autocommand will have no effect on previously sourced colorschemes so it must be added before any colorscheme is sourced
+        require('autocmd').bufferline()
+      end,
       config = function()
         require("options").tokyonight()
       end,
@@ -110,14 +121,6 @@ return require("packer").startup({
       config = function()
         require("setup").autopairs()
       end,
-    })
-    use({
-      'akinsho/bufferline.nvim',
-      config = function()
-        require('mappings').bufferline()
-        require('setup').bufferline()
-        require('autocmd').bufferline()
-      end
     })
     use("rktjmp/lush.nvim")
     use({
