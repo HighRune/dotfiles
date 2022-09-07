@@ -364,6 +364,7 @@ local function coq()
         x_max_len = 40,
         border = 'solid',
       },
+      icons = { mode = 'none' },
       pum = {
         kind_context = { '   ', '' },
         source_context = { '', '' },
@@ -381,6 +382,16 @@ local function coq()
     clients = {
       snippets = {
         weight_adjust = 2,
+        short_name = '',
+      },
+      tree_sitter = {
+        short_name = '',
+      },
+      tmux = {
+        short_name = '穀',
+      },
+      buffers = {
+        short_name = '﬘﬘',
       },
     },
   }
