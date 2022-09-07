@@ -9,14 +9,6 @@ local function core()
   augroup("tmux", { clear = true })
   augroup("diagnostic", { clear = true })
   augroup("qf", { clear = true })
-  augroup("setlocal", { clear = true })
-
-  -- Disable automatic comment insertion
-  autocmd({ 'BufWinEnter', 'BufRead', 'BufNewFile' }, {
-    group = "setlocal",
-    pattern = "*",
-    command = "setlocal fo-=c fo-=r fo-=o fo+=t",
-  })
 
   autocmd("BufWritePost", {
     group = "chezmoi",
@@ -81,7 +73,7 @@ local function packer()
   augroup("packer_user_config", { clear = true })
   autocmd("BufWritePost", {
     group = "packer_user_config",
-    pattern = "~/.local/share/chezmoi/dot_config/nvim/*",
+    pattern = "~/.config/nvim/*",
     command = ":PackerCompile",
   })
 end
