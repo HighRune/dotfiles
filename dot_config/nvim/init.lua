@@ -58,6 +58,7 @@ return require("packer").startup({
       branch = "coq",
       config = function()
         require("setup").coq()
+        require("autocmd").coq()
       end,
     })
     use({
