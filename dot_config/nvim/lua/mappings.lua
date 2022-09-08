@@ -27,10 +27,12 @@ local function core()
   map("", "Q", "<nop>")
   map("", "q", "<nop>")
   -- Save
-  map("n", "<C-s>", ":silent write<CR>")
-  map("i", "<C-s>", "<esc>`^:silent write<CR>")
+  -- map("n", "<C-s>", ":silent write<CR>")
+  -- map("i", "<C-s>", "<esc>`^:silent write<CR>")
+  map("n", "<C-s>", ":w<cr>")
+  map("i", "<C-s>", "<esc>`^:w<cr>")
   -- Edit
-  map("x", "<C-n>", ":norm ")
+  -- map("x", "<C-n>", ":norm ")
   map("n", "<esc>", "<esc>^")
   map("x", "p", '"_dP')
   map({ "n", "v" }, "x", '"_x')
@@ -168,11 +170,6 @@ local function sneak()
   ]])
   -- vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], expr)
   -- vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], expr)
-end
-
--------------------- chaoren/vim-wordmotion
-local function wordmotion()
-  g.wordmotion_nomap = 1
 end
 
 -------------------- lewis6991/gitsigns.nvim
@@ -320,5 +317,4 @@ return {
   hydra = hydra,
   leap = leap,
   bettern = bettern,
-  wordmotion = wordmotion
 }
