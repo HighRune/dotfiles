@@ -78,6 +78,15 @@ local function packer()
   })
 end
 
+local function coq()
+  augroup("coq", { clear = true })
+  autocmd("BufWritePost", {
+    group = "coq",
+    pattern = "~/.config/nvim/coq-user-snippets/*",
+    command = ":COQsnips compile",
+  })
+end
+
 local function indentscope()
   augroup("indentscope", { clear = true })
   autocmd("FileType", {
@@ -121,4 +130,5 @@ return {
   indentscope = indentscope,
   core = core,
   bufferline = bufferline,
+  coq = coq,
 }
