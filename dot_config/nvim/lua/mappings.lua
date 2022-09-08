@@ -13,7 +13,7 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
-  map("n", "<leader>c", ":!chezmoi add %:p<cr>")
+  map("n", "<leader>c", ":silent !chezmoi add %:p<CR>")
   -- "silent! !chezmoi add ~/.config/cheatsheet.md",
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
@@ -31,8 +31,8 @@ local function core()
   -- Save
   -- map("n", "<C-s>", ":silent write<CR>")
   -- map("i", "<C-s>", "<esc>`^:silent write<CR>")
-  map("n", "<C-s>", ":w<cr>")
-  map("i", "<C-s>", "<esc>`^:w<cr>")
+  map("n", "<C-s>", ":w<CR>")
+  map("i", "<C-s>", "<esc>`^:w<CR>")
   -- Edit
   -- map("x", "<C-n>", ":norm ")
   map("n", "<esc>", "<esc>^")
@@ -204,10 +204,10 @@ end
 
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
-  map("n", "<tab>", ":BufferLineCycleNext<cr>", silent)
-  map("n", "<s-tab>", ":BufferLineCyclePrev<cr>", silent)
-  map("n", "<pageup>", ":BufferLineMovePrev<cr>", silent)
-  map("n", "<pagedown>", ":BufferLineMoveNext<cr>", silent)
+  map("n", "<tab>", ":BufferLineCycleNext<CR>", silent)
+  map("n", "<s-tab>", ":BufferLineCyclePrev<CR>", silent)
+  map("n", "<pageup>", ":BufferLineMovePrev<CR>", silent)
+  map("n", "<pagedown>", ":BufferLineMoveNext<CR>", silent)
   map("n", "<a-1>", function() require("bufferline").go_to_buffer(1) end)
   map("n", "<a-2>", function() require("bufferline").go_to_buffer(2) end)
   map("n", "<a-3>", function() require("bufferline").go_to_buffer(3) end)
@@ -223,13 +223,13 @@ end
 local function splitjoin()
   g.splitjoin_split_mapping = ""
   g.splitjoin_join_mapping = ""
-  map("n", "gj", ":SplitjoinJoin<cr>")
-  map("n", "gk", ":SplitjoinSplit<cr>")
+  map("n", "gj", ":SplitjoinJoin<CR>")
+  map("n", "gk", ":SplitjoinSplit<CR>")
 end
 
 -------------------- is0n/fm-nvim
 local function fm()
-  map("n", "<leader>n", ":Vifm<cr>")
+  map("n", "<leader>n", ":Vifm<CR>")
 end
 
 -------------------- monaqa/dial.nvim
