@@ -82,8 +82,8 @@ local function coq()
   augroup("coq", { clear = true })
   autocmd("BufWritePost", {
     group = "coq",
-    pattern = "~/.config/nvim/coq-user-snippets/*",
-    command = ":COQsnips compile",
+    pattern = "*.snip",
+    command = "COQsnips compile",
   })
 end
 
