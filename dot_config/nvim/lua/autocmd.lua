@@ -24,7 +24,7 @@ local function core()
 
   autocmd("BufWritePost", {
     group = "tmux",
-    pattern = "~/.config/tmux/tmux.conf",
+    pattern = "*/.config/tmux/tmux.conf",
     command = "silent! !tmux source-file ~/.config/tmux/.tmux.conf",
   })
 
@@ -83,7 +83,6 @@ local function coq()
   autocmd("BufWritePost", {
     group = "coq",
     pattern = "*/.config/nvim/coq-user-snippets/*.snip",
-    -- command = "echom 'autocmd'",
     command = "COQsnips compile",
   })
 end
