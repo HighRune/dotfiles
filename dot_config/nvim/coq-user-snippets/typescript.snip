@@ -1,10 +1,14 @@
 # _______________________________ TS
 
-snippet fu 
+snippet f
 abbr function  () { 
  function ${1} () {
    ${0}
  }
+
+snippet c
+abbr const  = 
+ const ${1} = ${0}
 
 snippet co
 abbr const  = () => { 
@@ -25,6 +29,46 @@ abbr import {  } from ''
 snippet cl
 abbr console.log('', )
  console.log('${0}', ${0})
+
+snippet in
+abbr export interface  { 
+  export interface ${1} {
+    ${2}:${0}
+  }
+
+snippet if
+abbr if () { 
+  if (${1}) {
+    ${2}
+  } ${0}
+
+snippet el
+abbr else { 
+  else {
+    ${1}
+  } ${0}
+
+snippet fo
+abbr for ( of ) { 
+  for (${1} of ${2}) {
+    ${0}
+  }
+
+snippet for
+abbr for (let i = 0; i < .lenght; i++) { 
+  for (let i = 0; i < ${1}.length; i++) {
+    ${0}
+  }
+
+snippet ty
+abbr export type  { 
+  export type ${1} = {
+    ${2}:${0}
+  }
+
+snippet ke
+abbr [key: string]: ,
+  [key: string]: ${0},
 
 # _______________________________ VUE
 
@@ -48,7 +92,7 @@ abbr defineStore('', {
  })
 
 snippet com
-abbr Component
+abbr <template>
   <template>
   </template>
 
