@@ -13,8 +13,8 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
-  map("n", "<leader>c", "!chezmoi add %:p")
-  -- command = "silent! !chezmoi add ~/.config/cheatsheet.md",
+  map("n", "<leader>c", ":!chezmoi add %:p<cr>")
+  -- "silent! !chezmoi add ~/.config/cheatsheet.md",
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
   cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
