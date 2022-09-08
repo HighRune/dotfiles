@@ -13,19 +13,19 @@ local function core()
   autocmd("BufWritePost", {
     group = "chezmoi",
     pattern = "~/.local/share/chezmoi/*",
-    command = ":silent! !chezmoi apply --source-path %",
+    command = "silent! !chezmoi apply --source-path %",
   })
 
   autocmd("BufLeave", {
     group = "chezmoi",
     pattern = "~/.config/cheatsheet.md",
-    command = ":silent! !chezmoi add ~/.config/cheatsheet.md",
+    command = "silent! !chezmoi add ~/.config/cheatsheet.md",
   })
 
   autocmd("BufWritePost", {
     group = "tmux",
     pattern = "~/.config/tmux/tmux.conf",
-    command = ":silent! !tmux source-file ~/.config/tmux/.tmux.conf",
+    command = "silent! !tmux source-file ~/.config/tmux/.tmux.conf",
   })
 
   autocmd("ColorScheme", {
@@ -73,8 +73,8 @@ local function packer()
   augroup("packer_user_config", { clear = true })
   autocmd("BufWritePost", {
     group = "packer_user_config",
-    pattern = "~/.config/nvim/*",
-    command = ":PackerCompile",
+    pattern = "*/.config/nvim/**",
+    command = "PackerCompile",
   })
 end
 
@@ -82,7 +82,8 @@ local function coq()
   augroup("coq", { clear = true })
   autocmd("BufWritePost", {
     group = "coq",
-    pattern = "*.snip",
+    pattern = "*/.config/nvim/coq-user-snippets/*.snip",
+    -- command = "echom 'autocmd'",
     command = "COQsnips compile",
   })
 end
