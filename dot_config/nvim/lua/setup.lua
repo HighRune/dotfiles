@@ -360,6 +360,28 @@ local function autopairs()
   remap("i", "<bs>", "v:lua.MUtils.BS()", { expr = true, noremap = true })
 end
 
+-------------------- monaqa/dial.nvim
+local function dial()
+  local augend = require("dial.augend")
+  require("dial.config").augends:register_group({
+    default = {
+      augend.integer.alias.decimal,
+      augend.integer.alias.decimal_int,
+      augend.date.alias["%Y/%m/%d"],
+      augend.semver.alias.semver,
+      augend.constant.alias.bool,
+      augend.constant.new({
+        elements = { "let", "const" },
+      }),
+      augend.constant.new({
+        elements = { "&&", "||" },
+        word = false,
+        cyclic = true,
+      }),
+    },
+  })
+end
+
 -------------------- ms-jpq/coq_nvim
 local function coq()
   require('mappings').coq()
@@ -431,4 +453,5 @@ return {
   autopairs = autopairs,
   coq = coq,
   tokyonight = tokyonight,
+  dial = dial,
 }
