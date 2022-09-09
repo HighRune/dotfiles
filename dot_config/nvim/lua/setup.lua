@@ -310,6 +310,9 @@ local function tokyonight()
       sidebars = "dark", -- style for sidebars, see below
       floats = "dark", -- style for floating windows
     },
+    on_colors = function(colors)
+       colors.green = "#FF9EFF"
+     end
   })
   cmd("colorscheme tokyonight")
 end
