@@ -9,6 +9,7 @@ return require("packer").startup({
       "wbthomason/packer.nvim",
       config = function()
         require("autocmd").packer()
+        require("mappings").packer()
       end,
     })
     use("nvim-lua/plenary.nvim")
