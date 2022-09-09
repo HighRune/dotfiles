@@ -256,10 +256,14 @@ local function lspconfig(buffer)
 end
 
 local function coq()
-  map("i", "<Esc>", [[pumvisible() ? "<C-e><Esc>`^" : "<Esc>`^"]], expr)
-  map("i", "<C-c>", [[pumvisible() ? "<C-e><C-c>" : "<C-c>"]], expr)
-  map("i", "<Tab>", [[pumvisible() ? "<C-n>" : "<Tab>"]], expr)
-  map("i", "<S-Tab>", [[pumvisible() ? "<C-p>" : "<BS>"]], expr)
+  map('i', '<Esc>', function() return fn.pumvisible() == 1 and '<C-e><Esc>`^' or '<Esc>`^' end, expr)
+  map('i', '<C-c>', function() return fn.pumvisible() == 1 and '<C-e><C-c>' or '<C-c>' end, expr)
+  map('i', '<Tab>', function() return fn.pumvisible() == 1 and '<C-n>' or '<Tab>' end, expr)
+  map('i', '<S-Tab>', function() return fn.pumvisible() == 1 and '<C-p>' or '<BS>' end, expr)
+  cmd([[
+  imap <C-n> <Nop>
+  imap <C-p> <Nop>
+  ]])
 end
 
 local function hydra()
