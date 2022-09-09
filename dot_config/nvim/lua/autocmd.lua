@@ -16,12 +16,6 @@ local function core()
     command = "silent! !chezmoi apply --source-path %",
   })
 
-  autocmd("BufLeave", {
-    group = "chezmoi",
-    pattern = "~/.config/cheatsheet.md",
-    command = "silent! !chezmoi add ~/.config/cheatsheet.md",
-  })
-
   autocmd("BufWritePost", {
     group = "tmux",
     pattern = "*/.config/tmux/tmux.conf",
