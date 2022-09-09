@@ -118,6 +118,11 @@ local function telescope()
   -- map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
 
+local function packer()
+  map("n", "<Leader>ps", ":PackerSync<CR>")
+  map("n", "<Leader>pc", ":PackerCompile<CR>")
+end
+
 -------------------- junegunn/fzf
 local function fzf()
   map("n", "<Leader><Leader>", "<cmd>lua require('fzf-lua').files()<CR>")
@@ -322,4 +327,5 @@ return {
   hydra = hydra,
   leap = leap,
   bettern = bettern,
+  packer = packer,
 }
