@@ -14,7 +14,7 @@ local remap = { remap = true }
 
 local function core()
   -- map("n", "<leader>c", ":!chezmoi add %:p<CR>")
-  map("n", "<leader>c", "silent! :!chezmoi add %:p<CR>")
+  map("n", "<leader>c", ":silent! !chezmoi add %:p<CR>")
   -- command = "silent! !chezmoi add ~/.config/cheatsheet.md",
   -- "silent! !chezmoi add ~/.config/cheatsheet.md",
   -- Help
