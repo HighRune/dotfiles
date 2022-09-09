@@ -97,6 +97,7 @@ return require("packer").startup({
     use("nvim-treesitter/nvim-treesitter-textobjects")
     use("windwp/nvim-ts-autotag")
     use("itchyny/vim-cursorword")
+    use("skywind3000/asyncrun.vim")
     use({
       "numToStr/Comment.nvim",
       config = function()
