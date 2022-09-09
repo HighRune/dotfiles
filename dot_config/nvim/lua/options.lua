@@ -237,7 +237,6 @@ end
 
 return {
   core = core,
-  tokyonight = tokyonight,
   highlightedyank = highlightedyank,
   neoformat = neoformat,
   wordmotion = wordmotion,
