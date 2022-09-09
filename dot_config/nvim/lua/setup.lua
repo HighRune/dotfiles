@@ -294,25 +294,19 @@ local function bettern()
   }
 end
 
+-------------------- folke/tokyonight.nvim
 local function tokyonight()
-  -- g.tokyonight_style = "night"
-  -- g.tokyonight_transparent = true
-  -- g.tokyonight_transparent_sidebar = true
-  -- g.tokyonight_colors = { green = "#FF9EFF" }
-  -- g.tokyonight_dark_float = false
-  -- g.tokyonight_dark_sidebar = false
-
   require("tokyonight").setup({
     style = "night",
     transparent = true,
     terminal_colors = true,
     styles = {
-      sidebars = "dark", -- style for sidebars, see below
-      floats = "dark", -- style for floating windows
+      sidebars = "transparent",
+      floats = "transparent",
     },
     on_colors = function(colors)
-       colors.green = "#FF9EFF"
-     end
+      colors.green = "#FF9EFF"
+    end
   })
   cmd("colorscheme tokyonight")
 end
