@@ -62,26 +62,6 @@ local function core()
   cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal fo-=c fo-=r fo-=o fo+=t]])
 end
 
-local function tokyonight()
-  -- g.tokyonight_style = "night"
-  -- g.tokyonight_transparent = true
-  -- g.tokyonight_transparent_sidebar = true
-  -- g.tokyonight_colors = { green = "#FF9EFF" }
-  -- g.tokyonight_dark_float = false
-  -- g.tokyonight_dark_sidebar = false
-
-  require("tokyonight").setup({
-    style = "night",
-    transparent = true,
-    terminal_colors = true,
-    styles = {
-      sidebars = "dark", -- style for sidebars, see below
-      floats = "dark", -- style for floating windows
-    },
-  })
-  cmd("colorscheme tokyonight")
-end
-
 -------------------- ggandor/leap.nvim
 local function leap()
   require('leap').opts.safe_labels = nil
