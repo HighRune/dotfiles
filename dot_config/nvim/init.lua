@@ -22,12 +22,12 @@ return require("packer").startup({
     })
     use({
       "folke/tokyonight.nvim",
-      setup = function ()
+      setup = function()
         -- autocommand will have no effect on previously sourced colorschemes so it must be added before any colorscheme is sourced
         require('autocmd').bufferline()
       end,
       config = function()
-        require("options").tokyonight()
+        require('setup').tokyonight()
       end,
     })
     use({
@@ -57,8 +57,8 @@ return require("packer").startup({
       "ms-jpq/coq_nvim",
       branch = "coq",
       config = function()
-        require("setup").coq()
         require("autocmd").coq()
+        require("setup").coq()
       end,
     })
     use({
