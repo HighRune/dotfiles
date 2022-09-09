@@ -19,6 +19,7 @@ local function core()
   o.number = true -- Print the line number in front of each line
   -- o.relativenumber = true -- Show relative line numbers
   o.virtualedit = "all"
+  o.cmdheight=1
   o.completeopt = "menuone,noinsert" -- Options for Insert mode completion
   -- o.pumblend = 100
   o.clipboard = "unnamedplus" -- Have the clipboard be the same as my regular clipboard
@@ -28,8 +29,13 @@ local function core()
   o.showmode = false -- Disable message on the last line (Insert, Replace or Visual mode)
   o.linebreak = true -- Do not break words on line wrap
   o.breakindent = true -- Start wrapped lines indented
+  -- o.formatoptions = "cro"
+  -- vim.cmd([[filetype plugin indent on]])
+  -- o.showtabline=2  -- Always display the line with tab page labels
   o.ignorecase = true -- Ignore case in search patterns
   o.smartcase = true -- Override the 'ignorecase' option if the search pattern contains upper case characters
+  -- opt.iskeyword:remove({ "/", "(", "[", "{" })
+  -- opt.iskeyword:append({ "/", "(", "[", "{" })
   o.signcolumn = "yes:1"
   o.expandtab = true -- Use the appropriate number of spaces to insert a <Tab>
   o.smartindent = true -- Do smart autoindenting when starting a new line
@@ -43,12 +49,53 @@ local function core()
   opt.list = true
   opt.listchars:append("eol:↴")
   opt.laststatus = 3
+
   -- nvim-treesitter/nvim-treesitter
   o.foldmethod = "expr"
   o.foldexpr = "nvim_treesitter#foldexpr()"
+
+  -- Highlight a selection on yank
+  -- cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higroup="IncSearch", timeout=100}]])
+
+  -- Disable automatic comment insertion
+  cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal fo-=c fo-=r fo-=o fo+=t]])
 end
 
--- local function textobjuser()
+local function tokyonight()
+  g.tokyonight_style = "night"
+  g.tokyonight_transparent = true
+  g.tokyonight_transparent_sidebar = true
+  g.tokyonight_colors = { green = "#FF9EFF" }
+  g.tokyonight_dark_float = false
+  g.tokyonight_dark_sidebar = false
+  cmd("colorscheme tokyonight")
+end
+
+-------------------- ggandor/leap.nvim
+local function leap()
+  require('leap').opts.safe_labels = nil
+  require('leap').opts.labels = { 'u', 'h', 'e', 't', 'o', 'a', 'k', 'm', 'j', 'w', 'q', 'v', '.', 'c', 'r', 'p', 'g' }
+  require('leap').opts.highlight_unlabeled = true
+  require('leap').opts.special_keys = {
+    repeat_search = 'n',
+    next_match    = 'n',
+    prev_match    = 'N',
+  }
+end
+
+local function highlightedyank()
+  g.highlightedyank_highlight_duration = 100
+end
+
+local function neoformat()
+  g.neoformat_enabled_lua = { "stylua" }
+end
+
+local function wordmotion()
+  g.wordmotion_nomap = 1
+end
+
+local function textobjuser()
   -- fn["textobj#user#plugin"]("specialcharacters", {
   --   move = {
   --     pattern = [[\(\W\&\S\)\+]],
@@ -174,8 +221,36 @@ end
   -- 	},
   -- })
   -- pattern = [[\S\+]],
--- end
+end
+
+local function dial()
+  local augend = require("dial.augend")
+  require("dial.config").augends:register_group({
+    default = {
+      augend.integer.alias.decimal,
+      augend.integer.alias.decimal_int,
+      augend.date.alias["%Y/%m/%d"],
+      augend.semver.alias.semver,
+      augend.constant.alias.bool,
+      augend.constant.new({
+        elements = { "let", "const" },
+      }),
+      augend.constant.new({
+        elements = { "&&", "||" },
+        word = false,
+        cyclic = true,
+      }),
+    },
+  })
+end
 
 return {
   core = core,
+  tokyonight = tokyonight,
+  highlightedyank = highlightedyank,
+  neoformat = neoformat,
+  wordmotion = wordmotion,
+  textobjuser = textobjuser,
+  dial = dial,
+  leap = leap,
 }
