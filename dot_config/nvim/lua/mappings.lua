@@ -156,28 +156,6 @@ local function leap()
   map({ "n", "x" }, "S", "<Plug>(leap-backward)", remap)
 end
 
--------------------- justinmk/vim-sneak
-local function sneak()
-  -- map("n", "f", "8s", remap)
-  -- map("n", "F", "8S", remap)
-  -- map({ "n", "x", "o" }, "s", "<Plug>Sneak_s")
-  -- map({ "n", "x", "o" }, "S", "<Plug>Sneak_S")
-
-  map({ "n", "x" }, "s", ":<C-U>call sneak#wrap('', 2, 0, 2, 1)<CR>")
-  map({ "n", "x" }, "S", ":<C-U>call sneak#wrap('', 2, 1, 2, 1)<CR>")
-  map({ "n", "x", "o" }, "f", "<Plug>Sneak_f")
-  map({ "n", "x", "o" }, "F", "<Plug>Sneak_F")
-  -- map({ "n", "x", "o" }, "t", "<Plug>Sneak_t")
-  -- map({ "n", "x", "o" }, "T", "<Plug>Sneak_T")
-
-  cmd([[
-  nmap <expr> n sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n'
-  nmap <expr> N sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N'
-  ]])
-  -- vim.api.nvim_set_keymap("", "n", [[sneak#is_sneaking() ? '<Plug>Sneak_;' : 'n']], expr)
-  -- vim.api.nvim_set_keymap("", "N", [[sneak#is_sneaking() ? '<Plug>Sneak_,' : 'N']], expr)
-end
-
 -------------------- lewis6991/gitsigns.nvim
 local function gitsigns(bufnr)
   local gs = package.loaded.gitsigns
