@@ -10,6 +10,11 @@ local function colorizer()
   require("colorizer").setup()
 end
 
+-------------------- machakann/vim-highlightedyank
+local function highlightedyank()
+  g.highlightedyank_highlight_duration = 100
+end
+
 -------------------- ahmedkhalf/project.nvim
 local function project()
   require("project_nvim").setup()
@@ -470,4 +475,5 @@ return {
   tokyonight = tokyonight,
   dial = dial,
   leap = leap,
+  highlightedyank = highlightedyank,
 }
