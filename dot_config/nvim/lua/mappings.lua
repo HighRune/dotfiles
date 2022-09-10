@@ -18,13 +18,6 @@ local function core()
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
   cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
-  cmd([[
-		func Eatchar(pat)
-	      let c = nr2char(getchar(0))
-	      return (c =~ a:pat) ? '' : c
-	   endfunc
-	   iabbr <silent> co console.log('<C-R>=Eatchar('\s')<CR>
-	]])
   -- Disable keys
   map("", "Q", "<nop>")
   map("", "q", "<nop>")
