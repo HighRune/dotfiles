@@ -293,7 +293,6 @@ return {
   coq = coq,
   fzf = fzf,
   dial = dial,
-  sneak = sneak,
   gitsigns = gitsigns,
   textobjchainmember = textobjchainmember,
   hydra = hydra,
