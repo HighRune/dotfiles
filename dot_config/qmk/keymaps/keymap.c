@@ -1,72 +1,72 @@
 #include QMK_KEYBOARD_H
 
 enum custom_keycodes {
-    GRVA = SAFE_RANGE,
-    GRVE,
-    GRVU,
-    CIRA,
-    CIRO,
-    CIRE,
-    CIRU,
-    CIRI,
-    UMLE,
-    UMLU,
-    UMLI,
+    GRAVEA = SAFE_RANGE,
+    GRAVEE,
+    GRAVEU,
+    CIRCUMFLEXA,
+    CIRCUMFLEXO,
+    CIRCUMFLEXE,
+    CIRCUMFLEXU,
+    CIRCUMFLEXI,
+    TREMAE,
+    TREMAU,
+    TREMAI,
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-    case GRVA:
+    case GRAVEA:
         if (record->event.pressed) {
         SEND_STRING(SS_RALT("`")"a");
         }
         break;
-    case GRVE:
+    case GRAVEE:
         if (record->event.pressed) {
         SEND_STRING(SS_RALT("`")"e");
         }
         break;
-    case GRVU:
+    case GRAVEU:
         if (record->event.pressed) {
         SEND_STRING(SS_RALT("`")"u");
         }
         break;
-    case CIRA:
+    case CIRCUMFLEXA:
         if (record->event.pressed) {
         SEND_STRING(SS_RALT("6")"a");
         }
         break;
-    case CIRO:
+    case CIRCUMFLEXO:
         if (record->event.pressed) {
         SEND_STRING(SS_RALT("6")"o");
         }
         break;
-    case CIRE:
+    case CIRCUMFLEXE:
         if (record->event.pressed) {
         SEND_STRING(SS_RALT("6")"e");
         }
         break;
-    case CIRU:
+    case CIRCUMFLEXU:
         if (record->event.pressed) {
         SEND_STRING(SS_RALT("6")"u");
         }
         break;
-    case CIRI:
+    case CIRCUMFLEXI:
         if (record->event.pressed) {
         SEND_STRING(SS_RALT("6")"i");
         }
         break;
-    case UMLE:
+    case TREMAE:
         if (record->event.pressed) {
           SEND_STRING(SS_RALT(SS_RSFT("\""))"e");
         }
         break;
-    case UMLU:
+    case TREMAU:
         if (record->event.pressed) {
           SEND_STRING(SS_RALT(SS_RSFT("\""))"u");
         }
         break;
-    case UMLI:
+    case TREMAI:
         if (record->event.pressed) {
           SEND_STRING(SS_RALT(SS_RSFT("\""))"i");
         }
@@ -76,85 +76,85 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 };
 
 enum combos { 
-  L1C,
-  L1S,
-  L1G,
-  L1A,
-  L2C,
-  L2S,
-  L2G,
-  L2A,
+  L1CTL,
+  L1SFT,
+  L1GUI,
+  L1ALT,
+  L2CTL,
+  L2SFT,
+  L2GUI,
+  L2ALT,
   L1CS,
   L1GS,
   L2CS,
   L2GS,
-  L3ACUE,
-  L3GRVA,
-  L3GRVE,
-  L3GRVU,
-  L3CIRA,
-  L3CIRO,
-  L3CIRE,
-  L3CIRU,
-  L3CIRI,
-  L3UMLE,
-  L3UMLU,
-  L3UMLI,
-  L3CEDC,
+  L3ACUTEE,
+  L3GRAVEA,
+  L3GRAVEE,
+  L3GRAVEU,
+  L3CIRCUMFLEXA,
+  L3CIRCUMFLEXO,
+  L3CIRCUMFLEXE,
+  L3CIRCUMFLEXU,
+  L3CIRCUMFLEXI,
+  L3TREMAE,
+  L3TREMAU,
+  L3TREMAI,
+  L3CEDILLAC,
 };
 
-const uint16_t PROGMEM l1c[] = { OSL(2), KC_U, COMBO_END};
-const uint16_t PROGMEM l1s[] = { OSL(2), KC_E, COMBO_END};
-const uint16_t PROGMEM l1g[] = { OSL(2), KC_O, COMBO_END};
-const uint16_t PROGMEM l1a[] = { OSL(2), KC_A, COMBO_END};
-const uint16_t PROGMEM l2c[] = { OSL(1), KC_H, COMBO_END};
-const uint16_t PROGMEM l2s[] = { OSL(1), KC_T, COMBO_END};
-const uint16_t PROGMEM l2g[] = { OSL(1), KC_N, COMBO_END};
-const uint16_t PROGMEM l2a[] = { OSL(1), KC_S, COMBO_END};
+const uint16_t PROGMEM l1ctl[] = { OSL(2), KC_U, COMBO_END};
+const uint16_t PROGMEM l1sft[] = { OSL(2), KC_E, COMBO_END};
+const uint16_t PROGMEM l1gui[] = { OSL(2), KC_O, COMBO_END};
+const uint16_t PROGMEM l1alt[] = { OSL(2), KC_A, COMBO_END};
+const uint16_t PROGMEM l2ctl[] = { OSL(1), KC_H, COMBO_END};
+const uint16_t PROGMEM l2sft[] = { OSL(1), KC_T, COMBO_END};
+const uint16_t PROGMEM l2gui[] = { OSL(1), KC_N, COMBO_END};
+const uint16_t PROGMEM l2alt[] = { OSL(1), KC_S, COMBO_END};
 const uint16_t PROGMEM l1cs[] = { OSL(2), KC_E, KC_U, COMBO_END};
 const uint16_t PROGMEM l1gs[] = { OSL(2), KC_E, KC_O, COMBO_END};
 const uint16_t PROGMEM l2cs[] = { OSL(1), KC_T, KC_H, COMBO_END};
 const uint16_t PROGMEM l2gs[] = { OSL(1), KC_T, KC_N, COMBO_END};
-const uint16_t PROGMEM l3acue[] = { OSL(3), KC_O, COMBO_END};
-const uint16_t PROGMEM l3grva[] = { OSL(3), KC_A, COMBO_END};
-const uint16_t PROGMEM l3grve[] = { OSL(3), KC_E, COMBO_END};
-const uint16_t PROGMEM l3grvu[] = { OSL(3), KC_U, COMBO_END};
-const uint16_t PROGMEM l3cira[] = { OSL(3), KC_QUOT, COMBO_END};
-const uint16_t PROGMEM l3ciro[] = { OSL(3), KC_COMM, COMBO_END};
-const uint16_t PROGMEM l3cire[] = { OSL(3), KC_DOT, COMBO_END};
-const uint16_t PROGMEM l3ciru[] = { OSL(3), KC_P, COMBO_END};
-const uint16_t PROGMEM l3ciri[] = { OSL(3), KC_Y, COMBO_END};
-const uint16_t PROGMEM l3umle[] = { OSL(3), KC_J, COMBO_END};
-const uint16_t PROGMEM l3umlu[] = { OSL(3), KC_K, COMBO_END};
-const uint16_t PROGMEM l3umli[] = { OSL(3), KC_X, COMBO_END};
-const uint16_t PROGMEM l3cedc[] = { OSL(3), KC_C, COMBO_END};
+const uint16_t PROGMEM l3acutee[] = { OSL(3), KC_O, COMBO_END};
+const uint16_t PROGMEM l3gravea[] = { OSL(3), KC_A, COMBO_END};
+const uint16_t PROGMEM l3gravee[] = { OSL(3), KC_E, COMBO_END};
+const uint16_t PROGMEM l3graveu[] = { OSL(3), KC_U, COMBO_END};
+const uint16_t PROGMEM l3circumflexa[] = { OSL(3), KC_QUOT, COMBO_END};
+const uint16_t PROGMEM l3circumflexo[] = { OSL(3), KC_COMM, COMBO_END};
+const uint16_t PROGMEM l3circumflexe[] = { OSL(3), KC_DOT, COMBO_END};
+const uint16_t PROGMEM l3circumflexu[] = { OSL(3), KC_P, COMBO_END};
+const uint16_t PROGMEM l3circumflexi[] = { OSL(3), KC_Y, COMBO_END};
+const uint16_t PROGMEM l3tremae[] = { OSL(3), KC_J, COMBO_END};
+const uint16_t PROGMEM l3tremau[] = { OSL(3), KC_K, COMBO_END};
+const uint16_t PROGMEM l3tremai[] = { OSL(3), KC_X, COMBO_END};
+const uint16_t PROGMEM l3cedillac[] = { OSL(3), KC_C, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  [L1C] = COMBO(l1c, OSM(MOD_LCTL)),
-  [L1S] = COMBO(l1s, OSM(MOD_LSFT)),
-  [L1G] = COMBO(l1g, OSM(MOD_LGUI)),
-  [L1A] = COMBO(l1a, OSM(MOD_LALT)),
-  [L2C] = COMBO(l2c, OSM(MOD_RCTL)),
-  [L2S] = COMBO(l2s, OSM(MOD_RSFT)),
-  [L2G] = COMBO(l2g, OSM(MOD_RGUI)),
-  [L2A] = COMBO(l2a, OSM(MOD_RALT)),
+  [L1CTL] = COMBO(l1ctl, OSM(MOD_LCTL)),
+  [L1SFT] = COMBO(l1sft, OSM(MOD_LSFT)),
+  [L1GUI] = COMBO(l1gui, OSM(MOD_LGUI)),
+  [L1ALT] = COMBO(l1alt, OSM(MOD_LALT)),
+  [L2CTL] = COMBO(l2ctl, OSM(MOD_RCTL)),
+  [L2SFT] = COMBO(l2sft, OSM(MOD_RSFT)),
+  [L2GUI] = COMBO(l2gui, OSM(MOD_RGUI)),
+  [L2ALT] = COMBO(l2alt, OSM(MOD_RALT)),
   [L1CS] = COMBO(l1cs, OSM(MOD_LCTL|MOD_LSFT)),
   [L1GS] = COMBO(l1gs, OSM(MOD_LGUI|MOD_LSFT)),
   [L2CS] = COMBO(l2cs, OSM(MOD_RCTL|MOD_RSFT)),
   [L2GS] = COMBO(l2gs, OSM(MOD_RGUI|MOD_RSFT)),
-  [L3ACUE] = COMBO(l3acue, RALT(KC_E)),
-  [L3GRVA] = COMBO(l3grva, GRVA),
-  [L3GRVE] = COMBO(l3grve, GRVE),
-  [L3GRVU] = COMBO(l3grvu, GRVU),
-  [L3CIRA] = COMBO(l3cira, CIRA),
-  [L3CIRO] = COMBO(l3ciro, CIRO),
-  [L3CIRE] = COMBO(l3cire, CIRE),
-  [L3CIRU] = COMBO(l3ciru, CIRU),
-  [L3CIRI] = COMBO(l3ciri, CIRI),
-  [L3UMLE] = COMBO(l3umle, UMLE),
-  [L3UMLU] = COMBO(l3umlu, UMLU),
-  [L3UMLI] = COMBO(l3umli, UMLI),
-  [L3CEDC] = COMBO(l3cedc, RALT(KC_COMM)),
+  [L3ACUTEE] = COMBO(l3acutee, RALT(KC_E)),
+  [L3GRAVEA] = COMBO(l3gravea, GRAVEA),
+  [L3GRAVEE] = COMBO(l3gravee, GRAVEE),
+  [L3GRAVEU] = COMBO(l3graveu, GRAVEU),
+  [L3CIRCUMFLEXA] = COMBO(l3circumflexa, CIRCUMFLEXA),
+  [L3CIRCUMFLEXO] = COMBO(l3circumflexo, CIRCUMFLEXO),
+  [L3CIRCUMFLEXE] = COMBO(l3circumflexe, CIRCUMFLEXE),
+  [L3CIRCUMFLEXU] = COMBO(l3circumflexu, CIRCUMFLEXU),
+  [L3CIRCUMFLEXI] = COMBO(l3circumflexi, CIRCUMFLEXI),
+  [L3TREMAE] = COMBO(l3tremae, TREMAE),
+  [L3TREMAU] = COMBO(l3tremau, TREMAU),
+  [L3TREMAI] = COMBO(l3tremai, TREMAI),
+  [L3CEDILLAC] = COMBO(l3cedillac, RALT(KC_COMM)),
 };
 
 /* THIS FILE WAS GENERATED!
