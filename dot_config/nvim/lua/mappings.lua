@@ -15,6 +15,7 @@ local remap = { remap = true }
 local function core()
 
   -- map("n", "<leader>c", ":AsyncRun chezmoi add %:p")
+
   map("n", "<leader>c", "<C-z> chezmoi add ~/.config/nvim/lua/mappings.lua ; fg")
 
 
