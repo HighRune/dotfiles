@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
 
+// US layout altgr-intl variant with french special characters
 enum custom_keycodes {
     GRAVEA = SAFE_RANGE,
     GRAVEE,
@@ -115,9 +116,9 @@ const uint16_t PROGMEM l1cs[] = { OSL(2), KC_E, KC_U, COMBO_END};
 const uint16_t PROGMEM l1gs[] = { OSL(2), KC_E, KC_O, COMBO_END};
 const uint16_t PROGMEM l2cs[] = { OSL(1), KC_T, KC_H, COMBO_END};
 const uint16_t PROGMEM l2gs[] = { OSL(1), KC_T, KC_N, COMBO_END};
-const uint16_t PROGMEM l3acutee[] = { OSL(3), KC_O, COMBO_END};
+const uint16_t PROGMEM l3acutee[] = { OSL(3), KC_E, COMBO_END};
 const uint16_t PROGMEM l3gravea[] = { OSL(3), KC_A, COMBO_END};
-const uint16_t PROGMEM l3gravee[] = { OSL(3), KC_E, COMBO_END};
+const uint16_t PROGMEM l3gravee[] = { OSL(3), KC_O, COMBO_END};
 const uint16_t PROGMEM l3graveu[] = { OSL(3), KC_U, COMBO_END};
 const uint16_t PROGMEM l3circumflexa[] = { OSL(3), KC_QUOT, COMBO_END};
 const uint16_t PROGMEM l3circumflexo[] = { OSL(3), KC_COMM, COMBO_END};
