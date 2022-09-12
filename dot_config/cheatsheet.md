@@ -595,11 +595,11 @@ history -w                                # Remplace l'historique général des 
                                           # par l'historique du shell courant (que vous venez d'effacer)
 
 apt <package> -y            # Accepte toutes les demandes lors de l'installation
-man <command>               # Manuel
-/ foo                       # Cherche dans le manuel
 <command> | less            # Affiche tout le contenu de la commande
-base64 <file>               # Convert file content to base64
-base64 -d <file>            # Decode base64
+base64 -d <file> > file     # Decode base64 file
+base64 <file>               # Encode file content to base64
+echo <string> | base64 -d   # Decode base64 value
+echo  <string> | base64     # Encode value to base64
 showkey -a                  # Show pressed key
 sudo xinit -- :1            # Run a X server with only an xterm,
 xev                         # then print contents of X events
