@@ -72,6 +72,18 @@ local function packer()
   })
 end
 
+local function leap()
+  augroup("leap", { clear = true })
+  autocmd("ColorScheme", {
+    group = "leap",
+    pattern = "*",
+    callback = function()
+      require('leap').init_highlight(true)
+      hi(0, 'LeapBackdrop', { bg = 'none', })
+    end
+  })
+end
+
 local function coq()
   augroup("coq", { clear = true })
   autocmd("BufWritePost", {
@@ -125,4 +137,5 @@ return {
   core = core,
   bufferline = bufferline,
   coq = coq,
+  leap = leap,
 }
