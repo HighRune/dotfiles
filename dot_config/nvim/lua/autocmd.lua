@@ -35,6 +35,9 @@ local function core()
     end
   })
 
+  -- Disable automatic comment insertion
+  cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal fo-=c fo-=r fo-=o fo+=t]])
+
   -- Exclude quickfix buffer from the buffer list
   autocmd("FileType", {
     group = "qf",
@@ -107,6 +110,10 @@ end
 -- autocmd ColorScheme * highlight VertSplit guifg=#292e42
 -- autocmd ColorScheme * highlight Hlargs guifg=#FAFF00
 -- ]])
+
+
+-- Highlight a selection on yank
+-- cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higroup="IncSearch", timeout=100}]])
 
 -- local function neoformat()
 --   -- Format on write
