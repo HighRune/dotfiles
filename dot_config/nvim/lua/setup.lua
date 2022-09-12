@@ -5,6 +5,11 @@ local map = vim.keymap.set
 local call = vim.call
 local api = vim.api
 
+-------------------- chaoren/vim-wordmotion
+local function wordmotion()
+  g.wordmotion_nomap = 1
+end
+
 -------------------- norcalli/nvim-colorizer.lua
 local function colorizer()
   require("colorizer").setup()
@@ -477,4 +482,5 @@ return {
   dial = dial,
   leap = leap,
   highlightedyank = highlightedyank,
+  wordmotion = wordmotion,
 }
