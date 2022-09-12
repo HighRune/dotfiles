@@ -54,158 +54,136 @@ local function core()
   -- nvim-treesitter/nvim-treesitter
   o.foldmethod = "expr"
   o.foldexpr = "nvim_treesitter#foldexpr()"
-
-  -- Highlight a selection on yank
-  -- cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higroup="IncSearch", timeout=100}]])
-
-  -- Disable automatic comment insertion
-  cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal fo-=c fo-=r fo-=o fo+=t]])
-end
-
-local function highlightedyank()
-  g.highlightedyank_highlight_duration = 100
-end
-
-local function neoformat()
-  g.neoformat_enabled_lua = { "stylua" }
-end
-
-local function wordmotion()
-  g.wordmotion_nomap = 1
-end
-
-local function textobjuser()
-  -- fn["textobj#user#plugin"]("specialcharacters", {
-  --   move = {
-  --     pattern = [[\(\W\&\S\)\+]],
-  --     ["move-n"] = "W",
-  --     ["move-p"] = "B",
-  --     ['move-N'] = 'E',
-  --     ['move-P'] = 'gE',
-  --   },
-  -- })
-  --
-  -- cmd([[
-  -- call textobj#user#plugin('word', {
-  --   \   'move': {
-  --   \   'pattern': '\<\w\+\>',
-  --   \     'move-n': 'w',
-  --   \     'move-p': 'b',
-  --   \     'move-N': 'e',
-  --   \     'move-P': 'ge',
-  --   \   },
-  --   \ })
-  -- ]])
-
-  -- fn["textobj#user#plugin"]("specialcharacters", {
-  --   move = {
-  --     pattern = [[\(\W\&\S\)\+]],
-  --     ["move-n"] = "W",
-  --     ["move-p"] = "B",
-  -- ['move-N'] = 'E',
-  -- ['move-P'] = 'gE',
-  -- },
-  -- special_i = {
-  --   select = "iW",
-  -- 	pattern = [[\(\W\&\S\)\+]],
-  --   },
-  -- special_a = {
-  --   select = "aW",
-  -- 	pattern = [[\s*\(\W\&\S\)\+\s*]],
-  --   },
-  -- })
-
-  -- pattern = [[\(\w\|\s\)\@!]],
-  -- \   'pattern': '\[[:alnum:]]\+',
-  -- \   'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
-  -- \   'pattern': '\(\s*\w\+\s*\)\(\W\)\@='
-  --   \   'word_a': {
-  --  \     'select': 'aw',
-  --  \     'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
-  -- \   },
-
-  --  cmd([[
-  -- call textobj#user#plugin('word', {
-  --   \   'move': {
-  --    \   'pattern': '\<\w\+\>',
-  --    \     'move-n': 'w',
-  --   \     'move-p': 'b',
-  --   \     'move-N': 'e',
-  --   \     'move-P': 'ge',
-  --   \   },
-  --    \   'word_i': {
-  --   \   'select': 'iw',
-  --   \     'pattern': '\w\+'
-  --    \   },
-  --    \   'word_I': {
-  --   \     'select': 'Iw',
-  --   \     'pattern': '\(\W*\&\S*\)\w\+\(\W*\&\S*\)'
-  --    \   },
-  --    \ })
-  -- ]])
-
-  -- cmd([[
-  -- -- -- \     'pattern': '\s*\<\w\+\>\s*'
-  -- "     call textobj#user#plugin('handyobjects', {
-  -- " \   'underscores_a': {
-  -- " \     'select': 'ar',
-  -- " \     'pattern': '_\_[^_]*_'
-  -- " \   },
-  -- " \   'underscores_i': {
-  -- " \     'select': 'ir',
-  -- " \     'pattern': '_\zs\_[^_]\+\ze_'
-  -- " \   },
-  -- " \ })
-  -- call textobj#user#plugin('contiuous', {
-  --   \   'continuous': {
-  --   \     'pattern': '\S\+',
-  --   \     'move-n': 'w',
-  --   \     'move-p': 'b',
-  --   \     'move-N': 'e',
-  --   \     'move-P': 'ge',
-  --   \   },
-  --   \   'continuous_a': {
-  --   \     'select': 'aw',
-  --   \     'pattern': '\s\S\+\s'
-  --   \   },
-  --   \ })
-  --    ]])
-  -- \     'select': ['aw', 'iw'],
-  -- call textobj#user#plugin('contiuous', {
-  --   \   'continuous': {
-  --   \     'pattern': '\S\+',
-  --   \     'select': ['aw', 'iw'],
-  --   \     'move-n': 'w',
-  --   \     'move-p': 'b',
-  --   \     'move-N': 'e',
-  --   \     'move-P': 'ge',
-  --   \   },
-  --   \ })
-  --   ]])
-  -- fn["textobj#user#plugin"]("whitespaces", {
-  -- whitespaces = {
-  -- 	pattern = [[\S\zs\s\+]],
-  -- 	["move-n"] = "s",
-  -- 	["move-p"] = "S",
-  -- },
-  -- })
-  -- fn["textobj#user#plugin"]("word", {
-  -- 	word = {
-  -- 		pattern = [[\<\w\+\>]],
-  -- 		["move-n"] = "w",
-  -- 		["move-p"] = "b",
-  -- 		["move-N"] = "e",
-  -- 		["move-P"] = "ge",
-  -- 		select = "iw",
-  -- 	},
-  -- })
-  -- pattern = [[\S\+]],
 end
 
 return {
   core = core,
-  highlightedyank = highlightedyank,
-  neoformat = neoformat,
-  wordmotion = wordmotion,
-  textobjuser = textobjuser,
 }
+
+-- local function textobjuser()
+-- fn["textobj#user#plugin"]("specialcharacters", {
+--   move = {
+--     pattern = [[\(\W\&\S\)\+]],
+--     ["move-n"] = "W",
+--     ["move-p"] = "B",
+--     ['move-N'] = 'E',
+--     ['move-P'] = 'gE',
+--   },
+-- })
+--
+-- cmd([[
+-- call textobj#user#plugin('word', {
+--   \   'move': {
+--   \   'pattern': '\<\w\+\>',
+--   \     'move-n': 'w',
+--   \     'move-p': 'b',
+--   \     'move-N': 'e',
+--   \     'move-P': 'ge',
+--   \   },
+--   \ })
+-- ]])
+
+-- fn["textobj#user#plugin"]("specialcharacters", {
+--   move = {
+--     pattern = [[\(\W\&\S\)\+]],
+--     ["move-n"] = "W",
+--     ["move-p"] = "B",
+-- ['move-N'] = 'E',
+-- ['move-P'] = 'gE',
+-- },
+-- special_i = {
+--   select = "iW",
+-- 	pattern = [[\(\W\&\S\)\+]],
+--   },
+-- special_a = {
+--   select = "aW",
+-- 	pattern = [[\s*\(\W\&\S\)\+\s*]],
+--   },
+-- })
+
+-- pattern = [[\(\w\|\s\)\@!]],
+-- \   'pattern': '\[[:alnum:]]\+',
+-- \   'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
+-- \   'pattern': '\(\s*\w\+\s*\)\(\W\)\@='
+--   \   'word_a': {
+--  \     'select': 'aw',
+--  \     'pattern': '^\s*\zs\w\+\s*\|\s*\w\+\s*'
+-- \   },
+
+--  cmd([[
+-- call textobj#user#plugin('word', {
+--   \   'move': {
+--    \   'pattern': '\<\w\+\>',
+--    \     'move-n': 'w',
+--   \     'move-p': 'b',
+--   \     'move-N': 'e',
+--   \     'move-P': 'ge',
+--   \   },
+--    \   'word_i': {
+--   \   'select': 'iw',
+--   \     'pattern': '\w\+'
+--    \   },
+--    \   'word_I': {
+--   \     'select': 'Iw',
+--   \     'pattern': '\(\W*\&\S*\)\w\+\(\W*\&\S*\)'
+--    \   },
+--    \ })
+-- ]])
+
+-- cmd([[
+-- -- -- \     'pattern': '\s*\<\w\+\>\s*'
+-- "     call textobj#user#plugin('handyobjects', {
+-- " \   'underscores_a': {
+-- " \     'select': 'ar',
+-- " \     'pattern': '_\_[^_]*_'
+-- " \   },
+-- " \   'underscores_i': {
+-- " \     'select': 'ir',
+-- " \     'pattern': '_\zs\_[^_]\+\ze_'
+-- " \   },
+-- " \ })
+-- call textobj#user#plugin('contiuous', {
+--   \   'continuous': {
+--   \     'pattern': '\S\+',
+--   \     'move-n': 'w',
+--   \     'move-p': 'b',
+--   \     'move-N': 'e',
+--   \     'move-P': 'ge',
+--   \   },
+--   \   'continuous_a': {
+--   \     'select': 'aw',
+--   \     'pattern': '\s\S\+\s'
+--   \   },
+--   \ })
+--    ]])
+-- \     'select': ['aw', 'iw'],
+-- call textobj#user#plugin('contiuous', {
+--   \   'continuous': {
+--   \     'pattern': '\S\+',
+--   \     'select': ['aw', 'iw'],
+--   \     'move-n': 'w',
+--   \     'move-p': 'b',
+--   \     'move-N': 'e',
+--   \     'move-P': 'ge',
+--   \   },
+--   \ })
+--   ]])
+-- fn["textobj#user#plugin"]("whitespaces", {
+-- whitespaces = {
+-- 	pattern = [[\S\zs\s\+]],
+-- 	["move-n"] = "s",
+-- 	["move-p"] = "S",
+-- },
+-- })
+-- fn["textobj#user#plugin"]("word", {
+-- 	word = {
+-- 		pattern = [[\<\w\+\>]],
+-- 		["move-n"] = "w",
+-- 		["move-p"] = "b",
+-- 		["move-N"] = "e",
+-- 		["move-P"] = "ge",
+-- 		select = "iw",
+-- 	},
+-- })
+-- pattern = [[\S\+]],
+-- end
