@@ -140,6 +140,7 @@ return require("packer").startup({
     use({
       "ggandor/leap.nvim",
       config = function()
+        require("autocmd").leap()
         require("setup").leap()
         require("mappings").leap()
       end
@@ -177,7 +178,7 @@ return require("packer").startup({
     use({
       "machakann/vim-highlightedyank",
       config = function()
-        require("options").highlightedyank()
+        require("setup").highlightedyank()
       end,
     })
     use("svban/YankAssassin.vim")
@@ -191,15 +192,15 @@ return require("packer").startup({
     use({
       "chaoren/vim-wordmotion",
       config = function()
-        require("options").wordmotion()
+        require("setup").wordmotion()
       end,
     })
     -- use("Julian/vim-textobj-variable-segment")
     use({
       "kana/vim-textobj-user",
-      config = function()
-        require("options").textobjuser()
-      end,
+      -- config = function()
+      -- require("options").textobjuser()
+      -- end,
     })
     use({
       "kylechui/nvim-surround",
