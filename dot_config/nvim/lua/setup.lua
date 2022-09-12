@@ -167,6 +167,7 @@ local function ai()
   local gen_spec = require('mini.ai').gen_spec
   require('mini.ai').setup({
     custom_textobjects = {
+      f = false,
       a = gen_spec.argument({ brackets = { '%b()' } }),
       o = gen_spec.argument({ brackets = { '%b{}' } }),
       e = gen_spec.argument({ brackets = { '%b[]' } }),
@@ -211,37 +212,37 @@ local function treesitter()
     },
 
     -- nvim-treesitter/nvim-treesitter-textobjects
-    -- textobjects = {
-    -- select = {
-    --   enable = true,
-    --   lookahead = true,
-    --   keymaps = {
-    --     ["af"] = "@function.outer",
-    --     ["if"] = "@function.inner",
-    --     ["aF"] = "@call.outer",
-    --     ["iF"] = "@call.inner",
-    --   },
-    -- },
-    -- move = {
-    -- 	enable = true,
-    -- 	set_jumps = true,
-    -- 	goto_next_start = {
-    -- 		["]]"] = "@function.outer",
-    -- 	},
-    -- 	goto_previous_start = {
-    -- 		["[["] = "@function.outer",
-    -- 	},
-    -- },
-    -- swap = {
-    -- 	enable = true,
-    -- 	swap_next = {
-    -- 		["<c-k>"] = "@parameter.inner",
-    -- 	},
-    -- 	swap_previous = {
-    -- 		["<c-j>"] = "@parameter.inner",
-    -- 	},
-    -- },
-    -- },
+    textobjects = {
+      select = {
+        enable = true,
+        lookahead = true,
+        keymaps = {
+          ["af"] = "@function.outer",
+          ["if"] = "@function.inner",
+          ["aF"] = "@call.outer",
+          ["iF"] = "@call.inner",
+        },
+      },
+      -- move = {
+      -- 	enable = true,
+      -- 	set_jumps = true,
+      -- 	goto_next_start = {
+      -- 		["]]"] = "@function.outer",
+      -- 	},
+      -- 	goto_previous_start = {
+      -- 		["[["] = "@function.outer",
+      -- 	},
+      -- },
+      -- swap = {
+      -- 	enable = true,
+      -- 	swap_next = {
+      -- 		["<c-k>"] = "@parameter.inner",
+      -- 	},
+      -- 	swap_previous = {
+      -- 		["<c-j>"] = "@parameter.inner",
+      -- 	},
+      -- },
+    },
 
     -- nvim-treesitter/playground
     -- playground = {
