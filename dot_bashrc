@@ -230,6 +230,7 @@ function dev () {
     'npm run dev' Enter \; \
     # 'nvim' Enter ':te' Enter 'i npm run dev' Enter \;
 }
+alias psyyu='pacman -Syyu'
 
 alias t='tmux'
 alias tl='tmux ls'
@@ -266,6 +267,9 @@ alias gm='git merge'
 alias gr='git rebase'
 alias grs='git reset'
 alias grs1='git reset HEAD~1'
+alias gwa='git worktree add'
+alias gwl='git worktree list'
+alias gwr='git worktree remove'
 
 alias npml='npm ls --depth=0'
 alias npmg='npm ls -g --depth=0'
