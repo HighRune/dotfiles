@@ -9,6 +9,7 @@ local function core()
   augroup("tmux", { clear = true })
   augroup("diagnostic", { clear = true })
   augroup("qf", { clear = true })
+  augroup("disableAutoComment", { clear = true })
 
   autocmd("BufWritePost", {
     group = "chezmoi",
@@ -35,8 +36,11 @@ local function core()
     end
   })
 
-  -- Disable automatic comment insertion
-  cmd([[autocmd BufWinEnter,BufRead,BufNewFile * setlocal fo-=c fo-=r fo-=o fo+=t]])
+  autocmd({ 'BufWinEnter', 'BufRead', 'BufNewFile' }, {
+    group = 'disableAutoComment',
+    pattern = "*",
+    command = "setlocal fo-=c fo-=r fo-=o fo+=t",
+  })
 
   -- Exclude quickfix buffer from the buffer list
   autocmd("FileType", {
