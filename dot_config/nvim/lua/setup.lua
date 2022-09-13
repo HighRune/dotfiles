@@ -452,9 +452,9 @@ local function coq()
       tree_sitter = {
         short_name = '',
       },
-      tmux = {
-        short_name = '穀',
-      },
+      -- tmux = {
+      --   short_name = '',
+      -- },
       buffers = {
         short_name = '﬘﬘',
       },
