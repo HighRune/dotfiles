@@ -165,7 +165,7 @@ exec --no-startup-id nm-applet
            tray_output primary
            tray_padding 5px
            strip_workspace_numbers yes
-           font pango:Hack Nerd Font 18px
+           font pango:Hack 18px
            # font pango:Noto Sans Regular 18px
 
            colors {
