@@ -396,15 +396,10 @@ end
 -------------------- ggandor/leap.nvim
 local function leap()
   require('leap').setup {
-    max_aot_targets = nil,
-    highlight_unlabeled = true,
-    safe_labels = nil,
-    labels = { 'u', 'h', 'e', 't', 'o', 'a', 'k', 'm', 'j', 'w', 'q', 'v', '.', 'c', 'r', 'p', 'g' },
-    special_keys = {
-      repeat_search = 'n',
-      next_match    = 'n',
-      prev_match    = 'N',
-    },
+    highlight_unlabeled = false,
+    safe_labels = {},
+    case_sensitive = false,
+    labels = { 'a', 'o', 'e', 'u', 'h', 't', 's', "'", ',', '.', 'p', 'g', 'g', 'c', 'r', 'l', ';', 'q', 'j', 'k', 'm', 'w', 'v', 'z' },
   }
 end
 
