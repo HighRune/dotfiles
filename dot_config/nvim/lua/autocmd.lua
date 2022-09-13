@@ -87,6 +87,9 @@ local function leap()
     callback = function()
       require('leap').init_highlight(true)
       hi(0, 'LeapBackdrop', { bg = 'none', })
+      -- hi(0, 'LeapLabelPrimary', { bg = '#ccff88', fg = 'black' })
+      -- hi(0, 'LeapLabelSecondary', { fg = 'red', })
+      -- hi(0, 'LeapMatch', { bg = '#77aaff', fg = 'black' })
     end
   })
 end
