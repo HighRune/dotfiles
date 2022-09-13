@@ -11,18 +11,18 @@ window:
 
 font:
   normal:
-    family: Hack Nerd Font
+    family: Hack
     style: Regular
   bold:
-    family: Hack Nerd Font
+    family: Hack
     style: Bold
   italic:
-    family: Hack Nerd Font
+    family: Hack
     style: Italic
   bold_italic:
-    family: Hack Nerd Font
+    family: Hack
     style: Bold Italic
-  size: 10.0
+  size: 13.0
   offset:
     y: 5
 
