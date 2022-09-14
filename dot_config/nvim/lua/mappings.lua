@@ -154,6 +154,11 @@ local function leap()
   map({ "n", "x" }, "S", "<Plug>(leap-backward)", remap)
 end
 
+-------------------- woosaaahh/sj.nvim
+local function sj()
+  map("n", "s", require("sj").run)
+end
+
 -------------------- lewis6991/gitsigns.nvim
 local function gitsigns(buffer)
   map("n", "<leader>ga", package.loaded.gitsigns.stage_buffer, { buffer = buffer })
@@ -284,4 +289,5 @@ return {
   bettern = bettern,
   packer = packer,
   pulse = pulse,
+  sj = sj,
 }
