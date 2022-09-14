@@ -22,10 +22,17 @@ return require("packer").startup({
       end
     })
     use({
+      "inside/vim-search-pulse",
+      config = function()
+        require("mappings").pulse()
+      end,
+    })
+    use({
       "folke/tokyonight.nvim",
       setup = function()
         -- autocommand will have no effect on previously sourced colorschemes so it must be added before any colorscheme is sourced
         require('autocmd').bufferline()
+        require('autocmd').leap()
       end,
       config = function()
         require('setup').tokyonight()
@@ -140,7 +147,6 @@ return require("packer").startup({
     use({
       "ggandor/leap.nvim",
       config = function()
-        require("autocmd").leap()
         require("setup").leap()
         require("mappings").leap()
       end
