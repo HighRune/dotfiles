@@ -13,7 +13,7 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
-  map("n", "<leader>c", ":!chezmoi add %:p <CR>")
+  map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
   cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
@@ -113,8 +113,8 @@ local function telescope()
 end
 
 local function packer()
-  map("n", "<Leader>ps", ":PackerSync<CR>")
-  map("n", "<Leader>pc", ":PackerCompile<CR>")
+  map("n", "<Leader>ps", require('packer').sync)
+  map("n", "<Leader>pc", require('packer').compile)
 end
 
 -------------------- junegunn/fzf
@@ -131,13 +131,13 @@ local function bettern()
   map("n", "<s-n>", require("better-n").shift_n, { nowait = true })
 end
 
------------------- inside/vim-search-pulse
+-------------------- inside/vim-search-pulse
 local function pulse()
-g.vim_search_pulse_duration = 200
-g.vim_search_pulse_mode = 'pattern'
-g.vim_search_pulse_disable_auto_mappings = 1
+  g.vim_search_pulse_duration = 200
+  g.vim_search_pulse_mode = 'pattern'
+  g.vim_search_pulse_disable_auto_mappings = 1
 
-cmd([[
+  cmd([[
 nmap n n<Plug>Pulse
 nmap N N<Plug>Pulse
 nmap * *<Plug>Pulse
@@ -145,24 +145,22 @@ nmap # #<Plug>Pulse
 " Pulses cursor line on first match
 " when doing search with / or ?
 cmap <silent> <expr> <enter> search_pulse#PulseFirst()
-]])
+]] )
 end
 
+-------------------- ggandor/leap.nvim
 local function leap()
   map({ "n", "x" }, "s", "<Plug>(leap-forward)", remap)
   map({ "n", "x" }, "S", "<Plug>(leap-backward)", remap)
 end
 
 -------------------- lewis6991/gitsigns.nvim
-local function gitsigns(buf)
-  local gs = package.loaded.gitsigns
-  local buffer = { buffer = buf }
-
-  map("n", "<leader>ga", gs.stage_buffer, buffer)
-  map("n", "<leader>gr", gs.reset_buffer_index, buffer)
-  map("n", "<leader>gc", gs.reset_buffer, buffer)
-  map("n", "<leader>gb", gs.toggle_current_line_blame, buffer)
-  map("n", "<leader>gd", gs.toggle_deleted, buffer)
+local function gitsigns(buffer)
+  map("n", "<leader>ga", package.loaded.gitsigns.stage_buffer, { buffer = buffer })
+  map("n", "<leader>gr", package.loaded.gitsigns.reset_buffer_index, { buffer = buffer })
+  map("n", "<leader>gc", package.loaded.gitsigns.reset_buffer, { buffer = buffer })
+  map("n", "<leader>gb", package.loaded.gitsigns.toggle_current_line_blame, { buffer = buffer })
+  map("n", "<leader>gd", package.loaded.gitsigns.toggle_deleted, { buffer = buffer })
 end
 
 -------------------- akinsho/bufferline.nvim
@@ -223,12 +221,10 @@ local function coq()
   map('i', '<C-c>', function() return fn.pumvisible() == 1 and '<C-e><C-c>' or '<C-c>' end, expr)
   map('i', '<Tab>', function() return fn.pumvisible() == 1 and '<C-n>' or '<Tab>' end, expr)
   map('i', '<S-Tab>', function() return fn.pumvisible() == 1 and '<C-p>' or '<BS>' end, expr)
-  cmd([[
-  imap <C-n> <Nop>
-  imap <C-p> <Nop>
-  ]])
+  map('n', '<Leader>cs', function() return require('coq').Snips('edit') end)
 end
 
+-------------------- anuvyklack/hydra.nvim
 local function hydra()
   local Hydra = require('hydra')
 
@@ -260,6 +256,7 @@ local function hydra()
   map({ 'n', 'x' }, 'gw', function() wordMotion:activate() end)
 end
 
+-------------------- D4KU/vim-textobj-chainmember
 local function textobjchainmember()
   cmd("let g:textobj_chainmember_no_default_key_mappings = 1")
   map("o", "am", "<Plug>(textobj-chainmember-a)")
