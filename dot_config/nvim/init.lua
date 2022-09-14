@@ -32,7 +32,7 @@ return require("packer").startup({
       setup = function()
         -- autocommand will have no effect on previously sourced colorschemes so it must be added before any colorscheme is sourced
         require('autocmd').bufferline()
-        require('autocmd').leap()
+        -- require('autocmd').leap()
       end,
       config = function()
         require('setup').tokyonight()
@@ -107,6 +107,20 @@ return require("packer").startup({
     use("itchyny/vim-cursorword")
     use("skywind3000/asyncrun.vim")
     use({
+      "woosaaahh/sj.nvim",
+      config = function()
+        require("setup").sj()
+        require("mappings").sj()
+      end,
+    })
+    -- use({
+    --   "ggandor/leap.nvim",
+    --   config = function()
+    --     require("setup").leap()
+    --     require("mappings").leap()
+    --   end
+    -- })
+    use({
       "numToStr/Comment.nvim",
       config = function()
         require("setup").comment()
@@ -143,13 +157,6 @@ return require("packer").startup({
       "nvim-lualine/lualine.nvim",
       requires = { "kyazdani42/nvim-web-devicons", opt = true },
       config = "require('config.lualine')()",
-    })
-    use({
-      "ggandor/leap.nvim",
-      config = function()
-        require("setup").leap()
-        require("mappings").leap()
-      end
     })
     -- use({
     --   "jonatan-branting/nvim-better-n",
