@@ -35,6 +35,24 @@ local function comment()
   require("Comment").setup()
 end
 
+-------------------- woosaaahh/sj.nvim
+local function sj()
+  require("sj").setup({
+    auto_jump = true,
+    use_overlay = false,
+    separator = " ",
+    labels = {
+      "'", ",", ".", "p", "y", "a", "o", "e", "u", "i", "d", "h", "t",
+      "n", "s", "f", "g", "c", "r", "l", ";", "q", "j", "k", "x", "b",
+      "m", "w", "v", "z",
+    },
+    highlights = {
+      SjLabel = { bg = '#ccff88', fg = 'black' },
+      SjSearch = { bg = '#77aaff', fg = 'black' },
+    },
+  })
+end
+
 -------------------- ibhagwan/fzf-lua
 local function fzf()
   local actions = require("fzf-lua.actions")
@@ -399,7 +417,8 @@ local function leap()
     highlight_unlabeled = false,
     safe_labels = {},
     case_sensitive = false,
-    labels = { 'a', 'o', 'e', 'u', 'h', 't', 's', "'", ',', '.', 'p', 'g', 'g', 'c', 'r', 'l', ';', 'q', 'j', 'k', 'm', 'w', 'v', 'z' },
+    labels = { 'a', 'o', 'e', 'u', 'h', 't', 's', "'", ',', '.', 'p', 'g', 'g', 'c', 'r', 'l', ';', 'q', 'j', 'k', 'm',
+      'w', 'v', 'z' },
   }
 end
 
@@ -478,4 +497,5 @@ return {
   leap = leap,
   highlightedyank = highlightedyank,
   wordmotion = wordmotion,
+  sj = sj,
 }
