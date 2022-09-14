@@ -59,10 +59,11 @@ local function core()
   -- map("n", "<S-Tab>", ":bprevious<CR>", silent)
 
   -- Quickfix list
-  map("n", "<leader><Tab>", require("booster").addBuffersToQfList)
+  -- map("n", "<leader><Tab>", require("booster").addBuffersToQfList)
   map("n", "<C-down>", require("booster").cycleNextLocItem, silent)
   map("n", "<C-up>", require("booster").cyclePrevLocItem, silent)
-  map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
+  map("n", "<C-q>", ':q!<CR>')
+  -- map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
   -------------------- Runeword/booster.nvim
   -- map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
@@ -118,10 +119,9 @@ end
 
 -------------------- junegunn/fzf
 local function fzf()
-  map("n", "<Leader><Leader>", "<cmd>lua require('fzf-lua').files()<CR>")
-  map("n", "<Leader>s", "<cmd>lua require('fzf-lua').live_grep_resume()<CR>")
-  map("n", "<Leader>h", "<cmd>lua require('fzf-lua').help_tags()<CR>")
-  -- map("n", "<Leader><Tab>", "<cmd>lua require('fzf-lua').buffers()<CR>")
+  map("n", "<Leader><Leader>", require('fzf-lua').files)
+  map("n", "<Leader>s", require('fzf-lua').live_grep_resume)
+  map("n", "<Leader>h", require('fzf-lua').help_tags)
   -- map("n", "<Leader>x", "<cmd>lua require('fzf-lua').quickfix({multiprocess=true})<CR>")
 end
 
@@ -131,18 +131,22 @@ local function bettern()
   map("n", "<s-n>", require("better-n").shift_n, { nowait = true })
 end
 
--------------------- inside/vim-search-pulse
--- local function pulse()
--- cmd([[
--- nmap n n<Plug>Pulse
--- nmap N N<Plug>Pulse
--- nmap * *<Plug>Pulse
--- nmap # #<Plug>Pulse
--- " Pulses cursor line on first match
--- " when doing search with / or ?
--- cmap <silent> <expr> <enter> search_pulse#PulseFirst()
--- ]])
--- end
+------------------ inside/vim-search-pulse
+local function pulse()
+g.vim_search_pulse_duration = 200
+g.vim_search_pulse_mode = 'pattern'
+g.vim_search_pulse_disable_auto_mappings = 1
+
+cmd([[
+nmap n n<Plug>Pulse
+nmap N N<Plug>Pulse
+nmap * *<Plug>Pulse
+nmap # #<Plug>Pulse
+" Pulses cursor line on first match
+" when doing search with / or ?
+cmap <silent> <expr> <enter> search_pulse#PulseFirst()
+]])
+end
 
 local function leap()
   map({ "n", "x" }, "s", "<Plug>(leap-forward)", remap)
@@ -150,31 +154,15 @@ local function leap()
 end
 
 -------------------- lewis6991/gitsigns.nvim
-local function gitsigns(bufnr)
+local function gitsigns(buf)
   local gs = package.loaded.gitsigns
+  local buffer = { buffer = buf }
 
-  local function mmap(mode, l, r, opts)
-    opts = opts or {}
-    opts.buffer = bufnr
-    map(mode, l, r, opts)
-  end
-
-  -- Navigation
-  mmap("n", "<S-right>", "&diff ? '<S-right>' : '<cmd>Gitsigns next_hunk<CR>'", expr)
-  mmap("n", "<S-left>", "&diff ? '<S-left>' : '<cmd>Gitsigns prev_hunk<CR>'", expr)
-
-  -- Actions
-  -- mmap({ "n", "v" }, "<leader>ha", gs.stage_hunk)
-  -- mmap({ "n", "v" }, "<leader>hr", gs.undo_stage_hunk)
-  -- mmap({ "n", "v" }, "<leader>hc", gs.reset_hunk)
-  mmap("n", "<leader>ga", gs.stage_buffer)
-  mmap("n", "<leader>gr", gs.reset_buffer_index)
-  mmap("n", "<leader>gc", gs.reset_buffer)
-  mmap("n", "<leader>gb", gs.toggle_current_line_blame)
-  mmap("n", "<leader>gd", gs.toggle_deleted)
-
-  -- Text object
-  -- mmap({ "o", "x" }, "g", ":<C-U>Gitsigns select_hunk<CR>")
+  map("n", "<leader>ga", gs.stage_buffer, buffer)
+  map("n", "<leader>gr", gs.reset_buffer_index, buffer)
+  map("n", "<leader>gc", gs.reset_buffer, buffer)
+  map("n", "<leader>gb", gs.toggle_current_line_blame, buffer)
+  map("n", "<leader>gd", gs.toggle_deleted, buffer)
 end
 
 -------------------- akinsho/bufferline.nvim
@@ -298,4 +286,5 @@ return {
   leap = leap,
   bettern = bettern,
   packer = packer,
+  pulse = pulse,
 }
