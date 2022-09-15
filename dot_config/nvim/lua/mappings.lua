@@ -137,15 +137,11 @@ local function pulse()
   g.vim_search_pulse_mode = 'pattern'
   g.vim_search_pulse_disable_auto_mappings = 1
 
-  cmd([[
-nmap n n<Plug>Pulse
-nmap N N<Plug>Pulse
-nmap * *<Plug>Pulse
-nmap # #<Plug>Pulse
-" Pulses cursor line on first match
-" when doing search with / or ?
-cmap <silent> <expr> <enter> search_pulse#PulseFirst()
-]] )
+  map("n", "n", "n<Plug>Pulse", remap)
+  map("n", "N", "N<Plug>Pulse", remap)
+  map("n", "*", "*<Plug>Pulse", remap)
+  map("n", "#", "#<Plug>Pulse", remap)
+  map("c", "<Enter>", "search_pulse#PulseFirst()", { silent = true, expr = true })
 end
 
 -------------------- ggandor/leap.nvim
