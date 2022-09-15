@@ -69,6 +69,10 @@ return require("packer").startup({
         require("setup").coq()
       end,
     })
+    -- use({
+    --   'sindrets/diffview.nvim',
+    --   requires = 'nvim-lua/plenary.nvim',
+    -- })
     use({
       "is0n/fm-nvim",
       config = function()
@@ -109,8 +113,8 @@ return require("packer").startup({
     use({
       "woosaaahh/sj.nvim",
       config = function()
-        require("setup").sj()
-        require("mappings").sj()
+        -- require("setup").sj()
+        -- require("mappings").sj()
       end,
     })
     -- use({
