@@ -65,6 +65,16 @@ return function()
     on_attach(client, buffer)
   end
 
+  -- local function on_attach_cssls(client, buffer)
+  --   client.server_capabilities.documentFormattingProvider = true
+  --   on_attach(client, buffer)
+  -- end
+  --
+  -- local function on_attach_html(client, buffer)
+  --   client.server_capabilities.documentFormattingProvider = true
+  --   on_attach(client, buffer)
+  -- end
+
   local lspconfig = require("lspconfig")
   local lsp_flags = { debounce_text_changes = 0 }
 
@@ -93,6 +103,16 @@ return function()
     settings = { format = { enable = false } },
     flags = lsp_flags,
   })
+  -- lspconfig['cssls'].setup {
+  --   on_attach = on_attach_cssls,
+  --   settings = { format = { enable = true } },
+  --   flags = lsp_flags,
+  -- }
+  -- lspconfig['html'].setup {
+  --   on_attach = on_attach_html,
+  --   settings = { format = { enable = true } },
+  --   flags = lsp_flags,
+  -- }
 end
 
 -- require("nvim-lsp-installer").on_server_ready(function(server)
