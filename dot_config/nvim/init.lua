@@ -113,8 +113,8 @@ return require("packer").startup({
     use({
       "woosaaahh/sj.nvim",
       config = function()
-        -- require("setup").sj()
-        -- require("mappings").sj()
+        require("setup").sj()
+        require("mappings").sj()
       end,
     })
     -- use({
