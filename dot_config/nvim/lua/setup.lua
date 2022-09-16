@@ -455,9 +455,11 @@ local function coq()
     keymap = {
       recommended = false,
       pre_select = true,
-      jump_to_mark = '<c-cr>',
-      bigger_preview = '',
+      jump_to_mark = '<c-space>',
       ['repeat'] = '',
+      manual_complete = '',
+      bigger_preview = '',
+      eval_snips = '',
     },
     clients = {
       snippets = {
