@@ -37,20 +37,21 @@ end
 
 -------------------- woosaaahh/sj.nvim
 local function sj()
-  require("sj").setup({
-    auto_jump = true,
-    use_overlay = false,
-    separator = " ",
-    labels = {
-      "'", ",", ".", "p", "y", "a", "o", "e", "u", "i", "d", "h", "t",
-      "n", "s", "f", "g", "c", "r", "l", ";", "q", "j", "k", "x", "b",
-      "m", "w", "v", "z",
-    },
-    highlights = {
-      SjLabel = { bg = '#ccff88', fg = 'black' },
-      SjSearch = { bg = '#77aaff', fg = 'black' },
-    },
-  })
+  -- require("sj").setup({})
+  -- require("sj").setup({
+  --   auto_jump = true,
+  --   use_overlay = false,
+  --   separator = " ",
+  --   labels = {
+  --     "'", ",", ".", "p", "y", "a", "o", "e", "u", "i", "d", "h", "t",
+  --     "n", "s", "f", "g", "c", "r", "l", ";", "q", "j", "k", "x", "b",
+  --     "m", "w", "v", "z",
+  --   },
+  --   highlights = {
+  --     SjLabel = { bg = '#ccff88', fg = 'black' },
+  --     SjSearch = { bg = '#77aaff', fg = 'black' },
+  --   },
+  -- })
 end
 
 -------------------- ibhagwan/fzf-lua
