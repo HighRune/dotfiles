@@ -94,6 +94,18 @@ local function leap()
   })
 end
 
+local function sj()
+  augroup("sj", { clear = true })
+  autocmd("ColorScheme", {
+    group = "sj",
+    pattern = "*",
+    callback = function()
+      hi(0, 'SjLabel', { bg = '#ccff88', fg = 'black' })
+      hi(0, 'SjSearch', { bg = '#77aaff', fg = 'black' })
+    end
+  })
+end
+
 local function coq()
   augroup("coq", { clear = true })
   autocmd("BufWritePost", {
@@ -152,4 +164,5 @@ return {
   bufferline = bufferline,
   coq = coq,
   leap = leap,
+  sj = sj,
 }
