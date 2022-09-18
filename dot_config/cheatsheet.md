@@ -919,6 +919,7 @@ sudo pacman -S <package>             # Install a package
 pacman -R <package>                  # Uninstall a package
 sudo pacman -Syyu                    # Rebuild the list of packages then updates the system
 cat /var/log/pacman.log              # Get a chronological list of everything pacman has done
+yay -Ql <package-name>               # Search files installed by a package
 ```
 
 ## JAVASCRIPT
