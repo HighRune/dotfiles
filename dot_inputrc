@@ -1,3 +1,4 @@
 # override default readline bindings
 set bind-tty-special-chars off
 "\C-u": kill-whole-line
+"\C-\b": backward-kill-word
