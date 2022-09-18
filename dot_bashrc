@@ -186,7 +186,7 @@ source /usr/share/fzf/completion.bash
 # custom bindings
 # bind '"\C-n":"nvim \C-m"'
 bind -x '"\C-n":"nvim"'
-source /path/to/fzf-tab-completion/bash/fzf-bash-completion.sh
+source /usr/share/fzf-tab-completion/bash/fzf-bash-completion.sh
 bind -x '"\t": fzf_bash_completion'
 
 # ssh-agent
