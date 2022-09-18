@@ -168,28 +168,26 @@ _open_files_for_editing() {
 # alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
 ################################################################################
 
+# ___________________________________________ NVIM
 export EDITOR='nvim'
 export VISUAL='nvim'
+export MANPAGER='nvim +Man!'
 
-# fnm
+# ___________________________________________ FNM
 eval "$(fnm env)"
 
-# nvm
+# ___________________________________________ NVM
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# fzf
+# ___________________________________________ FZF
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
+source /usr/share/fzf-tab-completion/bash/fzf-bash-completion.sh
+export FZF_COMPLETION_OPTS='--multi'
 # export FZF_CTRL_T_COMMAND="fd --type d --hidden --follow --exclude '.git' --exclude 'node_modules'"
 
-# custom bindings
-# bind '"\C-n":"nvim \C-m"'
-bind -x '"\C-n":"nvim"'
-source /usr/share/fzf-tab-completion/bash/fzf-bash-completion.sh
-bind -x '"\t": fzf_bash_completion'
-
-# ssh-agent
+# ___________________________________________ SSH-AGENT
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 2h > "$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
@@ -197,12 +195,12 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
-# bitwarden
+# ___________________________________________ BITWARDEN
 function bwu(){
   export BW_SESSION=$(bw unlock --raw $1)
 }
 
-# tmux
+# ___________________________________________ TMUX
 function dev () {
   tmux new-session \
     -A \
@@ -232,8 +230,12 @@ function dev () {
     'npm run dev' Enter \; \
     # 'nvim' Enter ':te' Enter 'i npm run dev' Enter \;
 }
-alias psyyu='pacman -Syyu'
 
+# ___________________________________________ BINDINGS
+bind -x '"\C-n":"nvim"'
+bind -x '"\t": fzf_bash_completion'
+
+# ___________________________________________ ALIASES
 alias t='tmux'
 alias tl='tmux ls'
 alias ta='tmux attach -t'
@@ -282,18 +284,15 @@ alias pick='colorpicker'
 
 alias single='$HOME/.screenlayout/single.sh && feh --bg-fill ~/.config/Skin\ The\ Remixes.png'
 alias dual='$HOME/.screenlayout/dual.sh'
-# ------------------------------- GCLOUD
-# The next line updates PATH for the Google Cloud SDK.
+
+# ___________________________________________ GCLOUD
 if [ -f '/home/charles/google-cloud-sdk/path.bash.inc' ]; then . '/home/charles/google-cloud-sdk/path.bash.inc'; fi
-# The next line enables shell command completion for gcloud.
 if [ -f '/home/charles/google-cloud-sdk/completion.bash.inc' ]; then . '/home/charles/google-cloud-sdk/completion.bash.inc'; fi
 export CLOUDSDK_PYTHON=python3.9
 
+# ___________________________________________ RUST
 export PATH=$PATH:/home/charles/.cargo/bin
 
-export MANPAGER='nvim +Man!'
-
-# Disable Ctrl-S
-stty -ixon
-
+# ___________________________________________ OPTIONS
+stty -ixon # Disable Ctrl-S
 # set -o vi
