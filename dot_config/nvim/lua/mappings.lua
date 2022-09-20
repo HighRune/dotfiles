@@ -229,7 +229,7 @@ end
 local function hydra()
   local Hydra = require('hydra')
 
-  Hydra({ name = 'newline', mode = 'n', body = 'g', heads = {
+  Hydra({ name = 'newline', mode = { 'n', 'x' }, body = 'g', heads = {
     { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>' },
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>' },
   } })
@@ -247,7 +247,7 @@ local function hydra()
     { '<C-s>', nil, { exit = true } }
   } })
 
-  local scroll = Hydra({ mode = 'n', config = { hint = false }, heads = {
+  local scroll = Hydra({ mode = { 'n', 'x' }, config = { hint = false }, heads = {
     { 'u', '5k' },
     { 'e', '5j' },
   } })
