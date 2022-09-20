@@ -233,56 +233,6 @@ function dev () {
 # ___________________________________________ BINDINGS
 bind -x '"\C-n":"nvim"'
 
-# ___________________________________________ ALIASES
-alias t='tmux'
-alias tl='tmux ls'
-alias ta='tmux attach -t'
-alias td='tmux detach'
-alias tnw='tmux new-window -n'
-alias tkw='tmux kill-window'
-alias trw='tmux rename-window'
-alias tns='tmux new -s'
-alias tks='tmux kill-session'
-alias trs='tmux rename-session'
-alias tnc='tmux switch-client -n'
-alias tpc='tmux switch-client -p'
-alias tlc='tmux switch-client -l'
-alias tkk='tmux kill-server'
-alias tss='$HOME/.config/tmux/plugins/tmux-resurrect/scripts/save.sh'
-alias trr='[[ "$TERM_PROGRAM" == "tmux" ]] && $HOME/.config/tmux/plugins/tmux-resurrect/scripts/restore.sh'
-
-alias gs='git status'
-alias gst='git stash'
-alias gpl='git pull'
-alias gp='git push'
-alias gpo='git push origin'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gc='git commit'
-alias gcl='git clone'
-alias gcp='git cherry-pick'
-alias gk='git checkout'
-alias gb='git branch'
-alias gl='git log'
-alias ga='git add'
-alias gm='git merge'
-alias gr='git rebase'
-alias grs='git reset'
-alias grs1='git reset HEAD~1'
-alias gwa='git worktree add'
-alias gwl='git worktree list'
-alias gwr='git worktree remove'
-
-alias npml='npm ls --depth=0'
-alias npmg='npm ls -g --depth=0'
-
-alias chrome='google-chrome-stable'
-alias shn='shutdown now'
-alias pick='colorpicker'
-
-alias single='$HOME/.screenlayout/single.sh && feh --bg-fill ~/.config/Skin\ The\ Remixes.png'
-alias dual='$HOME/.screenlayout/dual.sh'
-
 # ___________________________________________ GCLOUD
 if [ -f '/home/charles/google-cloud-sdk/path.bash.inc' ]; then . '/home/charles/google-cloud-sdk/path.bash.inc'; fi
 if [ -f '/home/charles/google-cloud-sdk/completion.bash.inc' ]; then . '/home/charles/google-cloud-sdk/completion.bash.inc'; fi
@@ -294,3 +244,7 @@ export PATH=$PATH:/home/charles/.cargo/bin
 # ___________________________________________ OPTIONS
 stty -ixon # Disable Ctrl-S
 # set -o vi
+
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
