@@ -1,1 +1,3 @@
+PROMPT='%n@%m %~  '
+
 source ~/.bash_aliases
