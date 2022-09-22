@@ -35,7 +35,8 @@ return function()
       'eslint',
       'sumneko_lua',
       'yamlls',
-      'volar',
+      -- 'volar',
+      'vuels',
     },
     automatic_installation = true,
   })
@@ -61,6 +62,11 @@ return function()
   end
 
   local function on_attach_volar(client, buffer)
+    client.server_capabilities.documentFormattingProvider = false
+    on_attach(client, buffer)
+  end
+
+  local function on_attach_vuels(client, buffer)
     client.server_capabilities.documentFormattingProvider = false
     on_attach(client, buffer)
   end
@@ -98,8 +104,13 @@ return function()
     settings = { format = { enable = true } },
     flags = lsp_flags,
   })
-  lspconfig['volar'].setup({
-    on_attach = on_attach_volar,
+  -- lspconfig['volar'].setup({
+  --   on_attach = on_attach_volar,
+  --   settings = { format = { enable = false } },
+  --   flags = lsp_flags,
+  -- })
+  lspconfig['vuels'].setup({
+    on_attach = on_attach_vuels,
     settings = { format = { enable = false } },
     flags = lsp_flags,
   })
