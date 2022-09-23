@@ -37,6 +37,7 @@ return function()
       'yamlls',
       -- 'volar',
       'vuels',
+      'bashls',
     },
     automatic_installation = true,
   })
@@ -61,10 +62,15 @@ return function()
     on_attach(client, buffer)
   end
 
-  local function on_attach_volar(client, buffer)
-    client.server_capabilities.documentFormattingProvider = false
+  local function on_attach_bashls(client, buffer)
+    client.server_capabilities.documentFormattingProvider = true
     on_attach(client, buffer)
   end
+
+  -- local function on_attach_volar(client, buffer)
+  --   client.server_capabilities.documentFormattingProvider = false
+  --   on_attach(client, buffer)
+  -- end
 
   local function on_attach_vuels(client, buffer)
     client.server_capabilities.documentFormattingProvider = false
@@ -101,6 +107,11 @@ return function()
   })
   lspconfig['yamlls'].setup({
     on_attach = on_attach_sumneko_lua,
+    settings = { format = { enable = true } },
+    flags = lsp_flags,
+  })
+  lspconfig['bashls'].setup({
+    on_attach = on_attach_bashls,
     settings = { format = { enable = true } },
     flags = lsp_flags,
   })
