@@ -478,6 +478,15 @@ local function coq()
   }
 end
 
+-------------------- smjonas/live-command.nvim
+local function livecommand()
+  require("live-command").setup {
+    commands = {
+      Norm = { cmd = "norm" },
+    },
+  }
+end
+
 return {
   colorizer = colorizer,
   project = project,
@@ -500,4 +509,5 @@ return {
   highlightedyank = highlightedyank,
   wordmotion = wordmotion,
   sj = sj,
+  livecommand = livecommand,
 }
