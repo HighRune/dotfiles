@@ -26,7 +26,7 @@ local function core()
   map("n", "<C-s>", ":w<CR>")
   map("i", "<C-s>", "<esc>`^:w<CR>")
   -- Edit
-  -- map("x", "<C-n>", ":norm ")
+  map("x", "<C-n>", ":Norm ")
   map("n", "<esc>", "<esc>^")
   map("x", "p", '"_dP')
   map({ "n", "v" }, "x", '"_x')
