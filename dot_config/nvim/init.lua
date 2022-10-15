@@ -59,6 +59,12 @@ return require("packer").startup({
       end,
     })
     use({
+      "smjonas/live-command.nvim",
+      config = function()
+        require("setup").livecommand()
+      end,
+    })
+    use({
       "ms-jpq/coq_nvim",
       branch = "coq",
       config = function()
