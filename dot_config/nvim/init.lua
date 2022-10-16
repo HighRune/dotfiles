@@ -72,10 +72,10 @@ return require("packer").startup({
         require("setup").coq()
       end,
     })
-    -- use({
-    --   'sindrets/diffview.nvim',
-    --   requires = 'nvim-lua/plenary.nvim',
-    -- })
+    use({
+      'sindrets/diffview.nvim',
+      requires = 'nvim-lua/plenary.nvim',
+    })
     use({
       "is0n/fm-nvim",
       config = function()
