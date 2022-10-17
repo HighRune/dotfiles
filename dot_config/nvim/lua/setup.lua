@@ -1,6 +1,7 @@
 local cmd = vim.cmd
 local fn = vim.fn
 local g = vim.g
+local o = vim.o
 local map = vim.keymap.set
 local call = vim.call
 local api = vim.api
@@ -487,6 +488,12 @@ local function livecommand()
   }
 end
 
+-------------------- linty-org/key-menu.nvim
+local function keymenu()
+  require 'key-menu'.set('n', '<Leader>')
+  o.timeoutlen = 0
+end
+
 return {
   colorizer = colorizer,
   project = project,
@@ -510,4 +517,5 @@ return {
   wordmotion = wordmotion,
   sj = sj,
   livecommand = livecommand,
+  keymenu = keymenu
 }
