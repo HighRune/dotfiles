@@ -47,10 +47,10 @@ return require("packer").startup({
       run = ":TSUpdate",
     })
     use("neovim/nvim-lspconfig")
-    use { "williamboman/mason.nvim" }
-    use { "williamboman/mason-lspconfig.nvim",
+    use("williamboman/mason.nvim")
+    use({ "williamboman/mason-lspconfig.nvim",
       config = require("config.lsp")()
-    }
+    })
     use({
       'anuvyklack/hydra.nvim',
       requires = 'anuvyklack/keymap-layer.nvim',
@@ -87,12 +87,6 @@ return require("packer").startup({
       "lewis6991/gitsigns.nvim",
       config = function()
         require("setup").gitsigns()
-      end,
-    })
-    use({
-      "linty-org/key-menu.nvim",
-      config = function()
-        require("setup").keymenu()
       end,
     })
     use({
