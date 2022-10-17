@@ -90,6 +90,12 @@ return require("packer").startup({
       end,
     })
     use({
+      "linty-org/key-menu.nvim",
+      config = function()
+        require("setup").keymenu()
+      end,
+    })
+    use({
       "norcalli/nvim-colorizer.lua",
       config = function()
         require("setup").colorizer()
