@@ -488,12 +488,6 @@ local function livecommand()
   }
 end
 
--------------------- linty-org/key-menu.nvim
-local function keymenu()
-  require 'key-menu'.set('n', '<Leader>')
-  o.timeoutlen = 0
-end
-
 return {
   colorizer = colorizer,
   project = project,
@@ -517,5 +511,4 @@ return {
   wordmotion = wordmotion,
   sj = sj,
   livecommand = livecommand,
-  keymenu = keymenu
 }
