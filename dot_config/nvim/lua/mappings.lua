@@ -157,10 +157,10 @@ end
 
 -------------------- lewis6991/gitsigns.nvim
 local function gitsigns(buffer)
-  map("n", "<leader>ga", package.loaded.gitsigns.stage_buffer, { buffer = buffer })
-  map("n", "<leader>gr", package.loaded.gitsigns.reset_buffer_index, { buffer = buffer })
-  map("n", "<leader>gc", package.loaded.gitsigns.reset_buffer, { buffer = buffer })
-  map("n", "<leader>gb", package.loaded.gitsigns.toggle_current_line_blame, { buffer = buffer })
+  map("n", "<leader>ga", package.loaded.gitsigns.stage_buffer, { buffer = buffer, desc = 'git add file' })
+  map("n", "<leader>gr", package.loaded.gitsigns.reset_buffer_index, { buffer = buffer, desc = 'git reset file' })
+  map("n", "<leader>gc", package.loaded.gitsigns.reset_buffer, { buffer = buffer, desc = 'git checkout -- file' })
+  map("n", "<leader>gb", package.loaded.gitsigns.toggle_current_line_blame, { buffer = buffer, desc = 'git blame' })
   map("n", "<leader>gd", package.loaded.gitsigns.toggle_deleted, { buffer = buffer })
 end
 
