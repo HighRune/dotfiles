@@ -455,7 +455,7 @@ local function coq()
     keymap = {
       recommended = false,
       pre_select = true,
-      jump_to_mark = '<c-space>',
+      jump_to_mark = '<c-enter>',
       ['repeat'] = '',
       manual_complete = '',
       bigger_preview = '',
