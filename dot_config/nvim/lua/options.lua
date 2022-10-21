@@ -19,12 +19,14 @@ local function core()
   o.number = true -- Print the line number in front of each line
   -- o.relativenumber = true -- Show relative line numbers
   o.virtualedit = "all"
-  o.cmdheight=0
+  -- o.cmdheight=0
+  o.cmdheight=1
   -- o.shortmess='a'
   o.completeopt = "menuone,noinsert" -- Options for Insert mode completion
   -- o.pumblend = 100
   o.clipboard = "unnamedplus" -- Have the clipboard be the same as my regular clipboard
   o.updatetime = 100 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience
+  -- o.timeoutlen = 0
   o.swapfile = false
   o.termguicolors = true -- Enables 24-bit RGB color in the Terminal UI
   o.showmode = false -- Disable message on the last line (Insert, Replace or Visual mode)
