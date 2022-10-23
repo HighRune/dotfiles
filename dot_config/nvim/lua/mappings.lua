@@ -13,6 +13,7 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
+  cmd("nnoremap <expr><silent> { (col('.')==1 && len(getline(line('.')-1))==0? '2{j' : '{j')")
   map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
