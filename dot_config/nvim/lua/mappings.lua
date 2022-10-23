@@ -13,7 +13,10 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
-  cmd("nnoremap <expr><silent> { (col('.')==1 && len(getline(line('.')-1))==0? '2{j' : '{j')")
+  map("n", "{", function()
+    if (fn.col('.') == 1 and fn.len(fn.getline(fn.line('.') - 1)) == 0) then return '2{j'
+    else return '{j' end
+  end, expr)
   map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
