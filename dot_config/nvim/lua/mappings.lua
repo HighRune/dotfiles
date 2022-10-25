@@ -14,8 +14,8 @@ local remap = { remap = true }
 
 local function core()
   map("n", "{", function()
-    if (fn.col('.') == 1 and fn.len(fn.getline(fn.line('.') - 1)) == 0) then return '2{j'
-    else return '{j' end
+    if (fn.len(fn.getline(fn.line('.') - 1)) == 0) then return '2{j^'
+    else return '{j^' end
   end, expr)
   map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
   -- Help
