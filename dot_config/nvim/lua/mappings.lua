@@ -17,6 +17,10 @@ local function core()
     if (fn.len(fn.getline(fn.line('.') - 1)) == 0) then return '2{+'
     else return '{+' end
   end, expr)
+  map("n", "}", function()
+    if (fn.len(fn.getline(fn.line('.'))) == 0) then return '+'
+    else return '}+' end
+  end, expr)
   map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
