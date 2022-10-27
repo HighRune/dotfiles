@@ -13,46 +13,56 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
-  map("n", "{", function()
+  map("n", "(", function()
     if (fn.len(fn.getline(fn.line('.') - 1)) == 0) then return '2{+'
     else return '{+' end
   end, expr)
-  map("n", "}", function()
+  map("n", ")", function()
     if (fn.len(fn.getline(fn.line('.'))) == 0) then return '+'
     else return '}+' end
   end, expr)
+
   map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
+
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
   cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
+
   -- Disable keys
   map("", "Q", "<nop>")
   map("", "q", "<nop>")
+
   -- Save
   -- map("n", "<C-s>", ":silent write<CR>")
   -- map("i", "<C-s>", "<esc>`^:silent write<CR>")
   map("n", "<C-s>", ":w<CR>")
   map("i", "<C-s>", "<esc>`^:w<CR>")
+
   -- Edit
   map("x", "<C-n>", ":Norm ")
   map("n", "<esc>", "<esc>^")
   map("x", "p", '"_dP')
   map({ "n", "v" }, "x", '"_x')
+
   -- Delete
   map({ "n", "v" }, "d", '"_d')
   map("n", "D", '"_D')
   map("n", "dd", '"_dd^')
+
   -- Cut
   map({ "n", "v" }, "m", 'd')
   map("n", "M", 'D')
   map("n", "mm", 'dd^')
+
   -- Scroll
   map({ "n", "x" }, "<C-u>", "5k")
   map({ "n", "x" }, "<C-e>", "5j")
+
   -- Readline
   map("i", "<C-a>", "<esc>I")
   map("i", "<C-e>", "<end>")
   map("i", "<C-k>", "<esc>ld$i")
+
   -- Motions
   map("n", "k", "gk")
   map("n", "j", "gj")
@@ -120,6 +130,7 @@ local function telescope()
   -- map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
 
+-------------------- wbthomason/packer.nvim
 local function packer()
   map("n", "<Leader>ps", require('packer').sync)
   map("n", "<Leader>pc", require('packer').compile)
@@ -225,6 +236,7 @@ local function lspconfig(buffer)
   -- lsp.buf.formatting_seq_sync
 end
 
+-------------------- ms-jpq/coq_nvim
 local function coq()
   map('i', '<Esc>', function() return fn.pumvisible() == 1 and '<C-e><Esc>`^' or '<Esc>`^' end, expr)
   map('i', '<C-c>', function() return fn.pumvisible() == 1 and '<C-e><C-c>' or '<C-c>' end, expr)
