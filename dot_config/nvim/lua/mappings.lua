@@ -14,13 +14,15 @@ local remap = { remap = true }
 
 local function core()
   map("n", "(", function()
-    if (fn.len(fn.getline(fn.line('.') - 1)) == 0) then return '2{+'
-    else return '{+' end
-  end, expr)
+    if (fn.len(fn.getline(fn.line('.') - 1)) == 0) then
+      fn.execute('normal! 2{+')
+    else fn.execute('normal! {+') end
+  end)
   map("n", ")", function()
-    if (fn.len(fn.getline(fn.line('.'))) == 0) then return '+'
-    else return '}+' end
-  end, expr)
+    if (fn.len(fn.getline(fn.line('.'))) == 0) then
+      fn.execute('normal! +')
+    else fn.execute('normal! }+') end
+  end)
 
   map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
 
