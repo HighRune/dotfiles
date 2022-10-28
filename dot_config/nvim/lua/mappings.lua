@@ -13,17 +13,8 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
-  map("n", "(", function()
-    if (fn.len(fn.getline(fn.line('.') - 1)) == 0) then fn.execute('normal! 2{+')
-    else fn.execute('normal! {+') end
-    if (fn.line('.') == 2) then fn.execute('normal! -') end
-  end)
-
-  map("n", ")", function()
-    if (fn.len(fn.getline(fn.line('.'))) == 0) then
-      fn.execute('normal! +')
-    else fn.execute('normal! }+') end
-  end)
+  cmd([[nnoremap <silent> ) :call search('\(^$\n\s*\zs\S\)\<bar>\(\S\ze\n*\%$\)', 'sW')<CR>]])
+  cmd([[nnoremap <silent> ( :call search('\(^$\n\s*\zs\S\)\<bar>\(^\%1l\s*\zs\S\)','sWb')<CR>]])
 
   map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
 
