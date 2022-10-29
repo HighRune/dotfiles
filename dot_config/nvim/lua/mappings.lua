@@ -80,12 +80,12 @@ local function core()
   -------------------- Runeword/booster.nvim
   -- map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
 
-  map({ "n", "x" }, "<Leader>lp", require("booster").putLinewise(']p`]'))
-  map({ "n", "x" }, "<Leader>lP", require("booster").putLinewise(']P`]'))
-  map({ "n", "x" }, "<Leader>llp", require("booster").putLinewiseSuffix(']p`]'))
-  map({ "n", "x" }, "<Leader>llP", require("booster").putLinewiseSuffix(']P`]'))
-  map({ "n", "x" }, "<Leader>lsp", require("booster").putLinewiseSurround(']p`]'))
-  map({ "n", "x" }, "<Leader>lsP", require("booster").putLinewiseSurround(']P`]'))
+  map({ "n", "x" }, "<Leader>pl", require("booster").putLinewise(']p`]'))
+  map({ "n", "x" }, "<Leader>Pl", require("booster").putLinewise(']P`]'))
+  map({ "n", "x" }, "<Leader>psl", require("booster").putLinewiseSuffix(']p`]'))
+  map({ "n", "x" }, "<Leader>Psl", require("booster").putLinewiseSuffix(']P`]'))
+  map({ "n", "x" }, "<Leader>pll", require("booster").putLinewiseSurround(']p`]'))
+  map({ "n", "x" }, "<Leader>Pll", require("booster").putLinewiseSurround(']P`]'))
   -- vim.keymap.set("n", "t", require("booster").__dot_repeat('p'))
 
   -- local counter = 0
@@ -126,6 +126,7 @@ end
 
 -------------------- wbthomason/packer.nvim
 local function packer()
+  map("n", "<Leader>pa", ':Packer<Tab>')
   map("n", "<Leader>pas", require('packer').sync)
   map("n", "<Leader>pac", require('packer').compile)
 end
