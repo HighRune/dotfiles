@@ -241,10 +241,10 @@ local function treesitter()
         enable = true,
         lookahead = true,
         keymaps = {
-          ["af"] = "@function.outer",
-          ["if"] = "@function.inner",
-          ["aF"] = "@call.outer",
-          ["iF"] = "@call.inner",
+          ["aF"] = "@function.outer",
+          ["iF"] = "@function.inner",
+          ["af"] = "@call.outer",
+          ["if"] = "@call.inner",
         },
       },
       -- move = {
