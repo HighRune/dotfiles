@@ -13,8 +13,8 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
-  cmd([[nnoremap <silent> ) :call search('\(^$\n\s*\zs\S\)\<bar>\(\S\ze\n*\%$\)', 'sW')<CR>]])
-  cmd([[nnoremap <silent> ( :call search('\(^$\n\s*\zs\S\)\<bar>\(^\%1l\s*\zs\S\)','sWb')<CR>]])
+  map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]],'sW') end)
+  map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]],'sWb') end)
 
   map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
 
