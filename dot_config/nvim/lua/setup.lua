@@ -39,7 +39,7 @@ end
 -------------------- woosaaahh/sj.nvim
 local function sj()
   require("sj").setup({
-    auto_jump = true,
+    auto_jump = false,
     use_overlay = false,
     separator = " ",
     labels = {
@@ -49,7 +49,7 @@ local function sj()
     },
     highlights = {
       SjLabel = { bg = '#ccff88', fg = 'black' },
-      SjSearch = { bg = '#77aaff', fg = 'black' },
+      SjMatches = { bg = '#77aaff', fg = 'black' },
     },
   })
 end
