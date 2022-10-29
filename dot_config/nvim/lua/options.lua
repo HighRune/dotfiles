@@ -21,7 +21,8 @@ local function core()
   o.virtualedit = "all"
   -- o.cmdheight=0
   o.cmdheight=1
-cmd("set wildcharm=<Tab>")
+  o.wildcharm = ('\t'):byte()
+  o.wildignorecase = true
   -- o.shortmess='a'
   o.completeopt = "menuone,noinsert" -- Options for Insert mode completion
   -- o.pumblend = 100
