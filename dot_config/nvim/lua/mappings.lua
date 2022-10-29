@@ -13,8 +13,8 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
-  map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]],'sW') end)
-  map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]],'sWb') end)
+  map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
+  map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
 
   map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
 
@@ -80,12 +80,12 @@ local function core()
   -------------------- Runeword/booster.nvim
   -- map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
 
-  map({ "n", "x" }, "<Leader>pl", require("booster").putLinewise(']p`]'))
-  map({ "n", "x" }, "<Leader>Pl", require("booster").putLinewise(']P`]'))
-  map({ "n", "x" }, "<Leader>psl", require("booster").putLinewiseSuffix(']p`]'))
-  map({ "n", "x" }, "<Leader>Psl", require("booster").putLinewiseSuffix(']P`]'))
-  map({ "n", "x" }, "<Leader>pll", require("booster").putLinewiseSurround(']p`]'))
-  map({ "n", "x" }, "<Leader>Pll", require("booster").putLinewiseSurround(']P`]'))
+  map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
+  map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
+  map({ "n", "x" }, "gllp", require("booster").putLinewiseSuffix(']p`]'))
+  map({ "n", "x" }, "gllP", require("booster").putLinewiseSuffix(']P`]'))
+  map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
+  map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
   -- vim.keymap.set("n", "t", require("booster").__dot_repeat('p'))
 
   -- local counter = 0
