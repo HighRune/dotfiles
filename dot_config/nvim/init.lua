@@ -90,6 +90,12 @@ return require("packer").startup({
       end,
     })
     use({
+      "gbprod/stay-in-place.nvim",
+      config = function()
+        require("setup").stayinplace()
+      end
+    })
+    use({
       "norcalli/nvim-colorizer.lua",
       config = function()
         require("setup").colorizer()
