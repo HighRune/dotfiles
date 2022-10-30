@@ -314,6 +314,12 @@ local function bufferline()
   })
 end
 
+-------------------- weilbith/nvim-code-action-menu
+local function codeactionmenu()
+  g.code_action_menu_show_details = false
+  g.code_action_menu_show_diff = true
+end
+
 -------------------- gbprod/cutlass.nvim
 local function cutlass()
   require("cutlass").setup({
@@ -523,4 +529,5 @@ return {
   livecommand = livecommand,
   stayinplace = stayinplace,
   lightbulb = lightbulb,
+  codeactionmenu = codeactionmenu,
 }
