@@ -126,9 +126,9 @@ end
 
 -------------------- wbthomason/packer.nvim
 local function packer()
-  map("n", "<Leader>pa", ':Packer<Tab>')
-  map("n", "<Leader>pas", require('packer').sync)
-  map("n", "<Leader>pac", require('packer').compile)
+  map("n", "<Leader>p", ':Packer<Tab>')
+  map("n", "<Leader>ps", require('packer').sync)
+  map("n", "<Leader>pc", require('packer').compile)
 end
 
 -------------------- junegunn/fzf
