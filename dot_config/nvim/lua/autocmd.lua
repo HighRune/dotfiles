@@ -71,7 +71,12 @@ local function bufferline()
 end
 
 local function lightbulb()
-  cmd [[autocmd CursorHold,CursorHoldI * lua require('nvim-lightbulb').update_lightbulb()]]
+  augroup("lightbulb", { clear = true })
+  autocmd({ 'CursorHold', 'CursorHoldI' }, {
+    group = "lightbulb",
+    pattern = "*",
+    callback = require('nvim-lightbulb').update_lightbulb
+  })
 end
 
 local function packer()
