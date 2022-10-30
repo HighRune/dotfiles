@@ -223,7 +223,7 @@ local function lspconfig(buffer)
   map("n", "gd", lsp.buf.definition, { buffer = buffer })
   map("n", "gr", lsp.buf.references, { buffer = buffer })
   map("n", '<leader>f', lsp.buf.format, { buffer = buffer })
-  map("n", '<leader>ca', lsp.buf.code_action, { buffer = buffer })
+  map("n", '<leader>ca', ':CodeActionMenu<Enter>', { buffer = buffer })
   map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
   map("n", '<down>', diagnostic.goto_prev, { buffer = buffer })
   map("n", '<up>', diagnostic.goto_next, { buffer = buffer })
@@ -231,6 +231,11 @@ local function lspconfig(buffer)
   map('n', '<leader>x', diagnostic.setqflist, { noremap = true, silent = true })
   -- lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' })
   -- lsp.buf.formatting_seq_sync
+end
+
+-------------------- weilbith/nvim-code-action-menu
+local function codeactionmenu()
+  -- map("n", '<leader>ca', ':CodeActionMenu<Enter>')
 end
 
 -------------------- ms-jpq/coq_nvim
@@ -303,4 +308,5 @@ return {
   packer = packer,
   pulse = pulse,
   sj = sj,
+  codeactionmenu = codeactionmenu,
 }
