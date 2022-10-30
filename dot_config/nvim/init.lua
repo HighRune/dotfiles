@@ -102,6 +102,14 @@ return require("packer").startup({
       end,
     })
     use({
+      'weilbith/nvim-code-action-menu',
+      config = function()
+        require("mappings").codeactionmenu()
+        require("setup").codeactionmenu()
+      end,
+      cmd = 'CodeActionMenu',
+    })
+    use({
       "nacro90/numb.nvim",
       config = function()
         require("setup").numb()
