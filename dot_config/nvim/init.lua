@@ -169,7 +169,8 @@ return require("packer").startup({
     use({
       "kosayoda/nvim-lightbulb",
       config = function()
-        require("autocmd").lightbulb()
+        require('setup').lightbulb()
+        require('autocmd').lightbulb()
       end
     })
     use({
