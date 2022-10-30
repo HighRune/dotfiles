@@ -59,6 +59,11 @@ local function sj()
   })
 end
 
+-------------------- kosayoda/nvim-lightbulb
+local function lightbulb()
+  fn.sign_define('LightBulbSign', { text = "" })
+end
+
 -------------------- ibhagwan/fzf-lua
 local function fzf()
   local actions = require("fzf-lua.actions")
@@ -517,4 +522,5 @@ return {
   sj = sj,
   livecommand = livecommand,
   stayinplace = stayinplace,
+  lightbulb = lightbulb,
 }
