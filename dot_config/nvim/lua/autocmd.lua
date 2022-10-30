@@ -70,6 +70,10 @@ local function bufferline()
   })
 end
 
+local function lightbulb()
+  cmd [[autocmd CursorHold,CursorHoldI * lua require('nvim-lightbulb').update_lightbulb()]]
+end
+
 local function packer()
   augroup("packer_user_config", { clear = true })
   autocmd("BufWritePost", {
@@ -164,4 +168,5 @@ return {
   bufferline = bufferline,
   coq = coq,
   leap = leap,
+  lightbulb = lightbulb,
 }
