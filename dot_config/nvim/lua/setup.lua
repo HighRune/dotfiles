@@ -31,6 +31,11 @@ local function numb()
   require("numb").setup()
 end
 
+-------------------- gbprod/stay-in-place.nvim
+local function stayinplace()
+  require("stay-in-place").setup()
+end
+
 -------------------- numToStr/Comment.nvim
 local function comment()
   require("Comment").setup()
@@ -511,4 +516,5 @@ return {
   wordmotion = wordmotion,
   sj = sj,
   livecommand = livecommand,
+  stayinplace = stayinplace,
 }
