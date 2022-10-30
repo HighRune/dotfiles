@@ -16,7 +16,7 @@ local function core()
   map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
   map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
 
-  map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
+  -- map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
 
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
@@ -223,7 +223,7 @@ local function lspconfig(buffer)
   map("n", "gd", lsp.buf.definition, { buffer = buffer })
   map("n", "gr", lsp.buf.references, { buffer = buffer })
   map("n", '<leader>f', lsp.buf.format, { buffer = buffer })
-  map("n", '<leader>c', lsp.buf.code_action, { buffer = buffer })
+  map("n", '<leader>ca', lsp.buf.code_action, { buffer = buffer })
   map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
   map("n", '<down>', diagnostic.goto_prev, { buffer = buffer })
   map("n", '<up>', diagnostic.goto_next, { buffer = buffer })
