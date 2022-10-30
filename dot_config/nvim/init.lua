@@ -161,6 +161,12 @@ return require("packer").startup({
       end,
     })
     use({
+      "kosayoda/nvim-lightbulb",
+      config = function()
+        require("autocmd").lightbulb()
+      end
+    })
+    use({
       "nvim-lualine/lualine.nvim",
       requires = { "kyazdani42/nvim-web-devicons", opt = true },
       config = "require('config.lualine')()",
