@@ -61,7 +61,7 @@ end
 
 -------------------- kosayoda/nvim-lightbulb
 local function lightbulb()
-  fn.sign_define('LightBulbSign', { text = "" })
+  fn.sign_define('LightBulbSign', { text = "⚡" })
 end
 
 -------------------- ibhagwan/fzf-lua
@@ -480,7 +480,7 @@ local function coq()
     clients = {
       snippets = {
         weight_adjust = 2,
-        short_name = '',
+        short_name = '⚡',
       },
       tree_sitter = {
         short_name = '',
