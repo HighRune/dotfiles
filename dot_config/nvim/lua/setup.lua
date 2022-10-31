@@ -485,11 +485,17 @@ local function coq()
       tree_sitter = {
         short_name = '',
       },
-      -- tmux = {
+      -- lsp = {
       --   short_name = '',
       -- },
+      -- paths = {
+      --   short_name = '',
+      -- },
+      tmux = {
+        short_name = '',
+      },
       buffers = {
-        short_name = '﬘﬘',
+        short_name = '﬘﬘',
       },
     },
   }
