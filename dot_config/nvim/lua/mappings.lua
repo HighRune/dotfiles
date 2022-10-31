@@ -4,6 +4,7 @@ local g = vim.g
 local map = vim.keymap.set
 local call = vim.call
 local api = vim.api
+local feedkeys = vim.api.nvim_feedkeys
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 local diagnostic = vim.diagnostic
@@ -244,7 +245,7 @@ local function coq()
   map('i', '<C-c>', function() return fn.pumvisible() == 1 and '<C-e><C-c>' or '<C-c>' end, expr)
   map('i', '<Tab>', function() return fn.pumvisible() == 1 and '<C-n>' or '<Tab>' end, expr)
   map('i', '<S-Tab>', function() return fn.pumvisible() == 1 and '<C-p>' or '<BS>' end, expr)
-  map('n', '<Leader>cs', function() return require('coq').Snips('edit') end)
+  map('n', '<Leader>cs', function() require('coq').Snips('edit') --[[ feedkeys(api.nvim_replace_termcodes('<CR>', true, false, true), 'n', true) ]] end)
 end
 
 -------------------- anuvyklack/hydra.nvim
