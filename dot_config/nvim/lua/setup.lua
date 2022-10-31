@@ -457,8 +457,7 @@ local function coq()
     display = {
       preview = {
         positions = { east = 1, north = 2, south = 3, west = 4, },
-        x_max_len = 40,
-        border = 'solid',
+        x_max_len = 100,
       },
       icons = { mode = 'none' },
       pum = {
