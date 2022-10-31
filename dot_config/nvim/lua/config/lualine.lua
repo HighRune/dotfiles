@@ -86,35 +86,22 @@ return function()
       padding = { left = 1, right = 2 },
       fmt = string.lower,
     },
-    -- {
-    --   "filetype",
-    --   colored = true, -- Displays filetype icon in color if set to true
-    --   icon_only = true, -- Display only an icon for filetype
-    --   padding = { left = 0, right = 1 },
-    -- },
     {
-      "filename",
+      'filename',
       cond = conditions.buffer_not_empty,
-      file_status = true,
+      file_status = false,
+      newfile_status = true,
       path = 1,
       padding = { left = 0, right = 1 },
       symbols = {
-        modified = "*",
-        readonly = "!",
-        unnamed = "no name",
+        unnamed = 'unnamed',
+        newfile = 'new',
       },
     },
     {
       "diagnostics",
       sources = { "nvim_diagnostic" },
-      -- symbols = { error = " ", warn = " ", hint = " ", info = " " },
-      symbols = { error = "E", warn = "W", hint = "H", info = "I" },
-      -- diagnostics_color = {
-      -- 	error = { fg = colors.red },
-      -- 	warn = { fg = colors.yellow },
-      -- 	info = { fg = colors.cyan },
-      -- 	hint = { fg = colors.cyan },
-      -- },
+      symbols = { error = "", warn = "", hint = "", info = "" },
     },
 
     --------------------------- Mid section
