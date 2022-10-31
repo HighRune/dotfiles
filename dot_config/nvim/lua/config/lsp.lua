@@ -16,7 +16,7 @@ return function()
       prefix = "",
       format = function(diagnostic)
         return string.format(
-          " %s %s\n%s",
+          " %s %s %s",
           diagnostic.source,
           diagnostic.user_data.lsp.code,
           diagnostic.message
