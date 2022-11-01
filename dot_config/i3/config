@@ -53,7 +53,7 @@ for_window [class="Pamac-manager"] floating enable
 bindsym $mod+0 exec i3-msg move workspace to output next
 
 bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace previous
+bindsym $mod+Shift+Tab workspace prev
 
 # Focus workspace
 bindsym $mod+1 workspace 1
