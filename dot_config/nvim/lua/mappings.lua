@@ -168,7 +168,9 @@ end
 
 -------------------- woosaaahh/sj.nvim
 local function sj()
-  map("n", "s", function() fn.setpos("''", fn.getpos(".")) require("sj").run() end)
+  map("n", "s", function()
+    require("sj").run({ auto_jump = false, })
+  end)
 end
 
 -------------------- lewis6991/gitsigns.nvim
@@ -225,7 +227,7 @@ local function lspconfig(buffer)
   map("n", "gd", lsp.buf.definition, { buffer = buffer })
   map("n", "gr", lsp.buf.references, { buffer = buffer })
   map("n", '<leader>f', lsp.buf.format, { buffer = buffer })
-  map("n", '<leader>ca', ':CodeActionMenu<Enter>', { buffer = buffer })
+  map("n", '<leader>a', ':CodeActionMenu<Enter>', { buffer = buffer })
   map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
   map("n", '<down>', diagnostic.goto_prev, { buffer = buffer })
   map("n", '<up>', diagnostic.goto_next, { buffer = buffer })
