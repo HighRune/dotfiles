@@ -570,6 +570,7 @@ sudo vi /etc/hosts                  # Add an host
 setxkbmap fr                        # Change le clavier en azerty à partir d'un émulateur de terminal
 loadkeys fr                         # À partir d'une console
 xxd -psd                            # Print key combination hex code
+xmodmap -pke | grep Enter           # Search for key code
 super + l                           # Mise en veille de la machine
 clear                               # Efface le terminal
 reset                               # Réinitialise le terminal
