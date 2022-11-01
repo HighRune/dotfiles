@@ -5,6 +5,10 @@ alias chrome='google-chrome-stable'
 alias shn='shutdown now'
 alias pick='colorpicker'
 
+alias cdf='chezmoi diff'
+alias ca='chezmoi add'
+alias cf='chezmoi forget'
+
 alias single='$HOME/.screenlayout/single.sh && feh --bg-fill ~/.config/Skin\ The\ Remixes.png'
 alias dual='$HOME/.screenlayout/dual.sh'
 
