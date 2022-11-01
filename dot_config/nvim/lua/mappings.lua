@@ -167,7 +167,7 @@ end
 
 -------------------- woosaaahh/sj.nvim
 local function sj()
-  map("n", "s", require("sj").run)
+  map("n", "s", function() fn.setpos("''", fn.getpos(".")) require("sj").run() end)
 end
 
 -------------------- lewis6991/gitsigns.nvim
@@ -245,7 +245,8 @@ local function coq()
   map('i', '<C-c>', function() return fn.pumvisible() == 1 and '<C-e><C-c>' or '<C-c>' end, expr)
   map('i', '<Tab>', function() return fn.pumvisible() == 1 and '<C-n>' or '<Tab>' end, expr)
   map('i', '<S-Tab>', function() return fn.pumvisible() == 1 and '<C-p>' or '<BS>' end, expr)
-  map('n', '<Leader>cs', function() require('coq').Snips('edit') --[[ feedkeys(api.nvim_replace_termcodes('<CR>', true, false, true), 'n', true) ]] end)
+  map('n', '<Leader>cs',
+    function() require('coq').Snips('edit') --[[ feedkeys(api.nvim_replace_termcodes('<CR>', true, false, true), 'n', true) ]] end)
 end
 
 -------------------- anuvyklack/hydra.nvim
