@@ -15,14 +15,14 @@ for_window [class=.*] border pixel 6, focus
 
 # Keybindings
 bindsym $mod+q kill
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # Focus window
 bindsym $mod+Right focus right
 bindsym $mod+Left focus left
 bindsym $mod+Up focus up
 bindsym $mod+Down focus down
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # Move window
 bindsym $mod+Shift+Right move right
@@ -51,6 +51,9 @@ for_window [class="Pamac-manager"] floating enable
 
 # Move workspace to next monitor
 bindsym $mod+0 exec i3-msg move workspace to output next
+
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace previous
 
 # Focus workspace
 bindsym $mod+1 workspace 1
