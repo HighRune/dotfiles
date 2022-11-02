@@ -129,6 +129,7 @@ return require("packer").startup({
     use("skywind3000/asyncrun.vim")
     use({
       "woosaaahh/sj.nvim",
+      branch = '0.6',
       config = function()
         require("setup").sj()
         require("mappings").sj()
