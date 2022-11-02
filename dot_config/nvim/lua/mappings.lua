@@ -168,9 +168,7 @@ end
 
 -------------------- woosaaahh/sj.nvim
 local function sj()
-  map("n", "s", function()
-    require("sj").run({ auto_jump = false, })
-  end)
+  map("n", "s", require("sj").run)
 end
 
 -------------------- lewis6991/gitsigns.nvim
