@@ -1,5 +1,9 @@
 alias nl='npm ls --depth=0'
 alias nlg='npm ls -g --depth=0'
+alias nup='npm run use:prod'
+alias nud='npm run use:dev'
+alias nd='npm run dev'
+alias ni='npm i'
 
 alias chrome='google-chrome-stable'
 alias shn='shutdown now'
