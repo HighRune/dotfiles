@@ -64,13 +64,13 @@ local function sj()
       "m", "w", "v", "z",
     },
     highlights = {
-      SjFocusedLabel = { bg = "#ff91cf", fg = 'black', },
+      SjFocusedLabel = { bg = "#ff4d97", fg = 'black', },
       SjLabel = { bg = '#ccff88', fg = 'black' },
       SjMatches = { bg = '#77aaff', fg = 'black' },
     },
     keymaps = {
       cancel = "<Esc>",
-      validate = "",
+      validate = "<S-Enter>",
       prev_match = "<S-Tab>",
       next_match = "<Tab>",
       prev_pattern = "<C-p>",
