@@ -207,7 +207,7 @@ end
 
 -------------------- is0n/fm-nvim
 local function fm()
-  map("n", "<leader>n", ":Vifm<CR>")
+  map("n", "<leader>h", ":Vifm<CR>")
 end
 
 -------------------- monaqa/dial.nvim
