@@ -68,24 +68,38 @@ live_config_reload: true
 
 key_bindings:
 
+  # _____________________________ Commands
+
+  - { key: PageUp, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t-1", ";", "select-window", "-t-1"] } }
+  - { key: PageDown, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t+1", ";", "select-window", "-t+1"] } }
+  - { key: Key1, mods: Control, command: { program: "tmux", args: ["select-window", "-t1"] } }
+  - { key: Key2, mods: Control, command: { program: "tmux", args: ["select-window", "-t2"] } }
+  - { key: Key3, mods: Control, command: { program: "tmux", args: ["select-window", "-t3"] } }
+  - { key: Key4, mods: Control, command: { program: "tmux", args: ["select-window", "-t4"] } }
+  - { key: Key5, mods: Control, command: { program: "tmux", args: ["select-window", "-t5"] } }
+  - { key: Key6, mods: Control, command: { program: "tmux", args: ["select-window", "-t6"] } }
+  - { key: Key7, mods: Control, command: { program: "tmux", args: ["select-window", "-t7"] } }
+  - { key: Key8, mods: Control, command: { program: "tmux", args: ["select-window", "-t8"] } }
+  - { key: Key9, mods: Control, command: { program: "tmux", args: ["select-window", "-t:$"] } }
+
   # _____________________________ Extended keys
 
   - { key: Return, mods: Shift, chars: "\x1b[13;2u" }
   - { key: Return, mods: Control, chars: "\x1b[13;5u" }
   - { key: Tab, mods: Control|Shift, chars: "\x1b[9;6u" }
   - { key: Tab, mods: Control, chars: "\x1b[9;5u" }
-  - { key: Key1, mods: Control, chars: "\x1b[49;5u" }
-  - { key: Key2, mods: Control, chars: "\x1b[50;5u" }
-  - { key: Key3, mods: Control, chars: "\x1b[51;5u" }
-  - { key: Key4, mods: Control, chars: "\x1b[52;5u" }
-  - { key: Key5, mods: Control, chars: "\x1b[53;5u" }
-  - { key: Key6, mods: Control, chars: "\x1b[54;5u" }
-  - { key: Key7, mods: Control, chars: "\x1b[55;5u" }
-  - { key: Key8, mods: Control, chars: "\x1b[56;5u" }
-  - { key: Key9, mods: Control, chars: "\x1b[57;5u" }
-  - { key: PageUp, mods: Control|Shift, chars: "\x1b[5;6~" }
-  - { key: PageDown, mods: Control|Shift, chars: "\x1b[6;6~" }
   # - { key: Escape, mods: Control, chars: "\x02\x5b" }
+  # - { key: Key1, mods: Control, chars: "\x1b[49;5u" }
+  # - { key: Key2, mods: Control, chars: "\x1b[50;5u" }
+  # - { key: Key3, mods: Control, chars: "\x1b[51;5u" }
+  # - { key: Key4, mods: Control, chars: "\x1b[52;5u" }
+  # - { key: Key5, mods: Control, chars: "\x1b[53;5u" }
+  # - { key: Key6, mods: Control, chars: "\x1b[54;5u" }
+  # - { key: Key7, mods: Control, chars: "\x1b[55;5u" }
+  # - { key: Key8, mods: Control, chars: "\x1b[56;5u" }
+  # - { key: Key9, mods: Control, chars: "\x1b[57;5u" }
+  # - { key: PageUp, mods: Control|Shift, chars: "\x1b[5;6~" }
+  # - { key: PageDown, mods: Control|Shift, chars: "\x1b[6;6~" }
 
   # _____________________________ Copy Paste
 
@@ -101,7 +115,6 @@ key_bindings:
 
   # _____________________________ Font
 
-  - { key: Equals, mods: Control, action: IncreaseFontSize }
   - { key: Plus, mods: Control, action: IncreaseFontSize }
   - { key: NumpadAdd, mods: Control, action: IncreaseFontSize }
   - { key: Minus, mods: Control, action: DecreaseFontSize }
