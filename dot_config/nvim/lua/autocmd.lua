@@ -7,6 +7,7 @@ local hi = vim.api.nvim_set_hl
 local function core()
   augroup("chezmoi", { clear = true })
   augroup("tmux", { clear = true })
+  augroup("bash", { clear = true })
   augroup("diagnostic", { clear = true })
   augroup("qf", { clear = true })
   augroup("disableAutoComment", { clear = true })
@@ -19,8 +20,20 @@ local function core()
 
   autocmd("BufWritePost", {
     group = "tmux",
-    pattern = "*/.config/tmux/tmux.conf",
+    pattern = "~/.config/tmux/tmux.conf",
     command = "silent! !tmux source-file ~/.config/tmux/.tmux.conf",
+  })
+
+  autocmd("BufWritePost", {
+    group = "bash",
+    pattern = "~/.bash_aliases",
+    command = "silent! source ~/.bash_aliases",
+  })
+
+  autocmd("BufWritePost", {
+    group = "bash",
+    pattern = "~/.bashrc",
+    command = "silent! source ~/.bashrc",
   })
 
   autocmd("ColorScheme", {
