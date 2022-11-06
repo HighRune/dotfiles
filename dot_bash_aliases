@@ -7,9 +7,10 @@ alias ni='npm i'
 
 alias chrome='google-chrome-stable'
 alias shn='shutdown now'
+alias s='source'
 alias pick='colorpicker'
 
-alias cdf='chezmoi diff'
+alias cdi='chezmoi diff'
 alias ca='chezmoi add'
 alias cf='chezmoi forget'
 
