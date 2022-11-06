@@ -36,7 +36,6 @@ local function core()
 
   -- Edit
   map("x", "<C-n>", ":Norm ")
-  map("n", "<esc>", "<esc>^")
   map("x", "p", '"_dP')
   map({ "n", "v" }, "x", '"_x')
 
