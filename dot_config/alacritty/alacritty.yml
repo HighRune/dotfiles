@@ -72,6 +72,8 @@ key_bindings:
 
   - { key: PageUp, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t-1", ";", "select-window", "-t-1"] } }
   - { key: PageDown, mods: Control|Shift, command: { program: "tmux", args: ["swap-window", "-t+1", ";", "select-window", "-t+1"] } }
+  - { key: PageUp, mods: Control, command: { program: "tmux", args: ["select-window", "-t-1"] } }
+  - { key: PageDown, mods: Control, command: { program: "tmux", args: ["select-window", "-t+1"] } }
   - { key: Key1, mods: Control, command: { program: "tmux", args: ["select-window", "-t1"] } }
   - { key: Key2, mods: Control, command: { program: "tmux", args: ["select-window", "-t2"] } }
   - { key: Key3, mods: Control, command: { program: "tmux", args: ["select-window", "-t3"] } }
