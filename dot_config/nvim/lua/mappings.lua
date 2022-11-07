@@ -132,6 +132,11 @@ local function packer()
   map("n", "<Leader>pc", require('packer').compile)
 end
 
+-------------------- williamboman/mason.nvim
+local function mason()
+  map("n", "<Leader>m", ':Mason<Cr>')
+end
+
 -------------------- junegunn/fzf
 local function fzf()
   map("n", "<Leader><Leader>", require('fzf-lua').files)
@@ -311,4 +316,5 @@ return {
   pulse = pulse,
   sj = sj,
   codeactionmenu = codeactionmenu,
+  mason = mason,
 }
