@@ -458,6 +458,22 @@ local function mason()
   require("mason").setup({ ui = { border = 'single' } })
 end
 
+-------------------- williamboman/mason-lspconfig.nvim
+local function masonlspconfig()
+  require("mason-lspconfig").setup({
+    ensure_installed = {
+      'tsserver',
+      'eslint',
+      'sumneko_lua',
+      'yamlls',
+      -- 'volar',
+      'vuels',
+      'bashls',
+    },
+    automatic_installation = true,
+  })
+end
+
 -------------------- ggandor/leap.nvim
 local function leap()
   require('leap').setup {
@@ -566,4 +582,5 @@ return {
   lightbulb = lightbulb,
   codeactionmenu = codeactionmenu,
   mason = mason,
+  masonlspconfig = masonlspconfig,
 }
