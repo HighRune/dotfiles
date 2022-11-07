@@ -25,9 +25,6 @@ return function()
     },
   })
 
-  -------------------- williamboman/mason.nvim
-  require("mason").setup({ ui = { border = 'single' } })
-
   -------------------- williamboman/mason-lspconfig.nvim
   require("mason-lspconfig").setup({
     ensure_installed = {
