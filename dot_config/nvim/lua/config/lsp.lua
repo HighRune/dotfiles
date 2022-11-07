@@ -25,19 +25,19 @@ return function()
     },
   })
 
-  -------------------- williamboman/mason-lspconfig.nvim
-  require("mason-lspconfig").setup({
-    ensure_installed = {
-      'tsserver',
-      'eslint',
-      'sumneko_lua',
-      'yamlls',
-      -- 'volar',
-      'vuels',
-      'bashls',
-    },
-    automatic_installation = true,
-  })
+  -- -------------------- williamboman/mason-lspconfig.nvim
+  -- require("mason-lspconfig").setup({
+  --   ensure_installed = {
+  --     'tsserver',
+  --     'eslint',
+  --     'sumneko_lua',
+  --     'yamlls',
+  --     -- 'volar',
+  --     'vuels',
+  --     'bashls',
+  --   },
+  --   automatic_installation = true,
+  -- })
 
   -------------------- neovim/nvim-lspconfig
   local function on_attach(client, buffer)
