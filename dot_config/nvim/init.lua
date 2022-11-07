@@ -46,15 +46,22 @@ return require("packer").startup({
       end,
       run = ":TSUpdate",
     })
-    use("neovim/nvim-lspconfig")
-    use({ "williamboman/mason.nvim",
+    use({
+      "neovim/nvim-lspconfig",
+      config = require("config.lsp")()
+    })
+    use({
+      "williamboman/mason.nvim",
       config = function()
         require('setup').mason()
         require('mappings').mason()
       end,
     })
-    use({ "williamboman/mason-lspconfig.nvim",
-      config = require("config.lsp")()
+    use({
+      "williamboman/mason-lspconfig.nvim",
+      config = function()
+        require("setup").masonlspconfig()
+      end
     })
     use({
       'anuvyklack/hydra.nvim',
