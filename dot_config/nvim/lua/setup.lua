@@ -537,10 +537,10 @@ local function coq()
       --   short_name = '',
       -- },
       tmux = {
-        short_name = '',
+        short_name = '',
       },
       buffers = {
-        short_name = '﬘﬘',
+        short_name = '裡',
       },
     },
   }
