@@ -47,7 +47,12 @@ return require("packer").startup({
       run = ":TSUpdate",
     })
     use("neovim/nvim-lspconfig")
-    use("williamboman/mason.nvim")
+    use({ "williamboman/mason.nvim",
+      config = function()
+        require('setup').mason()
+        require('mappings').mason()
+      end,
+    })
     use({ "williamboman/mason-lspconfig.nvim",
       config = require("config.lsp")()
     })
