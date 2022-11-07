@@ -453,6 +453,11 @@ local function dial()
   })
 end
 
+-------------------- williamboman/mason.nvim
+local function mason()
+  require("mason").setup({ ui = { border = 'single' } })
+end
+
 -------------------- ggandor/leap.nvim
 local function leap()
   require('leap').setup {
@@ -560,4 +565,5 @@ return {
   stayinplace = stayinplace,
   lightbulb = lightbulb,
   codeactionmenu = codeactionmenu,
+  mason = mason,
 }
