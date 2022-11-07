@@ -540,7 +540,7 @@ local function coq()
         short_name = '',
       },
       buffers = {
-        short_name = '裡',
+        short_name = '',
       },
     },
   }
