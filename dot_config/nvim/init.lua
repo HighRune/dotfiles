@@ -15,6 +15,83 @@ return require("packer").startup({
     use("nvim-lua/plenary.nvim")
     use("kyazdani42/nvim-web-devicons")
     use({
+      "mfussenegger/nvim-dap",
+      config = function()
+        require('dap').set_log_level('TRACE');
+        require('dap').adapters.chrome = {
+          type = "executable",
+          command = "node",
+          -- args = { os.getenv("HOME") .. "/code/vscode-chrome-debug/out/src/chromeDebug.js" }
+          args = { vim.fn.stdpath "data" .. '/mason/packages/chrome-debug-adapter/out/src/chromeDebug.js' };
+        }
+
+        require('dap').configurations.javascript = {
+          {
+            type = 'node2';
+            request = 'launch';
+            program = '${file}';
+            cwd = vim.fn.getcwd();
+            sourceMaps = true;
+            protocol = 'inspector';
+            console = 'integratedTerminal';
+          }
+        }
+
+        require('dap').configurations.javascript = {
+          {
+            type = 'chrome',
+            request = 'attach',
+            program = '${file}',
+            cwd = vim.fn.getcwd(),
+            sourceMaps = true,
+            protocol = 'inspector',
+            port = 9222,
+            webRoot = '${workspaceFolder}'
+          }
+        }
+
+        require('dap').configurations.typescript = { -- change to typescript if needed
+          {
+            type = "chrome",
+            request = "attach",
+            program = "${file}",
+            cwd = vim.fn.getcwd(),
+            sourceMaps = true,
+            protocol = "inspector",
+            port = 9222,
+            webRoot = "${workspaceFolder}"
+          }
+        }
+
+        require('dap').configurations.javascriptreact = {
+          {
+            type = 'chrome',
+            request = 'attach',
+            program = '${file}',
+            cwd = vim.fn.getcwd(),
+            sourceMaps = true,
+            protocol = 'inspector',
+            port = 9222,
+            webRoot = '${workspaceFolder}'
+          }
+        }
+
+        require('dap').configurations.typescriptreact = {
+          {
+            type = 'chrome',
+            request = 'attach',
+            program = '${file}',
+            cwd = vim.fn.getcwd(),
+            sourceMaps = true,
+            protocol = 'inspector',
+            port = 9222,
+            webRoot = '${workspaceFolder}'
+          }
+        }
+
+      end
+    })
+    use({
       'akinsho/bufferline.nvim',
       config = function()
         require('mappings').bufferline()
@@ -281,13 +358,18 @@ return require("packer").startup({
   config = {
     display = {
       open_fn = function()
-        return require("packer.util").float({
-          border = "",
-          width = 999,
-          height = 999,
-        })
-      end,
-    },
+        return require('packer.util').float({ border = 'single' })
+      end
+    }
+    -- display = {
+    --   open_fn = function()
+    --     return require("packer.util").float({
+    --       border = "",
+    --       width = 999,
+    --       height = 999,
+    --     })
+    --   end,
+    -- },
     -- lewis6991/impatient.nvim
     -- compile_path = fn.stdpath("config") .. "/lua/packer_compiled.lua",
     -- profile = {
