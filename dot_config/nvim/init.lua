@@ -17,6 +17,8 @@ return require("packer").startup({
     use({
       "mfussenegger/nvim-dap",
       config = function()
+        require('mappings').dap()
+
         require('dap').set_log_level('TRACE');
         require('dap').adapters.chrome = {
           type = "executable",
