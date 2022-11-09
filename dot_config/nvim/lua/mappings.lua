@@ -297,6 +297,17 @@ local function textobjchainmember()
   -- map("o", "", "<Plug>(textobj-chainmember-next-i)")
 end
 
+-------------------- mfussenegger/nvim-dap
+local function dap()
+  map('n', '<Leader>dc', require('dap').continue)
+  map('n', '<Leader>ds', require('dap').step_over)
+  map('n', '<Leader>di', require('dap').step_into)
+  map('n', '<Leader>do', require('dap').step_out)
+  map('n', '<Leader>db', require('dap').toggle_breakpoint)
+  map('n', '<Leader>dr', require('dap').repl.open)
+  map('n', '<Leader>dl', require('dap').run_last)
+end
+
 return {
   core = core,
   telescope = telescope,
@@ -317,4 +328,5 @@ return {
   sj = sj,
   codeactionmenu = codeactionmenu,
   mason = mason,
+  dap = dap,
 }
