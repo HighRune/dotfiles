@@ -180,7 +180,7 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
 fi
 
 # ___________________________________________ BITWARDEN
-function bwu(){
+function bu(){
   export BW_SESSION=$(bw unlock --raw $1)
 }
 
