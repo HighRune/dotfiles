@@ -118,6 +118,9 @@ local function fzf()
       files = {
         ["default"] = actions.file_edit,
       },
+      buffers = {
+        ["default"] = actions.buf_edit,
+      },
     },
   })
 end
