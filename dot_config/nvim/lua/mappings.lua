@@ -164,6 +164,13 @@ local function pulse()
   map("c", "<Enter>", "search_pulse#PulseFirst()", { silent = true, expr = true })
 end
 
+-------------------- madyanov/svart.nvim
+local function svart()
+  map({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")
+  map({ "n", "x", "o" }, "S", "<Cmd>SvartRegex<CR>")
+  map({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>")
+end
+
 -------------------- ggandor/leap.nvim
 local function leap()
   map({ "n", "x" }, "s", "<Plug>(leap-forward)", remap)
@@ -329,4 +336,5 @@ return {
   codeactionmenu = codeactionmenu,
   mason = mason,
   dap = dap,
+  svart = svart,
 }
