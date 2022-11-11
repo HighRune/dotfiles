@@ -94,8 +94,9 @@ return require("packer").startup({
       end
     })
     use({
-      'madyanov/svart.nvim',
+      'https://gitlab.com/madyanov/svart.nvim',
       config = function()
+        require('setup').svart()
       end
     })
     use({
@@ -223,14 +224,14 @@ return require("packer").startup({
     use("windwp/nvim-ts-autotag")
     use("itchyny/vim-cursorword")
     use("skywind3000/asyncrun.vim")
-    use({
-      "woosaaahh/sj.nvim",
-      branch = '0.6',
-      config = function()
-        -- require("setup").sj()
-        -- require("mappings").sj()
-      end,
-    })
+    -- use({
+    --   "woosaaahh/sj.nvim",
+    --   branch = '0.6',
+    --   config = function()
+    -- require("setup").sj()
+    -- require("mappings").sj()
+    --   end,
+    -- })
     -- use({
     --   "ggandor/leap.nvim",
     --   config = function()
