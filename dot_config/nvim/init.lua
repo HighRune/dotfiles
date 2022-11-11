@@ -94,6 +94,11 @@ return require("packer").startup({
       end
     })
     use({
+      'madyanov/svart.nvim',
+      config = function()
+      end
+    })
+    use({
       'akinsho/bufferline.nvim',
       config = function()
         require('mappings').bufferline()
@@ -222,8 +227,8 @@ return require("packer").startup({
       "woosaaahh/sj.nvim",
       branch = '0.6',
       config = function()
-        require("setup").sj()
-        require("mappings").sj()
+        -- require("setup").sj()
+        -- require("mappings").sj()
       end,
     })
     -- use({
