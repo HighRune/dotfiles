@@ -96,7 +96,9 @@ return require("packer").startup({
     use({
       'https://gitlab.com/madyanov/svart.nvim',
       config = function()
+        require('autocmd').svart()
         require('setup').svart()
+        require('mappings').svart()
       end
     })
     use({
@@ -352,7 +354,7 @@ return require("packer").startup({
       -- "Runeword/booster.nvim",
       -- config = require("booster").setup(),
     })
-    use("ryvnf/readline.vim")
+    -- use("ryvnf/readline.vim")
     use("tpope/vim-abolish")
     -- use("/home/charles/Documents/dev/plugins/blaster")
     -- use("m-demare/hlargs.nvim")
