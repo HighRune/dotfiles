@@ -116,6 +116,19 @@ local function leap()
   })
 end
 
+local function svart()
+  augroup("svart", { clear = true })
+  autocmd("ColorScheme", {
+    group = "svart",
+    pattern = "*",
+    callback = function()
+      hi(0, 'SvartLabel', { bg = '#ccff88', fg = 'black' })
+      hi(0, 'SvartMatch', { bg = '#77aaff', fg = 'black' })
+      hi(0, 'SvartMatchCursor', { bg = '#ff4d97', fg = 'black' })
+    end
+  })
+end
+
 -- local function sj()
 --   augroup("sj", { clear = true })
 --   autocmd("ColorScheme", {
@@ -187,4 +200,5 @@ return {
   coq = coq,
   leap = leap,
   lightbulb = lightbulb,
+  svart = svart,
 }
