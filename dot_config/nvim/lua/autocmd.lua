@@ -101,20 +101,32 @@ local function packer()
   })
 end
 
-local function leap()
-  augroup("leap", { clear = true })
-  autocmd("ColorScheme", {
-    group = "leap",
-    pattern = "*",
-    callback = function()
-      require('leap').init_highlight(true)
-      hi(0, 'LeapBackdrop', { bg = 'none', })
-      -- hi(0, 'LeapLabelPrimary', { bg = '#ccff88', fg = 'black' })
-      -- hi(0, 'LeapLabelSecondary', { fg = 'red', })
-      -- hi(0, 'LeapMatch', { bg = '#77aaff', fg = 'black' })
-    end
-  })
-end
+-- local function leap()
+--   augroup("leap", { clear = true })
+--   autocmd("ColorScheme", {
+--     group = "leap",
+--     pattern = "*",
+--     callback = function()
+--       require('leap').init_highlight(true)
+--       hi(0, 'LeapBackdrop', { bg = 'none', })
+--       hi(0, 'LeapLabelPrimary', { bg = '#ccff88', fg = 'black' })
+--       hi(0, 'LeapLabelSecondary', { fg = 'red', })
+--       hi(0, 'LeapMatch', { bg = '#77aaff', fg = 'black' })
+--     end
+--   })
+-- end
+
+-- local function sj()
+--   augroup("sj", { clear = true })
+--   autocmd("ColorScheme", {
+--     group = "sj",
+--     pattern = "*",
+--     callback = function()
+--       hi(0, 'SjLabel', { bg = '#ccff88', fg = 'black' })
+--       hi(0, 'SjSearch', { bg = '#77aaff', fg = 'black' })
+--     end
+--   })
+-- end
 
 local function svart()
   augroup("svart", { clear = true })
@@ -128,18 +140,6 @@ local function svart()
     end
   })
 end
-
--- local function sj()
---   augroup("sj", { clear = true })
---   autocmd("ColorScheme", {
---     group = "sj",
---     pattern = "*",
---     callback = function()
---       hi(0, 'SjLabel', { bg = '#ccff88', fg = 'black' })
---       hi(0, 'SjSearch', { bg = '#77aaff', fg = 'black' })
---     end
---   })
--- end
 
 local function coq()
   augroup("coq", { clear = true })
@@ -198,7 +198,6 @@ return {
   core = core,
   bufferline = bufferline,
   coq = coq,
-  leap = leap,
   lightbulb = lightbulb,
   svart = svart,
 }
