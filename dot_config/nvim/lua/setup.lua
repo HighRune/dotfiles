@@ -41,6 +41,35 @@ local function comment()
   require("Comment").setup()
 end
 
+-------------------- madyanov/svart.nvim
+local function svart()
+local svart = require("svart")
+  svart.configure({
+    key_cancel = "<Esc>",
+    key_delete_char = "<BS>",
+    key_delete_word = "<C-W>",
+    key_delete_query = "<C-U>",
+    key_best_match = "<CR>",
+    key_next_match = "<Tab>",
+    key_prev_match = "<S-Tab>",
+
+    label_atoms = "jfkdlsahgnuvrbytmiceoxwpqz", -- allowed label chars
+    label_location = -1, -- label location relative to the match
+    -- positive = relative to the start of the match
+    -- 0 or negative = relative to the end of the match
+    label_max_len = 2, -- max label length
+    label_min_query_len = 1, -- min query length required to show labels
+    label_hide_irrelevant = true, -- hide irrelevant labels after start typing label to go to
+    label_conflict_foresight = 3, -- number of chars from the start of the match to discard from labels pool
+
+    search_update_register = true, -- update search (/) register with last used query after accepting match
+    search_wrap_around = true, -- wrap around when navigating to next/prev match
+    search_multi_window = true, -- search in multiple windows
+
+    ui_dim_content = false, -- dim buffer content during search
+  })
+end
+
 -------------------- woosaaahh/sj.nvim
 local function sj()
   require("sj").setup({
@@ -586,4 +615,5 @@ return {
   codeactionmenu = codeactionmenu,
   mason = mason,
   masonlspconfig = masonlspconfig,
+  svart = svart,
 }
