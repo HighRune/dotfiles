@@ -43,76 +43,69 @@ end
 
 -------------------- madyanov/svart.nvim
 local function svart()
-  local svart = require("svart")
-
-  svart.configure({
+  require("svart").configure({
     key_cancel = "<Esc>",
     key_delete_char = "<BS>",
     key_delete_word = "<C-W>",
     key_delete_query = "<C-U>",
-    key_best_match = "",
+    key_best_match = "<CR>",
     key_next_match = "<C-n>",
     key_prev_match = "<C-p>",
-
-    label_atoms = "jfkdlsahgnuvrbytmiceoxwpqz", -- allowed label chars
-    label_location = -1, -- label location relative to the match
-    -- positive = relative to the start of the match
-    -- 0 or negative = relative to the end of the match
-    label_max_len = 2, -- max label length
-    label_min_query_len = 1, -- min query length required to show labels
-    label_hide_irrelevant = true, -- hide irrelevant labels after start typing label to go to
-    label_conflict_foresight = 3, -- number of chars from the start of the match to discard from labels pool
-
-    search_update_register = false, -- update search (/) register with last used query after accepting match
-    search_wrap_around = true, -- wrap around when navigating to next/prev match
-    search_multi_window = true, -- search in multiple windows
-
-    ui_dim_content = false, -- dim buffer content during search
+    label_atoms = "aoeuhtns;qjkmwvz',.pgcrlidyfxb",
+    label_location = -1,
+    label_max_len = 2,
+    label_min_query_len = 1,
+    label_hide_irrelevant = true,
+    label_conflict_foresight = 3,
+    search_update_register = false,
+    search_wrap_around = true,
+    search_multi_window = true,
+    ui_dim_content = false,
   })
 end
 
 -------------------- woosaaahh/sj.nvim
-local function sj()
-  require("sj").setup({
-    auto_jump = false,
-    forward_search = true,
-    highlights_timeout = 0,
-    max_pattern_length = 0,
-    pattern_type = "vim",
-    preserve_highlights = true,
-    prompt_prefix = "",
-    relative_labels = false,
-    search_scope = "visible_lines",
-    separator = "\r",
-    update_search_register = false,
-    use_last_pattern = false,
-    use_overlay = false,
-    wrap_jumps = o.wrapscan,
-    labels = {
-      "'", ",", ".", "p", "y", "a", "o", "e", "u", "i", "d", "h", "t",
-      "n", "s", "f", "g", "c", "r", "l", ";", "q", "j", "k", "x", "b",
-      "m", "w", "v", "z",
-    },
-    highlights = {
-      SjFocusedLabel = { bg = "#ff4d97", fg = 'black', },
-      SjLabel = { bg = '#ccff88', fg = 'black' },
-      SjMatches = { bg = '#77aaff', fg = 'black' },
-    },
-    keymaps = {
-      cancel = "<Esc>",
-      validate = "<S-Enter>",
-      prev_match = "<S-Tab>",
-      next_match = "<Tab>",
-      prev_pattern = "<C-p>",
-      next_pattern = "<C-n>",
-      delete_prev_char = "<BS>",
-      delete_prev_word = "<C-w>",
-      delete_pattern = "<C-u>",
-      restore_pattern = "<A-BS>",
-      send_to_qflist = "<A-q>",
-    },
-  })
-end
+-- local function sj()
+--   require("sj").setup({
+--     auto_jump = false,
+--     forward_search = true,
+--     highlights_timeout = 0,
+--     max_pattern_length = 0,
+--     pattern_type = "vim",
+--     preserve_highlights = true,
+--     prompt_prefix = "",
+--     relative_labels = false,
+--     search_scope = "visible_lines",
+--     separator = "\r",
+--     update_search_register = false,
+--     use_last_pattern = false,
+--     use_overlay = false,
+--     wrap_jumps = o.wrapscan,
+--     labels = {
+--       "'", ",", ".", "p", "y", "a", "o", "e", "u", "i", "d", "h", "t",
+--       "n", "s", "f", "g", "c", "r", "l", ";", "q", "j", "k", "x", "b",
+--       "m", "w", "v", "z",
+--     },
+--     highlights = {
+--       SjFocusedLabel = { bg = "#ff4d97", fg = 'black', },
+--       SjLabel = { bg = '#ccff88', fg = 'black' },
+--       SjMatches = { bg = '#77aaff', fg = 'black' },
+--     },
+--     keymaps = {
+--       cancel = "<Esc>",
+--       validate = "<S-Enter>",
+--       prev_match = "<S-Tab>",
+--       next_match = "<Tab>",
+--       prev_pattern = "<C-p>",
+--       next_pattern = "<C-n>",
+--       delete_prev_char = "<BS>",
+--       delete_prev_word = "<C-w>",
+--       delete_pattern = "<C-u>",
+--       restore_pattern = "<A-BS>",
+--       send_to_qflist = "<A-q>",
+--     },
+--   })
+-- end
 
 -------------------- kosayoda/nvim-lightbulb
 local function lightbulb()
@@ -508,15 +501,15 @@ local function masonlspconfig()
 end
 
 -------------------- ggandor/leap.nvim
-local function leap()
-  require('leap').setup {
-    highlight_unlabeled = false,
-    safe_labels = {},
-    case_sensitive = false,
-    labels = { 'a', 'o', 'e', 'u', 'h', 't', 's', "'", ',', '.', 'p', 'g', 'g', 'c', 'r', 'l', ';', 'q', 'j', 'k', 'm',
-      'w', 'v', 'z' },
-  }
-end
+-- local function leap()
+--   require('leap').setup {
+--     highlight_unlabeled = false,
+--     safe_labels = {},
+--     case_sensitive = false,
+--     labels = { 'a', 'o', 'e', 'u', 'h', 't', 's', "'", ',', '.', 'p', 'g', 'g', 'c', 'r', 'l', ';', 'q', 'j', 'k', 'm',
+--       'w', 'v', 'z' },
+--   }
+-- end
 
 -------------------- ms-jpq/coq_nvim
 local function coq()
@@ -606,10 +599,8 @@ return {
   coq = coq,
   tokyonight = tokyonight,
   dial = dial,
-  leap = leap,
   highlightedyank = highlightedyank,
   wordmotion = wordmotion,
-  sj = sj,
   livecommand = livecommand,
   stayinplace = stayinplace,
   lightbulb = lightbulb,
