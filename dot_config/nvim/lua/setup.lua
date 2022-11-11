@@ -43,15 +43,16 @@ end
 
 -------------------- madyanov/svart.nvim
 local function svart()
-local svart = require("svart")
+  local svart = require("svart")
+
   svart.configure({
     key_cancel = "<Esc>",
     key_delete_char = "<BS>",
     key_delete_word = "<C-W>",
     key_delete_query = "<C-U>",
-    key_best_match = "<CR>",
-    key_next_match = "<Tab>",
-    key_prev_match = "<S-Tab>",
+    key_best_match = "",
+    key_next_match = "<C-n>",
+    key_prev_match = "<C-p>",
 
     label_atoms = "jfkdlsahgnuvrbytmiceoxwpqz", -- allowed label chars
     label_location = -1, -- label location relative to the match
@@ -62,7 +63,7 @@ local svart = require("svart")
     label_hide_irrelevant = true, -- hide irrelevant labels after start typing label to go to
     label_conflict_foresight = 3, -- number of chars from the start of the match to discard from labels pool
 
-    search_update_register = true, -- update search (/) register with last used query after accepting match
+    search_update_register = false, -- update search (/) register with last used query after accepting match
     search_wrap_around = true, -- wrap around when navigating to next/prev match
     search_multi_window = true, -- search in multiple windows
 
