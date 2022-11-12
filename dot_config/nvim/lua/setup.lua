@@ -543,7 +543,8 @@ local function coq()
     keymap = {
       recommended = false,
       pre_select = true,
-      jump_to_mark = '<c-enter>',
+      -- jump_to_mark = '<c-Enter>',
+      jump_to_mark = '<Tab>',
       ['repeat'] = '',
       manual_complete = '',
       bigger_preview = '',
