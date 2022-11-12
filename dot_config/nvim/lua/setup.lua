@@ -554,19 +554,19 @@ local function coq()
         short_name = '⚡',
       },
       tree_sitter = {
-        short_name = '',
+        short_name = '侮',
       },
-      -- lsp = {
-      --   short_name = '',
-      -- },
-      -- paths = {
-      --   short_name = '',
-      -- },
+      lsp = {
+        short_name = '',
+      },
+      paths = {
+        short_name = '',
+      },
       tmux = {
-        short_name = '',
+        short_name = '里',
       },
       buffers = {
-        short_name = '',
+        short_name = 'זּ',
       },
     },
   }
