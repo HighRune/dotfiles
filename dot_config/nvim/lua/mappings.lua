@@ -290,17 +290,24 @@ end
 
 -------------------- mfussenegger/nvim-dap
 local function dap()
-  local mappings = require('hydra')({ mode = { 'o', 'n', 'x' }, config = { hint = false, color = 'pink' }, heads = {
-    { 'c', require('dap').continue },
-    { 'n', require('dap').step_over },
-    { 'i', require('dap').step_into },
-    { 'o', require('dap').step_out },
-    { 'b', require('dap').toggle_breakpoint },
-    { 'r', require('dap').repl.open },
-    { 'q', nil, { exit = true } },
-    { '<Esc>', nil, { exit = true } },
-    { '<C-s>', nil, { exit = true } }
-  } })
+  local mappings = require('hydra')({ hint = '', mode = { 'o', 'n', 'x' },
+    config = {
+      -- hint = { type = 'cmdline' },
+      hint = false,
+      color = 'pink',
+    },
+    heads = {
+      { 'c', require('dap').continue },
+      { 'n', require('dap').step_over },
+      { 'i', require('dap').step_into },
+      { 'o', require('dap').step_out },
+      { 'b', require('dap').toggle_breakpoint },
+      { 'r', require('dap').repl.open },
+      { 'q', nil, { exit = true } },
+      { '<Esc>', nil, { exit = true } },
+      { '<C-s>', nil, { exit = true } }
+    }
+  })
 
   map({ 'n', 'x' }, '<Leader>d', function() mappings:activate() end)
 end
