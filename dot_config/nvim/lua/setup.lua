@@ -272,7 +272,8 @@ local function ai()
       goto_right = '',
     },
     n_lines = 50,
-    search_method = 'cover_or_nearest',
+    search_method = 'cover_or_next',
+    -- search_method = 'cover_or_nearest',
   })
 end
 
