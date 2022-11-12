@@ -263,34 +263,18 @@ end
 
 -------------------- anuvyklack/hydra.nvim
 local function hydra()
-  local Hydra = require('hydra')
-
-  Hydra({ name = 'newline', mode = { 'n', 'x' }, body = 'g', heads = {
+  require('hydra')({ name = 'newline', mode = { 'n', 'x' }, body = 'g', heads = {
     { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>' },
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>' },
   } })
 
-  -------------------- chaoren/vim-wordmotion
-  local wordMotion = Hydra({ mode = { 'o', 'n', 'x' }, config = { hint = false, color = 'pink' }, heads = {
-    { 'w', '<Plug>WordMotion_w' },
-    { 'b', '<Plug>WordMotion_b' },
-    { 'e', '<Plug>WordMotion_e' },
-    { 'iw', '<Plug>WordMotion_iw' },
-    { 'aw', '<Plug>WordMotion_aw' },
-    { 'ge', '<Plug>WordMotion_ge' },
-    { 'q', nil, { exit = true } },
-    { '<Esc>', nil, { exit = true } },
-    { '<C-s>', nil, { exit = true } }
-  } })
-
-  local scroll = Hydra({ mode = { 'n', 'x' }, config = { hint = false }, heads = {
+  local scroll = require('hydra')({ mode = { 'n', 'x' }, config = { hint = false }, heads = {
     { 'u', '5k' },
     { 'e', '5j' },
   } })
 
   map({ 'n', 'x' }, "<C-e>", function() scroll:activate() fn.execute("normal! 5j") end)
   map({ 'n', 'x' }, "<C-u>", function() scroll:activate() fn.execute("normal! 5k") end)
-  map({ 'n', 'x' }, 'gw', function() wordMotion:activate() end)
 end
 
 -------------------- D4KU/vim-textobj-chainmember
@@ -306,14 +290,36 @@ end
 
 -------------------- mfussenegger/nvim-dap
 local function dap()
-  map('n', '<Leader>dc', require('dap').continue)
-  map('n', '<Leader>ds', require('dap').step_over)
-  map('n', '<Leader>di', require('dap').step_into)
-  map('n', '<Leader>do', require('dap').step_out)
-  map('n', '<Leader>db', require('dap').toggle_breakpoint)
-  map('n', '<Leader>dr', require('dap').repl.open)
-  map('n', '<Leader>dl', require('dap').run_last)
+  local mappings = require('hydra')({ mode = { 'o', 'n', 'x' }, config = { hint = false, color = 'pink' }, heads = {
+    { 'c', require('dap').continue },
+    { 'n', require('dap').step_over },
+    { 'i', require('dap').step_into },
+    { 'o', require('dap').step_out },
+    { 'b', require('dap').toggle_breakpoint },
+    { 'r', require('dap').repl.open },
+    { 'q', nil, { exit = true } },
+    { '<Esc>', nil, { exit = true } },
+    { '<C-s>', nil, { exit = true } }
+  } })
+
+  map({ 'n', 'x' }, '<Leader>d', function() mappings:activate() end)
 end
+
+-- -------------------- chaoren/vim-wordmotion
+-- local function wordMotion()
+-- local wordMotion = require('hydra')({ mode = { 'o', 'n', 'x' }, config = { hint = false, color = 'pink' }, heads = {
+--   { 'w', '<Plug>WordMotion_w' },
+--   { 'b', '<Plug>WordMotion_b' },
+--   { 'e', '<Plug>WordMotion_e' },
+--   { 'iw', '<Plug>WordMotion_iw' },
+--   { 'aw', '<Plug>WordMotion_aw' },
+--   { 'ge', '<Plug>WordMotion_ge' },
+--   { 'q', nil, { exit = true } },
+--   { '<Esc>', nil, { exit = true } },
+--   { '<C-s>', nil, { exit = true } }
+-- } })
+-- map({ 'n', 'x' }, 'gw', function() wordMotion:activate() end)
+-- end
 
 return {
   core = core,
