@@ -15,6 +15,11 @@ return require("packer").startup({
     use("nvim-lua/plenary.nvim")
     use("kyazdani42/nvim-web-devicons")
     use({
+      'gelguy/wilder.nvim',
+      config = function()
+      end,
+    })
+    use({
       "mfussenegger/nvim-dap",
       config = function()
         require('mappings').dap()
