@@ -17,6 +17,7 @@ return require("packer").startup({
     use({
       'gelguy/wilder.nvim',
       config = function()
+        require('wilder').setup({ modes = { ':', '/', '?' } })
       end,
     })
     use({
