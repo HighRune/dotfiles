@@ -120,12 +120,12 @@ return require("packer").startup({
         require('setup').bufferline()
       end
     })
-    -- use({
-    --   "inside/vim-search-pulse",
-    --   -- config = function()
-    --   --   require("mappings").pulse()
-    --   -- end,
-    -- })
+    use({
+      "inside/vim-search-pulse",
+      config = function()
+        require("mappings").pulse()
+      end,
+    })
     use({
       "folke/tokyonight.nvim",
       setup = function()
