@@ -17,13 +17,7 @@ return require("packer").startup({
     use({
       'gelguy/wilder.nvim',
       config = function()
-        local wilder = require('wilder')
-        wilder.setup({ modes = { ':' } })
-        -- wilder.setup({ modes = { ':', '/', '?' } })
-        wilder.set_option('renderer', wilder.popupmenu_renderer({
-          pumblend = 20,
-          apply_incsearch_fix = 0,
-        }))
+        require("setup").wilder()
       end,
     })
     use({
