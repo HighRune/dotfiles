@@ -17,7 +17,13 @@ return require("packer").startup({
     use({
       'gelguy/wilder.nvim',
       config = function()
-        require('wilder').setup({ modes = { ':', '/', '?' } })
+        local wilder = require('wilder')
+        wilder.setup({ modes = { ':' } })
+        -- wilder.setup({ modes = { ':', '/', '?' } })
+        wilder.set_option('renderer', wilder.popupmenu_renderer({
+          pumblend = 20,
+          apply_incsearch_fix = 0,
+        }))
       end,
     })
     use({
@@ -114,12 +120,12 @@ return require("packer").startup({
         require('setup').bufferline()
       end
     })
-    use({
-      "inside/vim-search-pulse",
-      config = function()
-        require("mappings").pulse()
-      end,
-    })
+    -- use({
+    --   "inside/vim-search-pulse",
+    --   -- config = function()
+    --   --   require("mappings").pulse()
+    --   -- end,
+    -- })
     use({
       "folke/tokyonight.nvim",
       setup = function()
