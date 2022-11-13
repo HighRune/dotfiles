@@ -41,6 +41,19 @@ local function comment()
   require("Comment").setup()
 end
 
+-------------------- gelguy/wilder.nvim
+local function wilder()
+  local wild = require('wilder')
+
+  wild.setup({ modes = { ':' } })
+  -- wilder.setup({ modes = { ':', '/', '?' } })
+
+  wild.set_option('renderer', wild.popupmenu_renderer({
+    pumblend = 20,
+    apply_incsearch_fix = 0,
+  }))
+end
+
 -------------------- madyanov/svart.nvim
 local function svart()
   require("svart").configure({
@@ -51,14 +64,14 @@ local function svart()
     key_best_match = "<CR>",
     key_next_match = "<C-n>",
     key_prev_match = "<C-p>",
-    label_atoms = "aoeuhtns;qjkmwvz',.pgcrlidyfxb",
+    label_atoms = "aoeuhtnsqjkmwv',.pgcrlid",
     label_location = -1,
     label_max_len = 2,
     label_min_query_len = 1,
     label_hide_irrelevant = true,
     label_conflict_foresight = 3,
     search_update_register = false,
-    search_wrap_around = true,
+    search_wrap_around = false,
     search_multi_window = true,
     ui_dim_content = false,
   })
@@ -610,4 +623,5 @@ return {
   mason = mason,
   masonlspconfig = masonlspconfig,
   svart = svart,
+  wilder = wilder,
 }
