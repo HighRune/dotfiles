@@ -26,7 +26,7 @@ local function core()
   o.wildignorecase = true
   -- o.shortmess='a'
   o.completeopt = "menuone,noinsert" -- Options for Insert mode completion
-  o.pumblend = 10
+  o.pumblend = 15
   o.clipboard = "unnamedplus" -- Have the clipboard be the same as my regular clipboard
   o.updatetime = 50 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable delays and poor user experience
   -- o.timeoutlen = 0
