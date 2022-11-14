@@ -45,12 +45,16 @@ end
 local function wilder()
   local wild = require('wilder')
 
-  wild.setup({ modes = { ':' } })
   -- wilder.setup({ modes = { ':', '/', '?' } })
+  wild.setup({
+    modes = { ':' },
+    -- next_key = '<Down>',
+    -- previous_key = '<Up>',
+    -- accept_key = '<Enter>',
+  })
 
   wild.set_option('renderer', wild.popupmenu_renderer({
-    pumblend = 20,
-    apply_incsearch_fix = 0,
+    pumblend = 25,
   }))
 end
 
@@ -544,6 +548,16 @@ local function coq()
       preview = {
         positions = { east = 1, north = 2, south = 3, west = 4, },
         x_max_len = 100,
+        border = {
+          { "", "NormalFloat" },
+          { "", "NormalFloat" },
+          { "", "NormalFloat" },
+          { "", "NormalFloat" },
+          { "", "NormalFloat" },
+          { "", "NormalFloat" },
+          { "", "NormalFloat" },
+          { "", "NormalFloat" }
+        },
       },
       icons = { mode = 'none' },
       pum = {
@@ -556,8 +570,8 @@ local function coq()
     keymap = {
       recommended = false,
       pre_select = true,
-      -- jump_to_mark = '<c-Enter>',
-      jump_to_mark = '<Tab>',
+      jump_to_mark = '<c-Enter>',
+      -- jump_to_mark = '<Tab>',
       ['repeat'] = '',
       manual_complete = '',
       bigger_preview = '',
