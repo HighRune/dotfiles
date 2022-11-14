@@ -548,16 +548,7 @@ local function coq()
       preview = {
         positions = { east = 1, north = 2, south = 3, west = 4, },
         x_max_len = 100,
-        border = {
-          { "", "NormalFloat" },
-          { "", "NormalFloat" },
-          { "", "NormalFloat" },
-          { "", "NormalFloat" },
-          { "", "NormalFloat" },
-          { "", "NormalFloat" },
-          { "", "NormalFloat" },
-          { "", "NormalFloat" }
-        },
+        border = 'single'
       },
       icons = { mode = 'none' },
       pum = {
