@@ -57,6 +57,7 @@ local function core()
   map("i", "<C-a>", "<esc>I")
   map("i", "<C-e>", "<end>")
   map("i", "<C-k>", "<esc>ld$i")
+  map("i", "<C-H>", "<C-w>")
 
   -- Motions
   map("n", "k", "gk")
