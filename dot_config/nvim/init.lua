@@ -177,6 +177,14 @@ return require("packer").startup({
     --     require("mappings").leap()
     --   end
     -- })
+    -- use({
+    --   "justinmk/vim-sneak",
+    --   config = function()
+    --     require("autocmd").sneak()
+    --     require("options").sneak()
+    --     require("mappings").sneak()
+    --   end,
+    -- })
     use({
       "numToStr/Comment.nvim",
       config = function()
@@ -228,14 +236,6 @@ return require("packer").startup({
     --     require("setup").bettern()
     --     require("mappings").bettern()
     --   end
-    -- })
-    -- use({
-    --   "justinmk/vim-sneak",
-    --   config = function()
-    --     require("autocmd").sneak()
-    --     require("options").sneak()
-    --     require("mappings").sneak()
-    --   end,
     -- })
     use("nvim-treesitter/playground")
     use({
@@ -293,40 +293,11 @@ return require("packer").startup({
     -- use("ryvnf/readline.vim")
     use("tpope/vim-abolish")
     -- use("/home/charles/Documents/dev/plugins/blaster")
-    -- use("m-demare/hlargs.nvim")
-    -- use({
-    --   "jinh0/eyeliner.nvim",
-    --   config = function()
-    --     require("autocmd").eyeliner()
-    --   end,
-    -- })
   end,
   config = require("setup").packer()
 })
 
--- use({
---   "sbdchd/neoformat",
---   config = function()
---     require("options").neoformat()
---     require("autocmd").neoformat()
---   end,
--- })
--- use("tpope/vim-repeat")
--- use("tpope/vim-commentary")
--- use("JoosepAlviste/nvim-ts-context-commentstring")
--- use("kana/vim-textobj-user")
--- use("PeterRincker/vim-argumentative")
--- use({
--- 	"inside/vim-search-pulse",
--- 	config = function()
--- 		require("setup").pulse()
--- 		require("mappings").pulse()
--- 	end,
--- use({
--- 	"nvim-telescope/telescope.nvim",
--- 	-- config = require("config.telescope").setup(),
--- })
--- use("bfredl/nvim-incnormal")
+-- use("m-demare/hlargs.nvim")
 -------------------- AndrewRadev/sideways.vim
 -- api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
 -- api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
