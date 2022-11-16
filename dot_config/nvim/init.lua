@@ -16,6 +16,8 @@ return require("packer").startup({
     use("kyazdani42/nvim-web-devicons")
     use({
       'gelguy/wilder.nvim',
+      requires = { "romgrk/fzy-lua-native", opt = true },
+      rocks = 'pcre2',
       config = function()
         require("setup").wilder()
       end,
