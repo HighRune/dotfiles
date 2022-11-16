@@ -67,6 +67,8 @@ local function wilder()
 
   wilder.set_option('renderer', wilder.popupmenu_renderer({
     pumblend = 25,
+    left = { ' ', wilder.popupmenu_devicons() },
+    right = { ' ', wilder.popupmenu_scrollbar() },
     highlighter = {
       wilder.lua_pcre2_highlighter(),
       wilder.lua_fzy_highlighter(),
