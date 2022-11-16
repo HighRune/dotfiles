@@ -301,27 +301,7 @@ return require("packer").startup({
     --   end,
     -- })
   end,
-  config = {
-    display = {
-      open_fn = function()
-        return require('packer.util').float({ border = 'single' })
-      end
-    }
-    -- display = {
-    --   open_fn = function()
-    --     return require("packer.util").float({
-    --       border = "",
-    --       width = 999,
-    --       height = 999,
-    --     })
-    --   end,
-    -- },
-    -- lewis6991/impatient.nvim
-    -- compile_path = fn.stdpath("config") .. "/lua/packer_compiled.lua",
-    -- profile = {
-    -- 	enable = true,
-    -- },
-  },
+  config = require("setup").packer()
 })
 
 -- use({
