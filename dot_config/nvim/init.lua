@@ -25,8 +25,8 @@ return require("packer").startup({
     use({
       "mfussenegger/nvim-dap",
       config = function()
-        require('mappings').dap()
-        require('config.dap')
+        -- require('mappings').dap()
+        -- require('config.dap')
       end
     })
     use({
