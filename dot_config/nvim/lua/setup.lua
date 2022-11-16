@@ -43,18 +43,37 @@ end
 
 -------------------- gelguy/wilder.nvim
 local function wilder()
-  local wild = require('wilder')
+  local wilder = require('wilder')
 
-  -- wilder.setup({ modes = { ':', '/', '?' } })
-  wild.setup({
+  wilder.setup({
     modes = { ':' },
+    -- modes = { ':', '/', '?' },
     -- next_key = '<Down>',
     -- previous_key = '<Up>',
     -- accept_key = '<Enter>',
   })
 
-  wild.set_option('renderer', wild.popupmenu_renderer({
+  wilder.set_option('pipeline', {
+    wilder.branch(
+      wilder.cmdline_pipeline({
+        fuzzy = 1,
+        set_pcre2_pattern = 1,
+      }),
+      wilder.python_search_pipeline({
+        pattern = 'fuzzy',
+      })
+    ),
+  })
+
+  wilder.set_option('renderer', wilder.popupmenu_renderer({
     pumblend = 25,
+    highlighter = {
+      wilder.lua_pcre2_highlighter(),
+      wilder.lua_fzy_highlighter(),
+    },
+    highlights = {
+      accent = wilder.make_hl('WilderAccent', 'Pmenu', { { a = 1 }, { a = 1 }, { foreground = '#ff4d97' } }),
+    },
   }))
 end
 
