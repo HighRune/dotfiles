@@ -90,6 +90,8 @@ local function wilder()
     ),
   })
 
+  -- wilder.set_option('noselect', 0)
+
   wilder.set_option('renderer', wilder.popupmenu_renderer({
     pumblend = 25,
     left = { ' ', wilder.popupmenu_devicons() },
@@ -335,8 +337,8 @@ local function ai()
       goto_right = '',
     },
     n_lines = 50,
-    search_method = 'cover_or_next',
-    -- search_method = 'cover_or_nearest',
+    -- search_method = 'cover_or_next',
+    search_method = 'cover_or_nearest',
   })
 end
 
