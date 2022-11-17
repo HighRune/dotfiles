@@ -189,6 +189,7 @@ return require("packer").startup({
       "numToStr/Comment.nvim",
       config = function()
         require("setup").comment()
+        require("mappings").comment()
       end,
     })
     use("tommcdo/vim-exchange")
