@@ -1,5 +1,6 @@
 local cmd = vim.cmd
 local fn = vim.fn
+local o = vim.o
 local g = vim.g
 local map = vim.keymap.set
 local call = vim.call
@@ -17,6 +18,7 @@ local function core()
   map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
   map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
 
+  map('n', ';', ':')
   map('n', '<Leader>t', ':te<CR>ireset<CR>')
   map('t', '<Esc>', [[<C-\><C-n>]])
 
@@ -68,7 +70,7 @@ local function core()
   map("n", "k", "gk")
   map("n", "j", "gj")
   map("n", "0", "g0")
-  map("n", "$", "g$:set ve= ve=all<CR>")
+  map("n", "$", function () fn.execute("normal! g$") o.ve = '' o.ve = 'all' end)
   map("n", "^", "g^")
   map("n", "&", "g^")
 
