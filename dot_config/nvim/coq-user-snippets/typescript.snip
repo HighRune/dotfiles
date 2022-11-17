@@ -10,17 +10,27 @@ snippet c
 abbr const  = 
  const ${1} = ${0}
 
+snippet l
+abbr let  = 
+ let ${1} = ${0}
+
 snippet co
 abbr const  = () => { 
  const ${1} = (${2}) => {
    ${0}
  }
 
-snippet ca
-abbr  (() => {  })
- ${1}(() => {
+snippet ()
+abbr () => {  }
+ (${1}) => {
    ${0}
- })
+ }
+
+snippet a
+abbr async () => {  }
+ async (${1}) => {
+   ${0}
+ }
 
 snippet im
 abbr import {  } from ''
@@ -110,14 +120,3 @@ abbr defineStore('', {
    actions: {
    }
  })
-
-snippet com
-abbr <template>
-  <template>
-  </template>
-
-  <script setup lang='ts'>
-  </script>
-
-  <style lang='scss' scoped>
-  </style>
