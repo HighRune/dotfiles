@@ -17,6 +17,11 @@ local function core()
   map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
   map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
 
+  map('n', '<Leader>t', ':te<CR>ireset<CR>')
+  map('t', '<Esc>', [[<C-\><C-n>]])
+
+  -- map('n', '', '<C-]>')
+
   -- map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
 
   -- Help
@@ -170,6 +175,12 @@ local function svart()
   map({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")
   map({ "n", "x", "o" }, "S", "<Cmd>SvartRegex<CR>")
   map({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>")
+end
+
+-------------------- numToStr/Comment.nvim
+local function comment()
+  map('x', 'gc', '<Plug>(comment_toggle_linewise_visual)gv', remap)
+  map('x', 'gb', '<Plug>(comment_toggle_blockwise_visual)gv', remap)
 end
 
 -------------------- ggandor/leap.nvim
@@ -351,4 +362,5 @@ return {
   mason = mason,
   dap = dap,
   svart = svart,
+  comment = comment
 }
