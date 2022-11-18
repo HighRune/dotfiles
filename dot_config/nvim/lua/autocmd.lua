@@ -147,7 +147,7 @@ local function coq()
   autocmd("BufWritePost", {
     group = "coq",
     pattern = "*/.config/nvim/coq-user-snippets/*.snip",
-    command = "COQsnips compile",
+    command = "silent !COQsnips compile",
   })
 end
 
