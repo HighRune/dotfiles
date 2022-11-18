@@ -217,6 +217,7 @@ function dev () {
 
 # ___________________________________________ BINDINGS
 bind -x '"\C-n":"nvim"'
+for i in "-" {0..9}; do bind -r "\e$i"; done
 
 # ___________________________________________ GCLOUD
 if [ -f '/home/charles/google-cloud-sdk/path.bash.inc' ]; then . '/home/charles/google-cloud-sdk/path.bash.inc'; fi
