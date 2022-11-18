@@ -1,10 +1,20 @@
 # _______________________________ TS
 
 snippet f
-abbr function  () { 
+abbr function  () {  }
  function ${1} (${2}) {
    ${0}
  }
+
+snippet ()
+abbr  (() => {  })
+ ${1} ((${2}) => {
+   ${0}
+ })
+
+snippet /
+abbr // ______ 
+ // ___________________________ ${0}
 
 snippet c
 abbr const  = 
@@ -15,7 +25,7 @@ abbr let  = 
  let ${1} = ${0}
 
 snippet co
-abbr const  = () => { 
+abbr const  = () => {  }
  const ${1} = (${2}) => {
    ${0}
  }
@@ -49,7 +59,7 @@ abbr console.debug('')
  console.debug(${0})
 
 snippet in
-abbr export interface  { 
+abbr export interface  {  }
   export interface ${1} {
     ${2}:${0}
   }
@@ -63,31 +73,31 @@ abbr else 
   else ${0}
 
 snippet if
-abbr if () { 
+abbr if () {  } 
   if (${1}) {
     ${2}
   } ${0}
 
 snippet el
-abbr else { 
+abbr else {  } 
   else {
     ${1}
   } ${0}
 
 snippet fo
-abbr for ( of ) { 
+abbr for ( of ) {  }
   for (${1} of ${2}) {
     ${0}
   }
 
 snippet for
-abbr for (let i = 0; i < .lenght; i++) { 
+abbr for (let i = 0; i < .lenght; i++) {  }
   for (let i = 0; i < ${1}.length; i++) {
     ${0}
   }
 
 snippet ty
-abbr export type  { 
+abbr export type  {  }
   export type ${1} = {
     ${2}:${0}
   }
@@ -103,7 +113,7 @@ abbr /* eslint-disable */
 # _______________________________ VUE
 
 snippet wa
-abbr watch(, newVal => { 
+abbr watch(, newVal => {  })
  watch(${1}, newVal => {
    ${0}
  })
