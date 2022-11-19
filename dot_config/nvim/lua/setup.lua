@@ -36,6 +36,20 @@ local function stayinplace()
   require("stay-in-place").setup()
 end
 
+-------------------- cshuaimin/ssr.nvim
+local function ssr()
+  require("ssr").setup {
+    min_width = 50,
+    min_height = 5,
+    keymaps = {
+      close = "q",
+      next_match = "n",
+      prev_match = "N",
+      replace_all = "<C-CR>",
+    },
+  }
+end
+
 -------------------- numToStr/Comment.nvim
 local function comment()
   require("Comment").setup()
@@ -678,4 +692,5 @@ return {
   masonlspconfig = masonlspconfig,
   svart = svart,
   wilder = wilder,
+  ssr = ssr,
 }
