@@ -18,7 +18,6 @@ local function core()
   map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
   map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
 
-  map('n', ';', ':')
   map('n', '<Leader>t', ':te<CR>ireset<CR>')
   map('t', '<Esc>', [[<C-\><C-n>]])
 
@@ -70,7 +69,10 @@ local function core()
   map("n", "k", "gk")
   map("n", "j", "gj")
   map("n", "0", "g0")
-  map("n", "$", function () fn.execute("normal! g$") o.ve = '' o.ve = 'all' end)
+  map("n", "$", function() fn.execute("normal! g$")
+    o.ve = ''
+    o.ve = 'all'
+  end)
   map("n", "^", "g^")
   map("n", "&", "g^")
 
@@ -175,8 +177,8 @@ end
 -------------------- madyanov/svart.nvim
 local function svart()
   map({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")
-  map({ "n", "x", "o" }, "S", "<Cmd>SvartRegex<CR>")
-  map({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>")
+  -- map({ "n", "x", "o" }, "S", "<Cmd>SvartRegex<CR>")
+  -- map({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>")
 end
 
 -------------------- numToStr/Comment.nvim
@@ -189,6 +191,11 @@ end
 local function leap()
   map({ "n", "x" }, "s", "<Plug>(leap-forward)", remap)
   map({ "n", "x" }, "S", "<Plug>(leap-backward)", remap)
+end
+
+-------------------- cshuaimin/ssr.nvim
+local function ssr()
+  map({ "n", "x" }, "<Leader>r", function() require("ssr").open() end)
 end
 
 -------------------- woosaaahh/sj.nvim
@@ -251,7 +258,7 @@ local function lspconfig(buffer)
   map("n", "gr", lsp.buf.references, { buffer = buffer })
   map("n", '<leader>f', lsp.buf.format, { buffer = buffer })
   map("n", '<leader>a', ':CodeActionMenu<Enter>', { buffer = buffer })
-  map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
+  -- map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
   map("n", '<down>', diagnostic.goto_prev, { buffer = buffer })
   map("n", '<up>', diagnostic.goto_next, { buffer = buffer })
   map('n', '<leader>l', diagnostic.setloclist, { noremap = true, silent = true })
@@ -364,5 +371,6 @@ return {
   mason = mason,
   dap = dap,
   svart = svart,
-  comment = comment
+  comment = comment,
+  ssr = ssr,
 }
