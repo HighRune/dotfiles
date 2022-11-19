@@ -287,8 +287,8 @@ local function hydra()
     { 'e', '5j' },
   } })
 
-  map({ 'n', 'x' }, "<C-e>", function() scroll:activate() fn.execute("normal! 5j") end)
-  map({ 'n', 'x' }, "<C-u>", function() scroll:activate() fn.execute("normal! 5k") end)
+  map({ 'n', 'x' }, "<Leader>e", function() scroll:activate() fn.execute("normal! 5j") end)
+  map({ 'n', 'x' }, "<Leader>u", function() scroll:activate() fn.execute("normal! 5k") end)
 end
 
 -------------------- D4KU/vim-textobj-chainmember
