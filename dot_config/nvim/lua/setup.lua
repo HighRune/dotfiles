@@ -61,7 +61,15 @@ local function packer()
       open_fn = function()
         return require('packer.util').float({ border = 'single' })
       end,
-      header_sym = ''
+      header_sym = '',
+      keybindings = {
+        quit = 'q',
+        -- toggle_update = '',
+        -- continue = '',
+        -- toggle_info = '',
+        -- diff = '',
+        -- prompt_revert = '',
+      }
     }
     -- display = {
     --   open_fn = function()
