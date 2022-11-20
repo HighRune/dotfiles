@@ -195,6 +195,7 @@ end
 
 -------------------- cshuaimin/ssr.nvim
 local function ssr()
+  -- map({ "n", "x" }, "<leader>r", function() require("ssr").open() end, remap)
 end
 
 -------------------- woosaaahh/sj.nvim
@@ -255,7 +256,7 @@ end
 local function lspconfig(buffer)
   map("n", "gd", lsp.buf.definition, { buffer = buffer })
   map("n", "gr", lsp.buf.references, { buffer = buffer })
-  map({ 'n', 'v' }, '<Leader>f', lsp.buf.format, { buffer = buffer })
+  map('n', '<Leader>f', lsp.buf.format, { buffer = buffer })
   map("n", '<Leader>a', ':CodeActionMenu<Enter>', { buffer = buffer })
   -- map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
   map("n", '<Down>', diagnostic.goto_prev, { buffer = buffer })
