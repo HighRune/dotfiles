@@ -29,14 +29,14 @@ return require("packer").startup({
         -- require('config.dap')
       end
     })
-    -- use({
-    --   "cshuaimin/ssr.nvim",
-    --   module = "ssr",
-    --   config = function()
-    --     require('setup').ssr()
-    --     require('mappings').ssr()
-    --   end
-    -- })
+    use({
+      "cshuaimin/ssr.nvim",
+      module = "ssr",
+      config = function()
+        require('setup').ssr()
+        require('mappings').ssr()
+      end
+    })
     use({
       'https://gitlab.com/madyanov/svart.nvim',
       config = function()
