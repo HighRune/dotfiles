@@ -195,7 +195,6 @@ end
 
 -------------------- cshuaimin/ssr.nvim
 local function ssr()
-  map({ "n", "x" }, "<Leader>r", function() require("ssr").open() end)
 end
 
 -------------------- woosaaahh/sj.nvim
@@ -256,13 +255,13 @@ end
 local function lspconfig(buffer)
   map("n", "gd", lsp.buf.definition, { buffer = buffer })
   map("n", "gr", lsp.buf.references, { buffer = buffer })
-  map("n", '<leader>f', lsp.buf.format, { buffer = buffer })
-  map("n", '<leader>a', ':CodeActionMenu<Enter>', { buffer = buffer })
+  map({ 'n', 'v' }, '<Leader>f', lsp.buf.format, { buffer = buffer })
+  map("n", '<Leader>a', ':CodeActionMenu<Enter>', { buffer = buffer })
   -- map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
-  map("n", '<down>', diagnostic.goto_prev, { buffer = buffer })
-  map("n", '<up>', diagnostic.goto_next, { buffer = buffer })
-  map('n', '<leader>l', diagnostic.setloclist, { noremap = true, silent = true })
-  map('n', '<leader>x', diagnostic.setqflist, { noremap = true, silent = true })
+  map("n", '<Down>', diagnostic.goto_prev, { buffer = buffer })
+  map("n", '<Up>', diagnostic.goto_next, { buffer = buffer })
+  map('n', '<Leader>l', diagnostic.setloclist, { noremap = true, silent = true })
+  map('n', '<Leader>x', diagnostic.setqflist, { noremap = true, silent = true })
   -- lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' })
   -- lsp.buf.formatting_seq_sync
 end
@@ -294,8 +293,10 @@ local function hydra()
     { 'e', '5j' },
   } })
 
-  map({ 'n', 'x' }, "<Leader>e", function() scroll:activate() fn.execute("normal! 5j") end)
-  map({ 'n', 'x' }, "<Leader>u", function() scroll:activate() fn.execute("normal! 5k") end)
+  -- map({ 'n', 'x' }, "<Leader>e", function() scroll:activate() fn.execute("normal! 5j") end)
+  -- map({ 'n', 'x' }, "<Leader>u", function() scroll:activate() fn.execute("normal! 5k") end)
+  map({ 'n', 'x' }, "<C-e>", function() scroll:activate() fn.execute("normal! 5j") end)
+  map({ 'n', 'x' }, "<C-u>", function() scroll:activate() fn.execute("normal! 5k") end)
 end
 
 -------------------- D4KU/vim-textobj-chainmember
