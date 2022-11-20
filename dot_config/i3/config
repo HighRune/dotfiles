@@ -16,6 +16,7 @@ for_window [class=.*] border pixel 6, focus
 # Keybindings
 bindsym $mod+q kill
 bindsym $mod+space floating toggle
+bindsym $mod+u exec warpd --grid
 
 # Focus window
 bindsym $mod+Right focus right
