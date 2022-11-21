@@ -15,6 +15,7 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
+  map('n', '<Enter>', '<Nop>')
   map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
   map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
 
@@ -24,6 +25,16 @@ local function core()
   -- map('n', '', '<C-]>')
 
   -- map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
+
+  -- Operators
+  map({ 'x', 'o' }, "a<Enter>", "ap")
+  map({ 'o' }, "<Enter>", "ip")
+  map({ 'x', 'o' }, "(", "i(", remap)
+  map({ 'x', 'o' }, ")", "i)", remap)
+  map({ 'x', 'o' }, "{", "i{", remap)
+  map({ 'x', 'o' }, "}", "i}", remap)
+  map({ 'x', 'o' }, "[", "i[", remap)
+  map({ 'x', 'o' }, "]", "i]", remap)
 
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
@@ -35,10 +46,10 @@ local function core()
   map("", "q", "<nop>")
 
   -- Save
-  -- map("n", "<C-s>", ":silent write<CR>")
-  -- map("i", "<C-s>", "<esc>`^:silent write<CR>")
-  map("n", "<C-s>", ":w<CR>")
-  map("i", "<C-s>", "<esc>`^:w<CR>")
+  map("n", "<C-s>", ":silent write<CR>")
+  map("i", "<C-s>", "<esc>`^:silent write<CR>")
+  -- map("n", "<C-s>", ":w<CR>")
+  -- map("i", "<C-s>", "<esc>`^:w<CR>")
 
   -- Edit
   map("x", "<C-n>", ":Norm ")
@@ -137,7 +148,6 @@ end
 
 -------------------- wbthomason/packer.nvim
 local function packer()
-  map("n", "<Leader>p", ':Packer<Tab>')
   map("n", "<Leader>ps", require('packer').sync)
   map("n", "<Leader>pc", require('packer').compile)
 end
@@ -152,6 +162,7 @@ local function fzf()
   map("n", "<Leader><Leader>", require('fzf-lua').files)
   map("n", "<Leader>s", require('fzf-lua').live_grep_resume)
   map("n", "<Leader>h", require('fzf-lua').help_tags)
+  map("n", "<Leader>k", require('fzf-lua').keymaps)
   -- map("n", "<Leader>x", "<cmd>lua require('fzf-lua').quickfix({multiprocess=true})<CR>")
 end
 
@@ -195,7 +206,7 @@ end
 
 -------------------- cshuaimin/ssr.nvim
 local function ssr()
-  -- map({ "n", "x" }, "<leader>r", function() require("ssr").open() end, remap)
+  map({ "n", "x" }, "t", function() require("ssr").open() end)
 end
 
 -------------------- woosaaahh/sj.nvim
@@ -259,8 +270,8 @@ local function lspconfig(buffer)
   map('n', '<Leader>f', lsp.buf.format, { buffer = buffer })
   map("n", '<Leader>a', ':CodeActionMenu<Enter>', { buffer = buffer })
   -- map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
-  map("n", '<Down>', diagnostic.goto_prev, { buffer = buffer })
-  map("n", '<Up>', diagnostic.goto_next, { buffer = buffer })
+  map("n", '<Up>', diagnostic.goto_prev, { buffer = buffer })
+  map("n", '<Down>', diagnostic.goto_next, { buffer = buffer })
   map('n', '<Leader>l', diagnostic.setloclist, { noremap = true, silent = true })
   map('n', '<Leader>x', diagnostic.setqflist, { noremap = true, silent = true })
   -- lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' })
@@ -294,10 +305,8 @@ local function hydra()
     { 'e', '5j' },
   } })
 
-  -- map({ 'n', 'x' }, "<Leader>e", function() scroll:activate() fn.execute("normal! 5j") end)
-  -- map({ 'n', 'x' }, "<Leader>u", function() scroll:activate() fn.execute("normal! 5k") end)
-  map({ 'n', 'x' }, "<C-e>", function() scroll:activate() fn.execute("normal! 5j") end)
-  map({ 'n', 'x' }, "<C-u>", function() scroll:activate() fn.execute("normal! 5k") end)
+  map({ 'n', 'x' }, "<Leader>e", function() scroll:activate() fn.execute("normal! 5j") end)
+  map({ 'n', 'x' }, "<Leader>u", function() scroll:activate() fn.execute("normal! 5k") end)
 end
 
 -------------------- D4KU/vim-textobj-chainmember
