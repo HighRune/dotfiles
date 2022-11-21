@@ -64,9 +64,9 @@ local function packer()
       header_sym = '',
       keybindings = {
         quit = 'q',
+        toggle_info = 'o',
         -- toggle_update = '',
         -- continue = '',
-        -- toggle_info = '',
         -- diff = '',
         -- prompt_revert = '',
       }
@@ -343,10 +343,10 @@ local function ai()
       a = gen_spec.argument({ brackets = { '%b()' } }),
       o = gen_spec.argument({ brackets = { '%b{}' } }),
       e = gen_spec.argument({ brackets = { '%b[]' } }),
-      A = gen_spec.pair('(', ')', { type = 'balanced' }),
-      O = gen_spec.pair('{', '}', { type = 'balanced' }),
-      E = gen_spec.pair('[', ']', { type = 'balanced' }),
-      Q = gen_spec.pair('`', '`', { type = 'balanced' }),
+      -- A = gen_spec.pair('(', ')', { type = 'balanced' }),
+      -- O = gen_spec.pair('{', '}', { type = 'balanced' }),
+      -- E = gen_spec.pair('[', ']', { type = 'balanced' }),
+      -- Q = gen_spec.pair('`', '`', { type = 'balanced' }),
     },
     mappings = {
       around = 'a',
@@ -390,10 +390,10 @@ local function treesitter()
         enable = true,
         lookahead = true,
         keymaps = {
-          ["aF"] = "@function.outer",
-          ["iF"] = "@function.inner",
-          ["af"] = "@call.outer",
-          ["if"] = "@call.inner",
+          ["f"] = "@function.outer",
+          ["if"] = "@function.inner",
+          ["F"] = "@call.outer",
+          ["iF"] = "@call.inner",
         },
       },
       -- move = {
@@ -611,7 +611,7 @@ local function coq()
       recency = 0,
     },
     match = {
-      fuzzy_cutoff = 0.8,
+      fuzzy_cutoff = 0.6,
       exact_matches = 2,
     },
     display = {
