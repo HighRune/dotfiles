@@ -16,8 +16,6 @@ local remap = { remap = true }
 
 local function core()
   map('n', '<Enter>', '<Nop>')
-  map('n', ')', '<Nop>')
-  map('n', '(', '<Nop>')
 
   map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
   map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
@@ -31,6 +29,7 @@ local function core()
 
   -- Operators
   map({ 'x', 'o' }, "a<Enter>", "ap")
+  map({ 'x', 'o' }, "i<Enter>", "ip")
   map({ 'o' }, "<Enter>", "ip")
 
   map({ 'x', 'o' }, '<Plug>(arpeggio-default:()', 'i(', remap)
@@ -44,9 +43,9 @@ local function core()
   fn['arpeggio#map']('ox', '', 0, '[]', 'a]')
 
   -- Help
-  cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
-  cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
-  map("n", "<C-h>", ":tab help ")
+  -- cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
+  -- cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
+  -- map("n", "<C-h>", ":tab help ")
 
   -- Disable keys
   map("", "Q", "<nop>")
