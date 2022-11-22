@@ -35,11 +35,13 @@ local function core()
 
   map({ 'x', 'o' }, '<Plug>(arpeggio-default:()', 'i(', remap)
   map({ 'x', 'o' }, '<Plug>(arpeggio-default:))', 'i)', remap)
+  map({ 'x', 'o' }, '<Plug>(arpeggio-default:{)', 'i{', remap)
+  map({ 'x', 'o' }, '<Plug>(arpeggio-default:})', 'i}', remap)
+  map({ 'x', 'o' }, '<Plug>(arpeggio-default:[)', 'i[', remap)
+  map({ 'x', 'o' }, '<Plug>(arpeggio-default:])', 'i]', remap)
   fn['arpeggio#map']('ox', '', 0, '()', 'a)')
-  map({ 'x', 'o' }, "{", "i{", remap)
-  map({ 'x', 'o' }, "}", "i}", remap)
-  map({ 'x', 'o' }, "[", "i[", remap)
-  map({ 'x', 'o' }, "]", "i]", remap)
+  fn['arpeggio#map']('ox', '', 0, '{}', 'a}')
+  fn['arpeggio#map']('ox', '', 0, '[]', 'a]')
 
   -- Help
   cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
