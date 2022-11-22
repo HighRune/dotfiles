@@ -16,6 +16,7 @@ local remap = { remap = true }
 
 local function core()
   map('n', '<Enter>', '<Nop>')
+
   map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
   map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
 
@@ -29,6 +30,8 @@ local function core()
   -- Operators
   map({ 'x', 'o' }, "a<Enter>", "ap")
   map({ 'o' }, "<Enter>", "ip")
+
+  -- vim.cmd([[call arpeggio#map('ox', '', 0, '()', 'a)')]])
   map({ 'x', 'o' }, "(", "i(", remap)
   map({ 'x', 'o' }, ")", "i)", remap)
   map({ 'x', 'o' }, "{", "i{", remap)
@@ -65,10 +68,6 @@ local function core()
   map({ "n", "v" }, "m", 'd')
   map("n", "M", 'D')
   map("n", "mm", 'dd^')
-
-  -- Scroll
-  map({ "n", "x" }, "<C-u>", "5k")
-  map({ "n", "x" }, "<C-e>", "5j")
 
   -- Readline
   map("i", "<C-a>", "<esc>I")
