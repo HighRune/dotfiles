@@ -135,9 +135,9 @@ local function svart()
     group = "svart",
     pattern = "*",
     callback = function()
-      hi(0, 'SvartLabel', { bg = '#ccff88', fg = 'black' })
-      hi(0, 'SvartMatch', { bg = '#77aaff', fg = 'black' })
-      hi(0, 'SvartMatchCursor', { bg = '#ff4d97', fg = 'black' })
+      -- hi(0, 'SvartLabel', { bg = '#ccff88', fg = 'black' })
+      -- hi(0, 'SvartMatch', { bg = '#77aaff', fg = 'black' })
+      hi(0, 'SvartMatchCursor', { bg = '#00fbff', fg = 'black' })
     end
   })
 end
@@ -147,7 +147,7 @@ local function coq()
   autocmd("BufWritePost", {
     group = "coq",
     pattern = "*/.config/nvim/coq-user-snippets/*.snip",
-    command = "silent !COQsnips compile",
+    command = "silent! COQsnips compile",
   })
 end
 
