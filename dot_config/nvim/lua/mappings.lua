@@ -19,14 +19,17 @@ local function core()
   map('n', '<Enter>', '<Nop>')
   map('n', '<C-n>', '<Nop>')
   map('n', '<C-p>', '<Nop>')
+  map("", "Q", "<Nop>")
+  map("", "q", "<Nop>")
 
-  -- Terminal
+  -- Modes
   map('n', '<Leader>t', ':te<CR>ireset<CR>')
   map('t', '<Esc>', [[<C-\><C-n>]])
+  map("x", "<C-n>", ":Norm ")
 
-  -- Motions
-  map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
-  map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
+  -- Save
+  map("n", "<C-s>", ":silent write<CR>")
+  map("i", "<C-s>", "<esc>`^:silent write<CR>")
 
   -- Operators
   map({ 'x', 'o' }, "a<Enter>", "ap")
@@ -42,32 +45,12 @@ local function core()
   fn['arpeggio#map']('ox', '', 0, '{}', 'a}')
   fn['arpeggio#map']('ox', '', 0, '[]', 'a]')
 
-  -- Help
-  -- cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
-  -- cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
-  -- map("n", "<C-h>", ":tab help ")
-
-  -- Disable keys
-  map("", "Q", "<nop>")
-  map("", "q", "<nop>")
-
-  -- Save
-  map("n", "<C-s>", ":silent write<CR>")
-  map("i", "<C-s>", "<esc>`^:silent write<CR>")
-  -- map("n", "<C-s>", ":w<CR>")
-  -- map("i", "<C-s>", "<esc>`^:w<CR>")
-
-  -- Edit
-  map("x", "<C-n>", ":Norm ")
+  -- Operations
   map("x", "p", '"_dP')
-  map({ "n", "v" }, "x", '"_x')
-
-  -- Delete
   map({ "n", "v" }, "d", '"_d')
   map("n", "D", '"_D')
   map("n", "dd", '"_dd^')
-
-  -- Cut
+  map({ "n", "v" }, "x", '"_x')
   map({ "n", "v" }, "m", 'd')
   map("n", "M", 'D')
   map("n", "mm", 'dd^')
@@ -82,12 +65,11 @@ local function core()
   map("n", "k", "gk")
   map("n", "j", "gj")
   map("n", "0", "g0")
-  map("n", "$", function() fn.execute("normal! g$")
-    o.ve = ''
-    o.ve = 'all'
-  end)
+  map("n", "$", function() fn.execute("normal! g$") o.ve = '' o.ve = 'all' end)
   map("n", "^", "g^")
   map("n", "&", "g^")
+  map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
+  map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
 
   -- Buffers
   map("n", "<Leader>q", ":bwipeout!<CR>", silent)
@@ -361,6 +343,11 @@ end
 -- } })
 -- map({ 'n', 'x' }, 'gw', function() wordMotion:activate() end)
 -- end
+
+-- Help
+-- cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
+-- cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
+-- map("n", "<C-h>", ":tab help ")
 
 return {
   core = core,
