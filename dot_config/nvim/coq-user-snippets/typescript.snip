@@ -58,7 +58,13 @@ snippet cd
 abbr console.debug('')
  console.debug(${0})
 
-snippet in
+snippet ex
+abbr export default function () {  }
+  export default function (${1}) {
+    ${0}
+  }
+
+snippet exp
 abbr export interface  {  }
   export interface ${1} {
     ${2}:${0}
