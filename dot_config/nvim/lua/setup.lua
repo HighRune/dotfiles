@@ -95,9 +95,8 @@ local function wilder()
   wilder.setup({
     modes = { ':' },
     -- modes = { ':', '/', '?' },
-    -- next_key = '<Down>',
-    -- previous_key = '<Up>',
-    -- accept_key = '<Enter>',
+    next_key = '<Tab>',
+    previous_key = '<S-Tab>',
   })
 
   wilder.set_option('pipeline', {
@@ -136,8 +135,8 @@ local function svart()
     key_delete_word = "<C-W>",
     key_delete_query = "<C-U>",
     key_best_match = "<CR>",
-    key_next_match = "<C-n>",
-    key_prev_match = "<C-p>",
+    key_next_match = "<Tab>",
+    key_prev_match = "<S-Tab>",
     label_atoms = "aoeuhtnsqjkmwv',.pgcrlid",
     label_location = -1,
     label_max_len = 2,
@@ -353,8 +352,8 @@ local function ai()
       inside = 'i',
       around_next = 'an',
       inside_next = 'in',
-      around_last = 'al',
-      inside_last = 'il',
+      around_last = 'ap',
+      inside_last = 'ip',
       goto_left = '',
       goto_right = '',
     },
