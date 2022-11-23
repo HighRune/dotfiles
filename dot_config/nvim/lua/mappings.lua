@@ -31,7 +31,7 @@ local function core()
   map("n", "<C-s>", ":silent write<CR>")
   map("i", "<C-s>", "<esc>`^:silent write<CR>")
 
-  -- Operators
+  -- Text objects
   map({ 'x', 'o' }, "a<Enter>", "ap")
   map({ 'x', 'o' }, "i<Enter>", "ip")
   map({ 'o' }, "<Enter>", "ip")
@@ -45,7 +45,7 @@ local function core()
   fn['arpeggio#map']('ox', '', 0, '{}', 'a}')
   fn['arpeggio#map']('ox', '', 0, '[]', 'a]')
 
-  -- Operations
+  -- Operators
   map("x", "p", '"_dP')
   map({ "n", "v" }, "d", '"_d')
   map("n", "D", '"_D')
