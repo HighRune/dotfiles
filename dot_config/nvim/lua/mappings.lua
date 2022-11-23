@@ -15,23 +15,23 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
+  -- Unmap
   map('n', '<Enter>', '<Nop>')
+  map('n', '<C-n>', '<Nop>')
+  map('n', '<C-p>', '<Nop>')
 
-  map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
-  map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
-
+  -- Terminal
   map('n', '<Leader>t', ':te<CR>ireset<CR>')
   map('t', '<Esc>', [[<C-\><C-n>]])
 
-  -- map('n', '', '<C-]>')
-
-  -- map("n", "<leader>ca", ":!chezmoi add %:p <CR>")
+  -- Motions
+  map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
+  map('n', '(', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
 
   -- Operators
   map({ 'x', 'o' }, "a<Enter>", "ap")
   map({ 'x', 'o' }, "i<Enter>", "ip")
   map({ 'o' }, "<Enter>", "ip")
-
   map({ 'x', 'o' }, '<Plug>(arpeggio-default:()', 'i(', remap)
   map({ 'x', 'o' }, '<Plug>(arpeggio-default:))', 'i)', remap)
   map({ 'x', 'o' }, '<Plug>(arpeggio-default:{)', 'i{', remap)
