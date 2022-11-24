@@ -16,11 +16,6 @@ local function colorizer()
   require("colorizer").setup()
 end
 
--------------------- machakann/vim-highlightedyank
-local function highlightedyank()
-  g.highlightedyank_highlight_duration = 100
-end
-
 -------------------- ahmedkhalf/project.nvim
 local function project()
   require("project_nvim").setup()
@@ -135,8 +130,8 @@ local function svart()
     key_delete_word = "<C-W>",
     key_delete_query = "<C-U>",
     key_best_match = "<CR>",
-    key_next_match = "<Tab>",
-    key_prev_match = "<S-Tab>",
+    -- key_next_match = "<Tab>",
+    -- key_prev_match = "<S-Tab>",
     label_atoms = "aoeuhtnsqjkmwv',.pgcrlid",
     label_location = -1,
     label_max_len = 2,
@@ -689,7 +684,6 @@ return {
   coq = coq,
   tokyonight = tokyonight,
   dial = dial,
-  highlightedyank = highlightedyank,
   wordmotion = wordmotion,
   livecommand = livecommand,
   stayinplace = stayinplace,
