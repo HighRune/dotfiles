@@ -18,7 +18,7 @@ local function core()
     group = "yank",
     pattern = "*",
     callback = function()
-      highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
+      highlight.on_yank({ higroup = "Yank", timeout = 150 })
     end
   })
 
@@ -56,7 +56,8 @@ local function core()
       hi(0, 'DiagnosticFloatingWarn', { link = 'DiagnosticVirtualTextWarn' })
       hi(0, 'NormalFloat', { bg = 'none' })
       hi(0, 'FloatBorder', { bg = 'none', fg = 'black' })
-      hi(0, 'IncSearch', { bg = '#00ffa2', fg = 'black' })
+      hi(0, 'Yank', { bg = '#00ffa2', fg = 'black' })
+      -- hi(0, 'IncSearch', { bg = '#00ffa2', fg = 'black' })
       -- hi(0, 'Pmenu', { bg = 'white', fg = 'black' })
     end
   })
