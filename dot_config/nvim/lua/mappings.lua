@@ -19,8 +19,13 @@ local function core()
   map('n', '<Enter>', '<Nop>')
   map('n', '<C-n>', '<Nop>')
   map('n', '<C-p>', '<Nop>')
+  map('n', 'u', '<Nop>')
   map("", "Q", "<Nop>")
   map("", "q", "<Nop>")
+
+  -- Help
+  cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
+  cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
 
   -- Modes
   map('n', '<Leader>t', ':te<CR>ireset<CR>')
@@ -30,6 +35,7 @@ local function core()
   -- Save
   map("n", "<C-s>", ":silent write<CR>")
   map("i", "<C-s>", "<esc>`^:silent write<CR>")
+  map('n', '<C-u>', 'u')
 
   -- Text objects
   map({ 'x', 'o' }, "a<Enter>", "ap")
@@ -273,8 +279,7 @@ local function coq()
   map('i', '<C-c>', function() return fn.pumvisible() == 1 and '<C-e><C-c>' or '<C-c>' end, expr)
   map('i', '<Tab>', function() return fn.pumvisible() == 1 and '<C-n>' or '<Tab>' end, expr)
   map('i', '<S-Tab>', function() return fn.pumvisible() == 1 and '<C-p>' or '<BS>' end, expr)
-  map('n', '<Leader>cs',
-    function() require('coq').Snips('edit') --[[ feedkeys(api.nvim_replace_termcodes('<CR>', true, false, true), 'n', true) ]] end)
+  map('n', '<Leader>cs', function() require('coq').Snips('edit') end)
 end
 
 -------------------- anuvyklack/hydra.nvim
@@ -287,6 +292,7 @@ local function hydra()
   local scroll = require('hydra')({ mode = { 'n', 'x' }, config = { hint = false }, heads = {
     { 'u', '5k' },
     { 'e', '5j' },
+    -- { '<Leader>', nil, { exit = true } },
   } })
 
   map({ 'n', 'x' }, "<Leader>e", function() scroll:activate() fn.execute("normal! 5j") end)
@@ -298,10 +304,10 @@ local function textobjchainmember()
   cmd("let g:textobj_chainmember_no_default_key_mappings = 1")
   map("o", "am", "<Plug>(textobj-chainmember-a)")
   map("o", "im", "<Plug>(textobj-chainmember-i)")
-  -- map("o", "", "<Plug>(textobj-chainmember-last-a)")
-  -- map("o", "", "<Plug>(textobj-chainmember-last-i)")
-  -- map("o", "", "<Plug>(textobj-chainmember-next-a)")
-  -- map("o", "", "<Plug>(textobj-chainmember-next-i)")
+  map("o", "apm", "<Plug>(textobj-chainmember-last-a)")
+  map("o", "ipm", "<Plug>(textobj-chainmember-last-i)")
+  map("o", "anm", "<Plug>(textobj-chainmember-next-a)")
+  map("o", "inm", "<Plug>(textobj-chainmember-next-i)")
 end
 
 -------------------- mfussenegger/nvim-dap
@@ -343,11 +349,6 @@ end
 -- } })
 -- map({ 'n', 'x' }, 'gw', function() wordMotion:activate() end)
 -- end
-
--- Help
--- cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
--- cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
--- map("n", "<C-h>", ":tab help ")
 
 return {
   core = core,
