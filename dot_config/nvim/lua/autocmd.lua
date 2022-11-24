@@ -17,7 +17,9 @@ local function core()
   autocmd("TextYankPost", {
     group = "yank",
     pattern = "*",
-    callback = function() highlight.on_yank { higroup = "IncSearch", timeout = 150 } end
+    callback = function()
+      highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
+    end
   })
 
   autocmd("BufWritePost", {
