@@ -56,7 +56,7 @@ local function core()
       hi(0, 'DiagnosticFloatingWarn', { link = 'DiagnosticVirtualTextWarn' })
       hi(0, 'NormalFloat', { bg = 'none' })
       hi(0, 'FloatBorder', { bg = 'none', fg = 'black' })
-      -- hi(0, 'IncSearch', { bg = 'white', fg = 'black' })
+      hi(0, 'IncSearch', { bg = '#00ffa2', fg = 'black' })
       -- hi(0, 'Pmenu', { bg = 'white', fg = 'black' })
     end
   })
