@@ -254,12 +254,6 @@ return require("packer").startup({
         require("setup").dial()
       end,
     })
-    use({
-      "machakann/vim-highlightedyank",
-      config = function()
-        require("setup").highlightedyank()
-      end,
-    })
     use("svban/YankAssassin.vim")
     use("glts/vim-textobj-comment")
     use({
