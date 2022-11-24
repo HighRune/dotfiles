@@ -1,5 +1,6 @@
 local cmd = vim.cmd
 local fn = vim.fn
+local highlight = vim.highlight
 local autocmd = vim.api.nvim_create_autocmd
 local augroup = vim.api.nvim_create_augroup
 local hi = vim.api.nvim_set_hl
@@ -11,6 +12,13 @@ local function core()
   augroup("diagnostic", { clear = true })
   augroup("qf", { clear = true })
   augroup("disableAutoComment", { clear = true })
+  augroup("yank", { clear = true })
+
+  autocmd("TextYankPost", {
+    group = "yank",
+    pattern = "*",
+    callback = function() highlight.on_yank { higroup = "IncSearch", timeout = 150 } end
+  })
 
   autocmd("BufWritePost", {
     group = "chezmoi",
@@ -46,6 +54,7 @@ local function core()
       hi(0, 'DiagnosticFloatingWarn', { link = 'DiagnosticVirtualTextWarn' })
       hi(0, 'NormalFloat', { bg = 'none' })
       hi(0, 'FloatBorder', { bg = 'none', fg = 'black' })
+      -- hi(0, 'IncSearch', { bg = 'white', fg = 'black' })
       -- hi(0, 'Pmenu', { bg = 'white', fg = 'black' })
     end
   })
@@ -102,33 +111,6 @@ local function packer()
   })
 end
 
--- local function leap()
---   augroup("leap", { clear = true })
---   autocmd("ColorScheme", {
---     group = "leap",
---     pattern = "*",
---     callback = function()
---       require('leap').init_highlight(true)
---       hi(0, 'LeapBackdrop', { bg = 'none', })
---       hi(0, 'LeapLabelPrimary', { bg = '#ccff88', fg = 'black' })
---       hi(0, 'LeapLabelSecondary', { fg = 'red', })
---       hi(0, 'LeapMatch', { bg = '#77aaff', fg = 'black' })
---     end
---   })
--- end
-
--- local function sj()
---   augroup("sj", { clear = true })
---   autocmd("ColorScheme", {
---     group = "sj",
---     pattern = "*",
---     callback = function()
---       hi(0, 'SjLabel', { bg = '#ccff88', fg = 'black' })
---       hi(0, 'SjSearch', { bg = '#77aaff', fg = 'black' })
---     end
---   })
--- end
-
 local function svart()
   augroup("svart", { clear = true })
   autocmd("ColorScheme", {
@@ -160,33 +142,38 @@ local function indentscope()
   })
 end
 
+-- local function leap()
+--   augroup("leap", { clear = true })
+--   autocmd("ColorScheme", {
+--     group = "leap",
+--     pattern = "*",
+--     callback = function()
+--       require('leap').init_highlight(true)
+--       hi(0, 'LeapBackdrop', { bg = 'none', })
+--       hi(0, 'LeapLabelPrimary', { bg = '#ccff88', fg = 'black' })
+--       hi(0, 'LeapLabelSecondary', { fg = 'red', })
+--       hi(0, 'LeapMatch', { bg = '#77aaff', fg = 'black' })
+--     end
+--   })
+-- end
+
+-- local function sj()
+--   augroup("sj", { clear = true })
+--   autocmd("ColorScheme", {
+--     group = "sj",
+--     pattern = "*",
+--     callback = function()
+--       hi(0, 'SjLabel', { bg = '#ccff88', fg = 'black' })
+--       hi(0, 'SjSearch', { bg = '#77aaff', fg = 'black' })
+--     end
+--   })
+-- end
+
 -- cmd([[
 -- autocmd ColorScheme * highlight CursorLine gui=bold guibg=none
 -- autocmd ColorScheme * highlight VertSplit guifg=#292e42
 -- autocmd ColorScheme * highlight Hlargs guifg=#FAFF00
 -- ]])
-
-
--- Highlight a selection on yank
--- cmd([[au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higroup="IncSearch", timeout=100}]])
-
--- local function neoformat()
---   -- Format on write
---   augroup("neoformat", { clear = true })
---   autocmd("BufWritePre", {
---     group = "neoformat",
---     pattern = "*.lua",
---     command = "undojoin | Neoformat",
---     -- command = "try | undojoin | Neoformat | catch /^Vim%((\a+))=:E790/ | finally | silent Neoformat | endtry",
---   })
-
---   cmd([[
---     augroup fmt
---     autocmd!
---     autocmd BufWritePre *.lua undojoin | Neoformat
---     augroup END
---   ]])
--- end
 
 -- local function telescope()
 --   cmd([[autocmd ColorScheme * highlight TelescopeBorder guibg=none]])
