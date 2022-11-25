@@ -12,6 +12,7 @@ alias pick='colorpicker'
 
 alias cdi='chezmoi diff'
 alias ca='chezmoi add'
+alias cap='chezmoi apply'
 alias cf='chezmoi forget'
 
 alias single='$HOME/.screenlayout/single.sh && feh --bg-fill ~/.config/Skin\ The\ Remixes.png'
