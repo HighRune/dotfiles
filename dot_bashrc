@@ -170,6 +170,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 export FZF_CTRL_T_COMMAND="fd --hidden --follow --no-ignore --max-depth 1 --exclude .git --exclude node_modules"
+export FZF_DEFAULT_OPTS='--no-separator'
 
 # ___________________________________________ SSH-AGENT
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
