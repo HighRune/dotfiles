@@ -4,6 +4,14 @@ require("mappings").core()
 
 return require("packer").startup({
   function(use)
+    use({
+      'https://gitlab.com/madyanov/svart.nvim',
+      config = function()
+        require('autocmd').svart()
+        require('setup').svart()
+        require('mappings').svart()
+      end
+    })
     use("lewis6991/impatient.nvim")
     use({
       "wbthomason/packer.nvim",
@@ -289,14 +297,6 @@ return require("packer").startup({
     -- -- use("ryvnf/readline.vim")
     use("tpope/vim-abolish")
     -- use("/home/charles/Documents/dev/plugins/blaster")
-    use({
-      'https://gitlab.com/madyanov/svart.nvim',
-      config = function()
-        require('autocmd').svart()
-        require('setup').svart()
-        require('mappings').svart()
-      end
-    })
   end,
   config = require("setup").packer()
 })
