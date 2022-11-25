@@ -282,11 +282,11 @@ return require("packer").startup({
       end
     })
     use({
-      "/home/charles/Documents/dev/plugins/booster.nvim",
-      -- "Runeword/booster.nvim",
-      -- config = require("booster").setup(),
+      -- "/home/charles/Documents/dev/plugins/putter.nvim",
+      "Runeword/putter.nvim",
+      -- config = require("putter").setup(),
     })
-    -- use("ryvnf/readline.vim")
+    -- -- use("ryvnf/readline.vim")
     use("tpope/vim-abolish")
     -- use("/home/charles/Documents/dev/plugins/blaster")
     use({
