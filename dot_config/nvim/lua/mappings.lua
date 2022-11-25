@@ -19,7 +19,7 @@ local function core()
   map('n', '<Enter>', '<Nop>')
   map('n', '<C-n>', '<Nop>')
   map('n', '<C-p>', '<Nop>')
-  map('n', 'u', '<Nop>')
+  -- map('n', 'u', '<Nop>')
   map("", "Q", "<Nop>")
   map("", "q", "<Nop>")
 
@@ -35,7 +35,7 @@ local function core()
   -- Save
   map("n", "<C-s>", ":silent write<CR>")
   map("i", "<C-s>", "<esc>`^:silent write<CR>")
-  map('n', '<C-u>', 'u')
+  -- map('n', '<C-u>', 'u')
 
   -- Text objects
   map({ 'x', 'o' }, "a<Enter>", "ap")
