@@ -83,28 +83,40 @@ local function core()
   -- map("n", "<S-Tab>", ":bprevious<CR>", silent)
 
   -- Quickfix list
-  -- map("n", "<leader><Tab>", require("booster").addBuffersToQfList)
-  map("n", "<C-down>", require("booster").cycleNextLocItem, silent)
-  map("n", "<C-up>", require("booster").cyclePrevLocItem, silent)
   map("n", "<C-q>", ':q!<CR>')
+  -- map("n", "<leader><Tab>", require("putter").addBuffersToQfList)
+  -- map("n", "<C-down>", require("putter").cycleNextLocItem, silent)
+  -- map("n", "<C-up>", require("putter").cyclePrevLocItem, silent)
   -- map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
-  -------------------- Runeword/booster.nvim
-  -- map({ "n", "x" }, "x", require("booster").snapToLineEnd('"_x'))
+  -------------------- Runeword/putter.nvim
+  map({ "n", "x" }, "glp", require("putter").putLinewise(']p`]'))
+  map({ "n", "x" }, "glP", require("putter").putLinewise(']P`]'))
+  map({ "n", "x" }, "gllp", require("putter").putLinewiseSuffix(']p`]'))
+  map({ "n", "x" }, "gllP", require("putter").putLinewiseSuffix(']P`]'))
+  map({ "n", "x" }, "glsp", require("putter").putLinewiseSurround(']p`]'))
+  map({ "n", "x" }, "glsP", require("putter").putLinewiseSurround(']P`]'))
+  map({ "n", "x" }, "p", require("putter").putCharwise('p'))
+  map({ "n", "x" }, "P", require("putter").jumpToLineStart(require("putter").putCharwise('P')))
+  map({ "n", "x" }, "gp", require("putter").putCharwisePrefix('p'))
+  map({ "n", "x" }, "gP", require("putter").putCharwiseSuffix('P'))
+  map({ "n", "x" }, "gsp", require("putter").putCharwiseSurround('p'))
+  map({ "n", "x" }, "gsP", require("putter").putCharwiseSurround('P'))
+  -- map({ "n", "x" }, "x", require("putter").snapToLineEnd('"_x'))
+  -- map({ "n", "x" }, "p", require("putter").jumpToLineEnd(require("putter").putCharwise('p')))
+  -- map({ "n", "x" }, "gp", require("putter").putCharwisePrefix('geep'))
+  -- map({ "n", "x" }, "gP", require("putter").putCharwiseSuffix('gewP'))
+  -- map({ "n", "x" }, "gsp", require("putter").putCharwiseSurround('geep'))
+  -- map({ "n", "x" }, "gsP", require("putter").putCharwiseSurround('gewP'))
 
-  map({ "n", "x" }, "glp", require("booster").putLinewise(']p`]'))
-  map({ "n", "x" }, "glP", require("booster").putLinewise(']P`]'))
-  map({ "n", "x" }, "gllp", require("booster").putLinewiseSuffix(']p`]'))
-  map({ "n", "x" }, "gllP", require("booster").putLinewiseSuffix(']P`]'))
-  map({ "n", "x" }, "glsp", require("booster").putLinewiseSurround(']p`]'))
-  map({ "n", "x" }, "glsP", require("booster").putLinewiseSurround(']P`]'))
-  -- vim.keymap.set("n", "t", require("booster").__dot_repeat('p'))
+
+  -- vim.keymap.set("n", "t", require("putter").__dot_repeat('p'))
 
   -- local counter = 0
   --
   -- function _G.__dot_repeat(motion) -- 4.
   --     if motion == nil then
-  --         vim.o.operatorfunc = "v:lua.require('booster').snapToLineEnd('_x')()"
+  --         vim.o.operatorfunc = "v:lua.require('putter').snapToLineEnd('_x')()"
   --         return "g@$" -- 2.
   --     end
   --
@@ -113,18 +125,6 @@ local function core()
   -- end
   --
   -- vim.keymap.set("n", "ga", _G.__dot_repeat, expr)
-
-  -- map({ "n", "x" }, "p", require("booster").jumpToLineEnd(require("booster").putCharwise('p')))
-  map({ "n", "x" }, "p", require("booster").putCharwise('p'))
-  map({ "n", "x" }, "P", require("booster").jumpToLineStart(require("booster").putCharwise('P')))
-  map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('p'))
-  map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('P'))
-  map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('p'))
-  map({ "n", "x" }, "gsP", require("booster").putCharwiseSurround('P'))
-  -- map({ "n", "x" }, "gp", require("booster").putCharwisePrefix('geep'))
-  -- map({ "n", "x" }, "gP", require("booster").putCharwiseSuffix('gewP'))
-  -- map({ "n", "x" }, "gsp", require("booster").putCharwiseSurround('geep'))
-  -- map({ "n", "x" }, "gsP", require("booster").putCharwiseSurround('gewP'))
 
   -- -- stylua: ignore
 end
