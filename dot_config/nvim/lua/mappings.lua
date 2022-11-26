@@ -67,7 +67,10 @@ local function core()
   map("n", "k", "gk")
   map("n", "j", "gj")
   map("n", "0", "g0")
-  map("n", "$", function() fn.execute("normal! g$") o.ve = '' o.ve = 'all' end)
+  map("n", "$", function() fn.execute("normal! g$")
+    o.ve = ''
+    o.ve = 'all'
+  end)
   map("n", "^", "g^")
   map("n", "&", "g^")
   map('n', ')', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
@@ -295,6 +298,12 @@ local function hydra()
   map({ 'n', 'x' }, "<Leader>u", function() scroll:activate() fn.execute("normal! 5k") end)
 end
 
+-------------------- michaelb/sniprun
+local function sniprun()
+  map({ 'n', 'v' }, '<leader>r', '<Plug>SnipRun', silent)
+  map('n', '<leader>r', '<Plug>SnipRunOperator', silent)
+end
+
 -------------------- D4KU/vim-textobj-chainmember
 local function textobjchainmember()
   cmd("let g:textobj_chainmember_no_default_key_mappings = 1")
@@ -370,4 +379,5 @@ return {
   svart = svart,
   comment = comment,
   ssr = ssr,
+  sniprun = sniprun,
 }
