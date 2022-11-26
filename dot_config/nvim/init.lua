@@ -36,6 +36,7 @@ return require("packer").startup({
       run = 'bash ./install.sh',
       config = function()
         require("setup").sniprun()
+        require("mappings").sniprun()
       end
     })
     use({
