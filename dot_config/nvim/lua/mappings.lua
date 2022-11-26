@@ -24,8 +24,9 @@ local function core()
   map("", "q", "<Nop>")
 
   -- Help
-  cmd("cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab h' : 'h'")
-  cmd("cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? 'tab help' : 'help'")
+  -- cmd([[cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? "help | only" : 'h']])
+  -- cmd([[cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? "help | only" : 'help']])
+  cmd([[command H help | only]])
 
   -- Modes
   map('n', '<Leader>t', ':te<CR>ireset<CR>')
