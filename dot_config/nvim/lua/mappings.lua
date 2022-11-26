@@ -15,28 +15,23 @@ local expr = { expr = true }
 local remap = { remap = true }
 
 local function core()
+  map("x", "<C-n>", ":Norm ")
+  map('c', 'h', 'help | only')
+
+  -- Terminal
+  map('n', '<Leader>t', ':te<CR>ireset<CR>')
+  map('t', '<Esc>', [[<C-\><C-n>]])
+
   -- Unmap
   map('n', '<Enter>', '<Nop>')
   map('n', '<C-n>', '<Nop>')
   map('n', '<C-p>', '<Nop>')
-  -- map('n', 'u', '<Nop>')
   map("", "Q", "<Nop>")
   map("", "q", "<Nop>")
-
-  -- Help
-  -- cmd([[cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? "help | only" : 'h']])
-  -- cmd([[cnoreabbrev <expr> help getcmdtype() == ':' && getcmdline() == 'help' ? "help | only" : 'help']])
-  cmd([[command H help | only]])
-
-  -- Modes
-  map('n', '<Leader>t', ':te<CR>ireset<CR>')
-  map('t', '<Esc>', [[<C-\><C-n>]])
-  map("x", "<C-n>", ":Norm ")
 
   -- Save
   map("n", "<C-s>", ":silent write<CR>")
   map("i", "<C-s>", "<esc>`^:silent write<CR>")
-  -- map('n', '<C-u>', 'u')
 
   -- Text objects
   map({ 'x', 'o' }, "a<Enter>", "ap")
