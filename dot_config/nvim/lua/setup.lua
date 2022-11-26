@@ -229,6 +229,17 @@ local function fzf()
   })
 end
 
+-------------------- rockerBOO/awesome-neovim
+local function sniprun()
+  require('sniprun').setup({
+    snipruncolors = {
+      SniprunVirtualTextOk  = { bg = "#003b38", fg = "#000000", ctermbg = "Cyan", cterfg = "Black" },
+      SniprunVirtualTextErr = { bg = "#881515", fg = "#000000", ctermbg = "DarkRed", cterfg = "Black" },
+    },
+    live_mode_toggle = 'off',
+  })
+end
+
 -------------------- is0n/fm-nvim
 local function fm()
   require("fm-nvim").setup({
@@ -694,4 +705,5 @@ return {
   svart = svart,
   wilder = wilder,
   ssr = ssr,
+  sniprun = sniprun,
 }
