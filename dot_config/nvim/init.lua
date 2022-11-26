@@ -34,6 +34,9 @@ return require("packer").startup({
     use({
       'michaelb/sniprun',
       run = 'bash ./install.sh',
+      config = function()
+        require("setup").sniprun()
+      end
     })
     use({
       "mfussenegger/nvim-dap",
