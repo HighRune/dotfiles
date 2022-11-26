@@ -32,6 +32,10 @@ return require("packer").startup({
       end,
     })
     use({
+      'michaelb/sniprun',
+      run = 'bash ./install.sh',
+    })
+    use({
       "mfussenegger/nvim-dap",
       config = function()
         -- require('mappings').dap()
