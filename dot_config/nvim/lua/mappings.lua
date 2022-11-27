@@ -300,8 +300,12 @@ end
 
 -------------------- michaelb/sniprun
 local function sniprun()
-  map({ 'n', 'v' }, '<leader>r', '<Plug>SnipRun', silent)
-  map('n', '<leader>r', '<Plug>SnipRunOperator', silent)
+  map({ 'n', 'v' }, '<leader>rr', '<Plug>SnipRun')
+  map('n', '<leader>re', '<Plug>SnipReset')
+  map('n', '<leader>rl', '<Plug>SnipLive')
+  map('n', '<leader>rc', '<Plug>SnipClose')
+  map('n', '<leader>ri', '<Plug>SnipInfo')
+  map('n', '<leader>rm', '<Plug>SnipReplMemoryClean')
 end
 
 -------------------- D4KU/vim-textobj-chainmember
