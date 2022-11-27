@@ -10,7 +10,7 @@ return require("packer").startup({
         require('autocmd').svart()
         require('setup').svart()
         require('mappings').svart()
-      end
+      end,
     })
     use("lewis6991/impatient.nvim")
     use({
