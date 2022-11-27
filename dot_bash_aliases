@@ -5,6 +5,10 @@ alias nud='npm run use:dev'
 alias nd='npm run dev'
 alias ni='npm i'
 
+alias qc='qmk compile -kb ferris/sweep -km runeword'
+alias qfl='qmk flash -kb ferris/sweep -km runeword -bl dfu-split-left'
+alias qfr='qmk flash -kb ferris/sweep -km runeword -bl dfu-split-right'
+
 alias chrome='google-chrome-stable'
 alias shn='shutdown now'
 alias s='source'
