@@ -233,10 +233,10 @@ end
 local function sniprun()
   require('sniprun').setup({
     snipruncolors = {
-      SniprunVirtualTextOk  = { bg = "#003b38", fg = "#000000", ctermbg = "Cyan", cterfg = "Black" },
-      SniprunVirtualTextErr = { bg = "#881515", fg = "#000000", ctermbg = "DarkRed", cterfg = "Black" },
+      SniprunVirtualTextOk  = { bg = "black", fg = "white" },
+      SniprunVirtualTextErr = { bg = "black", fg = "white" },
     },
-    live_mode_toggle = 'off',
+    live_mode_toggle = 'enable',
   })
 end
 
