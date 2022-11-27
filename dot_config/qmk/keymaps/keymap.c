@@ -77,6 +77,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 };
 
 enum combos { 
+  L2SLSH,
   L1CTL,
   L1SFT,
   L1GUI,
@@ -104,6 +105,7 @@ enum combos {
   L3CEDILLAC,
 };
 
+const uint16_t PROGMEM l2slsh[] = { LT(2,KC_ENT), KC_R, COMBO_END};
 const uint16_t PROGMEM l1ctl[] = { LT(1,KC_TAB), KC_U, COMBO_END};
 const uint16_t PROGMEM l1sft[] = { LT(1,KC_TAB), KC_E, COMBO_END};
 const uint16_t PROGMEM l1gui[] = { LT(1,KC_TAB), KC_O, COMBO_END};
@@ -131,6 +133,7 @@ const uint16_t PROGMEM l3tremai[] = { LT(3,KC_ESC), KC_X, COMBO_END};
 const uint16_t PROGMEM l3cedillac[] = { LT(3,KC_ESC), KC_C, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
+  [L2SLSH] = COMBO(l2slsh, KC_SLSH),
   [L1CTL] = COMBO(l1ctl, OSM(MOD_LCTL)),
   [L1SFT] = COMBO(l1sft, OSM(MOD_LSFT)),
   [L1GUI] = COMBO(l1gui, OSM(MOD_LGUI)),
