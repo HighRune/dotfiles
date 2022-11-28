@@ -32,17 +32,17 @@ local function core()
     command = "silent! !tmux source-file ~/.config/tmux/.tmux.conf",
   })
 
-  autocmd("BufWritePost", {
-    group = "bash",
-    pattern = "~/.bash_aliases",
-    command = "silent! source ~/.bash_aliases",
-  })
+  -- autocmd("BufWritePost", {
+  --   group = "bash",
+  --   pattern = "~/.bash_aliases",
+  --   command = "silent! source ~/.bash_aliases",
+  -- })
 
-  autocmd("BufWritePost", {
-    group = "bash",
-    pattern = "~/.bashrc",
-    command = "silent! source ~/.bashrc",
-  })
+  -- autocmd("BufWritePost", {
+  --   group = "bash",
+  --   pattern = "~/.bashrc",
+  --   command = "silent! source ~/.bashrc",
+  -- })
 
   autocmd("ColorScheme", {
     group = "diagnostic",
