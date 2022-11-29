@@ -178,7 +178,7 @@ return require("packer").startup({
     use("nvim-treesitter/nvim-treesitter-textobjects")
     use("windwp/nvim-ts-autotag")
     use("itchyny/vim-cursorword")
-    use("skywind3000/asyncrun.vim")
+    -- use("skywind3000/asyncrun.vim")
     -- use({
     --   "woosaaahh/sj.nvim",
     --   branch = '0.6',
