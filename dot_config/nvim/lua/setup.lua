@@ -345,9 +345,10 @@ local function ai()
   require('mini.ai').setup({
     custom_textobjects = {
       f = false,
-      a = gen_spec.argument({ brackets = { '%b()' } }),
-      o = gen_spec.argument({ brackets = { '%b{}' } }),
-      e = gen_spec.argument({ brackets = { '%b[]' } }),
+      o = gen_spec.argument({ brackets = { '%b()', '%b{}', '%b[]' } }),
+      -- a = gen_spec.argument({ brackets = { '%b()' } }),
+      -- o = gen_spec.argument({ brackets = { '%b{}' } }),
+      -- e = gen_spec.argument({ brackets = { '%b[]' } }),
       -- A = gen_spec.pair('(', ')', { type = 'balanced' }),
       -- O = gen_spec.pair('{', '}', { type = 'balanced' }),
       -- E = gen_spec.pair('[', ']', { type = 'balanced' }),
@@ -623,7 +624,7 @@ local function coq()
       preview = {
         positions = { east = 1, north = 2, south = 3, west = 4, },
         x_max_len = 100,
-        border = 'single'
+        border = 'single',
       },
       icons = { mode = 'none' },
       pum = {
