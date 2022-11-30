@@ -16,7 +16,10 @@ local remap = { remap = true }
 
 local function core()
   map("x", "<C-n>", ":Norm ")
-  cmd[[cnoreabbrev <expr> h  getcmdtype() == ":" && getcmdline() == 'h' ? 'help \| only' : 'h']]
+
+  -- Help
+  cmd[[command! -nargs=1 -complete=help H h <args> | only]]
+  cmd[[cnoreabbrev <expr> h  getcmdtype() == ":" && getcmdline() == 'h' ? 'H' : 'h']]
 
   -- Terminal
   map('n', '<Leader>t', ':te<CR>ireset<CR>')
