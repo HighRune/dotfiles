@@ -93,8 +93,8 @@ bindsym $mod+s exec (i3-msg [class="Slack"] focus | grep true) || exec slack
 bindsym $mod+Shift+h exec alacritty
 bindsym $mod+Shift+t exec google-chrome-stable
 bindsym $mod+Shift+n exec thunar
-bindsym $mod+p exec "flameshot gui -p ~/Downloads"
-bindsym $mod+Shift+p exec "flameshot full -p ~/Downloads"
+bindsym $mod+f exec "flameshot gui -p ~/Downloads"
+bindsym $mod+Shift+f exec "flameshot full -p ~/Downloads"
 bindsym $mod+d exec rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
 # bindsym $mod+t exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi 
 # bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
