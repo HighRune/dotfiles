@@ -75,7 +75,7 @@
       "KC_NO",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_ENT",
+      "LT(3,KC_ENT)",
       "KC_TRNS"
     ],
     [
@@ -110,7 +110,7 @@
       "KC_NO",
       "KC_NO",
       "KC_BSPC",
-      "KC_TAB",
+      "LT(3,KC_TAB)",
       "KC_TRNS",
       "KC_TRNS"
     ],
@@ -147,7 +147,7 @@
       "KC_PAST",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_ENT",
+      "KC_TRNS",
       "KC_TRNS"
     ]
   ],
