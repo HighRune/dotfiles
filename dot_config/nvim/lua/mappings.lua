@@ -214,6 +214,12 @@ local function comment()
   map('x', 'gb', '<Plug>(comment_toggle_blockwise_visual)gv', remap)
 end
 
+-------------------- AndrewRadev/sideways.vim
+local function sideways()
+map("n", "<S-h>", ":SidewaysLeft<CR>")
+map("n", "<S-l>", ":SidewaysRight<CR>")
+end
+
 -------------------- ggandor/leap.nvim
 local function leap()
   map({ "n", "x" }, "s", "<Plug>(leap-forward)", remap)
@@ -286,8 +292,10 @@ local function lspconfig(buffer)
   map('n', '<Leader>f', lsp.buf.format, { buffer = buffer })
   map("n", '<Leader>a', ':CodeActionMenu<Enter>', { buffer = buffer })
   -- map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
-  map("n", '<Up>', diagnostic.goto_prev, { buffer = buffer })
-  map("n", '<Down>', diagnostic.goto_next, { buffer = buffer })
+  -- map("n", '<Up>', diagnostic.goto_prev, { buffer = buffer })
+  -- map("n", '<Down>', diagnostic.goto_next, { buffer = buffer })
+  map("n", 'k', diagnostic.goto_prev, { buffer = buffer })
+  map("n", 'j', diagnostic.goto_next, { buffer = buffer })
   map('n', '<Leader>l', diagnostic.setloclist, { noremap = true, silent = true })
   map('n', '<Leader>x', diagnostic.setqflist, { noremap = true, silent = true })
   -- lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' })
@@ -411,4 +419,5 @@ return {
   comment = comment,
   ssr = ssr,
   sniprun = sniprun,
+  sideways = sideways,
 }
