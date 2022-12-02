@@ -278,7 +278,11 @@ return require("packer").startup({
         require("mappings").textobjchainmember()
       end,
     })
-    use("AndrewRadev/sideways.vim")
+    use({ "AndrewRadev/sideways.vim",
+      config = function()
+        require("mappings").sideways()
+      end,
+    })
     use({
       "chaoren/vim-wordmotion",
       config = function()
