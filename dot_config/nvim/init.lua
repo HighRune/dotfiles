@@ -278,6 +278,7 @@ return require("packer").startup({
         require("mappings").textobjchainmember()
       end,
     })
+    use("AndrewRadev/sideways.vim")
     use({
       "chaoren/vim-wordmotion",
       config = function()
@@ -310,6 +311,3 @@ return require("packer").startup({
 })
 
 -- use("m-demare/hlargs.nvim")
--------------------- AndrewRadev/sideways.vim
--- api.nvim_set_keymap("n", "<s-h>", ":SidewaysLeft<cr>", opts)
--- api.nvim_set_keymap("n", "<s-l>", ":SidewaysRight<cr>", opts)
