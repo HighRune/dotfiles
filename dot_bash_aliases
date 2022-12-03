@@ -14,6 +14,9 @@ alias shn='shutdown now'
 alias s='source'
 alias pick='colorpicker'
 
+alias pa='sudo pacman -Syyu'
+alias ya='yay -Syyu'
+
 alias cdi='chezmoi diff'
 alias ca='chezmoi add'
 alias cap='chezmoi apply'
