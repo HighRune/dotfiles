@@ -344,12 +344,12 @@ end
 -------------------- D4KU/vim-textobj-chainmember
 local function textobjchainmember()
   cmd("let g:textobj_chainmember_no_default_key_mappings = 1")
-  map("o", "am", "<Plug>(textobj-chainmember-a)")
-  map("o", "im", "<Plug>(textobj-chainmember-i)")
-  map("o", "apm", "<Plug>(textobj-chainmember-last-a)")
-  map("o", "ipm", "<Plug>(textobj-chainmember-last-i)")
-  map("o", "anm", "<Plug>(textobj-chainmember-next-a)")
-  map("o", "inm", "<Plug>(textobj-chainmember-next-i)")
+  map({ 'o', 'x' }, "am", "<Plug>(textobj-chainmember-a)")
+  map({ 'o', 'x' }, "im", "<Plug>(textobj-chainmember-i)")
+  map({ 'o', 'x' }, "apm", "<Plug>(textobj-chainmember-last-a)")
+  map({ 'o', 'x' }, "ipm", "<Plug>(textobj-chainmember-last-i)")
+  map({ 'o', 'x' }, "anm", "<Plug>(textobj-chainmember-next-a)")
+  map({ 'o', 'x' }, "inm", "<Plug>(textobj-chainmember-next-i)")
 end
 
 -------------------- mfussenegger/nvim-dap
