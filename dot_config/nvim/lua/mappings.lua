@@ -18,8 +18,8 @@ local function core()
   map("x", "<C-n>", ":Norm ")
 
   -- Help
-  cmd[[command! -nargs=1 -complete=help H h <args> | only]]
-  cmd[[cnoreabbrev <expr> h  getcmdtype() == ":" && getcmdline() == 'h' ? 'H' : 'h']]
+  cmd [[command! -nargs=1 -complete=help H h <args> | only]]
+  cmd [[cnoreabbrev <expr> h  getcmdtype() == ":" && getcmdline() == 'h' ? 'H' : 'h']]
 
   -- Terminal
   map('n', '<Leader>t', ':te<CR>ireset<CR>')
@@ -216,8 +216,8 @@ end
 
 -------------------- AndrewRadev/sideways.vim
 local function sideways()
-map("n", "<S-h>", ":SidewaysLeft<CR>")
-map("n", "<S-l>", ":SidewaysRight<CR>")
+  map("n", "<Left>", ":SidewaysLeft<CR>")
+  map("n", "<Right>", ":SidewaysRight<CR>")
 end
 
 -------------------- ggandor/leap.nvim
