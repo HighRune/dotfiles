@@ -168,55 +168,52 @@ return require("packer").startup({
       end,
     })
     use("nvim-treesitter/nvim-treesitter-textobjects")
-    use("windwp/nvim-ts-autotag")
-    use("itchyny/vim-cursorword")
-    use({
-      "numToStr/Comment.nvim",
-      config = function()
-        require("setup").comment()
-        require("mappings").comment()
-      end,
-    })
-    use("tommcdo/vim-exchange")
-    use({
-      "smjonas/inc-rename.nvim",
-      config = function()
-        require("inc_rename").setup()
-      end,
-    })
-    use("p00f/nvim-ts-rainbow")
-    use({
-      "AndrewRadev/splitjoin.vim",
-      config = function()
-        require("mappings").splitjoin()
-      end,
-    })
-    use({
-      "windwp/nvim-autopairs",
-      config = function()
-        require("setup").autopairs()
-      end,
-    })
-    use("rktjmp/lush.nvim")
-    use({
-      "ahmedkhalf/project.nvim",
-      config = function()
-        require("setup").project()
-      end,
-    })
-    use({
-      "kosayoda/nvim-lightbulb",
-      config = function()
-        require('setup').lightbulb()
-        require('autocmd').lightbulb()
-      end
-    })
-    use({
-      "nvim-lualine/lualine.nvim",
-      requires = { "kyazdani42/nvim-web-devicons", opt = true },
-      config = "require('config.lualine')()",
-    })
-    use("nvim-treesitter/playground")
+    -- use("windwp/nvim-ts-autotag")
+    -- use("itchyny/vim-cursorword")
+    -- use({
+    --   "numToStr/Comment.nvim",
+    --   config = function()
+    --     require("setup").comment()
+    --     require("mappings").comment()
+    --   end,
+    -- })
+    -- use("tommcdo/vim-exchange")
+    -- use({
+    --   "smjonas/inc-rename.nvim",
+    --   config = function()
+    --     require("inc_rename").setup()
+    --   end,
+    -- })
+    -- use({
+    --   "AndrewRadev/splitjoin.vim",
+    --   config = function()
+    --     require("mappings").splitjoin()
+    --   end,
+    -- })
+    -- use({
+    --   "windwp/nvim-autopairs",
+    --   config = function()
+    --     require("setup").autopairs()
+    --   end,
+    -- })
+    -- use({
+    --   "ahmedkhalf/project.nvim",
+    --   config = function()
+    --     require("setup").project()
+    --   end,
+    -- })
+    -- use({
+    --   "kosayoda/nvim-lightbulb",
+    --   config = function()
+    --     require('setup').lightbulb()
+    --     require('autocmd').lightbulb()
+    --   end
+    -- })
+    -- use({
+    --   "nvim-lualine/lualine.nvim",
+    --   requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    --   config = "require('config.lualine')()",
+    -- })
     use({
       "ibhagwan/fzf-lua",
       config = function()
@@ -224,47 +221,50 @@ return require("packer").startup({
         require("setup").fzf()
       end,
     })
-    use({
-      "monaqa/dial.nvim",
-      config = function()
-        require("mappings").dial()
-        require("setup").dial()
-      end,
-    })
-    use("svban/YankAssassin.vim")
-    use("glts/vim-textobj-comment")
-    use({
-      "D4KU/vim-textobj-chainmember",
-      config = function()
-        require("mappings").textobjchainmember()
-      end,
-    })
-    use({ "AndrewRadev/sideways.vim",
-      config = function()
-        require("mappings").sideways()
-      end,
-    })
-    use({
-      "chaoren/vim-wordmotion",
-      config = function()
-        require("setup").wordmotion()
-      end,
-    })
-    use({
-      "kana/vim-textobj-user",
-    })
-    use({
-      "kylechui/nvim-surround",
-      config = function()
-        require("nvim-surround").setup({})
-      end
-    })
-    use("tpope/vim-abolish")
+    -- use({
+    --   "monaqa/dial.nvim",
+    --   config = function()
+    --     require("mappings").dial()
+    --     require("setup").dial()
+    --   end,
+    -- })
+    -- use("svban/YankAssassin.vim")
+    -- use("glts/vim-textobj-comment")
+    -- use({
+    --   "D4KU/vim-textobj-chainmember",
+    --   config = function()
+    --     require("mappings").textobjchainmember()
+    --   end,
+    -- })
+    -- use({ "AndrewRadev/sideways.vim",
+    --   config = function()
+    --     require("mappings").sideways()
+    --   end,
+    -- })
+    -- use({
+    --   "chaoren/vim-wordmotion",
+    --   config = function()
+    --     require("setup").wordmotion()
+    --   end,
+    -- })
+    -- use({
+    --   "kana/vim-textobj-user",
+    -- })
+    -- use({
+    --   "kylechui/nvim-surround",
+    --   config = function()
+    --     require("nvim-surround").setup({})
+    --   end
+    -- })
+    -- use("tpope/vim-abolish")
     use({
       "Runeword/putter.nvim",
       -- "/home/charles/Documents/dev/plugins/putter.nvim",
       -- config = require("putter").setup(),
     })
+    -- use("p00f/nvim-ts-rainbow")
+    -- use("rktjmp/lush.nvim")
+    -- use("nvim-treesitter/playground")
     -- use("m-demare/hlargs.nvim")
     -- use("/home/charles/Documents/dev/plugins/blaster")
     -- use("ryvnf/readline.vim")
