@@ -15,6 +15,9 @@ alias s='source'
 alias pick='colorpicker'
 
 alias pa='sudo pacman -Syyu'
+alias par='pacman -R'
+alias pas='pacman -S'
+alias pass='pacman -Ss'
 alias ya='yay -Syyu'
 
 alias cdi='chezmoi diff'
