@@ -46,14 +46,6 @@ return require("packer").startup({
         require('config.dap')
       end
     })
-    -- use({
-    --   "cshuaimin/ssr.nvim",
-    --   module = "ssr",
-    --   config = function()
-    --     require('setup').ssr()
-    --     require('mappings').ssr()
-    --   end
-    -- })
     use({
       'akinsho/bufferline.nvim',
       config = function()
@@ -178,30 +170,6 @@ return require("packer").startup({
     use("nvim-treesitter/nvim-treesitter-textobjects")
     use("windwp/nvim-ts-autotag")
     use("itchyny/vim-cursorword")
-    -- use("skywind3000/asyncrun.vim")
-    -- use({
-    --   "woosaaahh/sj.nvim",
-    --   branch = '0.6',
-    --   config = function()
-    -- require("setup").sj()
-    -- require("mappings").sj()
-    --   end,
-    -- })
-    -- use({
-    --   "ggandor/leap.nvim",
-    --   config = function()
-    --     require("setup").leap()
-    --     require("mappings").leap()
-    --   end
-    -- })
-    -- use({
-    --   "justinmk/vim-sneak",
-    --   config = function()
-    --     require("autocmd").sneak()
-    --     require("options").sneak()
-    --     require("mappings").sneak()
-    --   end,
-    -- })
     use({
       "numToStr/Comment.nvim",
       config = function()
@@ -248,13 +216,6 @@ return require("packer").startup({
       requires = { "kyazdani42/nvim-web-devicons", opt = true },
       config = "require('config.lualine')()",
     })
-    -- use({
-    --   "jonatan-branting/nvim-better-n",
-    --   config = function()
-    --     require("setup").bettern()
-    --     require("mappings").bettern()
-    --   end
-    -- })
     use("nvim-treesitter/playground")
     use({
       "ibhagwan/fzf-lua",
@@ -289,12 +250,8 @@ return require("packer").startup({
         require("setup").wordmotion()
       end,
     })
-    -- use("Julian/vim-textobj-variable-segment")
     use({
       "kana/vim-textobj-user",
-      -- config = function()
-      -- require("options").textobjuser()
-      -- end,
     })
     use({
       "kylechui/nvim-surround",
@@ -302,16 +259,55 @@ return require("packer").startup({
         require("nvim-surround").setup({})
       end
     })
+    use("tpope/vim-abolish")
     use({
-      -- "/home/charles/Documents/dev/plugins/putter.nvim",
       "Runeword/putter.nvim",
+      -- "/home/charles/Documents/dev/plugins/putter.nvim",
       -- config = require("putter").setup(),
     })
-    -- -- use("ryvnf/readline.vim")
-    use("tpope/vim-abolish")
+    -- use("m-demare/hlargs.nvim")
     -- use("/home/charles/Documents/dev/plugins/blaster")
+    -- use("ryvnf/readline.vim")
+    -- use("Julian/vim-textobj-variable-segment")
+    -- use("skywind3000/asyncrun.vim")
+    -- use({
+    --   "jonatan-branting/nvim-better-n",
+    --   config = function()
+    --     require("setup").bettern()
+    --     require("mappings").bettern()
+    --   end
+    -- })
+    -- use({
+    --   "woosaaahh/sj.nvim",
+    --   branch = '0.6',
+    --   config = function()
+    -- require("setup").sj()
+    -- require("mappings").sj()
+    --   end,
+    -- })
+    -- use({
+    --   "ggandor/leap.nvim",
+    --   config = function()
+    --     require("setup").leap()
+    --     require("mappings").leap()
+    --   end
+    -- })
+    -- use({
+    --   "justinmk/vim-sneak",
+    --   config = function()
+    --     require("autocmd").sneak()
+    --     require("options").sneak()
+    --     require("mappings").sneak()
+    --   end,
+    -- })
+    -- use({
+    --   "cshuaimin/ssr.nvim",
+    --   module = "ssr",
+    --   config = function()
+    --     require('setup').ssr()
+    --     require('mappings').ssr()
+    --   end
+    -- })
   end,
   config = require("setup").packer()
 })
-
--- use("m-demare/hlargs.nvim")
