@@ -7,12 +7,38 @@ return require("packer").startup({
     use({
       'https://gitlab.com/madyanov/svart.nvim',
       config = function()
-        require('autocmd').svart()
-        require('setup').svart()
+        -- require('autocmd').svart()
+        -- require('setup').svart()
         require('mappings').svart()
+local svart = require("svart")
+
+svart.configure({
+    key_cancel = "<Esc>",       -- cancel search
+    key_delete_char = "",   -- delete query char
+    key_delete_word = "<C-W>",  -- delete query word
+    key_delete_query = "<C-U>", -- delete whole query
+    key_best_match = "<BS>",    -- jump to the best match
+    key_next_match = "<Tab>",   -- select next match
+    key_prev_match = "<C-P>",   -- select prev match
+
+    label_atoms = "jfkdlsahgnuvrbytmiceoxwpqz", -- allowed label chars
+    label_location = -1,                        -- label location relative to the match
+                                                -- positive: relative to the start of the match
+                                                -- 0 or negative: relative to the end of the match
+    label_max_len = 2,                          -- max label length
+    label_min_query_len = 1,                    -- min query length required to show labels
+    label_hide_irrelevant = true,               -- hide irrelevant labels after start typing label to go to
+    label_conflict_foresight = 2,               -- number of chars from the start of the match to discard from labels pool
+
+    search_update_register = true, -- update search (/) register with last used query after accepting match
+    search_wrap_around = true,     -- wrap around when navigating to next/prev match
+    search_multi_window = true,    -- search in multiple windows
+
+    ui_dim_content = true, -- dim buffer content during search
+})
       end,
     })
-    use("lewis6991/impatient.nvim")
+    -- use("lewis6991/impatient.nvim")
     use({
       "wbthomason/packer.nvim",
       config = function()
@@ -78,10 +104,10 @@ return require("packer").startup({
       end,
       run = ":TSUpdate",
     })
-    use({
-      "neovim/nvim-lspconfig",
-      config = require("config.lsp")()
-    })
+    -- use({
+    --   "neovim/nvim-lspconfig",
+    --   config = require("config.lsp")()
+    -- })
     use({
       "williamboman/mason.nvim",
       config = function()
@@ -115,10 +141,6 @@ return require("packer").startup({
         require("autocmd").coq()
         require("setup").coq()
       end,
-    })
-    use({
-      'sindrets/diffview.nvim',
-      requires = 'nvim-lua/plenary.nvim',
     })
     use({
       "is0n/fm-nvim",
@@ -168,52 +190,52 @@ return require("packer").startup({
       end,
     })
     use("nvim-treesitter/nvim-treesitter-textobjects")
-    -- use("windwp/nvim-ts-autotag")
-    -- use("itchyny/vim-cursorword")
-    -- use({
-    --   "numToStr/Comment.nvim",
-    --   config = function()
-    --     require("setup").comment()
-    --     require("mappings").comment()
-    --   end,
-    -- })
-    -- use("tommcdo/vim-exchange")
-    -- use({
-    --   "smjonas/inc-rename.nvim",
-    --   config = function()
-    --     require("inc_rename").setup()
-    --   end,
-    -- })
-    -- use({
-    --   "AndrewRadev/splitjoin.vim",
-    --   config = function()
-    --     require("mappings").splitjoin()
-    --   end,
-    -- })
-    -- use({
-    --   "windwp/nvim-autopairs",
-    --   config = function()
-    --     require("setup").autopairs()
-    --   end,
-    -- })
-    -- use({
-    --   "ahmedkhalf/project.nvim",
-    --   config = function()
-    --     require("setup").project()
-    --   end,
-    -- })
-    -- use({
-    --   "kosayoda/nvim-lightbulb",
-    --   config = function()
-    --     require('setup').lightbulb()
-    --     require('autocmd').lightbulb()
-    --   end
-    -- })
-    -- use({
-    --   "nvim-lualine/lualine.nvim",
-    --   requires = { "kyazdani42/nvim-web-devicons", opt = true },
-    --   config = "require('config.lualine')()",
-    -- })
+    use("windwp/nvim-ts-autotag")
+    use("itchyny/vim-cursorword")
+    use({
+      "numToStr/Comment.nvim",
+      config = function()
+        require("setup").comment()
+        require("mappings").comment()
+      end,
+    })
+    use("tommcdo/vim-exchange")
+    use({
+      "smjonas/inc-rename.nvim",
+      config = function()
+        require("inc_rename").setup()
+      end,
+    })
+    use({
+      "AndrewRadev/splitjoin.vim",
+      config = function()
+        require("mappings").splitjoin()
+      end,
+    })
+    use({
+      "windwp/nvim-autopairs",
+      config = function()
+        require("setup").autopairs()
+      end,
+    })
+    use({
+      "ahmedkhalf/project.nvim",
+      config = function()
+        require("setup").project()
+      end,
+    })
+    use({
+      "kosayoda/nvim-lightbulb",
+      config = function()
+        require('setup').lightbulb()
+        require('autocmd').lightbulb()
+      end
+    })
+    use({
+      "nvim-lualine/lualine.nvim",
+      requires = { "kyazdani42/nvim-web-devicons", opt = true },
+      config = "require('config.lualine')()",
+    })
     use({
       "ibhagwan/fzf-lua",
       config = function()
@@ -221,42 +243,42 @@ return require("packer").startup({
         require("setup").fzf()
       end,
     })
-    -- use({
-    --   "monaqa/dial.nvim",
-    --   config = function()
-    --     require("mappings").dial()
-    --     require("setup").dial()
-    --   end,
-    -- })
-    -- use("svban/YankAssassin.vim")
-    -- use("glts/vim-textobj-comment")
-    -- use({
-    --   "D4KU/vim-textobj-chainmember",
-    --   config = function()
-    --     require("mappings").textobjchainmember()
-    --   end,
-    -- })
-    -- use({ "AndrewRadev/sideways.vim",
-    --   config = function()
-    --     require("mappings").sideways()
-    --   end,
-    -- })
-    -- use({
-    --   "chaoren/vim-wordmotion",
-    --   config = function()
-    --     require("setup").wordmotion()
-    --   end,
-    -- })
-    -- use({
-    --   "kana/vim-textobj-user",
-    -- })
-    -- use({
-    --   "kylechui/nvim-surround",
-    --   config = function()
-    --     require("nvim-surround").setup({})
-    --   end
-    -- })
-    -- use("tpope/vim-abolish")
+    use({
+      "monaqa/dial.nvim",
+      config = function()
+        require("mappings").dial()
+        require("setup").dial()
+      end,
+    })
+    use("svban/YankAssassin.vim")
+    use("glts/vim-textobj-comment")
+    use({
+      "D4KU/vim-textobj-chainmember",
+      config = function()
+        require("mappings").textobjchainmember()
+      end,
+    })
+    use({ "AndrewRadev/sideways.vim",
+      config = function()
+        require("mappings").sideways()
+      end,
+    })
+    use({
+      "chaoren/vim-wordmotion",
+      config = function()
+        require("setup").wordmotion()
+      end,
+    })
+    use({
+      "kana/vim-textobj-user",
+    })
+    use({
+      "kylechui/nvim-surround",
+      config = function()
+        require("nvim-surround").setup({})
+      end
+    })
+    use("tpope/vim-abolish")
     use({
       "Runeword/putter.nvim",
       -- "/home/charles/Documents/dev/plugins/putter.nvim",
@@ -270,6 +292,10 @@ return require("packer").startup({
     -- use("ryvnf/readline.vim")
     -- use("Julian/vim-textobj-variable-segment")
     -- use("skywind3000/asyncrun.vim")
+    -- use({
+    --   'sindrets/diffview.nvim',
+    --   requires = 'nvim-lua/plenary.nvim',
+    -- })
     -- use({
     --   "jonatan-branting/nvim-better-n",
     --   config = function()
