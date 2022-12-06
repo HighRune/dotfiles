@@ -122,71 +122,49 @@ local function wilder()
   }))
 end
 
--------------------- madyanov/svart.nvim
-local function svart()
-  require("svart").configure({
-    key_cancel = "<Esc>",
-    key_delete_char = "<BS>",
-    key_delete_word = "<C-W>",
-    key_delete_query = "<C-U>",
-    key_best_match = "<Tab>",
-    key_next_match = "<CR>",
-    key_prev_match = "<S-Tab>",
-    label_atoms = "aoeuhtnsqjkmwv',.pgcrlid",
-    label_location = -1,
-    label_max_len = 2,
-    label_min_query_len = 1,
-    label_hide_irrelevant = true,
-    label_conflict_foresight = 3,
-    search_update_register = false,
-    search_wrap_around = false,
-    search_multi_window = true,
-    ui_dim_content = false,
+-------------------- woosaaahh/sj.nvim
+local function sj()
+  require("sj").setup({
+    auto_jump = false,
+    forward_search = true,
+    highlights_timeout = 0,
+    max_pattern_length = 0,
+    pattern_type = "vim",
+    preserve_highlights = true,
+    prompt_prefix = "",
+    relative_labels = false,
+    search_scope = "visible_lines",
+    separator = "",
+    -- separator = "\r",
+    update_search_register = false,
+    use_last_pattern = false,
+    use_overlay = false,
+    wrap_jumps = o.wrapscan,
+    labels = {
+      "'", ",", ".", "p", "y", "a", "o", "e", "u", "i", "d", "h", "t",
+      "n", "s", "f", "g", "c", "r", "l", ";", "q", "j", "k", "x", "b",
+      "m", "w", "v", "z",
+    },
+    highlights = {
+      SjFocusedLabel = { bg = "#00fbff", fg = 'black', },
+      --   SjLabel = { bg = '#ccff88', fg = 'black' },
+      --   SjMatches = { bg = '#77aaff', fg = 'black' },
+    },
+    keymaps = {
+      cancel = "<Esc>",
+      validate = "<Enter>",
+      prev_match = "<S-Tab>",
+      next_match = "<Tab>",
+      prev_pattern = "<C-p>",
+      next_pattern = "<C-n>",
+      delete_prev_char = "<BS>",
+      delete_prev_word = "<C-w>",
+      delete_pattern = "<C-u>",
+      restore_pattern = "<A-BS>",
+      send_to_qflist = "<A-q>",
+    },
   })
 end
-
--------------------- woosaaahh/sj.nvim
--- local function sj()
---   require("sj").setup({
---     auto_jump = false,
---     forward_search = true,
---     highlights_timeout = 0,
---     max_pattern_length = 0,
---     pattern_type = "vim",
---     preserve_highlights = true,
---     prompt_prefix = "",
---     relative_labels = false,
---     search_scope = "visible_lines",
---     separator = "\r",
---     update_search_register = false,
---     use_last_pattern = false,
---     use_overlay = false,
---     wrap_jumps = o.wrapscan,
---     labels = {
---       "'", ",", ".", "p", "y", "a", "o", "e", "u", "i", "d", "h", "t",
---       "n", "s", "f", "g", "c", "r", "l", ";", "q", "j", "k", "x", "b",
---       "m", "w", "v", "z",
---     },
---     highlights = {
---       SjFocusedLabel = { bg = "#ff4d97", fg = 'black', },
---       SjLabel = { bg = '#ccff88', fg = 'black' },
---       SjMatches = { bg = '#77aaff', fg = 'black' },
---     },
---     keymaps = {
---       cancel = "<Esc>",
---       validate = "<S-Enter>",
---       prev_match = "<S-Tab>",
---       next_match = "<Tab>",
---       prev_pattern = "<C-p>",
---       next_pattern = "<C-n>",
---       delete_prev_char = "<BS>",
---       delete_prev_word = "<C-w>",
---       delete_pattern = "<C-u>",
---       restore_pattern = "<A-BS>",
---       send_to_qflist = "<A-q>",
---     },
---   })
--- end
 
 -------------------- kosayoda/nvim-lightbulb
 local function lightbulb()
@@ -703,8 +681,8 @@ return {
   codeactionmenu = codeactionmenu,
   mason = mason,
   masonlspconfig = masonlspconfig,
-  svart = svart,
   wilder = wilder,
   ssr = ssr,
   sniprun = sniprun,
+  sj = sj
 }
