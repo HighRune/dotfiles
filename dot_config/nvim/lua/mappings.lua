@@ -42,26 +42,26 @@ local function core()
   map({ 'o' }, "<Enter>", "ip")
   map({ 'x', 'o' }, "o", "io", remap)
   map({ 'x', 'o' }, "no", "ino", remap)
-  map({ 'x', 'o' }, "po", "ipo", remap)
+  map({ 'x', 'o' }, "ho", "iho", remap)
   map({ 'x', 'o' }, "q", "iq", remap)
   map({ 'x', 'o' }, "nq", "inq", remap)
-  map({ 'x', 'o' }, "pq", "ipq", remap)
+  map({ 'x', 'o' }, "hq", "ihq", remap)
   map({ 'x', 'o' }, "n{", "in{", remap)
-  map({ 'x', 'o' }, "p{", "ip{", remap)
+  map({ 'x', 'o' }, "h{", "ih{", remap)
   map({ 'x', 'o' }, "n}", "an}", remap)
-  map({ 'x', 'o' }, "p}", "ap}", remap)
+  map({ 'x', 'o' }, "h}", "ap}", remap)
   map({ 'x', 'o' }, '{', 'i{', remap)
   map({ 'x', 'o' }, '}', 'a{', remap)
   map({ 'x', 'o' }, "n(", "in)", remap)
-  map({ 'x', 'o' }, "p(", "ip)", remap)
+  map({ 'x', 'o' }, "h(", "ih)", remap)
   map({ 'x', 'o' }, "n)", "an)", remap)
-  map({ 'x', 'o' }, "p)", "ap)", remap)
+  map({ 'x', 'o' }, "h)", "ap)", remap)
   map({ 'x', 'o' }, '(', 'i)', remap)
   map({ 'x', 'o' }, ')', 'a)', remap)
   map({ 'x', 'o' }, "n[", "in]", remap)
-  map({ 'x', 'o' }, "p[", "ip]", remap)
+  map({ 'x', 'o' }, "h[", "ih]", remap)
   map({ 'x', 'o' }, "n]", "an]", remap)
-  map({ 'x', 'o' }, "p]", "ap]", remap)
+  map({ 'x', 'o' }, "h]", "ap]", remap)
   map({ 'x', 'o' }, '[', 'i]', remap)
   map({ 'x', 'o' }, ']', 'a]', remap)
   -- map({ 'x', 'o' }, '<Plug>(arpeggio-default:()', 'i(', remap)
@@ -110,12 +110,10 @@ local function core()
 
   -- Quickfix list
   map("n", "<C-q>", ':q!<CR>')
-  -- map("n", "<leader><Tab>", require("putter").addBuffersToQfList)
-  -- map("n", "<C-down>", require("putter").cycleNextLocItem, silent)
-  -- map("n", "<C-up>", require("putter").cyclePrevLocItem, silent)
-  -- map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
+end
 
-  -------------------- Runeword/putter.nvim
+-------------------- Runeword/putter.nvim
+local function putter()
   map({ "n", "x" }, "glp", require("putter").putLinewise(']p`]'))
   map({ "n", "x" }, "glP", require("putter").putLinewise(']P`]'))
   map({ "n", "x" }, "gllp", require("putter").putLinewiseSuffix(']p`]'))
@@ -135,6 +133,10 @@ local function core()
   -- map({ "n", "x" }, "gsp", require("putter").putCharwiseSurround('geep'))
   -- map({ "n", "x" }, "gsP", require("putter").putCharwiseSurround('gewP'))
 
+  -- map("n", "<leader><Tab>", require("putter").addBuffersToQfList)
+  -- map("n", "<C-down>", require("putter").cycleNextLocItem, silent)
+  -- map("n", "<C-up>", require("putter").cyclePrevLocItem, silent)
+  -- map("n", "<C-q>", "&buftype is# 'quickfix' ? ':try | cclose | catch | q! | catch | endtry<CR>' : ':q!<CR>'", expr)
 
   -- vim.keymap.set("n", "t", require("putter").__dot_repeat('p'))
 
@@ -418,4 +420,5 @@ return {
   ssr = ssr,
   sniprun = sniprun,
   sideways = sideways,
+  putter = putter,
 }
