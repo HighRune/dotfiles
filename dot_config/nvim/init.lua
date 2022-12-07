@@ -256,6 +256,9 @@ return require("packer").startup({
       "Runeword/putter.nvim",
       -- "/home/charles/Documents/dev/plugins/putter.nvim",
       -- config = require("putter").setup(),
+      config = function()
+        require("mappings").putter()
+      end,
     })
     -- use("lewis6991/impatient.nvim")
     -- use("p00f/nvim-ts-rainbow")
