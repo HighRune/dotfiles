@@ -112,19 +112,6 @@ local function packer()
   })
 end
 
-local function svart()
-  augroup("svart", { clear = true })
-  autocmd("ColorScheme", {
-    group = "svart",
-    pattern = "*",
-    callback = function()
-      -- hi(0, 'SvartLabel', { bg = '#ccff88', fg = 'black' })
-      -- hi(0, 'SvartMatch', { bg = '#77aaff', fg = 'black' })
-      hi(0, 'SvartMatchCursor', { bg = '#00fbff', fg = 'black' })
-    end
-  })
-end
-
 local function coq()
   augroup("coq", { clear = true })
   autocmd("BufWritePost", {
@@ -158,17 +145,18 @@ end
 --   })
 -- end
 
--- local function sj()
---   augroup("sj", { clear = true })
---   autocmd("ColorScheme", {
---     group = "sj",
---     pattern = "*",
---     callback = function()
---       hi(0, 'SjLabel', { bg = '#ccff88', fg = 'black' })
---       hi(0, 'SjSearch', { bg = '#77aaff', fg = 'black' })
---     end
---   })
--- end
+local function sj()
+  augroup("sj", { clear = true })
+  autocmd("ColorScheme", {
+    group = "sj",
+    pattern = "*",
+    callback = function()
+      hi(0, 'SjFocusedLabel', { bg = '#00fbff', fg = 'black' })
+      -- hi(0, 'SjLabel', { bg = '#ccff88', fg = 'black' })
+      -- hi(0, 'SjSearch', { bg = '#77aaff', fg = 'black' })
+    end
+  })
+end
 
 -- cmd([[
 -- autocmd ColorScheme * highlight CursorLine gui=bold guibg=none
@@ -188,5 +176,5 @@ return {
   bufferline = bufferline,
   coq = coq,
   lightbulb = lightbulb,
-  svart = svart,
+  sj = sj,
 }
