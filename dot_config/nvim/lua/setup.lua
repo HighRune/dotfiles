@@ -145,11 +145,11 @@ local function sj()
       "n", "s", "f", "g", "c", "r", "l", ";", "q", "j", "k", "x", "b",
       "m", "w", "v", "z",
     },
-    highlights = {
-      SjFocusedLabel = { bg = "#00fbff", fg = 'black', },
-      --   SjLabel = { bg = '#ccff88', fg = 'black' },
-      --   SjMatches = { bg = '#77aaff', fg = 'black' },
-    },
+    -- highlights = {
+    --   SjFocusedLabel = { bg = "#00fbff", fg = 'black', },
+    --   SjLabel = { bg = '#ccff88', fg = 'black' },
+    --   SjMatches = { bg = '#77aaff', fg = 'black' },
+    -- },
     keymaps = {
       cancel = "<Esc>",
       validate = "<Enter>",
