@@ -35,7 +35,9 @@ local function core()
   -- Save
   map("n", "<C-s>", ":silent write<CR>")
   map("i", "<C-s>", "<Esc>`^:silent write<CR>")
-  map("i", "ù", "<Esc>u")
+
+  -- Edit
+  map("i", "ù", "<Esc>`^u")
 
   -- Text objects
   map({ 'x', 'o' }, "a<Enter>", "ap")
