@@ -63,7 +63,7 @@ return require("packer").startup({
       setup = function()
         -- autocommand will have no effect on previously sourced colorschemes so it must be added before any colorscheme is sourced
         require('autocmd').bufferline()
-        -- require('autocmd').sj()
+        require('autocmd').sj()
         -- require('autocmd').leap()
       end,
       config = function()
