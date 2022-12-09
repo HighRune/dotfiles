@@ -323,7 +323,7 @@ local function ai()
   require('mini.ai').setup({
     custom_textobjects = {
       f = false,
-      u = gen_spec.argument({ brackets = { '%b()' } }),
+      a = gen_spec.argument({ brackets = { '%b()' } }),
       o = gen_spec.argument({ brackets = { '%b{}' } }),
       e = gen_spec.argument({ brackets = { '%b[]' } }),
       -- o = gen_spec.argument({ brackets = { '%b()', '%b{}', '%b[]' } }),
