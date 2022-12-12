@@ -298,7 +298,7 @@ local function indentscope()
   scope.setup({
     draw = {
       delay = 0,
-      animation = scope.gen_animation("none"),
+      animation = scope.gen_animation.none()
     },
     mappings = {
       object_scope = "ii",
