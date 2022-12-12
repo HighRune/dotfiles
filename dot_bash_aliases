@@ -25,7 +25,7 @@ alias ca='chezmoi add'
 alias cap='chezmoi apply'
 alias cf='chezmoi forget'
 
-alias single='$HOME/.screenlayout/single.sh && feh --bg-fill ~/.config/Skin\ The\ Remixes.png'
+alias slg='$HOME/.screenlayout/single.sh && feh --bg-fill ~/.config/Skin\ The\ Remixes.png'
 alias dual='$HOME/.screenlayout/dual.sh'
 
 #___________________________________________TMUX
