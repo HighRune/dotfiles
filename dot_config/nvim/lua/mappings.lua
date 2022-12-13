@@ -212,14 +212,6 @@ local function pulse()
   map("c", "<Enter>", "search_pulse#PulseFirst()", { silent = true, expr = true })
 end
 
--------------------- madyanov/svart.nvim
-local function svart()
-  map({ "n", "x", "o" }, "s", "<Cmd>Svart<CR>")
-  -- map({ "n", "x", "o" }, "S", "<Cmd>SvartRegex<CR>")
-  -- map({ "n", "x", "o" }, "gs", "<Cmd>SvartRepeat<CR>")
-end
-
--------------------- numToStr/Comment.nvim
 local function comment()
   map('x', 'gc', '<Plug>(comment_toggle_linewise_visual)gv', remap)
   map('x', 'gb', '<Plug>(comment_toggle_blockwise_visual)gv', remap)
@@ -250,9 +242,12 @@ end
 -------------------- lewis6991/gitsigns.nvim
 local function gitsigns(buffer)
   map({ 'n', 'x' }, "<leader>ga", package.loaded.gitsigns.stage_buffer, { buffer = buffer, desc = 'git add file' })
-  map({ 'n', 'x' }, "<leader>gr", package.loaded.gitsigns.reset_buffer_index, { buffer = buffer, desc = 'git reset file' })
-  map({ 'n', 'x' }, "<leader>gc", package.loaded.gitsigns.reset_buffer, { buffer = buffer, desc = 'git checkout -- file' })
-  map({ 'n', 'x' }, "<leader>gb", package.loaded.gitsigns.toggle_current_line_blame, { buffer = buffer, desc = 'git blame' })
+  map({ 'n', 'x' }, "<leader>gr", package.loaded.gitsigns.reset_buffer_index,
+    { buffer = buffer, desc = 'git reset file' })
+  map({ 'n', 'x' }, "<leader>gc", package.loaded.gitsigns.reset_buffer,
+    { buffer = buffer, desc = 'git checkout -- file' })
+  map({ 'n', 'x' }, "<leader>gb", package.loaded.gitsigns.toggle_current_line_blame,
+    { buffer = buffer, desc = 'git blame' })
   map({ 'n', 'x' }, "<leader>gd", package.loaded.gitsigns.toggle_deleted, { buffer = buffer })
 end
 
@@ -424,7 +419,6 @@ return {
   codeactionmenu = codeactionmenu,
   mason = mason,
   dap = dap,
-  svart = svart,
   comment = comment,
   ssr = ssr,
   sniprun = sniprun,
