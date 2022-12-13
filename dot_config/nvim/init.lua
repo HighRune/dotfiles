@@ -224,6 +224,12 @@ return require("packer").startup({
       end,
     })
     use("svban/YankAssassin.vim")
+    use({
+      "machakann/vim-highlightedyank",
+      config = function()
+        -- require("setup").highlightedyank()
+      end,
+    })
     use("glts/vim-textobj-comment")
     use({
       "D4KU/vim-textobj-chainmember",
