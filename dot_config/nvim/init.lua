@@ -227,7 +227,7 @@ return require("packer").startup({
     use({
       "machakann/vim-highlightedyank",
       config = function()
-        -- require("setup").highlightedyank()
+        require("setup").highlightedyank()
       end,
     })
     use("glts/vim-textobj-comment")
