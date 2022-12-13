@@ -12,13 +12,13 @@ local function core()
   augroup("diagnostic", { clear = true })
   augroup("qf", { clear = true })
   augroup("disableAutoComment", { clear = true })
-  augroup("yank", { clear = true })
+  -- augroup("yank", { clear = true })
 
-  autocmd("TextYankPost", {
-    group = "yank",
-    pattern = "*",
-    callback = function() pcall(highlight.on_yank, { higroup = "Yank", timeout = 150 }) end
-  })
+  -- autocmd("TextYankPost", {
+  --   group = "yank",
+  --   pattern = "*",
+  --   callback = function() pcall(highlight.on_yank, { higroup = "Yank", timeout = 150 }) end
+  -- })
 
   autocmd("BufWritePost", {
     group = "chezmoi",
