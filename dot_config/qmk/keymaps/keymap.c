@@ -103,6 +103,7 @@ enum combos {
   L3TREMAU,
   L3TREMAI,
   L3CEDILLAC,
+  L12ENT,
 };
 
 const uint16_t PROGMEM l2slsh[] = { LT(2,KC_ENT), KC_R, COMBO_END};
@@ -131,6 +132,7 @@ const uint16_t PROGMEM l3tremae[] = { LT(3,KC_ESC), KC_J, COMBO_END};
 const uint16_t PROGMEM l3tremau[] = { LT(3,KC_ESC), KC_K, COMBO_END};
 const uint16_t PROGMEM l3tremai[] = { LT(3,KC_ESC), KC_X, COMBO_END};
 const uint16_t PROGMEM l3cedillac[] = { LT(3,KC_ESC), KC_C, COMBO_END};
+const uint16_t PROGMEM l12ent[] = { LT(1,KC_TAB), LT(2,KC_ENT), COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
   [L2SLSH] = COMBO(l2slsh, KC_SLSH),
@@ -159,6 +161,7 @@ combo_t key_combos[COMBO_COUNT] = {
   [L3TREMAU] = COMBO(l3tremau, TREMAU),
   [L3TREMAI] = COMBO(l3tremai, TREMAI),
   [L3CEDILLAC] = COMBO(l3cedillac, RALT(KC_COMM)),
+  [L12ENT] = COMBO(l12ent, KC_ENT),
 };
 
 /* THIS FILE WAS GENERATED!
