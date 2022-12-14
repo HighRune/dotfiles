@@ -14,5 +14,5 @@
 
 #undef COMBO_COUNT
 #undef COMBO_TERM
-#define COMBO_COUNT 26
+#define COMBO_COUNT 27
 #define COMBO_TERM 50
