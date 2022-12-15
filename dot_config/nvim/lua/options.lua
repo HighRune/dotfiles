@@ -21,7 +21,7 @@ local function core()
   -- o.relativenumber = true -- Show relative line numbers
   o.virtualedit = "all"
   -- o.cmdheight=0
-  o.cmdheight=1
+  o.cmdheight = 1
   o.wildcharm = ('\t'):byte()
   o.wildignorecase = true
   -- o.shortmess='a'
