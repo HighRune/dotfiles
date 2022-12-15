@@ -109,8 +109,6 @@ local function core()
   end)
   map("n", "^", "g^")
   map("n", "&", "g^")
-  map('n', '<Down>', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
-  map('n', '<Up>', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
 
   -- Buffers
   map("n", "<Leader>q", ":bwipeout!<CR>", silent)
@@ -342,6 +340,23 @@ local function hydra()
 
   map({ 'n', 'x' }, "<Leader>e", function() scroll:activate() fn.execute("normal! 5j") end)
   map({ 'n', 'x' }, "<Leader>u", function() scroll:activate() fn.execute("normal! 5k") end)
+
+  local jump = require('hydra')({
+    mode = { 'n', 'x' },
+    config = {
+      hint = false,
+      on_enter = function() o.scrolloff = 9999 end,
+      on_exit = function() o.scrolloff = 5 end,
+    },
+    heads = {
+      { '<Down>', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end },
+      { '<Up>', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end },
+    }
+  })
+
+  map({ 'n', 'x' }, "<Down>", function() jump:activate() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
+  map({ 'n', 'x' }, "<Up>", function() jump:activate() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
+
 end
 
 -------------------- michaelb/sniprun
