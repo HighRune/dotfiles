@@ -77,91 +77,97 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 };
 
 enum combos { 
-  L2SLSH,
-  L1CTL,
-  L1SFT,
-  L1GUI,
+  L12ENT,
   L1ALT,
-  L2CTL,
-  L2SFT,
-  L2GUI,
-  L2ALT,
   L1CS,
+  L1CTL,
   L1GS,
+  L1GUI,
+  L1SFT,
+  L2ALT,
   L2CS,
+  L2CTL,
   L2GS,
+  L2GUI,
+  L2SFT,
+  L2SLSH,
+  L2GRV,
+  L2MINS,
   L3ACUTEE,
+  L3CEDILLAC,
+  L3CIRCUMFLEXA,
+  L3CIRCUMFLEXE,
+  L3CIRCUMFLEXI,
+  L3CIRCUMFLEXO,
+  L3CIRCUMFLEXU,
   L3GRAVEA,
   L3GRAVEE,
   L3GRAVEU,
-  L3CIRCUMFLEXA,
-  L3CIRCUMFLEXO,
-  L3CIRCUMFLEXE,
-  L3CIRCUMFLEXU,
-  L3CIRCUMFLEXI,
   L3TREMAE,
-  L3TREMAU,
   L3TREMAI,
-  L3CEDILLAC,
-  L12ENT,
+  L3TREMAU,
 };
 
-const uint16_t PROGMEM l2slsh[] = { LT(2,KC_ENT), KC_R, COMBO_END};
-const uint16_t PROGMEM l1ctl[] = { LT(1,KC_TAB), KC_U, COMBO_END};
-const uint16_t PROGMEM l1sft[] = { LT(1,KC_TAB), KC_E, COMBO_END};
-const uint16_t PROGMEM l1gui[] = { LT(1,KC_TAB), KC_O, COMBO_END};
+const uint16_t PROGMEM l12ent[] = { LT(1,KC_TAB), LT(2,KC_ENT), COMBO_END};
 const uint16_t PROGMEM l1alt[] = { LT(1,KC_TAB), KC_A, COMBO_END};
-const uint16_t PROGMEM l2ctl[] = { LT(2,KC_ENT), KC_H, COMBO_END};
-const uint16_t PROGMEM l2sft[] = { LT(2,KC_ENT), KC_T, COMBO_END};
-const uint16_t PROGMEM l2gui[] = { LT(2,KC_ENT), KC_N, COMBO_END};
-const uint16_t PROGMEM l2alt[] = { LT(2,KC_ENT), KC_S, COMBO_END};
 const uint16_t PROGMEM l1cs[] = { LT(1,KC_TAB), KC_E, KC_U, COMBO_END};
+const uint16_t PROGMEM l1ctl[] = { LT(1,KC_TAB), KC_U, COMBO_END};
 const uint16_t PROGMEM l1gs[] = { LT(1,KC_TAB), KC_E, KC_O, COMBO_END};
+const uint16_t PROGMEM l1gui[] = { LT(1,KC_TAB), KC_O, COMBO_END};
+const uint16_t PROGMEM l1sft[] = { LT(1,KC_TAB), KC_E, COMBO_END};
+const uint16_t PROGMEM l2alt[] = { LT(2,KC_ENT), KC_S, COMBO_END};
 const uint16_t PROGMEM l2cs[] = { LT(2,KC_ENT), KC_T, KC_H, COMBO_END};
+const uint16_t PROGMEM l2ctl[] = { LT(2,KC_ENT), KC_H, COMBO_END};
 const uint16_t PROGMEM l2gs[] = { LT(2,KC_ENT), KC_T, KC_N, COMBO_END};
+const uint16_t PROGMEM l2gui[] = { LT(2,KC_ENT), KC_N, COMBO_END};
+const uint16_t PROGMEM l2sft[] = { LT(2,KC_ENT), KC_T, COMBO_END};
+const uint16_t PROGMEM l2slsh[] = { LT(2,KC_ENT), KC_R, COMBO_END};
+const uint16_t PROGMEM l2grv[] = { LT(2,KC_ENT), KC_QUOT, COMBO_END};
+const uint16_t PROGMEM l2mins[] = { LT(2,KC_ENT), KC_COMM, COMBO_END};
 const uint16_t PROGMEM l3acutee[] = { LT(3,KC_ESC), KC_E, COMBO_END};
+const uint16_t PROGMEM l3cedillac[] = { LT(3,KC_ESC), KC_C, COMBO_END};
+const uint16_t PROGMEM l3circumflexa[] = { LT(3,KC_ESC), KC_QUOT, COMBO_END};
+const uint16_t PROGMEM l3circumflexe[] = { LT(3,KC_ESC), KC_DOT, COMBO_END};
+const uint16_t PROGMEM l3circumflexi[] = { LT(3,KC_ESC), KC_Y, COMBO_END};
+const uint16_t PROGMEM l3circumflexo[] = { LT(3,KC_ESC), KC_COMM, COMBO_END};
+const uint16_t PROGMEM l3circumflexu[] = { LT(3,KC_ESC), KC_P, COMBO_END};
 const uint16_t PROGMEM l3gravea[] = { LT(3,KC_ESC), KC_A, COMBO_END};
 const uint16_t PROGMEM l3gravee[] = { LT(3,KC_ESC), KC_O, COMBO_END};
 const uint16_t PROGMEM l3graveu[] = { LT(3,KC_ESC), KC_U, COMBO_END};
-const uint16_t PROGMEM l3circumflexa[] = { LT(3,KC_ESC), KC_QUOT, COMBO_END};
-const uint16_t PROGMEM l3circumflexo[] = { LT(3,KC_ESC), KC_COMM, COMBO_END};
-const uint16_t PROGMEM l3circumflexe[] = { LT(3,KC_ESC), KC_DOT, COMBO_END};
-const uint16_t PROGMEM l3circumflexu[] = { LT(3,KC_ESC), KC_P, COMBO_END};
-const uint16_t PROGMEM l3circumflexi[] = { LT(3,KC_ESC), KC_Y, COMBO_END};
 const uint16_t PROGMEM l3tremae[] = { LT(3,KC_ESC), KC_J, COMBO_END};
-const uint16_t PROGMEM l3tremau[] = { LT(3,KC_ESC), KC_K, COMBO_END};
 const uint16_t PROGMEM l3tremai[] = { LT(3,KC_ESC), KC_X, COMBO_END};
-const uint16_t PROGMEM l3cedillac[] = { LT(3,KC_ESC), KC_C, COMBO_END};
-const uint16_t PROGMEM l12ent[] = { LT(1,KC_TAB), LT(2,KC_ENT), COMBO_END};
+const uint16_t PROGMEM l3tremau[] = { LT(3,KC_ESC), KC_K, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  [L2SLSH] = COMBO(l2slsh, KC_SLSH),
-  [L1CTL] = COMBO(l1ctl, OSM(MOD_LCTL)),
-  [L1SFT] = COMBO(l1sft, OSM(MOD_LSFT)),
-  [L1GUI] = COMBO(l1gui, OSM(MOD_LGUI)),
+  [L12ENT] = COMBO(l12ent, KC_ENT),
   [L1ALT] = COMBO(l1alt, OSM(MOD_LALT)),
-  [L2CTL] = COMBO(l2ctl, OSM(MOD_RCTL)),
-  [L2SFT] = COMBO(l2sft, OSM(MOD_RSFT)),
-  [L2GUI] = COMBO(l2gui, OSM(MOD_RGUI)),
-  [L2ALT] = COMBO(l2alt, OSM(MOD_RALT)),
   [L1CS] = COMBO(l1cs, OSM(MOD_LCTL|MOD_LSFT)),
+  [L1CTL] = COMBO(l1ctl, OSM(MOD_LCTL)),
   [L1GS] = COMBO(l1gs, OSM(MOD_LGUI|MOD_LSFT)),
+  [L1GUI] = COMBO(l1gui, OSM(MOD_LGUI)),
+  [L1SFT] = COMBO(l1sft, OSM(MOD_LSFT)),
+  [L2ALT] = COMBO(l2alt, OSM(MOD_RALT)),
   [L2CS] = COMBO(l2cs, OSM(MOD_RCTL|MOD_RSFT)),
+  [L2CTL] = COMBO(l2ctl, OSM(MOD_RCTL)),
   [L2GS] = COMBO(l2gs, OSM(MOD_RGUI|MOD_RSFT)),
+  [L2GUI] = COMBO(l2gui, OSM(MOD_RGUI)),
+  [L2SFT] = COMBO(l2sft, OSM(MOD_RSFT)),
+  [L2SLSH] = COMBO(l2slsh, KC_SLSH),
+  [L2GRV] = COMBO(l2grv, KC_GRV),
+  [L2MINS] = COMBO(l2mins, KC_MINS),
   [L3ACUTEE] = COMBO(l3acutee, RALT(KC_E)),
+  [L3CEDILLAC] = COMBO(l3cedillac, RALT(KC_COMM)),
+  [L3CIRCUMFLEXA] = COMBO(l3circumflexa, CIRCUMFLEXA),
+  [L3CIRCUMFLEXE] = COMBO(l3circumflexe, CIRCUMFLEXE),
+  [L3CIRCUMFLEXI] = COMBO(l3circumflexi, CIRCUMFLEXI),
+  [L3CIRCUMFLEXO] = COMBO(l3circumflexo, CIRCUMFLEXO),
+  [L3CIRCUMFLEXU] = COMBO(l3circumflexu, CIRCUMFLEXU),
   [L3GRAVEA] = COMBO(l3gravea, GRAVEA),
   [L3GRAVEE] = COMBO(l3gravee, GRAVEE),
   [L3GRAVEU] = COMBO(l3graveu, GRAVEU),
-  [L3CIRCUMFLEXA] = COMBO(l3circumflexa, CIRCUMFLEXA),
-  [L3CIRCUMFLEXO] = COMBO(l3circumflexo, CIRCUMFLEXO),
-  [L3CIRCUMFLEXE] = COMBO(l3circumflexe, CIRCUMFLEXE),
-  [L3CIRCUMFLEXU] = COMBO(l3circumflexu, CIRCUMFLEXU),
-  [L3CIRCUMFLEXI] = COMBO(l3circumflexi, CIRCUMFLEXI),
   [L3TREMAE] = COMBO(l3tremae, TREMAE),
-  [L3TREMAU] = COMBO(l3tremau, TREMAU),
   [L3TREMAI] = COMBO(l3tremai, TREMAI),
-  [L3CEDILLAC] = COMBO(l3cedillac, RALT(KC_COMM)),
-  [L12ENT] = COMBO(l12ent, KC_ENT),
+  [L3TREMAU] = COMBO(l3tremau, TREMAU),
 };
 
 /* THIS FILE WAS GENERATED!
