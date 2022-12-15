@@ -327,11 +327,18 @@ local function hydra()
     { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>' },
   } })
 
-  local scroll = require('hydra')({ mode = { 'n', 'x' }, config = { hint = false }, heads = {
-    { 'u', '5k' },
-    { 'e', '5j' },
-    -- { '<Leader>', nil, { exit = true } },
-  } })
+  local scroll = require('hydra')({
+    mode = { 'n', 'x' },
+    config = {
+      hint = false,
+      on_enter = function() o.scrolloff = 9999 end,
+      on_exit = function() o.scrolloff = 5 end,
+    },
+    heads = {
+      { 'u', '5k' },
+      { 'e', '5j' },
+    }
+  })
 
   map({ 'n', 'x' }, "<Leader>e", function() scroll:activate() fn.execute("normal! 5j") end)
   map({ 'n', 'x' }, "<Leader>u", function() scroll:activate() fn.execute("normal! 5k") end)
