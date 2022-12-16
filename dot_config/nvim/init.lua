@@ -23,6 +23,12 @@ return require("packer").startup({
     use("kyazdani42/nvim-web-devicons")
     use("kana/vim-arpeggio")
     use({
+      'rareitems/hl_match_area.nvim',
+      config = function()
+        require("setup").matcharea()
+      end
+    })
+    use({
       'gelguy/wilder.nvim',
       requires = { "romgrk/fzy-lua-native", opt = true },
       rocks = 'pcre2',
