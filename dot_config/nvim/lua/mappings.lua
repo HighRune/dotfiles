@@ -351,15 +351,19 @@ local function hydra()
     heads = {
       { '<Down>', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end },
       { '<Up>', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end },
-      { '<C-Up>', function() fn.search([[\S\(\n^$\n\s*\)\@=]], 'sWb') end },
-      { '<C-Down>', function() fn.search([[\S\(\n^$\n\s*\)\@=]], 'sW') end },
+      -- { '<C-Up>', function() fn.search([[\S\(\n^$\n\s*\)\@=]], 'sWb') end },
+      -- { '<C-Down>', function() fn.search([[\S\(\n^$\n\s*\)\@=]], 'sW') end },
+      { '<C-Up>', function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\n\s*\)\@=]], 'sWb') end },
+      { '<C-Down>', function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\n\s*\)\@=]], 'sW') end },
     }
   })
 
   map({ 'n', 'x' }, "<Down>", function() jump:activate() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
   map({ 'n', 'x' }, "<Up>", function() jump:activate() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
-  map({ 'n', 'x' }, "<C-Up>", function() jump:activate() fn.search([[\S\(\n^$\n\s*\)\@=]], 'sWb') end)
-  map({ 'n', 'x' }, "<C-Down>", function() jump:activate() fn.search([[\S\(\n^$\n\s*\)\@=]], 'sW') end)
+  map({ 'n', 'x' }, "<C-Up>", function() jump:activate() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\n\s*\)\@=]], 'sWb') end)
+  map({ 'n', 'x' }, "<C-Down>", function() jump:activate() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\n\s*\)\@=]], 'sW') end)
+  -- map({ 'n', 'x' }, "<C-Up>", function() jump:activate() fn.search([[\S\(\n^$\n\s*\)\@=]], 'sWb') end)
+  -- map({ 'n', 'x' }, "<C-Down>", function() jump:activate() fn.search([[\S\(\n^$\n\s*\)\@=]], 'sW') end)
 
 end
 
