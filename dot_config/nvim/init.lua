@@ -274,7 +274,6 @@ return require("packer").startup({
     })
     -- use("lewis6991/impatient.nvim")
     -- use("p00f/nvim-ts-rainbow")
-    -- use("rktjmp/lush.nvim")
     -- use("nvim-treesitter/playground")
     -- use("m-demare/hlargs.nvim")
     -- use("/home/charles/Documents/dev/plugins/blaster")
