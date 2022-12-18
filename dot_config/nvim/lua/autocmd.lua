@@ -101,6 +101,7 @@ local function matchup()
     pattern = "*",
     callback = function()
       hi(0, 'MatchParen', { fg = 'white', italic = true, bold = true })
+      hi(0, 'MatchWord', { fg = 'white' })
       -- hi(0, 'MatchBackground ', { bg = 'grey', italic = true })
     end
   })
