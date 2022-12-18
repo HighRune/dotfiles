@@ -180,6 +180,36 @@ local function sj()
   })
 end
 
+local function matchup()
+  g.loaded_matchit = 1
+  g.matchup_matchparen_nomode = "i"
+  g.matchup_matchparen_pumvisible = 0
+  g.matchup_matchparen_deferred = 1
+  g.matchup_matchparen_deferred_show_delay = 0
+  g.matchup_matchparen_deferred_hide_delay = 0
+  -- vim.g.matchup_matchparen_offscreen = {'method': 'popup'}
+  g.matchup_motion_override_Npercent = 0
+  g.matchup_surround_enabled = 1
+  g.matchup_motion_enabled = 1
+  g.matchup_text_obj_enabled = 1
+  g.matchup_transmute_enabled = 1
+  g.matchup_matchparen_enabled = 1
+  g.matchup_override_vimtex = 1
+
+  g.matchup_matchparen_offscreen = {
+    method = "popup",
+    fullwidth = 1,
+  }
+  g.matchup_matchparen_enabled = 1
+  vim.keymap.set("n", "\\w", "<cmd>MatchupWhereAmI??<cr>", { noremap = true })
+
+  require("nvim-treesitter.configs").setup({
+    matchup = {
+      enable = true,
+    },
+  })
+end
+
 -------------------- kosayoda/nvim-lightbulb
 local function lightbulb()
   fn.sign_define('LightBulbSign', { text = "⚡" })
@@ -701,4 +731,5 @@ return {
   sj = sj,
   highlightedyank = highlightedyank,
   matcharea = matcharea,
+  matchup = matchup,
 }
