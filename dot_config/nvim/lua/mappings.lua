@@ -109,6 +109,12 @@ local function core()
   end)
   map("n", "^", "g^")
   map("n", "&", "g^")
+  map('n', '(', function() fn.search('(') end)
+  map('n', ')', function() fn.search(')') end)
+  map('n', '[', function() fn.search('[') end)
+  map('n', ']', function() fn.search(']') end)
+  map('n', '{', function() fn.search('{') end)
+  map('n', '}', function() fn.search('}') end)
 
   -- Buffers
   map("n", "<Leader>q", ":bwipeout!<CR>", silent)
@@ -353,6 +359,7 @@ local function hydra()
       { '<Up>', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end },
       { '<C-Up>', function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sWb') end },
       { '<C-Down>', function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sW') end },
+      -- vim.fn.search("[({[]")
     }
   })
 
@@ -360,7 +367,6 @@ local function hydra()
   map({ 'n', 'x' }, "<Up>", function() jump:activate() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
   map({ 'n', 'x' }, "<C-Up>", function() jump:activate() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sWb') end)
   map({ 'n', 'x' }, "<C-Down>", function() jump:activate() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sW') end)
-  -- \S\(\n^$\n\s*\)\@=
 
 end
 
