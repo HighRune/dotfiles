@@ -94,6 +94,18 @@ local function bufferline()
   })
 end
 
+local function matchup()
+  augroup("matchup", { clear = true })
+  autocmd("ColorScheme", {
+    group = "matchup",
+    pattern = "*",
+    callback = function()
+      hi(0, 'MatchParen', { fg = 'white', italic = true, bold = true })
+      -- hi(0, 'MatchBackground ', { bg = 'grey', italic = true })
+    end
+  })
+end
+
 local function lightbulb()
   augroup("lightbulb", { clear = true })
   autocmd({ 'CursorHold', 'CursorHoldI' }, {
@@ -177,4 +189,5 @@ return {
   coq = coq,
   lightbulb = lightbulb,
   sj = sj,
+  matchup = matchup,
 }
