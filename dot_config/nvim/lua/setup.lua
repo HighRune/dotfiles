@@ -40,7 +40,7 @@ end
 local function matcharea()
   require("hl_match_area").setup({
     n_lines_to_search = 100,
-    highlight_in_insert_mode = true,
+    highlight_in_insert_mode = false,
     delay = 0,
   })
 end
@@ -195,6 +195,7 @@ local function matchup()
   g.matchup_transmute_enabled = 1
   g.matchup_matchparen_enabled = 1
   g.matchup_override_vimtex = 1
+  g.matchup_matchparen_hi_background = 1
   g.matchup_matchparen_offscreen = { method = "popup", fullwidth = 1, }
 end
 
@@ -388,7 +389,10 @@ local function treesitter()
     indent = { enable = true, },
     autopairs = { enable = true, }, -- windwp/nvim-autopairs
     autotag = { enable = true, }, -- windwp/nvim-ts-autotag
-    matchup = { enable = true, }, -- andymass/vim-matchup
+    matchup = { -- andymass/vim-matchup
+      enable = true,
+      disable_virtual_text = true,
+    },
     rainbow = { -- p00f/nvim-ts-rainbow
       enable = false,
       max_file_lines = nil,
