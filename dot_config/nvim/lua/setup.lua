@@ -36,15 +36,6 @@ local function stayinplace()
   require("stay-in-place").setup()
 end
 
--------------------- rareitems/hl_match_area.nvim
-local function matcharea()
-  require("hl_match_area").setup({
-    n_lines_to_search = 100,
-    highlight_in_insert_mode = false,
-    delay = 0,
-  })
-end
-
 -------------------- cshuaimin/ssr.nvim
 local function ssr()
   require("ssr").setup {
@@ -719,6 +710,5 @@ return {
   sniprun = sniprun,
   sj = sj,
   highlightedyank = highlightedyank,
-  matcharea = matcharea,
   matchup = matchup,
 }
