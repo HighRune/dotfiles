@@ -15,33 +15,7 @@ return require("packer").startup({
     use({
       'andymass/vim-matchup',
       config = function()
-      vim.cmd("let g:loaded_matchit = 1")
-        vim.g.matchup_matchparen_nomode = "i"
-        vim.g.matchup_matchparen_pumvisible = 0
-        vim.g.matchup_matchparen_deferred = 1
-        vim.g.matchup_matchparen_deferred_show_delay = 0
-        vim.g.matchup_matchparen_deferred_hide_delay = 0
-        -- vim.g.matchup_matchparen_offscreen = {'method': 'popup'}
-        vim.g.matchup_motion_override_Npercent = 0
-        vim.g.matchup_surround_enabled = 1
-        vim.g.matchup_motion_enabled = 1
-        vim.g.matchup_text_obj_enabled = 1
-        vim.g.matchup_transmute_enabled = 1
-        vim.g.matchup_matchparen_enabled = 1
-        vim.g.matchup_override_vimtex = 1
-
-        vim.g.matchup_matchparen_offscreen = {
-          method = "popup",
-          fullwidth = 1,
-        }
-        vim.g.matchup_matchparen_enabled = 1
-        vim.keymap.set("n", "\\w", "<cmd>MatchupWhereAmI??<cr>", { noremap = true })
-
-        require("nvim-treesitter.configs").setup({
-          matchup = {
-            enable = true,
-          },
-        })
+        require("setup").matchup()
       end
     })
     use({
