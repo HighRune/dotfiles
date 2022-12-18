@@ -31,7 +31,7 @@ return require("packer").startup({
     use({
       'rareitems/hl_match_area.nvim',
       config = function()
-        require("setup").matcharea()
+        -- require("setup").matcharea()
       end
     })
     use({
@@ -76,6 +76,7 @@ return require("packer").startup({
         -- autocommand will have no effect on previously sourced colorschemes so it must be added before any colorscheme is sourced
         require('autocmd').bufferline()
         require('autocmd').sj()
+        require('autocmd').matchup()
         -- require('autocmd').leap()
       end,
       config = function()
