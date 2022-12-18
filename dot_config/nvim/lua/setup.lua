@@ -180,14 +180,14 @@ local function sj()
   })
 end
 
+-------------------- andymass/vim-matchup
 local function matchup()
   g.loaded_matchit = 1
   g.matchup_matchparen_nomode = "i"
   g.matchup_matchparen_pumvisible = 0
-  g.matchup_matchparen_deferred = 1
+  g.matchup_matchparen_deferred = 0
   g.matchup_matchparen_deferred_show_delay = 0
   g.matchup_matchparen_deferred_hide_delay = 0
-  -- vim.g.matchup_matchparen_offscreen = {'method': 'popup'}
   g.matchup_motion_override_Npercent = 0
   g.matchup_surround_enabled = 1
   g.matchup_motion_enabled = 1
@@ -195,19 +195,7 @@ local function matchup()
   g.matchup_transmute_enabled = 1
   g.matchup_matchparen_enabled = 1
   g.matchup_override_vimtex = 1
-
-  g.matchup_matchparen_offscreen = {
-    method = "popup",
-    fullwidth = 1,
-  }
-  g.matchup_matchparen_enabled = 1
-  vim.keymap.set("n", "\\w", "<cmd>MatchupWhereAmI??<cr>", { noremap = true })
-
-  require("nvim-treesitter.configs").setup({
-    matchup = {
-      enable = true,
-    },
-  })
+  g.matchup_matchparen_offscreen = { method = "popup", fullwidth = 1, }
 end
 
 -------------------- kosayoda/nvim-lightbulb
@@ -400,9 +388,8 @@ local function treesitter()
     indent = { enable = true, },
     autopairs = { enable = true, }, -- windwp/nvim-autopairs
     autotag = { enable = true, }, -- windwp/nvim-ts-autotag
-    -- matchup = { enable = true, }, -- andymass/vim-matchup
-    -- p00f/nvim-ts-rainbow
-    rainbow = {
+    matchup = { enable = true, }, -- andymass/vim-matchup
+    rainbow = { -- p00f/nvim-ts-rainbow
       enable = false,
       max_file_lines = nil,
       colors = {
@@ -411,9 +398,7 @@ local function treesitter()
         "#FAFF00"
       },
     },
-
-    -- nvim-treesitter/nvim-treesitter-textobjects
-    textobjects = {
+    textobjects = { -- nvim-treesitter/nvim-treesitter-textobjects
       select = {
         enable = true,
         lookahead = true,
