@@ -176,9 +176,9 @@ local function matchup()
   g.loaded_matchit = 1
   g.matchup_matchparen_nomode = "i"
   g.matchup_matchparen_pumvisible = 0
-  g.matchup_matchparen_deferred = 0
-  g.matchup_matchparen_deferred_show_delay = 0
-  g.matchup_matchparen_deferred_hide_delay = 0
+  g.matchup_matchparen_deferred = 1
+  g.matchup_matchparen_deferred_show_delay = 50
+  g.matchup_matchparen_deferred_hide_delay = 50
   g.matchup_motion_override_Npercent = 0
   g.matchup_surround_enabled = 1
   g.matchup_motion_enabled = 1
