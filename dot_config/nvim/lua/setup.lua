@@ -193,6 +193,7 @@ end
 local function matchup()
   g.loaded_matchit = 1
   g.matchup_matchparen_nomode = "i"
+  g.matchup_mappings_enabled = 0
   g.matchup_matchparen_pumvisible = 0
   g.matchup_matchparen_deferred = 1
   g.matchup_matchparen_deferred_show_delay = 50
