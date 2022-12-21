@@ -240,7 +240,7 @@ end
 
 -------------------- woosaaahh/sj.nvim
 local function sj()
-  map("n", "s", require("sj").run)
+  map({ 'n', 'o', 'x' }, 's', require("sj").run)
 end
 
 -------------------- lewis6991/gitsigns.nvim
