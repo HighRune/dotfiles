@@ -16,6 +16,7 @@ return require("packer").startup({
       'andymass/vim-matchup',
       config = function()
         require("setup").matchup()
+        require("mappings").matchup()
       end
     })
     use({
