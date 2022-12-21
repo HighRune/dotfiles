@@ -197,6 +197,12 @@ local function fzf()
   -- map("n", "<Leader>x", "<cmd>lua require('fzf-lua').quickfix({multiprocess=true})<CR>")
 end
 
+-------------------- andymass/vim-matchup
+local function matchup()
+  map("n", "<Nop>", '<plug>(matchup-[%)')
+  map("n", "<Nop>", '<plug>(matchup-]%)')
+end
+
 -------------------- jonatan-branting/nvim-better-n
 local function bettern()
   map("n", "n", require("better-n").n, { nowait = true })
@@ -457,4 +463,5 @@ return {
   sniprun = sniprun,
   sideways = sideways,
   putter = putter,
+  matchup = matchup,
 }
