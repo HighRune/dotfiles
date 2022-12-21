@@ -50,6 +50,24 @@ local function ssr()
   }
 end
 
+-------------------- kylechui/nvim-surround
+local function surround()
+  require("nvim-surround").setup({
+    keymaps = {
+      insert = false,
+      insert_line = false,
+      normal_cur = false,
+      normal_line = false,
+      normal_cur_line = false,
+      normal = "yS",
+      delete = "dS",
+      change = "cS",
+      visual = "S",
+      visual_line = "gS",
+    },
+  })
+end
+
 -------------------- numToStr/Comment.nvim
 local function comment()
   require("Comment").setup()
@@ -711,4 +729,5 @@ return {
   sj = sj,
   highlightedyank = highlightedyank,
   matchup = matchup,
+  surround = surround,
 }
