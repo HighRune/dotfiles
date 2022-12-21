@@ -261,7 +261,7 @@ return require("packer").startup({
     use({
       "kylechui/nvim-surround",
       config = function()
-        require("nvim-surround").setup({})
+        require("setup").surround()
       end
     })
     use("tpope/vim-abolish")
