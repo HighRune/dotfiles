@@ -199,8 +199,8 @@ end
 
 -------------------- andymass/vim-matchup
 local function matchup()
-  map("n", "<Nop>", '<plug>(matchup-[%)')
-  map("n", "<Nop>", '<plug>(matchup-]%)')
+  map({ "n", "x" }, "%", '<plug>(matchup-%)')
+  map({ "n", "x" }, "g%", '<plug>(matchup-g%)')
 end
 
 -------------------- jonatan-branting/nvim-better-n
