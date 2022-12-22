@@ -16,6 +16,7 @@ local remap = { remap = true }
 
 local function core()
   map("x", "<C-n>", ":Norm ")
+  map("n", "<Leader>ch", "<cmd>silent !google-chrome-stable %:p<CR>")
 
   -- Help
   cmd [[command! -nargs=1 -complete=help H h <args> | only]]
@@ -33,8 +34,8 @@ local function core()
   map("", "q", "<Nop>")
 
   -- Save
-  map("n", "<C-s>", ":silent write<CR>")
-  map("i", "<C-s>", "<Esc>`^:silent write<CR>")
+  map("n", "<C-s>", "<cmd>silent write<CR>")
+  map("i", "<C-s>", "<Esc>`^<cmd>silent write<CR>")
 
   -- Edit
   map("i", "ù", "<Esc>`^u")
