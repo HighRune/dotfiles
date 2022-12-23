@@ -16,7 +16,7 @@ local remap = { remap = true }
 
 local function core()
   map("x", "<C-n>", ":Norm ")
-  map("n", "<Leader>ch", "<cmd>silent !google-chrome-stable %:p<CR>")
+  map("n", "<Leader>oc", "<cmd>silent !google-chrome-stable %:p<CR>")
 
   -- Help
   cmd [[command! -nargs=1 -complete=help H h <args> | only]]
@@ -118,12 +118,12 @@ local function core()
   map('n', '{', function() fn.search('{', 'b') end)
 
   -- Buffers
-  map("n", "<Leader>q", ":bwipeout!<CR>", silent)
-  -- map("n", "<Tab>", ":bnext<CR>", silent)
-  -- map("n", "<S-Tab>", ":bprevious<CR>", silent)
+  map("n", "<Leader>q", "<cmd>bwipeout!<CR>", silent)
+  -- map("n", "<Tab>", "<cmd>bnext<CR>", silent)
+  -- map("n", "<S-Tab>", "<cmd>bprevious<CR>", silent)
 
   -- Quickfix list
-  map("n", "<C-q>", ':q!<CR>')
+  map("n", "<C-q>", '<cmd>q!<CR>')
 end
 
 -------------------- Runeword/putter.nvim
@@ -186,7 +186,7 @@ end
 
 -------------------- williamboman/mason.nvim
 local function mason()
-  map("n", "<Leader>m", ':Mason<Cr>')
+  map("n", "<Leader>m", '<cmd>Mason<Cr>')
 end
 
 -------------------- junegunn/fzf
@@ -230,8 +230,8 @@ end
 
 -------------------- AndrewRadev/sideways.vim
 local function sideways()
-  map("n", "<Left>", ":SidewaysLeft<CR>")
-  map("n", "<Right>", ":SidewaysRight<CR>")
+  map("n", "<Left>", "<cmd>SidewaysLeft<CR>")
+  map("n", "<Right>", "<cmd>SidewaysRight<CR>")
 end
 
 -------------------- ggandor/leap.nvim
@@ -264,10 +264,10 @@ end
 
 -------------------- akinsho/bufferline.nvim
 local function bufferline()
-  map("n", "<tab>", ":BufferLineCycleNext<CR>", silent)
-  map("n", "<s-tab>", ":BufferLineCyclePrev<CR>", silent)
-  map("n", "<pageup>", ":BufferLineMovePrev<CR>", silent)
-  map("n", "<pagedown>", ":BufferLineMoveNext<CR>", silent)
+  map("n", "<tab>", "<cmd>BufferLineCycleNext<CR>", silent)
+  map("n", "<s-tab>", "<cmd>BufferLineCyclePrev<CR>", silent)
+  map("n", "<pageup>", "<cmd>BufferLineMovePrev<CR>", silent)
+  map("n", "<pagedown>", "<cmd>BufferLineMoveNext<CR>", silent)
   map("n", "<a-1>", function() require("bufferline").go_to_buffer(1) end)
   map("n", "<a-2>", function() require("bufferline").go_to_buffer(2) end)
   map("n", "<a-3>", function() require("bufferline").go_to_buffer(3) end)
@@ -283,13 +283,13 @@ end
 local function splitjoin()
   g.splitjoin_split_mapping = ""
   g.splitjoin_join_mapping = ""
-  map("n", "gj", ":SplitjoinJoin<CR>")
-  map("n", "gk", ":SplitjoinSplit<CR>")
+  map("n", "gj", "<cmd>silent SplitjoinJoin<CR>")
+  map("n", "gk", "<cmd>silent SplitjoinSplit<CR>")
 end
 
 -------------------- is0n/fm-nvim
 local function fm()
-  map("n", "<leader>n", ":Vifm<CR>")
+  map("n", "<leader>n", "<cmd>Vifm<CR>")
 end
 
 -------------------- monaqa/dial.nvim
@@ -307,7 +307,7 @@ local function lspconfig(buffer)
   map("n", "gd", lsp.buf.definition, { buffer = buffer })
   map("n", "gr", lsp.buf.references, { buffer = buffer })
   map('n', '<Leader>f', lsp.buf.format, { buffer = buffer })
-  map("n", '<Leader>a', ':CodeActionMenu<Enter>', { buffer = buffer })
+  map("n", '<Leader>a', '<cmd>CodeActionMenu<Enter>', { buffer = buffer })
   -- map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
   map("n", '<ScrollWheelUp>', diagnostic.goto_prev, { buffer = buffer })
   map("n", '<ScrollWheelDown>', diagnostic.goto_next, { buffer = buffer })
@@ -319,7 +319,7 @@ end
 
 -------------------- weilbith/nvim-code-action-menu
 local function codeactionmenu()
-  -- map("n", '<leader>ca', ':CodeActionMenu<Enter>')
+  -- map("n", '<leader>ca', '<cmd>CodeActionMenu<Enter>')
 end
 
 -------------------- ms-jpq/coq_nvim
@@ -334,8 +334,8 @@ end
 -------------------- anuvyklack/hydra.nvim
 local function hydra()
   require('hydra')({ name = 'newline', mode = { 'n', 'x' }, body = 'g', heads = {
-    { 'o', '<cmd>:set paste<CR>m`o<Esc>``:set nopaste<CR>' },
-    { 'O', '<cmd>:set paste<CR>m`O<Esc>``:set nopaste<CR>' },
+    { 'o', '<cmd>set paste<CR>m`o<Esc>``<cmd>set nopaste<CR>' },
+    { 'O', '<cmd>set paste<CR>m`O<Esc>``<cmd>set nopaste<CR>' },
   } })
 
   local scroll = require('hydra')({
