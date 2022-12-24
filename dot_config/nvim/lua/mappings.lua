@@ -16,7 +16,7 @@ local remap = { remap = true }
 
 local function core()
   map("x", "<C-n>", ":Norm ")
-  map("n", "<Leader>oc", "<cmd>silent !google-chrome-stable %:p<CR>")
+  map("n", "<Leader>ch", "<cmd>silent !google-chrome-stable %:p<CR>")
 
   -- Help
   cmd [[command! -nargs=1 -complete=help H h <args> | only]]
@@ -110,8 +110,6 @@ local function core()
   end)
   map("n", "^", "g^")
   map("n", "&", "g^")
-  map('n', ')', function() fn.search('(') end)
-  map('n', '(', function() fn.search('(', 'b') end)
   map('n', ']', function() fn.search('[') end)
   map('n', '[', function() fn.search('[', 'b') end)
   map('n', '}', function() fn.search('{') end)
