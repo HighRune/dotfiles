@@ -418,30 +418,23 @@ local function treesitter()
         lookahead = true,
         keymaps = {
           ["f"] = "@function.outer",
+          ["af"] = "@function.inner",
           ["if"] = "@function.inner",
           ["F"] = "@call.outer",
+          ["aF"] = "@call.outer",
           ["iF"] = "@call.inner",
         },
       },
-      -- move = {
-      -- 	enable = true,
-      -- 	set_jumps = true,
-      -- 	goto_next_start = {
-      -- 		["]]"] = "@function.outer",
-      -- 	},
-      -- 	goto_previous_start = {
-      -- 		["[["] = "@function.outer",
-      -- 	},
-      -- },
-      -- swap = {
-      -- 	enable = true,
-      -- 	swap_next = {
-      -- 		["<c-k>"] = "@parameter.inner",
-      -- 	},
-      -- 	swap_previous = {
-      -- 		["<c-j>"] = "@parameter.inner",
-      -- 	},
-      -- },
+      move = {
+        enable = true,
+        set_jumps = true,
+        goto_next_start = {
+          [")"] = "@parameter.inner",
+        },
+        goto_previous_start = {
+          ["("] = "@parameter.inner",
+        },
+      },
     },
 
     -- nvim-treesitter/playground
