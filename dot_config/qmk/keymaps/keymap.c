@@ -77,7 +77,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 };
 
 enum combos { 
-  L12ENT,
   L1ALT,
   L1CS,
   L1CTL,
@@ -108,7 +107,6 @@ enum combos {
   L3TREMAU,
 };
 
-const uint16_t PROGMEM l12ent[] = { LT(1,KC_TAB), LT(2,KC_ENT), COMBO_END};
 const uint16_t PROGMEM l1alt[] = { LT(1,KC_TAB), KC_A, COMBO_END};
 const uint16_t PROGMEM l1cs[] = { LT(1,KC_TAB), KC_E, KC_U, COMBO_END};
 const uint16_t PROGMEM l1ctl[] = { LT(1,KC_TAB), KC_U, COMBO_END};
@@ -139,7 +137,6 @@ const uint16_t PROGMEM l3tremai[] = { LT(3,KC_ESC), KC_X, COMBO_END};
 const uint16_t PROGMEM l3tremau[] = { LT(3,KC_ESC), KC_K, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-  [L12ENT] = COMBO(l12ent, KC_ENT),
   [L1ALT] = COMBO(l1alt, OSM(MOD_LALT)),
   [L1CS] = COMBO(l1cs, OSM(MOD_LCTL|MOD_LSFT)),
   [L1CTL] = COMBO(l1ctl, OSM(MOD_LCTL)),
