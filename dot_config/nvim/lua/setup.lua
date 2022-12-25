@@ -428,12 +428,12 @@ local function treesitter()
       move = {
         enable = true,
         set_jumps = true,
-        goto_next_start = {
-          [")"] = "@parameter.inner",
-        },
-        goto_previous_start = {
-          ["("] = "@parameter.inner",
-        },
+        -- goto_next_start = {
+        --   [")"] = "@parameter.inner",
+        -- },
+        -- goto_previous_start = {
+        --   ["("] = "@parameter.inner",
+        -- },
       },
     },
 
