@@ -50,21 +50,21 @@ return function()
     on_attach(client, buffer)
   end
 
-  -- local function on_attach_volar(client, buffer)
-  --   client.server_capabilities.documentFormattingProvider = false
-  --   on_attach(client, buffer)
-  -- end
-
   local function on_attach_vuels(client, buffer)
     client.server_capabilities.documentFormattingProvider = false
     on_attach(client, buffer)
   end
 
+  -- local function on_attach_volar(client, buffer)
+  --   client.server_capabilities.documentFormattingProvider = false
+  --   on_attach(client, buffer)
+  -- end
+
   -- local function on_attach_cssls(client, buffer)
   --   client.server_capabilities.documentFormattingProvider = true
   --   on_attach(client, buffer)
   -- end
-  --
+
   -- local function on_attach_html(client, buffer)
   --   client.server_capabilities.documentFormattingProvider = true
   --   on_attach(client, buffer)
@@ -78,41 +78,49 @@ return function()
     settings = { format = { enable = false } },
     flags = lsp_flags,
   })
+
   lspconfig['eslint'].setup({
     on_attach = on_attach_eslint,
     settings = { format = { enable = true } },
     flags = lsp_flags,
   })
+
   lspconfig['sumneko_lua'].setup({
     on_attach = on_attach_sumneko_lua,
     settings = { format = { enable = true } },
     flags = lsp_flags,
   })
+
   lspconfig['yamlls'].setup({
     on_attach = on_attach_sumneko_lua,
     settings = { format = { enable = true } },
     flags = lsp_flags,
   })
+
   lspconfig['bashls'].setup({
     on_attach = on_attach_bashls,
     settings = { format = { enable = true } },
     flags = lsp_flags,
   })
-  -- lspconfig['volar'].setup({
-  --   on_attach = on_attach_volar,
-  --   settings = { format = { enable = false } },
-  --   flags = lsp_flags,
-  -- })
+
   lspconfig['vuels'].setup({
     on_attach = on_attach_vuels,
     settings = { format = { enable = false } },
     flags = lsp_flags,
   })
+
+  -- lspconfig['volar'].setup({
+  --   on_attach = on_attach_volar,
+  --   settings = { format = { enable = false } },
+  --   flags = lsp_flags,
+  -- })
+
   -- lspconfig['cssls'].setup {
   --   on_attach = on_attach_cssls,
   --   settings = { format = { enable = true } },
   --   flags = lsp_flags,
   -- }
+
   -- lspconfig['html'].setup {
   --   on_attach = on_attach_html,
   --   settings = { format = { enable = true } },
@@ -120,21 +128,6 @@ return function()
   -- }
 end
 
--- require("nvim-lsp-installer").on_server_ready(function(server)
--- local opts = {}
--- opts.on_attach = on_attach
--- opts.flags = { debounce_text_changes = 0 }
---
--- if server.name == "eslint" then
---   opts.on_attach = on_attach_eslint
---   opts.settings = { format = { enable = true } }
--- end
---
--- if server.name == "tsserver" then
---   opts.on_attach = on_attach_tsserver
---   opts.settings = { format = { enable = false } }
--- end
---
 -- if server.name == "volar" then
 --   opts.on_attach = on_attach_volar
 --   opts.settings = { format = { enable = false } }
@@ -176,19 +169,3 @@ end
 --     }
 --   }
 -- end
-
--- if server.name == "sumneko_lua" then
---   opts.on_attach = on_attach_sumneko_lua
---   opts.settings = { format = { enable = true } }
--- end
---
--- if server.name == "yamlls" then
---   opts.on_attach = on_attach_sumneko_lua
---   opts.settings = { format = { enable = true } }
--- end
---
--- -- This setup() function is exactly the same as lspconfig's setup function (:help lspconfig-quickstart)
--- server:setup(require("coq").lsp_ensure_capabilities(opts))
--- cmd([[ do User LspAttachBuffers ]])
-
--- end)
