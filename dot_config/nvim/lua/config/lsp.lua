@@ -55,6 +55,11 @@ return function()
     on_attach(client, buffer)
   end
 
+  local function on_attach_marksman(client, buffer)
+    client.server_capabilities.documentFormattingProvider = false
+    on_attach(client, buffer)
+  end
+
   -- local function on_attach_volar(client, buffer)
   --   client.server_capabilities.documentFormattingProvider = false
   --   on_attach(client, buffer)
@@ -106,6 +111,12 @@ return function()
   lspconfig['vuels'].setup({
     on_attach = on_attach_vuels,
     settings = { format = { enable = false } },
+    flags = lsp_flags,
+  })
+
+  lspconfig['marksman'].setup({
+    on_attach = on_attach_marksman,
+    settings = { format = { enable = true } },
     flags = lsp_flags,
   })
 
