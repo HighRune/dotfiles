@@ -73,39 +73,6 @@ local function comment()
   require("Comment").setup()
 end
 
-local function packer()
-  return {
-    display = {
-      open_fn = function()
-        return require('packer.util').float({ border = 'single' })
-      end,
-      header_sym = '',
-      keybindings = {
-        quit = 'q',
-        toggle_info = 'o',
-        -- toggle_update = '',
-        -- continue = '',
-        -- diff = '',
-        -- prompt_revert = '',
-      }
-    }
-    -- display = {
-    --   open_fn = function()
-    --     return require("packer.util").float({
-    --       border = "",
-    --       width = 999,
-    --       height = 999,
-    --     })
-    --   end,
-    -- },
-    -- lewis6991/impatient.nvim
-    -- compile_path = fn.stdpath("config") .. "/lua/packer_compiled.lua",
-    -- profile = {
-    -- 	enable = true,
-    -- },
-  }
-end
-
 -------------------- gelguy/wilder.nvim
 local function wilder()
   local wilder = require('wilder')
@@ -121,7 +88,7 @@ local function wilder()
     wilder.branch(
       wilder.cmdline_pipeline({
         fuzzy = 1,
-        set_pcre2_pattern = 1,
+        set_pcre2_pattern = 0,
       }),
       wilder.python_search_pipeline({
         pattern = 'fuzzy',
@@ -692,7 +659,6 @@ local function livecommand()
 end
 
 return {
-  packer = packer,
   colorizer = colorizer,
   project = project,
   numb = numb,
