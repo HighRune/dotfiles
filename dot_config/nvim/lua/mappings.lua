@@ -178,12 +178,6 @@ local function telescope()
   -- map("n", "<leader>b", "<cmd>Telescope buffers<cr>", opts)
 end
 
--------------------- wbthomason/packer.nvim
-local function packer()
-  map("n", "<Leader>ps", require('packer').sync)
-  map("n", "<Leader>pc", require('packer').compile)
-end
-
 -------------------- williamboman/mason.nvim
 local function mason()
   map("n", "<Leader>m", '<cmd>Mason<Cr>')
@@ -453,7 +447,6 @@ return {
   hydra = hydra,
   leap = leap,
   bettern = bettern,
-  packer = packer,
   pulse = pulse,
   sj = sj,
   codeactionmenu = codeactionmenu,
