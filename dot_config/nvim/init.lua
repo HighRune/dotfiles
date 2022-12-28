@@ -58,7 +58,7 @@ require("lazy").setup({
     "mfussenegger/nvim-dap",
     config = function()
       require('mappings').dap()
-      require('config.dap')
+      require('setup.dap')
     end
   },
   {
@@ -95,7 +95,7 @@ require("lazy").setup({
   },
   {
     "neovim/nvim-lspconfig",
-    config = require("config.lsp")()
+    config = require("setup.lsp")
   },
   {
     "williamboman/mason.nvim",
@@ -128,6 +128,7 @@ require("lazy").setup({
     branch = "coq",
     config = function()
       require("autocmd").coq()
+      require('mappings').coq()
       require("setup").coq()
     end,
   },
@@ -223,7 +224,7 @@ require("lazy").setup({
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "kyazdani42/nvim-web-devicons" },
-    config = require('config.lualine')(),
+    config = require('setup.lualine')
   },
   {
     "ibhagwan/fzf-lua",
