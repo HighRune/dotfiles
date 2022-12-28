@@ -132,6 +132,11 @@ local function coq()
     pattern = "*/.config/nvim/coq-user-snippets/*.snip",
     command = "silent! COQsnips compile",
   })
+  autocmd("BufEnter", {
+    group = "coq",
+    pattern = "*",
+    command = "silent! COQnow",
+  })
 end
 
 local function indentscope()
