@@ -128,8 +128,8 @@ require("lazy").setup({
     branch = "coq",
     config = function()
       require("autocmd").coq()
-      require('mappings').coq()
       require("setup").coq()
+      require('mappings').coq()
     end,
   },
   {
