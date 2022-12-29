@@ -132,10 +132,10 @@ local function coq()
     pattern = "*/.config/nvim/coq-user-snippets/*.snip",
     command = "silent! COQsnips compile",
   })
-  autocmd("BufEnter", {
+  autocmd("VimEnter", {
     group = "coq",
     pattern = "*",
-    command = "silent! COQnow",
+    command = "silent! COQnow -s",
   })
 end
 
