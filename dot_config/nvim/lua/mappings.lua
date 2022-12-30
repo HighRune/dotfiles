@@ -23,7 +23,7 @@ local function core()
   cmd [[cnoreabbrev <expr> h  getcmdtype() == ":" && getcmdline() == 'h' ? 'H' : 'h']]
 
   -- Terminal
-  map('n', '<Leader>t', ':te<CR>ireset<CR>')
+  -- map('n', '<Leader>t', ':te<CR>ireset<CR>')
   map('t', '<Esc>', [[<C-\><C-n>]])
 
   -- Unmap
@@ -124,6 +124,9 @@ local function core()
 
   -- Quickfix list
   map("n", "<C-q>", '<cmd>q!<CR>')
+
+  -------------------- folke/lazy.nvim
+  map('n', '<leader>l', '<Cmd>Lazy<CR>')
 end
 
 -------------------- Runeword/putter.nvim
@@ -244,6 +247,11 @@ local function sj()
   map({ 'n', 'o', 'x' }, 's', require("sj").run)
 end
 
+-------------------- dhruvasagar/vim-table-mode
+local function tablemode()
+  -- map('n', '<Leader>tt', ':TableModeToggle<CR>')
+end
+
 -------------------- lewis6991/gitsigns.nvim
 local function gitsigns(buffer)
   map({ 'n', 'x' }, "<leader>ga", package.loaded.gitsigns.stage_buffer, { buffer = buffer, desc = 'git add file' })
@@ -305,7 +313,7 @@ local function lspconfig(buffer)
   -- map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
   map("n", '<ScrollWheelUp>', diagnostic.goto_prev, { buffer = buffer })
   map("n", '<ScrollWheelDown>', diagnostic.goto_next, { buffer = buffer })
-  map('n', '<Leader>l', diagnostic.setloclist, { noremap = true, silent = true })
+  -- map('n', '<Leader>l', diagnostic.setloclist, { noremap = true, silent = true })
   map('n', '<Leader>x', diagnostic.setqflist, { noremap = true, silent = true })
   -- lsp.buf.formatting_seq_sync(nil, 6000, { 'tsserver', 'html', 'cssls', 'vuels', 'eslint' })
   -- lsp.buf.formatting_seq_sync
@@ -458,4 +466,6 @@ return {
   sideways = sideways,
   putter = putter,
   matchup = matchup,
+  tablemode = tablemode,
+  lazy = lazy,
 }
