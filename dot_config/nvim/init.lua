@@ -39,6 +39,13 @@ require("lazy").setup({
   "kyazdani42/nvim-web-devicons",
   "kana/vim-arpeggio",
   {
+    'dhruvasagar/vim-table-mode',
+    config = function()
+      vim.g.table_mode_disable_mappings = 1
+      vim.g.table_mode_disable_tableize_mappings = 1
+    end
+  },
+  {
     'gelguy/wilder.nvim',
     dependencies = { "romgrk/fzy-lua-native" },
     -- rocks = 'pcre2',
