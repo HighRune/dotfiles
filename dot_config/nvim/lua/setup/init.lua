@@ -50,6 +50,12 @@ local function ssr()
   }
 end
 
+-------------------- dhruvasagar/vim-table-mode
+local function tablemode()
+  g.table_mode_disable_mappings = 1
+  g.table_mode_disable_tableize_mappings = 1
+end
+
 -------------------- kylechui/nvim-surround
 local function surround()
   require("nvim-surround").setup({
@@ -688,4 +694,5 @@ return {
   highlightedyank = highlightedyank,
   matchup = matchup,
   surround = surround,
+  tablemode = tablemode,
 }
