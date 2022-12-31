@@ -249,7 +249,7 @@ end
 
 -------------------- dhruvasagar/vim-table-mode
 local function tablemode()
-  -- map('n', '<Leader>tt', ':TableModeToggle<CR>')
+  map('n', '<Leader>tt', ':TableModeToggle<CR>')
 end
 
 -------------------- lewis6991/gitsigns.nvim
