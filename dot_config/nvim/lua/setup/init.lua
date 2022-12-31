@@ -31,6 +31,11 @@ local function numb()
   require("numb").setup()
 end
 
+-------------------- chrisgrieser/nvim-various-textobjs
+local function varioustextobjs()
+  require("various-textobjs").setup({ useDefaultKeymaps = false })
+end
+
 -------------------- gbprod/stay-in-place.nvim
 local function stayinplace()
   require("stay-in-place").setup()
@@ -695,4 +700,5 @@ return {
   matchup = matchup,
   surround = surround,
   tablemode = tablemode,
+  varioustextobjs = varioustextobjs,
 }
