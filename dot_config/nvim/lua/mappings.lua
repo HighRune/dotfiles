@@ -249,7 +249,15 @@ end
 
 -------------------- dhruvasagar/vim-table-mode
 local function tablemode()
-  map('n', '<Leader>tt', ':TableModeToggle<CR>')
+  map('n', '<Leader>tt', '<Cmd>TableModeToggle<CR>')
+end
+
+-------------------- chrisgrieser/nvim-various-textobjs
+local function varioustextobjs()
+  map({ "o", "x" }, "ak", function() require("various-textobjs").key(false) end)
+  map({ "o", "x" }, "ik", function() require("various-textobjs").key(true) end)
+  map({ "o", "x" }, "av", function() require("various-textobjs").value(false) end)
+  map({ "o", "x" }, "iv", function() require("various-textobjs").value(true) end)
 end
 
 -------------------- lewis6991/gitsigns.nvim
@@ -467,5 +475,5 @@ return {
   putter = putter,
   matchup = matchup,
   tablemode = tablemode,
-  lazy = lazy,
+  varioustextobjs = varioustextobjs,
 }
