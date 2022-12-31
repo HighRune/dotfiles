@@ -30,19 +30,23 @@ require("lazy").setup({
   },
   {
     'andymass/vim-matchup',
-    config = function()
+    init = function()
       require("setup").matchup()
+    end,
+    config = function()
       require("mappings").matchup()
-    end
+    end,
   },
   "nvim-lua/plenary.nvim",
   "kyazdani42/nvim-web-devicons",
   "kana/vim-arpeggio",
   {
     'dhruvasagar/vim-table-mode',
+    init = function()
+      require("setup").tablemode()
+    end,
     config = function()
-      vim.g.table_mode_disable_mappings = 1
-      vim.g.table_mode_disable_tableize_mappings = 1
+      require("mappings").tablemode()
     end
   },
   {
