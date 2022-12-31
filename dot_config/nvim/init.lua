@@ -291,7 +291,24 @@ require("lazy").setup({
       require("mappings").putter()
     end,
   }
-})
+},
+  {
+    performance = {
+      rtp = {
+        disabled_plugins = {
+          "gzip",
+          "matchit",
+          "matchparen",
+          "netrwPlugin",
+          "tarPlugin",
+          "tohtml",
+          "tutor",
+          "zipPlugin",
+        },
+      },
+    },
+  }
+)
 
 -- use("lewis6991/impatient.nvim")
 -- use("p00f/nvim-ts-rainbow")
