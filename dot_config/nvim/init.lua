@@ -271,12 +271,12 @@ require("lazy").setup({
       require("mappings").sideways()
     end,
   },
-  {
-    "chaoren/vim-wordmotion",
-    config = function()
-      require("setup").wordmotion()
-    end,
-  },
+  -- {
+  --   "chaoren/vim-wordmotion",
+  --   config = function()
+  --     require("setup").wordmotion()
+  --   end,
+  -- },
   {
     "kylechui/nvim-surround",
     config = function()
