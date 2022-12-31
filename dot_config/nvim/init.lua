@@ -86,6 +86,13 @@ require("lazy").setup({
     end,
   },
   {
+    "chrisgrieser/nvim-various-textobjs",
+    config = function()
+      require("setup").varioustextobjs()
+      require("mappings").varioustextobjs()
+    end,
+  },
+  {
     "folke/tokyonight.nvim",
     init = function()
       -- autocommand will have no effect on previously sourced colorschemes so it must be added before any colorscheme is sourced
@@ -277,7 +284,7 @@ require("lazy").setup({
   },
   -- {
   --   "chaoren/vim-wordmotion",
-  --   config = function()
+  --   init = function()
   --     require("setup").wordmotion()
   --   end,
   -- },
@@ -314,7 +321,6 @@ require("lazy").setup({
   }
 )
 
--- use("lewis6991/impatient.nvim")
 -- use("p00f/nvim-ts-rainbow")
 -- use("nvim-treesitter/playground")
 -- use("m-demare/hlargs.nvim")
