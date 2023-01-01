@@ -43,6 +43,7 @@
   "vim-arpeggio": { "branch": "master", "commit": "01c8fc1a72ef58e490ee0490c65ee313b1b6e843" },
   "vim-cursorword": { "branch": "master", "commit": "371fdd7fa8817c28aa09d181cfcfa3c7ca29bf56" },
   "vim-exchange": { "branch": "master", "commit": "784d63083ad7d613aa96f00021cd0dfb126a781a" },
+  "vim-gist": { "branch": "master", "commit": "5bfbb5450d9eff248f6c074de0b7800392439304" },
   "vim-highlightedyank": { "branch": "master", "commit": "f9db473137ca96c6a989ec3e2b7edf8a3189c448" },
   "vim-matchup": { "branch": "master", "commit": "db5120dd9887c988de7cd973ddb951e465d413e5" },
   "vim-search-pulse": { "branch": "master", "commit": "3ae2681332c52ed54c443e09d2ef09ae05eaa445" },
@@ -50,5 +51,6 @@
   "vim-textobj-chainmember": { "branch": "main", "commit": "f14a151c42a14e18a298aec7d943a3c7f43161dc" },
   "vim-textobj-comment": { "branch": "master", "commit": "58ae4571b76a5bf74850698f23d235eef991dd4b" },
   "vim-textobj-user": { "branch": "master", "commit": "41a675ddbeefd6a93664a4dc52f302fe3086a933" },
+  "webapi-vim": { "branch": "master", "commit": "70c49ada7827d3545a65cbdab04c5c89a3a8464e" },
   "wilder.nvim": { "branch": "master", "commit": "679f348dc90d80ff9ba0e7c470c40a4d038dcecf" }
 }
