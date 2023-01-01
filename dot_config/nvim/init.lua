@@ -50,6 +50,10 @@ require("lazy").setup({
     end
   },
   {
+    'mattn/vim-gist',
+    dependencies = { "mattn/webapi-vim" },
+  },
+  {
     'gelguy/wilder.nvim',
     dependencies = { "romgrk/fzy-lua-native" },
     -- rocks = 'pcre2',
