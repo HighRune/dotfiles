@@ -59,6 +59,7 @@ end
 local function tablemode()
   g.table_mode_disable_mappings = 1
   g.table_mode_disable_tableize_mappings = 1
+  g.table_mode_syntax = 0
 end
 
 -------------------- kylechui/nvim-surround
