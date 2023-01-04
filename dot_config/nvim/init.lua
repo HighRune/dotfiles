@@ -62,6 +62,14 @@ require("lazy").setup({
     end,
   },
   {
+    "andrewferrier/debugprint.nvim",
+    config = function()
+      require("debugprint").setup({
+        create_keymaps = false,
+      })
+    end,
+  },
+  {
     'michaelb/sniprun',
     build = 'bash ./install.sh',
     config = function()
