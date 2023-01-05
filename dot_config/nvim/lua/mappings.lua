@@ -252,6 +252,11 @@ local function tablemode()
   map('n', '<Leader>tt', '<Cmd>TableModeToggle<CR>')
 end
 
+-------------------- rareitems/printer.nvim
+local function printer()
+  map("n", "<Leader>pw", "<Plug>(printer_print)iw")
+end
+
 -------------------- chrisgrieser/nvim-various-textobjs
 local function varioustextobjs()
   map({ "o", "x" }, "ak", function() require("various-textobjs").key(false) end)
@@ -476,4 +481,5 @@ return {
   matchup = matchup,
   tablemode = tablemode,
   varioustextobjs = varioustextobjs,
+  printer = printer,
 }
