@@ -72,18 +72,8 @@ require("lazy").setup({
   {
     'rareitems/printer.nvim',
     config = function()
-      require('printer').setup({
-        formatters = {
-          typescript = function(text_inside, text_var)
-            return string.format("console.log('%s ', %s)", text_inside, text_var)
-          end,
-        },
-        add_to_inside = function(text)
-          return string.format('(%s) %s', vim.fn.line("."), text)
-        end,
-      })
-      vim.keymap.set("n", "<Leader>p", "<Plug>(printer_print)")
-      vim.keymap.set("n", "<Leader>pw", "<Plug>(printer_print)iw")
+      require("setup").printer()
+      require("mappings").printer()
     end
   },
   {
