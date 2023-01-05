@@ -31,6 +31,7 @@
   "nvim-various-textobjs": { "branch": "main", "commit": "e5848d2b391c9fd2c998b3d8d9186785553e2ac9" },
   "nvim-web-devicons": { "branch": "master", "commit": "05e1072f63f6c194ac6e867b567e6b437d3d4622" },
   "plenary.nvim": { "branch": "master", "commit": "4b7e52044bbb84242158d977a50c4cbcd85070c7" },
+  "printer.nvim": { "branch": "master", "commit": "8f8732a6e299cba8b1ad6a45173dfe8f99cbf10f" },
   "project.nvim": { "branch": "main", "commit": "685bc8e3890d2feb07ccf919522c97f7d33b94e4" },
   "putter.nvim": { "branch": "main", "commit": "73d8bacc0aac0c4f99511668184fc9e4e3f63e62" },
   "sideways.vim": { "branch": "main", "commit": "ab20cc8a6a7cb95679f99bc4ec724544f9b94c62" },
@@ -50,6 +51,7 @@
   "vim-table-mode": { "branch": "master", "commit": "9555a3e6e5bcf285ec181b7fc983eea90500feb4" },
   "vim-textobj-chainmember": { "branch": "main", "commit": "f14a151c42a14e18a298aec7d943a3c7f43161dc" },
   "vim-textobj-comment": { "branch": "master", "commit": "58ae4571b76a5bf74850698f23d235eef991dd4b" },
+  "vim-textobj-line": { "branch": "master", "commit": "1a6780d29adcf7e464e8ddbcd0be0a9df1a37339" },
   "vim-textobj-user": { "branch": "master", "commit": "41a675ddbeefd6a93664a4dc52f302fe3086a933" },
   "webapi-vim": { "branch": "master", "commit": "70c49ada7827d3545a65cbdab04c5c89a3a8464e" },
   "wilder.nvim": { "branch": "master", "commit": "679f348dc90d80ff9ba0e7c470c40a4d038dcecf" }
