@@ -288,6 +288,10 @@ require("lazy").setup({
     end,
   },
   {
+    "kana/vim-textobj-line",
+    dependencies = "kana/vim-textobj-user",
+  },
+  {
     "AndrewRadev/sideways.vim",
     config = function()
       require("mappings").sideways()
