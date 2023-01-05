@@ -62,6 +62,21 @@ local function tablemode()
   g.table_mode_syntax = 0
 end
 
+-------------------- rareitems/printer.nvim
+local function printer()
+  require('printer').setup({
+    keymap = '<Leader>p',
+    formatters = {
+      typescript = function(text_inside, text_var)
+        return string.format("console.log('%s ', %s)", text_inside, text_var)
+      end,
+    },
+    add_to_inside = function(text)
+      return string.format('(%s) %s', fn.line("."), text)
+    end,
+  })
+end
+
 -------------------- kylechui/nvim-surround
 local function surround()
   require("nvim-surround").setup({
@@ -702,4 +717,5 @@ return {
   surround = surround,
   tablemode = tablemode,
   varioustextobjs = varioustextobjs,
+  printer = printer,
 }
