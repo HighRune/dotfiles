@@ -7,9 +7,9 @@ local call = vim.call
 local api = vim.api
 
 -------------------- chaoren/vim-wordmotion
-local function wordmotion()
-  g.wordmotion_nomap = 1
-end
+-- local function wordmotion()
+--   g.wordmotion_nomap = 1
+-- end
 
 -------------------- norcalli/nvim-colorizer.lua
 local function colorizer()
@@ -360,10 +360,10 @@ local function ai()
   require('mini.ai').setup({
     custom_textobjects = {
       f = false,
-      a = gen_spec.argument({ brackets = { '%b()' } }),
-      o = gen_spec.argument({ brackets = { '%b{}' } }),
-      e = gen_spec.argument({ brackets = { '%b[]' } }),
-      -- o = gen_spec.argument({ brackets = { '%b()', '%b{}', '%b[]' } }),
+      a = gen_spec.argument({ brackets = { '%b()', '%b{}', '%b[]' } }),
+      -- a = gen_spec.argument({ brackets = { '%b()' } }),
+      -- o = gen_spec.argument({ brackets = { '%b{}' } }),
+      -- e = gen_spec.argument({ brackets = { '%b[]' } }),
       -- A = gen_spec.pair('(', ')', { type = 'balanced' }),
       -- O = gen_spec.pair('{', '}', { type = 'balanced' }),
       -- E = gen_spec.pair('[', ']', { type = 'balanced' }),
@@ -374,8 +374,8 @@ local function ai()
       inside = 'i',
       around_next = 'an',
       inside_next = 'in',
-      around_last = 'ah',
-      inside_last = 'ih',
+      around_last = 'ao',
+      inside_last = 'io',
       goto_left = '',
       goto_right = '',
     },
@@ -471,6 +471,11 @@ end
 local function codeactionmenu()
   g.code_action_menu_show_details = false
   g.code_action_menu_show_diff = true
+end
+
+-------------------- D4KU/vim-textobj-chainmember
+local function textobjchainmember()
+  g.textobj_chainmember_no_default_key_mappings = 1
 end
 
 -------------------- gbprod/cutlass.nvim
@@ -701,7 +706,6 @@ return {
   coq = coq,
   tokyonight = tokyonight,
   dial = dial,
-  wordmotion = wordmotion,
   livecommand = livecommand,
   stayinplace = stayinplace,
   lightbulb = lightbulb,
@@ -718,4 +722,5 @@ return {
   tablemode = tablemode,
   varioustextobjs = varioustextobjs,
   printer = printer,
+  textobjchainmember = textobjchainmember,
 }
