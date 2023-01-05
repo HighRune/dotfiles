@@ -283,6 +283,9 @@ require("lazy").setup({
   {
     "D4KU/vim-textobj-chainmember",
     dependencies = "kana/vim-textobj-user",
+    init = function()
+      require("setup").textobjchainmember()
+    end,
     config = function()
       require("mappings").textobjchainmember()
     end,
