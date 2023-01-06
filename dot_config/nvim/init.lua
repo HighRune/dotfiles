@@ -341,6 +341,11 @@ require("lazy").setup({
   }
 )
 
+local viewConfig = require("lazy.view.config")
+
+viewConfig.keys.details = "o"
+viewConfig.commands.build.key_plugin = "r"
+
 -- use("p00f/nvim-ts-rainbow")
 -- use("nvim-treesitter/playground")
 -- use("m-demare/hlargs.nvim")
