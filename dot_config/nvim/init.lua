@@ -153,11 +153,13 @@ require("lazy").setup({
     end,
   },
   {
-    "ms-jpq/coq_nvim",
-    branch = "coq",
+    'ms-jpq/coq_nvim',
+    branch = 'coq',
+    init = function()
+      require('setup').coq()
+    end,
     config = function()
-      require("autocmd").coq()
-      require("setup").coq()
+      require('autocmd').coq()
       require('mappings').coq()
     end,
   },
