@@ -1,4 +1,13 @@
 # override default readline bindings
 set bind-tty-special-chars off
+
 "\C-u": kill-whole-line
 "\C-\b": backward-kill-word
+
+# remap history search to ctrl+arrow
+"\e[6~": ""
+"\e[5~": ""
+"\e[A": ""
+"\e[B": ""
+"\e[1;5B": history-search-forward
+"\e[1;5A": history-search-backward
