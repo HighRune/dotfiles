@@ -66,6 +66,10 @@ cursor:
 
 live_config_reload: true
 
+# mouse_bindings:
+#   - { mouse: 4, action: ScrollLineUp }
+#   - { mouse: 5, action: ScrollLineDown }
+
 key_bindings:
 
   # _____________________________ Commands
@@ -112,10 +116,12 @@ key_bindings:
 
   # _____________________________ Scroll
 
-  - { key: U, mods: Control|Shift, action: ScrollHalfPageUp }
-  - { key: E, mods: Control|Shift, action: ScrollHalfPageDown }
-  - { key: K, mods: Control|Shift, action: ScrollLineUp }
-  - { key: J, mods: Control|Shift, action: ScrollLineDown }
+  - { key: PageUp, action: ScrollHalfPageUp }
+  - { key: PageDown, action: ScrollHalfPageDown }
+  - { key: Up, action: ScrollLineUp }
+  - { key: Down, action: ScrollLineDown }
+  - { key: Home, action: ScrollToTop }
+  - { key: End, action: ScrollToBottom }
 
   # _____________________________ Font
 
