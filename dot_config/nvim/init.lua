@@ -31,7 +31,7 @@ require("lazy").setup({
   {
     'andymass/vim-matchup',
     init = function()
-      require("setup").matchup()
+      require("options").matchup()
     end,
     config = function()
       require("mappings").matchup()
