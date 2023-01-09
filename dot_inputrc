@@ -4,10 +4,14 @@ set bind-tty-special-chars off
 "\C-u": kill-whole-line
 "\C-\b": backward-kill-word
 
-# remap history search to ctrl+arrow
+# unmap page up and page down
 "\e[6~": ""
 "\e[5~": ""
-"\e[A": ""
-"\e[B": ""
-"\e[1;5B": history-search-forward
-"\e[1;5A": history-search-backward
+
+# map history search to arrow
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# map history search to ctrl + arrow
+# "\e[1;5B": history-search-forward
+# "\e[1;5A": history-search-backward
