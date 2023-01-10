@@ -105,6 +105,8 @@ require("lazy").setup({
   },
   {
     "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
     init = function()
       -- autocommand will have no effect on previously sourced colorschemes so it must be added before any colorscheme is sourced
       require('autocmd').bufferline()
@@ -254,6 +256,8 @@ require("lazy").setup({
   },
   {
     "nvim-lualine/lualine.nvim",
+    -- event = "VeryLazy",
+    -- lazy = true,
     dependencies = { "kyazdani42/nvim-web-devicons" },
     config = require('setup.lualine')
   },
@@ -324,6 +328,9 @@ require("lazy").setup({
   }
 },
   {
+    defaults = { lazy = false },
+    install = { colorscheme = { "tokyonight", "habamax" } },
+    -- checker = { enabled = true },
     performance = {
       rtp = {
         disabled_plugins = {
