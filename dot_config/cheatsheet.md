@@ -841,6 +841,77 @@ qmk flash -kb ferris/sweep -km runeword -bl dfu-split-right
 qmk json2c -o _keymap.c keymap.json
 ```
 
+## NIXOS
+https://www.youtube.com/watch?v=AGVXJ-TIv3Y
+```bash
+# Install package on the system
+sudo nvim /etc/nixos/configuration.nix
+sudo nixos-rebuild switch
+
+# Install package on the system as a service
+sudo nvim /etc/nixos/configuration.nix
+services.plex.enable = true
+sudo nixos-rebuild switch
+
+# Install package on the system, must be managed by the user
+nix-env -iA <package_name> # Install package
+nix-env -q # List packages installed with nix-env
+nix-env --uninstall <package_name> # Uninstall package
+
+# Update system
+nix-channel --update
+sudo nixos-rebuild switch --upgrade # Apply changes
+
+# Add home manager as a nixos module
+sudo nix-channel --add <url>/master.tar.gz home-manager # Add home-manager channel for root user
+nix-channel --add <url>/master.tar.gz home-manager # Add homme-manager channel on a user level
+# sudo nix-channel --remove home-manager
+nix-channel update # Build the channel
+sudo nvim /etc/nixos/configuration.nix # Add home manager to imports + check for a user
+# Add packages to home manager
+home-manager.users.${user} = { pkgs, ... } : {
+    home-packages = [ pkgs.hop ];
+};
+# Then rebuild
+sudo nixos-rebuild switch
+
+
+# Add home manager standalone
+nix-channel --add <url>/master.tar.gz home-manager # Add homme-manager channel on a user level
+nix-shell '<home-manager>' -A install
+# Add some package :
+# home.packages = with pkgs; [ htop ];
+# Or add some services :
+# services.dunst = {
+#     enable = true;
+# }
+nvim .config/nixpkgs/home.nix
+home-manager switch
+
+# Remove specific system generation
+nix-env --list-generations
+nix-env --delete-generations 2
+# Remove all system generations
+sudo nix-collect-garbage -d
+
+# Flakes
+sudo nvim /etc/nixos/configuration.nix
+nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = "experimental-features = nix-command flakes";
+};
+sudo nixos-rebuild switch
+# Create a flakes directory
+mkdir flakes
+cd flakes
+nix flake init
+nvim flake.nix
+
+# Documentation
+man configuration.nix
+man home-configuration.nix
+```
+
 ## gcloud
 
 ```bash
