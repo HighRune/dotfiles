@@ -607,6 +607,13 @@ local function coq()
       proximity = 0,
       recency = 0,
     },
+    completion = {
+      always = true,
+      replace_prefix_threshold = 3,
+      replace_suffix_threshold = 2,
+      smart = true,
+      skip_after = { "{", "}", "[", "]", " ", },
+    },
     match = {
       fuzzy_cutoff = 0.6,
       exact_matches = 2,
@@ -628,12 +635,12 @@ local function coq()
     keymap = {
       recommended = false,
       pre_select = true,
-      jump_to_mark = '<c-Enter>',
-      -- jump_to_mark = '<Tab>',
-      ['repeat'] = '',
       manual_complete = '',
+      ['repeat'] = '',
       bigger_preview = '',
+      jump_to_mark = '<c-Enter>',
       eval_snips = '',
+      manual_complete_insertion_only = false,
     },
     clients = {
       snippets = {
