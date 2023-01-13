@@ -371,10 +371,10 @@ local function hydra()
   map({ 'n', 'x' }, "<Leader>e", function() scroll:activate() fn.execute("normal! 5j") end)
   map({ 'n', 'x' }, "<Leader>u", function() scroll:activate() fn.execute("normal! 5k") end)
 
-  local jumpForwardParagraphStart = function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end
-  local jumpForwardParagraphEnd = function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sW') end
-  local jumpBackwardParagraphStart = function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end
-  local jumpBackwardParagraphEnd = function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sWb') end
+  local nextParagraphStart = function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end
+  local nextParagraphEnd = function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sW') end
+  local prevParagraphStart = function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end
+  local prevParagraphEnd = function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sWb') end
 
   local jumpParagraph = require('hydra')({
     mode = { 'n', 'x' },
@@ -384,17 +384,17 @@ local function hydra()
       on_exit = function() o.scrolloff = 5 end,
     },
     heads = {
-      { '<Down>', jumpForwardParagraphStart },
-      { '<Up>', jumpBackwardParagraphStart },
-      { '<C-Up>', jumpBackwardParagraphEnd },
-      { '<C-Down>', jumpForwardParagraphEnd },
+      { '<Down>', nextParagraphStart },
+      { '<Up>', prevParagraphStart },
+      { '<C-Up>', prevParagraphEnd },
+      { '<C-Down>', nextParagraphEnd },
     }
   })
 
-  map({ 'n', 'x' }, "<Down>", function() jumpParagraph:activate() jumpForwardParagraphStart() end)
-  map({ 'n', 'x' }, "<Up>", function() jumpParagraph:activate() jumpBackwardParagraphStart() end)
-  map({ 'n', 'x' }, "<S-Up>", function() jumpParagraph:activate() jumpBackwardParagraphEnd() end)
-  map({ 'n', 'x' }, "<S-Down>", function() jumpParagraph:activate() jumpForwardParagraphEnd() end)
+  map({ 'n', 'x' }, "<Down>", function() jumpParagraph:activate() nextParagraphStart() end)
+  map({ 'n', 'x' }, "<Up>", function() jumpParagraph:activate() prevParagraphStart() end)
+  map({ 'n', 'x' }, "<S-Up>", function() jumpParagraph:activate() prevParagraphEnd() end)
+  map({ 'n', 'x' }, "<S-Down>", function() jumpParagraph:activate() nextParagraphEnd() end)
 
 end
 
