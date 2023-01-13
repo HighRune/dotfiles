@@ -326,6 +326,8 @@ local function lspconfig(buffer)
   -- map('n', '<leader>r', function() lsp.buf.rename(fn.input('New Name: ')) end, { buffer = buffer })
   -- map("n", '<ScrollWheelUp>', diagnostic.goto_prev, { buffer = buffer })
   -- map("n", '<ScrollWheelDown>', diagnostic.goto_next, { buffer = buffer })
+  map("n", '<C-Up>', diagnostic.goto_prev, { buffer = buffer })
+  map("n", '<C-Down>', diagnostic.goto_next, { buffer = buffer })
   -- map("n", '<Left>', diagnostic.goto_prev, { buffer = buffer })
   -- map("n", '<Right>', diagnostic.goto_next, { buffer = buffer })
   -- map('n', '<Leader>l', diagnostic.setloclist, { noremap = true, silent = true })
@@ -381,16 +383,16 @@ local function hydra()
     heads = {
       { '<Down>', function() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end },
       { '<Up>', function() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end },
-      { '<C-Up>', function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sWb') end },
-      { '<C-Down>', function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sW') end },
+      { '<S-Up>', function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sWb') end },
+      { '<S-Down>', function() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sW') end },
       -- vim.fn.search("[({[]")
     }
   })
 
   map({ 'n', 'x' }, "<Down>", function() jump:activate() fn.search([[\(^$\n\s*\zs\S\)\|\(\S\ze\n*\%$\)]], 'sW') end)
   map({ 'n', 'x' }, "<Up>", function() jump:activate() fn.search([[\(^$\n\s*\zs\S\)\|\(^\%1l\s*\zs\S\)]], 'sWb') end)
-  map({ 'n', 'x' }, "<C-Up>", function() jump:activate() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sWb') end)
-  map({ 'n', 'x' }, "<C-Down>", function() jump:activate() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sW') end)
+  map({ 'n', 'x' }, "<S-Up>", function() jump:activate() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sWb') end)
+  map({ 'n', 'x' }, "<S-Down>", function() jump:activate() fn.search([[\(\n\s*\)\@<=\S\(.*\n^$\)\@=]], 'sW') end)
 
 end
 
